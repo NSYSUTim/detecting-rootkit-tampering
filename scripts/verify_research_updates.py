@@ -18,6 +18,11 @@ CATALOG_UPDATES = {
     "README.md", "ARTIFACT_SCOPE.md", "THIRD_PARTY_NOTICES.md",
     "FILE_SHA256.csv", "docs/METHOD_AND_NEXT_STEPS_zh-TW.md",
 }
+# Only this exact housekeeping change may exclude private DOCX render files.
+# Research inputs remain subject to their original source locks and snapshots.
+EXACT_CATALOG_UPDATES = {
+    ".gitignore": "5fd2d760a7c7799f64246bcc855afa684fc380ba0a1e7a143083508d6db29d3b",
+}
 
 
 def read(path):
@@ -87,8 +92,9 @@ def main():
     }
     changed_catalog = []
     for name, digest in second["original_and_phase1_sha256"].items():
-        if sha((ROOT / name).read_bytes()) != digest:
-            if name not in CATALOG_UPDATES:
+        current_digest = sha((ROOT / name).read_bytes())
+        if current_digest != digest:
+            if name not in CATALOG_UPDATES and EXACT_CATALOG_UPDATES.get(name) != current_digest:
                 raise RuntimeError("Protected baseline file changed: " + name)
             changed_catalog.append(name)
     result = {"historical_snapshots_verified": snapshots,

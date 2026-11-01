@@ -6,8 +6,10 @@
 
 原九次開機主實驗驗證單一核心、ext4 與靜態目錄下的流程；後續已補返回漏失、載入順序、指定 Linux 6.8／6.5、ext4／tmpfs、正常動態目錄及更多身分改寫，並驗證合併核心狀態的成本改良。警報仍只表示觀測範圍內的不一致，不能由此判定惡意或推論對未知 rootkit 的偵測率。
 
-- [目前書面報告（revised34 乾淨版）](paper/cross_layer_directory_entry_consistency_revised34_zhTW.docx)
-- [本輪完成內容與書面審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)
+- [目前書面報告（revised35 乾淨版）](paper/cross_layer_directory_entry_consistency_revised35_zhTW.docx)
+- [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
+- [現行掃描入口](scan_directory.py)與[共同比較重算](comparison/evidence/final_verification.json)
+- [前一輪完成內容與書面審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)
 - [filldir64／getdents64 最接近相關工作比較](docs/RELATED_WORK_COMPARISON_zh-TW.md)
 - [新增還原核對、品質門檻及原生確認](finalization/README.md)
 - [定稿後的方法與證據核對](docs/PAPER_REVIEW_UPDATES_20261027_zh-TW.md)
@@ -16,12 +18,21 @@
 - [適用條件與合併狀態改良證據](phase2/REPORT_zh-TW.md)
 - [目前方法與下一步](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)
 - [補充實驗發布核對紀錄（2026-10-24）](docs/PUBLICATION_VERIFICATION_20261024.json)
-- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_20261027.json)
+- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_20261102.json)
 - [離線反例與含查詢成本的重算結果](docs/PAPER_REVIEW_FACTS_20261027.json)
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-01。revised34 以原樣保留的 revised33 為底，補入固定版本 zygarde 比較、還原指紋核對、可取得的 BPF 遞迴略過統計及另列的新確認。歷史書面、凍結來源、兩輪資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[本輪審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)為準。
+本說明更新至 2026-11-02。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised35 同步納入結果。歷史書面、原正式程式、兩輪資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
+
+在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
+
+```bash
+gcc -O2 -Wall -Wextra phase1/enum_probe.c -o /tmp/kicba_enum_probe
+sudo env PYTHONDONTWRITEBYTECODE=1 python3 scan_directory.py /path/to/directory --probe /tmp/kicba_enum_probe
+```
+
+舊 collector campaign 與 2026-11-01 的 finalization/scan.py 保留作版本重現，不把它們冒充已加入 tracefs 入口統計的現行入口。新入口仍是專用掃描器同次列舉，不是背景監控所有 ls。
 
 ## 方法流程
 
@@ -59,6 +70,7 @@ IBLT 還原的是識別值、inode 與型態，不含原始名稱。原正式設
 
 ### 外部方法比較
 
+- **zygarde 官方 v0.2.1：** 新增同一 VM 三個開機、相同受控目錄與模組的共同確認。缺失名稱目標兩者皆 105/105 檢出、0/30 對照警報；新增、inode 與型態各十五次另列，本文皆警報，名稱比較元件未警報。新程序完整成本於 128／4096 項時本文約為轉接版 3.50–3.73 倍，不能宣稱全面更快。65536 項另次稽核顯示對方入口名稱集合不完整，不能把該時間當同等完整觀測的速度優勢。[來源、轉接及計時範圍](comparison/zygarde/README.md)、[逐開機成本](comparison/analysis/costs.csv)
 - **Trace of the Times：** 同一虛擬機環境中分開收集的一次四情境比較。原作者依測試標籤選 F1 最大門檻時，函式分組的召回率／誤報率為 93.89%／15.20%，序列分組為 98.00%／27.18%；本方法在另外收集的 1,000 批為 100%／0%。無法確認兩方法位於同一次開機，也不是逐次列舉配對；尚需共同設計的多開機重複驗證。
 - **Decloaker v0.0.9：** 九次開機、720 次掃描中，180 次受測隱藏皆未輸出 `HIDDEN`，540 次對照也未警報。依本研究檢視，`disk ls --compare` 比較原始磁碟列出的完整路徑能否解析；受測隱藏針對父目錄列舉，保留已知完整路徑的存取。此結果反映觀測目標不同，不能寫成工具整體失效；其他功能未測試。
 - **rkchk：** 尚未在其要求的 Rust for Linux 自訂核心重現，不提供未量得的比較數值。
@@ -92,7 +104,7 @@ Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套�
 - 現有 FNV-1a 與混合函式不提供密碼學保證。正式種子由固定起始值與開機編號產生並記錄，可重現而非祕密金鑰；尚未驗證已知種子、主動碰撞或辨識量測程式後選擇性放行的攻擊。
 - IBLT 的 XOR 版本無法視為一般多重集合還原器；重複差異的兩個離線反例包含解碼失敗與錯誤成功。它們是資料結構檢查，沒有作為虛擬機攻擊試驗，也不併入檢出率或還原率的分母。
 - 原主矩陣仍限單一核心、ext4、靜態目錄。補充確認增加指定 6.8／6.5、tmpfs 和正常動態，仍只有同一實體主機；overlayfs、namespace 等未完成相同確認，更多硬體與環境仍待驗證。
-- 補充版已加入返回 profile 的全域漏失窗口門檻，但入口 perf 附掛的全部執行漏失仍不可見；不能事後替舊正式資料補出 missed=0。`/proc` 行程隱藏、PID 重用與生命週期時間一致性仍未研究。
+- 診斷版的 perf 入口統計未提供同等漏失可見性；現行入口已改用明確 tracefs 事件，將其 nmissed 納入拒判，並通過十個真實入口漏失窗口及正常對照。仍不能宣稱排除了所有故障，也不能事後替舊正式資料補出 missed=0。`/proc` 行程隱藏與獨立生命週期模型未研究。
 - 偵測器選擇性放行、一般程式列舉監控、程式庫返回後過濾與第一端之前的隱藏均未納入本輪。後兩個觀測邊界延伸仍暫緩。
 
 ## 尚未完成的方向
@@ -100,7 +112,7 @@ Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套�
 已完成項目不再全部列為未來工作。以下按研究問題選擇，不代表全部必做或已自動開始：
 
 1. **提高差異還原能力。** 在差異量未知、位置分布不利或同一身分重複時，比較保留次數的結構或容量協商，評估核對後還原率與成本。還原指紋回算已完成，容量管理與一般多重集合還原未做。
-2. **量測品質與比較證據。** 取得仍不可見的入口漏失統計；若要主張其他掛接家族或環境的泛化性，補相應的直接證據。共同環境的 zygarde 比較與跨開機時序比較尚未執行，不捏造結果。
+2. **部署成本及指定主張的證據。** 入口 tracefs 統計與 zygarde 三開機比較已完成，不再列未實作。可依部署需求工程化預編譯或批量掃描並比較成本；若要主張其他掛接家族的泛化性，再補具體證據。Landauer 流程仍保留原單次比較的限制。
 3. **另行選擇的範圍延伸。** 一般程式監控、辨識掃描器的攻擊者、金鑰保護或 /proc 行程隱藏均未開始，並非本方法結案前全部必做。換路徑不自動構成新研究，換雜湊也不自動保護核心內的金鑰。
 
 rkchk 未在相容核心比較，保留缺口而不承諾必跑；不能將未測或目標不同寫成工具無效。Decloaker 其他功能亦依研究問題決定。程式庫後邊界、第一端前視圖及授權分類不加入本輪。
@@ -114,6 +126,7 @@ rkchk 未在相容核心比較，保留缺口而不承諾必跑；不能將未�
 | 功能 | 位置 |
 |---|---|
 | 識別值、指紋與 IBLT | `src/kicba/reconciliation.py` |
+| 現行完整入口及入口品質窗口 | `scan_directory.py`、`finalization/tracefs_measurement.py` |
 | 核心端 eBPF 與共用雜湊規則 | `collector/bpf_d9_reconciliation.c`、`collector/d9_reconciliation_hash.h` |
 | 使用者端完整列舉 | `collector/d9_enum_probe.c` |
 | 正式收集與多開機排程 | `collector/run_d9_campaign.py`、`scripts/run_d9_multiboot.py` |
@@ -173,5 +186,13 @@ python scripts/verify_paper_review_checks.py --check docs/PAPER_REVIEW_FACTS_202
 重新收集需隔離、可還原的原生 Linux 虛擬機、root、BCC/eBPF、編譯器與相符 kernel headers；步驟以原始鎖定規約為準。
 
 ## 資料完整性
+
+現行入口、共同工具比較與另列的控制修復可直接從封存離線核對：
+
+```bash
+python scripts/verify_completion_20261102.py --check comparison/evidence/final_verification.json
+```
+
+原規約首次混合目錄確認未完成、無效控制與逾時堆疊均保留，修訂後三開機確認分開。控制修復只寫入新來源，沒有覆寫舊 getdents 控制。四十一項離線測試在原 Linux VM 通過，在具正常暫存目錄權限的 Windows 執行也全部通過。先前 Windows 沙箱的暫存 ACL 錯誤另列，未略過失敗測試或降低判準。
 
 `FILE_SHA256.csv` 列出研究檔案的相對路徑、SHA-256 與位元組數，不包含清單本身及 Git 內部檔案。正式實驗另以分析鎖、各 `campaign.sha256` 及外部比較鎖定檔約束原始資料和實作版本。這次重新產生的是公開套件檔案清單；原主實驗、兩輪補充的原始資料、凍結來源與實驗鎖保持原樣。新增的可攜核對程式把發布後閱讀文件變動與原歷史基準分開驗證。

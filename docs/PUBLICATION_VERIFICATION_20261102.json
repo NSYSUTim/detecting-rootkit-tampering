@@ -1,0 +1,130 @@
+{
+  "as_of": "2026-11-02",
+  "base_commit": "06a0cb89b7d921eadb50838acff0432c98eebc06",
+  "paper": {
+    "path": "paper/cross_layer_directory_entry_consistency_revised35_zhTW.docx",
+    "sha256": "b0c1fe6d6d825f77be4990e9927596d442fd84833abf0a61e8663ec8e0733ce5",
+    "source_sha256": "9873801930d29ecf62d9acf262953dc65f9cd03882f0fa60d84c0d14d732ba9d",
+    "changed_package_parts": [
+      "word/document.xml"
+    ],
+    "word_pages": 27,
+    "visual_review": "Native Microsoft Word readonly export; all 27 page images inspected. Existing figures retained; one shared cost table added. Final punctuation render preserves all page boundaries and character counts. Bibliography entries kept together.",
+    "tracked_changes": false,
+    "semicolons": 0
+  },
+  "unit_tests": {
+    "linux_vm_passed": 41,
+    "windows_normal_temp_permissions_passed": 41,
+    "failed": 0,
+    "command": "PYTHONPATH=src python -B -m unittest discover -s tests -v",
+    "earlier_windows_sandbox_temp_acl_errors_retained": true
+  },
+  "historical_recompute": {
+    "passed": true,
+    "archives": 17,
+    "frozen_source_sets": {
+      "phase1/CONFIRMATION_LOCK.json": 37,
+      "phase2/locks/kernel65.json": 66,
+      "phase2/locks/kernel68.json": 66
+    },
+    "confirmation_boot_counts": [
+      3,
+      6
+    ],
+    "housekeeping_exception": {
+      "file": ".gitignore",
+      "allowed_exact_sha256": "5fd2d760a7c7799f64246bcc855afa684fc380ba0a1e7a143083508d6db29d3b",
+      "reason": "Exclude private DOCX rendering files; research source locks and original data unchanged."
+    }
+  },
+  "saved_formal_recovery_recheck": {
+    "transactions": 25920,
+    "actual_differences": 11520,
+    "matched": 25920,
+    "counterexample_fixtures_rejected": 6,
+    "new_native_samples": false
+  },
+  "historical_paper_review_recheck": {
+    "passed": true,
+    "offline_cases": 6,
+    "original_cost_confirmation_boots": 6
+  },
+  "completion_verification": {
+    "path": "comparison/evidence/final_verification.json",
+    "sha256": "37936166e04b5fb47bdb3332eb558675d3420a6ec0695002a3b443c16a1f5e0c",
+    "archive_sha256": "dcaced2c7df815db85f0561caa6c8b55f69e9d9f65bc15e273d9ebcdb2aa31c3",
+    "passed": true,
+    "entry_confirmation": {
+      "measured": 72,
+      "actual_differences": 57,
+      "unexercised": 3,
+      "controls": 24,
+      "entry_fault_windows": 10,
+      "return_window_scans": 16,
+      "normal_fault_controls": 22,
+      "extra_counts": {
+        "load_order": 6,
+        "overcapacity": 2,
+        "boundary": 2
+      }
+    },
+    "comparison_boot_ids": [
+      "aff6b308-f982-4bc4-8b7f-94b3d0a592e0",
+      "abb8b5ec-2f5c-4ce2-bd33-f04895669e0a",
+      "8f4e3cd6-8b93-452d-b205-b42ae6bb5d1f"
+    ],
+    "control_repair": {
+      "counts": {
+        "unprobed": 12,
+        "ours": 4,
+        "zygarde": 4
+      },
+      "verified": true
+    },
+    "incomplete_original_attempt": {
+      "completed_observations": 90,
+      "getdents_control_rows": 0,
+      "status": "unfinished original-protocol attempt; excluded from amended confirmation denominators"
+    }
+  },
+  "zygarde_common_name_target": {
+    "per_tool_differences_detected": 105,
+    "per_tool_differences_total": 105,
+    "per_tool_control_alerts": 0,
+    "per_tool_control_total": 30,
+    "identity_only_trials_each": 15,
+    "identity_targets": [
+      "insert",
+      "inode",
+      "type"
+    ],
+    "ours_identity_alerts_each": 15,
+    "zygarde_identity_alerts_each": 0,
+    "identity_targets_separate_from_common_recall": true
+  },
+  "cost_scope": {
+    "main_pairs": 45,
+    "warmup_observations": 18,
+    "fresh_process": true,
+    "ours_includes_bcc_compile": true,
+    "adapter_uses_precompiled_bpf": true,
+    "ours_over_adapter_boot_median_ratio_range_complete_small_directories": [
+      3.5029479731504507,
+      3.728923758879164
+    ],
+    "large_directory_separate_upstream_returned_name_counts": [
+      15343,
+      65537
+    ],
+    "large_directory_observation_incomplete": true,
+    "no_general_speed_superiority": true,
+    "original_cost_denominators_and_definitions_unchanged": true
+  },
+  "historical_denominators_unchanged": true,
+  "frozen_sources_and_original_decoder_unchanged": true,
+  "new_public_rootkit_trials": false,
+  "all_measurement_failures_covered": false,
+  "general_program_observation_implemented": false,
+  "proc_extension_implemented": false
+}

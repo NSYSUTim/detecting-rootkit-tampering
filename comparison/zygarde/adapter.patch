@@ -1,0 +1,58 @@
+--- a/cells/file/file.go
++++ b/cells/file/file.go
+@@ -6,6 +6,7 @@
+ 
+ import (
+ 	"context"
++ "encoding/json"
+ 	"errors"
+ 	"fmt"
+ 	"os"
+@@ -194,6 +195,7 @@
+ // listDir lists dir with getdents64 and returns the entry names the
+ // filesystem produced and the names the syscall returned.
+ func listDir(rd *ringbuf.Reader, dir string) (produced, returned map[string]bool, err error) {
++ auditStart := time.Now()
+ 	if _, err := drain(rd); err != nil { // discard anything unrelated
+ 		return nil, nil, err
+ 	}
+@@ -215,7 +217,15 @@
+ 	for _, e := range entries {
+ 		returned[e.Name()] = true
+ 	}
+-	return produced, returned, nil
++
++ if target := os.Getenv("KICBA_AUDIT_PATH"); target != "" {
++  handle, e := os.OpenFile(target, os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
++  if e != nil { return nil, nil, e }
++  e = json.NewEncoder(handle).Encode(map[string]interface{}{"directory":dir,"produced":produced,"returned":returned,"elapsed_ns":time.Since(auditStart).Nanoseconds()})
++  handle.Close()
++  if e != nil { return nil,nil,e }
++ }
++ return produced, returned, nil
+ }
+ 
+ // drain returns the names of all buffered events. Events are written
+@@ -251,6 +261,7 @@
+ // persistence and staging usually live, plus /proc (hidden processes) and
+ // /sys/module (hidden modules).
+ func scanDirs() []string {
++ if target := os.Getenv("KICBA_BENCH_DIR"); target != "" { return []string{target} }
+ 	dirs := []string{
+ 		canary.FileDir, "/proc", "/sys/module",
+ 		"/bin", "/sbin", "/usr/bin", "/usr/sbin", "/usr/local/bin", "/usr/local/sbin",
+--- a/internal/canary/canary.go
++++ b/internal/canary/canary.go
+@@ -67,7 +67,11 @@
+ 
+ // FileDir is where canary files are created. It must be one of the
+ // directories the hidden file Cell watches.
+-const FileDir = "/tmp"
++var FileDir = benchmarkFileDir()
++func benchmarkFileDir() string {
++ if target := os.Getenv("KICBA_BENCH_DIR"); target != "" { return target }
++ return "/tmp"
++}
+ 
+ // FilePrefix is the name prefix of canary files created by process pid.
+ func FilePrefix(pid int) string { return fmt.Sprintf("zygarde-canary-%d-", pid) }

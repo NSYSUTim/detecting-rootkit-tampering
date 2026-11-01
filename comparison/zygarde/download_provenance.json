@@ -1,0 +1,12 @@
+{
+  "go": {
+    "filename": "go1.25.0.windows-amd64.zip",
+    "os": "windows",
+    "arch": "amd64",
+    "version": "go1.25.0",
+    "sha256": "89efb4f9b30812eee083cc1770fdd2913c14d301064f6454851428f9707d190b",
+    "size": 67418204,
+    "kind": "archive"
+  },
+  "source_zip_sha256": "9acc58670afc3b7b6c1b27e4d41c2fe1230541b7b6a094e91fddb6783ddaac70"
+}

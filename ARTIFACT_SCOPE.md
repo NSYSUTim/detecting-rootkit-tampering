@@ -1,10 +1,11 @@
 # 跨層目錄項一致性檢查研究成品收錄範圍
 
-本儲存庫保存論文的程式、既有結果、兩輪後續補充證據與目前書面，更新至 2026-11-01。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；書面版本與來源見 [paper/README](paper/README.md)，本輪完成內容見[審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
+本儲存庫保存論文的程式、既有結果、兩輪後續補充證據與目前書面，更新至 2026-11-02。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；書面版本與來源見 [paper/README](paper/README.md)，目前六項結案工作見[結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
 
 ## 已收錄
 
-- revised34 書面、最接近相關工作之固定版本比較，以及不改寫凍結收集器的還原核對與 BPF recursion_misses 檢查。本輪原生確認與十次先導分開保存在 finalization 封存，不併入舊分母。沒有新增公開 rootkit 執行或共同 zygarde 成效量測。
+- revised35 書面、現行 tracefs 入口統計與還原核對、三開機 zygarde 共同功能及成本比較，以及另外的控制修復確認。全部原始輸出、未完成嘗試、規約修訂與主機取樣存於 comparison 封存，分母與舊資料分開。沒有新增公開 rootkit。
+- revised34 書面及 2026-11-01 的還原核對與 BPF recursion_misses 補強封存，保留為歷史版本。
 - 作者提供的 revised33 乾淨版，以 `paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx` 原樣保存，SHA-256 與已核對來源相同。
 - 使用者於 2026-10-20 提供的 `eBPF_最終繳交.docx`，以 `paper/cross_layer_directory_entry_consistency_zhTW.docx` 原樣保留為歷史存檔。
 - 多重集合指紋與 IBLT 實作、單元測試、eBPF 收集器及完整目錄列舉程式。

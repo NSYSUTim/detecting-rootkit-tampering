@@ -1,0 +1,7 @@
+{
+  "original": "attack_variants/d8_getdents_controls/kicba_d8_getdents_common.inc",
+  "original_sha256": "424cdb4ff428b23cfcf689ee521eeee931b184fa1ca075cb31ed47f22c5bc34c",
+  "fixed_sha256": "d73aa4b49370b01c845dd7e68c61dee93aae1dd2b91e80821044c9a7b4fd7af6",
+  "change": "cache original record length before overlapping memmove; preserve historical original",
+  "causality_limit": "does not alone establish the cause of the official tool timeout"
+}

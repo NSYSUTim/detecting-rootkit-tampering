@@ -1,0 +1,10 @@
+{
+  "cells/file/file.go": {
+    "before_sha256": "bb10c2cd0463e2643e488db9603cb5fd596d2e6ddf06ca565bdfa13d47dc6930",
+    "after_sha256": "fab9443d3549dc7125ffe17302234cc607e15e7c1111b825681256d69718d3e3"
+  },
+  "internal/canary/canary.go": {
+    "before_sha256": "ddcd74c56ac54918f10763d36a4b660d30c7fbfae83a0003ba0b88a9e0d75321",
+    "after_sha256": "c9910116f9986e1b3e389d43509d8e1fea1e220c01687f519dba1901105893bf"
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "scope": "historical offline replay and separately counted completion-version native confirmation",
+  "counts": {
+    "batches": 1296,
+    "transactions": 25920,
+    "difference_transactions": 11520,
+    "recovery_matches": 25920
+  },
+  "source_archives": [
+    {
+      "path": "results/d9_formal/raw/boot_01/campaign.json.gz",
+      "sha256": "895a3fd7117d18e55dc83f7b21443d3ec9551feb7731a6b8e8b7eb90fe8b10a1"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_02/campaign.json.gz",
+      "sha256": "bee53fef34f41637acbcd8eefa9eb7349879fd739a08632ae506a8ab35381097"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_03/campaign.json.gz",
+      "sha256": "5c258fddd64f058f18d2c64a274a06cd2876d07684cc5bd9f3634599ee989665"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_04/campaign.json.gz",
+      "sha256": "832572a0ab57fe56106081acdaebf729a38c65770e8b268d0fe15db7a715e8c7"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_05/campaign.json.gz",
+      "sha256": "f04e30e667a84e87ed2dc03d6d56652074b5baeeac832809161c486bdd93b7a0"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_06/campaign.json.gz",
+      "sha256": "097580e1a61367e83a0fca7f29eed9a6f6b5ee062e7041234dca544bfb29e558"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_07/campaign.json.gz",
+      "sha256": "c5267f9862bc9037f57c6e7e1c36d5f84f0e0a4b13e4fc6cfedcc6f7827da3d0"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_08/campaign.json.gz",
+      "sha256": "261b58e58f82f869781e217b4d54f627af3ee701a1cfeb18d2d8611d886e24af"
+    },
+    {
+      "path": "results/d9_formal/raw/boot_09/campaign.json.gz",
+      "sha256": "cd1a71ac50df1df37654048164dddee1bd30e6b5f1162b2d7180c358f663a07b"
+    }
+  ],
+  "failures": [],
+  "duplicate_fixtures": [
+    {
+      "case": "two_X_vs_empty",
+      "cells": 8,
+      "raw_decode_success": false,
+      "check": {
+        "status": "incomplete",
+        "verified": false,
+        "expected_fingerprint_delta": [
+          2,
+          11385244716018756648,
+          7307187184005706078
+        ],
+        "recovered_fingerprint_delta": [
+          0,
+          0,
+          0
+        ],
+        "reasons": [
+          "decoder_did_not_finish"
+        ]
+      }
+    },
+    {
+      "case": "two_X_vs_two_Y",
+      "cells": 8,
+      "raw_decode_success": true,
+      "check": {
+        "status": "fingerprint_mismatch",
+        "verified": false,
+        "expected_fingerprint_delta": [
+          0,
+          5325563206274257406,
+          7691434563402983542
+        ],
+        "recovered_fingerprint_delta": [
+          0,
+          0,
+          0
+        ],
+        "reasons": [
+          "recovery_does_not_match_endpoint_delta"
+        ]
+      }
+    },
+    {
+      "case": "two_X_vs_empty",
+      "cells": 256,
+      "raw_decode_success": false,
+      "check": {
+        "status": "incomplete",
+        "verified": false,
+        "expected_fingerprint_delta": [
+          2,
+          11385244716018756648,
+          7307187184005706078
+        ],
+        "recovered_fingerprint_delta": [
+          0,
+          0,
+          0
+        ],
+        "reasons": [
+          "decoder_did_not_finish"
+        ]
+      }
+    },
+    {
+      "case": "two_X_vs_two_Y",
+      "cells": 256,
+      "raw_decode_success": true,
+      "check": {
+        "status": "fingerprint_mismatch",
+        "verified": false,
+        "expected_fingerprint_delta": [
+          0,
+          5325563206274257406,
+          7691434563402983542
+        ],
+        "recovered_fingerprint_delta": [
+          0,
+          0,
+          0
+        ],
+        "reasons": [
+          "recovery_does_not_match_endpoint_delta"
+        ]
+      }
+    },
+    {
+      "case": "two_X_vs_empty",
+      "cells": 4096,
+      "raw_decode_success": false,
+      "check": {
+        "status": "incomplete",
+        "verified": false,
+        "expected_fingerprint_delta": [
+          2,
+          11385244716018756648,
+          7307187184005706078
+        ],
+        "recovered_fingerprint_delta": [
+          0,
+          0,
+          0
+        ],
+        "reasons": [
+          "decoder_did_not_finish"
+        ]
+      }
+    },
+    {
+      "case": "two_X_vs_two_Y",
+      "cells": 4096,
+      "raw_decode_success": false,
+      "check": {
+        "status": "incomplete",
+        "verified": false,
+        "expected_fingerprint_delta": [
+          0,
+          5325563206274257406,
+          7691434563402983542
+        ],
+        "recovered_fingerprint_delta": [
+          0,
+          0,
+          0
+        ],
+        "reasons": [
+          "decoder_did_not_finish"
+        ]
+      }
+    }
+  ],
+  "native_confirmation": {
+    "checks": {
+      "archive_hash": true,
+      "archive_bytes": true,
+      "tested_source_hashes": true,
+      "frozen_source_hashes": true,
+      "protocol_hash": true,
+      "measured_count": true,
+      "exact_output_and_recovery": true,
+      "control_count": true,
+      "normal_count": true,
+      "normal_and_boundary": true,
+      "native_return_misses": true,
+      "loss_window_count": true,
+      "loss_window_rejected": true,
+      "sequential_controls": true,
+      "source_unchanged": true
+    },
+    "failures": [],
+    "archive_sha256": "76806e24c346e7eab0de93cdbda18275b200828b67559641e14ac2ee069996ca",
+    "kernel": "6.8.0-138-generic",
+    "boot_id": "aff6b308-f982-4bc4-8b7f-94b3d0a592e0",
+    "counts": {
+      "measured": 36,
+      "differences": 28,
+      "consistent": 8,
+      "unprobed_controls": 18,
+      "normal_boundary_valid": 9,
+      "small_buffer_invalid": 1,
+      "miss_window_invalid": 16,
+      "sequential_valid": 2
+    },
+    "passed": true
+  },
+  "passed": true
+}

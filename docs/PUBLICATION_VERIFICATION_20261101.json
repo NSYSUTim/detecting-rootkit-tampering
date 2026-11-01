@@ -1,0 +1,74 @@
+{
+  "as_of": "2026-11-01",
+  "base_commit": "1aa993b4ee3d65ff410b0d8ce7c19b76acabcbbd",
+  "paper": {
+    "path": "paper/cross_layer_directory_entry_consistency_revised34_zhTW.docx",
+    "sha256": "9873801930d29ecf62d9acf262953dc65f9cd03882f0fa60d84c0d14d732ba9d",
+    "source": "revised33 preserved separately",
+    "changed_package_parts": [
+      "word/document.xml"
+    ],
+    "word_pages": 25,
+    "visual_review": "all pages rendered and inspected; existing figures retained"
+  },
+  "unit_tests": {
+    "passed": 31,
+    "failed": 0,
+    "new_tests": 17,
+    "command": "PYTHONPATH=src python -B -m unittest discover -s tests -v"
+  },
+  "historical_recompute": {
+    "passed": true,
+    "archives": 17,
+    "frozen_source_sets": {
+      "phase1/CONFIRMATION_LOCK.json": 37,
+      "phase2/locks/kernel65.json": 66,
+      "phase2/locks/kernel68.json": 66
+    },
+    "boot_counts": [
+      3,
+      6
+    ]
+  },
+  "completion_verification_sha256": "5af930f9e993d1a8cb1ca00c01f8436058577ace00ee3ab22920f83f500cdd9f",
+  "native_confirmation": {
+    "checks": {
+      "archive_hash": true,
+      "archive_bytes": true,
+      "tested_source_hashes": true,
+      "frozen_source_hashes": true,
+      "protocol_hash": true,
+      "measured_count": true,
+      "exact_output_and_recovery": true,
+      "control_count": true,
+      "normal_count": true,
+      "normal_and_boundary": true,
+      "native_return_misses": true,
+      "loss_window_count": true,
+      "loss_window_rejected": true,
+      "sequential_controls": true,
+      "source_unchanged": true
+    },
+    "failures": [],
+    "archive_sha256": "76806e24c346e7eab0de93cdbda18275b200828b67559641e14ac2ee069996ca",
+    "kernel": "6.8.0-138-generic",
+    "boot_id": "aff6b308-f982-4bc4-8b7f-94b3d0a592e0",
+    "counts": {
+      "measured": 36,
+      "differences": 28,
+      "consistent": 8,
+      "unprobed_controls": 18,
+      "normal_boundary_valid": 9,
+      "small_buffer_invalid": 1,
+      "miss_window_invalid": 16,
+      "sequential_valid": 2
+    },
+    "passed": true
+  },
+  "historical_denominators_unchanged": true,
+  "frozen_sources_and_original_decoder_unchanged": true,
+  "zygarde_shared_empirical_comparison": false,
+  "new_public_rootkit_trials": false,
+  "all_entry_losses_covered": false,
+  "new_version_cross_boot_cost_comparison": false
+}

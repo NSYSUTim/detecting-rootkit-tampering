@@ -1,9 +1,10 @@
 # 跨層目錄項一致性檢查研究成品收錄範圍
 
-本儲存庫保存論文的程式、既有結果、兩輪後續補充證據與目前書面，更新至 2026-10-27。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；書面版本與來源見 [paper/README](paper/README.md)，最新限制與計時核對見[定稿後核對](docs/PAPER_REVIEW_UPDATES_20261027_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
+本儲存庫保存論文的程式、既有結果、兩輪後續補充證據與目前書面，更新至 2026-11-01。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；書面版本與來源見 [paper/README](paper/README.md)，本輪完成內容見[審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
 
 ## 已收錄
 
+- revised34 書面、最接近相關工作之固定版本比較，以及不改寫凍結收集器的還原核對與 BPF recursion_misses 檢查。本輪原生確認與十次先導分開保存在 finalization 封存，不併入舊分母。沒有新增公開 rootkit 執行或共同 zygarde 成效量測。
 - 作者提供的 revised33 乾淨版，以 `paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx` 原樣保存，SHA-256 與已核對來源相同。
 - 使用者於 2026-10-20 提供的 `eBPF_最終繳交.docx`，以 `paper/cross_layer_directory_entry_consistency_zhTW.docx` 原樣保留為歷史存檔。
 - 多重集合指紋與 IBLT 實作、單元測試、eBPF 收集器及完整目錄列舉程式。

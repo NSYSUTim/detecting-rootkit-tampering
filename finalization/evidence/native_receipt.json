@@ -1,0 +1,11 @@
+{
+  "archive": "native_final_confirmation_20261101.tar.gz",
+  "sha256": "76806e24c346e7eab0de93cdbda18275b200828b67559641e14ac2ee069996ca",
+  "bytes": 86985,
+  "normal_confirmation": "confirmation/normal_confirmation",
+  "additional_confirmation": "confirmation/attempt_01",
+  "pilot": "pilot/attempt_01",
+  "pilot_denominator_separate": true,
+  "historical_denominators_unchanged": true,
+  "new_public_rootkit_trials": false
+}

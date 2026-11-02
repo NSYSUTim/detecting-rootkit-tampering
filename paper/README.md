@@ -4,13 +4,16 @@
 
 | 版本 | 檔案 | 來源與定位 |
 |---|---|---|
-| 目前書面 | [revised36 乾淨版](cross_layer_directory_entry_consistency_revised36_zhTW.docx) | 以 revised35 為底，補入相同輸入、相同準備完成後計時範圍的三開機比較，區分預設與增加容量的配置 |
+| 目前書面 | [revised37 乾淨版](cross_layer_directory_entry_consistency_revised37_zhTW.docx) | 以 revised36 為底，按實驗目的命名，統一實作與計時樣本用詞，數據與判讀條件不變 |
+| 歷史書面 | [revised36 乾淨版](cross_layer_directory_entry_consistency_revised36_zhTW.docx) | 納入相同輸入、相同準備完成後計時範圍的三開機比較，區分預設與增加容量的配置 |
 | 歷史書面 | [revised35 乾淨版](cross_layer_directory_entry_consistency_revised35_zhTW.docx) | 保留現行入口的漏失拒判、原生確認、共同功能與完整程序成本比較，以及控制修復確認 |
 | 歷史書面 | [revised34 乾淨版](cross_layer_directory_entry_consistency_revised34_zhTW.docx) | 保留前一輪還原核對、部分品質統計與相關工作設計比較的狀態 |
 | 歷史書面 | [revised33 乾淨版](cross_layer_directory_entry_consistency_revised33_zhTW.docx) | 作者提供的 paper_final_submission_v3_revised33_clean.docx 原樣保留 |
-| 歷史存檔 | [2026-10-20 提供版本](cross_layer_directory_entry_consistency_zhTW.docx) | 較早的原主實驗書面，維持既有檔案與雜湊關係 |
+| 歷史存檔 | [2026-10-20 提供版本](cross_layer_directory_entry_consistency_zhTW.docx) | 較早的九次開機矩陣實驗書面，維持既有檔案與雜湊關係 |
 
-revised36 只修改主文件 XML，原圖片、樣式及其他封裝部件均維持 revised35 原樣，新增掃描判讀成本表及來源說明。以本機 Microsoft Word 唯讀匯出為 28 頁，逐頁檢查版面。不同字型或軟體仍可能改變分頁。未製作追蹤修訂版，定義與原始證據見[相同範圍的成本比較](../docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)，可用 [build_revised36.py](../tools/build_revised36.py) 重建。
+revised37 只修改文件本文 XML 的用詞，依偵測正確性、量測可靠性、適用條件、執行成本與工具比較敘述實驗；實作則稱初版、診斷版、合併狀態版及整合版。數值、實驗條件、樣本分組、圖片、樣式與其他封裝部件維持 revised36 原樣。以本機 Microsoft Word 唯讀匯出後逐頁檢查版面，不同字型或軟體仍可能改變分頁。未製作追蹤修訂版。可用 [build_revised37.py](../tools/build_revised37.py) 重建，實驗來源見[成本比較](../docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)。
+
+revised37 SHA-256：`e0c1a7c4915eb572d75a012377d4002d870bf22e8bc50c2ec5a44018625648fb`。
 
 revised36 SHA-256：`b11fefb1394dbbcccb797bdcebe02e73b64235515023472579e7070d29895583`。
 
@@ -24,6 +27,6 @@ revised33 SHA-256：`47169ad7e18b432ce8f66e26d6f2bfaad559d46302f43dd22b56b2711b6
 
 還原指紋核對不是無碰撞證明。現行入口已納入 tracefs 入口統計，十個真實漏失窗口全部拒判，但可取得的統計不代表全部量測故障均可見。一般程式監控、金鑰保護、/proc、程式庫後邊界與第一端前的新視圖均未開始，也不是本輪結案前全部必做。
 
-revised36 另以三個不同開機、45 個主要配對區組補充觀測準備完成後的成本。小目錄本文較慢，中／大目錄在受測完整配置下較短。預設 4 MiB 大目錄的十五筆未收齊，另有檢查檔提示，不能用它們排序；增加至 32 MiB 的配置另列，並非官方預設。兩者保留不同 API、語言、內部緩衝區及檢查內容，沒有宣稱純演算法速度或全面優勢。所有主要、暖機與先導另計，原完整程序成本未覆寫。
+書面收錄三個不同開機、45 個計時配對區組的觀測準備完成後成本。小目錄本文較慢，中／大目錄在受測完整配置下較短。預設 4 MiB 大目錄的十五筆未收齊，另有檢查檔提示，不能用它們排序；增加至 32 MiB 的配置另列，並非官方預設。兩者保留不同 API、語言、內部緩衝區及檢查內容，沒有宣稱純演算法速度或全面優勢。所有計時、暖機與先導另計，原完整程序成本未覆寫。
 
-相關工作與共同實驗見[專文](../docs/RELATED_WORK_COMPARISON_zh-TW.md)及[比較重算](../comparison/evidence/final_verification.json)。前一輪封存見 [finalization](../finalization/README.md)，本輪封存見 [comparison](../comparison/evidence/RECEIPT.json)。原兩輪補充仍用既有 verifier 重算，原資料與凍結程式不覆寫。[歷史核對](../docs/PAPER_REVIEW_FACTS_20261027.json)仍對應 revised33。
+相關工作與共同實驗見[專文](../docs/RELATED_WORK_COMPARISON_zh-TW.md)及[比較重算](../comparison/evidence/final_verification.json)。還原核對與品質檢查封存見 [finalization](../finalization/README.md)，工具比較封存見 [comparison](../comparison/evidence/RECEIPT.json)。量測完整性與適用條件實驗仍用既有 verifier 重算，原資料與凍結程式不覆寫。[歷史核對](../docs/PAPER_REVIEW_FACTS_20261027.json)仍對應 revised33。

@@ -1,0 +1,65 @@
+{
+  "as_of": "2026-11-02",
+  "base_commit": "a97821668976c019f9ed093d435efce27a42400d",
+  "scope": "Experiment-purpose and implementation-version terminology only",
+  "experiment_groups": [
+    "偵測正確性與差異還原",
+    "量測可靠性",
+    "適用條件",
+    "執行成本",
+    "工具比較"
+  ],
+  "paper": {
+    "path": "paper/cross_layer_directory_entry_consistency_revised37_zhTW.docx",
+    "sha256": "e0c1a7c4915eb572d75a012377d4002d870bf22e8bc50c2ec5a44018625648fb",
+    "source_path": "paper/cross_layer_directory_entry_consistency_revised36_zhTW.docx",
+    "source_sha256": "b11fefb1394dbbcccb797bdcebe02e73b64235515023472579e7070d29895583",
+    "changed_package_parts": [
+      "word/document.xml"
+    ],
+    "changed_paragraphs": 45,
+    "numeric_tokens_unchanged": true,
+    "numeric_token_count": 1139,
+    "xml_structure_and_formatting_unchanged": true,
+    "all_other_package_parts_byte_identical": true,
+    "word_pages": 28,
+    "visual_review": "All 28 pages inspected after readonly Word export. Figures and tables retained without clipping.",
+    "semicolons": 0,
+    "tracked_changes": false
+  },
+  "reading_documents_updated": [
+    "ARTIFACT_SCOPE.md",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "comparison/scan_cost/README.md",
+    "comparison/scan_cost/summarize.py",
+    "docs/METHOD_AND_NEXT_STEPS_zh-TW.md",
+    "docs/METHOD_CLOSURE_20261102_zh-TW.md",
+    "docs/RELATED_WORK_COMPARISON_zh-TW.md",
+    "docs/SCAN_COST_COMPARISON_20261102_zh-TW.md",
+    "paper/README.md"
+  ],
+  "report_generator_changed_only_in_string_literals": true,
+  "experiments_rerun": false,
+  "measurement_and_analysis_sources_unchanged": true,
+  "raw_archives_and_results_unchanged": true,
+  "historical_documents_and_protocols_unchanged": true,
+  "sample_groups_and_denominators_preserved": true,
+  "source_verification": {
+    "passed": true,
+    "archives": 17,
+    "frozen_sources": {
+      "phase1/CONFIRMATION_LOCK.json": 37,
+      "phase2/locks/kernel65.json": 66,
+      "phase2/locks/kernel68.json": 66
+    }
+  },
+  "scan_cost_recompute": {
+    "passed": true,
+    "main": 135,
+    "warmup": 27,
+    "eligible": 120,
+    "verification_sha256": "d23a0e405b55e4fe816528c1e7727dd802c181fa98e3fb10b0fd5249f145d84e"
+  },
+  "prior_experiment_publication_record": "docs/PUBLICATION_VERIFICATION_SCAN_COST_20261102.json"
+}

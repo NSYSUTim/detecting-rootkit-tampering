@@ -1,6 +1,6 @@
 # 相同掃描判讀範圍的比較套件
 
-結果及解讀見[完整報告](../../docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)，正式書面為 revised37。原完整程序成本在 comparison/evidence，沒有被本次結果取代。此處比較三次開機、45 個計時配對區組、135 筆計時樣本及 27 筆暖機，先導另計。
+結果及解讀見[完整報告](../../docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)，正式書面為 revised38。原完整程序成本在 comparison/evidence，沒有被本次結果取代。此處比較三次開機、45 個計時配對區組、135 筆計時樣本及 27 筆暖機，先導另計。
 
 ## 檔案與重算
 

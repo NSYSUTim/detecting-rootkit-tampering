@@ -1,0 +1,66 @@
+{
+  "as_of": "2026-11-02",
+  "base_commit": "e7286d91dd5cabca183ed69a36538bb0b388cead",
+  "scope": "Reconcile research explanations, limits and selected future work with verified evidence",
+  "paper": {
+    "path": "paper/cross_layer_directory_entry_consistency_revised38_zhTW.docx",
+    "sha256": "e5576c97b2911b9bf3a2610ae4189bfe022370857debfd88c264c47fcd4a75f5",
+    "source_path": "paper/cross_layer_directory_entry_consistency_revised37_zhTW.docx",
+    "source_sha256": "e0c1a7c4915eb572d75a012377d4002d870bf22e8bc50c2ec5a44018625648fb",
+    "changed_package_parts": [
+      "word/document.xml"
+    ],
+    "edits": 19,
+    "existing_tables_and_drawings_unchanged": true,
+    "all_other_package_parts_byte_identical": true,
+    "word_pages": 28,
+    "visual_review": "All 28 pages inspected after readonly Word export. Tables, figures, captions and references reviewed.",
+    "semicolons": 0,
+    "tracked_changes": false
+  },
+  "corrections": [
+    "Future work limited to additional observation boundaries and discrepancy intervals",
+    "Metadata use motivated by PEP 471 and fixed glibc 2.35 source, not claimed as new experiments",
+    "Returned-record rewriting distinguished from actual directory operations",
+    "Dependent second hash not assigned an unproved general collision rate",
+    "Fixed summary bytes distinguished from directory-size-dependent processing time",
+    "Repeated boots and background loads explained as implementation checks",
+    "Authorized filtering kept separate from maliciousness classification",
+    "Repeated directory-manifest words removed and conclusion consolidated"
+  ],
+  "future_work_implemented": false,
+  "new_experiments": false,
+  "raw_archives_and_measurement_sources_unchanged": true,
+  "historical_documents_and_protocols_unchanged": true,
+  "sample_groups_and_denominators_preserved": true,
+  "source_verification": {
+    "passed": true,
+    "archives": 17,
+    "frozen_sources": {
+      "phase1/CONFIRMATION_LOCK.json": 37,
+      "phase2/locks/kernel65.json": 66,
+      "phase2/locks/kernel68.json": 66
+    }
+  },
+  "scan_cost_recompute": {
+    "passed": true,
+    "main": 135,
+    "warmup": 27,
+    "eligible": 120,
+    "verification_sha256": "d23a0e405b55e4fe816528c1e7727dd802c181fa98e3fb10b0fd5249f145d84e"
+  },
+  "sources": [
+    "https://peps.python.org/pep-0471/",
+    "https://github.com/bminor/glibc/blob/glibc-2.35/sysdeps/unix/sysv/linux/readdir64.c"
+  ],
+  "reading_documents_updated": [
+    "ARTIFACT_SCOPE.md",
+    "README.md",
+    "comparison/scan_cost/README.md",
+    "docs/METHOD_AND_NEXT_STEPS_zh-TW.md",
+    "docs/METHOD_CLOSURE_20261102_zh-TW.md",
+    "paper/README.md"
+  ],
+  "report": "docs/REVIEW_CORRECTIONS_20261102_zh-TW.md",
+  "prior_publication_record": "docs/PUBLICATION_VERIFICATION_WORDING_20261102.json"
+}

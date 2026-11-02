@@ -1,0 +1,192 @@
+--- a/cells/file/file.go
++++ b/cells/file/file.go
+@@ -84,6 +84,9 @@
+ 	if err := bpfutil.SetTarget(env, spec); err != nil {
+ 		return err
+ 	}
++	if err := core.BenchmarkRing(spec); err != nil {
++		return err
++	}
+ 	var objs objects
+ 	if err := bpfutil.Load(env, spec, &objs); err != nil {
+ 		return err
+@@ -114,6 +117,8 @@
+ 	}
+ 	seenSystem := map[string]bool{}
+ 
++	finishBenchmark := core.BenchmarkStart(spec.Maps["events"].MaxEntries)
++	defer finishBenchmark()
+ 	listed, hidden, stashed := 0, 0, 0
+ 	for _, dir := range scanDirs() {
+ 		if err := ctx.Err(); err != nil {
+@@ -215,6 +220,7 @@
+ 	for _, e := range entries {
+ 		returned[e.Name()] = true
+ 	}
++	core.BenchmarkView(dir, produced, returned)
+ 	return produced, returned, nil
+ }
+ 
+@@ -251,6 +257,9 @@
+ // persistence and staging usually live, plus /proc (hidden processes) and
+ // /sys/module (hidden modules).
+ func scanDirs() []string {
++	if target := os.Getenv("KICBA_BENCH_DIR"); target != "" {
++		return []string{target}
++	}
+ 	dirs := []string{
+ 		canary.FileDir, "/proc", "/sys/module",
+ 		"/bin", "/sbin", "/usr/bin", "/usr/sbin", "/usr/local/bin", "/usr/local/sbin",
+--- a/internal/canary/canary.go
++++ b/internal/canary/canary.go
+@@ -67,7 +67,14 @@
+ 
+ // FileDir is where canary files are created. It must be one of the
+ // directories the hidden file Cell watches.
+-const FileDir = "/tmp"
++var FileDir = benchmarkFileDir()
++
++func benchmarkFileDir() string {
++	if target := os.Getenv("KICBA_BENCH_DIR"); target != "" {
++		return target
++	}
++	return "/tmp"
++}
+ 
+ // FilePrefix is the name prefix of canary files created by process pid.
+ func FilePrefix(pid int) string { return fmt.Sprintf("zygarde-canary-%d-", pid) }
+@@ -83,11 +90,25 @@
+ 
+ // File is a temporary file that exists only to be found.
+ type File struct {
+-	Path string
++	Path     string
++	borrowed bool
+ }
+ 
+ // CreateFile creates a canary file in dir.
+ func CreateFile(dir string) (*File, error) {
++	if existing := os.Getenv("KICBA_BENCH_CANARY"); existing != "" {
++		if os.Getenv("KICBA_BENCH_DIR") != dir || filepath.Dir(existing) != filepath.Clean(dir) {
++			return nil, fmt.Errorf("benchmark canary outside target")
++		}
++		info, err := os.Lstat(existing)
++		if err != nil {
++			return nil, err
++		}
++		if !info.Mode().IsRegular() {
++			return nil, fmt.Errorf("benchmark canary not regular")
++		}
++		return &File{Path: existing, borrowed: true}, nil
++	}
+ 	path := filepath.Join(dir, FilePrefix(os.Getpid())+Token())
+ 	f, err := os.OpenFile(path, os.O_CREATE|os.O_EXCL|os.O_WRONLY, 0o600)
+ 	if err != nil {
+@@ -110,4 +131,8 @@
+ }
+ 
+ // Remove deletes the canary file.
+-func (f *File) Remove() { os.Remove(f.Path) }
++func (f *File) Remove() {
++	if !f.borrowed {
++		os.Remove(f.Path)
++	}
++}
+--- a/internal/core/runner.go
++++ b/internal/core/runner.go
+@@ -36,6 +36,8 @@
+ 	ctx, cancel := context.WithTimeout(ctx, c.Timeout())
+ 	defer cancel()
+ 	err := c.Run(ctx, env, rec)
++	finishBenchmarkResult := benchmarkResultStart()
++	defer finishBenchmarkResult()
+ 
+ 	res.Message = rec.message
+ 	res.Findings = rec.findings
+--- /dev/null
++++ b/internal/core/benchmark.go
+@@ -0,0 +1,84 @@
++package core
++
++import (
++	"encoding/json"
++	"fmt"
++	"os"
++	"strconv"
++	"time"
++
++	"github.com/cilium/ebpf"
++)
++
++type benchmarkView struct {
++	Directory string          `json:"directory"`
++	Produced  map[string]bool `json:"produced"`
++	Returned  map[string]bool `json:"returned"`
++}
++type benchmarkRun struct {
++	Started   time.Time
++	ScanNS    int64
++	Views     []benchmarkView
++	RingBytes uint32
++}
++
++var activeBenchmark *benchmarkRun
++
++func BenchmarkRing(spec *ebpf.CollectionSpec) error {
++	value := os.Getenv("KICBA_BENCH_RING_BYTES")
++	if value == "" {
++		return nil
++	}
++	size, err := strconv.ParseUint(value, 10, 32)
++	if err != nil || size < 4096 || size&(size-1) != 0 {
++		return fmt.Errorf("invalid benchmark ring capacity")
++	}
++	spec.Maps["events"].MaxEntries = uint32(size)
++	return nil
++}
++
++func BenchmarkStart(ringBytes uint32) func() {
++	target := os.Getenv("KICBA_BENCH_METRICS")
++	if target == "" {
++		return func() {}
++	}
++	state := &benchmarkRun{RingBytes: ringBytes}
++	activeBenchmark = state
++	state.Started = time.Now()
++	return func() {
++		state.ScanNS = time.Since(state.Started).Nanoseconds()
++	}
++}
++
++func benchmarkResultStart() func() {
++	state := activeBenchmark
++	if state == nil {
++		return func() {}
++	}
++	target := os.Getenv("KICBA_BENCH_METRICS")
++	start := time.Now()
++	return func() {
++		decisionNS := time.Since(start).Nanoseconds()
++		elapsed := state.ScanNS + decisionNS
++		activeBenchmark = nil
++		// Stop first. Serialization and its file I/O are never in the sample.
++		f, err := os.OpenFile(target, os.O_CREATE|os.O_EXCL|os.O_WRONLY, 0600)
++		if err == nil {
++			err = json.NewEncoder(f).Encode(map[string]interface{}{
++				"scan_to_verdict_ns": elapsed, "scan_ns": state.ScanNS, "decision_postprocess_ns": decisionNS, "ring_bytes": state.RingBytes,
++				"views": state.Views, "scope": "ready observation through scan, name comparison, canary checks and verdict; report IO and detach excluded"})
++			if closeErr := f.Close(); err == nil {
++				err = closeErr
++			}
++		}
++		if err != nil {
++			fmt.Fprintf(os.Stderr, "benchmark metrics: %v\n", err)
++		}
++	}
++}
++
++func BenchmarkView(dir string, produced, returned map[string]bool) {
++	if activeBenchmark != nil {
++		activeBenchmark.Views = append(activeBenchmark.Views, benchmarkView{dir, produced, returned})
++	}
++}

@@ -1,6 +1,6 @@
 # 跨層目錄項一致性檢查的目前方法與後續工作
 
-更新日期：2026-11-02。此處統整原九次開機、兩輪補充與現行入口。目前書面為 [revised35 乾淨版](../paper/cross_layer_directory_entry_consistency_revised35_zhTW.docx)。還原指紋核對、明確 tracefs 入口事件的 nmissed、返回 profile 與 BPF recursion_misses 都已接入，三開機 zygarde 共同功能及成本比較已完成。完整六項工作與新證據見[結案核對](METHOD_CLOSURE_20261102_zh-TW.md)。原資料及歷史報告保留，不回填統計或合併分母。
+更新日期：2026-11-02。此處統整原九次開機、兩輪補充與現行入口。目前書面為 [revised36 乾淨版](../paper/cross_layer_directory_entry_consistency_revised36_zhTW.docx)。還原指紋核對、明確 tracefs 入口事件的 nmissed、返回 profile 與 BPF recursion_misses 都已接入，三開機 zygarde 共同功能及完整程序成本比較已完成。另完成[相同輸入與準備完成後計時的成本比較](SCAN_COST_COMPARISON_20261102_zh-TW.md)，區分預設與增加容量的配置，不用未收齊資料宣稱較快。完整六項工作見[結案核對](METHOD_CLOSURE_20261102_zh-TW.md)。原資料及歷史報告保留，不回填統計或合併分母。
 
 ## 目前比較什麼
 

@@ -6,7 +6,8 @@
 
 原九次開機主實驗驗證單一核心、ext4 與靜態目錄下的流程；後續已補返回漏失、載入順序、指定 Linux 6.8／6.5、ext4／tmpfs、正常動態目錄及更多身分改寫，並驗證合併核心狀態的成本改良。警報仍只表示觀測範圍內的不一致，不能由此判定惡意或推論對未知 rootkit 的偵測率。
 
-- [目前書面報告（revised35 乾淨版）](paper/cross_layer_directory_entry_consistency_revised35_zhTW.docx)
+- [目前書面報告（revised36 乾淨版）](paper/cross_layer_directory_entry_consistency_revised36_zhTW.docx)
+- [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
 - [現行掃描入口](scan_directory.py)與[共同比較重算](comparison/evidence/final_verification.json)
 - [前一輪完成內容與書面審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)
@@ -18,12 +19,12 @@
 - [適用條件與合併狀態改良證據](phase2/REPORT_zh-TW.md)
 - [目前方法與下一步](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)
 - [補充實驗發布核對紀錄（2026-10-24）](docs/PUBLICATION_VERIFICATION_20261024.json)
-- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_20261102.json)
+- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_SCAN_COST_20261102.json)
 - [離線反例與含查詢成本的重算結果](docs/PAPER_REVIEW_FACTS_20261027.json)
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-02。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised35 同步納入結果。歷史書面、原正式程式、兩輪資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
+本說明更新至 2026-11-02。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised36 另補三開機、相同輸入與準備完成後計時的成本比較。歷史書面、原正式程式、兩輪資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
 
 在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
 
@@ -76,6 +77,20 @@ IBLT 還原的是識別值、inode 與型態，不含原始名稱。原正式設
 - **rkchk：** 尚未在其要求的 Rust for Linux 自訂核心重現，不提供未量得的比較數值。
 
 Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套件能查核摘要與驗證紀錄，完整重算需取得固定版本並重新收集資料。外部比較的排除、重跑與事後分析另有紀錄。
+
+### 相同掃描判讀範圍的成本
+
+另以三次開機、45 個主要配對區組比較觀測程式準備好之後，到完成列舉、比對與必要檢查形成判定的時間。兩邊使用相同目錄及同一檢查檔，排除編譯、載入、附掛、最終卸載與事後稽核序列化。下表是各開機五次主要觀察的中位數範圍，單位 ms。
+
+| 一般項目數 | 本文 | zygarde 預設 4 MiB 轉接版 | zygarde 32 MiB 轉接版 |
+|---:|---:|---:|---:|
+| 128 | 7.00–8.11 | 1.06–1.11 | 1.09–1.12 |
+| 4,096 | 11.63–12.37 | 26.11–26.81 | 26.02–26.52 |
+| 65,536 | 88.04–89.06 | 觀測不完整，不排序 | 461.86–469.18 |
+
+135 筆主要觀察及 27 筆暖機全部保留。本文與 32 MiB 配置各 45 筆主要觀察完整，預設 4 MiB 大目錄的十五筆未收齊，且有檢查檔品質提示，不當成正常完整觀測。32 MiB 是明列的容量調整，並非官方預設。兩欄均為計時轉接版，BPF 物件及原名稱判定保留。
+
+小目錄本文較慢，中／大目錄在受測配置下較短。兩者仍有語言、API、排序、內部緩衝區與檢查項目差異，這不是純演算法速度或全面優勢。原完整程序成本回答另一次啟動的實際等待，保留原結論，不能把掃描外的全部時間直接歸因於 BCC 編譯。[定義、逐開機配對與完整性核對](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 
 ## 後續補充確認與實作改良
 
@@ -191,8 +206,9 @@ python scripts/verify_paper_review_checks.py --check docs/PAPER_REVIEW_FACTS_202
 
 ```bash
 python scripts/verify_completion_20261102.py --check comparison/evidence/final_verification.json
+python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.json
 ```
 
-原規約首次混合目錄確認未完成、無效控制與逾時堆疊均保留，修訂後三開機確認分開。控制修復只寫入新來源，沒有覆寫舊 getdents 控制。四十一項離線測試在原 Linux VM 通過，在具正常暫存目錄權限的 Windows 執行也全部通過。先前 Windows 沙箱的暫存 ACL 錯誤另列，未略過失敗測試或降低判準。
+原規約首次混合目錄確認未完成、無效控制與逾時堆疊均保留，修訂後三開機確認分開。控制修復只寫入新來源，沒有覆寫舊 getdents 控制。完整離線測試現為四十五項，原 Linux VM 及具正常暫存目錄權限的 Windows 均通過。先前 Windows 沙箱暫存 ACL 與新增比較的先導／離線路徑修正另留紀錄，未略過失敗測試或降低判準。
 
 `FILE_SHA256.csv` 列出研究檔案的相對路徑、SHA-256 與位元組數，不包含清單本身及 Git 內部檔案。正式實驗另以分析鎖、各 `campaign.sha256` 及外部比較鎖定檔約束原始資料和實作版本。這次重新產生的是公開套件檔案清單；原主實驗、兩輪補充的原始資料、凍結來源與實驗鎖保持原樣。新增的可攜核對程式把發布後閱讀文件變動與原歷史基準分開驗證。

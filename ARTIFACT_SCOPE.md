@@ -4,6 +4,8 @@
 
 ## 已收錄
 
+- revised36 書面及相同輸入、相同準備完成後計時的三開機成本確認，原始輸出、三輪先導、路徑核對修正與主機取樣另存 comparison/scan_cost。32 MiB 為另列配置，未把不完整的預設大目錄樣本列入速度排序。
+
 - revised35 書面、現行 tracefs 入口統計與還原核對、三開機 zygarde 共同功能及成本比較，以及另外的控制修復確認。全部原始輸出、未完成嘗試、規約修訂與主機取樣存於 comparison 封存，分母與舊資料分開。沒有新增公開 rootkit。
 - revised34 書面及 2026-11-01 的還原核對與 BPF recursion_misses 補強封存，保留為歷史版本。
 - 作者提供的 revised33 乾淨版，以 `paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx` 原樣保存，SHA-256 與已核對來源相同。

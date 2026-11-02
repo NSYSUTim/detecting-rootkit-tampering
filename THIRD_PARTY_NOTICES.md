@@ -1,6 +1,6 @@
 # 第三方方法與來源
 
-本儲存庫未複製下列第三方專案的完整原始碼或執行檔。重現外部比較時，請由原作者儲存庫取得並 checkout 指定版本；本研究自己的轉接與驗證腳本位於 `tools/external_baselines/`。
+原版 CARAXES 的固定官方來源、GPL-3.0 LICENSE 及實際建置產物另收錄於 comparison/public_rootkit/public_sample_20261102.tar.gz，供核對來源。其餘下列第三方專案未整包收錄。重現外部比較時，請由原作者儲存庫取得並 checkout 指定版本；本研究自己的轉接與驗證腳本位於 `tools/external_baselines/`。
 
 2026-10-24 公開量測完整性與適用條件實驗。下表的四個專案仍只保留原先限定內容；xcellerator 的部分範例來源及授權列於後段，並非第三方專案整包匯入。
 
@@ -9,7 +9,7 @@
 | Trace of the Times | <https://github.com/ait-aecid/rootkit-detection-ebpf-time-trace> | `269d9b0bc6aafb403cba209bb47b8bdb902ba10e` | 不含 upstream 專案；保留比較摘要、manifest 與本研究 helper |
 | Decloaker | <https://github.com/gustavo-iniguez-goya/decloaker> | v0.0.9，source commit `5a2ca88e3f715a221720a0330ae65ca845a3032d` | 不含 release archive、binary 或完整 source；保留九開機結果摘要與驗證器 |
 | rkchk | <https://github.com/thalium/rkchk> | `a9f4e496e61c65d4787365b883e4b21d74689e49` | 因需作者指定的 Rust-for-Linux 自訂核心，本論文未執行 head-to-head，未收錄其專案 |
-| CARAXES | <https://github.com/ait-aecid/caraxes> | 原始 VM checkout commit `899e8be6b5f6c7236bd23b52aa65051de757e0b3`；受控模組的雜湊另由正式鎖記錄 | 未收錄完整 upstream；filldir 控制參照其掛接模式縮減實作，位於 `attack_variants/d7_controls_r2/`；getdents 控制與等量替換由本研究自行撰寫 |
+| CARAXES | <https://github.com/ait-aecid/caraxes> | 原始 VM checkout commit `899e8be6b5f6c7236bd23b52aa65051de757e0b3`；受控模組的雜湊另由正式鎖記錄 | 已另測官方原版 getdents64 與作者提供的 filldir 配置，封存含來源、LICENSE、配置差異及建置產物。舊受控 filldir 位於 `attack_variants/d7_controls_r2/`，命中時回傳 true，與原版 false 不同；getdents 控制與等量替換為自行實作 |
 
 第三方專案的授權與使用條件以各自 upstream 為準。本研究的比較範圍與限制詳見[比較規約](docs/D9_EXTERNAL_METHOD_COMPARISON_PROTOCOL_zh-TW.md)與[偏差紀錄](docs/D9_EXTERNAL_METHOD_COMPARISON_DEVIATIONS_zh-TW.md)。
 

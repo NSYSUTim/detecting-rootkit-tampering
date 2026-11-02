@@ -2,9 +2,13 @@
 
 更新日期：2026-11-02。
 
+revised39 保留 revised38 的既有圖表與其他封裝部件，新增 6.10 節，並同步修正摘要、受測模組說明、範圍、限制、結論及重現入口。以 [build_revised39.py](../tools/build_revised39.py) 重建，原始資料與結果核對見[公開樣本實驗](../comparison/public_rootkit/README.md)。Word 匯出論文為 29 頁，面試摘要為 1 頁。
+
 | 版本 | 檔案 | 來源與定位 |
 |---|---|---|
-| 目前書面 | [revised38 乾淨版](cross_layer_directory_entry_consistency_revised38_zhTW.docx) | 以 revised37 為底，核對既有討論、程式與文獻，修正方法動機、下一步及結論，實驗表格與數據不變 |
+| 目前書面 | [revised39](cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised39_zhTW.pdf) | 原版 CARAXES 的三開機結果，包含 getdents64 成功檢出與 filldir 截斷未警報 |
+| 面試摘要 | [Word](interview_research_summary_public_sample_zhTW.docx)／[PDF](interview_research_summary_public_sample_zhTW.pdf) | 依作者提供的摘要更新，成功與未檢出結果並列 |
+| 歷史書面 | [revised38 乾淨版](cross_layer_directory_entry_consistency_revised38_zhTW.docx) | 核對既有討論、程式與文獻，修正方法動機、下一步及結論 |
 | 歷史書面 | [revised37 乾淨版](cross_layer_directory_entry_consistency_revised37_zhTW.docx) | 依實驗目的命名，統一實作與計時樣本用詞 |
 | 歷史書面 | [revised36 乾淨版](cross_layer_directory_entry_consistency_revised36_zhTW.docx) | 納入相同輸入、相同準備完成後計時範圍的三開機比較，區分預設與增加容量的配置 |
 | 歷史書面 | [revised35 乾淨版](cross_layer_directory_entry_consistency_revised35_zhTW.docx) | 保留現行入口的漏失拒判、原生確認、共同功能與完整程序成本比較，以及控制修復確認 |
@@ -26,7 +30,7 @@ revised34 SHA-256：`9873801930d29ecf62d9acf262953dc65f9cd03882f0fa60d84c0d14d73
 
 revised33 SHA-256：`47169ad7e18b432ce8f66e26d6f2bfaad559d46302f43dd22b56b2711b61bca8`，該檔及歷史核對入口保持原樣。
 
-新舊分母、計時與實作分開。現行入口沒有重跑原 1,296 批矩陣，沒有新增公開 rootkit；zygarde 則已完成指定共同環境的三開機實測。兩者共同缺失名稱皆為 105/105 檢出、0/30 對照警報。本文還能檢出新增、inode 與型態差異，但包含編譯與附掛的新程序完整成本在 128／4,096 項時較高，不能宣稱全面更快。65,536 項另次稽核的對方入口名稱集合不完整，該時間不能當成同等完整觀測的比較。
+新舊分母、計時與實作分開。現行入口沒有重跑原 1,296 批矩陣。原版 CARAXES 現已另組實測，正常 60 次一致、getdents64 模式 120 次警報並還原、filldir 模式 120 次截斷未警報，見 6.10 節及[結果與重算](../docs/ORIGINAL_CARAXES_20261102_zh-TW.md)。先前與 zygarde 的受控共同功能測試仍為兩者 105/105 檢出、0/30 對照警報，不外推為兩者對原版所有模式均有相同涵蓋。本文還能檢出新增、inode 與型態差異，但包含編譯與附掛的新程序完整成本在 128／4,096 項時較高，不能宣稱全面更快。65,536 項另次稽核的對方入口名稱集合不完整，該時間不能當成同等完整觀測的比較。
 
 還原指紋核對不是無碰撞證明。現行入口已納入 tracefs 入口統計，十個真實漏失窗口全部拒判，但可取得的統計不代表全部量測故障均可見。增加函式庫觀測點列為尚未實作的研究提案，其餘範圍界線見方法與限制。現有的還原核對、入口拒判及比較已完成。
 

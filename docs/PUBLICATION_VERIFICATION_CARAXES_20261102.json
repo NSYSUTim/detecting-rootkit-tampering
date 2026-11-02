@@ -1,0 +1,84 @@
+{
+  "recorded_utc": "2026-11-02T16:04:23.268317+00:00",
+  "base_commit": "3cb634a8dd321f0ab3802d8a3aef689c229d5f7c",
+  "scope": "Original CARAXES two configurations, three fresh boots, unchanged detector, truthful negative result",
+  "raw_archive": {
+    "path": "comparison/public_rootkit/public_sample_20261102.tar.gz",
+    "sha256": "88852bcfbb08be7f05d185f16e96b0e14defbab3ca94f65af5e438a2df6e4e96"
+  },
+  "offline_verification": {
+    "passed": true,
+    "observations_and_controls": 447,
+    "detector_observations": 300,
+    "independent_controls": 102,
+    "zygarde_observations": 45,
+    "boot_ids": [
+      "479b99f9-cbc9-419b-951e-d381c81b7b44",
+      "531f1963-f031-4674-b824-dacb08ecc47a",
+      "a8fd6b5b-1c27-4074-9b94-4b7be87b8af8"
+    ]
+  },
+  "tests": {
+    "command": "python -m unittest discover -s tests -q",
+    "passed": 45,
+    "failed": 0,
+    "environment_attempts": "pytest unavailable; first unittest sandbox run had three temporary-directory permission errors; same 45 tests passed with normal workspace permissions, without source/test changes"
+  },
+  "historical_verification": {
+    "passed": true,
+    "recomputed": true,
+    "archives": 17,
+    "frozen_sources": {
+      "phase1/CONFIRMATION_LOCK.json": 37,
+      "phase2/locks/kernel65.json": 66,
+      "phase2/locks/kernel68.json": 66
+    }
+  },
+  "documents": {
+    "paper/cross_layer_directory_entry_consistency_revised39_zhTW.docx": {
+      "sha256": "2d5ae88c9fb3f8c35073dca0d4ef299027f9a6fe817c4b6d47516a5d14f5a11e",
+      "bytes": 2174235
+    },
+    "paper/cross_layer_directory_entry_consistency_revised39_zhTW.pdf": {
+      "sha256": "1cb401e57c298bad2879eb9db0981997caed5a8a99379f2997533a4288bada13",
+      "bytes": 1082845,
+      "pages": 29
+    },
+    "paper/interview_research_summary_public_sample_zhTW.docx": {
+      "sha256": "6fb66d531fbe9213a9d82667228feea75972f99bb98d3343cab751f4b2932f55",
+      "bytes": 38661
+    },
+    "paper/interview_research_summary_public_sample_zhTW.pdf": {
+      "sha256": "bd323372727a26688c8c89f26ef24496ee5d5f7988362234b617b1168434e74b",
+      "bytes": 250010,
+      "pages": 1
+    }
+  },
+  "formal_paper_source": {
+    "path": "paper/cross_layer_directory_entry_consistency_revised38_zhTW.docx",
+    "sha256": "e5576c97b2911b9bf3a2610ae4189bfe022370857debfd88c264c47fcd4a75f5"
+  },
+  "word_validation": {
+    "readonly_native_word_export": true,
+    "all_pages_rendered_and_inspected": true,
+    "existing_tables_and_other_package_parts_unchanged": true,
+    "changed_package_parts": [
+      "word/document.xml"
+    ],
+    "semicolons": 0
+  },
+  "limits": {
+    "new_checkpoint_created": false,
+    "checkpoint_reason": "Host account lacks Hyper-V administration permission",
+    "all_samples_unloaded": true,
+    "cleanup_manifests_restored": true,
+    "original_filldir_hiding_detected": false,
+    "original_getdents64_hiding_detected": true,
+    "other_rootkits_validated": false,
+    "existing_denominators_merged": false,
+    "detector_algorithm_modified": false,
+    "new_performance_claim": false
+  },
+  "report": "docs/ORIGINAL_CARAXES_20261102_zh-TW.md",
+  "prior_publication_record": "docs/PUBLICATION_VERIFICATION_REVIEW_20261102.json"
+}

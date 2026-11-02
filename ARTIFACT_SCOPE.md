@@ -1,12 +1,15 @@
 # 跨層目錄項一致性檢查研究成品收錄範圍
 
+本次另收錄固定原版 CARAXES 的三開機實驗、官方來源與 GPL-3.0 授權。getdents64 模式 120 次警報並還原，filldir 模式 120 次截斷未警報；同場 zygarde 對兩模式各 15 次有目標警報，filldir 同時有檢查檔品質提示。完整結果與證據見[實驗報告](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)。以前的受控比較不外推為兩者對此模式有相同涵蓋。
+
 本儲存庫保存論文的程式、既有結果、量測可靠性、適用條件及成本實驗證據與目前書面，更新至 2026-11-02。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；書面版本與來源見 [paper/README](paper/README.md)，目前六項結案工作見[結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
 
 ## 已收錄
 
+- revised39 論文及一頁摘要的 Word／PDF，納入原版 CARAXES 兩配置的成功與未警報結果。comparison/public_rootkit 保存官方來源與授權、規約、建置及配置紀錄、300 次量測、102 次實收控制、45 次 zygarde 觀察、先導與重算入口。
 - revised38 書面修正研究範圍、下一步、欄位改寫動機及雜湊解釋，實驗數值與條件不變。revised36、revised37 保留為歷史書面；相同輸入、相同準備完成後計時的三開機成本確認、原始輸出、三輪先導、路徑核對修正與主機取樣存於 comparison/scan_cost。32 MiB 為另列配置，未把不完整的預設大目錄樣本列入速度排序。
 
-- revised35 書面、現行 tracefs 入口統計與還原核對、三開機 zygarde 共同功能及成本比較，以及另外的控制修復確認。全部原始輸出、未完成嘗試、規約修訂與主機取樣存於 comparison 封存，分母與舊資料分開。沒有新增公開 rootkit。
+- revised35 書面、現行 tracefs 入口統計與還原核對、三開機 zygarde 共同功能及成本比較，以及另外的控制修復確認。全部原始輸出、未完成嘗試、規約修訂與主機取樣存於 comparison 封存，分母與舊資料分開。該輪未新增公開 rootkit，原版 CARAXES 的實測另行保存。
 - revised34 書面及 2026-11-01 的還原核對與 BPF recursion_misses 補強封存，保留為歷史版本。
 - 作者提供的 revised33 乾淨版，以 `paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx` 原樣保存，SHA-256 與已核對來源相同。
 - 使用者於 2026-10-20 提供的 `eBPF_最終繳交.docx`，以 `paper/cross_layer_directory_entry_consistency_zhTW.docx` 原樣保留為歷史存檔。

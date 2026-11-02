@@ -1,0 +1,69 @@
+{
+  "upstream_commit": "899e8be6b5f6c7236bd23b52aa65051de757e0b3",
+  "source_sha256": {
+    "ftrace_helper.h": "266565b09e365e6d3dea360f7f3ad14733877dd22ef576c5a1e3649e10a89a2f",
+    "stdlib.h": "d59be7ed44788b9d85a337d3ff7b598c3ceaf54bbdbfc9bb7523b8c0c8eac13c",
+    "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "README.md": "fe9bf052e9369fcd728b9b466bb681d994467170e1b6a09f5b8f323b9e68cc6e",
+    ".gitignore": "9abf1cf739e0f365959fad5bba10771b7ab7b187caba4c57755ac340cc65df9e",
+    "Makefile": "d2eac5fdbe959ad88a606b9019c288e82e900612e4a8bd4a5cdc5a8813c2b697",
+    "caraxes_logo.svg": "e592fcfd39aeb6da8b3d658f2eb6c6a66e58b558c7a8d9da41590db2d8e75a61",
+    "hooks_getdents64.h": "69a5f021956440815b13040fb87c0aeceb1ca6a5b3d2c402e13140db17516b14",
+    "rootkit.h": "be8e4dcecc13b3ecca962376aa5884dd7be73540197e81cf1c2c8ccfb7d5b214",
+    "caraxes.c": "a7529f14c5705e30bdd4275e71c3c6e822ebd47cf053dc0f0780cb00e9f677d8",
+    "hooks_filldir.h": "4c98f7a11f1aa923fdd4a4175e50d8c6bd86558c665c99f2b34648314a0de650",
+    "hooks.h": "f8e21517bffbc16880acfb730ad342ffbfd49e68e5f54b9d1c2e38b4b7a37834"
+  },
+  "builds": {
+    "getdents64": {
+      "returncode": 0,
+      "source_sha256": {
+        "ftrace_helper.h": "266565b09e365e6d3dea360f7f3ad14733877dd22ef576c5a1e3649e10a89a2f",
+        "stdlib.h": "d59be7ed44788b9d85a337d3ff7b598c3ceaf54bbdbfc9bb7523b8c0c8eac13c",
+        "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+        "README.md": "fe9bf052e9369fcd728b9b466bb681d994467170e1b6a09f5b8f323b9e68cc6e",
+        ".gitignore": "9abf1cf739e0f365959fad5bba10771b7ab7b187caba4c57755ac340cc65df9e",
+        "Makefile": "d2eac5fdbe959ad88a606b9019c288e82e900612e4a8bd4a5cdc5a8813c2b697",
+        "caraxes_logo.svg": "e592fcfd39aeb6da8b3d658f2eb6c6a66e58b558c7a8d9da41590db2d8e75a61",
+        "hooks_getdents64.h": "69a5f021956440815b13040fb87c0aeceb1ca6a5b3d2c402e13140db17516b14",
+        "rootkit.h": "be8e4dcecc13b3ecca962376aa5884dd7be73540197e81cf1c2c8ccfb7d5b214",
+        "caraxes.c": "a7529f14c5705e30bdd4275e71c3c6e822ebd47cf053dc0f0780cb00e9f677d8",
+        "hooks_filldir.h": "4c98f7a11f1aa923fdd4a4175e50d8c6bd86558c665c99f2b34648314a0de650",
+        "hooks.h": "f8e21517bffbc16880acfb730ad342ffbfd49e68e5f54b9d1c2e38b4b7a37834"
+      },
+      "changed_files": [],
+      "module_sha256": "cc2684f690776b578e1e6f136901faf7632b87b5a5ea556735d55e95a2931618",
+      "command": [
+        "make",
+        "PWD=/home/kicba/public_sample_20261102/build/getdents64"
+      ]
+    },
+    "filldir": {
+      "returncode": 0,
+      "source_sha256": {
+        "ftrace_helper.h": "266565b09e365e6d3dea360f7f3ad14733877dd22ef576c5a1e3649e10a89a2f",
+        "stdlib.h": "d59be7ed44788b9d85a337d3ff7b598c3ceaf54bbdbfc9bb7523b8c0c8eac13c",
+        "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+        "README.md": "fe9bf052e9369fcd728b9b466bb681d994467170e1b6a09f5b8f323b9e68cc6e",
+        ".gitignore": "9abf1cf739e0f365959fad5bba10771b7ab7b187caba4c57755ac340cc65df9e",
+        "Makefile": "d2eac5fdbe959ad88a606b9019c288e82e900612e4a8bd4a5cdc5a8813c2b697",
+        "caraxes_logo.svg": "e592fcfd39aeb6da8b3d658f2eb6c6a66e58b558c7a8d9da41590db2d8e75a61",
+        "hooks_getdents64.h": "69a5f021956440815b13040fb87c0aeceb1ca6a5b3d2c402e13140db17516b14",
+        "rootkit.h": "be8e4dcecc13b3ecca962376aa5884dd7be73540197e81cf1c2c8ccfb7d5b214",
+        "caraxes.c": "a7529f14c5705e30bdd4275e71c3c6e822ebd47cf053dc0f0780cb00e9f677d8",
+        "hooks_filldir.h": "4c98f7a11f1aa923fdd4a4175e50d8c6bd86558c665c99f2b34648314a0de650",
+        "hooks.h": "bc6cf530671745c129a8bcd22c527fceed7ff2ca422a6dccc4880a71512b514a"
+      },
+      "changed_files": [
+        "hooks.h"
+      ],
+      "module_sha256": "63ca0aca328391129cf49182733f829f39db1602adefcdafb4d0d798df1d5099",
+      "command": [
+        "make",
+        "PWD=/home/kicba/public_sample_20261102/build/filldir"
+      ]
+    }
+  },
+  "attempt1": "build_manifest_attempt1.json",
+  "correction": "Pass the actual module directory as make PWD, without a source edit."
+}

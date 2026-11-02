@@ -6,7 +6,9 @@
 
 本研究的實驗檢驗偵測正確性、差異還原、量測可靠性、適用條件與執行成本，並與既有工具比較。九次開機矩陣涵蓋單一核心、ext4 與靜態目錄；量測完整性及適用條件實驗檢驗探針漏失、載入順序、指定 Linux 6.8／6.5、ext4／tmpfs、正常動態目錄與更多身分改寫，並驗證合併核心狀態的成本改良。警報只表示觀測範圍內的不一致，不能由此判定惡意或推論對未知 rootkit 的偵測率。
 
-- [目前書面報告（revised38 乾淨版）](paper/cross_layer_directory_entry_consistency_revised38_zhTW.docx)
+- [目前書面報告（revised39）](paper/cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](paper/cross_layer_directory_entry_consistency_revised39_zhTW.pdf)
+- [面試研究摘要](paper/interview_research_summary_public_sample_zhTW.docx)／[PDF](paper/interview_research_summary_public_sample_zhTW.pdf)
+- [原版 CARAXES 三開機實測與未檢出邊界](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)
 - [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
 - [現行掃描入口](scan_directory.py)與[共同比較重算](comparison/evidence/final_verification.json)
@@ -20,12 +22,12 @@
 - [目前方法與下一步](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)
 - [報告修正與證據界線](docs/REVIEW_CORRECTIONS_20261102_zh-TW.md)
 - [量測可靠性與適用條件實驗發布核對紀錄（2026-10-24）](docs/PUBLICATION_VERIFICATION_20261024.json)
-- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_REVIEW_20261102.json)
+- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_CARAXES_20261102.json)
 - [離線反例與含查詢成本的重算結果](docs/PAPER_REVIEW_FACTS_20261027.json)
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-02。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised38 收錄三開機、相同輸入與準備完成後計時的成本比較，依實驗目的統一用詞，並修正方法解釋及下一步範圍。歷史書面、初版程式、各組原始資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
+本說明更新至 2026-11-02。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised39 另納入固定原版 CARAXES 的兩配置、兩種掛接順序與三個新開機。正常對照 60 次一致，getdents64 模式 120 次警報並正確還原；filldir 模式 120 次造成清單截斷但兩端一致而未警報。兩端一致不能保證沒有隱藏。歷史書面、初版程式、各組原始資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
 
 在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
 
@@ -114,6 +116,8 @@ Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套�
 偵測正確性矩陣以批次評估；量測可靠性、適用條件與成本實驗依目的，以單次列舉、窗口或配對區組評估。不能合併分母、沿用原信賴區間或將先導與故障控制算成偵測成效樣本。詳見兩輪[來源與規約](docs/PAPER_UPDATE_GUIDE_20261024_zh-TW.md)。
 
 ## 適用範圍與限制
+
+- 原版 CARAXES 已另行實測。getdents64 模式每次缺少三筆並警報；filldir 模式回傳 false，正常 70 筆的目錄只交付 2 筆，核心摘要也只接受相同 2 筆，120 次均未警報。同場 zygarde 轉接版對 filldir 的 15 次皆有目標警報及檢查檔提示，不代表完整還原全部外部缺失。[規約、原始資料及重算](comparison/public_rootkit/README.md)
 
 - 只涵蓋 `filldir64` 接受之後到 `getdents64` 輸出之前的身分差異。項目在觀測點之前被排除，或因提早回傳 0 而根本未走訪，均不在範圍內。
 - 假設 eBPF、使用者量測程式與控制程式未被攻擊者控制。原矩陣實驗先掛 eBPF，再載入 ftrace 模組；條件確認實驗已測受測 ftrace 組合的反向順序，其他掛接技術仍未驗證。

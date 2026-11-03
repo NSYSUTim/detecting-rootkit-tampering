@@ -1,0 +1,19 @@
+--- phase1/enum_probe.c
++++ terminal_rejection/enum_gated.c
+@@ -186,6 +186,16 @@
+         }
+         if (result == 0)
+             break;
++        /* Test-only pause after the first returned batch. No rootkit is used. */
++        const char *race_path = getenv("KICBA_RACE_GATE");
++        if (race_path && syscalls == 1) {
++            int gate_fd = open(race_path, O_WRONLY | O_CREAT | O_EXCL, 0600);
++            if (gate_fd < 0 || write(gate_fd, buffer, result) != result || close(gate_fd))
++                return 2;
++            if (read(STDIN_FILENO, &gate, 1) != 1)
++                return 2;
++        }
++
+         returned_bytes += (uint64_t)result;
+         while (offset < result) {
+             struct d9_linux_dirent64 *entry =

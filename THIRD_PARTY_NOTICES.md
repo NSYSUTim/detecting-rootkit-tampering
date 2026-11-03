@@ -1,5 +1,7 @@
 # 第三方方法與來源
 
+2026-11-03 的終止拒絕實驗沿用前組固定原版 CARAXES 模組位元組及固定 zygarde 轉接版，沒有修改樣本行為或引入另一套第三方來源。結果、正常刪除警報及原始紀錄見 [terminal_rejection](terminal_rejection/README.md)。
+
 原版 CARAXES 的固定官方來源、GPL-3.0 LICENSE 及實際建置產物另收錄於 comparison/public_rootkit/public_sample_20261102.tar.gz，供核對來源。其餘下列第三方專案未整包收錄。重現外部比較時，請由原作者儲存庫取得並 checkout 指定版本；本研究自己的轉接與驗證腳本位於 `tools/external_baselines/`。
 
 2026-10-24 公開量測完整性與適用條件實驗。下表的四個專案仍只保留原先限定內容；xcellerator 的部分範例來源及授權列於後段，並非第三方專案整包匯入。

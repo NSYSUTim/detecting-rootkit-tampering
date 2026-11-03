@@ -1,0 +1,23 @@
+--- comparison/public_rootkit/run_native.py
++++ terminal_rejection/run_public_sample.py
+@@ -11,9 +11,9 @@
+ import sys
+ import time
+ 
+-DETECTOR=Path('/home/kicba/closure_20261102/current')
++DETECTOR=Path(__file__).resolve().parents[1]
+ for folder in (DETECTOR,DETECTOR/'src'):sys.path.insert(0,str(folder))
+-from finalization.tracefs_measurement import new_measurement,CompleteMeasurement
++from terminal_rejection.measurement import new_terminal_measurement as new_measurement,TerminalMeasurement as CompleteMeasurement
+ from finalization.controlled_cases import exact_capture,loaded
+ from finalization.compare_zygarde import execute,zygarde_target
+ from phase2.run_campaign import manifest
+@@ -54,7 +54,7 @@
+     modules={m:a.root/'build'/m/'caraxes.ko' for m in ('getdents64','filldir')}
+     sources=[DETECTOR/'finalization/tracefs_measurement.py',DETECTOR/'finalization/measurement.py',
+              DETECTOR/'phase2/measurement.py',DETECTOR/'phase2/bpf_packed.c',
+-             DETECTOR/'src/kicba/recovery_validation.py',Path(__file__),Path(__file__).with_name('PROTOCOL.md')]
++             DETECTOR/'src/kicba/recovery_validation.py',DETECTOR/'src/kicba/terminal_rejection.py',DETECTOR/'terminal_rejection/bpf.c',DETECTOR/'terminal_rejection/measurement.py',Path(__file__),Path(__file__).with_name('PROTOCOL.md')]
+     meta={'kernel':platform.release(),'boot_id':Path('/proc/sys/kernel/random/boot_id').read_text().strip(),
+           'boot_index':a.boot_index,'pilot':a.pilot,'fixture':str(fixture),'original':original,
+           'module_sha256':{m:sha(f) for m,f in modules.items()},

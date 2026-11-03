@@ -1,0 +1,48 @@
+--- phase2/bpf_packed.c
++++ terminal_rejection/bpf.c
+@@ -1,6 +1,6 @@
+ #include <uapi/linux/ptrace.h>
+ #include "../collector/d9_reconciliation_hash.h"
+-#include "name_hash.h"
++#include "../phase2/name_hash.h"
+ 
+ struct packed_token { u64 key_hash; u64 inode; u32 d_type; u32 name_length; };
+ struct packed_fingerprint { u64 count; u64 sum1; u64 sum2; };
+@@ -18,6 +18,10 @@
+     struct packed_fingerprint fp;
+     struct packed_stats stats;
+     struct packed_cell cells[256];
++    u64 terminal_returns;
++    u32 terminal_last_accepted, terminal_witness_valid;
++    struct packed_token terminal_last;
++    char terminal_name[256];
+ };
+ 
+ /* The controller pre-registers this value before releasing the scanner. */
+@@ -49,6 +53,7 @@
+         long copied;
+         s->stats.outer_entries++;
+         s->pending_valid = 0;
++        s->terminal_witness_valid = 0;
+         if (name_length < 0 || name_length > 255) {
+             s->stats.invalid_name_lengths++;
+             goto increment_depth;
+@@ -73,6 +78,7 @@
+         s->pending.d_type = d_type;
+         s->pending.name_length = name_length;
+         s->pending_valid = 1;
++        __builtin_memcpy(s->terminal_name, raw, sizeof(raw));
+     }
+ increment_depth:
+     s->depth++;
+@@ -92,6 +98,10 @@
+     s->depth--;
+     if (s->depth)
+         return 0;
++    s->terminal_returns++;
++    s->terminal_last_accepted = PT_REGS_RC(ctx) ? 1 : 0;
++    s->terminal_witness_valid = s->pending_valid;
++    s->terminal_last = s->pending;
+     if (PT_REGS_RC(ctx)) {
+         if (!s->pending_valid) {
+             s->stats.pending_update_failures++;

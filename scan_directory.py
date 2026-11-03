@@ -17,10 +17,10 @@ def main():
     args=parser.parse_args()
     if os.name!='posix' or os.geteuid()!=0:parser.error('requires root in the Linux research VM')
     if not args.directory.is_dir() or not args.probe.is_file():parser.error('directory or scanner unavailable')
-    from finalization.tracefs_measurement import new_measurement,CompleteMeasurement
+    from terminal_rejection.measurement import new_terminal_measurement,TerminalMeasurement
     try:
-        with new_measurement(probe=args.probe) as base:
-            result=CompleteMeasurement(base).scan(args.directory,args.buffer_size)
+        with new_terminal_measurement(probe=args.probe) as base:
+            result=TerminalMeasurement(base).scan(args.directory,args.buffer_size)
     except Exception as error:
         result={'verdict':'invalid','measurement_valid':False,'alarm':None,
                 'recovery_verified':False,'error':str(error)}

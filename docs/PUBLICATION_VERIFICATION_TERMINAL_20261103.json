@@ -1,0 +1,156 @@
+{
+  "recorded_utc": "2026-11-03T03:48:06.273295+00:00",
+  "base_commit": "921319d5f0612227a14a8cad91065dfc18730092",
+  "scope": "Add separate terminal rejection signal, preserving and reporting observed benign alerts",
+  "raw_archive_sha256": "e2f3fcbbb35157e8887578a14506b4c5213142788aa383f099fd193354acfc95",
+  "recomputed_observations_and_controls": 1809,
+  "native_detector_scans": 1662,
+  "independent_controls": 102,
+  "zygarde_observations": 45,
+  "public_sample": [
+    {
+      "mode": "normal",
+      "order": "no_rootkit",
+      "n": 60,
+      "verdicts": {
+        "equal": 60
+      },
+      "identity_alarms": 0,
+      "terminal_alerts": 0,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    {
+      "mode": "getdents64",
+      "order": "rootkit_first",
+      "n": 60,
+      "verdicts": {
+        "different": 60
+      },
+      "identity_alarms": 60,
+      "terminal_alerts": 0,
+      "alarms": 60,
+      "verified_recovery": 60
+    },
+    {
+      "mode": "getdents64",
+      "order": "detector_first",
+      "n": 60,
+      "verdicts": {
+        "different": 60
+      },
+      "identity_alarms": 60,
+      "terminal_alerts": 0,
+      "alarms": 60,
+      "verified_recovery": 60
+    },
+    {
+      "mode": "filldir",
+      "order": "rootkit_first",
+      "n": 60,
+      "verdicts": {
+        "terminal_rejection": 60
+      },
+      "identity_alarms": 0,
+      "terminal_alerts": 60,
+      "alarms": 60,
+      "verified_recovery": 0
+    },
+    {
+      "mode": "filldir",
+      "order": "detector_first",
+      "n": 60,
+      "verdicts": {
+        "terminal_rejection": 60
+      },
+      "identity_alarms": 0,
+      "terminal_alerts": 60,
+      "alarms": 60,
+      "verified_recovery": 0
+    }
+  ],
+  "benign_race": {
+    "ext4": {
+      "n": 15,
+      "verdicts": {
+        "equal": 15
+      },
+      "identity_alarms": 0,
+      "terminal_alerts": 0,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "tmpfs": {
+      "n": 15,
+      "verdicts": {
+        "terminal_rejection": 15
+      },
+      "identity_alarms": 0,
+      "terminal_alerts": 15,
+      "alarms": 15,
+      "verified_recovery": 0
+    }
+  },
+  "normal_static": {
+    "n": 120,
+    "verdicts": {
+      "equal": 120
+    },
+    "identity_alarms": 0,
+    "terminal_alerts": 0,
+    "alarms": 0,
+    "verified_recovery": 0
+  },
+  "normal_churn": {
+    "n": 240,
+    "verdicts": {
+      "equal": 240
+    },
+    "identity_alarms": 0,
+    "terminal_alerts": 0,
+    "alarms": 0,
+    "verified_recovery": 0
+  },
+  "unit_tests": {
+    "command": "python -m unittest discover -s tests -q",
+    "passed": 51,
+    "failed": 0,
+    "new_rule_tests": 6,
+    "initial_red": "new module absent before implementation"
+  },
+  "old_original_sample_recomputed": {
+    "passed": true,
+    "observations_and_controls": 447
+  },
+  "historical_checksums_preserved": true,
+  "original_packed_scanner_and_tracefs_source_unchanged": true,
+  "source_binding": "actual deployed sources inside native archive; final host notes/controller were not transferred",
+  "native_source_constant_across_three_boots": true,
+  "documents": {
+    "paper/cross_layer_directory_entry_consistency_revised40_zhTW.docx": {
+      "sha256": "06fbf93b041fe26e585e96ed76601dd312e1a97c1818f8ff1ce7ea35a58809b4",
+      "bytes": 2176201
+    },
+    "paper/cross_layer_directory_entry_consistency_revised40_zhTW.pdf": {
+      "sha256": "1061dd15e467a2d97102e0e25905449ee0bc76896ad898a44040f96c877253af",
+      "bytes": 1092012,
+      "pages": 30
+    },
+    "paper/interview_research_summary_terminal_zhTW.docx": {
+      "sha256": "8d8a79f59dbb3a555f0ac1c0ed029a24e555440c18821687c425bef3f3b5c418",
+      "bytes": 38641
+    },
+    "paper/interview_research_summary_terminal_zhTW.pdf": {
+      "sha256": "c571233b02e5bd8d266554c2757289716f9b62901cd71e28eaedc183c12e1eda",
+      "bytes": 247376,
+      "pages": 1
+    }
+  },
+  "old_tables_figures_and_other_package_parts_unchanged": true,
+  "readonly_word_export_and_visual_review": true,
+  "prior_timings_reused_for_new_version": false,
+  "normal_deletion_is_observed_false_alert_if_interpreted_as_hiding": true,
+  "module_unloaded_and_tmpfs_unmounted": true,
+  "checkpoint_created": false,
+  "report": "docs/TERMINAL_REJECTION_20261103_zh-TW.md"
+}

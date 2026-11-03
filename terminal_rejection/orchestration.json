@@ -1,0 +1,79 @@
+[
+  {
+    "event": "reboot",
+    "index": 1,
+    "returncode": 4294967295
+  },
+  {
+    "event": "fresh_boot",
+    "index": 1,
+    "boot_id": "e3a697f8-7acf-4248-88be-38d0dbad49a7"
+  },
+  {
+    "event": "completed",
+    "index": 1,
+    "kind": "public",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 1,
+    "kind": "regression",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "event": "reboot",
+    "index": 2,
+    "returncode": 4294967295
+  },
+  {
+    "event": "fresh_boot",
+    "index": 2,
+    "boot_id": "a57aba13-2625-4f42-86da-dcd0682b32e6"
+  },
+  {
+    "event": "completed",
+    "index": 2,
+    "kind": "public",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 2,
+    "kind": "regression",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "event": "reboot",
+    "index": 3,
+    "returncode": 4294967295
+  },
+  {
+    "event": "fresh_boot",
+    "index": 3,
+    "boot_id": "0f2d2e95-cc4c-4988-9238-78ff66a20299"
+  },
+  {
+    "event": "completed",
+    "index": 3,
+    "kind": "public",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 3,
+    "kind": "regression",
+    "returncode": 0,
+    "stderr": ""
+  },
+  {
+    "event": "download_verified",
+    "sha256": "e2f3fcbbb35157e8887578a14506b4c5213142788aa383f099fd193354acfc95",
+    "bytes": 10411967
+  }
+]

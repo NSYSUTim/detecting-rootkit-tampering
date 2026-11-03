@@ -1,6 +1,6 @@
 # 第三方方法與來源
 
-目前已撤回「最後一次回傳 false 就警報」的試驗規則，恢復加入該規則之前的已接受項目比對。目前書面為 revised39，原版 CARAXES 的 getdents64 模式可檢出，filldir 拒絕與提前截斷仍屬已確認的涵蓋限制。revised40 與終止拒絕實驗僅留作歷史，不當作現行成果。 [撤回原因與核對](docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，書面為 revised41。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 原版 CARAXES 的固定官方來源、GPL-3.0 LICENSE 及實際建置產物另收錄於 comparison/public_rootkit/public_sample_20261102.tar.gz，供核對來源。其餘下列第三方專案未整包收錄。重現外部比較時，請由原作者儲存庫取得並 checkout 指定版本；本研究自己的轉接與驗證腳本位於 `tools/external_baselines/`。
 

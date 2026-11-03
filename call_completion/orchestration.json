@@ -1,0 +1,96 @@
+[
+  {
+    "event": "reboot",
+    "index": 1,
+    "returncode": 4294967295
+  },
+  {
+    "event": "fresh_boot",
+    "index": 1,
+    "boot_id": "522e1990-267c-4305-88d9-33d2d6ff9c67"
+  },
+  {
+    "event": "completed",
+    "index": 1,
+    "kind": "public",
+    "returncode": 0,
+    "elapsed_seconds": 35.0,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 1,
+    "kind": "regression",
+    "returncode": 0,
+    "elapsed_seconds": 76.39,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 1,
+    "kind": "cost",
+    "returncode": 0,
+    "elapsed_seconds": 79.16,
+    "stderr": ""
+  },
+  {
+    "event": "reboot",
+    "index": 2,
+    "returncode": 4294967295
+  },
+  {
+    "event": "fresh_boot",
+    "index": 2,
+    "boot_id": "e2772faf-e488-4a58-b10b-e75cd5d98a22"
+  },
+  {
+    "event": "completed",
+    "index": 2,
+    "kind": "public",
+    "returncode": 0,
+    "elapsed_seconds": 34.53,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 2,
+    "kind": "regression",
+    "returncode": 0,
+    "elapsed_seconds": 76.64,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 2,
+    "kind": "cost",
+    "returncode": 0,
+    "elapsed_seconds": 81.86,
+    "stderr": ""
+  },
+  {
+    "event": "reboot",
+    "index": 3,
+    "returncode": 4294967295
+  },
+  {
+    "event": "fresh_boot",
+    "index": 3,
+    "boot_id": "fb285a97-2a15-4b2c-9f73-9d322d81bf3d"
+  },
+  {
+    "event": "completed",
+    "index": 3,
+    "kind": "public",
+    "returncode": 0,
+    "elapsed_seconds": 38.11,
+    "stderr": ""
+  },
+  {
+    "event": "completed",
+    "index": 3,
+    "kind": "regression",
+    "returncode": 255,
+    "elapsed_seconds": 57.7,
+    "stderr": "client_loop: send disconnect: Connection reset\n"
+  }
+]

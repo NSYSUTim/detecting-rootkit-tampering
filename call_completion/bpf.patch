@@ -1,0 +1,137 @@
+--- phase2/bpf_packed.c
++++ call_completion/bpf.c
+@@ -1,6 +1,6 @@
+ #include <uapi/linux/ptrace.h>
+ #include "../collector/d9_reconciliation_hash.h"
+-#include "name_hash.h"
++#include "../phase2/name_hash.h"
+ 
+ struct packed_token { u64 key_hash; u64 inode; u32 d_type; u32 name_length; };
+ struct packed_fingerprint { u64 count; u64 sum1; u64 sum2; };
+@@ -11,6 +11,20 @@
+     u64 fingerprint_update_failures, iblt_update_failures, return_underflows;
+     u64 name_read_checksum;
+ };
++
++struct completion_state {
++    u64 enters, exits, pair_errors, outside_entries, outside_returns;
++    u64 completed_entries, completed_accepted, completed_rejected;
++    u64 positive_calls, zero_calls, negative_calls;
++    u64 current_entries, current_accepted, current_rejected;
++    s64 last_return;
++    u64 last_entries, last_accepted, last_rejected;
++    u64 pending_name_address, target_fd;
++    u32 active, fd_seen, witness_valid, pad;
++    struct packed_token rejected;
++    char rejected_name[256];
++};
++
+ struct packed_state {
+     u64 seed1, seed2;
+     u32 cell_count, enabled, depth, pending_valid;
+@@ -18,10 +32,85 @@
+     struct packed_fingerprint fp;
+     struct packed_stats stats;
+     struct packed_cell cells[256];
++    struct completion_state completion;
+ };
+ 
+ /* The controller pre-registers this value before releasing the scanner. */
+ BPF_HASH(state_by_pid, u32, struct packed_state, 256);
++
++
++static __always_inline void completion_callback(struct packed_state *s, struct pt_regs *ctx)
++{
++    struct completion_state *c = &s->completion;
++    if (!c->active) {
++        c->outside_returns++;
++        return;
++    }
++    if (PT_REGS_RC(ctx)) {
++        c->current_accepted++;
++    } else {
++        long copied;
++        c->current_rejected++;
++        c->witness_valid = 0;
++        c->rejected = s->pending;
++        if (s->pending_valid) {
++            copied = bpf_probe_read_kernel_str(c->rejected_name, sizeof(c->rejected_name),
++                                               (void *)c->pending_name_address);
++            if (copied == s->pending.name_length + 1)
++                c->witness_valid = 1;
++        }
++    }
++}
++
++TRACEPOINT_PROBE(syscalls, sys_enter_getdents64)
++{
++    u32 pid = (u32)bpf_get_current_pid_tgid();
++    struct packed_state *s = state_by_pid.lookup(&pid);
++    if (!s || s->enabled != 1)
++        return 0;
++    struct completion_state *c = &s->completion;
++    c->enters++;
++    if (c->active || s->depth)
++        c->pair_errors++;
++    if (c->fd_seen && c->target_fd != args->fd)
++        c->pair_errors++;
++    c->target_fd = args->fd;
++    c->fd_seen = 1;
++    c->active = 1;
++    c->current_entries = 0;
++    c->current_accepted = 0;
++    c->current_rejected = 0;
++    c->witness_valid = 0;
++    c->rejected.name_length = 0;
++    return 0;
++}
++
++TRACEPOINT_PROBE(syscalls, sys_exit_getdents64)
++{
++    u32 pid = (u32)bpf_get_current_pid_tgid();
++    struct packed_state *s = state_by_pid.lookup(&pid);
++    if (!s || s->enabled != 1)
++        return 0;
++    struct completion_state *c = &s->completion;
++    c->exits++;
++    if (!c->active || s->depth)
++        c->pair_errors++;
++    c->last_return = args->ret;
++    c->last_entries = c->current_entries;
++    c->last_accepted = c->current_accepted;
++    c->last_rejected = c->current_rejected;
++    c->completed_entries += c->current_entries;
++    c->completed_accepted += c->current_accepted;
++    c->completed_rejected += c->current_rejected;
++    if (args->ret > 0)
++        c->positive_calls++;
++    else if (args->ret == 0)
++        c->zero_calls++;
++    else
++        c->negative_calls++;
++    c->active = 0;
++    return 0;
++}
+ 
+ static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)
+ {
+@@ -48,6 +137,11 @@
+         u64 value;
+         long copied;
+         s->stats.outer_entries++;
++        if (s->completion.active)
++            s->completion.current_entries++;
++        else
++            s->completion.outside_entries++;
++        s->completion.pending_name_address = (u64)name;
+         s->pending_valid = 0;
+         if (name_length < 0 || name_length > 255) {
+             s->stats.invalid_name_lengths++;
+@@ -92,6 +186,7 @@
+     s->depth--;
+     if (s->depth)
+         return 0;
++    completion_callback(s, ctx);
+     if (PT_REGS_RC(ctx)) {
+         if (!s->pending_valid) {
+             s->stats.pending_update_failures++;

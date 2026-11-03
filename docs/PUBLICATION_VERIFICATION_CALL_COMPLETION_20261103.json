@@ -1,0 +1,409 @@
+{
+  "recorded_utc": "2026-11-03T06:45:51.619365+00:00",
+  "base_commit": "333b62687d88ed7b44c01b794a2789bdfadf536e",
+  "scope": "Accepted-item identity branch plus qualified per-getdents64 completion anomaly",
+  "raw_archive_sha256": "7363caa1b3d8fff9602052adb114949c9f3da4eb3e3e26a0e15f9792721c385c",
+  "native_functional_scans": 1737,
+  "functional_observations_and_controls": 1884,
+  "cost_pairs": 45,
+  "cost_observations": 90,
+  "warmups_excluded": 18,
+  "public_sample": [
+    {
+      "mode": "normal",
+      "order": "no_rootkit",
+      "n": 60,
+      "verdicts": {
+        "equal": 60
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 60,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    {
+      "mode": "getdents64",
+      "order": "rootkit_first",
+      "n": 60,
+      "verdicts": {
+        "different": 60
+      },
+      "identity_alarms": 60,
+      "completion_alerts": 0,
+      "completion_valid": 60,
+      "alarms": 60,
+      "verified_recovery": 60
+    },
+    {
+      "mode": "getdents64",
+      "order": "detector_first",
+      "n": 60,
+      "verdicts": {
+        "different": 60
+      },
+      "identity_alarms": 60,
+      "completion_alerts": 0,
+      "completion_valid": 60,
+      "alarms": 60,
+      "verified_recovery": 60
+    },
+    {
+      "mode": "filldir",
+      "order": "rootkit_first",
+      "n": 60,
+      "verdicts": {
+        "completion_anomaly": 60
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 60,
+      "completion_valid": 60,
+      "alarms": 60,
+      "verified_recovery": 0
+    },
+    {
+      "mode": "filldir",
+      "order": "detector_first",
+      "n": 60,
+      "verdicts": {
+        "completion_anomaly": 60
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 60,
+      "completion_valid": 60,
+      "alarms": 60,
+      "verified_recovery": 0
+    }
+  ],
+  "regression": {
+    "n": 960,
+    "verdicts": {
+      "equal": 405,
+      "different": 555
+    },
+    "identity_alarms": 555,
+    "completion_alerts": 0,
+    "completion_valid": 960,
+    "alarms": 555,
+    "verified_recovery": 555
+  },
+  "normal": {
+    "n": 120,
+    "verdicts": {
+      "equal": 120
+    },
+    "identity_alarms": 0,
+    "completion_alerts": 0,
+    "completion_valid": 120,
+    "alarms": 0,
+    "verified_recovery": 0
+  },
+  "dynamic_scheduled": {
+    "n": 240,
+    "verdicts": {
+      "equal": 240
+    },
+    "identity_alarms": 0,
+    "completion_alerts": 0,
+    "completion_valid": 240,
+    "alarms": 0,
+    "verified_recovery": 0
+  },
+  "dynamic_actual_three_operations": 237,
+  "dynamic_unexercised_conditions": [
+    {
+      "boot": 3,
+      "fs": "ext4",
+      "buffer": 65536,
+      "repeat": 2,
+      "all_three": false,
+      "events": {}
+    },
+    {
+      "boot": 3,
+      "fs": "ext4",
+      "buffer": 65536,
+      "repeat": 3,
+      "all_three": false,
+      "events": {}
+    },
+    {
+      "boot": 3,
+      "fs": "ext4",
+      "buffer": 65536,
+      "repeat": 4,
+      "all_three": false,
+      "events": {}
+    }
+  ],
+  "benign_race": {
+    "ext4": {
+      "n": 15,
+      "verdicts": {
+        "equal": 15
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 15,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "tmpfs": {
+      "n": 15,
+      "verdicts": {
+        "equal": 15
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 15,
+      "alarms": 0,
+      "verified_recovery": 0
+    }
+  },
+  "faults": {
+    "syscall_error": {
+      "n": 6,
+      "verdicts": {
+        "invalid": 6
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "missing_call_telemetry": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 6
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "bad_pair_count": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 3,
+        "different": 3
+      },
+      "identity_alarms": 3,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 3,
+      "verified_recovery": 3
+    },
+    "detached_enter": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 3,
+        "different": 3
+      },
+      "identity_alarms": 3,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 3,
+      "verified_recovery": 3
+    },
+    "detached_exit": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 3,
+        "different": 3
+      },
+      "identity_alarms": 3,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 3,
+      "verified_recovery": 3
+    },
+    "entry_fault_control_before": {
+      "n": 3,
+      "verdicts": {
+        "equal": 3
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 3,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "entry_probe_miss": {
+      "n": 3,
+      "verdicts": {
+        "invalid": 3
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "entry_fault_control_after": {
+      "n": 3,
+      "verdicts": {
+        "equal": 3
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 3,
+      "alarms": 0,
+      "verified_recovery": 0
+    },
+    "return_probe_pressure": {
+      "n": 48,
+      "verdicts": {
+        "invalid": 48
+      },
+      "identity_alarms": 0,
+      "completion_alerts": 0,
+      "completion_valid": 0,
+      "alarms": 0,
+      "verified_recovery": 0
+    }
+  },
+  "reporting_errors_retained": [
+    {
+      "boot": 3,
+      "stage": "regression completion report",
+      "error": "BrokenPipeError(32, 'Broken pipe')",
+      "complete_measurements_retained": true,
+      "regression_rerun": false
+    }
+  ],
+  "unit_tests": {
+    "passed": 67,
+    "failed": 0
+  },
+  "published_entry_checks": {
+    "passed": true,
+    "checks": 10,
+    "rows": [
+      {
+        "tag": "normal_current_128",
+        "verdict": "equal",
+        "alarm": false,
+        "accepted_only": false,
+        "buffer": 128,
+        "mode": "normal"
+      },
+      {
+        "tag": "normal_accepted_128",
+        "verdict": "equal",
+        "alarm": false,
+        "accepted_only": true,
+        "buffer": 128,
+        "mode": "normal"
+      },
+      {
+        "tag": "normal_current_65536",
+        "verdict": "equal",
+        "alarm": false,
+        "accepted_only": false,
+        "buffer": 65536,
+        "mode": "normal"
+      },
+      {
+        "tag": "normal_accepted_65536",
+        "verdict": "equal",
+        "alarm": false,
+        "accepted_only": true,
+        "buffer": 65536,
+        "mode": "normal"
+      },
+      {
+        "tag": "getdents64_current_128",
+        "verdict": "different",
+        "alarm": true,
+        "accepted_only": false,
+        "buffer": 128,
+        "mode": "getdents64"
+      },
+      {
+        "tag": "getdents64_current_65536",
+        "verdict": "different",
+        "alarm": true,
+        "accepted_only": false,
+        "buffer": 65536,
+        "mode": "getdents64"
+      },
+      {
+        "tag": "filldir_current_128",
+        "verdict": "completion_anomaly",
+        "alarm": true,
+        "accepted_only": false,
+        "buffer": 128,
+        "mode": "filldir"
+      },
+      {
+        "tag": "filldir_current_65536",
+        "verdict": "completion_anomaly",
+        "alarm": true,
+        "accepted_only": false,
+        "buffer": 65536,
+        "mode": "filldir"
+      },
+      {
+        "tag": "filldir_accepted_128",
+        "verdict": "equal",
+        "alarm": false,
+        "accepted_only": true,
+        "buffer": 128,
+        "mode": "filldir"
+      },
+      {
+        "tag": "filldir_accepted_65536",
+        "verdict": "equal",
+        "alarm": false,
+        "accepted_only": true,
+        "buffer": 65536,
+        "mode": "filldir"
+      }
+    ],
+    "boot_id": "fb285a97-2a15-4b2c-9f73-9d322d81bf3d",
+    "module_absent": true,
+    "source_sha256": {
+      "scan_directory.py": "7d1473c9509be951f66ac5ce9e8cf14f022b94eab34bf8daaac3c9a5d2b7d4bc",
+      "src/kicba/call_completion.py": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578",
+      "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+      "call_completion/bpf.c": "a0ed0bfea17aed458892702a8526d015b80ac3247c4c71af2b09dc99923a54eb"
+    }
+  },
+  "historical_checksums_preserved": true,
+  "historical_original_sample_recomputed": 447,
+  "withdrawn_heuristic_normal_tmpfs_alerts_preserved": 15,
+  "old_tables_figures_and_package_parts_retained": true,
+  "documents": {
+    "paper/cross_layer_directory_entry_consistency_revised41_zhTW.docx": {
+      "sha256": "1130836e2b515173f5aaa70cb5e18d6657cb9992c28d2a23c49e6cda071df8a6",
+      "bytes": 2177519
+    },
+    "paper/cross_layer_directory_entry_consistency_revised41_zhTW.pdf": {
+      "sha256": "f473a5e3bb89e404581a8643290aa5251e35091f91288cc8a5de30d800f87d2c",
+      "bytes": 1104735,
+      "pages": 31
+    },
+    "paper/interview_research_summary_call_completion_zhTW.docx": {
+      "sha256": "3882d3f4b956e5db7613942a388d3156247aeb131c32d688a4c0fae74fb9a8ea",
+      "bytes": 38650
+    },
+    "paper/interview_research_summary_call_completion_zhTW.pdf": {
+      "sha256": "594cecea9c5c985df5691166eb281c42851ae448cfb7835de37f5d67c0dc803c",
+      "bytes": 246786,
+      "pages": 1
+    }
+  },
+  "visual_review_completed": true,
+  "raw_source_binding": "actual deployed r4 sources; entry verified separately",
+  "verifier_review_fixes": [
+    "replay original recovery gates",
+    "all cohort source hashes",
+    "exact condition matrices and repetitions"
+  ],
+  "previously_unexercised_dynamic_attempts_not_counted_as_dynamic_success": true,
+  "old_timing_claims_reused_for_new_version": false,
+  "checkpoint_created": false,
+  "report": "docs/CALL_COMPLETION_20261103_zh-TW.md"
+}

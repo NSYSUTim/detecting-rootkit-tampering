@@ -1,0 +1,94 @@
+{
+  "passed": true,
+  "checks": 10,
+  "rows": [
+    {
+      "tag": "normal_current_128",
+      "verdict": "equal",
+      "alarm": false,
+      "accepted_only": false,
+      "buffer": 128,
+      "mode": "normal"
+    },
+    {
+      "tag": "normal_accepted_128",
+      "verdict": "equal",
+      "alarm": false,
+      "accepted_only": true,
+      "buffer": 128,
+      "mode": "normal"
+    },
+    {
+      "tag": "normal_current_65536",
+      "verdict": "equal",
+      "alarm": false,
+      "accepted_only": false,
+      "buffer": 65536,
+      "mode": "normal"
+    },
+    {
+      "tag": "normal_accepted_65536",
+      "verdict": "equal",
+      "alarm": false,
+      "accepted_only": true,
+      "buffer": 65536,
+      "mode": "normal"
+    },
+    {
+      "tag": "getdents64_current_128",
+      "verdict": "different",
+      "alarm": true,
+      "accepted_only": false,
+      "buffer": 128,
+      "mode": "getdents64"
+    },
+    {
+      "tag": "getdents64_current_65536",
+      "verdict": "different",
+      "alarm": true,
+      "accepted_only": false,
+      "buffer": 65536,
+      "mode": "getdents64"
+    },
+    {
+      "tag": "filldir_current_128",
+      "verdict": "completion_anomaly",
+      "alarm": true,
+      "accepted_only": false,
+      "buffer": 128,
+      "mode": "filldir"
+    },
+    {
+      "tag": "filldir_current_65536",
+      "verdict": "completion_anomaly",
+      "alarm": true,
+      "accepted_only": false,
+      "buffer": 65536,
+      "mode": "filldir"
+    },
+    {
+      "tag": "filldir_accepted_128",
+      "verdict": "equal",
+      "alarm": false,
+      "accepted_only": true,
+      "buffer": 128,
+      "mode": "filldir"
+    },
+    {
+      "tag": "filldir_accepted_65536",
+      "verdict": "equal",
+      "alarm": false,
+      "accepted_only": true,
+      "buffer": 65536,
+      "mode": "filldir"
+    }
+  ],
+  "boot_id": "fb285a97-2a15-4b2c-9f73-9d322d81bf3d",
+  "module_absent": true,
+  "source_sha256": {
+    "scan_directory.py": "7d1473c9509be951f66ac5ce9e8cf14f022b94eab34bf8daaac3c9a5d2b7d4bc",
+    "src/kicba/call_completion.py": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578",
+    "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+    "call_completion/bpf.c": "a0ed0bfea17aed458892702a8526d015b80ac3247c4c71af2b09dc99923a54eb"
+  }
+}

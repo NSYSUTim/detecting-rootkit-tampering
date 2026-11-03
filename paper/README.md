@@ -1,42 +1,23 @@
 # 書面版本與來源
 
-目前已撤回「最後一次回傳 false 就警報」的試驗規則，恢復加入該規則之前的已接受項目比對。目前書面為 revised39，原版 CARAXES 的 getdents64 模式可檢出，filldir 拒絕與提前截斷仍屬已確認的涵蓋限制。revised40 與終止拒絕實驗僅留作歷史，不當作現行成果。 [撤回原因與核對](../docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md)。
+目前書面為 revised41，現行入口保留已接受項目指紋與 IBLT，另加入同次系統呼叫拒絕與結束配對。原版 CARAXES 的兩種模式在新三開機各 120 次警報，正常刪除競態 30 次無新警報，結果不合併舊版分母。新增量測失效不取消有效的原身分警報，未走訪的全部項目仍無法還原。
 
-更新日期：2026-11-02。
-
-revised39 保留 revised38 的既有圖表與其他封裝部件，新增 6.10 節，並同步修正摘要、受測模組說明、範圍、限制、結論及重現入口。以 [build_revised39.py](../tools/build_revised39.py) 重建，原始資料與結果核對見[公開樣本實驗](../comparison/public_rootkit/README.md)。Word 匯出論文為 29 頁，面試摘要為 1 頁。
-
-| 版本 | 檔案 | 來源與定位 |
+| 版本 | 檔案 | 內容 |
 |---|---|---|
-| 撤回試驗版 | [revised40](cross_layer_directory_entry_consistency_revised40_zhTW.docx) | 終止拒絕規則有正常刪除警報，保留歷史，現行書面與入口已回復前版 |
-| 目前書面 | [revised39](cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised39_zhTW.pdf) | 原版 CARAXES 的三開機結果，包含 getdents64 成功檢出與 filldir 截斷未警報 |
-| 面試摘要 | [Word](interview_research_summary_public_sample_zhTW.docx)／[PDF](interview_research_summary_public_sample_zhTW.pdf) | 依作者提供的摘要更新，成功與未檢出結果並列 |
-| 歷史書面 | [revised38 乾淨版](cross_layer_directory_entry_consistency_revised38_zhTW.docx) | 核對既有討論、程式與文獻，修正方法動機、下一步及結論 |
-| 歷史書面 | [revised37 乾淨版](cross_layer_directory_entry_consistency_revised37_zhTW.docx) | 依實驗目的命名，統一實作與計時樣本用詞 |
-| 歷史書面 | [revised36 乾淨版](cross_layer_directory_entry_consistency_revised36_zhTW.docx) | 納入相同輸入、相同準備完成後計時範圍的三開機比較，區分預設與增加容量的配置 |
-| 歷史書面 | [revised35 乾淨版](cross_layer_directory_entry_consistency_revised35_zhTW.docx) | 保留現行入口的漏失拒判、原生確認、共同功能與完整程序成本比較，以及控制修復確認 |
-| 歷史書面 | [revised34 乾淨版](cross_layer_directory_entry_consistency_revised34_zhTW.docx) | 保留前一輪還原核對、部分品質統計與相關工作設計比較的狀態 |
-| 歷史書面 | [revised33 乾淨版](cross_layer_directory_entry_consistency_revised33_zhTW.docx) | 作者提供的 paper_final_submission_v3_revised33_clean.docx 原樣保留 |
-| 歷史存檔 | [2026-10-20 提供版本](cross_layer_directory_entry_consistency_zhTW.docx) | 較早的九次開機矩陣實驗書面，維持既有檔案與雜湊關係 |
+| 目前論文 | [revised41 Word](cross_layer_directory_entry_consistency_revised41_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised41_zhTW.pdf) | 方法 4.4 與結果 6.11，含已知正常刪除反例、新回歸、故障與相同界線成本 |
+| 目前摘要 | [Word](interview_research_summary_call_completion_zhTW.docx)／[PDF](interview_research_summary_call_completion_zhTW.pdf) | 身分比對與完成異常分列，保留範圍及未走訪限制 |
+| 已撤回試驗 | [revised40](cross_layer_directory_entry_consistency_revised40_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised40_zhTW.pdf) | 整次最後 false 規則有 tmpfs 正常刪除警報，只保留歷史 |
+| 歷史論文 | [revised39](cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised39_zhTW.pdf) | 原已接受項目版本，原版 filldir 120 次未警報，原數字未改寫 |
+| 歷史論文 | [revised38](cross_layer_directory_entry_consistency_revised38_zhTW.docx) | 保留當時內容與版本來源 |
+| 歷史論文 | [revised37](cross_layer_directory_entry_consistency_revised37_zhTW.docx) | 保留當時內容與版本來源 |
+| 歷史論文 | [revised36](cross_layer_directory_entry_consistency_revised36_zhTW.docx) | 保留當時內容與版本來源 |
+| 歷史論文 | [revised35](cross_layer_directory_entry_consistency_revised35_zhTW.docx) | 保留當時內容與版本來源 |
+| 歷史論文 | [revised34](cross_layer_directory_entry_consistency_revised34_zhTW.docx) | 保留當時內容與版本來源 |
+| 歷史論文 | [revised33](cross_layer_directory_entry_consistency_revised33_zhTW.docx) | 保留當時內容與版本來源 |
+| 歷史存檔 | [2026-10-20 提供版本](cross_layer_directory_entry_consistency_zhTW.docx) | 作者原始文件 |
 
-revised38 只修改文件本文 XML，原圖片、表格、樣式與其他封裝部件保留。補入欄位用途的文獻，釐清回傳記錄改寫、雜湊條件與固定資料量的意義，精簡結論，下一步聚焦增加觀測點與差異區段判定。完整內容及來源見[修正依據](../docs/REVIEW_CORRECTIONS_20261102_zh-TW.md)。可用 [build_revised38.py](../tools/build_revised38.py) 重建。
+revised41 以 revised39 為底，只改本文 XML，既有圖表、樣式及其他封裝部件維持。新增 4.4、6.11，並同步調整摘要、範圍、圖 1 說明、實作、限制、結論與未來工作。revised39 和撤回的 revised40 不覆寫。
 
-revised38 SHA-256：`e5576c97b2911b9bf3a2610ae4189bfe022370857debfd88c264c47fcd4a75f5`。
+來源：[build_revised41.py](../tools/build_revised41.py)、[逐段修改紀錄](../call_completion/paper_changes.json)、[實作與結果](../docs/CALL_COMPLETION_20261103_zh-TW.md)、[逐筆重算](../call_completion/verification.json)、[發布核對](../docs/PUBLICATION_VERIFICATION_CALL_COMPLETION_20261103.json)。各歷史檔案的 SHA-256 保留於根目錄 FILE_SHA256.csv。
 
-revised37 SHA-256：`e0c1a7c4915eb572d75a012377d4002d870bf22e8bc50c2ec5a44018625648fb`。
-
-revised36 SHA-256：`b11fefb1394dbbcccb797bdcebe02e73b64235515023472579e7070d29895583`。
-
-revised35 SHA-256：`b0c1fe6d6d825f77be4990e9927596d442fd84833abf0a61e8663ec8e0733ce5`。
-
-revised34 SHA-256：`9873801930d29ecf62d9acf262953dc65f9cd03882f0fa60d84c0d14d732ba9d`。
-
-revised33 SHA-256：`47169ad7e18b432ce8f66e26d6f2bfaad559d46302f43dd22b56b2711b61bca8`，該檔及歷史核對入口保持原樣。
-
-新舊分母、計時與實作分開。現行入口沒有重跑原 1,296 批矩陣。原版 CARAXES 現已另組實測，正常 60 次一致、getdents64 模式 120 次警報並還原、filldir 模式 120 次截斷未警報，見 6.10 節及[結果與重算](../docs/ORIGINAL_CARAXES_20261102_zh-TW.md)。先前與 zygarde 的受控共同功能測試仍為兩者 105/105 檢出、0/30 對照警報，不外推為兩者對原版所有模式均有相同涵蓋。本文還能檢出新增、inode 與型態差異，但包含編譯與附掛的新程序完整成本在 128／4,096 項時較高，不能宣稱全面更快。65,536 項另次稽核的對方入口名稱集合不完整，該時間不能當成同等完整觀測的比較。
-
-還原指紋核對不是無碰撞證明。現行入口已納入 tracefs 入口統計，十個真實漏失窗口全部拒判，但可取得的統計不代表全部量測故障均可見。增加函式庫觀測點列為尚未實作的研究提案，其餘範圍界線見方法與限制。現有的還原核對、入口拒判及比較已完成。
-
-書面收錄三個不同開機、45 個計時配對區組的觀測準備完成後成本。小目錄本文較慢，中／大目錄在受測完整配置下較短。預設 4 MiB 大目錄的十五筆未收齊，另有檢查檔提示，不能用它們排序；增加至 32 MiB 的配置另列，並非官方預設。兩者保留不同 API、語言、內部緩衝區及檢查內容，沒有宣稱純演算法速度或全面優勢。所有計時、暖機與先導另計，原完整程序成本未覆寫。
-
-相關工作與共同實驗見[專文](../docs/RELATED_WORK_COMPARISON_zh-TW.md)及[比較重算](../comparison/evidence/final_verification.json)。還原核對與品質檢查封存見 [finalization](../finalization/README.md)，工具比較封存見 [comparison](../comparison/evidence/RECEIPT.json)。量測完整性與適用條件實驗仍用既有 verifier 重算，原資料與凍結程式不覆寫。[歷史核對](../docs/PAPER_REVIEW_FACTS_20261027.json)仍對應 revised33。
+舊 576/576、0/720、4.76 倍、合併狀態改善與 zygarde 成本均對應各自實作及流程，沒有當作新版重跑。新成本是相同界線的 45 組直接配對，包含全部檢查，編譯與附掛在區組外。指紋與還原核對仍非無碰撞證明，有限失效統計不代表所有故障可觀察。

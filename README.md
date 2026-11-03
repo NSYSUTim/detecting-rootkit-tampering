@@ -1,15 +1,15 @@
 # 跨層目錄項一致性檢查
 
-現行入口另加入終止拒絕檢查：有效列舉結束前最後一次 filldir64 回傳 false 時，另發警報並提供一筆被拒項目。新三開機的原版 CARAXES 兩種模式各 120 次皆警報，但 tmpfs 正常刪除競態也有 15/15 次相同警報，不能宣稱新版本整體零誤報或完整還原截斷後項目。 [實作、證據與限制](docs/TERMINAL_REJECTION_20261103_zh-TW.md)。
+目前已撤回「最後一次回傳 false 就警報」的試驗規則，恢復加入該規則之前的已接受項目比對。目前書面為 revised39，原版 CARAXES 的 getdents64 模式可檢出，filldir 拒絕與提前截斷仍屬已確認的涵蓋限制。revised40 與終止拒絕實驗僅留作歷史，不當作現行成果。 [撤回原因與核對](docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md)。
 
 本儲存庫對應論文〈跨層目錄項一致性檢查：以 eBPF 指紋與 IBLT 偵測 filldir64 與 getdents64 間的身分差異〉，保存原始碼、受控實驗模組、資料與重現工具。
 
 本方法比較同一次完整目錄列舉中，核心端 `filldir64` 已接受的目錄項，與使用者端從全部 `getdents64` 分頁收到的目錄項。兩端各自建立固定大小的多重集合指紋與 IBLT：指紋判斷是否有差異，IBLT 用於還原差異項目的識別值、inode 與型態。解碼能力受容量、項目分布及重複差異限制，成功旗標本身不保證任意輸入下的還原正確性。
 
-本研究的實驗檢驗偵測正確性、差異還原、量測可靠性、適用條件與執行成本，並與既有工具比較。九次開機矩陣涵蓋單一核心、ext4 與靜態目錄；量測完整性及適用條件實驗檢驗探針漏失、載入順序、指定 Linux 6.8／6.5、ext4／tmpfs、正常動態目錄與更多身分改寫，並驗證合併核心狀態的成本改良。身分差異警報表示觀測範圍內的不一致，終止拒絕警報則表示最後一次嘗試遭拒，兩者均不能直接判定惡意或推論對未知 rootkit 的偵測率。
+本研究的實驗檢驗偵測正確性、差異還原、量測可靠性、適用條件與執行成本，並與既有工具比較。九次開機矩陣涵蓋單一核心、ext4 與靜態目錄；量測完整性及適用條件實驗檢驗探針漏失、載入順序、指定 Linux 6.8／6.5、ext4／tmpfs、正常動態目錄與更多身分改寫，並驗證合併核心狀態的成本改良。警報只表示觀測範圍內的不一致，不能由此判定惡意或推論對未知 rootkit 的偵測率。
 
-- [目前書面報告（revised40）](paper/cross_layer_directory_entry_consistency_revised40_zhTW.docx)／[PDF](paper/cross_layer_directory_entry_consistency_revised40_zhTW.pdf)
-- [面試研究摘要](paper/interview_research_summary_terminal_zhTW.docx)／[PDF](paper/interview_research_summary_terminal_zhTW.pdf)
+- [目前書面報告（revised39）](paper/cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](paper/cross_layer_directory_entry_consistency_revised39_zhTW.pdf)
+- [面試研究摘要](paper/interview_research_summary_public_sample_zhTW.docx)／[PDF](paper/interview_research_summary_public_sample_zhTW.pdf)
 - [原版 CARAXES 三開機實測與未檢出邊界](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)
 - [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
@@ -24,12 +24,12 @@
 - [目前方法與下一步](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)
 - [報告修正與證據界線](docs/REVIEW_CORRECTIONS_20261102_zh-TW.md)
 - [量測可靠性與適用條件實驗發布核對紀錄（2026-10-24）](docs/PUBLICATION_VERIFICATION_20261024.json)
-- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_TERMINAL_20261103.json)
+- [目前版本的發布核對紀錄](docs/PUBLICATION_VERIFICATION_ROLLBACK_20261103.json)
 - [離線反例與含查詢成本的重算結果](docs/PAPER_REVIEW_FACTS_20261027.json)
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-03。下述 revised39 與原版 CARAXES 的第一次測試是加入終止拒絕檢查之前的版本，現行進度以本頁開頭及新規則報告為準。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised39 另納入固定原版 CARAXES 的兩配置、兩種掛接順序與三個新開機。正常對照 60 次一致，getdents64 模式 120 次警報並正確還原；filldir 模式 120 次造成清單截斷但兩端一致而未警報。兩端一致不能保證沒有隱藏。歷史書面、初版程式、各組原始資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
+本說明更新至 2026-11-02。現行入口已整合還原核對、明確 tracefs 入口事件的漏失統計、返回 profile 及 BPF 遞迴略過門檻，並完成修改後原生確認與 zygarde 三開機共同實驗。revised39 另納入固定原版 CARAXES 的兩配置、兩種掛接順序與三個新開機。正常對照 60 次一致，getdents64 模式 120 次警報並正確還原；filldir 模式 120 次造成清單截斷但兩端一致而未警報。兩端一致不能保證沒有隱藏。歷史書面、初版程式、各組原始資料與鎖保持原樣。歷史報告中的停止位置是當時狀態，目前進度以本頁及[六項結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)為準。
 
 在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
 
@@ -119,9 +119,7 @@ Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套�
 
 ## 適用範圍與限制
 
-- 現行終止拒絕訊號可在兩端一致時警報，正常刪除也可能觸發。它提供一筆被拒項目，不是 IBLT 的全部差集，後續未走訪項目與缺失總數未知。原零誤報與成本數字仍屬各原版本，不套用成新規則保證。
-
-- 增補前原版 CARAXES 的 getdents64 模式每次缺少三筆並警報，filldir 模式的兩端均只有 2 筆，120 次均未警報。[原版本結果](comparison/public_rootkit/README.md)保留不變。現行版本另以終止拒絕警報指出一筆被拒項目，仍不能列出後續全部外部缺失。
+- 原版 CARAXES 已另行實測。getdents64 模式每次缺少三筆並警報；filldir 模式回傳 false，正常 70 筆的目錄只交付 2 筆，核心摘要也只接受相同 2 筆，120 次均未警報。同場 zygarde 轉接版對 filldir 的 15 次皆有目標警報及檢查檔提示，不代表完整還原全部外部缺失。[規約、原始資料及重算](comparison/public_rootkit/README.md)
 
 - 只涵蓋 `filldir64` 接受之後到 `getdents64` 輸出之前的身分差異。項目在觀測點之前被排除，或因提早回傳 0 而根本未走訪，均不在範圍內。
 - 假設 eBPF、使用者量測程式與控制程式未被攻擊者控制。原矩陣實驗先掛 eBPF，再載入 ftrace 模組；條件確認實驗已測受測 ftrace 組合的反向順序，其他掛接技術仍未驗證。
@@ -146,8 +144,7 @@ IBLT 容量與重複差異、可信量測及未受測環境保留在方法限制
 | 功能 | 位置 |
 |---|---|
 | 識別值、指紋與 IBLT | `src/kicba/reconciliation.py` |
-| 現行完整入口及終止拒絕檢查 | `scan_directory.py`、`terminal_rejection/measurement.py`、`src/kicba/terminal_rejection.py` |
-| 保留的接受項目比對與入口品質窗口 | `finalization/tracefs_measurement.py`，原始來源保持不變 |
+| 現行完整入口及入口品質窗口 | `scan_directory.py`、`finalization/tracefs_measurement.py` |
 | 核心端 eBPF 與共用雜湊規則 | `collector/bpf_d9_reconciliation.c`、`collector/d9_reconciliation_hash.h` |
 | 使用者端完整列舉 | `collector/d9_enum_probe.c` |
 | 正式收集與多開機排程 | `collector/run_d9_campaign.py`、`scripts/run_d9_multiboot.py` |

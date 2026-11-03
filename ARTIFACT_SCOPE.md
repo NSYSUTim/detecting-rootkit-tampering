@@ -1,6 +1,6 @@
 # 跨層目錄項一致性檢查研究成品收錄範圍
 
-現另收錄 revised40 論文、摘要 Word／PDF、終止拒絕實作與三開機驗證，含全部正常警報及失效案例。現行入口另加入終止拒絕檢查：有效列舉結束前最後一次 filldir64 回傳 false 時，另發警報並提供一筆被拒項目。新三開機的原版 CARAXES 兩種模式各 120 次皆警報，但 tmpfs 正常刪除競態也有 15/15 次相同警報，不能宣稱新版本整體零誤報或完整還原截斷後項目。 [證據入口](terminal_rejection/README.md)。
+目前已撤回「最後一次回傳 false 就警報」的試驗規則，恢復加入該規則之前的已接受項目比對。目前書面為 revised39，原版 CARAXES 的 getdents64 模式可檢出，filldir 拒絕與提前截斷仍屬已確認的涵蓋限制。revised40 與終止拒絕實驗僅留作歷史，不當作現行成果。 [撤回原因與核對](docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md)。
 
 本次另收錄固定原版 CARAXES 的三開機實驗、官方來源與 GPL-3.0 授權。getdents64 模式 120 次警報並還原，filldir 模式 120 次截斷未警報；同場 zygarde 對兩模式各 15 次有目標警報，filldir 同時有檢查檔品質提示。完整結果與證據見[實驗報告](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)。以前的受控比較不外推為兩者對此模式有相同涵蓋。
 

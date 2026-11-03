@@ -1,6 +1,6 @@
 # 第三方方法與來源
 
-2026-11-03 的終止拒絕實驗沿用前組固定原版 CARAXES 模組位元組及固定 zygarde 轉接版，沒有修改樣本行為或引入另一套第三方來源。結果、正常刪除警報及原始紀錄見 [terminal_rejection](terminal_rejection/README.md)。
+目前已撤回「最後一次回傳 false 就警報」的試驗規則，恢復加入該規則之前的已接受項目比對。目前書面為 revised39，原版 CARAXES 的 getdents64 模式可檢出，filldir 拒絕與提前截斷仍屬已確認的涵蓋限制。revised40 與終止拒絕實驗僅留作歷史，不當作現行成果。 [撤回原因與核對](docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md)。
 
 原版 CARAXES 的固定官方來源、GPL-3.0 LICENSE 及實際建置產物另收錄於 comparison/public_rootkit/public_sample_20261102.tar.gz，供核對來源。其餘下列第三方專案未整包收錄。重現外部比較時，請由原作者儲存庫取得並 checkout 指定版本；本研究自己的轉接與驗證腳本位於 `tools/external_baselines/`。
 

@@ -1,0 +1,8 @@
+{
+  "entry_sha256": "e3c47817e985332f251e654a83687cea290205964cfea752bdad0ff201502440",
+  "kernel": "6.8.0-138-generic",
+  "boot_id": "0f2d2e95-cc4c-4988-9238-78ff66a20299",
+  "module_absent": true,
+  "normal_controls": 2,
+  "accepted_only": true
+}

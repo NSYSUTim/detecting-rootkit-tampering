@@ -1,8 +1,10 @@
 # Terminal rejection signal
 
-The current scanner retains the original identity fingerprint/IBLT decision and
-adds a separate alert if a valid complete scan ends after an outermost filldir64
-rejection. Its output retains `identity_verdict`, `identity_alarm` and verified
+**已撤回，僅供歷史重現。** 現行 scan_directory.py 已恢復接受項目比對，預設不使用這條規則。本頁記錄的是撤回前的試驗與正常刪除警報，不是現行功能。
+
+The withdrawn trial scanner retained the original identity fingerprint/IBLT decision and
+added a separate alert if a valid complete scan ended after an outermost filldir64
+rejection. Its output retained `identity_verdict`, `identity_alarm` and verified
 IBLT recovery, and separately exposes `terminal_rejection`, `rejected_entry` and
 `alarm_reasons`. The witness is not a complete missing set; its total is unknown.
 

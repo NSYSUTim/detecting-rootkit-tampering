@@ -1,0 +1,38 @@
+{
+  "recorded_utc": "2026-11-03T05:37:51.457787+00:00",
+  "action": "Restore accepted-only current method",
+  "restored_from": "921319d5f0612227a14a8cad91065dfc18730092",
+  "withdrawn_trial_commit": "cf57fcf5cc0edaeb7ba1c9f47292f3870ff2afab",
+  "entry_path": "scan_directory.py",
+  "entry_sha256": "e3c47817e985332f251e654a83687cea290205964cfea752bdad0ff201502440",
+  "entry_byte_identical_to_prior_version": true,
+  "current_documents": {
+    "paper/cross_layer_directory_entry_consistency_revised39_zhTW.docx": "2d5ae88c9fb3f8c35073dca0d4ef299027f9a6fe817c4b6d47516a5d14f5a11e",
+    "paper/cross_layer_directory_entry_consistency_revised39_zhTW.pdf": "1cb401e57c298bad2879eb9db0981997caed5a8a99379f2997533a4288bada13",
+    "paper/interview_research_summary_public_sample_zhTW.docx": "6fb66d531fbe9213a9d82667228feea75972f99bb98d3343cab751f4b2932f55",
+    "paper/interview_research_summary_public_sample_zhTW.pdf": "bd323372727a26688c8c89f26ef24496ee5d5f7988362234b617b1168434e74b"
+  },
+  "trial_revised40_is_historical": true,
+  "terminal_rule_enabled_by_default": false,
+  "trial_sources_data_and_results_retained": true,
+  "history_rewritten": false,
+  "unit_tests": {
+    "passed": 51,
+    "failed": 0
+  },
+  "native_normal_controls": {
+    "entry_sha256": "e3c47817e985332f251e654a83687cea290205964cfea752bdad0ff201502440",
+    "kernel": "6.8.0-138-generic",
+    "boot_id": "0f2d2e95-cc4c-4988-9238-78ff66a20299",
+    "module_absent": true,
+    "normal_controls": 2,
+    "accepted_only": true
+  },
+  "old_public_sample_recomputed": {
+    "passed": true,
+    "observations_and_controls": 447
+  },
+  "original_caraxes_filldir_covered": false,
+  "unvalidated_lookup_fix_implemented": false,
+  "report": "docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md"
+}

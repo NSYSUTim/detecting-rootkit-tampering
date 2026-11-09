@@ -1,6 +1,6 @@
 # 跨層目錄項一致性檢查
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，書面為 revised41。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 本儲存庫對應論文〈跨層目錄項一致性檢查：以 eBPF 指紋與 IBLT 偵測 filldir64 與 getdents64 間的身分差異〉，保存原始碼、受控實驗模組、資料與重現工具。
 
@@ -8,8 +8,12 @@
 
 本研究的實驗檢驗偵測正確性、差異還原、量測可靠性、適用條件與執行成本，並與既有工具比較。九次開機矩陣涵蓋單一核心、ext4 與靜態目錄；量測完整性及適用條件實驗檢驗探針漏失、載入順序、指定 Linux 6.8／6.5、ext4／tmpfs、正常動態目錄與更多身分改寫，並驗證合併核心狀態的成本改良。現行警報分為身分差異與完成回報異常，不能由此判定惡意或推論對未知 rootkit 的偵測率。
 
-- [目前書面報告（revised41）](paper/cross_layer_directory_entry_consistency_revised41_zhTW.docx)／[PDF](paper/cross_layer_directory_entry_consistency_revised41_zhTW.pdf)
-- [面試研究摘要](paper/interview_research_summary_call_completion_zhTW.docx)／[PDF](paper/interview_research_summary_call_completion_zhTW.pdf)
+- [最終中文結案報告（Word）](paper/final/Project_Final_Report_ZH_B123245021_Wei-Ting_Chiang.docx)
+- [最終英文結案報告（Word，修正分頁版）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.docx)
+- [最終英文結案報告（PDF，51 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
+- [最終英文海報（PowerPoint）](paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx)
+- [最終成品與原檔雜湊](paper/final/README.md)
+- [歷史面試研究摘要](paper/interview_research_summary_call_completion_zhTW.docx)／[PDF](paper/interview_research_summary_call_completion_zhTW.pdf)
 - [原版 CARAXES 三開機實測與未檢出邊界](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)
 - [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
@@ -29,7 +33,7 @@
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-03。現行入口的還原核對與入口／返回品質門檻保留，新功能以同次系統呼叫配對處理受測拒絕後結束異常。原已接受版本、撤回的最後 false 試驗與新版本的三開機資料皆各自保存，不合併分母，歷史成本也不當成新版成本。詳見[新實作與直接配對成本](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+本說明更新至 2026-11-09。現行入口的還原核對與入口／返回品質門檻保留，新功能以同次系統呼叫配對處理受測拒絕後結束異常。原已接受版本、撤回的最後 false 試驗與新版本的三開機資料皆各自保存，不合併分母，歷史成本也不當成新版成本。詳見[新實作與直接配對成本](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
 
@@ -218,7 +222,7 @@ python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.jso
 
 ## 同次呼叫完成檢查
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，書面為 revised41。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 `scan_directory.py` 預設使用新版，`--accepted-only` 可明確執行原已接受項目分支。`different` 與 `completion_anomaly` 分別表示身分差異與完成異常，`invalid` 是原量測無效，`inconclusive` 表示原身分一致但新增檢查無法判定。後兩者退出碼為 2。
 

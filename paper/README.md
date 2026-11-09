@@ -1,11 +1,24 @@
 # 書面版本與來源
 
-目前書面為 revised41，現行入口保留已接受項目指紋與 IBLT，另加入同次系統呼叫拒絕與結束配對。原版 CARAXES 的兩種模式在新三開機各 120 次警報，正常刪除競態 30 次無新警報，結果不合併舊版分母。新增量測失效不取消有效的原身分警報，未走訪的全部項目仍無法還原。
+目前正式提交版本為作者於 2026-11-09 提供的四份最終成品。以下連結已取代 revised41 的現行書面入口，四份檔案內容均與作者提供的原檔相同。
+
+| 最終成品 | 檔案 |
+|---|---|
+| 中文結案報告 | [Word](final/Project_Final_Report_ZH_B123245021_Wei-Ting_Chiang.docx) |
+| 英文結案報告 | [Word，修正分頁版](final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.docx) |
+| 英文結案報告 PDF | [PDF，51 頁](final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf) |
+| 英文海報 | [PowerPoint，1 張投影片](final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx) |
+
+原檔對應與 SHA-256 見 [SOURCE_FILES.json](final/SOURCE_FILES.json)，發布核對見[紀錄](../docs/FINAL_REPORT_PUBLICATION_20261109.json)。
+
+## 歷史版本與實驗來源
+
+2026-11-03 的書面版本為 revised41，現行入口保留已接受項目指紋與 IBLT，另加入同次系統呼叫拒絕與結束配對。原版 CARAXES 的兩種模式在新三開機各 120 次警報，正常刪除競態 30 次無新警報，結果不合併舊版分母。新增量測失效不取消有效的原身分警報，未走訪的全部項目仍無法還原。
 
 | 版本 | 檔案 | 內容 |
 |---|---|---|
-| 目前論文 | [revised41 Word](cross_layer_directory_entry_consistency_revised41_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised41_zhTW.pdf) | 方法 4.4 與結果 6.11，含已知正常刪除反例、新回歸、故障與相同界線成本 |
-| 目前摘要 | [Word](interview_research_summary_call_completion_zhTW.docx)／[PDF](interview_research_summary_call_completion_zhTW.pdf) | 身分比對與完成異常分列，保留範圍及未走訪限制 |
+| 歷史論文 | [revised41 Word](cross_layer_directory_entry_consistency_revised41_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised41_zhTW.pdf) | 方法 4.4 與結果 6.11，含已知正常刪除反例、新回歸、故障與相同界線成本 |
+| 歷史摘要 | [Word](interview_research_summary_call_completion_zhTW.docx)／[PDF](interview_research_summary_call_completion_zhTW.pdf) | 身分比對與完成異常分列，保留範圍及未走訪限制 |
 | 已撤回試驗 | [revised40](cross_layer_directory_entry_consistency_revised40_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised40_zhTW.pdf) | 整次最後 false 規則有 tmpfs 正常刪除警報，只保留歷史 |
 | 歷史論文 | [revised39](cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](cross_layer_directory_entry_consistency_revised39_zhTW.pdf) | 原已接受項目版本，原版 filldir 120 次未警報，原數字未改寫 |
 | 歷史論文 | [revised38](cross_layer_directory_entry_consistency_revised38_zhTW.docx) | 保留當時內容與版本來源 |

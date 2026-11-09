@@ -1,0 +1,52 @@
+{
+  "publication_date": "2026-11-09",
+  "base_commit": "3f980d9b2ff5ad0543f97b58ae7b87997f33d7b9",
+  "scope": "Replace current document entry points with four author-provided final project deliverables",
+  "files": [
+    {
+      "source_filename": "Poster_EN_B123245021_Wei-Ting_Chiang.pptx",
+      "repository_path": "paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx",
+      "sha256": "5aa65dc44cd54723f01114d61d5ed725c68daf4488916dd523ee9c4b23d74beb",
+      "bytes": 2613866,
+      "slides": 1
+    },
+    {
+      "source_filename": "A7-Cross-Layer Directory-Entry Consistency Checking - Detecting Identity Discrepancies Between filldir64 and getdents64 with eBPF Fingerprints and IBLT.pdf",
+      "repository_path": "paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf",
+      "sha256": "c85562090782c0ad9086d719b9e119adec5269dbbe6cbc8a0d9a7b7ae1441704",
+      "bytes": 1748553,
+      "pages": 51
+    },
+    {
+      "source_filename": "專題結案報告_中文版_B123245021江威廷(6).docx",
+      "repository_path": "paper/final/Project_Final_Report_ZH_B123245021_Wei-Ting_Chiang.docx",
+      "sha256": "c1f7e85acceba91dac844527b7323d44ec935e90caee99ac9d5fd9b0468526e6",
+      "bytes": 1710629
+    },
+    {
+      "source_filename": "Project_Final_Report_EN_B123245021_Wei-Ting_Chiang_修正分頁版.docx",
+      "repository_path": "paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.docx",
+      "sha256": "f6db03c16dcce45c15b5c922fb20a7afc6f117cf2223c8ac6ebe7a9cb584f504",
+      "bytes": 1810564
+    }
+  ],
+  "source_bytes_preserved": true,
+  "detector_and_experiment_files_unchanged": true,
+  "historical_files_verified": 1788,
+  "previous_manifest_sha256": "71d5c207e3566b4d1a7ea0899edd1974f46c254f92ba50a7e6d145d050373227",
+  "ooxml_zip_and_xml_integrity_passed": true,
+  "pdf_pages": 51,
+  "pdf_pages_rendered_for_review": 51,
+  "pptx_slides": 1,
+  "docx_layout_modified": false,
+  "docx_rerender_available": false,
+  "docx_rerender_limitation": "LibreOffice is unavailable; supplied DOCX files are published unchanged, verified against source SHA-256.",
+  "current_catalogs": [
+    "README.md",
+    "paper/README.md",
+    "paper/final/README.md",
+    "ARTIFACT_SCOPE.md"
+  ],
+  "historical_documents_retained_for_reproducibility": true,
+  "relative_links_verified": 87
+}

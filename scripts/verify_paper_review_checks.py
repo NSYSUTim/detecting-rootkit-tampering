@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 import statistics
+import subprocess
 import sys
 import tarfile
 from pathlib import Path
@@ -22,6 +23,7 @@ SEED1 = 0x0123456789ABCDEF
 SEED2 = 0xF0E1D2C3B4A59687
 PAPER = "paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx"
 PAPER_SHA256 = "47169ad7e18b432ce8f66e26d6f2bfaad559d46302f43dd22b56b2711b61bca8"
+PAPER_COMMIT = "0739fa3beaad63dbfecebd613dbea3f3ec82dc5d"
 
 
 def sha(data):
@@ -147,7 +149,19 @@ def inclusive_costs():
 
 
 def recompute():
-    digest = sha((ROOT / PAPER).read_bytes())
+    paper = ROOT / PAPER
+    if paper.exists():
+        paper_data = paper.read_bytes()
+    else:
+        # Earlier documents live in Git history, outside the current file tree.
+        try:
+            paper_data = subprocess.check_output(
+                ["git", "show", PAPER_COMMIT + ":" + PAPER],
+                cwd=ROOT, stderr=subprocess.PIPE,
+            )
+        except (OSError, subprocess.CalledProcessError) as error:
+            raise RuntimeError("The historical review source requires a clone with full Git history") from error
+    digest = sha(paper_data)
     if digest != PAPER_SHA256:
         raise RuntimeError("The published paper does not match the reviewed revised33 source")
     return {"schema_version": 1, "as_of": "2026-10-27",

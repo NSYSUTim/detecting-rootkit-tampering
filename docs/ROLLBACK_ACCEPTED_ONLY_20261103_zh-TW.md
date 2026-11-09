@@ -17,8 +17,6 @@
 目前使用：
 
 - [現行入口](../scan_directory.py)。
-- [revised39 Word](../paper/cross_layer_directory_entry_consistency_revised39_zhTW.docx)／[PDF](../paper/cross_layer_directory_entry_consistency_revised39_zhTW.pdf)。
-- [對應摘要 Word](../paper/interview_research_summary_public_sample_zhTW.docx)／[PDF](../paper/interview_research_summary_public_sample_zhTW.pdf)。
 - [原版樣本結果](ORIGINAL_CARAXES_20261102_zh-TW.md)。
 - [已撤回試驗與正常刪除反例](TERMINAL_REJECTION_20261103_zh-TW.md)。
 

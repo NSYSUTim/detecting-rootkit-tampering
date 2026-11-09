@@ -1,10 +1,10 @@
 # 跨層目錄項一致性檢查的目前方法與後續工作
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，書面為 revised41。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最終結案成品見[書面入口](../paper/README.md)。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](CALL_COMPLETION_20261103_zh-TW.md)。
 
 原已接受項目版本的 CARAXES 三開機實測：getdents64 模式 120 次警報並還原，正常 60 次一致，filldir 模式 120 次實際清單截斷但未警報。這組分母不與先前實驗合併，兩端一致不代表沒有隱藏。詳見[原始資料、原因與比較](ORIGINAL_CARAXES_20261102_zh-TW.md)。
 
-更新日期：2026-11-03。此處依偵測正確性、量測可靠性、適用條件、執行成本與工具比較統整研究結果。目前書面為 [revised41 乾淨版](../paper/cross_layer_directory_entry_consistency_revised41_zhTW.docx)。還原指紋核對、明確 tracefs 入口事件的 nmissed、返回 profile 與 BPF recursion_misses 都已接入，三開機 zygarde 共同功能及完整程序成本比較已完成。另完成[相同輸入與準備完成後計時的成本比較](SCAN_COST_COMPARISON_20261102_zh-TW.md)，區分預設與增加容量的配置，不用未收齊資料宣稱較快。完整六項工作見[結案核對](METHOD_CLOSURE_20261102_zh-TW.md)。原資料及歷史報告保留，不回填統計或合併分母。
+更新日期：2026-11-09。此處依偵測正確性、量測可靠性、適用條件、執行成本與工具比較統整研究結果。目前書面為 [最終結案成品](../paper/README.md)。還原指紋核對、明確 tracefs 入口事件的 nmissed、返回 profile 與 BPF recursion_misses 都已接入，三開機 zygarde 共同功能及完整程序成本比較已完成。另完成[相同輸入與準備完成後計時的成本比較](SCAN_COST_COMPARISON_20261102_zh-TW.md)，區分預設與增加容量的配置，不用未收齊資料宣稱較快。完整六項工作見[結案核對](METHOD_CLOSURE_20261102_zh-TW.md)。原資料及歷史報告保留，不回填統計或合併分母。
 
 ## 目前比較什麼
 

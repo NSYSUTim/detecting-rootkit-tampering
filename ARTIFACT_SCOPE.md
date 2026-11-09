@@ -1,24 +1,22 @@
 # 跨層目錄項一致性檢查研究成品收錄範圍
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 原已接受項目版本另收錄固定原版 CARAXES 的三開機實驗、官方來源與 GPL-3.0 授權。getdents64 模式 120 次警報並還原，filldir 模式 120 次截斷未警報；同場 zygarde 對兩模式各 15 次有目標警報，filldir 同時有檢查檔品質提示。完整結果與證據見[實驗報告](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)。以前的受控比較不外推為兩者對此模式有相同涵蓋。
 
-本儲存庫保存論文的程式、既有結果、量測可靠性、適用條件及成本實驗證據與目前書面，更新至 2026-11-09。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；書面版本與來源見 [paper/README](paper/README.md)，目前六項結案工作見[結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
+本儲存庫保存論文的程式、既有結果、量測可靠性、適用條件及成本實驗證據與目前書面，更新至 2026-11-09。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；最終結案成品見 [paper/README](paper/README.md)，目前六項結案工作見[結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
 
 ## 已收錄
 
-- 作者於 2026-11-09 提供的最終中文結案報告、英文結案報告（修正分頁版）、英文 PDF 與英文海報，以原始位元組保存在 `paper/final/`，並取代 revised41 的現行書面入口。原檔對應、SHA-256 與檔案大小見 `paper/final/SOURCE_FILES.json`。
+- 作者於 2026-11-09 提供的最終中文結案報告、英文結案報告（修正分頁版）、英文 PDF 與英文海報，以原始位元組保存在 `paper/final/`。原檔對應、SHA-256 與檔案大小見 `paper/final/SOURCE_FILES.json`。
 
-- revised41 論文及一頁摘要、call_completion 來源、規約、三開機功能與配對成本封存、原始先導及獨立重算。revised39 與已撤回 revised40 保留，舊數據未回填。
+- call_completion 來源、規約、三開機功能與配對成本封存、原始先導及獨立重算。
 
-- 歷史 revised39 論文及一頁摘要的 Word／PDF，納入原版 CARAXES 兩配置的成功與未警報結果。comparison/public_rootkit 保存官方來源與授權、規約、建置及配置紀錄、300 次量測、102 次實收控制、45 次 zygarde 觀察、先導與重算入口。
-- revised38 書面修正研究範圍、下一步、欄位改寫動機及雜湊解釋，實驗數值與條件不變。revised36、revised37 保留為歷史書面；相同輸入、相同準備完成後計時的三開機成本確認、原始輸出、三輪先導、路徑核對修正與主機取樣存於 comparison/scan_cost。32 MiB 為另列配置，未把不完整的預設大目錄樣本列入速度排序。
+- comparison/public_rootkit 保存原版 CARAXES 官方來源與授權、規約、建置及配置紀錄、300 次量測、102 次實收控制、45 次 zygarde 觀察、先導與重算入口。
+- comparison/scan_cost 保存相同輸入、相同準備完成後計時的三開機成本確認、原始輸出、先導、路徑核對與主機取樣。32 MiB 為另列配置，不把不完整的預設大目錄樣本列入速度排序。
 
-- revised35 書面、現行 tracefs 入口統計與還原核對、三開機 zygarde 共同功能及成本比較，以及另外的控制修復確認。全部原始輸出、未完成嘗試、規約修訂與主機取樣存於 comparison 封存，分母與舊資料分開。該輪未新增公開 rootkit，原版 CARAXES 的實測另行保存。
-- revised34 書面及 2026-11-01 的還原核對與 BPF recursion_misses 補強封存，保留為歷史版本。
-- 作者提供的 revised33 乾淨版，以 `paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx` 原樣保存，SHA-256 與已核對來源相同。
-- 使用者於 2026-10-20 提供的 `eBPF_最終繳交.docx`，以 `paper/cross_layer_directory_entry_consistency_zhTW.docx` 原樣保留為歷史存檔。
+- comparison 保存 tracefs 入口統計與還原核對、三開機 zygarde 共同功能及成本比較、控制修復確認。原始輸出、未完成嘗試、規約修訂與主機取樣分開保存。
+- finalization 保存還原核對與 BPF recursion_misses 的實作及驗證證據。
 - 多重集合指紋與 IBLT 實作、單元測試、eBPF 收集器及完整目錄列舉程式。
 - 矩陣實驗使用的三組自製控制模組：filldir 控制、getdents 控制與等量替換。
 - 九次開機矩陣實驗的壓縮資料、分析鎖、時序校準模型與正式分析輸出。
@@ -29,8 +27,7 @@
 - `phase2/` 的指定兩核心／ext4／tmpfs／正常動態、更多身分改寫、另一作者過濾及合併核心狀態候選；六次確認與原生控制，十一份封存。
 - 兩輪各自的實際凍結來源封存，含指定 VM 使用的二進位與核心模組。它們是可追溯證據，不是一般部署套件。
 - xcellerator 固定來源中的目錄過濾範例、LICENSE、相容性移植與差異；不是完整上游專案，且與本研究共用 ftrace helper。
-- 2026-10-24 以 revised26 為底的逐章修訂依據與來源 SHA-256，保留為修訂歷程；該版 Word 未收錄。
-- revised33 定稿時的 IBLT 重複差異反例、計時範圍、含查詢成本追加分析，以及可直接重算的程式與結果。反例屬離線資料結構輸入，沒有冒充 VM 攻擊試驗或併入正式分母。
+- IBLT 重複差異反例、計時範圍、含查詢成本追加分析，以及可直接重算的程式與結果。反例屬離線資料結構輸入，不併入 VM 攻擊試驗或正式分母。
 
 ## 未收錄
 
@@ -48,4 +45,4 @@
 
 定稿離線核對用 `python scripts/verify_paper_review_checks.py --check docs/PAPER_REVIEW_FACTS_20261027.json`，直接讀取現有程式與六份已驗證的成本原始封存，不需執行 VM 或解壓。
 
-目前書面與舊書面分開保存。矩陣實驗、各組實驗原始資料、校準模型、凍結來源及實驗鎖不因閱讀文件更新而改動，IBLT 解碼器也未改寫。合併候選只位於研究目錄，沒有替換初版收集器入口。
+目前檔案列表僅保留四份最終結案成品。矩陣實驗、各組實驗原始資料、校準模型、凍結來源及實驗鎖不因閱讀文件更新而改動，IBLT 解碼器也未改寫。合併候選只位於研究目錄，沒有替換初版收集器入口。

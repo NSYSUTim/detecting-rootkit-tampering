@@ -32,7 +32,6 @@
   ],
   "source_bytes_preserved": true,
   "detector_and_experiment_files_unchanged": true,
-  "historical_files_verified": 1788,
   "previous_manifest_sha256": "71d5c207e3566b4d1a7ea0899edd1974f46c254f92ba50a7e6d145d050373227",
   "ooxml_zip_and_xml_integrity_passed": true,
   "pdf_pages": 51,
@@ -47,6 +46,26 @@
     "paper/final/README.md",
     "ARTIFACT_SCOPE.md"
   ],
-  "historical_documents_retained_for_reproducibility": true,
-  "relative_links_verified": 87
+  "historical_documents_retained_for_reproducibility": false,
+  "relative_links_verified": 106,
+  "current_deliverable_files": 4,
+  "obsolete_document_files_removed": 19,
+  "historical_review_source": "fixed Git object; earlier Word and PDF files are absent from the current tree",
+  "catalogs_checked": [
+    "ARTIFACT_SCOPE.md",
+    "README.md",
+    "docs/METHOD_AND_NEXT_STEPS_zh-TW.md",
+    "docs/METHOD_CLOSURE_20261102_zh-TW.md",
+    "docs/PAPER_REVIEW_UPDATES_20261027_zh-TW.md",
+    "docs/RELATED_WORK_COMPARISON_zh-TW.md",
+    "docs/REVIEW_CORRECTIONS_20261102_zh-TW.md",
+    "docs/ROLLBACK_ACCEPTED_ONLY_20261103_zh-TW.md",
+    "paper/README.md",
+    "paper/final/README.md"
+  ],
+  "protected_source_and_evidence_files_verified": 1634,
+  "historical_review_recompute_passed": true,
+  "historical_review_offline_cases": 6,
+  "historical_review_confirmation_boots": 6,
+  "related_unit_tests_passed": 4
 }

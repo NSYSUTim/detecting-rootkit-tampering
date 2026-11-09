@@ -1,6 +1,6 @@
 # 跨層目錄項一致性檢查
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 本儲存庫對應論文〈跨層目錄項一致性檢查：以 eBPF 指紋與 IBLT 偵測 filldir64 與 getdents64 間的身分差異〉，保存原始碼、受控實驗模組、資料與重現工具。
 
@@ -13,7 +13,6 @@
 - [最終英文結案報告（PDF，51 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
 - [最終英文海報（PowerPoint）](paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx)
 - [最終成品與原檔雜湊](paper/final/README.md)
-- [歷史面試研究摘要](paper/interview_research_summary_call_completion_zhTW.docx)／[PDF](paper/interview_research_summary_call_completion_zhTW.pdf)
 - [原版 CARAXES 三開機實測與未檢出邊界](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)
 - [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
@@ -22,7 +21,7 @@
 - [filldir64／getdents64 最接近相關工作比較](docs/RELATED_WORK_COMPARISON_zh-TW.md)
 - [新增還原核對、品質門檻及原生確認](finalization/README.md)
 - [定稿後的方法與證據核對](docs/PAPER_REVIEW_UPDATES_20261027_zh-TW.md)
-- [書面版本與來源](paper/README.md)
+- [最終結案報告與海報](paper/README.md)
 - [量測品質與成本拆分證據](phase1/REPORT_zh-TW.md)
 - [適用條件與合併狀態改良證據](phase2/REPORT_zh-TW.md)
 - [目前方法與下一步](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)
@@ -33,7 +32,7 @@
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-09。現行入口的還原核對與入口／返回品質門檻保留，新功能以同次系統呼叫配對處理受測拒絕後結束異常。原已接受版本、撤回的最後 false 試驗與新版本的三開機資料皆各自保存，不合併分母，歷史成本也不當成新版成本。詳見[新實作與直接配對成本](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+本說明更新至 2026-11-09。現行入口的還原核對與入口／返回品質門檻保留，新功能以同次系統呼叫配對處理受測拒絕後結束異常。原已接受項目實作、撤回的最後 false 試驗與同次呼叫完成檢查的三開機資料皆各自保存，不合併分母，歷史成本也不當成新版成本。詳見[新實作與直接配對成本](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
 
@@ -222,7 +221,7 @@ python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.jso
 
 ## 同次呼叫完成檢查
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 `scan_directory.py` 預設使用新版，`--accepted-only` 可明確執行原已接受項目分支。`different` 與 `completion_anomaly` 分別表示身分差異與完成異常，`invalid` 是原量測無效，`inconclusive` 表示原身分一致但新增檢查無法判定。後兩者退出碼為 2。
 

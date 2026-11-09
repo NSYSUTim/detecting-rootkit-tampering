@@ -1,6 +1,6 @@
 # filldir64 與 getdents64 相關方法比較
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，書面為 revised41。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則仍撤回，revised40 只留歷史，未重新啟用。 [新結果、成本與限制](CALL_COMPLETION_20261103_zh-TW.md)。
+目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最終結案成品見[書面入口](../paper/README.md)。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](CALL_COMPLETION_20261103_zh-TW.md)。
 
 原已接受項目版本另收錄固定原版 CARAXES 的三開機實驗、官方來源與 GPL-3.0 授權。getdents64 模式 120 次警報並還原，filldir 模式 120 次截斷未警報；同場 zygarde 對兩模式各 15 次有目標警報，filldir 同時有檢查檔品質提示。完整結果與證據見[實驗報告](ORIGINAL_CARAXES_20261102_zh-TW.md)。以前的受控比較不外推為兩者對此模式有相同涵蓋。
 

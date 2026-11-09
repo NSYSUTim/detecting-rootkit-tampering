@@ -1,6 +1,6 @@
 # 定稿後的方法與證據核對
 
-更新日期：2026-10-27。目前書面為 [revised33 乾淨版](../paper/cross_layer_directory_entry_consistency_revised33_zhTW.docx)，[版本與來源](../paper/README.md)另列。這次同步定稿時確認的限制與追加分析，沒有新增 VM 試驗、改動原解碼器或合併任何實驗分母。2026-10-24 的[修訂依據](PAPER_UPDATE_GUIDE_20261024_zh-TW.md)及兩輪報告保留為歷史紀錄。
+更新日期：2026-10-27。目前書面為 [最終結案成品](../paper/README.md)，[版本與來源](../paper/README.md)另列。這次同步定稿時確認的限制與追加分析，沒有新增 VM 試驗、改動原解碼器或合併任何實驗分母。2026-10-24 的[修訂依據](PAPER_UPDATE_GUIDE_20261024_zh-TW.md)及兩輪報告保留為歷史紀錄。
 
 ## IBLT 重複差異的原因與結果
 

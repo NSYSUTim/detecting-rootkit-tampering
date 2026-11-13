@@ -1,0 +1,78 @@
+{
+  "passed": true,
+  "checked_utc": "2026-11-13T06:09:39.156421+00:00",
+  "protocol_sha256": "472342278a42d6034ac267100c589a9c8e2b89c88ea9f442232db8916dcba690",
+  "manifest_files_verified": 10,
+  "raw_rows": 36864,
+  "complete_paired_inputs": 9216,
+  "summary_groups_verified": 120,
+  "deterministic_replayed_variants": 368,
+  "validation": {
+    "baseline_row_and_decode_parity": 96,
+    "positions_distinct_and_nested": 256,
+    "common_stream_cancellation": 256,
+    "duplicate_failure_control": 256
+  },
+  "primary_paired_tests": [
+    {
+      "other_k": 2,
+      "k3_only_correct": 42,
+      "other_only_correct": 0,
+      "two_sided_exact_p": 4.547473508864641e-13,
+      "holm_adjusted_p": 1.3642420526593924e-12
+    },
+    {
+      "other_k": 4,
+      "k3_only_correct": 0,
+      "other_only_correct": 0,
+      "two_sided_exact_p": 1.0,
+      "holm_adjusted_p": 1.0
+    },
+    {
+      "other_k": 5,
+      "k3_only_correct": 0,
+      "other_only_correct": 0,
+      "two_sided_exact_p": 1.0,
+      "holm_adjusted_p": 1.0
+    }
+  ],
+  "k3_strict_recovery_superiority_demonstrated": false,
+  "limitations": "Counts, pairing, hashes and statistics independently checked; sampled replay reuses the locked algorithm. Historical timing values are checked against recorded CSV, not reproduced.",
+  "original_files_byte_identical": {
+    "MANIFEST.json": "3f8c3ba9f81d6abb59302114cc7822ae47769d495ed0488856116e51f6194977",
+    "protocol.json": "472342278a42d6034ac267100c589a9c8e2b89c88ea9f442232db8916dcba690",
+    "protocol.sha256": "c7830a8980e245b566bbc63078a263d6c9acd1af98733cdbfd020e4b1880d6c9",
+    "reconciliation_snapshot.py": "c0aa7f06550ced14b81a379e614ac8b5c14dfea148a30df8c28ccc6c5a112cd0",
+    "REPORT_zh-TW.md": "065552cddeca0dd86b5dc013f395d4a704df91c9ea75731e5aec9437a8431ab4",
+    "run_experiment.py": "dcf2c067db2feeced12d3ce81769c1c92a878abeccf63bfcd675789c229216ee",
+    "run_started.json": "107c65950a60dbaeba13bdfda566ee80de582c9b85179802753447942d9897e5",
+    "summary.csv": "b8d1919365f948b0c6cc7e9ab55bac39932a8c7cd32421ee7adbf682bdef88fe",
+    "summary.json": "8ab22a746826a02253a504cfe452debf09ffe2478a3621020e56684498cba7fa",
+    "trials.csv": "9ad3caa21060844bf2b2cd96bb05447a681def22a94e0b4f0ac7a29012399592",
+    "validation.json": "130e4285a272dd1d83b47151e511b0c74011f40dc57d642f7c3a63de74161b27",
+    "verification.json": "a6a338680a622e6caf939f10f6efcbbcc9578f66f62d46f868dc056da035a964"
+  },
+  "publication_adapter_sha256": "74d322c5f0471c948dca6da9255905708cead7d381dace8b5230f9ef27c81183",
+  "publication_safety_checks": {
+    "original_files_byte_identical": 12,
+    "reject_changed_protocol": true,
+    "reject_missing_variant_even_with_updated_manifest": true,
+    "refuse_existing_output_directory": true
+  },
+  "unit_tests": {
+    "command": "PYTHONPATH=src python -m unittest discover -s tests -v",
+    "platform": "Windows",
+    "tests": 67,
+    "passed": true
+  },
+  "full_reproduction": {
+    "command": "python scripts/iblt_hash_count_experiment.py run --output reproduced/iblt_hash_count_20261113_publication_check",
+    "completed": true,
+    "variant_decodes": 36864,
+    "all_non_timing_raw_columns_identical": true,
+    "all_non_timing_summary_fields_identical": true,
+    "elapsed_seconds": 276.66601080005057,
+    "new_run_is_a_reproduction_not_additional_independent_evidence": true,
+    "reproduction_directory_committed": false
+  }
+}

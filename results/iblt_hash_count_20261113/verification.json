@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checked_utc": "2026-11-13T05:58:29.497996+00:00",
+  "manifest_files_verified": 10,
+  "raw_rows": 36864,
+  "complete_paired_inputs": 9216,
+  "raw_primary_counts_match_summary": true,
+  "deterministic_replayed_variants": 368,
+  "no_excluded_or_missing_pairs": true,
+  "protocol_sha256": "472342278a42d6034ac267100c589a9c8e2b89c88ea9f442232db8916dcba690",
+  "limitations": "Replay reuses locked algorithm; structural and count checks are independent of generated summary. Timing values are not replayed."
+}

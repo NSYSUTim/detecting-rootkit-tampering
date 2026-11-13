@@ -13,6 +13,7 @@
 - [最終英文結案報告（PDF，51 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
 - [最終英文海報（PowerPoint）](paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx)
 - [最終成品與原檔雜湊](paper/final/README.md)
+- [為什麼每筆更新三個 IBLT 位置：2026-11-13 新增離線比較](docs/IBLT_HASH_COUNT_20261113_zh-TW.md)
 - [原版 CARAXES 三開機實測與未檢出邊界](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)
 - [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
@@ -32,7 +33,7 @@
 - [收錄範圍](ARTIFACT_SCOPE.md)
 - [第三方來源與比較範圍](THIRD_PARTY_NOTICES.md)
 
-本說明更新至 2026-11-09。現行入口的還原核對與入口／返回品質門檻保留，新功能以同次系統呼叫配對處理受測拒絕後結束異常。原已接受項目實作、撤回的最後 false 試驗與同次呼叫完成檢查的三開機資料皆各自保存，不合併分母，歷史成本也不當成新版成本。詳見[新實作與直接配對成本](docs/CALL_COMPLETION_20261103_zh-TW.md)。
+本說明更新至 2026-11-13；最終結案書面仍為 2026-11-09 版本。本次另收錄位置數的離線敏感度實驗，不回填原研究的選參數歷史或實驗分母。現行入口的還原核對與入口／返回品質門檻保留，新功能以同次系統呼叫配對處理受測拒絕後結束異常。原已接受項目實作、撤回的最後 false 試驗與同次呼叫完成檢查的三開機資料皆各自保存，不合併分母，歷史成本也不當成新版成本。詳見[新實作與直接配對成本](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 在原 Linux 研究環境中使用新入口，將 --probe 指向原 C 完整列舉程式的執行檔。以下從既有來源另行編譯，不覆寫原實驗執行檔：
 
@@ -51,6 +52,8 @@ sudo env PYTHONDONTWRITEBYTECODE=1 python3 scan_directory.py /path/to/directory 
 4. **先檢查量測有效性，再比較。** 名稱讀取、資料表更新、呼叫配對或量測行程等檢查失敗時，不產生一致或差異判定。量測有效且指紋不同時警報；IBLT 解碼失敗只表示無法完整定位，警報仍成立。
 
 IBLT 還原的是識別值、inode 與型態，不含原始名稱。矩陣實驗設定為 256 個儲存格，以 32 個差異項目為設計目標作八倍預留；這是經驗設定，不保證任意輸入都能成功解碼。固定大小指的是容量固定時的摘要資料量；逐項讀取名稱、雜湊與更新 IBLT 的時間仍隨目錄項數增加。
+
+每筆更新多個位置是為了逐步剝離差異：某格只剩一筆且通過校驗時，就可還原該筆，再從其餘對應位置消去。2026-11-13 新增的固定規約離線比較中，在既有 256 格、32 個差異設定下，二個位置正確還原 2,006/2,048，三、四、五個位置皆為 2,048/2,048；三個位置是本次達到全部正確還原的最少位置數，其 Python 建表及解碼耗時中位數亦低於四、五個位置。這支持目前設定下保留三個位置的工程折衷，沒有證明其在所有情況最好；較小容量的部分條件，四、五個位置的還原率反而較高。這是研究完成後新增的驗證，不是原選參數時已做過的比較，也不是原生 eBPF 或 rootkit 檢出率驗證。[規約、完整結果與限制](docs/IBLT_HASH_COUNT_20261113_zh-TW.md)
 
 本實作以計數與 XOR 累計 IBLT。一端兩份 X、另一端為空時，內容抵消但三格計數仍為 2，無法剝離；兩端各兩份 X／Y 且位置相同時，整表歸零而原解碼器錯誤回報成功。沒有重複的項目也能因位置分布不利而無法解碼。現行整合版已把還原指紋核對接入流程，錯誤空差集不再標為通過核對的完整還原，警報仍成立；它沒有更換原 XOR 結構，也不是不碰撞的證明。舊收集器保留原樣。[還原核對與證據](finalization/README.md)
 
@@ -154,6 +157,7 @@ IBLT 容量與重複差異、可信量測及未受測環境保留在方法限制
 | 鎖定分析 | `scripts/analyze_d9_formal.py` |
 | 正式原始資料、分析鎖及報告 | `results/d9_formal/` |
 | 容量、邊界、穩健性與成本 | `results/d9_development/` |
+| 新增二／三／四／五位置離線比較 | `results/iblt_hash_count_20261113/`、`scripts/iblt_hash_count_experiment.py` |
 | 外部比較摘要、清單與驗證 | `results/d9_external_comparison/` |
 | 實驗規約 | [原始鎖定規約](docs/D9_RECONCILIATION_RESEARCH_PROTOCOL_zh-TW.md) |
 | 矩陣實驗結果 | [原始結果紀錄](docs/D9_CONFIRMATORY_RESULTS_zh-TW.md) |
@@ -208,6 +212,13 @@ python scripts/verify_paper_review_checks.py --check docs/PAPER_REVIEW_FACTS_202
 
 ## 資料完整性
 
+新增的位置數實驗可離線核對原始檔雜湊、全部配對及主要統計，並重跑固定 368 次版本解碼；完整重現使用固定規約與實作快照，目標目錄必須尚不存在：
+
+```bash
+python scripts/iblt_hash_count_experiment.py verify
+python scripts/iblt_hash_count_experiment.py run --output reproduced/iblt_hash_count_20261113
+```
+
 現行入口、共同工具比較與另列的控制修復可直接從封存離線核對：
 
 ```bash
@@ -215,7 +226,7 @@ python scripts/verify_completion_20261102.py --check comparison/evidence/final_v
 python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.json
 ```
 
-原規約首次混合目錄確認未完成、無效控制與逾時堆疊均保留，修訂後三開機確認分開。控制修復只寫入新來源，沒有覆寫舊 getdents 控制。完整離線測試現為四十五項，原 Linux VM 及具正常暫存目錄權限的 Windows 均通過。先前 Windows 沙箱暫存 ACL 與新增比較的先導／離線路徑修正另留紀錄，未略過失敗測試或降低判準。
+原規約首次混合目錄確認未完成、無效控制與逾時堆疊均保留，修訂後三開機確認分開。控制修復只寫入新來源，沒有覆寫舊 getdents 控制。先前四十五項離線測試已在原 Linux VM 及具正常暫存目錄權限的 Windows 通過；本次發布另在 Windows 執行目前完整六十七項測試，全部通過。先前 Windows 沙箱暫存 ACL 與新增比較的先導／離線路徑修正另留紀錄，未略過失敗測試或降低判準。
 
 `FILE_SHA256.csv` 列出研究檔案的相對路徑、SHA-256 與位元組數，不包含清單本身及 Git 內部檔案。矩陣實驗另以分析鎖、各 `campaign.sha256` 及外部比較鎖定檔約束原始資料和實作版本。這次重新產生的是公開套件檔案清單；九次開機矩陣實驗、量測完整性與適用條件實驗的原始資料、凍結來源與實驗鎖保持原樣。新增的可攜核對程式把發布後閱讀文件變動與原歷史基準分開驗證。
 

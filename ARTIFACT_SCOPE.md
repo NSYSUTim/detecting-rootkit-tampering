@@ -4,9 +4,11 @@
 
 原已接受項目版本另收錄固定原版 CARAXES 的三開機實驗、官方來源與 GPL-3.0 授權。getdents64 模式 120 次警報並還原，filldir 模式 120 次截斷未警報；同場 zygarde 對兩模式各 15 次有目標警報，filldir 同時有檢查檔品質提示。完整結果與證據見[實驗報告](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)。以前的受控比較不外推為兩者對此模式有相同涵蓋。
 
-本儲存庫保存論文的程式、既有結果、量測可靠性、適用條件及成本實驗證據與目前書面，更新至 2026-11-09。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；最終結案成品見 [paper/README](paper/README.md)，目前六項結案工作見[結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
+本儲存庫保存論文的程式、既有結果、量測可靠性、適用條件及成本實驗證據與目前書面，更新至 2026-11-13；最終結案成品仍為 2026-11-09 版本。新增的位置數離線比較是研究完成後的補充驗證，不回填原始選參數歷史或正式樣本數。方法與進度見 [README](README.md) 及[目前方法與後續工作](docs/METHOD_AND_NEXT_STEPS_zh-TW.md)；最終結案成品見 [paper/README](paper/README.md)，目前六項結案工作見[結案核對](docs/METHOD_CLOSURE_20261102_zh-TW.md)。原始程式、協定與資料檔名保留，以維持雜湊及重現關係。
 
 ## 已收錄
+
+- `results/iblt_hash_count_20261113/` 保存新增二／三／四／五位置離線比較的原始程式、實作快照、執行前規約、全部 36,864 次版本解碼、摘要與核對。`scripts/iblt_hash_count_experiment.py` 提供發布時新增的可攜核對與固定網格重現。三個位置的選用依據與容量限制另列，不宣稱全域最佳，不改既有解碼器或原生實驗分母。
 
 - 作者於 2026-11-09 提供的最終中文結案報告、英文結案報告（修正分頁版）、英文 PDF 與英文海報，以原始位元組保存在 `paper/final/`。原檔對應、SHA-256 與檔案大小見 `paper/final/SOURCE_FILES.json`。
 

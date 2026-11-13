@@ -1,0 +1,42 @@
+{
+  "protocol.json": {
+    "sha256": "472342278a42d6034ac267100c589a9c8e2b89c88ea9f442232db8916dcba690",
+    "bytes": 8635
+  },
+  "protocol.sha256": {
+    "sha256": "c7830a8980e245b566bbc63078a263d6c9acd1af98733cdbfd020e4b1880d6c9",
+    "bytes": 66
+  },
+  "reconciliation_snapshot.py": {
+    "sha256": "c0aa7f06550ced14b81a379e614ac8b5c14dfea148a30df8c28ccc6c5a112cd0",
+    "bytes": 9455
+  },
+  "REPORT_zh-TW.md": {
+    "sha256": "065552cddeca0dd86b5dc013f395d4a704df91c9ea75731e5aec9437a8431ab4",
+    "bytes": 3862
+  },
+  "run_experiment.py": {
+    "sha256": "dcf2c067db2feeced12d3ce81769c1c92a878abeccf63bfcd675789c229216ee",
+    "bytes": 20513
+  },
+  "run_started.json": {
+    "sha256": "107c65950a60dbaeba13bdfda566ee80de582c9b85179802753447942d9897e5",
+    "bytes": 145
+  },
+  "summary.csv": {
+    "sha256": "b8d1919365f948b0c6cc7e9ab55bac39932a8c7cd32421ee7adbf682bdef88fe",
+    "bytes": 15476
+  },
+  "summary.json": {
+    "sha256": "8ab22a746826a02253a504cfe452debf09ffe2478a3621020e56684498cba7fa",
+    "bytes": 54272
+  },
+  "trials.csv": {
+    "sha256": "9ad3caa21060844bf2b2cd96bb05447a681def22a94e0b4f0ac7a29012399592",
+    "bytes": 4768597
+  },
+  "validation.json": {
+    "sha256": "130e4285a272dd1d83b47151e511b0c74011f40dc57d642f7c3a63de74161b27",
+    "bytes": 255
+  }
+}

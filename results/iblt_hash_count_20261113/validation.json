@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": {
+    "baseline_row_and_decode_parity": 96,
+    "positions_distinct_and_nested": 256,
+    "common_stream_cancellation": 256,
+    "duplicate_failure_control": 256
+  },
+  "completed_utc": "2026-11-13T05:53:07.471189+00:00"
+}

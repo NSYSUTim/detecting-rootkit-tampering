@@ -1,19 +1,19 @@
 {
   "EVIDENCE_INDEX.json": {
-    "bytes": 4689,
-    "sha256": "d55b90a5ebd4a4f0ea02039ea79ed08f5a7f1b72c7ad58eae44b7e3736135686"
+    "bytes": 4959,
+    "sha256": "3abb883704095d1318665b8ea79401d7e3e56a9affc4b5d4ae3b54a02f6acf86"
   },
   "PLAN_STATUS.json": {
-    "bytes": 12203,
-    "sha256": "3566fe7c74bfa084d3eeacbfac63d4e9f96dbf9890427233695c817f023bb94a"
+    "bytes": 13443,
+    "sha256": "65be148e3ec5d4b352131579efd81e4789d91bb7d857abedb4acb42b6b561d33"
   },
   "RESULTS.json": {
-    "bytes": 25536,
-    "sha256": "af2d805ccae19335d2c7d43d6dfac2f5036571847beda27ea5b6d0faecf977b7"
+    "bytes": 26560,
+    "sha256": "9ca8c1a263bdc98943ab4072c3eb7d26df68307e2edfc14b4bf763faea82104e"
   },
   "STATUS.txt": {
-    "bytes": 3496,
-    "sha256": "bfd4651f0fa70ca5b4978f21592eb2601a87c69d1837de7efefe991ecb92a687"
+    "bytes": 3873,
+    "sha256": "b0796ddcca132854026beba870c5495e24e5fdc227eba6e1bf7f38fb9561d837"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -82,6 +82,34 @@
   "updates/20261115_inode_names/RESULTS.json": {
     "bytes": 6514,
     "sha256": "640df250ba4255ff49dadbfc900b6d79b371f19a6a2628f8f2c16a3172ccb498"
+  },
+  "updates/20261115_medusa/ERROR_ANALYSIS.json": {
+    "bytes": 1758,
+    "sha256": "0668a063145a5f5ffe55cce788364fdd2750f110a6a4ef0d2344c03c2c4ac9fc"
+  },
+  "updates/20261115_medusa/PROTOCOL.json": {
+    "bytes": 1047,
+    "sha256": "7f0feb2b67b736f0842987d4848026379c71a2afb544ca10215cfb0915b69551"
+  },
+  "updates/20261115_medusa/README.txt": {
+    "bytes": 3131,
+    "sha256": "981e32d2f41c2017e4b4e8a83e9b5186238bffbf43879cc91bc19275e53b2e41"
+  },
+  "updates/20261115_medusa/RESULTS.json": {
+    "bytes": 18372,
+    "sha256": "9dd61a727f148a94cc996b6deed67cae7cfc3eea8dfe0e2c1c6423358f1be915"
+  },
+  "updates/20261115_medusa/cases/cohort_1.csv": {
+    "bytes": 13328,
+    "sha256": "b6a9c40936314dd6ebefaa11591335c3980de2c161a8fb69b6282d0d5a2144a1"
+  },
+  "updates/20261115_medusa/cases/cohort_2.csv": {
+    "bytes": 13328,
+    "sha256": "4558111c307a4f0b4c829f9463423220825d2a0614e52335e5b195b16ca36a12"
+  },
+  "updates/20261115_medusa/cases/cohort_3.csv": {
+    "bytes": 13328,
+    "sha256": "48a6615e47dd1629078fca3c44e269be09eb1a32c95a8920eb774e7fcfe250e7"
   },
   "updates/20261115_singularity/BUILD_IDENTITY.json": {
     "bytes": 5859,

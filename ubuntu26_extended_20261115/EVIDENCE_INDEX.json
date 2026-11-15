@@ -95,6 +95,11 @@
       "path": "ubuntu26_extended_20261115_run10/FORMAL_VERIFIED.json",
       "bytes": 19436,
       "sha256": "8ae39384a5f26e09cdb2760d9ffd0154352fdb559d535eeb75ce414756c5403b"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run11/VERIFIED_MEDUSA_THREE_BOOT.json",
+      "bytes": 18052,
+      "sha256": "475a3fe6c39ab3a7dd668f18809861c707f91d6738226f9861a5d21756bd5f53"
     }
   ],
   "collection_manifests": {
@@ -102,5 +107,6 @@
     "run06": 4806
   },
   "brokepkg_first_boot_update": "updates/20261115_brokepkg/EVIDENCE_MANIFEST.json",
-  "singularity_directory_update": "updates/20261115_singularity/RESULTS.json"
+  "singularity_directory_update": "updates/20261115_singularity/RESULTS.json",
+  "medusa_three_boot_update": "updates/20261115_medusa/RESULTS.json"
 }

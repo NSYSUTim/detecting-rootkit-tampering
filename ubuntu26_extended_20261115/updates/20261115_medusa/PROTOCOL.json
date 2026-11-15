@@ -1,0 +1,26 @@
+[
+  {
+    "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+    "library_sha256": "48615c11b7a5ce7e2033df2d7ff4d9bf948485ac0dd8ce77b8a26fe61b9f2545",
+    "original_source_pin": "fdade060f4bc53a356fe62c14e9c830fcc0b968e",
+    "independent_fixture_sets": 20,
+    "GID": 8888,
+    "library_scope": "LD_PRELOAD only in controlled child via strace -E"
+  },
+  {
+    "boot": "4e476569-05c4-4e24-b961-e0770bdfab7f",
+    "library_sha256": "48615c11b7a5ce7e2033df2d7ff4d9bf948485ac0dd8ce77b8a26fe61b9f2545",
+    "original_source_pin": "fdade060f4bc53a356fe62c14e9c830fcc0b968e",
+    "independent_fixture_sets": 20,
+    "GID": 8888,
+    "library_scope": "LD_PRELOAD only in controlled child via strace -E"
+  },
+  {
+    "boot": "a8bffb3a-6f64-4e8d-ae74-ecb5cf6c74b8",
+    "library_sha256": "48615c11b7a5ce7e2033df2d7ff4d9bf948485ac0dd8ce77b8a26fe61b9f2545",
+    "original_source_pin": "fdade060f4bc53a356fe62c14e9c830fcc0b968e",
+    "independent_fixture_sets": 20,
+    "GID": 8888,
+    "library_scope": "LD_PRELOAD only in controlled child via strace -E"
+  }
+]

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T23:22:15.616636+08:00",
+  "updated": "2026-11-15T23:33:15.660422+08:00",
   "plan": "2026-11-15-plan-2",
   "plan_fully_completed": false,
   "status_count": {
@@ -647,7 +647,7 @@
   },
   "current_run_state": "in_progress",
   "latest_update": {
-    "updated": "2026-11-15T23:22:15.616636+08:00",
+    "updated": "2026-11-15T23:33:15.660422+08:00",
     "run_state": "in_progress",
     "original_plan_fully_completed": false,
     "name_recovery_and_family_validation": {
@@ -852,7 +852,7 @@
     "candidate_build_state": {
       "Singularity": "unchanged build loaded; directory matrix complete: three clean boots per probe order, six boots total; proc/forensics/combined modes not included",
       "brokepkg": "build with recorded compatibility macro; first boot evaluated (480 scans), remaining boot matrix pending",
-      "Medusa": "original library built after official dependency headers; one boot evaluated"
+      "Medusa": "same pinned library; original three-boot ext4/tmpfs/proc protocol complete: 360 attempts, 342 valid, 18 invalid; invalid observations retained"
     },
     "next_work": [
       "remaining family eligibility and runtime gates",
@@ -881,6 +881,25 @@
         408,
         480
       ],
+      "whole_project_plan_complete": false,
+      "raw_files_uploaded": false
+    },
+    "medusa_three_boot": {
+      "details": "updates/20261115_medusa/RESULTS.json",
+      "original_protocol_complete": true,
+      "boots": 3,
+      "attempted": 360,
+      "valid": 342,
+      "invalid": 18,
+      "valid_positive_alerted_exact": [
+        162,
+        162
+      ],
+      "normal_alerted": [
+        0,
+        180
+      ],
+      "invalid_offline_SL_decode_excluded_from_primary_accuracy": true,
       "whole_project_plan_complete": false,
       "raw_files_uploaded": false
     }
@@ -932,6 +951,25 @@
       408,
       480
     ],
+    "whole_project_plan_complete": false,
+    "raw_files_uploaded": false
+  },
+  "medusa_three_boot": {
+    "details": "updates/20261115_medusa/RESULTS.json",
+    "original_protocol_complete": true,
+    "boots": 3,
+    "attempted": 360,
+    "valid": 342,
+    "invalid": 18,
+    "valid_positive_alerted_exact": [
+      162,
+      162
+    ],
+    "normal_alerted": [
+      0,
+      180
+    ],
+    "invalid_offline_SL_decode_excluded_from_primary_accuracy": true,
     "whole_project_plan_complete": false,
     "raw_files_uploaded": false
   }

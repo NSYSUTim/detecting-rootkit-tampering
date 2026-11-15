@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T23:22:15.616636+08:00",
+  "updated": "2026-11-15T23:33:15.660422+08:00",
   "counts": {
     "complete": 7,
     "partial": 23,
@@ -75,7 +75,7 @@
       "workstream": "W03",
       "title": "公開 userland 原版/必要移植與真隱藏關卡",
       "status": "partial",
-      "completed_evidence": "兩個公開 userland 樣本的原生結果及 120 次原始記錄已核對。 補齊官方標頭後 Medusa 原版成功編譯，已開始一開機原生三層驗證。",
+      "completed_evidence": "兩個公開 userland 樣本的原生結果及 120 次原始記錄已核對。 補齊官方標頭後 Medusa 原版成功編譯，已開始一開機原生三層驗證。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
       "remaining": "其餘 userland 候選的建置與實際隱藏驗收。"
     },
     {
@@ -83,7 +83,7 @@
       "workstream": "W03",
       "title": "全部適用 userland 家族三層正式矩陣",
       "status": "partial",
-      "completed_evidence": "BDS userland／libprocesshider 新三開機共 360 次，180 次差異皆正確告警並完整還原、180 次正常對照一致。Medusa 第一個開機有 54 次有效差異、60 次正常對照和 6 次無效輸出。",
+      "completed_evidence": "BDS userland／libprocesshider 新三開機共 360 次，180 次差異皆正確告警並完整還原、180 次正常對照一致。Medusa 第一個開機有 54 次有效差異、60 次正常對照和 6 次無效輸出。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
       "remaining": "全部適用家族的三開機正式矩陣。"
     },
     {
@@ -107,7 +107,7 @@
       "workstream": "W04",
       "title": "CARAXES 及所有適用公開家族 /proc 矩陣",
       "status": "partial",
-      "completed_evidence": "libprocesshider 一開機 20 組 canary，共 255 筆差異。",
+      "completed_evidence": "libprocesshider 一開機 20 組 canary，共 255 筆差異。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
       "remaining": "CARAXES 與其餘適用家族的 proc 正式矩陣。"
     },
     {
@@ -235,7 +235,7 @@
       "workstream": "W10",
       "title": "獨立原始 bytes 重播、全包 hash 與來源核對",
       "status": "partial",
-      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
+      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
       "remaining": "尚未產生資料與最終整包的驗收。"
     },
     {

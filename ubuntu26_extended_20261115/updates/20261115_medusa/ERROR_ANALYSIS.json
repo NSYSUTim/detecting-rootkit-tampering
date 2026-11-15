@@ -1,0 +1,23 @@
+{
+  "observed_invalid_scans": 18,
+  "observations": [
+    "Every invalid scan is ext4/medusa, with application rc=1 and stderr readdir64: No such file or directory.",
+    "All 18 raw getdents64 streams reached terminal zero. The application did not emit END eof.",
+    "All 18 invalid streams ended on a configured hidden target; all 42 valid ext4 attack streams ended on an ordinary entry.",
+    "Existing invalid-stream S/L bytes also decoded exactly in offline replay, but are excluded from primary accuracy because the application gate failed and a complete K record was not saved."
+  ],
+  "source_supported_interpretation": "The pinned readdir64 wrapper returns immediately on EOF; it clears errno only when returning a visible entry. Its filtering loop invokes hidden_stat on basenames. An error left by filtering can therefore reach the caller if the final entries are hidden. This explains the observed EOF/ENOENT pattern; the precise errno-setting syscall was not separately traced.",
+  "no_sample_patch_or_additional_sample_run_for_this_analysis": true,
+  "primary_invalid_classification_retained": true,
+  "medusa_source": {
+    "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_userbuilds_81157059-d6b6-426e-8ec3-d03c47089e3e/userland_candidate_builds/ldpreload__Medusa/src/rkld.c",
+    "sha256": "e4f7c1ccd3557f555352c38be69842086ada00ea5fa5d70bfde1f75692f4e561",
+    "hidden_stat_start_line": 144,
+    "readdir64_start_line": 623
+  },
+  "controlled_application": {
+    "path": "artifacts/ubuntu26_extended_20261115_run02/benign_gated_readdir.c",
+    "sha256": "af107dbe9b86e7eab8b635912dc4638c7f4a8e2667222b3eae2a4870b9af8d2a",
+    "behaviour": "Clears errno before readdir64; NULL with nonzero errno is an application error."
+  }
+}

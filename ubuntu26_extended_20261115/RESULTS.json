@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-15T18:42:59.197407+08:00",
+  "updated": "2026-11-15T19:25:21.953132+08:00",
   "plan": "2026-11-15-plan-2",
   "plan_fully_completed": false,
   "status_count": {
     "complete": 7,
-    "partial": 22,
-    "not_started": 1
+    "partial": 23,
+    "not_started": 0
   },
   "status_count_unit": "original work items, unweighted acceptance counts",
   "earlier_ubuntu26": {
@@ -644,5 +644,220 @@
       "status": "30c8a30ed109bf1f1b8fd396b51cac94ea019bb27fd3696a658726aab2f1760b",
       "tracked_diff": "f65110238045cbcc126ccace8ec995bb7d82929ad0800e0926abbd30808295ea"
     }
+  },
+  "current_run_state": "in_progress",
+  "latest_update": {
+    "updated": "2026-11-15T19:25:21.953132+08:00",
+    "run_state": "in_progress",
+    "original_plan_fully_completed": false,
+    "name_recovery_and_family_validation": {
+      "forensics": {
+        "cohorts": [
+          {
+            "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+            "counts": {
+              "attempted": 72,
+              "valid": 32,
+              "alarm": 32,
+              "invalid": 40,
+              "raw_iblt_replays": 64,
+              "decoded_target_events": 48,
+              "correct_target_names": 48,
+              "content_verified": 48,
+              "name_absent_before_after": 48
+            },
+            "unique_extracted_inodes_in_image": 20,
+            "image_sha256": "aee5d3cc0980f759901c1cd11f6bb6abcdda5bfc87a787dc2729cd11f30618ca"
+          },
+          {
+            "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+            "counts": {
+              "attempted": 72,
+              "valid": 40,
+              "alarm": 40,
+              "invalid": 32,
+              "raw_iblt_replays": 80,
+              "decoded_target_events": 136,
+              "correct_target_names": 136,
+              "content_verified": 136,
+              "name_absent_before_after": 136
+            },
+            "unique_extracted_inodes_in_image": 48,
+            "image_sha256": "96a9f91bc009f3961de8a744aea0374cfce7c59d2a070110a3cb8d62f02341c3"
+          },
+          {
+            "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+            "counts": {
+              "attempted": 72,
+              "valid": 44,
+              "alarm": 44,
+              "invalid": 28,
+              "raw_iblt_replays": 88,
+              "decoded_target_events": 116,
+              "correct_target_names": 116,
+              "content_verified": 116,
+              "name_absent_before_after": 116
+            },
+            "unique_extracted_inodes_in_image": 54,
+            "image_sha256": "b519321456ef1e6c4f6a87638a0da0b412219474c0930df6852d291e69054266"
+          }
+        ],
+        "counts": {
+          "attempted": 216,
+          "valid": 116,
+          "alarm": 116,
+          "invalid": 100,
+          "raw_iblt_replays": 232,
+          "decoded_target_events": 300,
+          "correct_target_names": 300,
+          "content_verified": 300,
+          "name_absent_before_after": 300
+        }
+      },
+      "hardlinks": {
+        "cohorts": [
+          {
+            "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+            "counts": {
+              "attempted": 80,
+              "valid": 36,
+              "difference_alarm_correct": 36,
+              "actual_difference_filename_exact": 36,
+              "intended_target_filtered": 36,
+              "different_alias_filtered": 0,
+              "content_verified": 36,
+              "invalid": 44
+            },
+            "fixture_inodes": 20
+          },
+          {
+            "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+            "counts": {
+              "attempted": 80,
+              "valid": 70,
+              "difference_alarm_correct": 70,
+              "actual_difference_filename_exact": 70,
+              "intended_target_filtered": 70,
+              "different_alias_filtered": 0,
+              "content_verified": 70,
+              "invalid": 10
+            },
+            "fixture_inodes": 20
+          },
+          {
+            "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+            "counts": {
+              "attempted": 80,
+              "valid": 70,
+              "difference_alarm_correct": 70,
+              "actual_difference_filename_exact": 70,
+              "intended_target_filtered": 58,
+              "different_alias_filtered": 12,
+              "content_verified": 70,
+              "invalid": 10
+            },
+            "fixture_inodes": 20
+          }
+        ],
+        "counts": {
+          "attempted": 240,
+          "valid": 176,
+          "difference_alarm_correct": 176,
+          "actual_difference_filename_exact": 176,
+          "intended_target_filtered": 164,
+          "different_alias_filtered": 12,
+          "content_verified": 176,
+          "invalid": 64
+        },
+        "by_name_kind": {
+          "ascii": {
+            "attempted": 48,
+            "valid": 48,
+            "actual_difference_filename_exact": 48
+          },
+          "spaces": {
+            "attempted": 48,
+            "invalid": 12,
+            "valid": 36,
+            "actual_difference_filename_exact": 36
+          },
+          "unicode": {
+            "attempted": 48,
+            "invalid": 12,
+            "valid": 36,
+            "actual_difference_filename_exact": 36
+          },
+          "non_utf8": {
+            "attempted": 48,
+            "valid": 40,
+            "actual_difference_filename_exact": 40,
+            "invalid": 8
+          },
+          "long": {
+            "attempted": 48,
+            "invalid": 32,
+            "valid": 16,
+            "actual_difference_filename_exact": 16
+          }
+        },
+        "classification": "Original failure list tests the configured marker effect. Here detector correctness is independently checked against the actual recorded K-S difference."
+      },
+      "userland": {
+        "cohorts": [
+          {
+            "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+            "counts": {
+              "valid": 120,
+              "positive_alarm": 60,
+              "negative_no_alarm": 60,
+              "exact": 120
+            },
+            "verified_canary_sets": 20
+          },
+          {
+            "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+            "counts": {
+              "valid": 120,
+              "positive_alarm": 60,
+              "negative_no_alarm": 60,
+              "exact": 120
+            },
+            "verified_canary_sets": 20
+          },
+          {
+            "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+            "counts": {
+              "valid": 120,
+              "positive_alarm": 60,
+              "negative_no_alarm": 60,
+              "exact": 120
+            },
+            "verified_canary_sets": 20
+          }
+        ],
+        "counts": {
+          "valid": 360,
+          "positive_alarm": 180,
+          "negative_no_alarm": 180,
+          "exact": 360
+        }
+      }
+    },
+    "previous_filename_replay": {
+      "events": 224,
+      "unique_inodes": 76,
+      "correct_names": 224,
+      "source": "earlier captured image; inactive sample during replay"
+    },
+    "candidate_build_state": {
+      "Singularity": "original build succeeded; runtime gate pending",
+      "brokepkg": "build succeeded with recorded kernel-name compatibility macro; runtime gate pending",
+      "Medusa": "original library built after official dependency headers; one boot evaluated"
+    },
+    "next_work": [
+      "remaining family eligibility and runtime gates",
+      "remaining detector full matrices and integration",
+      "Trace acquisition after detector work"
+    ]
   }
 }

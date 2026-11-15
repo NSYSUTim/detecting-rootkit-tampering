@@ -1,0 +1,250 @@
+{
+  "updated": "2026-11-15T19:25:21.953132+08:00",
+  "counts": {
+    "complete": 7,
+    "partial": 23,
+    "not_started": 0
+  },
+  "jobs": [
+    {
+      "id": "J00",
+      "workstream": "W00",
+      "title": "封存環境、程式、來源、套件、真值與新輸出目錄",
+      "status": "complete",
+      "completed_evidence": "已保存環境、來源與資料身分，原結果及書面雜湊核對通過。",
+      "remaining": ""
+    },
+    {
+      "id": "J01",
+      "workstream": "W01",
+      "title": "完整候選逐項讀來源、分類、別名/家族去重",
+      "status": "partial",
+      "completed_evidence": "133 個 repository 角色清單與 14 個文獻事件候選已建立，部分來源已釘選。 本輪新增取得並逐檔驗證 806 個已釘選原始文字檔，完整輸入副本有 1,301 個檔案。",
+      "remaining": "完整候選池的逐一適用性與來源驗收。"
+    },
+    {
+      "id": "J02",
+      "workstream": "W01",
+      "title": "可追溯實戰樣本取得與名稱核對",
+      "status": "partial",
+      "completed_evidence": "產業事件與在野樣本的來源查核已保留。",
+      "remaining": "完整原樣本取得與 unavailable 證據清單。"
+    },
+    {
+      "id": "J03",
+      "workstream": "W02",
+      "title": "公開核心/eBPF 原版建置、載入、真隱藏與邊界關卡",
+      "status": "partial",
+      "completed_evidence": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。",
+      "remaining": "其他核心與 eBPF 候選的建置、載入、實際隱藏驗收。"
+    },
+    {
+      "id": "J04",
+      "workstream": "W02",
+      "title": "最小版本移植與原版/變體差異核對",
+      "status": "partial",
+      "completed_evidence": "已實測 brokepkg 的核心常數名稱相容定義，原始程式碼保持一致，成功建置。其他候選保留 API 和建置錯誤。",
+      "remaining": "本輪候選所需相容性修正與語意核對未執行。"
+    },
+    {
+      "id": "J05",
+      "workstream": "W02",
+      "title": "所有適用公開核心/eBPF mode 正式矩陣",
+      "status": "partial",
+      "completed_evidence": "保留既有 CARAXES 矩陣及一個新同 VM 取證 cohort。",
+      "remaining": "全部適用家族的三開機、探針順序、檔案系統與 buffer 正式矩陣。"
+    },
+    {
+      "id": "J06",
+      "workstream": "W03",
+      "title": "定義並實作應用程式真正可見的 L 端",
+      "status": "partial",
+      "completed_evidence": "受控 readdir64 應用程式在同一次列舉提供 L 端身分，與 K/S 對照。",
+      "remaining": "通用部署的 ABI、process/thread/DIR/fd/open-generation 完整支援。"
+    },
+    {
+      "id": "J07",
+      "workstream": "W03",
+      "title": "DIR/fd/epoch 關聯與預讀、EOF、early-close 控制",
+      "status": "partial",
+      "completed_evidence": "387 次既有正常三層觀測，新增三開機 1,560 案例、2,280 段控制，含 rewind、fd reuse、雙目錄、變動和錯誤。",
+      "remaining": "任意 offset seekdir、fork、多執行緒及其餘取消／退出邊界。"
+    },
+    {
+      "id": "J08",
+      "workstream": "W03",
+      "title": "公開 userland 原版/必要移植與真隱藏關卡",
+      "status": "partial",
+      "completed_evidence": "兩個公開 userland 樣本的原生結果及 120 次原始記錄已核對。 補齊官方標頭後 Medusa 原版成功編譯，已開始一開機原生三層驗證。",
+      "remaining": "其餘 userland 候選的建置與實際隱藏驗收。"
+    },
+    {
+      "id": "J09",
+      "workstream": "W03",
+      "title": "全部適用 userland 家族三層正式矩陣",
+      "status": "partial",
+      "completed_evidence": "BDS userland／libprocesshider 新三開機共 360 次，180 次差異皆正確告警並完整還原、180 次正常對照一致。Medusa 第一個開機有 54 次有效差異、60 次正常對照和 6 次無效輸出。",
+      "remaining": "全部適用家族的三開機正式矩陣。"
+    },
+    {
+      "id": "J10",
+      "workstream": "W03",
+      "title": "核心/userland 組合與可用性檢查",
+      "status": "partial",
+      "completed_evidence": "已保存的離線三層資料含同時跨兩個觀測界面的差異。",
+      "remaining": "核心與 userland 真樣本共同啟用及可用性矩陣。"
+    },
+    {
+      "id": "J11",
+      "workstream": "W04",
+      "title": "/proc canary 生命週期、PIDFD/starttime/ns 關聯",
+      "status": "partial",
+      "completed_evidence": "PIDFD、程序存活與 starttime／namespace 控制有證據。",
+      "remaining": "實際 PID 重用與所有程序 ground-truth 要件的逐欄驗收。"
+    },
+    {
+      "id": "J12",
+      "workstream": "W04",
+      "title": "CARAXES 及所有適用公開家族 /proc 矩陣",
+      "status": "partial",
+      "completed_evidence": "libprocesshider 一開機 20 組 canary，共 255 筆差異。",
+      "remaining": "CARAXES 與其餘適用家族的 proc 正式矩陣。"
+    },
+    {
+      "id": "J13",
+      "workstream": "W04",
+      "title": "程序生滅、PID namespace、hidepid 正常控制",
+      "status": "complete",
+      "completed_evidence": "三開機完成 60 次程序生滅列舉、6 次 PID namespace 列舉，以及 hidepid 合法可見性控制。",
+      "remaining": ""
+    },
+    {
+      "id": "J14",
+      "workstream": "W05",
+      "title": "同一受測 VM 的 root/debugfs 唯讀取檔準備",
+      "status": "complete",
+      "completed_evidence": "同 VM 唯讀 ext4 fixture、裝置、UUID、inode、內容與來源雜湊完整保存。",
+      "remaining": ""
+    },
+    {
+      "id": "J15",
+      "workstream": "W05",
+      "title": "樣本仍啟用時，由 detector inode 直接取檔並核對內容",
+      "status": "partial",
+      "completed_evidence": "本輪三開機、216 次主列舉，有 300 筆由解碼 inode 反查到正確檔名並完成內容核對。另 240 次硬連結測試中 176 次有效差異皆正確定位實際缺失名稱，保留 100／64 次各組無效列舉。",
+      "remaining": "其他適用家族的同 VM 取證及正式矩陣。"
+    },
+    {
+      "id": "J16",
+      "workstream": "W05",
+      "title": "取檔適用性與既定案例邊界紀錄",
+      "status": "complete",
+      "completed_evidence": "三開機硬連結／symlink 正常控制與 ext4、時間點、裝置、inode 假設均已記錄。",
+      "remaining": ""
+    },
+    {
+      "id": "J17",
+      "workstream": "W06",
+      "title": "凍結公平比較的任務標籤、split 與門檻",
+      "status": "partial",
+      "completed_evidence": "Trace 校準與測試批次互斥，先定門檻再測試的資料已核對。",
+      "remaining": "依開機／fixture 分組的新蒐集，及 rootkit-loaded／active-tampering 完整雙任務標籤。"
+    },
+    {
+      "id": "J18",
+      "workstream": "W06",
+      "title": "count/name-only/full-identity/exact 全記錄比較",
+      "status": "partial",
+      "completed_evidence": "同輸入 count／name-only／full／exact 比較，1,900 組有效離線比較和 120 次真實三層紀錄已重算。",
+      "remaining": "未取得的新家族原始輸入之全部同資料比較。"
+    },
+    {
+      "id": "J19",
+      "workstream": "W06",
+      "title": "Trace of Times 新資料完整蒐集與兩種評估",
+      "status": "partial",
+      "completed_evidence": "既有 Ubuntu 26 Trace 完整 protocol 與凍結門檻重評可引用。",
+      "remaining": "全新 Trace 蒐集未執行，依使用者優先順序後移。"
+    },
+    {
+      "id": "J20",
+      "workstream": "W06",
+      "title": "Decloaker 支援場景與 path-access 對照",
+      "status": "partial",
+      "completed_evidence": "既有九開機隱藏對照，另以 20 個乾淨 ext4 fixture 驗證可開路徑及已知快照不一致。",
+      "remaining": "真正攔截直接路徑存取的原生樣本對照。"
+    },
+    {
+      "id": "J21",
+      "workstream": "W06",
+      "title": "可用業界/開源工具的互補比較與限制",
+      "status": "partial",
+      "completed_evidence": "ModXRef／Volatility、Sandfly、rkhunter、chkrootkit、Tracee／Falco 的目標及 VM 可用性已查核。",
+      "remaining": "對可取得工具的實際安裝、版本與規則驗證、互補動態比較。"
+    },
+    {
+      "id": "J22",
+      "workstream": "W07",
+      "title": "已保存 73 失敗的原始輸入重播",
+      "status": "complete",
+      "completed_evidence": "已保存 73 筆碰撞重現與 256／512／1024 格重播，歷史無名稱失敗與重現輸入分開。",
+      "remaining": ""
+    },
+    {
+      "id": "J23",
+      "workstream": "W07",
+      "title": "新 k/m/delta 容量與身分邊界矩陣",
+      "status": "complete",
+      "completed_evidence": "24,000 次 k/m/delta 試驗、真實／合成分布及刻意碰撞皆有紀錄。",
+      "remaining": ""
+    },
+    {
+      "id": "J24",
+      "workstream": "W07",
+      "title": "凍結最終版本並展開完整共用路徑回歸",
+      "status": "partial",
+      "completed_evidence": "57 個可在主機執行的既有測試通過，既有主矩陣和新原生正常控制通過核對。",
+      "remaining": "最終整合三層版的完整九開機、動態及品質回歸。"
+    },
+    {
+      "id": "J25",
+      "workstream": "W08",
+      "title": "新三層版本成本與啟動/掃描/恢復/取證分解",
+      "status": "partial",
+      "completed_evidence": "原版核心至 syscall 成本三開機 7,200 次正式量測；應用元件另三開機 7,200 次正式量測。",
+      "remaining": "所有 K/S/L 收集器同時啟用的整合成本、事件遺失、快取及取證時間完整分解。"
+    },
+    {
+      "id": "J26",
+      "workstream": "W09",
+      "title": "來源到論點及原書面引用交叉核對",
+      "status": "complete",
+      "completed_evidence": "20 條來源到論點對照已保留，SANSAR 原站複核完成。",
+      "remaining": ""
+    },
+    {
+      "id": "J27",
+      "workstream": "W10",
+      "title": "品質漏斗、分家族分母、區間與失敗分類",
+      "status": "partial",
+      "completed_evidence": "既有與新增測次已按家族、觀測品質、告警、還原及內容取回分列，失敗保留。",
+      "remaining": "所有未執行矩陣完成後的最終整體統計。"
+    },
+    {
+      "id": "J28",
+      "workstream": "W10",
+      "title": "獨立原始 bytes 重播、全包 hash 與來源核對",
+      "status": "partial",
+      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。",
+      "remaining": "尚未產生資料與最終整包的驗收。"
+    },
+    {
+      "id": "J29",
+      "workstream": "W10",
+      "title": "完整研究結論、結果圖表與新報告整合草稿",
+      "status": "partial",
+      "completed_evidence": "已有可貼入報告的結果文字、版本比較、限制與本次進度表。",
+      "remaining": "全計畫的最終圖表、整合報告草稿及一致性驗收。"
+    }
+  ]
+}

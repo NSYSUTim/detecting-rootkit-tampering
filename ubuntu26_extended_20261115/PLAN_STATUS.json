@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-15T18:42:59.197407+08:00",
+  "updated": "2026-11-15T19:25:21.953132+08:00",
   "counts": {
     "complete": 7,
-    "partial": 22,
-    "not_started": 1
+    "partial": 23,
+    "not_started": 0
   },
   "jobs": [
     {
@@ -19,7 +19,7 @@
       "workstream": "W01",
       "title": "完整候選逐項讀來源、分類、別名/家族去重",
       "status": "partial",
-      "completed_evidence": "133 個 repository 角色清單與 14 個文獻事件候選已建立，部分來源已釘選。",
+      "completed_evidence": "133 個 repository 角色清單與 14 個文獻事件候選已建立，部分來源已釘選。 本輪新增取得並逐檔驗證 806 個已釘選原始文字檔，完整輸入副本有 1,301 個檔案。",
       "remaining": "完整候選池的逐一適用性與來源驗收。"
     },
     {
@@ -35,15 +35,15 @@
       "workstream": "W02",
       "title": "公開核心/eBPF 原版建置、載入、真隱藏與邊界關卡",
       "status": "partial",
-      "completed_evidence": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。",
+      "completed_evidence": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。",
       "remaining": "其他核心與 eBPF 候選的建置、載入、實際隱藏驗收。"
     },
     {
       "id": "J04",
       "workstream": "W02",
       "title": "最小版本移植與原版/變體差異核對",
-      "status": "not_started",
-      "completed_evidence": "保留前一輪移植紀錄。",
+      "status": "partial",
+      "completed_evidence": "已實測 brokepkg 的核心常數名稱相容定義，原始程式碼保持一致，成功建置。其他候選保留 API 和建置錯誤。",
       "remaining": "本輪候選所需相容性修正與語意核對未執行。"
     },
     {
@@ -75,7 +75,7 @@
       "workstream": "W03",
       "title": "公開 userland 原版/必要移植與真隱藏關卡",
       "status": "partial",
-      "completed_evidence": "兩個公開 userland 樣本的原生結果及 120 次原始記錄已核對。",
+      "completed_evidence": "兩個公開 userland 樣本的原生結果及 120 次原始記錄已核對。 補齊官方標頭後 Medusa 原版成功編譯，已開始一開機原生三層驗證。",
       "remaining": "其餘 userland 候選的建置與實際隱藏驗收。"
     },
     {
@@ -83,7 +83,7 @@
       "workstream": "W03",
       "title": "全部適用 userland 家族三層正式矩陣",
       "status": "partial",
-      "completed_evidence": "一開機的 ext4／tmpfs／proc 共 60 次陽性、60 次正常對照。",
+      "completed_evidence": "BDS userland／libprocesshider 新三開機共 360 次，180 次差異皆正確告警並完整還原、180 次正常對照一致。Medusa 第一個開機有 54 次有效差異、60 次正常對照和 6 次無效輸出。",
       "remaining": "全部適用家族的三開機正式矩陣。"
     },
     {
@@ -131,7 +131,7 @@
       "workstream": "W05",
       "title": "樣本仍啟用時，由 detector inode 直接取檔並核對內容",
       "status": "partial",
-      "completed_evidence": "72 次 CARAXES 主要列舉有 56 次有效，224 次已取檔的內容全部核對，76 個不同 inode。",
+      "completed_evidence": "本輪三開機、216 次主列舉，有 300 筆由解碼 inode 反查到正確檔名並完成內容核對。另 240 次硬連結測試中 176 次有效差異皆正確定位實際缺失名稱，保留 100／64 次各組無效列舉。",
       "remaining": "其他適用家族的同 VM 取證及正式矩陣。"
     },
     {
@@ -235,7 +235,7 @@
       "workstream": "W10",
       "title": "獨立原始 bytes 重播、全包 hash 與來源核對",
       "status": "partial",
-      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。",
+      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。",
       "remaining": "尚未產生資料與最終整包的驗收。"
     },
     {

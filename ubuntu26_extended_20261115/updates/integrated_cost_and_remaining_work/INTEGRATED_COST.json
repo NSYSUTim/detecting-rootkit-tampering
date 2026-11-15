@@ -1,0 +1,1406 @@
+{
+  "scope": "Clean cooperative K/S/L capture with strace and controlled readdir64 application.",
+  "measured": 3600,
+  "warmup": 600,
+  "normal_difference_alarms": 0,
+  "boot_details": [
+    {
+      "boot_id": "1011c482-d131-4aaa-9dfa-ed4544690985",
+      "measured": 1200,
+      "warmup": 200,
+      "startup_ms": 2207.132554,
+      "seconds_to_capture_all_cells": 1246.9609785549999,
+      "measurements_sha256": "5bf2de16917d12fc7ec98de6b6d6c07ef2ceab1d68410440cd2d9951c668a469"
+    },
+    {
+      "boot_id": "1630159b-5479-443c-a3ea-8aa15944c3b6",
+      "measured": 1200,
+      "warmup": 200,
+      "startup_ms": 2457.905428,
+      "seconds_to_capture_all_cells": 1245.859584381,
+      "measurements_sha256": "c45101fb6e782827abf675afb04c4c22aea52d9fe9da99457dad4b2dbe0bfe7d"
+    },
+    {
+      "boot_id": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "measured": 1200,
+      "warmup": 200,
+      "startup_ms": 2160.417469,
+      "seconds_to_capture_all_cells": 1367.031647063,
+      "measurements_sha256": "1364a6781d89b2e6e6c9b7547c7feb7357086f456c99aaa475ba6ca6757ad003"
+    }
+  ],
+  "condition_count": 40,
+  "cells": [
+    {
+      "filesystem": "ext4",
+      "files": 1,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 20.828498,
+        "p95": 30.560363
+      },
+      "observer_cpu_ms": {
+        "median": 4.9105,
+        "p95": 6.897
+      },
+      "children_cpu_ms": {
+        "median": 14.738001,
+        "p95": 22.704001
+      },
+      "with_oracle_validation_ms": {
+        "median": 21.688443,
+        "p95": 31.411717
+      },
+      "observer_rss_after_mib": {
+        "median": 243.550781,
+        "p95": 248.929688
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 21.256209,
+        "p95": 30.639069
+      },
+      "observer_cpu_ms": {
+        "median": 5.247,
+        "p95": 7.604
+      },
+      "children_cpu_ms": {
+        "median": 14.7715,
+        "p95": 24.721
+      },
+      "with_oracle_validation_ms": {
+        "median": 22.06559,
+        "p95": 31.763755
+      },
+      "observer_rss_after_mib": {
+        "median": 220.550781,
+        "p95": 241.398438
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.207031,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 31.323868,
+        "p95": 50.106946
+      },
+      "observer_cpu_ms": {
+        "median": 6.1915,
+        "p95": 12.878
+      },
+      "children_cpu_ms": {
+        "median": 22.581999,
+        "p95": 43.182
+      },
+      "with_oracle_validation_ms": {
+        "median": 32.576145,
+        "p95": 50.987359
+      },
+      "observer_rss_after_mib": {
+        "median": 227.441406,
+        "p95": 248.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 23.121947,
+        "p95": 45.706367
+      },
+      "observer_cpu_ms": {
+        "median": 5.498,
+        "p95": 10.022
+      },
+      "children_cpu_ms": {
+        "median": 16.6205,
+        "p95": 37.009
+      },
+      "with_oracle_validation_ms": {
+        "median": 24.162143,
+        "p95": 47.410714
+      },
+      "observer_rss_after_mib": {
+        "median": 234.132812,
+        "p95": 236.472656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 64,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 26.185189,
+        "p95": 44.495503
+      },
+      "observer_cpu_ms": {
+        "median": 8.229,
+        "p95": 12.281
+      },
+      "children_cpu_ms": {
+        "median": 16.324,
+        "p95": 42.397
+      },
+      "with_oracle_validation_ms": {
+        "median": 27.39563,
+        "p95": 46.739501
+      },
+      "observer_rss_after_mib": {
+        "median": 217.535156,
+        "p95": 239.070312
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 64,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 23.709138,
+        "p95": 29.549613
+      },
+      "observer_cpu_ms": {
+        "median": 6.9695,
+        "p95": 9.048
+      },
+      "children_cpu_ms": {
+        "median": 15.126,
+        "p95": 19.183
+      },
+      "with_oracle_validation_ms": {
+        "median": 24.807053,
+        "p95": 30.788958
+      },
+      "observer_rss_after_mib": {
+        "median": 235.332031,
+        "p95": 238.039062
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.078125,
+        "p95": 268.65625
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 64,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 33.893537,
+        "p95": 53.882315
+      },
+      "observer_cpu_ms": {
+        "median": 9.5965,
+        "p95": 15.286
+      },
+      "children_cpu_ms": {
+        "median": 21.8045,
+        "p95": 38.756999
+      },
+      "with_oracle_validation_ms": {
+        "median": 35.204852,
+        "p95": 55.171627
+      },
+      "observer_rss_after_mib": {
+        "median": 228.183594,
+        "p95": 244.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 64,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 28.508523,
+        "p95": 57.609246
+      },
+      "observer_cpu_ms": {
+        "median": 8.041001,
+        "p95": 13.877
+      },
+      "children_cpu_ms": {
+        "median": 17.7625,
+        "p95": 32.783
+      },
+      "with_oracle_validation_ms": {
+        "median": 29.665066,
+        "p95": 59.770773
+      },
+      "observer_rss_after_mib": {
+        "median": 232.472656,
+        "p95": 233.148438
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1024,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 81.66511,
+        "p95": 128.585745
+      },
+      "observer_cpu_ms": {
+        "median": 52.403999,
+        "p95": 82.067
+      },
+      "children_cpu_ms": {
+        "median": 28.470499,
+        "p95": 62.119
+      },
+      "with_oracle_validation_ms": {
+        "median": 86.309992,
+        "p95": 135.897465
+      },
+      "observer_rss_after_mib": {
+        "median": 244.050781,
+        "p95": 248.929688
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1024,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 65.588386,
+        "p95": 79.634172
+      },
+      "observer_cpu_ms": {
+        "median": 38.11,
+        "p95": 52.667
+      },
+      "children_cpu_ms": {
+        "median": 23.6385,
+        "p95": 33.097
+      },
+      "with_oracle_validation_ms": {
+        "median": 68.172832,
+        "p95": 84.025959
+      },
+      "observer_rss_after_mib": {
+        "median": 237.039062,
+        "p95": 245.398438
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.207031,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1024,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 81.082505,
+        "p95": 95.320021
+      },
+      "observer_cpu_ms": {
+        "median": 49.798,
+        "p95": 62.016
+      },
+      "children_cpu_ms": {
+        "median": 27.831001,
+        "p95": 44.609
+      },
+      "with_oracle_validation_ms": {
+        "median": 84.675262,
+        "p95": 98.313486
+      },
+      "observer_rss_after_mib": {
+        "median": 227.441406,
+        "p95": 248.535156
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 1024,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 72.265022,
+        "p95": 96.128325
+      },
+      "observer_cpu_ms": {
+        "median": 45.3135,
+        "p95": 62.263
+      },
+      "children_cpu_ms": {
+        "median": 25.38,
+        "p95": 48.69
+      },
+      "with_oracle_validation_ms": {
+        "median": 75.555201,
+        "p95": 101.234214
+      },
+      "observer_rss_after_mib": {
+        "median": 225.289062,
+        "p95": 225.472656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 8192,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 432.920053,
+        "p95": 774.165471
+      },
+      "observer_cpu_ms": {
+        "median": 346.552,
+        "p95": 612.595
+      },
+      "children_cpu_ms": {
+        "median": 80.545501,
+        "p95": 147.318001
+      },
+      "with_oracle_validation_ms": {
+        "median": 453.665892,
+        "p95": 801.989948
+      },
+      "observer_rss_after_mib": {
+        "median": 228.734375,
+        "p95": 240.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 8192,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 376.518724,
+        "p95": 492.968036
+      },
+      "observer_cpu_ms": {
+        "median": 292.0165,
+        "p95": 387.573
+      },
+      "children_cpu_ms": {
+        "median": 80.839,
+        "p95": 127.831
+      },
+      "with_oracle_validation_ms": {
+        "median": 398.13694,
+        "p95": 515.182677
+      },
+      "observer_rss_after_mib": {
+        "median": 219.566406,
+        "p95": 245.886719
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.207031,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 8192,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 492.001366,
+        "p95": 873.566299
+      },
+      "observer_cpu_ms": {
+        "median": 382.1925,
+        "p95": 688.952001
+      },
+      "children_cpu_ms": {
+        "median": 105.8855,
+        "p95": 185.05
+      },
+      "with_oracle_validation_ms": {
+        "median": 518.42304,
+        "p95": 913.30569
+      },
+      "observer_rss_after_mib": {
+        "median": 227.195312,
+        "p95": 259.535156
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.398438,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 8192,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 402.688894,
+        "p95": 549.375133
+      },
+      "observer_cpu_ms": {
+        "median": 314.449,
+        "p95": 417.545
+      },
+      "children_cpu_ms": {
+        "median": 84.463,
+        "p95": 124.331
+      },
+      "with_oracle_validation_ms": {
+        "median": 424.864623,
+        "p95": 578.500126
+      },
+      "observer_rss_after_mib": {
+        "median": 225.289062,
+        "p95": 228.472656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 65536,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 3319.832998,
+        "p95": 3709.531652
+      },
+      "observer_cpu_ms": {
+        "median": 2727.933,
+        "p95": 3044.290999
+      },
+      "children_cpu_ms": {
+        "median": 548.363,
+        "p95": 720.411
+      },
+      "with_oracle_validation_ms": {
+        "median": 3581.830573,
+        "p95": 4052.502544
+      },
+      "observer_rss_after_mib": {
+        "median": 267.486328,
+        "p95": 268.617188
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.398438,
+        "p95": 268.617188
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 65536,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 2894.054702,
+        "p95": 3284.77151
+      },
+      "observer_cpu_ms": {
+        "median": 2330.198501,
+        "p95": 2617.26
+      },
+      "children_cpu_ms": {
+        "median": 529.482,
+        "p95": 707.471
+      },
+      "with_oracle_validation_ms": {
+        "median": 3143.851993,
+        "p95": 3579.037044
+      },
+      "observer_rss_after_mib": {
+        "median": 262.394531,
+        "p95": 268.800781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.207031,
+        "p95": 268.800781
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 65536,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 3606.302671,
+        "p95": 4465.80992
+      },
+      "observer_cpu_ms": {
+        "median": 2933.310999,
+        "p95": 3730.89
+      },
+      "children_cpu_ms": {
+        "median": 648.8455,
+        "p95": 857.089
+      },
+      "with_oracle_validation_ms": {
+        "median": 3925.825298,
+        "p95": 4827.315338
+      },
+      "observer_rss_after_mib": {
+        "median": 268.279297,
+        "p95": 268.800781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.535156,
+        "p95": 268.800781
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "ext4",
+      "files": 65536,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 3049.467121,
+        "p95": 4340.956257
+      },
+      "observer_cpu_ms": {
+        "median": 2495.4855,
+        "p95": 3552.613
+      },
+      "children_cpu_ms": {
+        "median": 537.0865,
+        "p95": 960.974
+      },
+      "with_oracle_validation_ms": {
+        "median": 3283.889526,
+        "p95": 4774.34846
+      },
+      "observer_rss_after_mib": {
+        "median": 268.371094,
+        "p95": 268.800781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.378906,
+        "p95": 268.800781
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 21.791214,
+        "p95": 37.805027
+      },
+      "observer_cpu_ms": {
+        "median": 5.209,
+        "p95": 7.817
+      },
+      "children_cpu_ms": {
+        "median": 15.4765,
+        "p95": 29.473001
+      },
+      "with_oracle_validation_ms": {
+        "median": 22.538748,
+        "p95": 38.660291
+      },
+      "observer_rss_after_mib": {
+        "median": 220.484375,
+        "p95": 249.914062
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 20.792976,
+        "p95": 29.308685
+      },
+      "observer_cpu_ms": {
+        "median": 4.669,
+        "p95": 6.295
+      },
+      "children_cpu_ms": {
+        "median": 14.4455,
+        "p95": 20.364001
+      },
+      "with_oracle_validation_ms": {
+        "median": 21.616665,
+        "p95": 29.999772
+      },
+      "observer_rss_after_mib": {
+        "median": 197.570312,
+        "p95": 220.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 199.757812,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 25.234437,
+        "p95": 44.045285
+      },
+      "observer_cpu_ms": {
+        "median": 5.996001,
+        "p95": 9.58
+      },
+      "children_cpu_ms": {
+        "median": 18.273,
+        "p95": 37.461
+      },
+      "with_oracle_validation_ms": {
+        "median": 26.556221,
+        "p95": 44.715945
+      },
+      "observer_rss_after_mib": {
+        "median": 239.007812,
+        "p95": 244.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 24.653531,
+        "p95": 42.856357
+      },
+      "observer_cpu_ms": {
+        "median": 5.802499,
+        "p95": 8.268
+      },
+      "children_cpu_ms": {
+        "median": 17.906,
+        "p95": 30.731
+      },
+      "with_oracle_validation_ms": {
+        "median": 25.552391,
+        "p95": 43.530083
+      },
+      "observer_rss_after_mib": {
+        "median": 221.351562,
+        "p95": 225.472656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 64,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 25.738613,
+        "p95": 54.802586
+      },
+      "observer_cpu_ms": {
+        "median": 8.218,
+        "p95": 16.034999
+      },
+      "children_cpu_ms": {
+        "median": 16.096,
+        "p95": 35.084999
+      },
+      "with_oracle_validation_ms": {
+        "median": 27.255989,
+        "p95": 56.151051
+      },
+      "observer_rss_after_mib": {
+        "median": 240.054688,
+        "p95": 244.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 64,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 23.064698,
+        "p95": 30.354754
+      },
+      "observer_cpu_ms": {
+        "median": 6.739,
+        "p95": 9.273001
+      },
+      "children_cpu_ms": {
+        "median": 14.7735,
+        "p95": 18.158
+      },
+      "with_oracle_validation_ms": {
+        "median": 23.996504,
+        "p95": 31.417853
+      },
+      "observer_rss_after_mib": {
+        "median": 236.054688,
+        "p95": 241.398438
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.207031,
+        "p95": 268.65625
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 64,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 32.289543,
+        "p95": 44.952869
+      },
+      "observer_cpu_ms": {
+        "median": 9.229,
+        "p95": 13.967
+      },
+      "children_cpu_ms": {
+        "median": 21.3995,
+        "p95": 32.61
+      },
+      "with_oracle_validation_ms": {
+        "median": 33.835376,
+        "p95": 46.249792
+      },
+      "observer_rss_after_mib": {
+        "median": 221.535156,
+        "p95": 244.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 64,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 25.959135,
+        "p95": 39.94698
+      },
+      "observer_cpu_ms": {
+        "median": 7.816001,
+        "p95": 10.826
+      },
+      "children_cpu_ms": {
+        "median": 17.1835,
+        "p95": 25.67
+      },
+      "with_oracle_validation_ms": {
+        "median": 26.952844,
+        "p95": 41.220159
+      },
+      "observer_rss_after_mib": {
+        "median": 233.148438,
+        "p95": 235.472656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 2.0,
+        "p95": 2.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1024,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 61.242448,
+        "p95": 85.996422
+      },
+      "observer_cpu_ms": {
+        "median": 38.66,
+        "p95": 60.387
+      },
+      "children_cpu_ms": {
+        "median": 19.116,
+        "p95": 26.692
+      },
+      "with_oracle_validation_ms": {
+        "median": 64.496806,
+        "p95": 90.430153
+      },
+      "observer_rss_after_mib": {
+        "median": 239.070312,
+        "p95": 246.550781
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1024,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 66.815635,
+        "p95": 91.840003
+      },
+      "observer_cpu_ms": {
+        "median": 40.377,
+        "p95": 59.07
+      },
+      "children_cpu_ms": {
+        "median": 24.729,
+        "p95": 33.700001
+      },
+      "with_oracle_validation_ms": {
+        "median": 69.96695,
+        "p95": 94.304439
+      },
+      "observer_rss_after_mib": {
+        "median": 225.46875,
+        "p95": 234.347656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.078125,
+        "p95": 268.65625
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1024,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 80.078328,
+        "p95": 100.4593
+      },
+      "observer_cpu_ms": {
+        "median": 52.089,
+        "p95": 68.434
+      },
+      "children_cpu_ms": {
+        "median": 26.1355,
+        "p95": 43.769
+      },
+      "with_oracle_validation_ms": {
+        "median": 83.470401,
+        "p95": 106.671149
+      },
+      "observer_rss_after_mib": {
+        "median": 243.929688,
+        "p95": 244.914062
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 1024,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 68.691289,
+        "p95": 101.989746
+      },
+      "observer_cpu_ms": {
+        "median": 42.8955,
+        "p95": 63.242
+      },
+      "children_cpu_ms": {
+        "median": 23.31,
+        "p95": 39.057
+      },
+      "with_oracle_validation_ms": {
+        "median": 71.585364,
+        "p95": 105.595814
+      },
+      "observer_rss_after_mib": {
+        "median": 238.269531,
+        "p95": 239.472656
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 3.0,
+        "p95": 3.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 8192,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 410.959802,
+        "p95": 494.289796
+      },
+      "observer_cpu_ms": {
+        "median": 335.299,
+        "p95": 400.374
+      },
+      "children_cpu_ms": {
+        "median": 69.3015,
+        "p95": 87.237
+      },
+      "with_oracle_validation_ms": {
+        "median": 424.90438,
+        "p95": 519.66256
+      },
+      "observer_rss_after_mib": {
+        "median": 216.535156,
+        "p95": 263.695312
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 8192,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 379.736193,
+        "p95": 528.035149
+      },
+      "observer_cpu_ms": {
+        "median": 295.046,
+        "p95": 397.726
+      },
+      "children_cpu_ms": {
+        "median": 75.9315,
+        "p95": 124.939
+      },
+      "with_oracle_validation_ms": {
+        "median": 392.901963,
+        "p95": 549.235169
+      },
+      "observer_rss_after_mib": {
+        "median": 225.472656,
+        "p95": 253.453125
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.207031,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 8192,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 455.377033,
+        "p95": 546.461184
+      },
+      "observer_cpu_ms": {
+        "median": 352.367,
+        "p95": 438.969
+      },
+      "children_cpu_ms": {
+        "median": 95.3245,
+        "p95": 139.459
+      },
+      "with_oracle_validation_ms": {
+        "median": 472.438846,
+        "p95": 558.51423
+      },
+      "observer_rss_after_mib": {
+        "median": 226.550781,
+        "p95": 234.085938
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 8192,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 406.563603,
+        "p95": 567.47166
+      },
+      "observer_cpu_ms": {
+        "median": 318.8345,
+        "p95": 455.426
+      },
+      "children_cpu_ms": {
+        "median": 82.295999,
+        "p95": 120.867001
+      },
+      "with_oracle_validation_ms": {
+        "median": 421.961738,
+        "p95": 581.445795
+      },
+      "observer_rss_after_mib": {
+        "median": 221.351562,
+        "p95": 252.066406
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 10.0,
+        "p95": 10.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 65536,
+      "load": "cpu",
+      "measured": 90,
+      "wall_ms": {
+        "median": 3257.38002,
+        "p95": 4590.59007
+      },
+      "observer_cpu_ms": {
+        "median": 2695.603,
+        "p95": 3687.967
+      },
+      "children_cpu_ms": {
+        "median": 509.981,
+        "p95": 846.952001
+      },
+      "with_oracle_validation_ms": {
+        "median": 3412.97226,
+        "p95": 4825.580885
+      },
+      "observer_rss_after_mib": {
+        "median": 262.457031,
+        "p95": 267.632812
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.222656,
+        "p95": 268.347656
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 65536,
+      "load": "idle",
+      "measured": 90,
+      "wall_ms": {
+        "median": 2878.592789,
+        "p95": 3294.345581
+      },
+      "observer_cpu_ms": {
+        "median": 2341.393,
+        "p95": 2797.772999
+      },
+      "children_cpu_ms": {
+        "median": 520.661,
+        "p95": 714.536
+      },
+      "with_oracle_validation_ms": {
+        "median": 3048.010438,
+        "p95": 3528.762225
+      },
+      "observer_rss_after_mib": {
+        "median": 266.455078,
+        "p95": 267.816406
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.078125,
+        "p95": 268.65625
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 65536,
+      "load": "io",
+      "measured": 90,
+      "wall_ms": {
+        "median": 3480.495134,
+        "p95": 4064.385268
+      },
+      "observer_cpu_ms": {
+        "median": 2843.743501,
+        "p95": 3239.321
+      },
+      "children_cpu_ms": {
+        "median": 609.667999,
+        "p95": 782.9
+      },
+      "with_oracle_validation_ms": {
+        "median": 3660.73341,
+        "p95": 4343.076065
+      },
+      "observer_rss_after_mib": {
+        "median": 264.960938,
+        "p95": 267.816406
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.414062,
+        "p95": 268.589844
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    },
+    {
+      "filesystem": "tmpfs",
+      "files": 65536,
+      "load": "memory",
+      "measured": 90,
+      "wall_ms": {
+        "median": 2975.883844,
+        "p95": 3991.489524
+      },
+      "observer_cpu_ms": {
+        "median": 2456.613,
+        "p95": 3222.043
+      },
+      "children_cpu_ms": {
+        "median": 509.884,
+        "p95": 742.98
+      },
+      "with_oracle_validation_ms": {
+        "median": 3127.764477,
+        "p95": 4166.188994
+      },
+      "observer_rss_after_mib": {
+        "median": 264.521484,
+        "p95": 267.816406
+      },
+      "observer_hwm_after_mib": {
+        "median": 268.300781,
+        "p95": 268.367188
+      },
+      "getdents64_calls": {
+        "median": 66.0,
+        "p95": 66.0
+      }
+    }
+  ],
+  "records_checked": 4200,
+  "byte_hashed_raw_files": 16800,
+  "semantic_replay_trials": 120,
+  "semantic_trial_selection": "first measured repetition for each condition and boot",
+  "libc_request_bytes": 32768,
+  "kernel_state_bytes_per_scan": 10856,
+  "raw_archives_uploaded": false,
+  "recovery_and_forensics_timed_here": false,
+  "rss_scope": "observer process; HWM is cumulative within a boot run",
+  "p95_method": "nearest rank",
+  "evidence_archive_sha256": "2db01a097770e7363deb71eff4f555359213f9adfdfadaf6e6a035a737c33d00"
+}

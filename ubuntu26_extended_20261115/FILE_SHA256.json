@@ -1,19 +1,19 @@
 {
   "EVIDENCE_INDEX.json": {
-    "bytes": 4959,
-    "sha256": "3abb883704095d1318665b8ea79401d7e3e56a9affc4b5d4ae3b54a02f6acf86"
+    "bytes": 5440,
+    "sha256": "a9022efe8900bc0242f8e142b4ac973f2ecfe79b3b38d8785999f9efb913a406"
   },
   "PLAN_STATUS.json": {
-    "bytes": 13443,
-    "sha256": "65be148e3ec5d4b352131579efd81e4789d91bb7d857abedb4acb42b6b561d33"
+    "bytes": 18208,
+    "sha256": "aa12a6e858a8c00051c96b752ed25024f90a75fb12ccd21e58d3e7c0142f2e8b"
   },
   "RESULTS.json": {
-    "bytes": 26560,
-    "sha256": "9ca8c1a263bdc98943ab4072c3eb7d26df68307e2edfc14b4bf763faea82104e"
+    "bytes": 26942,
+    "sha256": "3893a919cbb9f86224ddc27fa5f26a0f646b6447d406d956bb2f8b1011caa358"
   },
   "STATUS.txt": {
-    "bytes": 3873,
-    "sha256": "b0796ddcca132854026beba870c5495e24e5fdc227eba6e1bf7f38fb9561d837"
+    "bytes": 4439,
+    "sha256": "93fbb8ebeffa624d84e372e874db5b6ad3a76b530a4cad43d74728f7c9c88858"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -154,6 +154,26 @@
   "updates/20261115_singularity/cases/3_sample_first.csv": {
     "bytes": 43527,
     "sha256": "412e008e3a51d23b0419ce01e0d59ba2ae755b4bea044deaa818b6c4030c8848"
+  },
+  "updates/integrated_cost_and_remaining_work/INTEGRATED_COST.json": {
+    "bytes": 31180,
+    "sha256": "989cc0694f12da8e3b94c8fbc3162b325d11e144a1d7c13b21ad3ee59b36f0cd"
+  },
+  "updates/integrated_cost_and_remaining_work/REMAINING_TASKS.json": {
+    "bytes": 16115,
+    "sha256": "c06f37a3efca0d8a00e7225eeee6822e2b49a13dd6a9500f49e670fe9832c8dd"
+  },
+  "updates/integrated_cost_and_remaining_work/SAME_INPUT_COMPARISON.json": {
+    "bytes": 1763,
+    "sha256": "1c6e7d8d5513a32537154dbd14a34b984c13d2f725fc4a0e947a19cb69d854f6"
+  },
+  "updates/integrated_cost_and_remaining_work/剩餘工作與略過原因.txt": {
+    "bytes": 4165,
+    "sha256": "3ddfa427c2955a61dc7e53d60534e1382206c2d296f8a1d435daa2d481938cfa"
+  },
+  "updates/integrated_cost_and_remaining_work/可引用結果.txt": {
+    "bytes": 3742,
+    "sha256": "c346adccae6340e90342014a7d931a2e141e6f2966fb0ebf9cdd33021bd4ec66"
   },
   "計數說明.txt": {
     "bytes": 1377,

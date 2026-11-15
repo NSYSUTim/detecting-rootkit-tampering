@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T23:33:15.660422+08:00",
+  "updated": "2026-11-15T23:55:26.223272+08:00",
   "plan": "2026-11-15-plan-2",
   "plan_fully_completed": false,
   "status_count": {
@@ -972,5 +972,17 @@
     "invalid_offline_SL_decode_excluded_from_primary_accuracy": true,
     "whole_project_plan_complete": false,
     "raw_files_uploaded": false
-  }
+  },
+  "integrated_normal_cost": {
+    "details": "updates/integrated_cost_and_remaining_work/INTEGRATED_COST.json",
+    "boots": 3,
+    "measured": 3600,
+    "warmup": 600,
+    "false_alarms": 0,
+    "ext4_65536_idle_wall_ms": {
+      "median": 2894.054702,
+      "p95": 3284.77151
+    }
+  },
+  "remaining_work_audit": "updates/integrated_cost_and_remaining_work/REMAINING_TASKS.json"
 }

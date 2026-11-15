@@ -1,0 +1,45 @@
+{
+  "scope": "Same verified observations at each sample’s measured boundary. K identities reconstructed from the already verified IBLT delta and fixture identity records.",
+  "results": [
+    {
+      "sample": "brokepkg",
+      "boundary": "K–S",
+      "attempted": 480,
+      "valid_control": 320,
+      "valid_positive": 160,
+      "count_positive_alarms": 160,
+      "name_positive_alarms": 160,
+      "identity_alarm_positive_alarms": 160,
+      "exact_identity_comparison_positive_alarms": 160
+    },
+    {
+      "sample": "Singularity",
+      "boundary": "K–S",
+      "attempted": 1920,
+      "valid_control": 1440,
+      "valid_positive": 480,
+      "count_positive_alarms": 480,
+      "name_positive_alarms": 480,
+      "identity_alarm_positive_alarms": 480,
+      "exact_identity_comparison_positive_alarms": 480
+    },
+    {
+      "sample": "Medusa",
+      "boundary": "S–L",
+      "attempted": 360,
+      "valid_control": 180,
+      "valid_positive": 162,
+      "count_positive_alarms": 162,
+      "name_positive_alarms": 162,
+      "identity_alarm_positive_alarms": 162,
+      "exact_identity_comparison_positive_alarms": 162,
+      "invalid": 18
+    }
+  ],
+  "interpretation": [
+    "These added family matrices exercise removal cases. An alarm-only advantage for identity over count or names cannot be inferred when scores tie.",
+    "Identity recovery yields per-entry identity, whereas the count baseline gives cardinality. Full-fixture target recovery remains a separate outcome.",
+    "The earlier same-name inode/type substitutions exercise the difference missed by count and name alone.",
+    "Results describe observed boundaries and preserve invalid runs. Benchmarks for other samples and missing acquisitions are still open."
+  ]
+}

@@ -1,0 +1,164 @@
+[
+  {
+    "sample": "MatheuZSecurity/Singularity",
+    "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+    "kernel": "7.0.0-43-generic",
+    "boot": "20bd5165-f8d6-4aff-976a-c0585a07f2fe",
+    "order": "detector_first",
+    "buffers": [
+      256,
+      65536
+    ],
+    "filesystems": [
+      "ext4",
+      "tmpfs"
+    ],
+    "fixtures_per_filesystem": 20,
+    "target_counts": [
+      1,
+      8,
+      73
+    ],
+    "source_modified": false,
+    "installer_used": false,
+    "persistence_configured": false,
+    "software_imported_before_sample": true,
+    "order_definition": "Fresh probe activation before/after module insertion; Python dependencies are imported before insertion.",
+    "recovery_rule": "Retrieve raw files after reboot because live export was observed to be incomplete."
+  },
+  {
+    "sample": "MatheuZSecurity/Singularity",
+    "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+    "kernel": "7.0.0-43-generic",
+    "boot": "42cef883-2af6-4a0d-8de8-ae82fda4a134",
+    "order": "sample_first",
+    "buffers": [
+      256,
+      65536
+    ],
+    "filesystems": [
+      "ext4",
+      "tmpfs"
+    ],
+    "fixtures_per_filesystem": 20,
+    "target_counts": [
+      1,
+      8,
+      73
+    ],
+    "source_modified": false,
+    "installer_used": false,
+    "persistence_configured": false,
+    "software_imported_before_sample": true,
+    "order_definition": "Fresh probe activation before/after module insertion; Python dependencies are imported before insertion.",
+    "recovery_rule": "Retrieve raw files after reboot because live export was observed to be incomplete."
+  },
+  {
+    "sample": "MatheuZSecurity/Singularity",
+    "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+    "kernel": "7.0.0-43-generic",
+    "boot": "cdc3b1a8-af78-4419-af3d-2872ba498814",
+    "order": "detector_first",
+    "buffers": [
+      256,
+      65536
+    ],
+    "filesystems": [
+      "ext4",
+      "tmpfs"
+    ],
+    "fixtures_per_filesystem": 20,
+    "target_counts": [
+      1,
+      8,
+      73
+    ],
+    "source_modified": false,
+    "installer_used": false,
+    "persistence_configured": false,
+    "software_imported_before_sample": true,
+    "order_definition": "Fresh probe activation before/after module insertion; Python dependencies are imported before insertion.",
+    "recovery_rule": "Retrieve raw files after reboot because live export was observed to be incomplete."
+  },
+  {
+    "sample": "MatheuZSecurity/Singularity",
+    "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+    "kernel": "7.0.0-43-generic",
+    "boot": "767fc0c1-b5df-4d95-84d9-1f4b82597a4d",
+    "order": "sample_first",
+    "buffers": [
+      256,
+      65536
+    ],
+    "filesystems": [
+      "ext4",
+      "tmpfs"
+    ],
+    "fixtures_per_filesystem": 20,
+    "target_counts": [
+      1,
+      8,
+      73
+    ],
+    "source_modified": false,
+    "installer_used": false,
+    "persistence_configured": false,
+    "software_imported_before_sample": true,
+    "order_definition": "Fresh probe activation before/after module insertion; Python dependencies are imported before insertion.",
+    "recovery_rule": "Retrieve raw files after reboot because live export was observed to be incomplete."
+  },
+  {
+    "sample": "MatheuZSecurity/Singularity",
+    "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+    "kernel": "7.0.0-43-generic",
+    "boot": "19f24030-c41b-486a-b575-2b7c39e653b4",
+    "order": "detector_first",
+    "buffers": [
+      256,
+      65536
+    ],
+    "filesystems": [
+      "ext4",
+      "tmpfs"
+    ],
+    "fixtures_per_filesystem": 20,
+    "target_counts": [
+      1,
+      8,
+      73
+    ],
+    "source_modified": false,
+    "installer_used": false,
+    "persistence_configured": false,
+    "software_imported_before_sample": true,
+    "order_definition": "Fresh probe activation before/after module insertion; Python dependencies are imported before insertion.",
+    "recovery_rule": "Retrieve raw files after reboot because live export was observed to be incomplete."
+  },
+  {
+    "sample": "MatheuZSecurity/Singularity",
+    "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+    "kernel": "7.0.0-43-generic",
+    "boot": "85b0aaaf-4798-4dba-8d0d-ca8c722a17e5",
+    "order": "sample_first",
+    "buffers": [
+      256,
+      65536
+    ],
+    "filesystems": [
+      "ext4",
+      "tmpfs"
+    ],
+    "fixtures_per_filesystem": 20,
+    "target_counts": [
+      1,
+      8,
+      73
+    ],
+    "source_modified": false,
+    "installer_used": false,
+    "persistence_configured": false,
+    "software_imported_before_sample": true,
+    "order_definition": "Fresh probe activation before/after module insertion; Python dependencies are imported before insertion.",
+    "recovery_rule": "Retrieve raw files after reboot because live export was observed to be incomplete."
+  }
+]

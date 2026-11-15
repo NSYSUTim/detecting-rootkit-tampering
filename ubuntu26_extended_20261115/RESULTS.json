@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T22:55:33.991341+08:00",
+  "updated": "2026-11-15T23:22:15.616636+08:00",
   "plan": "2026-11-15-plan-2",
   "plan_fully_completed": false,
   "status_count": {
@@ -647,7 +647,7 @@
   },
   "current_run_state": "in_progress",
   "latest_update": {
-    "updated": "2026-11-15T19:25:21.953132+08:00",
+    "updated": "2026-11-15T23:22:15.616636+08:00",
     "run_state": "in_progress",
     "original_plan_fully_completed": false,
     "name_recovery_and_family_validation": {
@@ -850,15 +850,40 @@
       "source": "earlier captured image; inactive sample during replay"
     },
     "candidate_build_state": {
-      "Singularity": "original build succeeded; runtime gate pending",
-      "brokepkg": "build succeeded with recorded kernel-name compatibility macro; runtime gate pending",
+      "Singularity": "unchanged build loaded; directory matrix complete: three clean boots per probe order, six boots total; proc/forensics/combined modes not included",
+      "brokepkg": "build with recorded compatibility macro; first boot evaluated (480 scans), remaining boot matrix pending",
       "Medusa": "original library built after official dependency headers; one boot evaluated"
     },
     "next_work": [
       "remaining family eligibility and runtime gates",
       "remaining detector full matrices and integration",
       "Trace acquisition after detector work"
-    ]
+    ],
+    "singularity_directory_matrix": {
+      "details": "updates/20261115_singularity/RESULTS.json",
+      "directory_matrix_complete": true,
+      "independent_boots": 6,
+      "boots_per_probe_order": 3,
+      "formal_scans": 1920,
+      "active_scans_alerted": [
+        480,
+        480
+      ],
+      "normal_scans_alerted": [
+        0,
+        1440
+      ],
+      "observed_boundary_exact": [
+        480,
+        480
+      ],
+      "all_configured_targets_recovered": [
+        408,
+        480
+      ],
+      "whole_project_plan_complete": false,
+      "raw_files_uploaded": false
+    }
   },
   "brokepkg_first_boot": {
     "details": "updates/20261115_brokepkg/RESULTS.json",
@@ -884,5 +909,30 @@
     "source_compatibility": "compiler macro PROC_ROOT_INO=PROCFS_ROOT_INO; source unchanged",
     "raw_evidence_uploaded": false,
     "overall_plan_fully_completed": false
+  },
+  "singularity_directory_matrix": {
+    "details": "updates/20261115_singularity/RESULTS.json",
+    "directory_matrix_complete": true,
+    "independent_boots": 6,
+    "boots_per_probe_order": 3,
+    "formal_scans": 1920,
+    "active_scans_alerted": [
+      480,
+      480
+    ],
+    "normal_scans_alerted": [
+      0,
+      1440
+    ],
+    "observed_boundary_exact": [
+      480,
+      480
+    ],
+    "all_configured_targets_recovered": [
+      408,
+      480
+    ],
+    "whole_project_plan_complete": false,
+    "raw_files_uploaded": false
   }
 }

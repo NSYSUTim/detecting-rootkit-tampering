@@ -90,11 +90,17 @@
       "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/archive_proof.json",
       "bytes": 355,
       "sha256": "384b521619bad03a07775a830bc0de4a35dc83896e3fe745407de2159df218a8"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run10/FORMAL_VERIFIED.json",
+      "bytes": 19436,
+      "sha256": "8ae39384a5f26e09cdb2760d9ffd0154352fdb559d535eeb75ce414756c5403b"
     }
   ],
   "collection_manifests": {
     "run05": 1223,
     "run06": 4806
   },
-  "brokepkg_first_boot_update": "updates/20261115_brokepkg/EVIDENCE_MANIFEST.json"
+  "brokepkg_first_boot_update": "updates/20261115_brokepkg/EVIDENCE_MANIFEST.json",
+  "singularity_directory_update": "updates/20261115_singularity/RESULTS.json"
 }

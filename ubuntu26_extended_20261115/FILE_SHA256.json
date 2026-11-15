@@ -1,19 +1,19 @@
 {
   "EVIDENCE_INDEX.json": {
-    "bytes": 4421,
-    "sha256": "ff9644a47b61f53809e8bad09c26fe0c6b59535376c1d7735456d5c88224bacd"
+    "bytes": 4689,
+    "sha256": "d55b90a5ebd4a4f0ea02039ea79ed08f5a7f1b72c7ad58eae44b7e3736135686"
   },
   "PLAN_STATUS.json": {
-    "bytes": 11411,
-    "sha256": "a551ecfb13b9e76704ba0cccf64ea164e9bb8cde8aeb8b2365b699690e698fdc"
+    "bytes": 12203,
+    "sha256": "3566fe7c74bfa084d3eeacbfac63d4e9f96dbf9890427233695c817f023bb94a"
   },
   "RESULTS.json": {
-    "bytes": 24274,
-    "sha256": "8c96166a6e1ec21d5df3c374ead5989f6c9c5ca479ad881011101c8916f4730a"
+    "bytes": 25536,
+    "sha256": "af2d805ccae19335d2c7d43d6dfac2f5036571847beda27ea5b6d0faecf977b7"
   },
   "STATUS.txt": {
-    "bytes": 3044,
-    "sha256": "4273f190dc1d8193b4984ee18df446321f85403cc5f3c2d851eb3f20b5d799f1"
+    "bytes": 3496,
+    "sha256": "bfd4651f0fa70ca5b4978f21592eb2601a87c69d1837de7efefe991ecb92a687"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -82,6 +82,50 @@
   "updates/20261115_inode_names/RESULTS.json": {
     "bytes": 6514,
     "sha256": "640df250ba4255ff49dadbfc900b6d79b371f19a6a2628f8f2c16a3172ccb498"
+  },
+  "updates/20261115_singularity/BUILD_IDENTITY.json": {
+    "bytes": 5859,
+    "sha256": "5ff9b76bcbf8c254f372a63037cd31cf4e6405a18bc741784c9204ca0c1fde6e"
+  },
+  "updates/20261115_singularity/PILOT_AND_EXPORT_CHECK.json": {
+    "bytes": 5173,
+    "sha256": "8b9381d05caa2c9f54a34a2aa6fd2a1453531fd927b740e8dea436789f95fec9"
+  },
+  "updates/20261115_singularity/PROTOCOL.json": {
+    "bytes": 5001,
+    "sha256": "d9c37f66e4c9aff4664ce96fc2df7d3b1f5be0e34553b29d3d75667428cdc1fa"
+  },
+  "updates/20261115_singularity/README.txt": {
+    "bytes": 2958,
+    "sha256": "81d104083ca13041930f75cbefa1380400a1bf95741f443eb90dd4dc3d92018c"
+  },
+  "updates/20261115_singularity/RESULTS.json": {
+    "bytes": 19982,
+    "sha256": "79e64f6d77e8cfd3d503f682d00ca239af169d2544937ffcf5a8ed08fe772acb"
+  },
+  "updates/20261115_singularity/cases/1_detector_first.csv": {
+    "bytes": 44167,
+    "sha256": "a7ad37a8566deb3c5821915e3100be283e865e6a3bbe036d013239025f44c9c1"
+  },
+  "updates/20261115_singularity/cases/1_sample_first.csv": {
+    "bytes": 43527,
+    "sha256": "5e877d3be134ffa291e224c491f59c381ec069bc4d62e18bd2315fd8c5b08e26"
+  },
+  "updates/20261115_singularity/cases/2_detector_first.csv": {
+    "bytes": 44167,
+    "sha256": "5f13d9eafad1621f5534cdb55c703a6a213dfc81880c3a0e2a2a8bd47b047136"
+  },
+  "updates/20261115_singularity/cases/2_sample_first.csv": {
+    "bytes": 43527,
+    "sha256": "fcf95449027f723de9031ce5c9adb6848a73c43d16730fed384b18159c6d783b"
+  },
+  "updates/20261115_singularity/cases/3_detector_first.csv": {
+    "bytes": 44167,
+    "sha256": "0145fe3d875efc92c2648738288d03607d70937aac857072acc02c515fcc81ba"
+  },
+  "updates/20261115_singularity/cases/3_sample_first.csv": {
+    "bytes": 43527,
+    "sha256": "412e008e3a51d23b0419ce01e0d59ba2ae755b4bea044deaa818b6c4030c8848"
   },
   "計數說明.txt": {
     "bytes": 1377,

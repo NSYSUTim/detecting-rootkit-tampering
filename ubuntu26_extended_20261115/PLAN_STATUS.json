@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T19:25:21.953132+08:00",
+  "updated": "2026-11-15T23:22:15.616636+08:00",
   "counts": {
     "complete": 7,
     "partial": 23,
@@ -35,7 +35,7 @@
       "workstream": "W02",
       "title": "公開核心/eBPF 原版建置、載入、真隱藏與邊界關卡",
       "status": "partial",
-      "completed_evidence": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。",
+      "completed_evidence": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
       "remaining": "其他核心與 eBPF 候選的建置、載入、實際隱藏驗收。"
     },
     {
@@ -51,7 +51,7 @@
       "workstream": "W02",
       "title": "所有適用公開核心/eBPF mode 正式矩陣",
       "status": "partial",
-      "completed_evidence": "保留既有 CARAXES 矩陣及一個新同 VM 取證 cohort。",
+      "completed_evidence": "保留既有 CARAXES 矩陣及一個新同 VM 取證 cohort。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
       "remaining": "全部適用家族的三開機、探針順序、檔案系統與 buffer 正式矩陣。"
     },
     {
@@ -235,7 +235,7 @@
       "workstream": "W10",
       "title": "獨立原始 bytes 重播、全包 hash 與來源核對",
       "status": "partial",
-      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。",
+      "completed_evidence": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
       "remaining": "尚未產生資料與最終整包的驗收。"
     },
     {

@@ -1,0 +1,180 @@
+{
+  "sample": "MatheuZSecurity/Singularity",
+  "boots": 1,
+  "scans": 324,
+  "counts": {
+    "unloaded_target": {
+      "valid": 80,
+      "alarms": 0,
+      "observed_boundary_exact": 80,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    "unloaded_control": {
+      "valid": 80,
+      "alarms": 0,
+      "observed_boundary_exact": 80,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    "loaded_target": {
+      "valid": 80,
+      "alarms": 80,
+      "observed_boundary_exact": 80,
+      "fixture_entry_events_unobserved_upstream": 912,
+      "configured_target_events": 2004,
+      "recovered_target_events": 1302,
+      "all_configured_targets_recovered": 68
+    },
+    "loaded_control": {
+      "valid": 80,
+      "alarms": 0,
+      "observed_boundary_exact": 80,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    "postload_attach_gate_target": {
+      "valid": 2,
+      "alarms": 2,
+      "observed_boundary_exact": 2,
+      "fixture_entry_events_unobserved_upstream": 0,
+      "configured_target_events": 2,
+      "recovered_target_events": 2,
+      "all_configured_targets_recovered": 2
+    },
+    "postload_attach_gate_control": {
+      "valid": 2,
+      "alarms": 0,
+      "observed_boundary_exact": 2,
+      "fixture_entry_events_unobserved_upstream": 0
+    }
+  },
+  "by_state_group_buffer": [
+    {
+      "state": "loaded",
+      "group": "control",
+      "buffer_bytes": 256,
+      "valid": 40,
+      "alarms": 0,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "loaded",
+      "group": "control",
+      "buffer_bytes": 65536,
+      "valid": 40,
+      "alarms": 0,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "loaded",
+      "group": "target",
+      "buffer_bytes": 256,
+      "valid": 40,
+      "alarms": 40,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 912,
+      "configured_target_events": 1002,
+      "recovered_target_events": 300,
+      "all_configured_targets_recovered": 28
+    },
+    {
+      "state": "loaded",
+      "group": "target",
+      "buffer_bytes": 65536,
+      "valid": 40,
+      "alarms": 40,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0,
+      "configured_target_events": 1002,
+      "recovered_target_events": 1002,
+      "all_configured_targets_recovered": 40
+    },
+    {
+      "state": "postload_attach_gate",
+      "group": "control",
+      "buffer_bytes": 256,
+      "valid": 1,
+      "alarms": 0,
+      "observed_boundary_exact": 1,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "postload_attach_gate",
+      "group": "control",
+      "buffer_bytes": 65536,
+      "valid": 1,
+      "alarms": 0,
+      "observed_boundary_exact": 1,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "postload_attach_gate",
+      "group": "target",
+      "buffer_bytes": 256,
+      "valid": 1,
+      "alarms": 1,
+      "observed_boundary_exact": 1,
+      "fixture_entry_events_unobserved_upstream": 0,
+      "configured_target_events": 1,
+      "recovered_target_events": 1,
+      "all_configured_targets_recovered": 1
+    },
+    {
+      "state": "postload_attach_gate",
+      "group": "target",
+      "buffer_bytes": 65536,
+      "valid": 1,
+      "alarms": 1,
+      "observed_boundary_exact": 1,
+      "fixture_entry_events_unobserved_upstream": 0,
+      "configured_target_events": 1,
+      "recovered_target_events": 1,
+      "all_configured_targets_recovered": 1
+    },
+    {
+      "state": "unloaded",
+      "group": "control",
+      "buffer_bytes": 256,
+      "valid": 40,
+      "alarms": 0,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "unloaded",
+      "group": "control",
+      "buffer_bytes": 65536,
+      "valid": 40,
+      "alarms": 0,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "unloaded",
+      "group": "target",
+      "buffer_bytes": 256,
+      "valid": 40,
+      "alarms": 0,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0
+    },
+    {
+      "state": "unloaded",
+      "group": "target",
+      "buffer_bytes": 65536,
+      "valid": 40,
+      "alarms": 0,
+      "observed_boundary_exact": 40,
+      "fixture_entry_events_unobserved_upstream": 0
+    }
+  ],
+  "observation_sha256": "b7af18c23530abb1132ff82eaaf544c17e8c2565103042fa328728f34999558e",
+  "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+  "load_returncode": 0,
+  "raw_replay_checks_passed": true,
+  "first_live_archive_members": 1,
+  "post_reboot_archive_members": 662,
+  "first_live_archive_not_used_for_accuracy": true,
+  "full_formal_multi_boot_matrix_complete": false,
+  "interpretation": "Live archive exposed only one tar member; after reboot 662 members were recovered and independently replayed. The precise hook causing live-export incompleteness was not isolated. Pilot is excluded from the formal matrix."
+}

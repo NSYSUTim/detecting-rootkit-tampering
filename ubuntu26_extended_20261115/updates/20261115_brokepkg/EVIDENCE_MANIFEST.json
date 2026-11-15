@@ -1,0 +1,49 @@
+{
+  "raw_evidence_uploaded": false,
+  "local_sources": [
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/brokepkg_81157059-d6b6-426e-8ec3-d03c47089e3e/observations.jsonl",
+      "bytes": 13732243,
+      "sha256": "7c5cbe6def5b90e2ccbd4a5866f38cfa959bb43894c21902ae67a68022ee24b5"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/brokepkg_81157059-d6b6-426e-8ec3-d03c47089e3e/fixture_manifest.json",
+      "bytes": 575776,
+      "sha256": "1f3675d52ee3f423afe101956f926284a1860be7479f935c02ecd7f416a79c7f"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/brokepkg_81157059-d6b6-426e-8ec3-d03c47089e3e/protocol.json",
+      "bytes": 523,
+      "sha256": "c62f105883a3952030ae3b8f35ffe4f2b3242d24a9e2e08b59a35709da11edb7"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/brokepkg_81157059-d6b6-426e-8ec3-d03c47089e3e/summary.json",
+      "bytes": 537,
+      "sha256": "24ee7b0800dc0c10e7ab2426502f841357bc3a6b5e098b6fda18c9df74f61a6f"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/brokepkg_81157059-d6b6-426e-8ec3-d03c47089e3e/events.jsonl",
+      "bytes": 71491,
+      "sha256": "64006f797e9fba634859b805912f4c7868084d76eee392a4901e07c834dce996"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/VERIFIED_BROKEPKG_REPLAY.json",
+      "bytes": 76624,
+      "sha256": "35e81c047172d0d1473abb7f4baef4d9e458c6bd4cc3680a59cf451f1a6eca96"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/verify_brokepkg.py",
+      "bytes": 3408,
+      "sha256": "e5703fa4f7f7f68a3a0d2b0d8efed200fbb8c63589fdd2574d1acb9d72431398"
+    },
+    {
+      "path": "artifacts/ubuntu26_extended_20261115_run08/evidence_brokepkg2_81157059-d6b6-426e-8ec3-d03c47089e3e/archive_proof.json",
+      "bytes": 355,
+      "sha256": "384b521619bad03a07775a830bc0de4a35dc83896e3fe745407de2159df218a8"
+    }
+  ],
+  "scan_file_count": 960,
+  "scan_file_manifest_encoding": "UTF-8 json.dumps(ensure_ascii=False,indent=2), followed by LF; entries sorted by local path",
+  "scan_file_manifest_sha256": "6032b71b5260980a071eaefcd5002e245683c7aa83c0bc114f8ee4b28d66226d",
+  "local_scan_file_manifest": "artifacts/ubuntu26_extended_20261115_run08/brokepkg_publication/LOCAL_SCAN_FILES.json"
+}

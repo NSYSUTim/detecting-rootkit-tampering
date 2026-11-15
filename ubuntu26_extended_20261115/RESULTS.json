@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T19:25:21.953132+08:00",
+  "updated": "2026-11-15T22:55:33.991341+08:00",
   "plan": "2026-11-15-plan-2",
   "plan_fully_completed": false,
   "status_count": {
@@ -859,5 +859,30 @@
       "remaining detector full matrices and integration",
       "Trace acquisition after detector work"
     ]
+  },
+  "brokepkg_first_boot": {
+    "details": "updates/20261115_brokepkg/RESULTS.json",
+    "boots_completed": 1,
+    "boots_planned": 3,
+    "valid_scans": 480,
+    "active_scans_alerted": [
+      160,
+      160
+    ],
+    "control_scans_alerted": [
+      0,
+      320
+    ],
+    "observed_boundary_exact": [
+      160,
+      160
+    ],
+    "all_configured_targets_recovered": [
+      136,
+      160
+    ],
+    "source_compatibility": "compiler macro PROC_ROOT_INO=PROCFS_ROOT_INO; source unchanged",
+    "raw_evidence_uploaded": false,
+    "overall_plan_fully_completed": false
   }
 }

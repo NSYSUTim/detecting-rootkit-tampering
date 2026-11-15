@@ -1,19 +1,19 @@
 {
   "EVIDENCE_INDEX.json": {
-    "bytes": 2201,
-    "sha256": "75c6d6b4d4ca9a6d0489513597372f422428c97bc3cb966ff155f109865a16da"
+    "bytes": 4421,
+    "sha256": "ff9644a47b61f53809e8bad09c26fe0c6b59535376c1d7735456d5c88224bacd"
   },
   "PLAN_STATUS.json": {
     "bytes": 11411,
     "sha256": "a551ecfb13b9e76704ba0cccf64ea164e9bb8cde8aeb8b2365b699690e698fdc"
   },
   "RESULTS.json": {
-    "bytes": 23693,
-    "sha256": "0cc6c263855e25beb7d7cfa28b5d1d2495f6ed4bb24e8f984563ed2d0dd3ad9e"
+    "bytes": 24274,
+    "sha256": "8c96166a6e1ec21d5df3c374ead5989f6c9c5ca479ad881011101c8916f4730a"
   },
   "STATUS.txt": {
-    "bytes": 2562,
-    "sha256": "be2d70e52e5b8e457f46f9a385f184d5001bdbc78329d291e3b3c07e40465c55"
+    "bytes": 3044,
+    "sha256": "4273f190dc1d8193b4984ee18df446321f85403cc5f3c2d851eb3f20b5d799f1"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -50,6 +50,30 @@
   "reports/版本比較與取檔.txt": {
     "bytes": 12709,
     "sha256": "46453591e4566ad1fd66d8711694e4a0d0aa4586b7c416cc83b33a6213da801a"
+  },
+  "updates/20261115_brokepkg/CASE_RESULTS.csv": {
+    "bytes": 52901,
+    "sha256": "29fe76599787ee484af06fb9694bb313e9498cced30ca021abc85321fdb38eeb"
+  },
+  "updates/20261115_brokepkg/EVIDENCE_MANIFEST.json": {
+    "bytes": 2570,
+    "sha256": "a94a1bcb2828959cd8d95b1cc036c21e06ce48c3f967eac638b76338e3df48df"
+  },
+  "updates/20261115_brokepkg/PROTOCOL.json": {
+    "bytes": 524,
+    "sha256": "c97fdb5a26c1f72ea652a70cd599fb5e922e29659e88edeab1034cfd96495b4a"
+  },
+  "updates/20261115_brokepkg/README.txt": {
+    "bytes": 2275,
+    "sha256": "1f41a0b293c4f4474cc20c4f8efa1725688f1eb1cfc8b8ec783959b9700a3ff9"
+  },
+  "updates/20261115_brokepkg/RESULTS.json": {
+    "bytes": 12580,
+    "sha256": "59b3b40663906591761ecbfbf6e6e34d68bb699fabf1f8b887f4d2e8378a9fe8"
+  },
+  "updates/20261115_brokepkg/VERIFIED_REPLAY.json": {
+    "bytes": 76624,
+    "sha256": "35e81c047172d0d1473abb7f4baef4d9e458c6bd4cc3680a59cf451f1a6eca96"
   },
   "updates/20261115_inode_names/PLAN_STATUS.json": {
     "bytes": 11411,

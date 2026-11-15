@@ -1,0 +1,21 @@
+{
+  "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+  "sample": "R3tr074/brokepkg",
+  "commit": "250f132f0d856cb46449de7a6d0dadd878309fb3",
+  "binary_sha256": "2a01623d9c7557896b44b5c460bdcf832aa82d12ee689ec3fb0d7c9afc779166",
+  "buffers": [
+    256,
+    65536
+  ],
+  "orders": [
+    "detector_first",
+    "sample_first"
+  ],
+  "fixtures_per_filesystem": 20,
+  "states": [
+    "unloaded",
+    "loaded_no_marker",
+    "active"
+  ],
+  "source_compatibility": "compiler macro PROC_ROOT_INO=PROCFS_ROOT_INO; source unchanged"
+}

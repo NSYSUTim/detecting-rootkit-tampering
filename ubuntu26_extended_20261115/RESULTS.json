@@ -1,0 +1,648 @@
+{
+  "updated": "2026-11-15T18:42:59.197407+08:00",
+  "plan": "2026-11-15-plan-2",
+  "plan_fully_completed": false,
+  "status_count": {
+    "complete": 7,
+    "partial": 22,
+    "not_started": 1
+  },
+  "status_count_unit": "original work items, unweighted acceptance counts",
+  "earlier_ubuntu26": {
+    "matrix_batches": 1296,
+    "matrix_scans": 25920,
+    "positive_batches_alerted": [
+      576,
+      576
+    ],
+    "negative_batches_alerted": [
+      0,
+      720
+    ],
+    "positive_scans_exact": [
+      11520,
+      11520
+    ],
+    "shared_positive_batches_alerted": [
+      400,
+      400
+    ],
+    "shared_complete_recovery": [
+      399,
+      400
+    ],
+    "shared_partial_case": {
+      "differences": 73,
+      "recovered": 71
+    },
+    "caraxes_getdents64": {
+      "alerts": [
+        120,
+        120
+      ],
+      "exact_recovery": [
+        120,
+        120
+      ],
+      "identities_each": 3
+    },
+    "caraxes_filldir": {
+      "truncation_alerts": [
+        120,
+        120
+      ]
+    },
+    "scope": "previous sealed Ubuntu26 acquisition, independently rechecked"
+  },
+  "native_three_view_benign": {
+    "total": 387,
+    "counts": {
+      "full": 207,
+      "early": 180,
+      "proc_full": 27
+    },
+    "per_boot": {
+      "46adbad2-d06d-4164-ab30-a4027e1e4f37": {
+        "ext4": 60,
+        "tmpfs": 60,
+        "proc": 9
+      },
+      "bd3b212d-a614-42b4-b6d0-b227a9843c18": {
+        "ext4": 60,
+        "tmpfs": 60,
+        "proc": 9
+      },
+      "e64acff3-9233-4053-8161-99b69cc7cb70": {
+        "ext4": 60,
+        "tmpfs": 60,
+        "proc": 9
+      }
+    },
+    "extra_prefetched_min": 6,
+    "extra_prefetched_max": 1012
+  },
+  "native_stream_controls": {
+    "boots": 3,
+    "process_cases": 1560,
+    "epochs": 2280,
+    "decisions": {
+      "indeterminate_partial": 360,
+      "equal": 1440,
+      "indeterminate_error": 480
+    }
+  },
+  "core_to_syscall_cost": {
+    "boots": 3,
+    "measured": 7200,
+    "warmup": 1200,
+    "normal_alerts": 0,
+    "cohorts": {
+      "4119f88c-c85c-4ebd-8925-28b495c33c3b": {
+        "source": "ubuntu26_extended_20261115_run05\\clean_observations\\4119f88c-c85c-4ebd-8925-28b495c33c3b\\cost_4119f88c-c85c-4ebd-8925-28b495c33c3b",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 106.216919435
+      },
+      "ac9479af-9e88-4478-91f6-43183e45c20b": {
+        "source": "ubuntu26_extended_20261115_run05\\clean_observations\\ac9479af-9e88-4478-91f6-43183e45c20b\\cost_ac9479af-9e88-4478-91f6-43183e45c20b",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 109.316240466
+      },
+      "46adbad2-d06d-4164-ab30-a4027e1e4f37": {
+        "source": "ubuntu26_extended_20261115_run03\\cost_46adbad2-d06d-4164-ab30-a4027e1e4f37",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 99.02239000199995
+      }
+    },
+    "startup_ms_per_boot": {
+      "4119f88c-c85c-4ebd-8925-28b495c33c3b": 2329.668,
+      "ac9479af-9e88-4478-91f6-43183e45c20b": 2929.002,
+      "46adbad2-d06d-4164-ab30-a4027e1e4f37": 2036.459
+    }
+  },
+  "application_component_cost": {
+    "scope": "application component on normal fixtures, controlled count and exact-record retention arms",
+    "measured": 7200,
+    "warmup": 1200,
+    "boots": [
+      {
+        "boot_id": "0acaf488-ebe6-477c-8ba5-a7a438b1f19e",
+        "measured": 2400,
+        "warmup": 400,
+        "elapsed_seconds": 40.667788116000004,
+        "compile_ms": 313.928269,
+        "data_sha256": "78cc486938e5a65fa685e6a14a27f9b7b76a422503227352cd66db759986f602"
+      },
+      {
+        "boot_id": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+        "measured": 2400,
+        "warmup": 400,
+        "elapsed_seconds": 40.377876666,
+        "compile_ms": 388.449039,
+        "data_sha256": "de48fd4de3e93784a8fce3d887de88082e7f55a889e214b181163bcbad9a67a6"
+      },
+      {
+        "boot_id": "46410761-8d51-42c7-a61d-33a414765146",
+        "measured": 2400,
+        "warmup": 400,
+        "elapsed_seconds": 41.20789396000009,
+        "compile_ms": 182.445304,
+        "data_sha256": "57868cb30fd894b11cfd01fc1ac3fb200a5db543a7be36a3b8f63a964cea3ad3"
+      }
+    ],
+    "glibc_request_bytes": 32768,
+    "limitations": [
+      "No simultaneous K or S collectors were active in this component benchmark.",
+      "Application uses the glibc readdir64 buffer; 256 and 65536 buffers are not assigned to this API.",
+      "Exact record cache uses a fixture-limited 32-byte name field; this is not the final general-name deployment layout.",
+      "FNV digest is a post-scan consistency check and is reported separately from scan time.",
+      "A separate native check showed child ru_maxrss_kib 78768 versus its own /proc VmHWM 12416 after a parent allocation. The ru_maxrss field cannot estimate this component footprint. Cache allocation bytes are exact for this fixture."
+    ]
+  },
+  "forensics": {
+    "counts": {
+      "primary_scans": 72,
+      "intended_file_exposures": 1968,
+      "raw_pass_before": 56,
+      "diagnostic_lookup_error_scans": 0,
+      "iblt_replayed_before": 56,
+      "valid_primary_scans": 56,
+      "alarm_scans": 56,
+      "confirmed_absent_exposures": 472,
+      "valid_with_actual_hiding_before": 48,
+      "valid_empty_listings": 8,
+      "upstream_equals_fixture_oracle": 44,
+      "exact_full_oracle_differences": 44,
+      "raw_pass_after": 56,
+      "iblt_replayed_after": 56,
+      "valid_with_actual_hiding_both": 48,
+      "fully_hiding_and_valid_both": 44,
+      "exact_recovery_among_confirmed_both": 44,
+      "confirmed_both_target_exposures_before": 472,
+      "primary_invalid": 16,
+      "primary_invalid_with_bad_raw": 16,
+      "verified_target_exposures": 224,
+      "verified_and_absent_before_after": 224,
+      "attempted_regular_dumps": 224,
+      "host_rehashed_dumps": 224
+    },
+    "unique_extracted_inodes": 76,
+    "file_sizes_bytes": [
+      4096,
+      1048576
+    ],
+    "reported_224_are": "extraction events",
+    "host_image_sha256": "c9fd5ae27e3e9f264e090a8290518f2588ad7065423dc842cb94eb0d219db49d"
+  },
+  "public_userland": {
+    "ext4/baseline": {
+      "valid_scans": 20,
+      "alarms": 0,
+      "exact": 20,
+      "removed_dirents": 0,
+      "added_dirents": 0,
+      "normal_dirents_removed": 0,
+      "targeted_set_size": 501,
+      "target_names_removed": 0,
+      "target_sets_fully_removed": 0
+    },
+    "ext4/bds": {
+      "valid_scans": 20,
+      "alarms": 20,
+      "exact": 20,
+      "removed_dirents": 671,
+      "added_dirents": 0,
+      "normal_dirents_removed": 170,
+      "targeted_set_size": 501,
+      "target_names_removed": 501,
+      "target_sets_fully_removed": 20
+    },
+    "tmpfs/baseline": {
+      "valid_scans": 20,
+      "alarms": 0,
+      "exact": 20,
+      "removed_dirents": 0,
+      "added_dirents": 0,
+      "normal_dirents_removed": 0,
+      "targeted_set_size": 501,
+      "target_names_removed": 0,
+      "target_sets_fully_removed": 0
+    },
+    "tmpfs/bds": {
+      "valid_scans": 20,
+      "alarms": 20,
+      "exact": 20,
+      "removed_dirents": 721,
+      "added_dirents": 0,
+      "normal_dirents_removed": 220,
+      "targeted_set_size": 501,
+      "target_names_removed": 501,
+      "target_sets_fully_removed": 20
+    },
+    "proc/baseline": {
+      "valid_scans": 20,
+      "alarms": 0,
+      "exact": 20,
+      "removed_dirents": 0,
+      "added_dirents": 0,
+      "normal_dirents_removed": 0,
+      "targeted_set_size": 255,
+      "target_names_removed": 0,
+      "target_sets_fully_removed": 0
+    },
+    "proc/libprocesshider": {
+      "valid_scans": 20,
+      "alarms": 20,
+      "exact": 20,
+      "removed_dirents": 255,
+      "added_dirents": 0,
+      "normal_dirents_removed": 0,
+      "targeted_set_size": 255,
+      "target_names_removed": 255,
+      "target_sets_fully_removed": 20
+    }
+  },
+  "capacity": {
+    "trials": 24000,
+    "cells": 240,
+    "exact": 21107,
+    "incorrect_successes": 0,
+    "at_73": [
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 256,
+        "k": 2,
+        "trials": 100,
+        "exact": 85,
+        "incorrect_success": 0,
+        "incomplete": 15
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 256,
+        "k": 3,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 256,
+        "k": 4,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 256,
+        "k": 5,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 512,
+        "k": 2,
+        "trials": 100,
+        "exact": 95,
+        "incorrect_success": 0,
+        "incomplete": 5
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 512,
+        "k": 3,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 512,
+        "k": 4,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 512,
+        "k": 5,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 1024,
+        "k": 2,
+        "trials": 100,
+        "exact": 98,
+        "incorrect_success": 0,
+        "incomplete": 2
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 1024,
+        "k": 3,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 1024,
+        "k": 4,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "real_inode_resampling",
+        "differences": 73,
+        "cells": 1024,
+        "k": 5,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 256,
+        "k": 2,
+        "trials": 100,
+        "exact": 91,
+        "incorrect_success": 0,
+        "incomplete": 9
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 256,
+        "k": 3,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 256,
+        "k": 4,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 256,
+        "k": 5,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 512,
+        "k": 2,
+        "trials": 100,
+        "exact": 97,
+        "incorrect_success": 0,
+        "incomplete": 3
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 512,
+        "k": 3,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 512,
+        "k": 4,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 512,
+        "k": 5,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 1024,
+        "k": 2,
+        "trials": 100,
+        "exact": 98,
+        "incorrect_success": 0,
+        "incomplete": 2
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 1024,
+        "k": 3,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 1024,
+        "k": 4,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      },
+      {
+        "distribution": "synthetic_unique_inodes",
+        "differences": 73,
+        "cells": 1024,
+        "k": 5,
+        "trials": 100,
+        "exact": 100,
+        "incorrect_success": 0,
+        "incomplete": 0
+      }
+    ]
+  },
+  "proc_and_link_controls": {
+    "4119f88c-c85c-4ebd-8925-28b495c33c3b": {
+      "lifecycle_equal": 20,
+      "namespace_equal": 2,
+      "policy_control_passed": true,
+      "inode_control_passed": true,
+      "recovered_bytes": 4096
+    },
+    "ac9479af-9e88-4478-91f6-43183e45c20b": {
+      "lifecycle_equal": 20,
+      "namespace_equal": 2,
+      "policy_control_passed": true,
+      "inode_control_passed": true,
+      "recovered_bytes": 4096
+    },
+    "9e1d0920-1a7c-4ed0-a30c-7d6f36788b2e": {
+      "lifecycle_equal": 20,
+      "namespace_equal": 2,
+      "policy_control_passed": true,
+      "inode_control_passed": true,
+      "recovered_bytes": 4096
+    }
+  },
+  "ablation": {
+    "count": {
+      "tn": 800,
+      "tp": 700,
+      "fn": 400
+    },
+    "name_multiset": {
+      "tn": 800,
+      "tp": 700,
+      "fn": 400
+    },
+    "full_identity": {
+      "tn": 800,
+      "tp": 1100
+    }
+  },
+  "trace_existing_acquisition_fixed_threshold": {
+    "source": "previous trace acquisition, disjoint calibration/test batches",
+    "tested_batches": 600,
+    "thresholds": {
+      "fun": {
+        "threshold": 2.1544346900318954e-17,
+        "calibration_n": 200,
+        "calibration_fp": 10
+      },
+      "seq": {
+        "threshold": 0.0,
+        "calibration_n": 200,
+        "calibration_fp": 0
+      }
+    },
+    "by_scenario": {
+      "default/fun": {
+        "tn": 48,
+        "fp": 2,
+        "tp": 100
+      },
+      "default/seq": {
+        "tn": 50,
+        "fn": 100
+      },
+      "file_count/fun": {
+        "tn": 47,
+        "fp": 3,
+        "tp": 100
+      },
+      "file_count/seq": {
+        "tn": 50,
+        "fn": 100
+      },
+      "filename_length/fun": {
+        "tn": 46,
+        "fp": 4,
+        "tp": 100
+      },
+      "filename_length/seq": {
+        "tn": 50,
+        "fn": 100
+      },
+      "system_load/fun": {
+        "tn": 48,
+        "fp": 2,
+        "tp": 100
+      },
+      "system_load/seq": {
+        "tn": 50,
+        "fn": 100
+      }
+    },
+    "by_detector": {
+      "fun": {
+        "tn": 189,
+        "fp": 11,
+        "tp": 400
+      },
+      "seq": {
+        "tn": 200,
+        "fn": 400
+      }
+    }
+  },
+  "decloaker_normal_snapshot_path_control": {
+    "equal_no_report": 20,
+    "deleted_exact_path_reported": 20
+  },
+  "normal_component_vs_integrated": "application timing has no K/S collectors and no strace on scored trials",
+  "protection": {
+    "original_22_and_formal_documents": {
+      "checked": 1098,
+      "changed_or_missing": [],
+      "expected_absences": [
+        "FILE_SHA256.csv"
+      ],
+      "formal_document_count": 3
+    },
+    "sealed_26": {
+      "passed": true,
+      "physical_files": 2723,
+      "original_trace_archive_sha256": "391c1bc7731661e76ff79d8001dac782b4a492914929bebb8a9af4d9aec1fd9e"
+    },
+    "checkout_at_end_previous_pass": {
+      "matched_pre_run": true,
+      "head": "99c5f412d3e2cf1a471689fa9e36dfb56ca387a8",
+      "status": "30c8a30ed109bf1f1b8fd396b51cac94ea019bb27fd3696a658726aab2f1760b",
+      "tracked_diff": "f65110238045cbcc126ccace8ec995bb7d82929ad0800e0926abbd30808295ea"
+    }
+  }
+}

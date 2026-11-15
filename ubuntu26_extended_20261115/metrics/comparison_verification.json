@@ -1,0 +1,295 @@
+{
+  "offline_ablation": {
+    "by_detector": {
+      "count": {
+        "tn": 800,
+        "tp": 700,
+        "fn": 400
+      },
+      "name_multiset": {
+        "tn": 800,
+        "tp": 700,
+        "fn": 400
+      },
+      "full_identity": {
+        "tn": 800,
+        "tp": 1100
+      }
+    },
+    "by_mechanism_pair": {
+      "equal_complete/K_S": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "equal_complete/S_L": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "equal_complete/K_L": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "syscall_missing/K_S": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "syscall_missing/S_L": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "syscall_missing/K_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "application_missing/K_S": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "application_missing/S_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "application_missing/K_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "both_boundaries_missing/K_S": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "both_boundaries_missing/S_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "both_boundaries_missing/K_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 100,
+        "name_alarm": 100,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "same_name_inode_change/K_S": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "same_name_inode_change/S_L": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "same_name_inode_change/K_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "same_name_type_change/K_S": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "same_name_type_change/S_L": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "same_name_type_change/K_L": {
+        "valid": 100,
+        "oracle_positive": 100,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 100,
+        "exact_decode": 100
+      },
+      "application_early_close/K_S": {
+        "valid": 100,
+        "oracle_positive": 0,
+        "count_alarm": 0,
+        "name_alarm": 0,
+        "full_identity_alarm": 0,
+        "exact_decode": 100
+      },
+      "application_early_close/S_L": {
+        "undetermined": 100
+      },
+      "application_early_close/K_L": {
+        "undetermined": 100
+      }
+    }
+  },
+  "same_application": {
+    "ext4/baseline": {
+      "valid": 20,
+      "oracle_positive": 0,
+      "count_alarm": 0,
+      "name_alarm": 0,
+      "full_identity_alarm": 0,
+      "exact_decode": 20
+    },
+    "ext4/bds": {
+      "valid": 20,
+      "oracle_positive": 20,
+      "count_alarm": 20,
+      "name_alarm": 20,
+      "full_identity_alarm": 20,
+      "exact_decode": 20
+    },
+    "tmpfs/baseline": {
+      "valid": 20,
+      "oracle_positive": 0,
+      "count_alarm": 0,
+      "name_alarm": 0,
+      "full_identity_alarm": 0,
+      "exact_decode": 20
+    },
+    "tmpfs/bds": {
+      "valid": 20,
+      "oracle_positive": 20,
+      "count_alarm": 20,
+      "name_alarm": 20,
+      "full_identity_alarm": 20,
+      "exact_decode": 20
+    },
+    "proc/baseline": {
+      "valid": 20,
+      "oracle_positive": 0,
+      "count_alarm": 0,
+      "name_alarm": 0,
+      "full_identity_alarm": 0,
+      "exact_decode": 20
+    },
+    "proc/libprocesshider": {
+      "valid": 20,
+      "oracle_positive": 20,
+      "count_alarm": 20,
+      "name_alarm": 20,
+      "full_identity_alarm": 20,
+      "exact_decode": 20
+    }
+  },
+  "trace_fixed_threshold": {
+    "source": "previous trace acquisition, disjoint calibration/test batches",
+    "tested_batches": 600,
+    "thresholds": {
+      "fun": {
+        "threshold": 2.1544346900318954e-17,
+        "calibration_n": 200,
+        "calibration_fp": 10
+      },
+      "seq": {
+        "threshold": 0.0,
+        "calibration_n": 200,
+        "calibration_fp": 0
+      }
+    },
+    "by_scenario": {
+      "default/fun": {
+        "tn": 48,
+        "fp": 2,
+        "tp": 100
+      },
+      "default/seq": {
+        "tn": 50,
+        "fn": 100
+      },
+      "file_count/fun": {
+        "tn": 47,
+        "fp": 3,
+        "tp": 100
+      },
+      "file_count/seq": {
+        "tn": 50,
+        "fn": 100
+      },
+      "filename_length/fun": {
+        "tn": 46,
+        "fp": 4,
+        "tp": 100
+      },
+      "filename_length/seq": {
+        "tn": 50,
+        "fn": 100
+      },
+      "system_load/fun": {
+        "tn": 48,
+        "fp": 2,
+        "tp": 100
+      },
+      "system_load/seq": {
+        "tn": 50,
+        "fn": 100
+      }
+    },
+    "by_detector": {
+      "fun": {
+        "tn": 189,
+        "fp": 11,
+        "tp": 400
+      },
+      "seq": {
+        "tn": 200,
+        "fn": 400
+      }
+    }
+  }
+}

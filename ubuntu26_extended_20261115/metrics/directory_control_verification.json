@@ -1,0 +1,486 @@
+{
+  "boots": [
+    {
+      "boot": "4119f88c-c85c-4ebd-8925-28b495c33c3b",
+      "cases": 520,
+      "epochs": 760,
+      "decisions": {
+        "indeterminate_partial": 120,
+        "equal": 480,
+        "indeterminate_error": 160
+      },
+      "by_case": {
+        "ext4/reuse_fd": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "ext4/denied": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_13": 20,
+          "processes": 20
+        },
+        "ext4/small_buffer": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_22": 20,
+          "processes": 20
+        },
+        "ext4/rewind_partial": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "ext4/repeated_eof": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/early": {
+          "indeterminate_partial": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/ordinary_changes": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "ext4/full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/missing": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_2": 20,
+          "processes": 20
+        },
+        "ext4/not_directory": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_20": 20,
+          "processes": 20
+        },
+        "ext4/rewind_complete": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "ext4/two_streams": {
+          "equal": 60,
+          "epochs": 60,
+          "processes": 20
+        },
+        "ext4/unprivileged_full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/rewind_partial": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "tmpfs/two_streams": {
+          "equal": 60,
+          "epochs": 60,
+          "processes": 20
+        },
+        "tmpfs/denied": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_13": 20,
+          "processes": 20
+        },
+        "tmpfs/reuse_fd": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "tmpfs/rewind_complete": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "tmpfs/ordinary_changes": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "tmpfs/not_directory": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_20": 20,
+          "processes": 20
+        },
+        "tmpfs/early": {
+          "indeterminate_partial": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/unprivileged_full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/small_buffer": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_22": 20,
+          "processes": 20
+        },
+        "tmpfs/repeated_eof": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/missing": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_2": 20,
+          "processes": 20
+        }
+      },
+      "prefetch_range": [
+        122,
+        122
+      ],
+      "data_sha256": "dddb50dedc494b1767b8a38a6c5ebcde2eed0d49c310cd0f98d02a3440b320d8"
+    },
+    {
+      "boot": "46410761-8d51-42c7-a61d-33a414765146",
+      "cases": 520,
+      "epochs": 760,
+      "decisions": {
+        "indeterminate_partial": 120,
+        "equal": 480,
+        "indeterminate_error": 160
+      },
+      "by_case": {
+        "ext4/reuse_fd": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "ext4/denied": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_13": 20,
+          "processes": 20
+        },
+        "ext4/small_buffer": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_22": 20,
+          "processes": 20
+        },
+        "ext4/rewind_partial": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "ext4/repeated_eof": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/early": {
+          "indeterminate_partial": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/ordinary_changes": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "ext4/full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/missing": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_2": 20,
+          "processes": 20
+        },
+        "ext4/not_directory": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_20": 20,
+          "processes": 20
+        },
+        "ext4/rewind_complete": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "ext4/two_streams": {
+          "equal": 60,
+          "epochs": 60,
+          "processes": 20
+        },
+        "ext4/unprivileged_full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/rewind_partial": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "tmpfs/two_streams": {
+          "equal": 60,
+          "epochs": 60,
+          "processes": 20
+        },
+        "tmpfs/denied": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_13": 20,
+          "processes": 20
+        },
+        "tmpfs/reuse_fd": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "tmpfs/rewind_complete": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "tmpfs/ordinary_changes": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "tmpfs/not_directory": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_20": 20,
+          "processes": 20
+        },
+        "tmpfs/early": {
+          "indeterminate_partial": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/unprivileged_full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/small_buffer": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_22": 20,
+          "processes": 20
+        },
+        "tmpfs/repeated_eof": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/missing": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_2": 20,
+          "processes": 20
+        }
+      },
+      "prefetch_range": [
+        122,
+        122
+      ],
+      "data_sha256": "3b04a883bd06a918745c07ec2cfa394747ff850aa7b492ce0219157079f149b1"
+    },
+    {
+      "boot": "cce8d0f0-13ab-48c8-84b7-282ac42441c8",
+      "cases": 520,
+      "epochs": 760,
+      "decisions": {
+        "indeterminate_partial": 120,
+        "equal": 480,
+        "indeterminate_error": 160
+      },
+      "by_case": {
+        "ext4/reuse_fd": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "ext4/denied": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_13": 20,
+          "processes": 20
+        },
+        "ext4/small_buffer": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_22": 20,
+          "processes": 20
+        },
+        "ext4/rewind_partial": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "ext4/repeated_eof": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/early": {
+          "indeterminate_partial": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/ordinary_changes": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "ext4/full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "ext4/missing": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_2": 20,
+          "processes": 20
+        },
+        "ext4/not_directory": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_20": 20,
+          "processes": 20
+        },
+        "ext4/rewind_complete": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "ext4/two_streams": {
+          "equal": 60,
+          "epochs": 60,
+          "processes": 20
+        },
+        "ext4/unprivileged_full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/rewind_partial": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "tmpfs/two_streams": {
+          "equal": 60,
+          "epochs": 60,
+          "processes": 20
+        },
+        "tmpfs/denied": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_13": 20,
+          "processes": 20
+        },
+        "tmpfs/reuse_fd": {
+          "indeterminate_partial": 20,
+          "epochs": 40,
+          "equal": 20,
+          "processes": 20
+        },
+        "tmpfs/rewind_complete": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "tmpfs/ordinary_changes": {
+          "equal": 40,
+          "epochs": 40,
+          "processes": 20
+        },
+        "tmpfs/not_directory": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_20": 20,
+          "processes": 20
+        },
+        "tmpfs/early": {
+          "indeterminate_partial": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/unprivileged_full": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/small_buffer": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_22": 20,
+          "processes": 20
+        },
+        "tmpfs/repeated_eof": {
+          "equal": 20,
+          "epochs": 20,
+          "processes": 20
+        },
+        "tmpfs/missing": {
+          "indeterminate_error": 20,
+          "epochs": 20,
+          "errno_2": 20,
+          "processes": 20
+        }
+      },
+      "prefetch_range": [
+        122,
+        122
+      ],
+      "data_sha256": "ad6f1c04fc752e49c85a2c6d82fff6b68069525622193c153f9a0fc298883472"
+    }
+  ],
+  "decisions": {
+    "indeterminate_partial": 360,
+    "equal": 1440,
+    "indeterminate_error": 480
+  }
+}

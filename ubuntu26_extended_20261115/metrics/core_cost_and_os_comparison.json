@@ -1,0 +1,5673 @@
+{
+  "cost": {
+    "cohorts": {
+      "4119f88c-c85c-4ebd-8925-28b495c33c3b": {
+        "source": "ubuntu26_extended_20261115_run05\\clean_observations\\4119f88c-c85c-4ebd-8925-28b495c33c3b\\cost_4119f88c-c85c-4ebd-8925-28b495c33c3b",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 106.216919435
+      },
+      "ac9479af-9e88-4478-91f6-43183e45c20b": {
+        "source": "ubuntu26_extended_20261115_run05\\clean_observations\\ac9479af-9e88-4478-91f6-43183e45c20b\\cost_ac9479af-9e88-4478-91f6-43183e45c20b",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 109.316240466
+      },
+      "46adbad2-d06d-4164-ab30-a4027e1e4f37": {
+        "source": "ubuntu26_extended_20261115_run03\\cost_46adbad2-d06d-4164-ab30-a4027e1e4f37",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 99.02239000199995
+      }
+    },
+    "boot_count": 3,
+    "cost_matrix": [
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.033,
+          "p95_ms": 0.042
+        },
+        "registration_ns": {
+          "median_ms": 1.019,
+          "p95_ms": 2.214
+        },
+        "readback_ns": {
+          "median_ms": 0.435,
+          "p95_ms": 0.809
+        },
+        "decode_ns": {
+          "median_ms": 1.241,
+          "p95_ms": 1.933
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.024,
+          "p95_ms": 9.988
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.593,
+          "p95_ms": 8.243
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.032,
+          "p95_ms": 0.06
+        },
+        "registration_ns": {
+          "median_ms": 0.954,
+          "p95_ms": 1.391
+        },
+        "readback_ns": {
+          "median_ms": 0.404,
+          "p95_ms": 0.62
+        },
+        "decode_ns": {
+          "median_ms": 1.087,
+          "p95_ms": 3.008
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.374,
+          "p95_ms": 14.611
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.05,
+          "p95_ms": 12.981
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.031,
+          "p95_ms": 0.046
+        },
+        "registration_ns": {
+          "median_ms": 1.031,
+          "p95_ms": 5.527
+        },
+        "readback_ns": {
+          "median_ms": 0.5,
+          "p95_ms": 1.087
+        },
+        "decode_ns": {
+          "median_ms": 1.582,
+          "p95_ms": 2.726
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.909,
+          "p95_ms": 18.849
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.274,
+          "p95_ms": 17.414
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.028,
+          "p95_ms": 0.042
+        },
+        "registration_ns": {
+          "median_ms": 0.913,
+          "p95_ms": 1.609
+        },
+        "readback_ns": {
+          "median_ms": 0.398,
+          "p95_ms": 0.642
+        },
+        "decode_ns": {
+          "median_ms": 1.154,
+          "p95_ms": 1.99
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.077,
+          "p95_ms": 10.163
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.964,
+          "p95_ms": 7.718
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.033,
+          "p95_ms": 0.059
+        },
+        "registration_ns": {
+          "median_ms": 0.99,
+          "p95_ms": 3.016
+        },
+        "readback_ns": {
+          "median_ms": 0.453,
+          "p95_ms": 0.703
+        },
+        "decode_ns": {
+          "median_ms": 1.244,
+          "p95_ms": 1.972
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.88,
+          "p95_ms": 11.929
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.505,
+          "p95_ms": 10.28
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.03,
+          "p95_ms": 0.041
+        },
+        "registration_ns": {
+          "median_ms": 0.909,
+          "p95_ms": 1.565
+        },
+        "readback_ns": {
+          "median_ms": 0.431,
+          "p95_ms": 0.794
+        },
+        "decode_ns": {
+          "median_ms": 1.127,
+          "p95_ms": 3.511
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.482,
+          "p95_ms": 11.842
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.17,
+          "p95_ms": 8.935
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.031,
+          "p95_ms": 0.043
+        },
+        "registration_ns": {
+          "median_ms": 1.081,
+          "p95_ms": 3.081
+        },
+        "readback_ns": {
+          "median_ms": 0.464,
+          "p95_ms": 0.751
+        },
+        "decode_ns": {
+          "median_ms": 1.498,
+          "p95_ms": 2.383
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.399,
+          "p95_ms": 15.489
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.938,
+          "p95_ms": 11.946
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.028,
+          "p95_ms": 0.046
+        },
+        "registration_ns": {
+          "median_ms": 0.898,
+          "p95_ms": 1.513
+        },
+        "readback_ns": {
+          "median_ms": 0.393,
+          "p95_ms": 0.657
+        },
+        "decode_ns": {
+          "median_ms": 1.066,
+          "p95_ms": 1.807
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.015,
+          "p95_ms": 8.73
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.813,
+          "p95_ms": 6.855
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.129,
+          "p95_ms": 0.189
+        },
+        "registration_ns": {
+          "median_ms": 0.857,
+          "p95_ms": 1.441
+        },
+        "readback_ns": {
+          "median_ms": 0.407,
+          "p95_ms": 0.643
+        },
+        "decode_ns": {
+          "median_ms": 1.25,
+          "p95_ms": 2.026
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.632,
+          "p95_ms": 9.469
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.411,
+          "p95_ms": 7.949
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.128,
+          "p95_ms": 0.231
+        },
+        "registration_ns": {
+          "median_ms": 0.864,
+          "p95_ms": 3.363
+        },
+        "readback_ns": {
+          "median_ms": 0.408,
+          "p95_ms": 0.702
+        },
+        "decode_ns": {
+          "median_ms": 1.236,
+          "p95_ms": 2.099
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.356,
+          "p95_ms": 12.823
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.234,
+          "p95_ms": 10.672
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.152,
+          "p95_ms": 0.255
+        },
+        "registration_ns": {
+          "median_ms": 1.011,
+          "p95_ms": 2.133
+        },
+        "readback_ns": {
+          "median_ms": 0.449,
+          "p95_ms": 0.925
+        },
+        "decode_ns": {
+          "median_ms": 1.314,
+          "p95_ms": 2.084
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.476,
+          "p95_ms": 14.909
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.989,
+          "p95_ms": 11.422
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.153,
+          "p95_ms": 0.251
+        },
+        "registration_ns": {
+          "median_ms": 1.045,
+          "p95_ms": 2.403
+        },
+        "readback_ns": {
+          "median_ms": 0.502,
+          "p95_ms": 0.759
+        },
+        "decode_ns": {
+          "median_ms": 1.542,
+          "p95_ms": 2.175
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.922,
+          "p95_ms": 12.179
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.606,
+          "p95_ms": 9.992
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.117,
+          "p95_ms": 0.166
+        },
+        "registration_ns": {
+          "median_ms": 0.861,
+          "p95_ms": 1.872
+        },
+        "readback_ns": {
+          "median_ms": 0.407,
+          "p95_ms": 0.603
+        },
+        "decode_ns": {
+          "median_ms": 1.243,
+          "p95_ms": 1.991
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.667,
+          "p95_ms": 9.89
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.45,
+          "p95_ms": 8.257
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.104,
+          "p95_ms": 0.159
+        },
+        "registration_ns": {
+          "median_ms": 0.875,
+          "p95_ms": 1.314
+        },
+        "readback_ns": {
+          "median_ms": 0.436,
+          "p95_ms": 0.721
+        },
+        "decode_ns": {
+          "median_ms": 1.342,
+          "p95_ms": 2.121
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.662,
+          "p95_ms": 10.184
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.328,
+          "p95_ms": 8.889
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.118,
+          "p95_ms": 0.18
+        },
+        "registration_ns": {
+          "median_ms": 0.965,
+          "p95_ms": 2.18
+        },
+        "readback_ns": {
+          "median_ms": 0.458,
+          "p95_ms": 0.741
+        },
+        "decode_ns": {
+          "median_ms": 1.395,
+          "p95_ms": 3.167
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.44,
+          "p95_ms": 14.951
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.972,
+          "p95_ms": 13.256
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.127,
+          "p95_ms": 0.208
+        },
+        "registration_ns": {
+          "median_ms": 1.085,
+          "p95_ms": 1.865
+        },
+        "readback_ns": {
+          "median_ms": 0.471,
+          "p95_ms": 0.917
+        },
+        "decode_ns": {
+          "median_ms": 1.501,
+          "p95_ms": 2.134
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.705,
+          "p95_ms": 12.959
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.339,
+          "p95_ms": 11.239
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.679,
+          "p95_ms": 2.222
+        },
+        "registration_ns": {
+          "median_ms": 0.943,
+          "p95_ms": 1.5
+        },
+        "readback_ns": {
+          "median_ms": 0.407,
+          "p95_ms": 0.656
+        },
+        "decode_ns": {
+          "median_ms": 1.213,
+          "p95_ms": 2.176
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.464,
+          "p95_ms": 11.819
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.382,
+          "p95_ms": 9.95
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.636,
+          "p95_ms": 2.616
+        },
+        "registration_ns": {
+          "median_ms": 0.893,
+          "p95_ms": 1.18
+        },
+        "readback_ns": {
+          "median_ms": 0.408,
+          "p95_ms": 0.668
+        },
+        "decode_ns": {
+          "median_ms": 1.183,
+          "p95_ms": 2.219
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.453,
+          "p95_ms": 14.711
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.339,
+          "p95_ms": 10.661
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.869,
+          "p95_ms": 2.682
+        },
+        "registration_ns": {
+          "median_ms": 0.999,
+          "p95_ms": 1.988
+        },
+        "readback_ns": {
+          "median_ms": 0.474,
+          "p95_ms": 0.821
+        },
+        "decode_ns": {
+          "median_ms": 1.458,
+          "p95_ms": 2.958
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.36,
+          "p95_ms": 17.735
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.026,
+          "p95_ms": 14.866
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.955,
+          "p95_ms": 2.24
+        },
+        "registration_ns": {
+          "median_ms": 1.066,
+          "p95_ms": 1.634
+        },
+        "readback_ns": {
+          "median_ms": 0.484,
+          "p95_ms": 0.718
+        },
+        "decode_ns": {
+          "median_ms": 1.415,
+          "p95_ms": 2.085
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.896,
+          "p95_ms": 16.99
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.476,
+          "p95_ms": 12.938
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.54,
+          "p95_ms": 2.037
+        },
+        "registration_ns": {
+          "median_ms": 0.965,
+          "p95_ms": 1.326
+        },
+        "readback_ns": {
+          "median_ms": 0.446,
+          "p95_ms": 0.667
+        },
+        "decode_ns": {
+          "median_ms": 1.297,
+          "p95_ms": 2.07
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.855,
+          "p95_ms": 11.116
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.614,
+          "p95_ms": 9.746
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.409,
+          "p95_ms": 1.915
+        },
+        "registration_ns": {
+          "median_ms": 0.909,
+          "p95_ms": 1.157
+        },
+        "readback_ns": {
+          "median_ms": 0.44,
+          "p95_ms": 0.702
+        },
+        "decode_ns": {
+          "median_ms": 1.298,
+          "p95_ms": 2.452
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.629,
+          "p95_ms": 11.649
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.425,
+          "p95_ms": 9.547
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.579,
+          "p95_ms": 2.807
+        },
+        "registration_ns": {
+          "median_ms": 1.02,
+          "p95_ms": 2.077
+        },
+        "readback_ns": {
+          "median_ms": 0.471,
+          "p95_ms": 0.779
+        },
+        "decode_ns": {
+          "median_ms": 1.413,
+          "p95_ms": 2.386
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.425,
+          "p95_ms": 19.301
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.076,
+          "p95_ms": 17.405
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.647,
+          "p95_ms": 2.078
+        },
+        "registration_ns": {
+          "median_ms": 1.088,
+          "p95_ms": 2.199
+        },
+        "readback_ns": {
+          "median_ms": 0.494,
+          "p95_ms": 0.709
+        },
+        "decode_ns": {
+          "median_ms": 1.423,
+          "p95_ms": 2.189
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.809,
+          "p95_ms": 14.058
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.29,
+          "p95_ms": 11.875
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 15.396,
+          "p95_ms": 22.373
+        },
+        "registration_ns": {
+          "median_ms": 0.954,
+          "p95_ms": 2.157
+        },
+        "readback_ns": {
+          "median_ms": 0.499,
+          "p95_ms": 0.77
+        },
+        "decode_ns": {
+          "median_ms": 1.515,
+          "p95_ms": 2.201
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 23.2,
+          "p95_ms": 40.061
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 21.928,
+          "p95_ms": 37.554
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.665,
+          "p95_ms": 19.468
+        },
+        "registration_ns": {
+          "median_ms": 0.928,
+          "p95_ms": 1.255
+        },
+        "readback_ns": {
+          "median_ms": 0.409,
+          "p95_ms": 0.665
+        },
+        "decode_ns": {
+          "median_ms": 1.125,
+          "p95_ms": 2.023
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.913,
+          "p95_ms": 29.868
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.711,
+          "p95_ms": 28.666
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 15.833,
+          "p95_ms": 26.363
+        },
+        "registration_ns": {
+          "median_ms": 1.053,
+          "p95_ms": 5.468
+        },
+        "readback_ns": {
+          "median_ms": 0.514,
+          "p95_ms": 0.73
+        },
+        "decode_ns": {
+          "median_ms": 1.412,
+          "p95_ms": 1.955
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 23.593,
+          "p95_ms": 35.919
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 22.421,
+          "p95_ms": 34.559
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 13.82,
+          "p95_ms": 18.898
+        },
+        "registration_ns": {
+          "median_ms": 0.947,
+          "p95_ms": 1.865
+        },
+        "readback_ns": {
+          "median_ms": 0.485,
+          "p95_ms": 0.727
+        },
+        "decode_ns": {
+          "median_ms": 1.371,
+          "p95_ms": 2.135
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 21.042,
+          "p95_ms": 29.424
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 19.668,
+          "p95_ms": 28.015
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.102,
+          "p95_ms": 21.921
+        },
+        "registration_ns": {
+          "median_ms": 0.908,
+          "p95_ms": 2.363
+        },
+        "readback_ns": {
+          "median_ms": 0.486,
+          "p95_ms": 0.763
+        },
+        "decode_ns": {
+          "median_ms": 1.542,
+          "p95_ms": 3.174
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.33,
+          "p95_ms": 41.018
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.158,
+          "p95_ms": 35.704
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.39,
+          "p95_ms": 15.133
+        },
+        "registration_ns": {
+          "median_ms": 0.992,
+          "p95_ms": 1.782
+        },
+        "readback_ns": {
+          "median_ms": 0.425,
+          "p95_ms": 0.587
+        },
+        "decode_ns": {
+          "median_ms": 1.145,
+          "p95_ms": 1.989
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.783,
+          "p95_ms": 24.62
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.492,
+          "p95_ms": 23.433
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.459,
+          "p95_ms": 23.7
+        },
+        "registration_ns": {
+          "median_ms": 1.036,
+          "p95_ms": 2.425
+        },
+        "readback_ns": {
+          "median_ms": 0.519,
+          "p95_ms": 0.718
+        },
+        "decode_ns": {
+          "median_ms": 1.357,
+          "p95_ms": 2.197
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 21.11,
+          "p95_ms": 31.446
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 19.543,
+          "p95_ms": 30.179
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 11.804,
+          "p95_ms": 20.225
+        },
+        "registration_ns": {
+          "median_ms": 0.972,
+          "p95_ms": 2.032
+        },
+        "readback_ns": {
+          "median_ms": 0.466,
+          "p95_ms": 0.751
+        },
+        "decode_ns": {
+          "median_ms": 1.399,
+          "p95_ms": 1.996
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.099,
+          "p95_ms": 31.406
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 17.724,
+          "p95_ms": 30.048
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 117.306,
+          "p95_ms": 150.929
+        },
+        "registration_ns": {
+          "median_ms": 0.982,
+          "p95_ms": 2.145
+        },
+        "readback_ns": {
+          "median_ms": 0.484,
+          "p95_ms": 0.689
+        },
+        "decode_ns": {
+          "median_ms": 1.343,
+          "p95_ms": 2.05
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 126.105,
+          "p95_ms": 159.48
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 124.91,
+          "p95_ms": 158.248
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 107.896,
+          "p95_ms": 149.263
+        },
+        "registration_ns": {
+          "median_ms": 0.964,
+          "p95_ms": 1.396
+        },
+        "readback_ns": {
+          "median_ms": 0.445,
+          "p95_ms": 0.675
+        },
+        "decode_ns": {
+          "median_ms": 1.09,
+          "p95_ms": 1.936
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 116.06,
+          "p95_ms": 160.211
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 114.351,
+          "p95_ms": 159.077
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 128.644,
+          "p95_ms": 164.338
+        },
+        "registration_ns": {
+          "median_ms": 1.016,
+          "p95_ms": 1.438
+        },
+        "readback_ns": {
+          "median_ms": 0.516,
+          "p95_ms": 0.789
+        },
+        "decode_ns": {
+          "median_ms": 1.629,
+          "p95_ms": 2.158
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 136.11,
+          "p95_ms": 173.089
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 134.911,
+          "p95_ms": 171.892
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 120.077,
+          "p95_ms": 155.914
+        },
+        "registration_ns": {
+          "median_ms": 1.037,
+          "p95_ms": 1.688
+        },
+        "readback_ns": {
+          "median_ms": 0.505,
+          "p95_ms": 0.786
+        },
+        "decode_ns": {
+          "median_ms": 1.433,
+          "p95_ms": 2.117
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 128.8,
+          "p95_ms": 168.168
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 127.247,
+          "p95_ms": 166.641
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 95.149,
+          "p95_ms": 123.289
+        },
+        "registration_ns": {
+          "median_ms": 0.981,
+          "p95_ms": 2.184
+        },
+        "readback_ns": {
+          "median_ms": 0.514,
+          "p95_ms": 0.703
+        },
+        "decode_ns": {
+          "median_ms": 1.448,
+          "p95_ms": 2.045
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 103.118,
+          "p95_ms": 135.017
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 101.783,
+          "p95_ms": 133.404
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 84.183,
+          "p95_ms": 121.259
+        },
+        "registration_ns": {
+          "median_ms": 0.989,
+          "p95_ms": 2.984
+        },
+        "readback_ns": {
+          "median_ms": 0.507,
+          "p95_ms": 0.729
+        },
+        "decode_ns": {
+          "median_ms": 1.119,
+          "p95_ms": 2.341
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 91.859,
+          "p95_ms": 132.671
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 90.535,
+          "p95_ms": 128.906
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 98.69,
+          "p95_ms": 136.88
+        },
+        "registration_ns": {
+          "median_ms": 1.057,
+          "p95_ms": 1.971
+        },
+        "readback_ns": {
+          "median_ms": 0.54,
+          "p95_ms": 0.792
+        },
+        "decode_ns": {
+          "median_ms": 1.654,
+          "p95_ms": 2.371
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 109.601,
+          "p95_ms": 147.18
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 107.455,
+          "p95_ms": 144.276
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 94.114,
+          "p95_ms": 123.092
+        },
+        "registration_ns": {
+          "median_ms": 1.055,
+          "p95_ms": 2.573
+        },
+        "readback_ns": {
+          "median_ms": 0.49,
+          "p95_ms": 0.794
+        },
+        "decode_ns": {
+          "median_ms": 1.324,
+          "p95_ms": 2.048
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 102.104,
+          "p95_ms": 133.642
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 101.158,
+          "p95_ms": 131.233
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.023,
+          "p95_ms": 0.031
+        },
+        "registration_ns": {
+          "median_ms": 1.047,
+          "p95_ms": 2.48
+        },
+        "readback_ns": {
+          "median_ms": 0.445,
+          "p95_ms": 0.794
+        },
+        "decode_ns": {
+          "median_ms": 1.438,
+          "p95_ms": 2.161
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.455,
+          "p95_ms": 9.894
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.933,
+          "p95_ms": 8.273
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.019,
+          "p95_ms": 0.027
+        },
+        "registration_ns": {
+          "median_ms": 0.815,
+          "p95_ms": 1.233
+        },
+        "readback_ns": {
+          "median_ms": 0.36,
+          "p95_ms": 0.589
+        },
+        "decode_ns": {
+          "median_ms": 1.004,
+          "p95_ms": 1.893
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.509,
+          "p95_ms": 9.091
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.492,
+          "p95_ms": 7.423
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.023,
+          "p95_ms": 0.032
+        },
+        "registration_ns": {
+          "median_ms": 1.063,
+          "p95_ms": 2.189
+        },
+        "readback_ns": {
+          "median_ms": 0.468,
+          "p95_ms": 0.971
+        },
+        "decode_ns": {
+          "median_ms": 1.226,
+          "p95_ms": 2.137
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.295,
+          "p95_ms": 14.509
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.648,
+          "p95_ms": 10.826
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.018,
+          "p95_ms": 0.053
+        },
+        "registration_ns": {
+          "median_ms": 0.846,
+          "p95_ms": 1.566
+        },
+        "readback_ns": {
+          "median_ms": 0.381,
+          "p95_ms": 0.641
+        },
+        "decode_ns": {
+          "median_ms": 1.019,
+          "p95_ms": 1.887
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.983,
+          "p95_ms": 9.235
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.727,
+          "p95_ms": 7.238
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.023,
+          "p95_ms": 0.038
+        },
+        "registration_ns": {
+          "median_ms": 1.068,
+          "p95_ms": 2.502
+        },
+        "readback_ns": {
+          "median_ms": 0.459,
+          "p95_ms": 0.672
+        },
+        "decode_ns": {
+          "median_ms": 1.351,
+          "p95_ms": 2.204
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.275,
+          "p95_ms": 11.057
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.634,
+          "p95_ms": 9.02
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.019,
+          "p95_ms": 0.044
+        },
+        "registration_ns": {
+          "median_ms": 0.816,
+          "p95_ms": 1.174
+        },
+        "readback_ns": {
+          "median_ms": 0.36,
+          "p95_ms": 0.575
+        },
+        "decode_ns": {
+          "median_ms": 0.949,
+          "p95_ms": 1.842
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.377,
+          "p95_ms": 7.987
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.322,
+          "p95_ms": 6.288
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.022,
+          "p95_ms": 0.031
+        },
+        "registration_ns": {
+          "median_ms": 1.003,
+          "p95_ms": 2.087
+        },
+        "readback_ns": {
+          "median_ms": 0.43,
+          "p95_ms": 0.778
+        },
+        "decode_ns": {
+          "median_ms": 1.218,
+          "p95_ms": 2.074
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.868,
+          "p95_ms": 11.381
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.478,
+          "p95_ms": 9.348
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.02,
+          "p95_ms": 0.033
+        },
+        "registration_ns": {
+          "median_ms": 0.872,
+          "p95_ms": 2.057
+        },
+        "readback_ns": {
+          "median_ms": 0.393,
+          "p95_ms": 0.702
+        },
+        "decode_ns": {
+          "median_ms": 1.286,
+          "p95_ms": 1.957
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.131,
+          "p95_ms": 11.255
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.935,
+          "p95_ms": 8.604
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.119,
+          "p95_ms": 0.199
+        },
+        "registration_ns": {
+          "median_ms": 0.834,
+          "p95_ms": 1.38
+        },
+        "readback_ns": {
+          "median_ms": 0.425,
+          "p95_ms": 0.657
+        },
+        "decode_ns": {
+          "median_ms": 1.311,
+          "p95_ms": 2.305
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.704,
+          "p95_ms": 9.939
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.505,
+          "p95_ms": 8.078
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.117,
+          "p95_ms": 0.179
+        },
+        "registration_ns": {
+          "median_ms": 0.854,
+          "p95_ms": 1.371
+        },
+        "readback_ns": {
+          "median_ms": 0.386,
+          "p95_ms": 0.639
+        },
+        "decode_ns": {
+          "median_ms": 1.16,
+          "p95_ms": 2.128
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.459,
+          "p95_ms": 11.315
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.296,
+          "p95_ms": 7.703
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.126,
+          "p95_ms": 0.198
+        },
+        "registration_ns": {
+          "median_ms": 0.964,
+          "p95_ms": 1.912
+        },
+        "readback_ns": {
+          "median_ms": 0.446,
+          "p95_ms": 0.822
+        },
+        "decode_ns": {
+          "median_ms": 1.496,
+          "p95_ms": 3.162
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.39,
+          "p95_ms": 17.693
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.005,
+          "p95_ms": 16.235
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.13,
+          "p95_ms": 0.185
+        },
+        "registration_ns": {
+          "median_ms": 1.076,
+          "p95_ms": 2.11
+        },
+        "readback_ns": {
+          "median_ms": 0.486,
+          "p95_ms": 0.888
+        },
+        "decode_ns": {
+          "median_ms": 1.438,
+          "p95_ms": 2.264
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.035,
+          "p95_ms": 12.747
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.546,
+          "p95_ms": 9.798
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.098,
+          "p95_ms": 0.143
+        },
+        "registration_ns": {
+          "median_ms": 0.864,
+          "p95_ms": 1.435
+        },
+        "readback_ns": {
+          "median_ms": 0.41,
+          "p95_ms": 0.605
+        },
+        "decode_ns": {
+          "median_ms": 1.195,
+          "p95_ms": 2.072
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.368,
+          "p95_ms": 10.912
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.255,
+          "p95_ms": 9.632
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.095,
+          "p95_ms": 0.142
+        },
+        "registration_ns": {
+          "median_ms": 0.9,
+          "p95_ms": 1.156
+        },
+        "readback_ns": {
+          "median_ms": 0.413,
+          "p95_ms": 0.663
+        },
+        "decode_ns": {
+          "median_ms": 1.157,
+          "p95_ms": 2.392
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.482,
+          "p95_ms": 11.839
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.25,
+          "p95_ms": 10.269
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.103,
+          "p95_ms": 0.182
+        },
+        "registration_ns": {
+          "median_ms": 0.924,
+          "p95_ms": 2.138
+        },
+        "readback_ns": {
+          "median_ms": 0.465,
+          "p95_ms": 0.677
+        },
+        "decode_ns": {
+          "median_ms": 1.403,
+          "p95_ms": 2.289
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.101,
+          "p95_ms": 17.665
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.873,
+          "p95_ms": 16.155
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.108,
+          "p95_ms": 0.187
+        },
+        "registration_ns": {
+          "median_ms": 1.095,
+          "p95_ms": 1.957
+        },
+        "readback_ns": {
+          "median_ms": 0.482,
+          "p95_ms": 0.81
+        },
+        "decode_ns": {
+          "median_ms": 1.43,
+          "p95_ms": 2.399
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.234,
+          "p95_ms": 10.915
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.631,
+          "p95_ms": 9.134
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.684,
+          "p95_ms": 2.233
+        },
+        "registration_ns": {
+          "median_ms": 0.891,
+          "p95_ms": 1.446
+        },
+        "readback_ns": {
+          "median_ms": 0.422,
+          "p95_ms": 0.602
+        },
+        "decode_ns": {
+          "median_ms": 1.225,
+          "p95_ms": 2.028
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.665,
+          "p95_ms": 13.611
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.353,
+          "p95_ms": 12.404
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.423,
+          "p95_ms": 1.965
+        },
+        "registration_ns": {
+          "median_ms": 0.894,
+          "p95_ms": 1.48
+        },
+        "readback_ns": {
+          "median_ms": 0.353,
+          "p95_ms": 0.651
+        },
+        "decode_ns": {
+          "median_ms": 1.188,
+          "p95_ms": 2.063
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.965,
+          "p95_ms": 13.514
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.9,
+          "p95_ms": 10.883
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.705,
+          "p95_ms": 2.782
+        },
+        "registration_ns": {
+          "median_ms": 1.118,
+          "p95_ms": 1.771
+        },
+        "readback_ns": {
+          "median_ms": 0.513,
+          "p95_ms": 0.942
+        },
+        "decode_ns": {
+          "median_ms": 1.57,
+          "p95_ms": 2.734
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 10.061,
+          "p95_ms": 16.346
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.459,
+          "p95_ms": 13.218
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.812,
+          "p95_ms": 2.354
+        },
+        "registration_ns": {
+          "median_ms": 1.048,
+          "p95_ms": 1.635
+        },
+        "readback_ns": {
+          "median_ms": 0.516,
+          "p95_ms": 0.901
+        },
+        "decode_ns": {
+          "median_ms": 1.729,
+          "p95_ms": 2.567
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 10.224,
+          "p95_ms": 13.868
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.738,
+          "p95_ms": 11.607
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.324,
+          "p95_ms": 1.575
+        },
+        "registration_ns": {
+          "median_ms": 0.895,
+          "p95_ms": 1.406
+        },
+        "readback_ns": {
+          "median_ms": 0.437,
+          "p95_ms": 0.694
+        },
+        "decode_ns": {
+          "median_ms": 1.516,
+          "p95_ms": 2.339
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.58,
+          "p95_ms": 15.221
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.395,
+          "p95_ms": 11.715
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.097,
+          "p95_ms": 1.497
+        },
+        "registration_ns": {
+          "median_ms": 0.856,
+          "p95_ms": 1.292
+        },
+        "readback_ns": {
+          "median_ms": 0.36,
+          "p95_ms": 0.703
+        },
+        "decode_ns": {
+          "median_ms": 1.081,
+          "p95_ms": 2.107
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.501,
+          "p95_ms": 11.408
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.311,
+          "p95_ms": 9.995
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.421,
+          "p95_ms": 1.847
+        },
+        "registration_ns": {
+          "median_ms": 1.134,
+          "p95_ms": 2.187
+        },
+        "readback_ns": {
+          "median_ms": 0.503,
+          "p95_ms": 1.074
+        },
+        "decode_ns": {
+          "median_ms": 1.729,
+          "p95_ms": 5.163
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 10.183,
+          "p95_ms": 17.808
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.676,
+          "p95_ms": 15.681
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.473,
+          "p95_ms": 1.892
+        },
+        "registration_ns": {
+          "median_ms": 1.021,
+          "p95_ms": 1.816
+        },
+        "readback_ns": {
+          "median_ms": 0.516,
+          "p95_ms": 0.752
+        },
+        "decode_ns": {
+          "median_ms": 1.775,
+          "p95_ms": 2.484
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.413,
+          "p95_ms": 15.044
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.131,
+          "p95_ms": 11.289
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 13.044,
+          "p95_ms": 16.969
+        },
+        "registration_ns": {
+          "median_ms": 0.951,
+          "p95_ms": 2.253
+        },
+        "readback_ns": {
+          "median_ms": 0.485,
+          "p95_ms": 0.652
+        },
+        "decode_ns": {
+          "median_ms": 1.39,
+          "p95_ms": 2.004
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 20.801,
+          "p95_ms": 26.652
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 19.615,
+          "p95_ms": 25.107
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 11.456,
+          "p95_ms": 20.305
+        },
+        "registration_ns": {
+          "median_ms": 0.932,
+          "p95_ms": 1.3
+        },
+        "readback_ns": {
+          "median_ms": 0.417,
+          "p95_ms": 0.702
+        },
+        "decode_ns": {
+          "median_ms": 1.107,
+          "p95_ms": 1.954
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 18.106,
+          "p95_ms": 30.369
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 17.072,
+          "p95_ms": 28.486
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 13.785,
+          "p95_ms": 25.592
+        },
+        "registration_ns": {
+          "median_ms": 1.032,
+          "p95_ms": 1.914
+        },
+        "readback_ns": {
+          "median_ms": 0.519,
+          "p95_ms": 0.784
+        },
+        "decode_ns": {
+          "median_ms": 1.427,
+          "p95_ms": 2.212
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 22.502,
+          "p95_ms": 35.085
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 20.834,
+          "p95_ms": 33.71
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.672,
+          "p95_ms": 15.942
+        },
+        "registration_ns": {
+          "median_ms": 1.054,
+          "p95_ms": 1.494
+        },
+        "readback_ns": {
+          "median_ms": 0.483,
+          "p95_ms": 0.692
+        },
+        "decode_ns": {
+          "median_ms": 1.246,
+          "p95_ms": 1.949
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 20.18,
+          "p95_ms": 25.701
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 19.024,
+          "p95_ms": 24.378
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.234,
+          "p95_ms": 12.593
+        },
+        "registration_ns": {
+          "median_ms": 0.962,
+          "p95_ms": 1.54
+        },
+        "readback_ns": {
+          "median_ms": 0.495,
+          "p95_ms": 0.657
+        },
+        "decode_ns": {
+          "median_ms": 1.446,
+          "p95_ms": 2.039
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.615,
+          "p95_ms": 22.93
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.387,
+          "p95_ms": 21.599
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 8.67,
+          "p95_ms": 13.616
+        },
+        "registration_ns": {
+          "median_ms": 0.946,
+          "p95_ms": 2.037
+        },
+        "readback_ns": {
+          "median_ms": 0.383,
+          "p95_ms": 0.632
+        },
+        "decode_ns": {
+          "median_ms": 1.078,
+          "p95_ms": 1.99
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 15.308,
+          "p95_ms": 23.694
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 14.191,
+          "p95_ms": 21.93
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.872,
+          "p95_ms": 21.006
+        },
+        "registration_ns": {
+          "median_ms": 1.041,
+          "p95_ms": 1.381
+        },
+        "readback_ns": {
+          "median_ms": 0.48,
+          "p95_ms": 0.746
+        },
+        "decode_ns": {
+          "median_ms": 1.384,
+          "p95_ms": 2.129
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 18.58,
+          "p95_ms": 33.2
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 17.352,
+          "p95_ms": 31.135
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 9.87,
+          "p95_ms": 13.039
+        },
+        "registration_ns": {
+          "median_ms": 1.057,
+          "p95_ms": 1.532
+        },
+        "readback_ns": {
+          "median_ms": 0.484,
+          "p95_ms": 0.924
+        },
+        "decode_ns": {
+          "median_ms": 1.283,
+          "p95_ms": 1.858
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.691,
+          "p95_ms": 24.885
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.283,
+          "p95_ms": 23.353
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 109.44,
+          "p95_ms": 146.026
+        },
+        "registration_ns": {
+          "median_ms": 0.997,
+          "p95_ms": 1.862
+        },
+        "readback_ns": {
+          "median_ms": 0.496,
+          "p95_ms": 0.615
+        },
+        "decode_ns": {
+          "median_ms": 1.336,
+          "p95_ms": 2.028
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 117.901,
+          "p95_ms": 155.688
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 116.638,
+          "p95_ms": 153.767
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 97.85,
+          "p95_ms": 135.57
+        },
+        "registration_ns": {
+          "median_ms": 0.981,
+          "p95_ms": 1.634
+        },
+        "readback_ns": {
+          "median_ms": 0.454,
+          "p95_ms": 0.668
+        },
+        "decode_ns": {
+          "median_ms": 1.142,
+          "p95_ms": 2.012
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 104.641,
+          "p95_ms": 146.001
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 103.721,
+          "p95_ms": 143.924
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 118.248,
+          "p95_ms": 147.165
+        },
+        "registration_ns": {
+          "median_ms": 1.07,
+          "p95_ms": 2.861
+        },
+        "readback_ns": {
+          "median_ms": 0.544,
+          "p95_ms": 0.693
+        },
+        "decode_ns": {
+          "median_ms": 1.535,
+          "p95_ms": 2.15
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 127.294,
+          "p95_ms": 157.922
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 125.697,
+          "p95_ms": 156.272
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 107.388,
+          "p95_ms": 140.012
+        },
+        "registration_ns": {
+          "median_ms": 0.98,
+          "p95_ms": 1.69
+        },
+        "readback_ns": {
+          "median_ms": 0.516,
+          "p95_ms": 0.813
+        },
+        "decode_ns": {
+          "median_ms": 1.469,
+          "p95_ms": 2.299
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 115.703,
+          "p95_ms": 150.19
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 114.332,
+          "p95_ms": 147.829
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 81.9,
+          "p95_ms": 109.516
+        },
+        "registration_ns": {
+          "median_ms": 1.005,
+          "p95_ms": 2.991
+        },
+        "readback_ns": {
+          "median_ms": 0.517,
+          "p95_ms": 0.781
+        },
+        "decode_ns": {
+          "median_ms": 1.533,
+          "p95_ms": 2.024
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 90.523,
+          "p95_ms": 119.885
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 89.091,
+          "p95_ms": 117.915
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 71.92,
+          "p95_ms": 100.674
+        },
+        "registration_ns": {
+          "median_ms": 0.99,
+          "p95_ms": 1.494
+        },
+        "readback_ns": {
+          "median_ms": 0.439,
+          "p95_ms": 0.678
+        },
+        "decode_ns": {
+          "median_ms": 1.147,
+          "p95_ms": 1.964
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 79.17,
+          "p95_ms": 110.112
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 77.944,
+          "p95_ms": 108.581
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 91.966,
+          "p95_ms": 126.58
+        },
+        "registration_ns": {
+          "median_ms": 1.042,
+          "p95_ms": 1.55
+        },
+        "readback_ns": {
+          "median_ms": 0.552,
+          "p95_ms": 0.796
+        },
+        "decode_ns": {
+          "median_ms": 1.678,
+          "p95_ms": 2.162
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 99.552,
+          "p95_ms": 136.601
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 98.282,
+          "p95_ms": 134.976
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 90,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 83.374,
+          "p95_ms": 115.786
+        },
+        "registration_ns": {
+          "median_ms": 1.046,
+          "p95_ms": 1.993
+        },
+        "readback_ns": {
+          "median_ms": 0.527,
+          "p95_ms": 0.825
+        },
+        "decode_ns": {
+          "median_ms": 1.571,
+          "p95_ms": 2.203
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 91.114,
+          "p95_ms": 126.108
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 89.681,
+          "p95_ms": 123.632
+        }
+      }
+    ],
+    "protocol": {
+      "kernel": "7.0.0-43-generic",
+      "scope": "original completion scanner; no live rootkit or strace",
+      "sizes": [
+        1,
+        64,
+        1024,
+        8192,
+        65536
+      ],
+      "buffers": [
+        256,
+        65536
+      ],
+      "filesystems": [
+        "ext4",
+        "tmpfs"
+      ],
+      "load_order": [
+        "io",
+        "cpu",
+        "idle",
+        "memory"
+      ],
+      "warmup_per_cell": 5,
+      "measured_per_cell": 30,
+      "seed": 20261115,
+      "script_sha256": "79150d7483c7da83d6d05b4f436017931862a516c8da837137a97d9ee400ac8b",
+      "scanner_sha256": {
+        "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+        "call_completion/bpf.c": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf"
+      },
+      "probe_sha256": "07255fe2083cee14edae4874892a74678d3f8d7722410acb414b843d6e189fc8"
+    },
+    "startup_ms_per_boot": {
+      "4119f88c-c85c-4ebd-8925-28b495c33c3b": 2329.668,
+      "ac9479af-9e88-4478-91f6-43183e45c20b": 2929.002,
+      "46adbad2-d06d-4164-ab30-a4027e1e4f37": 2036.459
+    }
+  },
+  "scope": {
+    "4119f88c-c85c-4ebd-8925-28b495c33c3b": {
+      "lifecycle_equal": 20,
+      "namespace_equal": 2,
+      "policy_control_passed": true,
+      "inode_control_passed": true,
+      "recovered_bytes": 4096
+    },
+    "ac9479af-9e88-4478-91f6-43183e45c20b": {
+      "lifecycle_equal": 20,
+      "namespace_equal": 2,
+      "policy_control_passed": true,
+      "inode_control_passed": true,
+      "recovered_bytes": 4096
+    },
+    "9e1d0920-1a7c-4ed0-a30c-7d6f36788b2e": {
+      "lifecycle_equal": 20,
+      "namespace_equal": 2,
+      "policy_control_passed": true,
+      "inode_control_passed": true,
+      "recovered_bytes": 4096
+    }
+  },
+  "original_comparison": {
+    "22": {
+      "boot_count": 9,
+      "batches": 1296,
+      "transactions": {
+        "total": 25920,
+        "control": 14400,
+        "invalid": 0,
+        "decode_success": 25920,
+        "decoded_exact": 25920,
+        "incorrect_success": 0,
+        "positive": 11520,
+        "positive_decode_success": 11520,
+        "positive_decoded_exact": 11520
+      },
+      "methods": {
+        "d9_alert": {
+          "tp": 576,
+          "fn": 0,
+          "fp": 0,
+          "tn": 720
+        },
+        "d8_count_alert": {
+          "tp": 432,
+          "fn": 144,
+          "fp": 0,
+          "tn": 720
+        },
+        "timing_mad_alert": {
+          "tp": 28,
+          "fn": 548,
+          "fp": 51,
+          "tn": 669
+        },
+        "timing_envelope_alert": {
+          "tp": 9,
+          "fn": 567,
+          "fp": 17,
+          "tn": 703
+        }
+      }
+    },
+    "26": {
+      "boot_count": 9,
+      "batches": 1296,
+      "transactions": {
+        "total": 25920,
+        "control": 14400,
+        "invalid": 0,
+        "decode_success": 25920,
+        "decoded_exact": 25920,
+        "incorrect_success": 0,
+        "positive": 11520,
+        "positive_decode_success": 11520,
+        "positive_decoded_exact": 11520
+      },
+      "methods": {
+        "d9_alert": {
+          "tp": 576,
+          "fn": 0,
+          "fp": 0,
+          "tn": 720
+        },
+        "d8_count_alert": {
+          "tp": 432,
+          "fn": 144,
+          "fp": 0,
+          "tn": 720
+        },
+        "timing_mad_alert": {
+          "tp": 29,
+          "fn": 547,
+          "fp": 54,
+          "tn": 666
+        },
+        "timing_envelope_alert": {
+          "tp": 17,
+          "fn": 559,
+          "fp": 29,
+          "tn": 691
+        }
+      }
+    }
+  },
+  "supplemental_cost_after_sample_unloaded": {
+    "cohorts": {
+      "9e1d0920-1a7c-4ed0-a30c-7d6f36788b2e": {
+        "source": "ubuntu26_extended_20261115_run05\\archived_observations\\9e1d0920-1a7c-4ed0-a30c-7d6f36788b2e\\cost_9e1d0920-1a7c-4ed0-a30c-7d6f36788b2e",
+        "warmup": 400,
+        "measured": 2400,
+        "alarms": 0,
+        "seconds": 103.9821339529999
+      }
+    },
+    "boot_count": 1,
+    "cost_matrix": [
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.023,
+          "p95_ms": 0.059
+        },
+        "registration_ns": {
+          "median_ms": 0.791,
+          "p95_ms": 2.073
+        },
+        "readback_ns": {
+          "median_ms": 0.356,
+          "p95_ms": 0.625
+        },
+        "decode_ns": {
+          "median_ms": 1.065,
+          "p95_ms": 2.013
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.941,
+          "p95_ms": 9.213
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.639,
+          "p95_ms": 7.636
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.035,
+          "p95_ms": 0.039
+        },
+        "registration_ns": {
+          "median_ms": 1.053,
+          "p95_ms": 3.782
+        },
+        "readback_ns": {
+          "median_ms": 0.471,
+          "p95_ms": 0.944
+        },
+        "decode_ns": {
+          "median_ms": 1.68,
+          "p95_ms": 2.556
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.376,
+          "p95_ms": 18.015
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.628,
+          "p95_ms": 16.373
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.029,
+          "p95_ms": 0.037
+        },
+        "registration_ns": {
+          "median_ms": 0.953,
+          "p95_ms": 1.444
+        },
+        "readback_ns": {
+          "median_ms": 0.457,
+          "p95_ms": 0.829
+        },
+        "decode_ns": {
+          "median_ms": 1.154,
+          "p95_ms": 2.643
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.763,
+          "p95_ms": 14.302
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.548,
+          "p95_ms": 12.788
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.027,
+          "p95_ms": 0.035
+        },
+        "registration_ns": {
+          "median_ms": 0.862,
+          "p95_ms": 2.03
+        },
+        "readback_ns": {
+          "median_ms": 0.392,
+          "p95_ms": 0.58
+        },
+        "decode_ns": {
+          "median_ms": 0.953,
+          "p95_ms": 1.767
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.707,
+          "p95_ms": 7.31
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.619,
+          "p95_ms": 6.117
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.024,
+          "p95_ms": 0.046
+        },
+        "registration_ns": {
+          "median_ms": 0.781,
+          "p95_ms": 2.08
+        },
+        "readback_ns": {
+          "median_ms": 0.375,
+          "p95_ms": 0.576
+        },
+        "decode_ns": {
+          "median_ms": 1.02,
+          "p95_ms": 2.99
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.721,
+          "p95_ms": 11.34
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.377,
+          "p95_ms": 8.387
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.034,
+          "p95_ms": 0.072
+        },
+        "registration_ns": {
+          "median_ms": 1.086,
+          "p95_ms": 2.905
+        },
+        "readback_ns": {
+          "median_ms": 0.471,
+          "p95_ms": 3.351
+        },
+        "decode_ns": {
+          "median_ms": 1.651,
+          "p95_ms": 10.682
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.644,
+          "p95_ms": 17.169
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.41,
+          "p95_ms": 15.436
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.033,
+          "p95_ms": 0.052
+        },
+        "registration_ns": {
+          "median_ms": 1.013,
+          "p95_ms": 2.271
+        },
+        "readback_ns": {
+          "median_ms": 0.44,
+          "p95_ms": 0.58
+        },
+        "decode_ns": {
+          "median_ms": 1.553,
+          "p95_ms": 2.064
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.037,
+          "p95_ms": 11.101
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.576,
+          "p95_ms": 8.608
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.025,
+          "p95_ms": 0.049
+        },
+        "registration_ns": {
+          "median_ms": 0.85,
+          "p95_ms": 1.072
+        },
+        "readback_ns": {
+          "median_ms": 0.357,
+          "p95_ms": 0.535
+        },
+        "decode_ns": {
+          "median_ms": 0.957,
+          "p95_ms": 1.832
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.645,
+          "p95_ms": 7.471
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.65,
+          "p95_ms": 6.527
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.156,
+          "p95_ms": 0.218
+        },
+        "registration_ns": {
+          "median_ms": 1.0,
+          "p95_ms": 1.823
+        },
+        "readback_ns": {
+          "median_ms": 0.496,
+          "p95_ms": 0.726
+        },
+        "decode_ns": {
+          "median_ms": 1.721,
+          "p95_ms": 2.301
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.931,
+          "p95_ms": 11.946
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.498,
+          "p95_ms": 10.19
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.155,
+          "p95_ms": 0.265
+        },
+        "registration_ns": {
+          "median_ms": 1.14,
+          "p95_ms": 2.943
+        },
+        "readback_ns": {
+          "median_ms": 0.519,
+          "p95_ms": 1.801
+        },
+        "decode_ns": {
+          "median_ms": 1.872,
+          "p95_ms": 3.171
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.658,
+          "p95_ms": 14.398
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.515,
+          "p95_ms": 12.391
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.16,
+          "p95_ms": 0.267
+        },
+        "registration_ns": {
+          "median_ms": 1.156,
+          "p95_ms": 1.449
+        },
+        "readback_ns": {
+          "median_ms": 0.495,
+          "p95_ms": 0.879
+        },
+        "decode_ns": {
+          "median_ms": 1.499,
+          "p95_ms": 2.071
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.249,
+          "p95_ms": 12.627
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.751,
+          "p95_ms": 9.29
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.153,
+          "p95_ms": 0.226
+        },
+        "registration_ns": {
+          "median_ms": 0.873,
+          "p95_ms": 1.157
+        },
+        "readback_ns": {
+          "median_ms": 0.389,
+          "p95_ms": 0.807
+        },
+        "decode_ns": {
+          "median_ms": 1.272,
+          "p95_ms": 1.965
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.542,
+          "p95_ms": 9.739
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.286,
+          "p95_ms": 7.617
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.134,
+          "p95_ms": 0.2
+        },
+        "registration_ns": {
+          "median_ms": 0.992,
+          "p95_ms": 3.966
+        },
+        "readback_ns": {
+          "median_ms": 0.472,
+          "p95_ms": 0.903
+        },
+        "decode_ns": {
+          "median_ms": 1.634,
+          "p95_ms": 2.584
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.655,
+          "p95_ms": 16.912
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.223,
+          "p95_ms": 12.731
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.132,
+          "p95_ms": 0.153
+        },
+        "registration_ns": {
+          "median_ms": 1.133,
+          "p95_ms": 4.6
+        },
+        "readback_ns": {
+          "median_ms": 0.568,
+          "p95_ms": 1.022
+        },
+        "decode_ns": {
+          "median_ms": 1.787,
+          "p95_ms": 2.541
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 10.109,
+          "p95_ms": 15.93
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.878,
+          "p95_ms": 14.082
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.126,
+          "p95_ms": 0.199
+        },
+        "registration_ns": {
+          "median_ms": 1.179,
+          "p95_ms": 7.431
+        },
+        "readback_ns": {
+          "median_ms": 0.489,
+          "p95_ms": 0.688
+        },
+        "decode_ns": {
+          "median_ms": 1.197,
+          "p95_ms": 2.068
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.697,
+          "p95_ms": 18.992
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.323,
+          "p95_ms": 17.221
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.119,
+          "p95_ms": 0.186
+        },
+        "registration_ns": {
+          "median_ms": 0.934,
+          "p95_ms": 1.206
+        },
+        "readback_ns": {
+          "median_ms": 0.412,
+          "p95_ms": 0.716
+        },
+        "decode_ns": {
+          "median_ms": 1.072,
+          "p95_ms": 3.054
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.503,
+          "p95_ms": 9.753
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.216,
+          "p95_ms": 7.928
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.811,
+          "p95_ms": 2.483
+        },
+        "registration_ns": {
+          "median_ms": 0.84,
+          "p95_ms": 1.152
+        },
+        "readback_ns": {
+          "median_ms": 0.425,
+          "p95_ms": 0.552
+        },
+        "decode_ns": {
+          "median_ms": 1.287,
+          "p95_ms": 2.087
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.035,
+          "p95_ms": 13.287
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.826,
+          "p95_ms": 12.038
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 2.025,
+          "p95_ms": 2.824
+        },
+        "registration_ns": {
+          "median_ms": 1.085,
+          "p95_ms": 1.792
+        },
+        "readback_ns": {
+          "median_ms": 0.509,
+          "p95_ms": 1.37
+        },
+        "decode_ns": {
+          "median_ms": 1.392,
+          "p95_ms": 2.028
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 10.883,
+          "p95_ms": 14.043
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 9.126,
+          "p95_ms": 12.166
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.694,
+          "p95_ms": 2.37
+        },
+        "registration_ns": {
+          "median_ms": 1.048,
+          "p95_ms": 1.317
+        },
+        "readback_ns": {
+          "median_ms": 0.386,
+          "p95_ms": 0.662
+        },
+        "decode_ns": {
+          "median_ms": 1.179,
+          "p95_ms": 7.463
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.208,
+          "p95_ms": 16.912
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.9,
+          "p95_ms": 15.603
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.64,
+          "p95_ms": 2.437
+        },
+        "registration_ns": {
+          "median_ms": 0.903,
+          "p95_ms": 1.355
+        },
+        "readback_ns": {
+          "median_ms": 0.423,
+          "p95_ms": 0.605
+        },
+        "decode_ns": {
+          "median_ms": 1.198,
+          "p95_ms": 4.13
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.743,
+          "p95_ms": 15.572
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.449,
+          "p95_ms": 11.587
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.602,
+          "p95_ms": 1.788
+        },
+        "registration_ns": {
+          "median_ms": 0.851,
+          "p95_ms": 1.208
+        },
+        "readback_ns": {
+          "median_ms": 0.424,
+          "p95_ms": 0.556
+        },
+        "decode_ns": {
+          "median_ms": 1.38,
+          "p95_ms": 2.021
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.445,
+          "p95_ms": 10.01
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.264,
+          "p95_ms": 8.642
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.424,
+          "p95_ms": 2.471
+        },
+        "registration_ns": {
+          "median_ms": 1.059,
+          "p95_ms": 2.755
+        },
+        "readback_ns": {
+          "median_ms": 0.5,
+          "p95_ms": 2.813
+        },
+        "decode_ns": {
+          "median_ms": 1.403,
+          "p95_ms": 2.822
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.293,
+          "p95_ms": 17.624
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.793,
+          "p95_ms": 15.713
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.393,
+          "p95_ms": 2.196
+        },
+        "registration_ns": {
+          "median_ms": 1.02,
+          "p95_ms": 1.524
+        },
+        "readback_ns": {
+          "median_ms": 0.501,
+          "p95_ms": 0.732
+        },
+        "decode_ns": {
+          "median_ms": 1.433,
+          "p95_ms": 2.658
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.179,
+          "p95_ms": 17.799
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.811,
+          "p95_ms": 15.696
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.466,
+          "p95_ms": 1.886
+        },
+        "registration_ns": {
+          "median_ms": 0.915,
+          "p95_ms": 2.551
+        },
+        "readback_ns": {
+          "median_ms": 0.381,
+          "p95_ms": 0.768
+        },
+        "decode_ns": {
+          "median_ms": 1.15,
+          "p95_ms": 1.795
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.225,
+          "p95_ms": 14.858
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.011,
+          "p95_ms": 10.161
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 15.347,
+          "p95_ms": 17.53
+        },
+        "registration_ns": {
+          "median_ms": 0.911,
+          "p95_ms": 6.829
+        },
+        "readback_ns": {
+          "median_ms": 0.433,
+          "p95_ms": 0.631
+        },
+        "decode_ns": {
+          "median_ms": 1.256,
+          "p95_ms": 2.565
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 22.634,
+          "p95_ms": 27.579
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 21.638,
+          "p95_ms": 26.091
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.619,
+          "p95_ms": 15.57
+        },
+        "registration_ns": {
+          "median_ms": 0.914,
+          "p95_ms": 1.345
+        },
+        "readback_ns": {
+          "median_ms": 0.354,
+          "p95_ms": 0.542
+        },
+        "decode_ns": {
+          "median_ms": 1.063,
+          "p95_ms": 1.816
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.372,
+          "p95_ms": 22.529
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.299,
+          "p95_ms": 21.556
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 17.31,
+          "p95_ms": 37.491
+        },
+        "registration_ns": {
+          "median_ms": 1.384,
+          "p95_ms": 10.645
+        },
+        "readback_ns": {
+          "median_ms": 0.555,
+          "p95_ms": 0.753
+        },
+        "decode_ns": {
+          "median_ms": 1.726,
+          "p95_ms": 2.01
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 27.772,
+          "p95_ms": 53.126
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 25.626,
+          "p95_ms": 46.394
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.87,
+          "p95_ms": 16.84
+        },
+        "registration_ns": {
+          "median_ms": 0.926,
+          "p95_ms": 1.904
+        },
+        "readback_ns": {
+          "median_ms": 0.411,
+          "p95_ms": 0.563
+        },
+        "decode_ns": {
+          "median_ms": 1.205,
+          "p95_ms": 1.851
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.974,
+          "p95_ms": 24.768
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.839,
+          "p95_ms": 23.435
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 11.571,
+          "p95_ms": 24.844
+        },
+        "registration_ns": {
+          "median_ms": 0.921,
+          "p95_ms": 1.793
+        },
+        "readback_ns": {
+          "median_ms": 0.487,
+          "p95_ms": 0.65
+        },
+        "decode_ns": {
+          "median_ms": 1.501,
+          "p95_ms": 2.079
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 18.026,
+          "p95_ms": 33.205
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.865,
+          "p95_ms": 31.86
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.178,
+          "p95_ms": 14.137
+        },
+        "registration_ns": {
+          "median_ms": 0.88,
+          "p95_ms": 1.201
+        },
+        "readback_ns": {
+          "median_ms": 0.395,
+          "p95_ms": 0.655
+        },
+        "decode_ns": {
+          "median_ms": 1.1,
+          "p95_ms": 2.048
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.33,
+          "p95_ms": 21.635
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.13,
+          "p95_ms": 20.202
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 15.094,
+          "p95_ms": 34.663
+        },
+        "registration_ns": {
+          "median_ms": 1.268,
+          "p95_ms": 2.578
+        },
+        "readback_ns": {
+          "median_ms": 0.572,
+          "p95_ms": 0.856
+        },
+        "decode_ns": {
+          "median_ms": 1.681,
+          "p95_ms": 2.025
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 25.659,
+          "p95_ms": 47.332
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 23.695,
+          "p95_ms": 45.314
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.365,
+          "p95_ms": 15.242
+        },
+        "registration_ns": {
+          "median_ms": 0.91,
+          "p95_ms": 3.493
+        },
+        "readback_ns": {
+          "median_ms": 0.42,
+          "p95_ms": 0.584
+        },
+        "decode_ns": {
+          "median_ms": 1.251,
+          "p95_ms": 1.973
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.498,
+          "p95_ms": 25.52
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.34,
+          "p95_ms": 24.17
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 114.815,
+          "p95_ms": 155.861
+        },
+        "registration_ns": {
+          "median_ms": 1.018,
+          "p95_ms": 3.244
+        },
+        "readback_ns": {
+          "median_ms": 0.499,
+          "p95_ms": 0.668
+        },
+        "decode_ns": {
+          "median_ms": 1.281,
+          "p95_ms": 2.029
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 121.785,
+          "p95_ms": 163.836
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 120.729,
+          "p95_ms": 162.819
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 103.502,
+          "p95_ms": 174.367
+        },
+        "registration_ns": {
+          "median_ms": 1.009,
+          "p95_ms": 3.739
+        },
+        "readback_ns": {
+          "median_ms": 0.392,
+          "p95_ms": 0.691
+        },
+        "decode_ns": {
+          "median_ms": 1.181,
+          "p95_ms": 1.956
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 111.296,
+          "p95_ms": 184.359
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 109.722,
+          "p95_ms": 182.402
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 125.004,
+          "p95_ms": 167.101
+        },
+        "registration_ns": {
+          "median_ms": 1.089,
+          "p95_ms": 1.262
+        },
+        "readback_ns": {
+          "median_ms": 0.508,
+          "p95_ms": 0.661
+        },
+        "decode_ns": {
+          "median_ms": 1.634,
+          "p95_ms": 2.167
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 133.723,
+          "p95_ms": 175.175
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 132.36,
+          "p95_ms": 173.951
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 107.735,
+          "p95_ms": 137.734
+        },
+        "registration_ns": {
+          "median_ms": 0.939,
+          "p95_ms": 1.42
+        },
+        "readback_ns": {
+          "median_ms": 0.492,
+          "p95_ms": 0.703
+        },
+        "decode_ns": {
+          "median_ms": 1.496,
+          "p95_ms": 1.96
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 115.731,
+          "p95_ms": 144.259
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 114.48,
+          "p95_ms": 143.285
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 91.555,
+          "p95_ms": 111.693
+        },
+        "registration_ns": {
+          "median_ms": 0.957,
+          "p95_ms": 1.16
+        },
+        "readback_ns": {
+          "median_ms": 0.476,
+          "p95_ms": 0.583
+        },
+        "decode_ns": {
+          "median_ms": 1.147,
+          "p95_ms": 1.762
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 97.829,
+          "p95_ms": 118.898
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 96.707,
+          "p95_ms": 117.86
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 88.918,
+          "p95_ms": 115.357
+        },
+        "registration_ns": {
+          "median_ms": 0.977,
+          "p95_ms": 2.474
+        },
+        "readback_ns": {
+          "median_ms": 0.451,
+          "p95_ms": 1.11
+        },
+        "decode_ns": {
+          "median_ms": 1.297,
+          "p95_ms": 1.981
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 97.259,
+          "p95_ms": 124.087
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 96.051,
+          "p95_ms": 122.755
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 96.139,
+          "p95_ms": 120.273
+        },
+        "registration_ns": {
+          "median_ms": 1.088,
+          "p95_ms": 3.508
+        },
+        "readback_ns": {
+          "median_ms": 0.475,
+          "p95_ms": 0.83
+        },
+        "decode_ns": {
+          "median_ms": 1.342,
+          "p95_ms": 2.311
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 105.125,
+          "p95_ms": 129.278
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 103.897,
+          "p95_ms": 127.347
+        }
+      },
+      {
+        "filesystem": "ext4",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 84.251,
+          "p95_ms": 98.011
+        },
+        "registration_ns": {
+          "median_ms": 0.996,
+          "p95_ms": 1.802
+        },
+        "readback_ns": {
+          "median_ms": 0.458,
+          "p95_ms": 0.848
+        },
+        "decode_ns": {
+          "median_ms": 1.269,
+          "p95_ms": 2.078
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 93.448,
+          "p95_ms": 105.548
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 90.698,
+          "p95_ms": 104.216
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.022,
+          "p95_ms": 0.053
+        },
+        "registration_ns": {
+          "median_ms": 1.016,
+          "p95_ms": 1.639
+        },
+        "readback_ns": {
+          "median_ms": 0.437,
+          "p95_ms": 0.657
+        },
+        "decode_ns": {
+          "median_ms": 1.274,
+          "p95_ms": 1.886
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.175,
+          "p95_ms": 11.531
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.813,
+          "p95_ms": 9.938
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.021,
+          "p95_ms": 0.027
+        },
+        "registration_ns": {
+          "median_ms": 0.913,
+          "p95_ms": 2.492
+        },
+        "readback_ns": {
+          "median_ms": 0.391,
+          "p95_ms": 0.874
+        },
+        "decode_ns": {
+          "median_ms": 1.058,
+          "p95_ms": 2.473
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.191,
+          "p95_ms": 11.537
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.028,
+          "p95_ms": 9.041
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.024,
+          "p95_ms": 0.029
+        },
+        "registration_ns": {
+          "median_ms": 1.09,
+          "p95_ms": 1.53
+        },
+        "readback_ns": {
+          "median_ms": 0.452,
+          "p95_ms": 0.737
+        },
+        "decode_ns": {
+          "median_ms": 1.369,
+          "p95_ms": 2.479
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.198,
+          "p95_ms": 14.808
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.864,
+          "p95_ms": 9.97
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.016,
+          "p95_ms": 0.022
+        },
+        "registration_ns": {
+          "median_ms": 0.829,
+          "p95_ms": 0.979
+        },
+        "readback_ns": {
+          "median_ms": 0.334,
+          "p95_ms": 0.476
+        },
+        "decode_ns": {
+          "median_ms": 0.905,
+          "p95_ms": 1.62
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.004,
+          "p95_ms": 6.942
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.038,
+          "p95_ms": 5.456
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.023,
+          "p95_ms": 0.028
+        },
+        "registration_ns": {
+          "median_ms": 1.047,
+          "p95_ms": 3.289
+        },
+        "readback_ns": {
+          "median_ms": 0.393,
+          "p95_ms": 1.167
+        },
+        "decode_ns": {
+          "median_ms": 1.251,
+          "p95_ms": 3.335
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.954,
+          "p95_ms": 16.507
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.568,
+          "p95_ms": 14.843
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.019,
+          "p95_ms": 0.049
+        },
+        "registration_ns": {
+          "median_ms": 0.96,
+          "p95_ms": 2.314
+        },
+        "readback_ns": {
+          "median_ms": 0.394,
+          "p95_ms": 0.819
+        },
+        "decode_ns": {
+          "median_ms": 1.242,
+          "p95_ms": 2.342
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.454,
+          "p95_ms": 9.98
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.177,
+          "p95_ms": 8.172
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.024,
+          "p95_ms": 0.028
+        },
+        "registration_ns": {
+          "median_ms": 1.121,
+          "p95_ms": 1.424
+        },
+        "readback_ns": {
+          "median_ms": 0.47,
+          "p95_ms": 0.611
+        },
+        "decode_ns": {
+          "median_ms": 1.323,
+          "p95_ms": 2.374
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.521,
+          "p95_ms": 13.043
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.991,
+          "p95_ms": 11.5
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.017,
+          "p95_ms": 0.024
+        },
+        "registration_ns": {
+          "median_ms": 0.786,
+          "p95_ms": 1.049
+        },
+        "readback_ns": {
+          "median_ms": 0.322,
+          "p95_ms": 0.461
+        },
+        "decode_ns": {
+          "median_ms": 0.912,
+          "p95_ms": 1.466
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.14,
+          "p95_ms": 7.635
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.243,
+          "p95_ms": 6.504
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.12,
+          "p95_ms": 0.221
+        },
+        "registration_ns": {
+          "median_ms": 0.863,
+          "p95_ms": 1.257
+        },
+        "readback_ns": {
+          "median_ms": 0.414,
+          "p95_ms": 0.974
+        },
+        "decode_ns": {
+          "median_ms": 1.353,
+          "p95_ms": 1.931
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.625,
+          "p95_ms": 10.897
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.444,
+          "p95_ms": 8.699
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.103,
+          "p95_ms": 0.183
+        },
+        "registration_ns": {
+          "median_ms": 0.802,
+          "p95_ms": 1.111
+        },
+        "readback_ns": {
+          "median_ms": 0.356,
+          "p95_ms": 0.496
+        },
+        "decode_ns": {
+          "median_ms": 1.075,
+          "p95_ms": 1.96
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.875,
+          "p95_ms": 7.841
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.81,
+          "p95_ms": 6.996
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.144,
+          "p95_ms": 0.318
+        },
+        "registration_ns": {
+          "median_ms": 1.233,
+          "p95_ms": 2.88
+        },
+        "readback_ns": {
+          "median_ms": 0.545,
+          "p95_ms": 8.059
+        },
+        "decode_ns": {
+          "median_ms": 1.705,
+          "p95_ms": 2.12
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.656,
+          "p95_ms": 19.245
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.556,
+          "p95_ms": 17.878
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.123,
+          "p95_ms": 0.185
+        },
+        "registration_ns": {
+          "median_ms": 0.87,
+          "p95_ms": 1.261
+        },
+        "readback_ns": {
+          "median_ms": 0.404,
+          "p95_ms": 0.594
+        },
+        "decode_ns": {
+          "median_ms": 1.248,
+          "p95_ms": 2.228
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 6.691,
+          "p95_ms": 11.005
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.481,
+          "p95_ms": 9.641
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.096,
+          "p95_ms": 0.116
+        },
+        "registration_ns": {
+          "median_ms": 0.844,
+          "p95_ms": 1.977
+        },
+        "readback_ns": {
+          "median_ms": 0.423,
+          "p95_ms": 0.813
+        },
+        "decode_ns": {
+          "median_ms": 1.504,
+          "p95_ms": 2.244
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.138,
+          "p95_ms": 9.54
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.854,
+          "p95_ms": 7.892
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.084,
+          "p95_ms": 0.16
+        },
+        "registration_ns": {
+          "median_ms": 0.786,
+          "p95_ms": 1.069
+        },
+        "readback_ns": {
+          "median_ms": 0.348,
+          "p95_ms": 0.646
+        },
+        "decode_ns": {
+          "median_ms": 1.075,
+          "p95_ms": 2.074
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 5.816,
+          "p95_ms": 7.658
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 4.746,
+          "p95_ms": 6.369
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.108,
+          "p95_ms": 0.153
+        },
+        "registration_ns": {
+          "median_ms": 1.145,
+          "p95_ms": 1.545
+        },
+        "readback_ns": {
+          "median_ms": 0.57,
+          "p95_ms": 0.709
+        },
+        "decode_ns": {
+          "median_ms": 1.741,
+          "p95_ms": 2.854
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.912,
+          "p95_ms": 18.313
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.274,
+          "p95_ms": 16.571
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 64,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 0.1,
+          "p95_ms": 0.155
+        },
+        "registration_ns": {
+          "median_ms": 0.96,
+          "p95_ms": 4.557
+        },
+        "readback_ns": {
+          "median_ms": 0.394,
+          "p95_ms": 0.867
+        },
+        "decode_ns": {
+          "median_ms": 1.41,
+          "p95_ms": 2.431
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.202,
+          "p95_ms": 13.034
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 5.685,
+          "p95_ms": 11.614
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.592,
+          "p95_ms": 2.059
+        },
+        "registration_ns": {
+          "median_ms": 0.911,
+          "p95_ms": 1.124
+        },
+        "readback_ns": {
+          "median_ms": 0.394,
+          "p95_ms": 0.529
+        },
+        "decode_ns": {
+          "median_ms": 1.258,
+          "p95_ms": 1.941
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.666,
+          "p95_ms": 11.889
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 7.342,
+          "p95_ms": 10.503
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.384,
+          "p95_ms": 2.078
+        },
+        "registration_ns": {
+          "median_ms": 0.959,
+          "p95_ms": 1.219
+        },
+        "readback_ns": {
+          "median_ms": 0.382,
+          "p95_ms": 0.729
+        },
+        "decode_ns": {
+          "median_ms": 1.078,
+          "p95_ms": 2.579
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.104,
+          "p95_ms": 10.787
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.87,
+          "p95_ms": 8.969
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.761,
+          "p95_ms": 2.842
+        },
+        "registration_ns": {
+          "median_ms": 1.16,
+          "p95_ms": 1.598
+        },
+        "readback_ns": {
+          "median_ms": 0.537,
+          "p95_ms": 0.723
+        },
+        "decode_ns": {
+          "median_ms": 1.559,
+          "p95_ms": 2.029
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 9.799,
+          "p95_ms": 16.456
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.322,
+          "p95_ms": 14.863
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.443,
+          "p95_ms": 2.036
+        },
+        "registration_ns": {
+          "median_ms": 0.878,
+          "p95_ms": 1.353
+        },
+        "readback_ns": {
+          "median_ms": 0.397,
+          "p95_ms": 0.647
+        },
+        "decode_ns": {
+          "median_ms": 1.072,
+          "p95_ms": 2.03
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.94,
+          "p95_ms": 11.405
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.946,
+          "p95_ms": 9.645
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.28,
+          "p95_ms": 1.586
+        },
+        "registration_ns": {
+          "median_ms": 0.902,
+          "p95_ms": 1.598
+        },
+        "readback_ns": {
+          "median_ms": 0.391,
+          "p95_ms": 0.546
+        },
+        "decode_ns": {
+          "median_ms": 1.251,
+          "p95_ms": 2.042
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 8.217,
+          "p95_ms": 10.853
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.894,
+          "p95_ms": 9.37
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.127,
+          "p95_ms": 1.708
+        },
+        "registration_ns": {
+          "median_ms": 0.948,
+          "p95_ms": 1.238
+        },
+        "readback_ns": {
+          "median_ms": 0.355,
+          "p95_ms": 0.702
+        },
+        "decode_ns": {
+          "median_ms": 1.069,
+          "p95_ms": 2.267
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.761,
+          "p95_ms": 12.901
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.545,
+          "p95_ms": 10.272
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.452,
+          "p95_ms": 1.741
+        },
+        "registration_ns": {
+          "median_ms": 1.183,
+          "p95_ms": 2.355
+        },
+        "readback_ns": {
+          "median_ms": 0.51,
+          "p95_ms": 0.681
+        },
+        "decode_ns": {
+          "median_ms": 1.485,
+          "p95_ms": 2.425
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 10.127,
+          "p95_ms": 16.596
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 8.533,
+          "p95_ms": 15.541
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 1024,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 1.17,
+          "p95_ms": 1.808
+        },
+        "registration_ns": {
+          "median_ms": 0.93,
+          "p95_ms": 1.317
+        },
+        "readback_ns": {
+          "median_ms": 0.346,
+          "p95_ms": 0.658
+        },
+        "decode_ns": {
+          "median_ms": 1.058,
+          "p95_ms": 2.324
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 7.863,
+          "p95_ms": 13.048
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 6.933,
+          "p95_ms": 10.675
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 13.49,
+          "p95_ms": 19.525
+        },
+        "registration_ns": {
+          "median_ms": 0.924,
+          "p95_ms": 1.675
+        },
+        "readback_ns": {
+          "median_ms": 0.478,
+          "p95_ms": 0.57
+        },
+        "decode_ns": {
+          "median_ms": 1.626,
+          "p95_ms": 2.078
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 21.361,
+          "p95_ms": 35.786
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 20.116,
+          "p95_ms": 34.462
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 14.215,
+          "p95_ms": 20.127
+        },
+        "registration_ns": {
+          "median_ms": 1.103,
+          "p95_ms": 3.453
+        },
+        "readback_ns": {
+          "median_ms": 0.512,
+          "p95_ms": 0.738
+        },
+        "decode_ns": {
+          "median_ms": 1.479,
+          "p95_ms": 2.09
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 23.105,
+          "p95_ms": 34.161
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 21.659,
+          "p95_ms": 32.76
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 12.789,
+          "p95_ms": 21.54
+        },
+        "registration_ns": {
+          "median_ms": 0.956,
+          "p95_ms": 4.505
+        },
+        "readback_ns": {
+          "median_ms": 0.427,
+          "p95_ms": 0.869
+        },
+        "decode_ns": {
+          "median_ms": 1.174,
+          "p95_ms": 2.264
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.79,
+          "p95_ms": 30.941
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.728,
+          "p95_ms": 29.69
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 11.608,
+          "p95_ms": 16.447
+        },
+        "registration_ns": {
+          "median_ms": 0.944,
+          "p95_ms": 6.416
+        },
+        "readback_ns": {
+          "median_ms": 0.467,
+          "p95_ms": 0.679
+        },
+        "decode_ns": {
+          "median_ms": 1.305,
+          "p95_ms": 1.942
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.76,
+          "p95_ms": 27.911
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.308,
+          "p95_ms": 26.712
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 11.024,
+          "p95_ms": 18.199
+        },
+        "registration_ns": {
+          "median_ms": 0.957,
+          "p95_ms": 1.274
+        },
+        "readback_ns": {
+          "median_ms": 0.473,
+          "p95_ms": 0.588
+        },
+        "decode_ns": {
+          "median_ms": 1.201,
+          "p95_ms": 1.944
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.925,
+          "p95_ms": 26.001
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.629,
+          "p95_ms": 24.542
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.505,
+          "p95_ms": 18.381
+        },
+        "registration_ns": {
+          "median_ms": 1.078,
+          "p95_ms": 2.005
+        },
+        "readback_ns": {
+          "median_ms": 0.567,
+          "p95_ms": 0.681
+        },
+        "decode_ns": {
+          "median_ms": 1.723,
+          "p95_ms": 2.006
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 19.54,
+          "p95_ms": 28.062
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 18.173,
+          "p95_ms": 26.33
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 10.222,
+          "p95_ms": 19.429
+        },
+        "registration_ns": {
+          "median_ms": 0.949,
+          "p95_ms": 1.731
+        },
+        "readback_ns": {
+          "median_ms": 0.49,
+          "p95_ms": 0.702
+        },
+        "decode_ns": {
+          "median_ms": 1.645,
+          "p95_ms": 2.253
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 17.842,
+          "p95_ms": 28.942
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 16.512,
+          "p95_ms": 27.03
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 8192,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 9.829,
+          "p95_ms": 13.7
+        },
+        "registration_ns": {
+          "median_ms": 0.998,
+          "p95_ms": 1.32
+        },
+        "readback_ns": {
+          "median_ms": 0.419,
+          "p95_ms": 0.627
+        },
+        "decode_ns": {
+          "median_ms": 1.343,
+          "p95_ms": 2.308
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 16.787,
+          "p95_ms": 22.396
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 15.556,
+          "p95_ms": 20.324
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 107.972,
+          "p95_ms": 138.847
+        },
+        "registration_ns": {
+          "median_ms": 1.168,
+          "p95_ms": 8.585
+        },
+        "readback_ns": {
+          "median_ms": 0.515,
+          "p95_ms": 0.867
+        },
+        "decode_ns": {
+          "median_ms": 1.467,
+          "p95_ms": 2.105
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 119.174,
+          "p95_ms": 150.066
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 117.378,
+          "p95_ms": 146.441
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 96.385,
+          "p95_ms": 118.789
+        },
+        "registration_ns": {
+          "median_ms": 1.025,
+          "p95_ms": 1.29
+        },
+        "readback_ns": {
+          "median_ms": 0.485,
+          "p95_ms": 0.703
+        },
+        "decode_ns": {
+          "median_ms": 1.063,
+          "p95_ms": 1.823
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 103.78,
+          "p95_ms": 125.246
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 102.688,
+          "p95_ms": 124.363
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 114.937,
+          "p95_ms": 131.933
+        },
+        "registration_ns": {
+          "median_ms": 1.059,
+          "p95_ms": 4.252
+        },
+        "readback_ns": {
+          "median_ms": 0.439,
+          "p95_ms": 0.635
+        },
+        "decode_ns": {
+          "median_ms": 1.302,
+          "p95_ms": 2.005
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 122.795,
+          "p95_ms": 139.901
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 121.813,
+          "p95_ms": 138.658
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 256,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 99.074,
+          "p95_ms": 126.415
+        },
+        "registration_ns": {
+          "median_ms": 0.981,
+          "p95_ms": 1.361
+        },
+        "readback_ns": {
+          "median_ms": 0.469,
+          "p95_ms": 0.727
+        },
+        "decode_ns": {
+          "median_ms": 1.181,
+          "p95_ms": 1.923
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 106.558,
+          "p95_ms": 136.805
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 105.56,
+          "p95_ms": 135.022
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "cpu",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 83.63,
+          "p95_ms": 113.155
+        },
+        "registration_ns": {
+          "median_ms": 1.135,
+          "p95_ms": 2.207
+        },
+        "readback_ns": {
+          "median_ms": 0.512,
+          "p95_ms": 0.614
+        },
+        "decode_ns": {
+          "median_ms": 1.484,
+          "p95_ms": 2.002
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 92.203,
+          "p95_ms": 122.184
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 90.365,
+          "p95_ms": 119.864
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "idle",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 70.713,
+          "p95_ms": 91.784
+        },
+        "registration_ns": {
+          "median_ms": 0.985,
+          "p95_ms": 1.345
+        },
+        "readback_ns": {
+          "median_ms": 0.44,
+          "p95_ms": 0.783
+        },
+        "decode_ns": {
+          "median_ms": 1.059,
+          "p95_ms": 1.828
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 78.066,
+          "p95_ms": 100.09
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 76.649,
+          "p95_ms": 98.716
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "io",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 90.933,
+          "p95_ms": 133.381
+        },
+        "registration_ns": {
+          "median_ms": 1.062,
+          "p95_ms": 6.541
+        },
+        "readback_ns": {
+          "median_ms": 0.556,
+          "p95_ms": 0.996
+        },
+        "decode_ns": {
+          "median_ms": 1.451,
+          "p95_ms": 2.247
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 100.533,
+          "p95_ms": 141.328
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 99.474,
+          "p95_ms": 139.676
+        }
+      },
+      {
+        "filesystem": "tmpfs",
+        "files": 65536,
+        "buffer_bytes": 65536,
+        "load": "memory",
+        "valid": 30,
+        "state_value_bytes": [
+          10856
+        ],
+        "probe_scan_ns": {
+          "median_ms": 79.658,
+          "p95_ms": 105.479
+        },
+        "registration_ns": {
+          "median_ms": 1.019,
+          "p95_ms": 1.362
+        },
+        "readback_ns": {
+          "median_ms": 0.405,
+          "p95_ms": 0.87
+        },
+        "decode_ns": {
+          "median_ms": 1.177,
+          "p95_ms": 2.243
+        },
+        "wall_with_all_checks_ns": {
+          "median_ms": 86.718,
+          "p95_ms": 112.784
+        },
+        "wall_with_all_quality_and_recovery_ns": {
+          "median_ms": 85.617,
+          "p95_ms": 111.559
+        }
+      }
+    ],
+    "protocol": {
+      "kernel": "7.0.0-43-generic",
+      "scope": "original completion scanner; no live rootkit or strace",
+      "sizes": [
+        1,
+        64,
+        1024,
+        8192,
+        65536
+      ],
+      "buffers": [
+        256,
+        65536
+      ],
+      "filesystems": [
+        "ext4",
+        "tmpfs"
+      ],
+      "load_order": [
+        "io",
+        "cpu",
+        "idle",
+        "memory"
+      ],
+      "warmup_per_cell": 5,
+      "measured_per_cell": 30,
+      "seed": 20261115,
+      "script_sha256": "79150d7483c7da83d6d05b4f436017931862a516c8da837137a97d9ee400ac8b",
+      "scanner_sha256": {
+        "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+        "call_completion/bpf.c": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf"
+      },
+      "probe_sha256": "07255fe2083cee14edae4874892a74678d3f8d7722410acb414b843d6e189fc8"
+    },
+    "startup_ms_per_boot": {
+      "9e1d0920-1a7c-4ed0-a30c-7d6f36788b2e": 2036.069
+    }
+  },
+  "protected_checkout": {
+    "matched_pre_run": true,
+    "head": "99c5f412d3e2cf1a471689fa9e36dfb56ca387a8",
+    "status": "30c8a30ed109bf1f1b8fd396b51cac94ea019bb27fd3696a658726aab2f1760b",
+    "tracked_diff": "f65110238045cbcc126ccace8ec995bb7d82929ad0800e0926abbd30808295ea"
+  }
+}

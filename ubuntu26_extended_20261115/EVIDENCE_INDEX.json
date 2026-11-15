@@ -1,0 +1,59 @@
+{
+  "raw_files_in_this_github_update": false,
+  "local_sources": [
+    {
+      "path": "ubuntu26_extended_20261115_run01/RESULTS.json",
+      "bytes": 23293,
+      "sha256": "0d331758f4eb5aaa061897d88c7051e1e5e260825f69cdee1eabd8ed526ad11f"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run01/capacity_trials.jsonl.gz",
+      "bytes": 277930,
+      "sha256": "57bc7b07fb4e18255b66af373d0084317c73712b811001be92a473211d83b90f"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run01/three_view_transcripts.jsonl.gz",
+      "bytes": 1826517,
+      "sha256": "3ea39f22e7dcb49ba15985027eb21cd66b5e0d17d078c51d1c07c70781aeb46f"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run02/trace_heldout_predictions.jsonl",
+      "bytes": 223549,
+      "sha256": "a02cba52fd432a62e8aa9755d75e586d1d46b743aae2df212a9178c6d5efe501"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run05/raw_evidence_vetted.json",
+      "bytes": 135067,
+      "sha256": "b0a1f2c867d8ef058561ec3d08d02d193110ae03842e259ce32c88b576497904"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run05/SHA256SUMS.json",
+      "bytes": 333030,
+      "sha256": "21cf862fcb4b705751f2eded9c3e82ca997c58423565ea6b39c3eaef94b1279f"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run06/SHA256SUMS.json",
+      "bytes": 947289,
+      "sha256": "7d99fef2eac0fbd32f5d785b55fb50cef3703605007176d9f6eb720fa9109d04"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run07/libc_cost_0acaf488-ebe6-477c-8ba5-a7a438b1f19e_v2/measurements.jsonl",
+      "bytes": 1072691,
+      "sha256": "78cc486938e5a65fa685e6a14a27f9b7b76a422503227352cd66db759986f602"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run07/libc_cost_38957723-1f27-4bac-bdf0-3c93e52ea7d6_v2/measurements.jsonl",
+      "bytes": 1072717,
+      "sha256": "de48fd4de3e93784a8fce3d887de88082e7f55a889e214b181163bcbad9a67a6"
+    },
+    {
+      "path": "ubuntu26_extended_20261115_run07/libc_cost_46410761-8d51-42c7-a61d-33a414765146_v2/measurements.jsonl",
+      "bytes": 1073201,
+      "sha256": "57868cb30fd894b11cfd01fc1ac3fb200a5db543a7be36a3b8f63a964cea3ad3"
+    }
+  ],
+  "collection_manifests": {
+    "run05": 1223,
+    "run06": 4806
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "EVIDENCE_INDEX.json": {
+    "bytes": 2260,
+    "sha256": "840949e14650945bad0933e9d9bba12a076c55e1e11834861bfcc1c92d224c16"
+  },
+  "metrics/application_component_cost.json": {
+    "bytes": 90896,
+    "sha256": "cfdd5a407f201127a39d9aab107bb08b8c6488ae01ec3b482aa8376e22365ffe"
+  },
+  "metrics/comparison_verification.json": {
+    "bytes": 7191,
+    "sha256": "893883541ace83e246ff0141203297364da8ec479655a91e4fdeaf0d50ec0d68"
+  },
+  "metrics/complementary_tool_availability.json": {
+    "bytes": 660,
+    "sha256": "92bf8cb624e82fae06c6be1910dc70bf1a94cc5f21070a74bfc970802cd854d6"
+  },
+  "metrics/core_cost_and_os_comparison.json": {
+    "bytes": 139728,
+    "sha256": "3e68724c6a0d92add62a9988210d24d50d9b122b470375def07abd81258bcbbb"
+  },
+  "metrics/decloaker_path_verification.json": {
+    "bytes": 965,
+    "sha256": "79d5f51fb966792da373f4a0a2586992200959d92c8b673d3d1aff8b6c1da67b"
+  },
+  "metrics/directory_control_verification.json": {
+    "bytes": 12267,
+    "sha256": "87bd5d44ed4446847eee3954da52b407844499a211c4dd8abdab3f41e24cf358"
+  },
+  "PLAN_STATUS.json": {
+    "bytes": 10845,
+    "sha256": "c5c14287109c26b26d2ac5f50507dd79c585af60fd954d2f393c87c753b9293e"
+  },
+  "reports/應用程式端成本.txt": {
+    "bytes": 2740,
+    "sha256": "5fbefe17fa1d38ed4439ca5bd79b8bbe64a22d029f9c414061a7e27dc9ea9587"
+  },
+  "reports/正常控制與比較.txt": {
+    "bytes": 5913,
+    "sha256": "a79b3178eaed246215ff2a3c763b0c76626968fc2c766e3de21dcbcd0527f12c"
+  },
+  "reports/版本比較與取檔.txt": {
+    "bytes": 12795,
+    "sha256": "c26ad4d75b4eb601cc7f038c4c6610bfb502def43817d192a78f0433f8df22da"
+  },
+  "RESULTS.json": {
+    "bytes": 17343,
+    "sha256": "fad66a0057a0f6b63120da42c279a525fedc28aac93285da83e0d99e2508bcd2"
+  },
+  "STATUS.txt": {
+    "bytes": 3050,
+    "sha256": "2d5ed881183cc191afaf9b5a5719a547454aaeb4ab39aadfb64b8ecdec815986"
+  },
+  "計數說明.txt": {
+    "bytes": 1387,
+    "sha256": "975ba9299c902121ea7174087134e2ce7ddcfadb8ff2eaf13b8476117ae34f67"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "boot": "46410761-8d51-42c7-a61d-33a414765146",
+  "returncode": 0,
+  "stdout": "rkhunter: no executable on PATH\nchkrootkit: no executable on PATH\ntracee: no executable on PATH\nfalco: no executable on PATH\nvol: no executable on PATH\nvol3: no executable on PATH\nvolatility: no executable on PATH\nsandfly-agent: no executable on PATH\n",
+  "stderr": "dpkg-query: no packages found matching rkhunter\ndpkg-query: no packages found matching chkrootkit\ndpkg-query: no packages found matching falco\ndpkg-query: no packages found matching tracee\ndpkg-query: no packages found matching volatility3\ndpkg-query: no packages found matching sandfly\n"
+}

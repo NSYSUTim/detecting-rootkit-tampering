@@ -1,0 +1,24 @@
+{
+  "path_control": {
+    "equal_no_report": 20,
+    "deleted_exact_path_reported": 20
+  },
+  "protocol": {
+    "boot_id": "46410761-8d51-42c7-a61d-33a414765146",
+    "kernel": "7.0.0-43-generic",
+    "tool": {
+      "argv": [
+        "/home/kicba/ubuntu26_20261114/runtime_setup_01/decloaker-v0.0",
+        "--version"
+      ],
+      "returncode": 0,
+      "stdout": "decloaker - v0.0.9\nCopyright (C) Gustavo I\u00f1iguez Goya\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\t\n\n",
+      "stderr": ""
+    },
+    "tool_sha256": "a275fea94173b48bb15bab215965cbf2cce76e12137f27248bb60696864428ca",
+    "scope": "ordinary file removal after a read-only ext4 snapshot",
+    "planned_fixtures": 20,
+    "utc": "2026-11-15T09:41:56.350589+00:00"
+  },
+  "original_checkout_matches": true
+}

@@ -1,0 +1,186 @@
+{
+  "status": "evidence_verified_protocol_order_contaminated",
+  "sample": "MatheuZSecurity/Singularity",
+  "commit": "074f3852240bf9c37bc9173cb34efa8e9f668798",
+  "module_sha256": "bd544564fd1412665b531c6b32032af0421977817681ce4f6078b03583e00e49",
+  "boots_verified": 3,
+  "observations_replayed": 360,
+  "per_boot": [
+    {
+      "boot": "03957761-ebcd-4400-a924-ea3423885d17",
+      "protocol_sha256": "7b3f8d446ee7f6b5b361dd0159aeb2aeee26031bcc764c704cb68bc3d29d2d74",
+      "observations_sha256": "ed3abdce8bfe296c7d654369f93a83bf0ef01fdefbe004f13a19bf5b30cee241",
+      "summary_sha256": "47e0788d4732df4c818978da6cc909419d5ce5ce91586b49e285294450229c37",
+      "archive_sha256": "54f47be4d3f9b6982f6376b986c3d75c484aead3711935593d73b86c57af79ff",
+      "archive_bytes": 623302,
+      "counts": {
+        "unloaded": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 0,
+          "all_workers_hidden": 0,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        },
+        "loaded_no_marker": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 38,
+          "all_workers_hidden": 38,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        },
+        "active": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 40,
+          "all_workers_hidden": 40,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        }
+      },
+      "clean_no_marker_observations": 2,
+      "order_contaminated_no_marker_observations": 38,
+      "clean_explicit_transition_active_observations": 2,
+      "already_hidden_before_own_trigger_active_observations": 38
+    },
+    {
+      "boot": "d3957474-ba86-467d-85bb-c53dae509d36",
+      "protocol_sha256": "044f5fc118ed264990e25f3e11018020f390962fd3a713e1780f073b69d589f8",
+      "observations_sha256": "33e7431539d140f79cfc2ef6774e08b2902530cb1d9ff9fdc96945a56e332c7a",
+      "summary_sha256": "e2487b62c4ba4c148a9acff392ef260ca8312380369731fbf1e68653a84ebdc6",
+      "archive_sha256": "2a239ebea2a7077d61f3b3de5a0fa7c3e6a75d874bf4120688aa99a6dac19e1a",
+      "archive_bytes": 615081,
+      "counts": {
+        "unloaded": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 0,
+          "all_workers_hidden": 0,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        },
+        "loaded_no_marker": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 38,
+          "all_workers_hidden": 38,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        },
+        "active": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 40,
+          "all_workers_hidden": 40,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        }
+      },
+      "clean_no_marker_observations": 2,
+      "order_contaminated_no_marker_observations": 38,
+      "clean_explicit_transition_active_observations": 2,
+      "already_hidden_before_own_trigger_active_observations": 38
+    },
+    {
+      "boot": "e5ec4bba-1e57-4f0d-840f-046d6355355c",
+      "protocol_sha256": "48864a3d212b701e10a43b84c2f4ceae78a88b6321d22efde201f5128d15eb0b",
+      "observations_sha256": "f082c70e77409392c9996097ec366980b60fc3ee0de8408bda383832098ac787",
+      "summary_sha256": "6cd486be9fed63690d50037784cfcb6a8b7905e374a5910575e92bd509c9c756",
+      "archive_sha256": "d03cb865cdcdae9c1aaaf3845adb15d9263551ede56b79a5a029eac8fc7c49de",
+      "archive_bytes": 612220,
+      "counts": {
+        "unloaded": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 0,
+          "all_workers_hidden": 0,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        },
+        "loaded_no_marker": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 38,
+          "all_workers_hidden": 38,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        },
+        "active": {
+          "observations": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 40,
+          "all_workers_hidden": 40,
+          "worker_instances": 510,
+          "worker_instances_alive": 510
+        }
+      },
+      "clean_no_marker_observations": 2,
+      "order_contaminated_no_marker_observations": 38,
+      "clean_explicit_transition_active_observations": 2,
+      "already_hidden_before_own_trigger_active_observations": 38
+    }
+  ],
+  "aggregate": {
+    "unloaded": {
+      "observations": 120,
+      "valid": 120,
+      "decode_success": 120,
+      "alarm": 0,
+      "all_workers_hidden": 0,
+      "worker_instances": 1530,
+      "worker_instances_alive": 1530
+    },
+    "loaded_no_marker": {
+      "observations": 120,
+      "valid": 120,
+      "decode_success": 120,
+      "alarm": 114,
+      "all_workers_hidden": 114,
+      "worker_instances": 1530,
+      "worker_instances_alive": 1530
+    },
+    "active": {
+      "observations": 120,
+      "valid": 120,
+      "decode_success": 120,
+      "alarm": 120,
+      "all_workers_hidden": 120,
+      "worker_instances": 1530,
+      "worker_instances_alive": 1530
+    }
+  },
+  "classification": {
+    "unloaded_true_negative_controls": 120,
+    "unloaded_false_alarms": 0,
+    "clean_loaded_no_marker_controls": 6,
+    "clean_loaded_no_marker_alarms": 0,
+    "order_contaminated_loaded_no_marker": 114,
+    "active_hidden_and_detected": 120,
+    "clean_explicit_transition_active": 6,
+    "already_hidden_before_own_trigger_active": 114
+  },
+  "root_cause": [
+    "The first signal-59 trigger calls hide_process_tree, which calls hide_parent_lineage.",
+    "The sample's sched_process_fork handler automatically marks children of a hidden parent as hidden.",
+    "The harness creates the next worker cohort only after the preceding active trigger, so later no-marker cohorts inherit hidden status before their own trigger.",
+    "Therefore the 114 alarms in loaded_no_marker are real K-to-S differences, not detector false positives, but they are invalid as normal controls."
+  ],
+  "source_evidence": {
+    "become_root_c_sha256": "d17eda50a1bc5921fcf2df599ebbe66df3c8c772b60d0f9238688c39f71f85c6",
+    "trace_c_sha256": "67a0d1c1f4ebcb31b0ff6801e0387f98e7f376d80657709c14eab12d1097bb63",
+    "harness_sha256": "de7ffc4b9ed239bb2755e0f07025b6b16875e6a1cb9c1016e8c59173d8cbcc71"
+  },
+  "required_rerun": "Pre-spawn all worker cohorts before the first hide trigger, capture every no-marker control before any trigger, then perform active scans; store the corrected run in a new directory.",
+  "original_results_and_report_modified": false,
+  "vm_contacted_by_this_audit": false
+}

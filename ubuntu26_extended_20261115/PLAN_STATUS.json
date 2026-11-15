@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T23:55:26.223272+08:00",
+  "updated": "2026-11-16T07:09:22.723133+08:00",
   "counts": {
     "complete": 7,
     "partial": 23,
@@ -19,10 +19,11 @@
       "workstream": "W01",
       "title": "完整候選逐項讀來源、分類、別名/家族去重",
       "status": "partial",
-      "completed_evidence": "133 個 repository 角色清單與 14 個文獻事件候選已建立，部分來源已釘選。 本輪新增取得並逐檔驗證 806 個已釘選原始文字檔，完整輸入副本有 1,301 個檔案。",
+      "completed_evidence": "133 個 repository 角色清單與 14 個文獻事件候選已建立，部分來源已釘選。 本輪新增取得並逐檔驗證 806 個已釘選原始文字檔，完整輸入副本有 1,301 個檔案。 新版已逐筆決定 133 個 repo 的實驗角色，另有 14 筆文獻或名稱條目。",
       "remaining": "完整候選池的逐一適用性與來源驗收。",
       "current_disposition": "pending_source_review",
-      "current_disposition_reason": "尚有候選未完成逐項適用性與家族去重。"
+      "current_disposition_reason": "尚有候選未完成逐項適用性與家族去重。",
+      "remaining_for_active_plan": "新版候選篩選已完成，兩項 eBPF 實證仍缺。"
     },
     {
       "id": "J02",
@@ -193,8 +194,8 @@
       "workstream": "W06",
       "title": "Trace of Times 新資料完整蒐集與兩種評估",
       "status": "partial",
-      "completed_evidence": "既有 Ubuntu 26 Trace 完整 protocol 與凍結門檻重評可引用。",
-      "remaining": "全新 Trace 蒐集未執行，依使用者優先順序後移。",
+      "completed_evidence": "既有 Ubuntu 26 Trace 完整 protocol 與凍結門檻重評可引用。 另有新正常組 50 批，40 批使用舊凍結模型與門檻評分。",
+      "remaining": "尚缺新陽性組及完整新協定結果。",
       "current_disposition": "deferred_priority",
       "current_disposition_reason": "Trace 新蒐集依使用者時程後排。已有資料的凍結門檻重評已完成。"
     },
@@ -292,5 +293,8 @@
       "current_disposition": "measured_scope_report_available",
       "current_disposition_reason": "本批交付可引用的實驗結果與限制，整合全部原定結果的報告待補。"
     }
-  ]
+  ],
+  "counts_basis": "Original plan-2 acceptance scope. See active_plan for scoped plan-3.",
+  "active_plan": "updates/20261116_revised_plan/EXECUTION_PLAN.json",
+  "active_candidate_decisions": "updates/20261116_revised_plan/CANDIDATE_DECISIONS.json"
 }

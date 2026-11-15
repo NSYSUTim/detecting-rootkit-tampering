@@ -1,0 +1,270 @@
+Ubuntu 26 候選逐項評估
+
+本表逐筆對應原普查的 133 個 repo。星數是舊快照，僅供辨識。
+
+納入現有實測（5 筆）
+
+• R3tr074/brokepkg。一開機已實測。160 次隱藏皆告警，136 次找回全部設定目標。VB2025 及 DFRWS 均有佐證。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+  https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg
+• MatheuZSecurity/Singularity。保留六開機的目錄矩陣。/proc 與啟用中取檔為未測。Elastic 有獨立遙測。
+  https://www.elastic.co/security-labs/threat-command/linux-rootkits-2-caught-in-the-act
+  https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity
+• ait-aecid/caraxes。保留核心列舉回呼與 syscall 測試，以及已驗證的 inode 查名與取檔。原論文亦使用此研究樣本。
+  https://arxiv.org/abs/2503.02402
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
+• ldpreload/Medusa。保留三開機 ext4、tmpfs、/proc 受控結果。Mandiant 的事件涉及修改版，報告須標示版本差異。
+  https://cloud.google.com/blog/topics/threat-intelligence/uncovering-unc3886-espionage-operations
+  https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa
+• bluedragonsecurity/bds_userland。保留低星數且已有可重播的應用端檔案列舉結果。BDS 的核心專案另列。
+  https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
+
+保留既有研究控制（1 筆）
+
+• gianlucaborello/libprocesshider。保留既有 /proc 陽性校準。此研究控制獨立標示，與在野事件分母分開。
+  https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
+
+優先候選，待核對可驗證資料（2 筆）
+
+• pathtofile/bad-bpf。DEF CON 29 研究示範，pidhide 對應 eBPF /proc 列舉。原協定尚無 7.0 實測，與 TripleCross 區分測試目標。
+  https://cylab.be/publications/90/download/2026-analyzing-ebpf-rootkits-through-the-mitre-attck-framework.pdf
+• h3xduck/TripleCross。已確認 eBPF 檔案與目錄列舉過濾路徑，VB2025 收錄。用於補文件所缺的 eBPF 檔案證據，7.0 新實測尚無。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://raw.githubusercontent.com/h3xduck/TripleCross/master/docs/ebpf_offensive_rootkit_tfg.pdf
+
+可選邊界案例，現有建置未過（1 筆）
+
+• carloslack/KoviD。VB2025 收錄。已確認列舉回呼路徑，與 CARAXES 部分重疊。固定建置有缺少編譯定義的紀錄，補充價值在可用性及品質判定。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+
+保留作背景引用，本輪不實測（9 筆）
+
+• reveng007/reveng_rtkit。舊版研究有收錄。現有版本在此核心建置遇到 API 差異，保留失敗和文獻。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• mncoppola/suterusu。有歷史研究與 DFRWS 模組紀錄。現有研究資料未確認可補哪個 7.0 列舉缺口。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• f0rb1dd3n/Reptile。UNC3886 事件有修改版本，VB2025 分析 KHOOK，DFRWS 有舊核心的模組隱藏紀錄。此研究未驗證 7.0。
+  https://cloud.google.com/blog/topics/threat-intelligence/uncovering-unc3886-espionage-operations
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• yaoyumeng/adore-ng。VB2025 有 VFS 分類，DFRWS 有舊環境模組紀錄。VFS 路徑是觀測切點的限制討論，缺本研究 7.0 實測。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• Gui774ume/ebpfkit。有外部學術分析。當前研究未驗證指定版本的列舉路徑及 7.0，eBPF 首選保留較貼近檔案和 /proc 的兩項。
+  https://cylab.be/publications/90/download/2026-analyzing-ebpf-rootkits-through-the-mitre-attck-framework.pdf
+• krisnova/boopkit。已有 VB2025 與 eBPF 研究收錄，列舉相關行為有文獻描述。研究主表已有兩個較直接的 eBPF 候選。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://cylab.be/publications/90/download/2026-analyzing-ebpf-rootkits-through-the-mitre-attck-framework.pdf
+• mempodippy/vlany。VB2025 有應用端掛鉤分析，當次建置有舊 libc 相容問題。應用端已有 Medusa 與 BDS 的可重播結果。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• chokepoint/azazel。VB2025 文獻引用，當次建置有舊 libc 相容問題。保留背景及原始失敗。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• chokepoint/jynxkit。VB2025 保留其歷史意義。與現有應用端代表的增量證據未確認。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+
+模組鑑識文獻，移出列舉矩陣（28 筆）
+
+• bluedragonsecurity/bds_lkm。保留 DFRWS 的核心模組研究。BDS userland 的實測另列，不能沿用為此核心專案證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• bluedragonsecurity/bds_lkm_ftrace。已有 7.0 固定建置的 API 錯誤，外部模組研究留作背景。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• JakeGinesin/j-rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• MatthiasCr/LKM-Rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• ngn13/wkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• Zhang1933/linux-rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• dorosch/rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• En14c/LilyOfTheValley。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• t0t3m/AFkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• dmliscinsky/lkm-rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• juanschallibaum/Nuk3Gh0stBeta。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• Eterna1/puszek-rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• miagilepner/rickrolly。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• rootfoo/rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• ah450/rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• a7vinx/liinux。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• m0hamed/lkm-rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• nurupo/rootkit。DFRWS 提供模組隱藏紀錄。此研究未確認指定版本有額外且可驗收的列舉路徑。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• soad003/rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• nnedkov/swiss_army_rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• W4RH4WK/THOR。DFRWS 有專門案例分析。保留作模組記憶體鑑識引用，移出檔案與 /proc 列舉矩陣。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• hanj4096/wukong。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• maK-/maK_it-Linux-Rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• dsmatter/brootus。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• ivyl/rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• kevinkoo001/rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• matteomattia/moo_rootkit。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+• bones-codes/the_colonel。DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+
+保留既有相容性失敗（1 筆）
+
+• m0nad/Diamorphine。保留釘選版本在測試 VM 的載入崩潰。這是該環境的相容性紀錄，未取得有效隱藏掃描。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+  https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
+
+衍生／同機制，不重複計數（1 筆）
+
+• rphang/evilBPF。已記錄與 bad-bpf 的衍生關係。相同 pidhide 路徑保留單一代表，來源可留在附錄。
+
+本輪排除，範圍或增量證據不足（25 筆）
+
+• MatheuZSecurity/Furtex。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• MatheuZSecurity/RingReaper。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• shv-om/MobKit。固定來源已看的掛鉤表只有 kill，未確認目錄列舉過濾。與 VB 表中的同名二進位身分未連結。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• ChristianPapathanasiou/apache-rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• jermeyyy/rooty。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• QuokkaLight/rkduck。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• croemheld/lkm-rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• romeroperezabel/ARP-RootKit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• therealdreg/enyelkm。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• mponcet/subversive。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• jiayy/lkm-rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• varshapaidi/Kernel_Rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• kacheo/KernelRootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• NoviceLive/research-rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• NinnOgTonic/Out-of-Sight-Out-of-Mind-Rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• spiderpig1297/kprochide。原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。
+• LaPhilosophie/hello-rootkit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• mephistolist/tito。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• jordan9001/superhide。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• juanschallibaum/Nuk3Gh0st。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• buter-chkalova/project-rvbbit。原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。
+• vvswift/blackbox-ave。原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。
+• brosck/Rebellion。原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。
+• yasindce1998/KubeDagger。原普查尚未確認指定版本的列舉切點與增量，本輪優先核對兩個定向案例。
+• malefax/Adrishya。原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。
+
+本輪排除，其他任務為主（20 筆）
+
+• sysprog21/lkm-hidden。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• Idov31/Silverseal。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• trailofbits/krf。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• deb0ch/toorkit。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• vrasneur/randkit。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• jarun/spy。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• PinkP4nther/Sutekh。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• milabs/kopycat。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• landhb/DrawBridge。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• spiderpig1297/kfile-over-icmp。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• spiderpig1297/kunkillable。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• sad0p/d0zer。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• 0xbitx/DEDSEC_BOTNET。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• kkamagui/shadow-box-for-x86。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• jm33-m0/emp3r0r。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• MatheuZSecurity/UnhookingLinuxEdr。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• screetsec/Vegile。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• NeverSight/NeverC。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• Nadharm/CoVirt。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+• A4n9g7e2l/Xway。已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。
+
+從 Ubuntu 26 主矩陣排除，平台不同（3 筆）
+
+• hiteshd/Android-Rootkit。平台與本研究的 Ubuntu 26 x86_64 主環境不同。
+• Mrack/kmem。平台與本研究的 Ubuntu 26 x86_64 主環境不同。
+• kkamagui/shadow-box-for-arm。平台與本研究的 Ubuntu 26 x86_64 主環境不同。
+
+本輪排除，覆蓋重疊或現有環境未通過（10 筆）
+
+• shard77/blackpill。已記錄專用核心、Rust 與虛擬化需求。現有平台尚無可引用的執行證據。
+• Trevohack/Venom。固定建置有核心 API 問題。保留原版紀錄，本輪集中於已有代表與 eBPF 缺口。
+• h3xduck/Umbra。固定建置有 ftrace API 差異，現有研究已有核心代表。
+• unix-thrust/beurk。當次缺舊版產生器環境，應用端已有實測代表。
+• chokepoint/Jynx2。現有實測已涵蓋應用端列舉。此候選在目前證據下沒有已確認的增量。
+• NexusBots/Umbreon-Rootkit。現有實測已涵蓋應用端列舉。此候選在目前證據下沒有已確認的增量。
+• attackgithub/bdvl。當次欠缺生成的建置輸入，應用端已有實測代表。
+• mav8557/Father。保存當次缺 gcrypt 標頭的紀錄，應用端已有實測代表。
+• flashnuke/mod-rootkit。固定建置停在 include 路徑。現有資料未顯示能補足優先缺的 eBPF 證據。
+• arttnba3/Nornir-Rootkit。上游明列檔案隱藏的數種切點，屬範圍內候選。現有固定建置失敗，研究主表已有代表，本輪不列為必補。
+  https://github.com/arttnba3/Nornir-Rootkit
+
+防禦工具，保留比較角色（18 筆）
+
+• bad-antics/rupurt。保留在工具與適用範圍比較。
+• ossec/ossec-hids。保留在工具與適用範圍比較。
+• chkrootkit/chkrootkit。保留在工具與適用範圍比較。
+• microsoft/Sysmon-Linux。保留在工具與適用範圍比較。
+• al0ne/LinuxCheck。保留在工具與適用範圍比較。
+• CISOfy/lynis。保留在工具與適用範圍比較。
+• draios/sysdig。保留在工具與適用範圍比較。
+• dgoulet/kjackal。保留在工具與適用範圍比較。
+• sandflysecurity/sandfly-processdecloak。保留在工具與適用範圍比較。
+• therealdreg/lsrootkit。保留在工具與適用範圍比較。
+• MatheuZSecurity/Imperius。保留在工具與適用範圍比較。
+• MatheuZSecurity/ModTracer。保留在工具與適用範圍比較。
+• Gui774ume/ebpfkit-monitor。保留在工具與適用範圍比較。
+• thalium/rkchk。保留在工具與適用範圍比較。
+• aidlx/ghostscan。保留在工具與適用範圍比較。
+• MatheuZSecurity/ksentinel。保留在工具與適用範圍比較。
+• sandflysecurity/sandfly-kernel-module-decloak。保留在工具與適用範圍比較。
+• sandflysecurity/sandfly-file-decloak。保留在工具與適用範圍比較。
+
+來源清單或教材（9 筆）
+
+• MatheuZSecurity/Rootkit。保留作來源索引與別名去重。
+• milabs/awesome-linux-rootkits。保留作來源索引與別名去重。
+• tkmru/awesome-linux-rootkits。保留作來源索引與別名去重。
+• R3x/linux-rootkits。保留作來源索引與別名去重。
+• pentesteracademy/linux-rootkits-red-blue-teams。保留作來源索引與別名去重。
+• MatheuZSecurity/detect-lkm-rootkit-cheatsheet。保留作來源索引與別名去重。
+• cr0nx/awesome-linux-attack-forensics-purplelabs。保留作來源索引與別名去重。
+• akazemi67/LinuxMalwareTechniques。保留作來源索引與別名去重。
+• maldevel/RootKits-List-Download。保留作來源索引與別名去重。
+
+另列 14 筆在野研究／名稱
+
+• PUMAKIT。有公開分析和雜湊；不能以分析報告等同取得可執行原樣本。精確版本相容性待測，非通稱 <=5.10。
+  https://www.elastic.co/security-labs/threat-command/declawing-pumakit
+• LinkPro。事件中的 eBPF/LD_PRELOAD 樣本；原報告已引用，但尚無本方法實測。
+  https://www.synacktiv.com/en/publications/linkpro-ebpf-rootkit-analysis
+• perfctl。LD_PRELOAD 與工具替換，需先取得可追溯變種；不等同公開 Medusa 原版。
+  https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/
+• Syslogk。在野且與 Adore-ng 有淵源；查 VFS 掛鉤邊界，可能屬共同盲區。
+  https://decoded.avast.io/davidalvarez/linux-threat-hunting-syslogk-a-kernel-rootkit-found-under-development-in-the-wild/
+• Drovorub。NSA/FBI 實際威脅案例，2020 年歷史佐證，不冒稱現代公開測試樣本。
+  https://media.defense.gov/2020/Aug/13/2002476465/-1/-1/0/CSA_DROVORUB_RUSSIAN_GRU_MALWARE_AUG_2020.PDF
+• VoidLink。2026 初始公開報告時未觀察到實際感染；後續樣本/來源分析另有報告，取得與執行狀態獨立。
+  https://research.checkpoint.com/2026/voidlink-the-cloud-native-malware-framework/
+• Ebury。強規模/受害證據；各版本是否具有相同目錄隱藏須個別辨識。
+  https://www.welivesecurity.com/en/eset-research/ebury-alive-unseen-400k-linux-servers-compromised-cryptotheft-financial-gain/
+• Hildegard。TeamTNT/Kubernetes 的 LD_PRELOAD readdir64 程序隱藏事件；樣本取得待辦。
+  https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/
+• SANSAR/acpi_thermal_mgr。2026-11-12 事件報告有 ftrace/getdents64，作者取得 C 原始碼不代表已對公眾提供下載。
+  https://www.elastic.co/security-labs/threat-command/sansar-linux-cryptomining-malware
+• HiddenWasp。VB 二進位案例；不得以沒有公開原始碼推論沒有影響力。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• Symbiote。VB userland/eBPF 相關案例；樣本與實際隱藏邊界待查。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• Snapekit。VB 稱分析時僅有二進位；不是因星數低而排除。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• Mobkit (VB binary)。與 shv-om/MobKit 是否同一實作未證實，分列不混算。
+  https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
+• HiddenGhost。附件提及此名稱；尚未查到可核對的原始研究/唯一專案，與 HiddenWasp 不混同，不編造星數或相容結果。

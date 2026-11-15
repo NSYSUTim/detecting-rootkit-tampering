@@ -1,0 +1,1006 @@
+{
+  "scope": "50 new normal batches with 100 listing runs per batch. Single Ubuntu 26 boot.",
+  "normal_batches_captured": 50,
+  "listing_runs": 5000,
+  "boot": "aaa7eeec-a293-4ccd-bac1-29fab91e0bbd",
+  "normal_batches_in_calibrated_scenarios": 40,
+  "new_positive_batches": 0,
+  "full_j19_experiment_complete": false,
+  "thresholds": {
+    "fun": 2.1544346900318954e-17,
+    "seq": 0.0
+  },
+  "scenario_outcomes": {
+    "filename_length": {
+      "fun": {
+        "correct_normal": 8,
+        "false_alarm": 2
+      },
+      "seq": {
+        "correct_normal": 10
+      }
+    },
+    "default": {
+      "fun": {
+        "false_alarm": 4,
+        "correct_normal": 6
+      },
+      "seq": {
+        "correct_normal": 10
+      }
+    },
+    "file_count": {
+      "fun": {
+        "false_alarm": 2,
+        "correct_normal": 8
+      },
+      "seq": {
+        "correct_normal": 10
+      }
+    },
+    "ls_basic": {
+      "fun": {
+        "outside_calibrated_scenarios": 10
+      },
+      "seq": {
+        "outside_calibrated_scenarios": 10
+      }
+    },
+    "system_load": {
+      "fun": {
+        "correct_normal": 9,
+        "false_alarm": 1
+      },
+      "seq": {
+        "correct_normal": 10
+      }
+    }
+  },
+  "acquisition_counts": {
+    "filename_length": 10,
+    "default": 10,
+    "file_count": 10,
+    "ls_basic": 10,
+    "system_load": 10
+  },
+  "median_of_batch_function_interval_medians_ns": {
+    "filename_length": {
+      "touch_atime-enter:touch_atime-return": 374.0,
+      "verify_dirent_name-enter:verify_dirent_name-return": 394.5,
+      "filldir64-enter:filldir64-return": 1361.0,
+      "iterate_dir-enter:iterate_dir-return": 18050.0
+    },
+    "default": {
+      "touch_atime-enter:touch_atime-return": 382.0,
+      "verify_dirent_name-enter:verify_dirent_name-return": 373.5,
+      "filldir64-enter:filldir64-return": 1302.5,
+      "iterate_dir-enter:iterate_dir-return": 17884.25
+    },
+    "file_count": {
+      "touch_atime-enter:touch_atime-return": 399.0,
+      "verify_dirent_name-enter:verify_dirent_name-return": 278.0,
+      "filldir64-enter:filldir64-return": 998.5,
+      "iterate_dir-enter:iterate_dir-return": 114295.5
+    },
+    "ls_basic": {
+      "touch_atime-enter:touch_atime-return": 387.5,
+      "verify_dirent_name-enter:verify_dirent_name-return": 380.0,
+      "filldir64-enter:filldir64-return": 1346.5,
+      "iterate_dir-enter:iterate_dir-return": 27864.5
+    },
+    "system_load": {
+      "touch_atime-enter:touch_atime-return": 434.5,
+      "verify_dirent_name-enter:verify_dirent_name-return": 422.75,
+      "filldir64-enter:filldir64-return": 1464.75,
+      "iterate_dir-enter:iterate_dir-return": 38299.5
+    }
+  },
+  "protocol_sha256": "c9f868651e684eb34171815b76b375e67d026101733064f983b335f987743552",
+  "collection_sha256": "cb22e25443978de7aa590fe9f31e10911c53d53c0a94a7a1deaeb3d8620f7f3a",
+  "archived_model_split_sha256": "d0e1a6027bb25d2a28503f63153f1cc3f3d42d57610d50537095892251ba9d3e",
+  "archived_thresholds_sha256": "a9f6a1182223f73f2a0cc408453897993e805d9aff7e4b7d6a8fd8abf436af74",
+  "decision_rule": "old per-scenario feature model and old fixed threshold, no refit on new traces",
+  "notes": "ls_basic has no model in the original four-scenario locked split. It is captured for descriptive use. No new sensitivity, accuracy or F1 comparison is computed from this normal-only data.",
+  "predictions": [
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "4f9fe1451350b3a83cadd64e6014ca221bc64315d8c20ee24b041d1fed57367a",
+      "method": "fun",
+      "score": 0.20995160035596822,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "4f9fe1451350b3a83cadd64e6014ca221bc64315d8c20ee24b041d1fed57367a",
+      "method": "seq",
+      "score": 0.003511704443544026,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "bb5470f9530c95717e1df961d8c82d6d3fa455778bcd6f02923e2a3f4ff8cce5",
+      "method": "fun",
+      "score": 9.278478299460345e-19,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "bb5470f9530c95717e1df961d8c82d6d3fa455778bcd6f02923e2a3f4ff8cce5",
+      "method": "seq",
+      "score": 4.948258113056013e-14,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "563c8dc0bd3970adaa394f17589781dde0cf6fabb63e48abfdf86b06ea6eec10",
+      "method": "fun",
+      "score": 2.789832607006053e-203,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "563c8dc0bd3970adaa394f17589781dde0cf6fabb63e48abfdf86b06ea6eec10",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "e25108c91fcca2e44b674589bc051de3155bca8501cf1e9521631d285f51b911",
+      "method": "fun",
+      "score": 7.932952500734072e-212,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "e25108c91fcca2e44b674589bc051de3155bca8501cf1e9521631d285f51b911",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_01.json.gz",
+      "sha256": "a2ef315f8c0204ae10cc8e146c8191a46fd457c11d155ecde4e3f4371e495125",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_01.json.gz",
+      "sha256": "a2ef315f8c0204ae10cc8e146c8191a46fd457c11d155ecde4e3f4371e495125",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "0be9df8ba0614e683bd33f5ba9b64bbe79928cac25de32b224fa2900fcf17740",
+      "method": "fun",
+      "score": 0.14025814509803014,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "0be9df8ba0614e683bd33f5ba9b64bbe79928cac25de32b224fa2900fcf17740",
+      "method": "seq",
+      "score": 0.0005611451543904841,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "92f2de88d24416a9e07e95f1ce83346f2dc45c8fcee81e99948877767b2a823b",
+      "method": "fun",
+      "score": 0.016377939226791614,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "92f2de88d24416a9e07e95f1ce83346f2dc45c8fcee81e99948877767b2a823b",
+      "method": "seq",
+      "score": 3.550479621234178e-07,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_04.json.gz",
+      "sha256": "71fe57c72d170d9f3b78d805013d1f119d474318cc2c1147168c91ff28747114",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_04.json.gz",
+      "sha256": "71fe57c72d170d9f3b78d805013d1f119d474318cc2c1147168c91ff28747114",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "74653caa2f8297e12559fc59d8e3871a24d0a35110bc05190de10b913202e170",
+      "method": "fun",
+      "score": 2.9951197065737594e-05,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "74653caa2f8297e12559fc59d8e3871a24d0a35110bc05190de10b913202e170",
+      "method": "seq",
+      "score": 2.351892823190028e-09,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "c7762707e9a84c09f02f0172f6b109b96f66af667acd835bed5f2c98ef26c2b5",
+      "method": "fun",
+      "score": 0.004039036101494426,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "c7762707e9a84c09f02f0172f6b109b96f66af667acd835bed5f2c98ef26c2b5",
+      "method": "seq",
+      "score": 2.7861570467424946e-06,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "066aa099af3516fbe98156bfa8d3fa78db7f58c67a6637f52101c117a3959b7e",
+      "method": "fun",
+      "score": 4.787001522061166e-09,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "066aa099af3516fbe98156bfa8d3fa78db7f58c67a6637f52101c117a3959b7e",
+      "method": "seq",
+      "score": 8.99010805578602e-192,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_07.json.gz",
+      "sha256": "dddf4c5a5d05bae459677ed4ee486145fe4bdc440c53ce5d54006f194421e66a",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_07.json.gz",
+      "sha256": "dddf4c5a5d05bae459677ed4ee486145fe4bdc440c53ce5d54006f194421e66a",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "7a4aa03e6fa152a92f5579b47f7b9f413239c142ff16991d3eba03788cc1b7b8",
+      "method": "fun",
+      "score": 1.8567332034803293e-06,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "7a4aa03e6fa152a92f5579b47f7b9f413239c142ff16991d3eba03788cc1b7b8",
+      "method": "seq",
+      "score": 4.552608666913136e-12,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "e83d4dadd077b4e70256986469be86ec67d4b1194309ddb001789beb4c456c15",
+      "method": "fun",
+      "score": 6.2502975335432696e-18,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "e83d4dadd077b4e70256986469be86ec67d4b1194309ddb001789beb4c456c15",
+      "method": "seq",
+      "score": 6.2502975335432696e-18,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "d0a99719283bc2a257268095946ac5de6feacd8077c11e8bd7587625beb3a115",
+      "method": "fun",
+      "score": 0.5085588823205565,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "d0a99719283bc2a257268095946ac5de6feacd8077c11e8bd7587625beb3a115",
+      "method": "seq",
+      "score": 0.06123362446256585,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "1ab82518c09bc67cc77b84005bc0d1232749a0824cd77f5a3b1f7792c34f95a4",
+      "method": "fun",
+      "score": 4.462558337885421e-11,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "1ab82518c09bc67cc77b84005bc0d1232749a0824cd77f5a3b1f7792c34f95a4",
+      "method": "seq",
+      "score": 3.0536050568895614e-12,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "dec6ed2ee70e7b5837b09d3aeb1c1d5341171ba0d451f2de38d932b8cd46b589",
+      "method": "fun",
+      "score": 8.808305153455774e-53,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "dec6ed2ee70e7b5837b09d3aeb1c1d5341171ba0d451f2de38d932b8cd46b589",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "39c4a4e2446b14157217c7fef08f4c6aa9d53dde7ee63968a0a4a2aee5489c0c",
+      "method": "fun",
+      "score": 0.005616339888932048,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "39c4a4e2446b14157217c7fef08f4c6aa9d53dde7ee63968a0a4a2aee5489c0c",
+      "method": "seq",
+      "score": 9.020400971230271e-176,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "ae2cb8a5b1f1a21fdfb0ffbb6299e0610d83998ad54b50132ae5d02267491874",
+      "method": "fun",
+      "score": 1.191762448962055e-07,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "ae2cb8a5b1f1a21fdfb0ffbb6299e0610d83998ad54b50132ae5d02267491874",
+      "method": "seq",
+      "score": 3.700691678939545e-69,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "93a3f4c752c193f3c5e496981527a51d8047bfd73ad59778c5e3176ca2a27d37",
+      "method": "fun",
+      "score": 0.008289948505785603,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "93a3f4c752c193f3c5e496981527a51d8047bfd73ad59778c5e3176ca2a27d37",
+      "method": "seq",
+      "score": 1.414320195767931e-10,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_08.json.gz",
+      "sha256": "df0265fa7a1e36998fc581d10d00b4a697f9c37913c67cd86207ec33c80393ef",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_08.json.gz",
+      "sha256": "df0265fa7a1e36998fc581d10d00b4a697f9c37913c67cd86207ec33c80393ef",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "eb98dba906def32408ef4b045c328bd170a5ce729fcd5b49190d7ed1bdc2d47e",
+      "method": "fun",
+      "score": 0.03346025532470713,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "eb98dba906def32408ef4b045c328bd170a5ce729fcd5b49190d7ed1bdc2d47e",
+      "method": "seq",
+      "score": 2.842280893075596e-15,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "7b186e3e5f15d23d7537dd6e46418a44ad67d8d8aa90c1306cb93f81d732e368",
+      "method": "fun",
+      "score": 0.001186543020873227,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "7b186e3e5f15d23d7537dd6e46418a44ad67d8d8aa90c1306cb93f81d732e368",
+      "method": "seq",
+      "score": 8.290197737924765e-07,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "b91b6871a4140027426a90afb8e6a3137bbe4aa149646871fa022c6aa7a173df",
+      "method": "fun",
+      "score": 2.0220144061478007e-07,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "b91b6871a4140027426a90afb8e6a3137bbe4aa149646871fa022c6aa7a173df",
+      "method": "seq",
+      "score": 1.8864938962961035e-10,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "2f6894a182d1b22d9e17454ac940379e6971994d623d46329a064812ad12d7fc",
+      "method": "fun",
+      "score": 1.9179239926007353e-10,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "2f6894a182d1b22d9e17454ac940379e6971994d623d46329a064812ad12d7fc",
+      "method": "seq",
+      "score": 1.262726350403717e-16,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "d09c9cadfd5aa6ada7ab0f98b31ddd274e80138920fad02a466d7b0f5f7c107e",
+      "method": "fun",
+      "score": 0.04151654107320584,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "d09c9cadfd5aa6ada7ab0f98b31ddd274e80138920fad02a466d7b0f5f7c107e",
+      "method": "seq",
+      "score": 2.685743186600342e-06,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "806fa0df13907099b8fc90a8e3037623c45f8710ccbf5717e83db20fc4f51e2f",
+      "method": "fun",
+      "score": 0.07560094015700795,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "806fa0df13907099b8fc90a8e3037623c45f8710ccbf5717e83db20fc4f51e2f",
+      "method": "seq",
+      "score": 0.00025958194073903197,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "9718720e85af66d2d40b044c64cf47ecded20ff785d01fb5cb009382572a3f6b",
+      "method": "fun",
+      "score": 4.6184077974593233e-20,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "9718720e85af66d2d40b044c64cf47ecded20ff785d01fb5cb009382572a3f6b",
+      "method": "seq",
+      "score": 4.6184077974593233e-20,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_00.json.gz",
+      "sha256": "2302bc3fd78ffd9c4c46ca03f5448f5f9ac7c1da7e0a8b6f0e5d261b1470b384",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_00.json.gz",
+      "sha256": "2302bc3fd78ffd9c4c46ca03f5448f5f9ac7c1da7e0a8b6f0e5d261b1470b384",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "c63543e45bb4ab96c01c85431138b7551fa5520ce52fa5690eeddd2c9a4f0639",
+      "method": "fun",
+      "score": 2.888544613822555e-231,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "c63543e45bb4ab96c01c85431138b7551fa5520ce52fa5690eeddd2c9a4f0639",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "a84e73af3904e9d0f414ec018bed9a04afcbe65953929faa9316ffa26875fa1b",
+      "method": "fun",
+      "score": 4.68254812338574e-05,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "a84e73af3904e9d0f414ec018bed9a04afcbe65953929faa9316ffa26875fa1b",
+      "method": "seq",
+      "score": 1.389473044118221e-10,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "fa89a526ab1d1fc10d77a7eff365668022bb6ce67bdcc4c0835eeb57a2ae2a90",
+      "method": "fun",
+      "score": 0.001847304792577352,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "fa89a526ab1d1fc10d77a7eff365668022bb6ce67bdcc4c0835eeb57a2ae2a90",
+      "method": "seq",
+      "score": 1.367149495118913e-10,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "0a76f8b345313995bb5148789298af7a417ca6ca7a2ccc864c62a2d483db61c7",
+      "method": "fun",
+      "score": 8.5809983452515e-14,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "0a76f8b345313995bb5148789298af7a417ca6ca7a2ccc864c62a2d483db61c7",
+      "method": "seq",
+      "score": 1.364622781212157e-29,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_05.json.gz",
+      "sha256": "a0f71d315776284a0aafc0900dbb0cb8151d62a0abf3e28387caf42381a9e2e2",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_05.json.gz",
+      "sha256": "a0f71d315776284a0aafc0900dbb0cb8151d62a0abf3e28387caf42381a9e2e2",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "d287ede558d33ed9f14acf3c2d37e0b5e5d502ac2d009ad2429697952b62e33b",
+      "method": "fun",
+      "score": 0.178167941508929,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "d287ede558d33ed9f14acf3c2d37e0b5e5d502ac2d009ad2429697952b62e33b",
+      "method": "seq",
+      "score": 2.952240077102596e-06,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_09.json.gz",
+      "sha256": "b0d768f6cbf7bff08586500ec7054f8da3897e87d75e051ef95151cfb5be3bd5",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_09.json.gz",
+      "sha256": "b0d768f6cbf7bff08586500ec7054f8da3897e87d75e051ef95151cfb5be3bd5",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_03.json.gz",
+      "sha256": "3477dea61709694c5a2651db4fad4d19cb0486ed106fab93799a9794a3fef9b8",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_03.json.gz",
+      "sha256": "3477dea61709694c5a2651db4fad4d19cb0486ed106fab93799a9794a3fef9b8",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "1bb77b5c3055c97087e8f4b40b8a40690f247b98e44246ecffd4e5fa349df8e5",
+      "method": "fun",
+      "score": 0.0006158893802498387,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "1bb77b5c3055c97087e8f4b40b8a40690f247b98e44246ecffd4e5fa349df8e5",
+      "method": "seq",
+      "score": 1.22950677443841e-10,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "0687f6e623eab23dcb76cb0b3710f2bab2ee9b3cd41bdc1717d54b0b00789bfc",
+      "method": "fun",
+      "score": 0.020697310697545972,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "0687f6e623eab23dcb76cb0b3710f2bab2ee9b3cd41bdc1717d54b0b00789bfc",
+      "method": "seq",
+      "score": 1.06663655760578e-25,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "4a4a19b72c7efac1e18b58a340080929b83b45831ff1a79a1914c4436aadd40b",
+      "method": "fun",
+      "score": 5.687000200554682e-09,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "4a4a19b72c7efac1e18b58a340080929b83b45831ff1a79a1914c4436aadd40b",
+      "method": "seq",
+      "score": 9.931293817925285e-45,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "a2dd7dc046785c4b1adbce0c8ff95f0492f6ef7b2aa8da948f9ad6bfeedd4bd2",
+      "method": "fun",
+      "score": 4.7826473074035056e-15,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "a2dd7dc046785c4b1adbce0c8ff95f0492f6ef7b2aa8da948f9ad6bfeedd4bd2",
+      "method": "seq",
+      "score": 4.380632198927612e-15,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_06.json.gz",
+      "sha256": "97824958d4625765613547cceda7d7d473911311b6f7684b323ac72506a4b39f",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_06.json.gz",
+      "sha256": "97824958d4625765613547cceda7d7d473911311b6f7684b323ac72506a4b39f",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "dc1e05b62c0213c1e3cdfbb6c5738a350bb22d20c3e34c761a5277f7257e8f5d",
+      "method": "fun",
+      "score": 0.06260440150532491,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "dc1e05b62c0213c1e3cdfbb6c5738a350bb22d20c3e34c761a5277f7257e8f5d",
+      "method": "seq",
+      "score": 3.604214031553082e-06,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "3c7745fe7cad0fc9c636d6b44476c3f1f79c041f52811b1f80c7749a7b54e182",
+      "method": "fun",
+      "score": 1.1566884794990342e-06,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "3c7745fe7cad0fc9c636d6b44476c3f1f79c041f52811b1f80c7749a7b54e182",
+      "method": "seq",
+      "score": 9.914007064403354e-22,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_02.json.gz",
+      "sha256": "0e960e5ded23350db0d182cac1ef7de8522ebe10329b091f63f3916ce1e4e268",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_02.json.gz",
+      "sha256": "0e960e5ded23350db0d182cac1ef7de8522ebe10329b091f63f3916ce1e4e268",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "d5003be2f506f44e9ef73d0511c05bb8e192df8fb592dbd2656e9a22e773a58e",
+      "method": "fun",
+      "score": 0.2127396165153439,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "d5003be2f506f44e9ef73d0511c05bb8e192df8fb592dbd2656e9a22e773a58e",
+      "method": "seq",
+      "score": 0.00025584180173263377,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "acd2a7c9d5a0d34cc568501f327dfc52440df4176dd2b27fdc99065f12832042",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "acd2a7c9d5a0d34cc568501f327dfc52440df4176dd2b27fdc99065f12832042",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "3cf2a40ce452a42b64244d2720ba1fccc02e38c13d890bc21d412f858817eee8",
+      "method": "fun",
+      "score": 7.635481987483488e-09,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "3cf2a40ce452a42b64244d2720ba1fccc02e38c13d890bc21d412f858817eee8",
+      "method": "seq",
+      "score": 1.567173634603078e-11,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "6a14841fd9bb7fc693cf539b9e16433cd6e1a3358a60e5fb4c996573a5638575",
+      "method": "fun",
+      "score": 3.715278893873954e-82,
+      "threshold": 2.1544346900318954e-17,
+      "state": "false_alarm"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "6a14841fd9bb7fc693cf539b9e16433cd6e1a3358a60e5fb4c996573a5638575",
+      "method": "seq",
+      "score": 3.715278893873954e-82,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "06d60cbb7ad99bf1dfb93ac5a78b91bc7bc1d21595337b717046a66d1bcaaf6e",
+      "method": "fun",
+      "score": 0.0008445792744397836,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_normal"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "06d60cbb7ad99bf1dfb93ac5a78b91bc7bc1d21595337b717046a66d1bcaaf6e",
+      "method": "seq",
+      "score": 5.830696799897433e-05,
+      "threshold": 0.0,
+      "state": "correct_normal"
+    }
+  ]
+}

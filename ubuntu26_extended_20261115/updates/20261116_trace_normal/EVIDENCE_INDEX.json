@@ -1,0 +1,17 @@
+{
+  "local_archive": {
+    "path": "ubuntu26_extended_20261116_trace_normal/trace_normal_raw.tar",
+    "bytes": 7833600,
+    "sha256": "fe8709c2958b19efaf040112c2ccf0e939ac1a6367d3e865bf0f8c67e55740a4"
+  },
+  "frozen_training_and_calibration": {
+    "path": "ubuntu26_extended_20261115_run02/trace_heldout_protocol.json",
+    "bytes": 65532,
+    "sha256": "d0e1a6027bb25d2a28503f63153f1cc3f3d42d57610d50537095892251ba9d3e"
+  },
+  "frozen_thresholds": {
+    "path": "ubuntu26_extended_20261115_run02/trace_frozen_thresholds.json",
+    "bytes": 65161,
+    "sha256": "a9f6a1182223f73f2a0cc408453897993e805d9aff7e4b7d6a8fd8abf436af74"
+  }
+}

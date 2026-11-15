@@ -110,6 +110,21 @@
       "path": "ubuntu26_extended_20261115_run12/SAME_INPUT_COMPARISON.json",
       "bytes": 1763,
       "sha256": "1c6e7d8d5513a32537154dbd14a34b984c13d2f725fc4a0e947a19cb69d854f6"
+    },
+    {
+      "path": "ubuntu26_extended_20261116_trace_normal/VERIFIED_TRACE_NEW_NORMAL.json",
+      "bytes": 32651,
+      "sha256": "7752b1e9fd80318e52ef3c4144331c0525bc9e2f50b8a27cefe9344bd7f5b800"
+    },
+    {
+      "path": "ubuntu26_extended_20261116_singularity_evidence_audit/EVIDENCE_AUDIT.json",
+      "bytes": 595,
+      "sha256": "16fd7bfd87764aeaee9649ed2494028417bc9a5cc9fe261851dc63bc448bcbf0"
+    },
+    {
+      "path": "next_experiments_20261116_scoped/VERIFICATION.json",
+      "bytes": 1542,
+      "sha256": "4d8db73112659d2006cffd55647cf7a390558e11b0d998a796d9ac9b7771715b"
     }
   ],
   "collection_manifests": {
@@ -119,5 +134,11 @@
   "brokepkg_first_boot_update": "updates/20261115_brokepkg/EVIDENCE_MANIFEST.json",
   "singularity_directory_update": "updates/20261115_singularity/RESULTS.json",
   "medusa_three_boot_update": "updates/20261115_medusa/RESULTS.json",
-  "integrated_cost_remaining_work_update": "updates/integrated_cost_and_remaining_work"
+  "integrated_cost_remaining_work_update": "updates/integrated_cost_and_remaining_work",
+  "latest_verified_updates": [
+    "updates/20261116_trace_normal",
+    "updates/20261116_singularity_evidence_audit",
+    "updates/20261116_revised_plan",
+    "updates/20261116_forensic_timing"
+  ]
 }

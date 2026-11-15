@@ -1,0 +1,2819 @@
+{
+  "version": "2026-11-16-plan-3",
+  "review_basis": [
+    {
+      "path": "next_experiments_20261115/EXECUTION_PLAN.json",
+      "sha256": "3ca5cb7504a0b71afc53d5c4d5a5832afec87e2606dab4135c72850634b4b95c"
+    },
+    {
+      "path": "next_experiments_20261115/CANDIDATE_CENSUS.json",
+      "sha256": "139acba698e2c06eca4514385eb3ff901df6b19d51e6f724a3fc155f9f2fa190"
+    },
+    {
+      "path": "next_experiments_20261115/FILE_SHA256.json",
+      "sha256": "f9187e6b121bf94fb6b9fcaadd470220e296fa158586d0f3a7331e3b0cdc6528"
+    }
+  ],
+  "counts": {
+    "background_reference": 9,
+    "comparison_not_sample": 18,
+    "exclude_off_platform": 3,
+    "exclude_other_focus": 20,
+    "exclude_redundant_or_blocked": 10,
+    "exclude_scope_unconfirmed": 25,
+    "existing_control": 1,
+    "existing_primary": 5,
+    "module_forensics_reference": 28,
+    "optional_boundary_evidence": 1,
+    "priority_evidence_review": 2,
+    "recorded_compatibility_failure": 1,
+    "same_mechanism_duplicate": 1,
+    "source_not_sample": 9
+  },
+  "repository_count": 133,
+  "independent_literature_or_name_entries": [
+    {
+      "name": "PUMAKIT",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.elastic.co/security-labs/threat-command/declawing-pumakit",
+      "note": "有公開分析和雜湊；不能以分析報告等同取得可執行原樣本。精確版本相容性待測，非通稱 <=5.10。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "LinkPro",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.synacktiv.com/en/publications/linkpro-ebpf-rootkit-analysis",
+      "note": "事件中的 eBPF/LD_PRELOAD 樣本；原報告已引用，但尚無本方法實測。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "perfctl",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.aquasec.com/blog/perfctl-a-stealthy-malware-targeting-millions-of-linux-servers/",
+      "note": "LD_PRELOAD 與工具替換，需先取得可追溯變種；不等同公開 Medusa 原版。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Syslogk",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://decoded.avast.io/davidalvarez/linux-threat-hunting-syslogk-a-kernel-rootkit-found-under-development-in-the-wild/",
+      "note": "在野且與 Adore-ng 有淵源；查 VFS 掛鉤邊界，可能屬共同盲區。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Drovorub",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://media.defense.gov/2020/Aug/13/2002476465/-1/-1/0/CSA_DROVORUB_RUSSIAN_GRU_MALWARE_AUG_2020.PDF",
+      "note": "NSA/FBI 實際威脅案例，2020 年歷史佐證，不冒稱現代公開測試樣本。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "VoidLink",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://research.checkpoint.com/2026/voidlink-the-cloud-native-malware-framework/",
+      "note": "2026 初始公開報告時未觀察到實際感染；後續樣本/來源分析另有報告，取得與執行狀態獨立。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Ebury",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.welivesecurity.com/en/eset-research/ebury-alive-unseen-400k-linux-servers-compromised-cryptotheft-financial-gain/",
+      "note": "強規模/受害證據；各版本是否具有相同目錄隱藏須個別辨識。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Hildegard",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://unit42.paloaltonetworks.com/hildegard-malware-teamtnt/",
+      "note": "TeamTNT/Kubernetes 的 LD_PRELOAD readdir64 程序隱藏事件；樣本取得待辦。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "SANSAR/acpi_thermal_mgr",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.elastic.co/security-labs/threat-command/sansar-linux-cryptomining-malware",
+      "note": "2026-11-12 事件報告有 ftrace/getdents64，作者取得 C 原始碼不代表已對公眾提供下載。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "HiddenWasp",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf",
+      "note": "VB 二進位案例；不得以沒有公開原始碼推論沒有影響力。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Symbiote",
+      "status": "literature_verified_sample_not_acquired",
+      "source": "https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf",
+      "note": "VB userland/eBPF 相關案例；樣本與實際隱藏邊界待查。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Snapekit",
+      "status": "literature_listed_sample_not_acquired",
+      "source": "https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf",
+      "note": "VB 稱分析時僅有二進位；不是因星數低而排除。",
+      "revised_use": "context_or_literature_only_in_this_project"
+    },
+    {
+      "name": "Mobkit (VB binary)",
+      "status": "identity_unresolved_sample_not_acquired",
+      "source": "https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf",
+      "note": "與 shv-om/MobKit 是否同一實作未證實，分列不混算。",
+      "revised_use": "name_only_do_not_merge"
+    },
+    {
+      "name": "HiddenGhost",
+      "status": "name_unverified",
+      "source": null,
+      "note": "附件提及此名稱；尚未查到可核對的原始研究/唯一專案，與 HiddenWasp 不混同，不編造星數或相容結果。",
+      "revised_use": "unverified_identity_excluded_from_claims"
+    }
+  ],
+  "references": {
+    "DFRWS": {
+      "title": "Roland Nagy, DFRWS 2025, Table A.1 and THOR case study",
+      "url": "https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf"
+    },
+    "VB": {
+      "title": "Ruben Groenewoud and Remco Sprooten, VB2025, Table 1 and Fig. 13",
+      "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf"
+    },
+    "TRACE": {
+      "title": "Landauer et al., Trace of the Times, sections 3 and 6",
+      "url": "https://arxiv.org/abs/2503.02402"
+    },
+    "MANDIANT": {
+      "title": "Mandiant, UNC3886 incident investigation, June 2024",
+      "url": "https://cloud.google.com/blog/topics/threat-intelligence/uncovering-unc3886-espionage-operations"
+    },
+    "ELASTIC": {
+      "title": "Elastic Security Labs, Hooked on Linux, April 2026",
+      "url": "https://www.elastic.co/security-labs/threat-command/linux-rootkits-2-caught-in-the-act"
+    },
+    "TRIPLE_THESIS": {
+      "title": "Marcos Bajo, original academic project for TripleCross",
+      "url": "https://raw.githubusercontent.com/h3xduck/TripleCross/master/docs/ebpf_offensive_rootkit_tfg.pdf"
+    },
+    "CYLAB": {
+      "title": "Zacharia Mansouri, original eBPF rootkit study, sections 3.2.1 and 5",
+      "url": "https://cylab.be/publications/90/download/2026-analyzing-ebpf-rootkits-through-the-mitre-attck-framework.pdf"
+    },
+    "NORNIR": {
+      "title": "Nornir upstream project description",
+      "url": "https://github.com/arttnba3/Nornir-Rootkit"
+    },
+    "SANSAR": {
+      "title": "Elastic Security Labs incident investigation, November 2026",
+      "url": "https://www.elastic.co/security-labs/threat-command/sansar-linux-cryptomining-malware"
+    },
+    "VOIDLINK": {
+      "title": "Check Point Research, initial VoidLink analysis",
+      "url": "https://research.checkpoint.com/2026/voidlink-the-cloud-native-malware-framework/"
+    }
+  },
+  "results": {
+    "caraxes": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+    "brokepkg": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg",
+    "singularity": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity",
+    "medusa": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa",
+    "bds_and_libprocesshider": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+    "comparison": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/integrated_cost_and_remaining_work"
+  },
+  "repositories": [
+    {
+      "repo": "R3tr074/brokepkg",
+      "aliases": [
+        "R3tr074/brokepkg"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "existing_primary",
+      "runtime_state_in_project": "measured_one_boot",
+      "reason": "一開機已實測。160 次隱藏皆告警，136 次找回全部設定目標。VB2025 及 DFRWS 均有佐證。",
+      "evidence_ids": [
+        "VB",
+        "DFRWS"
+      ],
+      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg",
+      "pin_from_original_census": "250f132f0d856cb46449de7a6d0dadd878309fb3",
+      "stars_in_original_snapshot": 140,
+      "original_evidence": {
+        "assessment": "已讀 getdents64 掛鉤宣告；作者列出 6.2 實測，DFRWS 有此專案；不是已證明可跑 7.0。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "bluedragonsecurity/bds_lkm",
+      "aliases": [
+        "bluedragonsecurity/bds_lkm"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "保留 DFRWS 的核心模組研究。BDS userland 的實測另列，不能沿用為此核心專案證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 21,
+      "original_evidence": {
+        "assessment": "專案描述宣告支援至 6.8；在 DFRWS 樣本池；尚未在此 7.0 實測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "bluedragonsecurity/bds_lkm_ftrace",
+      "aliases": [
+        "bluedragonsecurity/bds_lkm_ftrace"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "已有 7.0 固定建置的 API 錯誤，外部模組研究留作背景。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "988898e796f6c5384be9cfc541aea85697bd4def",
+      "stars_in_original_snapshot": 42,
+      "original_evidence": {
+        "assessment": "README 宣告 5.x–6.2；在 DFRWS 樣本池；完整掛鉤機制與 7.0 相容性待驗。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "JakeGinesin/j-rootkit",
+      "aliases": [
+        "JakeGinesin/j-rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 3,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "MatthiasCr/LKM-Rootkit",
+      "aliases": [
+        "MatthiasCr/LKM-Rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 21,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "reveng007/reveng_rtkit",
+      "aliases": [
+        "reveng007/reveng_rtkit"
+      ],
+      "original_role": "legacy_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "舊版研究有收錄。現有版本在此核心建置遇到 API 差異，保留失敗和文獻。",
+      "evidence_ids": [
+        "VB",
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "9f5ea317d1d90e73044a04e4b309358e607b63e8",
+      "stars_in_original_snapshot": 272,
+      "original_evidence": {
+        "assessment": "README 實測 5.11、修改 syscall table；DFRWS 有 5.15 樣本。不可當作已確認的現代 ftrace 範例。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "ngn13/wkit",
+      "aliases": [
+        "ngn13/wkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "lookup_failed",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "Zhang1933/linux-rootkit",
+      "aliases": [
+        "Zhang1933/linux-rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 23,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "m0nad/Diamorphine",
+      "aliases": [
+        "m0nad/Diamorphine"
+      ],
+      "original_role": "retained_compatibility_failure",
+      "disposition": "recorded_compatibility_failure",
+      "runtime_state_in_project": "observed_load_panic",
+      "reason": "保留釘選版本在測試 VM 的載入崩潰。這是該環境的相容性紀錄，未取得有效隱藏掃描。",
+      "evidence_ids": [
+        "VB",
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "7f0aaf1a60797558330b2a30f45017a255da38ef",
+      "stars_in_original_snapshot": 2497,
+      "original_evidence": {
+        "assessment": "現固定 commit 與前次 26 測試相同；保留編譯可過但載入時 CR0/CET panic 的結果，不能寫成本方法已偵測，也不重複同一崩潰。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "dorosch/rootkit",
+      "aliases": [
+        "dorosch/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 1,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "En14c/LilyOfTheValley",
+      "aliases": [
+        "En14c/LilyOfTheValley"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 24,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "sysprog21/lkm-hidden",
+      "aliases": [
+        "sysprog21/lkm-hidden"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 53,
+      "original_evidence": {
+        "assessment": "目前來源為模組自我隱藏示範；模組隱藏與目錄項隱藏是不同目標。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "t0t3m/AFkit",
+      "aliases": [
+        "t0t3m/AFkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 18,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "dmliscinsky/lkm-rootkit",
+      "aliases": [
+        "dmliscinsky/lkm-rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 1,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "juanschallibaum/Nuk3Gh0stBeta",
+      "aliases": [
+        "juanschallibaum/Nuk3Gh0stBeta"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 1,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "Eterna1/puszek-rootkit",
+      "aliases": [
+        "Eterna1/puszek-rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 162,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "miagilepner/rickrolly",
+      "aliases": [
+        "miagilepner/rickrolly"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 17,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "rootfoo/rootkit",
+      "aliases": [
+        "rootfoo/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 68,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "mncoppola/suterusu",
+      "aliases": [
+        "mncoppola/suterusu"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "有歷史研究與 DFRWS 模組紀錄。現有研究資料未確認可補哪個 7.0 列舉缺口。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 690,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "f0rb1dd3n/Reptile",
+      "aliases": [
+        "f0rb1dd3n/Reptile"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "UNC3886 事件有修改版本，VB2025 分析 KHOOK，DFRWS 有舊核心的模組隱藏紀錄。此研究未驗證 7.0。",
+      "evidence_ids": [
+        "MANDIANT",
+        "VB",
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 2750,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "ah450/rootkit",
+      "aliases": [
+        "ah450/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 19,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "a7vinx/liinux",
+      "aliases": [
+        "a7vinx/liinux"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 37,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "m0hamed/lkm-rootkit",
+      "aliases": [
+        "m0hamed/lkm-rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 18,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "nurupo/rootkit",
+      "aliases": [
+        "nurupo/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 提供模組隱藏紀錄。此研究未確認指定版本有額外且可驗收的列舉路徑。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 829,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "soad003/rootkit",
+      "aliases": [
+        "soad003/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 15,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "nnedkov/swiss_army_rootkit",
+      "aliases": [
+        "nnedkov/swiss_army_rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 33,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "W4RH4WK/THOR",
+      "aliases": [
+        "W4RH4WK/THOR"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 有專門案例分析。保留作模組記憶體鑑識引用，移出檔案與 /proc 列舉矩陣。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 25,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "hanj4096/wukong",
+      "aliases": [
+        "hanj4096/wukong"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 45,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "maK-/maK_it-Linux-Rootkit",
+      "aliases": [
+        "maK-/maK_it-Linux-Rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 166,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "yaoyumeng/adore-ng",
+      "aliases": [
+        "yaoyumeng/adore-ng",
+        "trimpsyw/adore-ng"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "VB2025 有 VFS 分類，DFRWS 有舊環境模組紀錄。VFS 路徑是觀測切點的限制討論，缺本研究 7.0 實測。",
+      "evidence_ids": [
+        "VB",
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 225,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "dsmatter/brootus",
+      "aliases": [
+        "dsmatter/brootus"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 33,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "ivyl/rootkit",
+      "aliases": [
+        "ivyl/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 406,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "kevinkoo001/rootkit",
+      "aliases": [
+        "kevinkoo001/rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 12,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "matteomattia/moo_rootkit",
+      "aliases": [
+        "matteomattia/moo_rootkit"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 12,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "bones-codes/the_colonel",
+      "aliases": [
+        "bones-codes/the_colonel"
+      ],
+      "original_role": "literature_candidate",
+      "disposition": "module_forensics_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DFRWS 收錄於模組隱藏研究。原普查尚無可證明它會為本研究新增列舉覆蓋的證據。",
+      "evidence_ids": [
+        "DFRWS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 56,
+      "original_evidence": {
+        "assessment": "DFRWS 模組隱藏樣本池成員；尚未確認是否具有在邊界內的目錄隱藏，也不保證 Linux 7.0 可建置。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": true
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/Singularity",
+      "aliases": [
+        "MatheuZSecurity/Singularity"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "existing_primary",
+      "runtime_state_in_project": "measured_directory_only",
+      "reason": "保留六開機的目錄矩陣。/proc 與啟用中取檔為未測。Elastic 有獨立遙測。",
+      "evidence_ids": [
+        "ELASTIC"
+      ],
+      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity",
+      "pin_from_original_census": "074f3852240bf9c37bc9173cb34efa8e9f668798",
+      "stars_in_original_snapshot": 1844,
+      "original_evidence": {
+        "assessment": "已讀原始碼：__x64_sys_getdents64/getdents；另有反觀測相關程式；7.0 相容性、觀測資料可信度及隱藏成立待實測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "carloslack/KoviD",
+      "aliases": [
+        "carloslack/KoviD"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "optional_boundary_evidence",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "VB2025 收錄。已確認列舉回呼路徑，與 CARAXES 部分重疊。固定建置有缺少編譯定義的紀錄，補充價值在可用性及品質判定。",
+      "evidence_ids": [
+        "VB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "2c039fa734bd475e98aac71d8913b71fda011fe3",
+      "stars_in_original_snapshot": 664,
+      "original_evidence": {
+        "assessment": "已讀原始碼：m_filldir64；另有 BPF 相關攔截。可能造成兩端一致、截斷或品質失效，不能預設必定告警。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "ait-aecid/caraxes",
+      "aliases": [
+        "ait-aecid/caraxes"
+      ],
+      "original_role": "existing_positive_control",
+      "disposition": "existing_primary",
+      "runtime_state_in_project": "measured",
+      "reason": "保留核心列舉回呼與 syscall 測試，以及已驗證的 inode 查名與取檔。原論文亦使用此研究樣本。",
+      "evidence_ids": [
+        "TRACE",
+        "VB"
+      ],
+      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 57,
+      "original_evidence": {
+        "assessment": "已有 Ubuntu 26 封存量測；新功能驗證與 /proc 正式擴充沿用對照身分，不重複冒充新家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "shard77/blackpill",
+      "aliases": [
+        "shard77/blackpill"
+      ],
+      "original_role": "special_environment_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "special_environment_unverified",
+      "reason": "已記錄專用核心、Rust 與虛擬化需求。現有平台尚無可引用的執行證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "24122d438764a156991df8917d2edf3502c6badf",
+      "stars_in_original_snapshot": 340,
+      "original_evidence": {
+        "assessment": "Rust LKM＋自製 hypervisor＋eBPF。已讀 filldir64 攔截；要查 name length 改動是否產生無效記錄，亦須核對虛擬化硬體。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/Furtex",
+      "aliases": [
+        "MatheuZSecurity/Furtex"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "a504433a939f7fb532caf0555cce08f17cdfce27",
+      "stars_in_original_snapshot": 295,
+      "original_evidence": {
+        "assessment": "README 為 post-exploitation/evasion 工具集；io_uring/移除 hooks 不代表已有目錄隱藏案例。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "Trevohack/Venom",
+      "aliases": [
+        "Trevohack/Venom"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "固定建置有核心 API 問題。保留原版紀錄，本輪集中於已有代表與 eBPF 缺口。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "c4ead32647ab62e00613949fd03bbcbb58c8dcdc",
+      "stars_in_original_snapshot": 108,
+      "original_evidence": {
+        "assessment": "README 宣告 6.x 目錄隱藏；完整原始碼與 7.0 須驗。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "Gui774ume/ebpfkit",
+      "aliases": [
+        "Gui774ume/ebpfkit"
+      ],
+      "original_role": "ebpf_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "有外部學術分析。當前研究未驗證指定版本的列舉路徑及 7.0，eBPF 首選保留較貼近檔案和 /proc 的兩項。",
+      "evidence_ids": [
+        "CYLAB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "5727985eab7eca7255ca5cb7c74133c0074e3324",
+      "stars_in_original_snapshot": 870,
+      "original_evidence": {
+        "assessment": "README 開發環境為 Ubuntu Focal/5.4；實際目錄功能、路徑及 libbpf/BTF 相容性待驗。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "pathtofile/bad-bpf",
+      "aliases": [
+        "pathtofile/bad-bpf"
+      ],
+      "original_role": "ebpf_candidate",
+      "disposition": "priority_evidence_review",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "DEF CON 29 研究示範，pidhide 對應 eBPF /proc 列舉。原協定尚無 7.0 實測，與 TripleCross 區分測試目標。",
+      "evidence_ids": [
+        "CYLAB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "0fd3cd0bd4f3c1e6488a63d1e273bb7c36fa58d7",
+      "stars_in_original_snapshot": 712,
+      "original_evidence": {
+        "assessment": "已讀 pidhide.bpf.c 的 getdents64 enter/exit；/proc 隱藏是正式候選。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "h3xduck/TripleCross",
+      "aliases": [
+        "h3xduck/TripleCross"
+      ],
+      "original_role": "ebpf_candidate",
+      "disposition": "priority_evidence_review",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已確認 eBPF 檔案與目錄列舉過濾路徑，VB2025 收錄。用於補文件所缺的 eBPF 檔案證據，7.0 新實測尚無。",
+      "evidence_ids": [
+        "VB",
+        "TRIPLE_THESIS"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "d825d4c8c0575ad1cc9e23beab8b2e466a385fab",
+      "stars_in_original_snapshot": 1995,
+      "original_evidence": {
+        "assessment": "已讀 fs.h 的 getdents64 隱藏路徑；不應因「非以檔案為主」排除。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "krisnova/boopkit",
+      "aliases": [
+        "kris-nova/boopkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已有 VB2025 與 eBPF 研究收錄，列舉相關行為有文獻描述。研究主表已有兩個較直接的 eBPF 候選。",
+      "evidence_ids": [
+        "VB",
+        "CYLAB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "已解析更名網址；eBPF 後門不是自動等同目錄項隱藏，先查功能。",
+        "metadata_status": "metadata_verified_after_redirect",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "h3xduck/Umbra",
+      "aliases": [
+        "h3xduck/Umbra"
+      ],
+      "original_role": "legacy_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "固定建置有 ftrace API 差異，現有研究已有核心代表。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "96443367bb35650d8b468a9e14557f01eeb26653",
+      "stars_in_original_snapshot": 138,
+      "original_evidence": {
+        "assessment": "README 實驗性 4/5.x、5.4 測試；保留候選，相容性未知，不寫 7.0 可跑。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "ldpreload/Medusa",
+      "aliases": [
+        "ldpreload/Medusa"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "existing_primary",
+      "runtime_state_in_project": "measured",
+      "reason": "保留三開機 ext4、tmpfs、/proc 受控結果。Mandiant 的事件涉及修改版，報告須標示版本差異。",
+      "evidence_ids": [
+        "MANDIANT"
+      ],
+      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa",
+      "pin_from_original_census": "fdade060f4bc53a356fe62c14e9c830fcc0b968e",
+      "stars_in_original_snapshot": 342,
+      "original_evidence": {
+        "assessment": "公開 LD_PRELOAD 專案，Mandiant 記錄同名公開家族被 UNC3886 使用；現行上游不是事件變種本體，需三層擴充後實測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "mempodippy/vlany",
+      "aliases": [
+        "mempodippy/vlany"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "VB2025 有應用端掛鉤分析，當次建置有舊 libc 相容問題。應用端已有 Medusa 與 BDS 的可重播結果。",
+      "evidence_ids": [
+        "VB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "9ef014a3211e22c5a6fc1184e8630757fa5d4a54",
+      "stars_in_original_snapshot": 990,
+      "original_evidence": {
+        "assessment": "README 提及舊環境相容性限制；glibc 2.43 原版與必要 API 修正須分開。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "chokepoint/azazel",
+      "aliases": [
+        "chokepoint/azazel"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "VB2025 文獻引用，當次建置有舊 libc 相容問題。保留背景及原始失敗。",
+      "evidence_ids": [
+        "VB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "a41fbb5256f4368a54313f7ff4e88af973ebeb08",
+      "stars_in_original_snapshot": 810,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "unix-thrust/beurk",
+      "aliases": [
+        "unix-thrust/beurk"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "當次缺舊版產生器環境，應用端已有實測代表。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "a5492e7b64ecc7b1e0cf7072d459665323aca903",
+      "stars_in_original_snapshot": 390,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "chokepoint/Jynx2",
+      "aliases": [
+        "chokepoint/Jynx2"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "現有實測已涵蓋應用端列舉。此候選在目前證據下沒有已確認的增量。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 185,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "chokepoint/jynxkit",
+      "aliases": [
+        "chokepoint/jynxkit"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "background_reference",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "VB2025 保留其歷史意義。與現有應用端代表的增量證據未確認。",
+      "evidence_ids": [
+        "VB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 61,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "NexusBots/Umbreon-Rootkit",
+      "aliases": [
+        "NexusBots/Umbreon-Rootkit"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "現有實測已涵蓋應用端列舉。此候選在目前證據下沒有已確認的增量。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 64,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "attackgithub/bdvl",
+      "aliases": [
+        "attackgithub/bdvl"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "當次欠缺生成的建置輸入，應用端已有實測代表。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "139752a11c849764e9f4686bdab984942e75d86f",
+      "stars_in_original_snapshot": 25,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "mav8557/Father",
+      "aliases": [
+        "mav8557/Father"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "保存當次缺 gcrypt 標頭的紀錄，應用端已有實測代表。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "4eb2712caf612a7dc55fd4f34ff5c72b74c7c332",
+      "stars_in_original_snapshot": 147,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/Rootkit",
+      "aliases": [
+        "MatheuZSecurity/Rootkit"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 229,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/RingReaper",
+      "aliases": [
+        "MatheuZSecurity/RingReaper"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 394,
+      "original_evidence": {
+        "assessment": "io_uring 後滲透代理；未確認目錄隱藏，不直接算本方法成功或失敗。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "Idov31/Silverseal",
+      "aliases": [
+        "Idov31/Silverseal"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 195,
+      "original_evidence": {
+        "assessment": "UEFI/bootkit 類；若找不到同一觀測邊界的目錄功能，只列範圍，不開發新的 bootkit 偵測器。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "flashnuke/mod-rootkit",
+      "aliases": [
+        "flashnuke/mod-rootkit"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "固定建置停在 include 路徑。現有資料未顯示能補足優先缺的 eBPF 證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "0db5c443b421a65ff8d41dcdce57f091c3427a56",
+      "stars_in_original_snapshot": 30,
+      "original_evidence": {
+        "assessment": "README/描述提及 kprobes/ftrace 與隱藏項目；須逐一確認原始碼、版本及實際掛鉤。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "arttnba3/Nornir-Rootkit",
+      "aliases": [
+        "arttnba3/Nornir-Rootkit"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_redundant_or_blocked",
+      "runtime_state_in_project": "observed_build_failure",
+      "reason": "上游明列檔案隱藏的數種切點，屬範圍內候選。現有固定建置失敗，研究主表已有代表，本輪不列為必補。",
+      "evidence_ids": [
+        "NORNIR"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "42a51f6ce5a4dae882905eb880a97d766e9741c5",
+      "stars_in_original_snapshot": 81,
+      "original_evidence": {
+        "assessment": "已固定 README 與 commit；現代核心宣告不等於此 VM 可載入，完整機制待查。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "shv-om/MobKit",
+      "aliases": [
+        "shv-om/MobKit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "固定來源已看的掛鉤表只有 kill，未確認目錄列舉過濾。與 VB 表中的同名二進位身分未連結。",
+      "evidence_ids": [
+        "VB"
+      ],
+      "known_project_result": null,
+      "pin_from_original_census": "5556d63fe07527769550e3cf795000a68d981dd5",
+      "stars_in_original_snapshot": 1,
+      "original_evidence": {
+        "assessment": "已讀 mob.c 掛鉤表只看到 kill；尚未確認目錄隱藏。與 VB 所稱二進位 Mobkit 不能只憑同名視為同一樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "ChristianPapathanasiou/apache-rootkit",
+      "aliases": [
+        "ChristianPapathanasiou/apache-rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 0,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "jermeyyy/rooty",
+      "aliases": [
+        "jermeyyy/rooty"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 123,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "trailofbits/krf",
+      "aliases": [
+        "trailofbits/krf"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 360,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "QuokkaLight/rkduck",
+      "aliases": [
+        "QuokkaLight/rkduck"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 93,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "croemheld/lkm-rootkit",
+      "aliases": [
+        "croemheld/lkm-rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 181,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "romeroperezabel/ARP-RootKit",
+      "aliases": [
+        "romeroperezabel/ARP-RootKit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "lookup_failed",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "deb0ch/toorkit",
+      "aliases": [
+        "deb0ch/toorkit"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 14,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "vrasneur/randkit",
+      "aliases": [
+        "vrasneur/randkit"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 28,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "therealdreg/enyelkm",
+      "aliases": [
+        "David-Reguera-Garcia-Dreg/enyelkm",
+        "therealdreg/enyelkm"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified_after_redirect",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "mponcet/subversive",
+      "aliases": [
+        "falk3n/subversive",
+        "mponcet/subversive"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified_after_redirect",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "jiayy/lkm-rootkit",
+      "aliases": [
+        "jiayy/lkm-rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "lookup_failed",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "varshapaidi/Kernel_Rootkit",
+      "aliases": [
+        "varshapaidi/Kernel_Rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "lookup_failed",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "kacheo/KernelRootkit",
+      "aliases": [
+        "kacheo/KernelRootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 36,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "jarun/spy",
+      "aliases": [
+        "jarun/keysniffer"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "原 keysniffer 更名；鍵盤監錄本身不是目錄隱藏。",
+        "metadata_status": "metadata_verified_after_redirect",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "PinkP4nther/Sutekh",
+      "aliases": [
+        "PinkP4nther/Sutekh"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 78,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "NoviceLive/research-rootkit",
+      "aliases": [
+        "NoviceLive/research-rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 603,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "NinnOgTonic/Out-of-Sight-Out-of-Mind-Rootkit",
+      "aliases": [
+        "NinnOgTonic/Out-of-Sight-Out-of-Mind-Rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 24,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "milabs/kopycat",
+      "aliases": [
+        "milabs/kopycat"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 73,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "landhb/DrawBridge",
+      "aliases": [
+        "landhb/DrawBridge"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 119,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "gianlucaborello/libprocesshider",
+      "aliases": [
+        "gianlucaborello/libprocesshider"
+      ],
+      "original_role": "userland_control",
+      "disposition": "existing_control",
+      "runtime_state_in_project": "measured_control",
+      "reason": "保留既有 /proc 陽性校準。此研究控制獨立標示，與在野事件分母分開。",
+      "evidence_ids": [],
+      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+      "pin_from_original_census": "25e0587d6bf2137f8792dc83242b6b0e5a72b415",
+      "stars_in_original_snapshot": 1138,
+      "original_evidence": {
+        "assessment": "公開 LD_PRELOAD /proc 隱藏示範，適合三層校準；不可直接視為特定在野樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "spiderpig1297/kprochide",
+      "aliases": [
+        "spiderpig1297/kprochide"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 24,
+      "original_evidence": {
+        "assessment": "描述為程序隱藏；需確認 /proc 枚舉掛鉤是否在觀測邊界。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "spiderpig1297/kfile-over-icmp",
+      "aliases": [
+        "spiderpig1297/kfile-over-icmp"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 18,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "spiderpig1297/kunkillable",
+      "aliases": [
+        "spiderpig1297/kunkillable"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 19,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "bad-antics/rupurt",
+      "aliases": [
+        "bad-antics/rupurt"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 13,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "ossec/ossec-hids",
+      "aliases": [
+        "ossec/ossec-hids"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 5071,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "chkrootkit/chkrootkit",
+      "aliases": [
+        "chkrootkit/chkrootkit"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "lookup_failed",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "microsoft/Sysmon-Linux",
+      "aliases": [
+        "Sysinternals/SysmonForLinux"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": null,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified_after_redirect",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "al0ne/LinuxCheck",
+      "aliases": [
+        "al0ne/LinuxCheck"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 2116,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "CISOfy/lynis",
+      "aliases": [
+        "CISOfy/lynis"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 16688,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "draios/sysdig",
+      "aliases": [
+        "draios/sysdig"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 8318,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "milabs/awesome-linux-rootkits",
+      "aliases": [
+        "milabs/awesome-linux-rootkits"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 2115,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "hiteshd/Android-Rootkit",
+      "aliases": [
+        "hiteshd/Android-Rootkit"
+      ],
+      "original_role": "off_platform",
+      "disposition": "exclude_off_platform",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "平台與本研究的 Ubuntu 26 x86_64 主環境不同。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 285,
+      "original_evidence": {
+        "assessment": "目前主環境為 Ubuntu 26 x86_64；其他平台不計入原生相容分母。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "tkmru/awesome-linux-rootkits",
+      "aliases": [
+        "tkmru/awesome-linux-rootkits"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 199,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "R3x/linux-rootkits",
+      "aliases": [
+        "R3x/linux-rootkits"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 108,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "dgoulet/kjackal",
+      "aliases": [
+        "dgoulet/kjackal"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 90,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "pentesteracademy/linux-rootkits-red-blue-teams",
+      "aliases": [
+        "pentesteracademy/linux-rootkits-red-blue-teams"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 86,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "LaPhilosophie/hello-rootkit",
+      "aliases": [
+        "LaPhilosophie/hello-rootkit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 120,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "sandflysecurity/sandfly-processdecloak",
+      "aliases": [
+        "sandflysecurity/sandfly-processdecloak"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 112,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "sad0p/d0zer",
+      "aliases": [
+        "sad0p/d0zer"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 216,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/detect-lkm-rootkit-cheatsheet",
+      "aliases": [
+        "MatheuZSecurity/detect-lkm-rootkit-cheatsheet"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 82,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "Mrack/kmem",
+      "aliases": [
+        "Mrack/kmem"
+      ],
+      "original_role": "off_platform",
+      "disposition": "exclude_off_platform",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "平台與本研究的 Ubuntu 26 x86_64 主環境不同。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 66,
+      "original_evidence": {
+        "assessment": "目前主環境為 Ubuntu 26 x86_64；其他平台不計入原生相容分母。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "cr0nx/awesome-linux-attack-forensics-purplelabs",
+      "aliases": [
+        "cr0nx/awesome-linux-attack-forensics-purplelabs"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 344,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "mephistolist/tito",
+      "aliases": [
+        "mephistolist/tito"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 88,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "akazemi67/LinuxMalwareTechniques",
+      "aliases": [
+        "akazemi67/LinuxMalwareTechniques"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 124,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "therealdreg/lsrootkit",
+      "aliases": [
+        "therealdreg/lsrootkit"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 61,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "jordan9001/superhide",
+      "aliases": [
+        "jordan9001/superhide"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 64,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/Imperius",
+      "aliases": [
+        "MatheuZSecurity/Imperius"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 59,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/ModTracer",
+      "aliases": [
+        "MatheuZSecurity/ModTracer"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 88,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "0xbitx/DEDSEC_BOTNET",
+      "aliases": [
+        "0xbitx/DEDSEC_BOTNET"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 111,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "kkamagui/shadow-box-for-x86",
+      "aliases": [
+        "kkamagui/shadow-box-for-x86"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 201,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "Gui774ume/ebpfkit-monitor",
+      "aliases": [
+        "Gui774ume/ebpfkit-monitor"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 145,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "jm33-m0/emp3r0r",
+      "aliases": [
+        "jm33-m0/emp3r0r"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 1826,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/UnhookingLinuxEdr",
+      "aliases": [
+        "MatheuZSecurity/UnhookingLinuxEdr"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 57,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "maldevel/RootKits-List-Download",
+      "aliases": [
+        "maldevel/RootKits-List-Download"
+      ],
+      "original_role": "source_collection",
+      "disposition": "source_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留作來源索引與別名去重。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 70,
+      "original_evidence": {
+        "assessment": "目錄或教材/程式集；展開其中相關樣本並去重，不把整個清單算成一個 rootkit 家族。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "screetsec/Vegile",
+      "aliases": [
+        "screetsec/Vegile"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 758,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "thalium/rkchk",
+      "aliases": [
+        "thalium/rkchk"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 64,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "aidlx/ghostscan",
+      "aliases": [
+        "aidlx/ghostscan"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 228,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "MatheuZSecurity/ksentinel",
+      "aliases": [
+        "MatheuZSecurity/ksentinel"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 97,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "kkamagui/shadow-box-for-arm",
+      "aliases": [
+        "kkamagui/shadow-box-for-arm"
+      ],
+      "original_role": "off_platform",
+      "disposition": "exclude_off_platform",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "平台與本研究的 Ubuntu 26 x86_64 主環境不同。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 76,
+      "original_evidence": {
+        "assessment": "目前主環境為 Ubuntu 26 x86_64；其他平台不計入原生相容分母。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "juanschallibaum/Nuk3Gh0st",
+      "aliases": [
+        "juanschallibaum/Nuk3Gh0st"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 54,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "rphang/evilBPF",
+      "aliases": [
+        "rphang/evilBPF"
+      ],
+      "original_role": "ebpf_candidate",
+      "disposition": "same_mechanism_duplicate",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已記錄與 bad-bpf 的衍生關係。相同 pidhide 路徑保留單一代表，來源可留在附錄。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": "40717eb393c879fb86a03403bdac1a16a72eadeb",
+      "stars_in_original_snapshot": 89,
+      "original_evidence": {
+        "assessment": "已讀 hide_pid/hider.bpf.c；與 bad-bpf 衍生關係另記，不能灌獨立家族數。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "NeverSight/NeverC",
+      "aliases": [
+        "NeverSight/NeverC"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 99,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "sandflysecurity/sandfly-kernel-module-decloak",
+      "aliases": [
+        "sandflysecurity/sandfly-kernel-module-decloak"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 35,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "buter-chkalova/project-rvbbit",
+      "aliases": [
+        "buter-chkalova/project-rvbbit"
+      ],
+      "original_role": "scope_review",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認研究範圍內的列舉機制，也沒有已核實的新增比較價值。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 34,
+      "original_evidence": {
+        "assessment": "保留候選；先讀完整來源判定角色、目錄隱藏與環境需求，尚不能宣稱可跑或已偵測。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "Nadharm/CoVirt",
+      "aliases": [
+        "Nadharm/CoVirt"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 41,
+      "original_evidence": {
+        "assessment": "AMD-V 虛擬機型 rootkit；查角色與需求，不列為已支援。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "sandflysecurity/sandfly-file-decloak",
+      "aliases": [
+        "sandflysecurity/sandfly-file-decloak"
+      ],
+      "original_role": "comparison_tool",
+      "disposition": "comparison_not_sample",
+      "runtime_state_in_project": "outside_native_sample_denominator",
+      "reason": "保留在工具與適用範圍比較。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 29,
+      "original_evidence": {
+        "assessment": "防禦/稽核工具；檢查目標與可用性後作適當互補比較，不計為攻擊樣本。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "vvswift/blackbox-ave",
+      "aliases": [
+        "vvswift/blackbox-ave"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 32,
+      "original_evidence": {
+        "assessment": "描述有檔案/程序隱藏；現代候選，尚未完整來源與相容性驗證。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "brosck/Rebellion",
+      "aliases": [
+        "brosck/Rebellion"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 27,
+      "original_evidence": {
+        "assessment": "描述 5.x/6.x；原始碼路徑、實際目錄隱藏及 7.0 相容性待驗。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "bluedragonsecurity/bds_userland",
+      "aliases": [
+        "bluedragonsecurity/bds_userland"
+      ],
+      "original_role": "userland_candidate",
+      "disposition": "existing_primary",
+      "runtime_state_in_project": "measured",
+      "reason": "保留低星數且已有可重播的應用端檔案列舉結果。BDS 的核心專案另列。",
+      "evidence_ids": [],
+      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+      "pin_from_original_census": "1a6f1303bc67373a2c0fafd5cb901bdd19ee10e0",
+      "stars_in_original_snapshot": 21,
+      "original_evidence": {
+        "assessment": "保留公開 userland 候選；需核對 readdir/readdir64 等實際掛鉤、glibc 2.43 與三層結果。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "yasindce1998/KubeDagger",
+      "aliases": [
+        "yasindce1998/KubeDagger"
+      ],
+      "original_role": "ebpf_candidate",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查尚未確認指定版本的列舉切點與增量，本輪優先核對兩個定向案例。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 43,
+      "original_evidence": {
+        "assessment": "專案描述有 process hiding；需確認是否真為 /proc 目錄過濾，再納入。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "A4n9g7e2l/Xway",
+      "aliases": [
+        "A4n9g7e2l/Xway"
+      ],
+      "original_role": "other_mechanism",
+      "disposition": "exclude_other_focus",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "已知主要用途不同，原普查沒有提供新增列舉覆蓋所需的證據。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 29,
+      "original_evidence": {
+        "assessment": "目前描述為其他攻擊/防禦用途，是否含目錄隱藏待來源確認；沒有則保留範圍說明，不作無關象徵性測試。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    },
+    {
+      "repo": "malefax/Adrishya",
+      "aliases": [
+        "malefax/Adrishya"
+      ],
+      "original_role": "kernel_candidate",
+      "disposition": "exclude_scope_unconfirmed",
+      "runtime_state_in_project": "runtime_unverified",
+      "reason": "原普查缺足以補現有核心代表的指定版本列舉證據或外部資料。",
+      "evidence_ids": [],
+      "known_project_result": null,
+      "pin_from_original_census": null,
+      "stars_in_original_snapshot": 36,
+      "original_evidence": {
+        "assessment": "描述 ftrace syscall 掛鉤；目錄隱藏路徑與此核心相容性待驗。",
+        "metadata_status": "metadata_verified",
+        "in_dfrws_module_census": false
+      }
+    }
+  ]
+}

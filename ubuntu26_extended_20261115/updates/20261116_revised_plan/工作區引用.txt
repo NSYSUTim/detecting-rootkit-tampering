@@ -1,0 +1,1 @@
+本資料夾是工作區新版實驗計畫的快照。EXECUTION_PLAN.json 中引用的原計畫、驗收狀態與取檔協定使用工作區 artifacts 下的相對位置，對應檔案與雜湊見 VERIFICATION.json。主結果狀態仍以延伸資料夾的 PLAN_STATUS.json 和 RESULTS.json 為準。

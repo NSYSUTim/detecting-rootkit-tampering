@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T23:55:26.223272+08:00",
+  "updated": "2026-11-16T07:09:22.723133+08:00",
   "plan": "2026-11-15-plan-2",
   "plan_fully_completed": false,
   "status_count": {
@@ -984,5 +984,50 @@
       "p95": 3284.77151
     }
   },
-  "remaining_work_audit": "updates/integrated_cost_and_remaining_work/REMAINING_TASKS.json"
+  "remaining_work_audit": "updates/integrated_cost_and_remaining_work/REMAINING_TASKS.json",
+  "current_candidate_plan": {
+    "path": "updates/20261116_revised_plan/EXECUTION_PLAN.json",
+    "version": "2026-11-16-plan-3",
+    "repository_count": 133,
+    "counts": {
+      "background_reference": 9,
+      "comparison_not_sample": 18,
+      "exclude_off_platform": 3,
+      "exclude_other_focus": 20,
+      "exclude_redundant_or_blocked": 10,
+      "exclude_scope_unconfirmed": 25,
+      "existing_control": 1,
+      "existing_primary": 5,
+      "module_forensics_reference": 28,
+      "optional_boundary_evidence": 1,
+      "priority_evidence_review": 2,
+      "recorded_compatibility_failure": 1,
+      "same_mechanism_duplicate": 1,
+      "source_not_sample": 9
+    }
+  },
+  "singularity_existing_evidence_audit": {
+    "path": "updates/20261116_singularity_evidence_audit/EVIDENCE_AUDIT.json",
+    "target_events_validated_against_saved_truth": 7812,
+    "live_extraction_or_proc_test_added": false
+  },
+  "trace_new_normal_only": {
+    "path": "updates/20261116_trace_normal/RESULTS.json",
+    "batches": 50,
+    "new_positive_batches": 0,
+    "totals": {
+      "fun": {
+        "false_alarm": 9,
+        "correct_normal": 31,
+        "invalid": 0,
+        "outside_calibrated_scenarios": 10
+      },
+      "seq": {
+        "false_alarm": 0,
+        "correct_normal": 40,
+        "invalid": 0,
+        "outside_calibrated_scenarios": 10
+      }
+    }
+  }
 }

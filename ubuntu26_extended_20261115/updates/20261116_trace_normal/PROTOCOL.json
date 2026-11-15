@@ -1,0 +1,21 @@
+{
+  "boot": "aaa7eeec-a293-4ccd-bac1-29fab91e0bbd",
+  "kernel": "7.0.0-43-generic",
+  "seed": 20261116,
+  "scenarios": [
+    "default",
+    "file_count",
+    "system_load",
+    "ls_basic",
+    "filename_length"
+  ],
+  "batches_per_scenario": 10,
+  "iterations_per_batch": 100,
+  "source_sha256": {
+    "probing.py": "d78413f49db2c55af985c03444e3f75b07d4dd86fdf60a0bedb2c9ca32146e51",
+    "kernel.c": "e87200a1a6b04be54bb1a3e05cc933d103d7668eb1bafec303952f3ca19f7f95",
+    "data_classes.py": "21cf905285871a34be89dd57f56df813fbb3f874b2264f2b976f968ba2e63f93",
+    "ls-basic": "bffa367d2e191c5fa296a7fc83d43ce079512cc51b66871206489808014e2c9e",
+    "linux.py": "2664ca48882c82800648722d2a543d5aa873cdb0d8062636a99bb722da2d9bb3"
+  }
+}

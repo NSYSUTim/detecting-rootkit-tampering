@@ -1,0 +1,42 @@
+{
+  "all_133_canonical_repositories_accounted_for": true,
+  "independent_literature_or_name_entries": 14,
+  "disposition_counts": {
+    "existing_primary": 5,
+    "module_forensics_reference": 28,
+    "background_reference": 9,
+    "recorded_compatibility_failure": 1,
+    "exclude_other_focus": 20,
+    "optional_boundary_evidence": 1,
+    "exclude_redundant_or_blocked": 10,
+    "exclude_scope_unconfirmed": 25,
+    "priority_evidence_review": 2,
+    "source_not_sample": 9,
+    "existing_control": 1,
+    "comparison_not_sample": 18,
+    "exclude_off_platform": 3,
+    "same_mechanism_duplicate": 1
+  },
+  "original_task_count": 30,
+  "revised_task_count": 30,
+  "original_planning_manifest_verified_files": 17,
+  "original_census_and_plan": [
+    {
+      "path": "next_experiments_20261115/EXECUTION_PLAN.json",
+      "sha256": "3ca5cb7504a0b71afc53d5c4d5a5832afec87e2606dab4135c72850634b4b95c"
+    },
+    {
+      "path": "next_experiments_20261115/CANDIDATE_CENSUS.json",
+      "sha256": "139acba698e2c06eca4514385eb3ff901df6b19d51e6f724a3fc155f9f2fa190"
+    },
+    {
+      "path": "next_experiments_20261115/FILE_SHA256.json",
+      "sha256": "f9187e6b121bf94fb6b9fcaadd470220e296fa158586d0f3a7331e3b0cdc6528"
+    }
+  ],
+  "new_files": {
+    "EXECUTION_PLAN.json": "a602ee3ecb8c50df105711ba4f176a8280d6b8084d50887fb2769e2a7b434ec2",
+    "CANDIDATE_DECISIONS.json": "8b16035049045dde30436813f0099c77c86b07198d842e7ea78a3d237aff6341",
+    "候選逐項評估.txt": "9517ef4a1ee87da28c89fcbde3628fb4c61334e6d76cc41706f57d922f3eb1f4"
+  }
+}

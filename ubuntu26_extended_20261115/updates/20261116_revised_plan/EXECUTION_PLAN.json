@@ -1,0 +1,696 @@
+{
+  "version": "2026-11-16-plan-3",
+  "kind": "revised_scope_for_research_evidence_and_report",
+  "scope": "Keep prior measured conditions, assess candidates and close the report on verified evidence.",
+  "target_hours": 36,
+  "deadline_guaranteed": false,
+  "scope_reduction_authorized": true,
+  "execution_order_is_not_exclusion": false,
+  "existing_completed": [
+    "Ubuntu26 frozen original-code experiments",
+    "73-item full evidence diagnosis and capacity cross-check",
+    "OEM dynamic supplementary verification",
+    "Current planning: discovery, 25 pinned READMEs, 11 partial source observations and evidence catalog"
+  ],
+  "proposed_dimensions": {
+    "public_static": {
+      "boots": 3,
+      "attach_orders": 2,
+      "filesystems": [
+        "ext4",
+        "tmpfs"
+      ],
+      "buffers_bytes": [
+        256,
+        65536
+      ],
+      "independent_fixtures_per_cell": 20,
+      "states": [
+        "unloaded",
+        "loaded_no_active_directory_filter_where_valid",
+        "active_hiding"
+      ],
+      "scans_per_state_per_mode": 480,
+      "maximum_scans_per_three_state_mode": 1440
+    },
+    "capacity": {
+      "k": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "cells": [
+        256,
+        512,
+        1024
+      ],
+      "differences": [
+        0,
+        1,
+        2,
+        8,
+        32,
+        64,
+        73,
+        128,
+        256,
+        512
+      ],
+      "seeded_inputs_per_cell": 100
+    },
+    "cost": {
+      "entries": [
+        1,
+        64,
+        1024,
+        8192,
+        65536
+      ],
+      "buffers_bytes": [
+        256,
+        65536
+      ],
+      "boots": 3,
+      "warmups": 5,
+      "measurements_per_cell": 30,
+      "load": [
+        "idle",
+        "cpu",
+        "memory",
+        "io"
+      ]
+    }
+  },
+  "timing_evidence": {
+    "trace_collection_seconds": 13121.125,
+    "trace_evaluation_seconds": 9475.734,
+    "complete_trace_protocol_hours": 6.2769053,
+    "source": "../ubuntu26_lts_full_rerun_20261114/remaining_timing.stdout",
+    "notes": "Per-source acquisition, ports, reboots and new layer development additional. Host multi-VM capacity not established; timing runs must avoid host contention."
+  },
+  "terminal_statuses": [
+    "completed_valid",
+    "build_failed",
+    "load_failed",
+    "crashed",
+    "hiding_not_exercised",
+    "outside_scope",
+    "unavailable",
+    "invalid_measurement",
+    "no_alarm",
+    "partial_recovery",
+    "not_applicable",
+    "pending"
+  ],
+  "metrics": [
+    "candidate_to_source_to_build_to_load_to_actual_hide_to_boundary_to_valid_scan",
+    "directory_alarm",
+    "detector_availability",
+    "identity_recovery",
+    "name_location",
+    "inode_location",
+    "content_sha256_match",
+    "startup_scan_decision_recovery_forensics_cost",
+    "live_same_vm_root_inode_extraction",
+    "end_to_end_content_verified_over_all_eligible_hidden_files"
+  ],
+  "tasks": [
+    {
+      "id": "J00",
+      "workstream": "W00",
+      "title": "封存環境、程式、來源、套件、真值與新輸出目錄",
+      "status": "complete",
+      "depends_on": [],
+      "outputs": [
+        "environment.json",
+        "source_and_binary_hashes.json",
+        "fixtures_manifest.json"
+      ],
+      "acceptance": "每份量測可對應到精確 code/environment ID；所有輸出置於新目錄",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "已保存環境、來源與資料身分，原結果及書面雜湊核對通過。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J01",
+      "workstream": "W01",
+      "title": "逐列核對全部候選並固定新版納入範圍",
+      "status": "complete",
+      "depends_on": [],
+      "outputs": [
+        "CANDIDATE_DECISIONS.json",
+        "候選逐項評估.txt"
+      ],
+      "acceptance": "以 CANDIDATE_DECISIONS.json 的 133 筆及獨立 14 筆文獻／名稱條目驗收。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "133 個 repository 角色清單與 14 個文獻事件候選已建立，部分來源已釘選。 本輪新增取得並逐檔驗證 806 個已釘選原始文字檔，完整輸入副本有 1,301 個檔案。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J02",
+      "workstream": "W01",
+      "title": "確認事件證據與實驗版本身分",
+      "status": "partial",
+      "depends_on": [
+        "J01"
+      ],
+      "outputs": [
+        "incident_and_sample_identity.json"
+      ],
+      "acceptance": "未取得或未驗證的事件原樣本列背景。只有可核對同一版本的證據才記錄成測試結果。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "產業事件與在野樣本的來源查核已保留。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J03",
+      "workstream": "W02",
+      "title": "核對既有核心／eBPF 資料的適用性",
+      "status": "partial",
+      "depends_on": [
+        "J00",
+        "J01"
+      ],
+      "outputs": [
+        "candidate_runtime_evidence.json"
+      ],
+      "acceptance": "保留 CARAXES、Singularity、brokepkg 的觀測。TripleCross 與 bad-bpf 各填版本、機制、執行證據狀態。KoviD 保留現有建置結果。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J04",
+      "workstream": "W02",
+      "title": "保留固定版本建置與載入的失敗及差異",
+      "status": "partial",
+      "depends_on": [
+        "J03"
+      ],
+      "outputs": [
+        "compatibility_observations.json"
+      ],
+      "acceptance": "各錯誤有樣本版本及環境。既有相容性失敗依原紀錄呈現。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "已實測 brokepkg 的核心常數名稱相容定義，原始程式碼保持一致，成功建置。其他候選保留 API 和建置錯誤。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J05",
+      "workstream": "W02",
+      "title": "整理已有的核心目錄矩陣",
+      "status": "partial",
+      "depends_on": [
+        "J03"
+      ],
+      "outputs": [
+        "verified_kernel_matrix.json"
+      ],
+      "acceptance": "按樣本及實際運行條件列告警、已觀測差異解碼、全部目標還原。另列 brokepkg 只做一開機，額外優先候選沒有新測結果。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "保留既有 CARAXES 矩陣及一個新同 VM 取證 cohort。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J06",
+      "workstream": "W03",
+      "title": "定義並實作應用程式真正可見的 L 端",
+      "status": "partial",
+      "depends_on": [
+        "J00"
+      ],
+      "outputs": [
+        "libc_design.txt",
+        "frozen_libc_variant/",
+        "call_boundary_checks.json"
+      ],
+      "acceptance": "不只掛真正 libc 的內部返回；能核對外層 interposition 與支援 harness/ABI",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "受控 readdir64 應用程式在同一次列舉提供 L 端身分，與 K/S 對照。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J07",
+      "workstream": "W03",
+      "title": "DIR/fd/epoch 關聯與預讀、EOF、early-close 控制",
+      "status": "partial",
+      "depends_on": [
+        "J06"
+      ],
+      "outputs": [
+        "runs/libc_controls/",
+        "stream_accounting.jsonl"
+      ],
+      "acceptance": "不完整 walk/權限錯誤/rewind 不報成隱藏；正常 buffering 不誤報",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "387 次既有正常三層觀測，新增三開機 1,560 案例、2,280 段控制，含 rewind、fd reuse、雙目錄、變動和錯誤。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J08",
+      "workstream": "W03",
+      "title": "核對應用端樣本的版本與既有觀測",
+      "status": "partial",
+      "depends_on": [
+        "J01",
+        "J06"
+      ],
+      "outputs": [
+        "userland_sample_identity.json"
+      ],
+      "acceptance": "維持 Medusa、BDS userland、libprocesshider 的原有條件與控制身分。其他候選移出必做。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "兩個公開 userland 樣本的原生結果及 120 次原始記錄已核對。 補齊官方標頭後 Medusa 原版成功編譯，已開始一開機原生三層驗證。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J09",
+      "workstream": "W03",
+      "title": "結算已取得的應用端三層矩陣",
+      "status": "partial",
+      "depends_on": [
+        "J08"
+      ],
+      "outputs": [
+        "verified_userland_matrix.json"
+      ],
+      "acceptance": "呈現擷取層、版本、有效及無效分母。應用端研究控制與事故引用分開。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "BDS userland／libprocesshider 新三開機共 360 次，180 次差異皆正確告警並完整還原、180 次正常對照一致。Medusa 第一個開機有 54 次有效差異、60 次正常對照和 6 次無效輸出。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J10",
+      "workstream": "W03",
+      "title": "整理既有核心與應用端組合證據",
+      "status": "partial",
+      "depends_on": [
+        "J05",
+        "J09"
+      ],
+      "outputs": [
+        "combined_offline_evidence.json"
+      ],
+      "acceptance": "目前使用既有離線資料。出現不可用或資料遺失時明列，不視為正常。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "已保存的離線三層資料含同時跨兩個觀測界面的差異。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J11",
+      "workstream": "W04",
+      "title": "/proc canary 生命週期、PIDFD/starttime/ns 關聯",
+      "status": "partial",
+      "depends_on": [
+        "J00"
+      ],
+      "outputs": [
+        "proc_canaries.jsonl",
+        "proc_ground_truth.jsonl"
+      ],
+      "acceptance": "已退出/PID 重用/權限合法隱藏與 rootkit 過濾可區分",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "PIDFD、程序存活與 starttime／namespace 控制有證據。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J12",
+      "workstream": "W04",
+      "title": "整理既有 /proc 實測與未測範圍",
+      "status": "partial",
+      "depends_on": [
+        "J09"
+      ],
+      "outputs": [
+        "proc_metrics.json",
+        "proc_scope_limits.json"
+      ],
+      "acceptance": "Medusa 與 libprocesshider 各 60 次有效隱藏與 60 次正常對照。核心樣本與 eBPF /proc 的未驗證範圍逐項記錄。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "libprocesshider 一開機 20 組 canary，共 255 筆差異。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J13",
+      "workstream": "W04",
+      "title": "程序生滅、PID namespace、hidepid 正常控制",
+      "status": "complete",
+      "depends_on": [
+        "J11"
+      ],
+      "outputs": [
+        "runs/proc_controls/"
+      ],
+      "acceptance": "不把合法政策或 churn 作陽性；不由 /proc 推稱所有 DKOM 都支援",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "三開機完成 60 次程序生滅列舉、6 次 PID namespace 列舉，以及 hidepid 合法可見性控制。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J14",
+      "workstream": "W05",
+      "title": "同一受測 VM 的 root/debugfs 唯讀取檔準備",
+      "status": "complete",
+      "depends_on": [
+        "J00"
+      ],
+      "outputs": [
+        "forensics/ext4_fixture_manifest.json",
+        "forensics/live_extraction_environment.json"
+      ],
+      "acceptance": "專用 ext4 fixture 已落盤並停止變動；來源裝置/FSUUID/inode/內容真值完整；工具以 root、來源唯讀；乾淨 VM 不作主要成功前提",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "同 VM 唯讀 ext4 fixture、裝置、UUID、inode、內容與來源雜湊完整保存。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J15",
+      "workstream": "W05",
+      "title": "驗收 CARAXES 啟用期間取檔證據",
+      "status": "partial",
+      "depends_on": [
+        "J14"
+      ],
+      "outputs": [
+        "caraxes_extraction_verification.json"
+      ],
+      "acceptance": "保留由偵測器解出 inode、在同 VM 查名及讀取內容、前後隱藏檢查與內容雜湊。其他樣本無啟用中取檔資料時標明未測。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "本輪三開機、216 次主列舉，有 300 筆由解碼 inode 反查到正確檔名並完成內容核對。另 240 次硬連結測試中 176 次有效差異皆正確定位實際缺失名稱，保留 100／64 次各組無效列舉。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J16",
+      "workstream": "W05",
+      "title": "取檔適用性與既定案例邊界紀錄",
+      "status": "complete",
+      "depends_on": [
+        "J14"
+      ],
+      "outputs": [
+        "forensics/applicability.jsonl"
+      ],
+      "acceptance": "記錄 ext4、裝置/時間/inode 對應與既定連結案例；非 ext4/已變動等列明理由，不另開跨檔案系統、刪除檔案或抗針對研究",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "三開機硬連結／symlink 正常控制與 ext4、時間點、裝置、inode 假設均已記錄。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J17",
+      "workstream": "W06",
+      "title": "凍結公平比較的任務標籤、split 與門檻",
+      "status": "partial",
+      "depends_on": [
+        "J00"
+      ],
+      "outputs": [
+        "baselines/task_labels.json",
+        "baselines/splits.json",
+        "baselines/thresholds.json"
+      ],
+      "acceptance": "rootkit-presence 與 active-directory-tampering 分開；test 不調閾值",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "Trace 校準與測試批次互斥，先定門檻再測試的資料已核對。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J18",
+      "workstream": "W06",
+      "title": "在已驗證的同一輸入上比較",
+      "status": "partial",
+      "depends_on": [
+        "J05",
+        "J09",
+        "J17"
+      ],
+      "outputs": [
+        "baselines/identity_comparison.json"
+      ],
+      "acceptance": "重用已保存的 count、name、full identity、exact 對照。公開樣本暫不足的條件另列。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "同輸入 count／name-only／full／exact 比較，1,900 組有效離線比較和 120 次真實三層紀錄已重算。 新增驗證 brokepkg、Singularity、Medusa 保存輸入的計數、名稱、完整身分告警一致，測試皆為移除型差異。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J19",
+      "workstream": "W06",
+      "title": "存檔 Trace 評估及新資料缺口，列於後段",
+      "status": "partial",
+      "depends_on": [
+        "J17"
+      ],
+      "outputs": [
+        "trace_comparison_and_limits.json"
+      ],
+      "acceptance": "保留凍結門檻結果和既存資料的限制。任何新資料的進度以原始紀錄驗收。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "既有 Ubuntu 26 Trace 完整 protocol 與凍結門檻重評可引用。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J20",
+      "workstream": "W06",
+      "title": "整理 Decloaker 已有比較與適用檔案系統",
+      "status": "partial",
+      "depends_on": [
+        "J17"
+      ],
+      "outputs": [
+        "baselines/decloaker/"
+      ],
+      "acceptance": "保留已測的可存取路徑與正常控制。缺原生路徑阻擋的資料列為未測。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "既有九開機隱藏對照，另以 20 個乾淨 ext4 fixture 驗證可開路徑及已知快照不一致。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J21",
+      "workstream": "W06",
+      "title": "可用業界/開源工具的互補比較與限制",
+      "status": "partial",
+      "depends_on": [
+        "J01",
+        "J17"
+      ],
+      "outputs": [
+        "baselines/complementary_tools.jsonl"
+      ],
+      "acceptance": "版本、規則、目標、可用性俱全；模組警報不等於項目還原",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "ModXRef／Volatility、Sandfly、rkhunter、chkrootkit、Tracee／Falco 的目標及 VM 可用性已查核。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J22",
+      "workstream": "W07",
+      "title": "已保存 73 失敗的原始輸入重播",
+      "status": "complete",
+      "depends_on": [
+        "J06"
+      ],
+      "outputs": [
+        "regression/saved_collision.json"
+      ],
+      "acceptance": "新版本保存原失敗，256/512/1024 各自結果，不重認歷史名稱",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "已保存 73 筆碰撞重現與 256／512／1024 格重播，歷史無名稱失敗與重現輸入分開。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J23",
+      "workstream": "W07",
+      "title": "新 k/m/delta 容量與身分邊界矩陣",
+      "status": "complete",
+      "depends_on": [
+        "J00"
+      ],
+      "outputs": [
+        "capacity/raw.jsonl",
+        "capacity/summary.json"
+      ],
+      "acceptance": "4 k×3 m×10 deltas×至少100 seeds；真實/合成分布及診斷搜尋分開",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "24,000 次 k/m/delta 試驗、真實／合成分布及刻意碰撞皆有紀錄。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J24",
+      "workstream": "W07",
+      "title": "核對可支援範圍內的正常回歸與原始資料重播",
+      "status": "partial",
+      "depends_on": [
+        "J07",
+        "J13",
+        "J22"
+      ],
+      "outputs": [
+        "regression/verified_scope.json"
+      ],
+      "acceptance": "通用應用端與最終整合版未驗收時，以已測程式版本為報告範圍。舊九次開機結果只對應原版本。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "57 個可在主機執行的既有測試通過，既有主矩陣和新原生正常控制通過核對。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J25",
+      "workstream": "W08",
+      "title": "新三層版本成本與啟動/掃描/恢復/取證分解",
+      "status": "partial",
+      "depends_on": [
+        "J24"
+      ],
+      "outputs": [
+        "cost/raw.jsonl",
+        "cost/summary.json"
+      ],
+      "acceptance": "1/64/1024/8192/65536 entries×buffers/FS/load；5 warmup+30 measured×3boots，依適用分列",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "原版核心至 syscall 成本三開機 7,200 次正式量測；應用元件另三開機 7,200 次正式量測。 受控 K/S/L 同時收集三次開機 3,600 次正式量測、600 次暖機。ext4 65,536 檔案閒置時中位數 2894.05 ms。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J26",
+      "workstream": "W09",
+      "title": "核對原始文獻、技術覆蓋與在野證據",
+      "status": "complete",
+      "depends_on": [
+        "J01"
+      ],
+      "outputs": [
+        "EVIDENCE_MAP.json",
+        "reference_audit.json"
+      ],
+      "acceptance": "按事件、技術研究、模組鑑識與本研究實證對應論點。引用使用各來源的實際證據範圍。",
+      "status_as_of_prior_record": "complete",
+      "completed_evidence_as_of_prior_record": "20 條來源到論點對照已保留，SANSAR 原站複核完成。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J27",
+      "workstream": "W10",
+      "title": "結算實測分母、無效及未納入理由",
+      "status": "partial",
+      "depends_on": [
+        "J05",
+        "J09",
+        "J12",
+        "J15",
+        "J18",
+        "J25"
+      ],
+      "outputs": [
+        "metrics/all_denominators.json",
+        "metrics/failures.jsonl",
+        "metrics/tables/"
+      ],
+      "acceptance": "以修訂名單與已有資料計算各項分母。記錄相容性失敗、資料不足和範圍不同。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "既有與新增測次已按家族、觀測品質、告警、還原及內容取回分列，失敗保留。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J28",
+      "workstream": "W10",
+      "title": "獨立原始 bytes 重播、全包 hash 與來源核對",
+      "status": "partial",
+      "depends_on": [
+        "J27"
+      ],
+      "outputs": [
+        "verification.json",
+        "SHA256SUMS.json"
+      ],
+      "acceptance": "結果可獨立計算，原始/修正版/補充組不覆蓋",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。 已比對整合成本 16,800 個原始檔案的 SHA-256，並獨立重播每個開機與條件的第一筆正式量測，共 120 筆。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    },
+    {
+      "id": "J29",
+      "workstream": "W10",
+      "title": "以已驗證範圍完成研究結論與限制",
+      "status": "partial",
+      "depends_on": [
+        "J26",
+        "J27",
+        "J28"
+      ],
+      "outputs": [
+        "report_draft/",
+        "report_data_crosscheck.json"
+      ],
+      "acceptance": "寫出問題重要性、既有實驗結果、取檔、成本、限制、排除原因及原始來源。優先候選未取得實證時列為研究缺口。",
+      "status_as_of_prior_record": "partial",
+      "completed_evidence_as_of_prior_record": "已有可貼入報告的結果文字、版本比較、限制與本次進度表。 本批提供量測條件、已覆蓋範圍、同輸入比較及可引用段落。",
+      "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
+    }
+  ],
+  "scope_lock": {
+    "basis": "2026-11-16 使用者要求依外部佐證、機制覆蓋與實證狀態收斂原生測試範圍。",
+    "new_families_or_baselines_without_request": false,
+    "all_previously_in_scope_candidates_retained": false,
+    "necessary_compatibility_and_correctness_fixes_continue": true,
+    "new_anti_forensics_or_tamper_resistance_research": false,
+    "new_non_ext_filesystem_recovery_research": false,
+    "deliverable": "既有證據、分母、失敗、引用及新版研究結論。候選與已實測各自呈現。",
+    "new_measurements_started": false,
+    "rootkit_porting_is_out_of_revised_scope": true,
+    "candidate_decisions": "CANDIDATE_DECISIONS.json",
+    "already_measured_or_control": [
+      "R3tr074/brokepkg",
+      "MatheuZSecurity/Singularity",
+      "ait-aecid/caraxes",
+      "ldpreload/Medusa",
+      "gianlucaborello/libprocesshider",
+      "bluedragonsecurity/bds_userland"
+    ],
+    "priority_evidence_review": [
+      "pathtofile/bad-bpf",
+      "h3xduck/TripleCross"
+    ],
+    "optional_boundary_evidence": [
+      "carloslack/KoviD"
+    ],
+    "counts": {
+      "background_reference": 9,
+      "comparison_not_sample": 18,
+      "exclude_off_platform": 3,
+      "exclude_other_focus": 20,
+      "exclude_redundant_or_blocked": 10,
+      "exclude_scope_unconfirmed": 25,
+      "existing_control": 1,
+      "existing_primary": 5,
+      "module_forensics_reference": 28,
+      "optional_boundary_evidence": 1,
+      "priority_evidence_review": 2,
+      "recorded_compatibility_failure": 1,
+      "same_mechanism_duplicate": 1,
+      "source_not_sample": 9
+    },
+    "live_sample_workflow_authorized_by_this_revision": false
+  },
+  "forensics_primary_protocol": "../next_experiments_20261115/LIVE_INODE_PROTOCOL.json",
+  "report_completion_gate": [
+    "133 筆 repo 和另 14 筆文獻／名稱條目都有決定與理由。",
+    "以既有六組實測和研究控制結算實證。每項保持環境、版本、觀測邊界、有效性、告警和還原分母。",
+    "有外部佐證的未測候選可交代研究缺口。不得編造可執行性或覆蓋。",
+    "CARAXES 已有啟用中取檔證據。其他樣本沒有該項紀錄時標明未測。",
+    "列出成本、比較、範圍限制及失敗。修正版結論由已驗證結果與原始事件證據支持。"
+  ],
+  "supersedes": "2026-11-15-plan-2",
+  "sample_evidence_gate": {
+    "focus": "檔案目錄項或仍存活程序的 /proc 列舉項。",
+    "independent_relevance": "實際事件報告、獨立會議／論文，或對未覆蓋切點具有明確研究價值。",
+    "runtime_claim_requires": [
+      "精確版本與環境",
+      "獨立的實際隱藏真值",
+      "有效觀測",
+      "可核對原始紀錄"
+    ],
+    "star_threshold": null,
+    "candidate_id_is_not_independent_family_count": true,
+    "kept_priority_alone_does_not_block_report": true
+  },
+  "schedule_note": "先處理報告主張與已實測證據。Trace 依 2026-11-16 使用者指示後排。"
+}

@@ -1,0 +1,17 @@
+{
+  "existing_record_audit_only": true,
+  "scans_by_filesystem": {
+    "ext4": 960,
+    "tmpfs": 960
+  },
+  "decoded_target_events_matched_to_recorded_filename_and_inode": {
+    "ext4": 4032,
+    "tmpfs": 3780
+  },
+  "boot_scoped_inode_records": 6012,
+  "filesystem_images_in_formal_archives": [],
+  "independent_live_inode_to_path_measurement": false,
+  "live_content_dump_measurement": false,
+  "proc_program_hiding_measurement": false,
+  "scope_note": "Names and inodes matched against fixture ground truth saved with the experiment. This is data validation, not live lookup or retrieval."
+}

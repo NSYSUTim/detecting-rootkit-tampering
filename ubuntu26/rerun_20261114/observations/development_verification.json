@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "counts": {
+    "boundary": 219,
+    "robustness": 30,
+    "filesystem_namespace": 24,
+    "legacy_cost": 108,
+    "exact_trace": 54,
+    "capacity_trials": 10240,
+    "additional_capacity_trials": 1600,
+    "hash_count_variant_decodes": 36864
+  },
+  "capacity_source_seed": 12009,
+  "additional_capacity_new_seed": 20261114,
+  "offline_scope": "Recorded offline trial aggregation; does not assert Linux integration for hash-count variants"
+}

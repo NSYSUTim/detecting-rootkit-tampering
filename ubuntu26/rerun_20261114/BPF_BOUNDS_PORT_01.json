@@ -1,0 +1,60 @@
+{
+  "recorded_utc": "2026-11-14T07:32:46.741515+00:00",
+  "cause": "The original packed_return was rejected for unbounded map-value pointer arithmetic",
+  "reference": "https://github.com/libbpf/libbpf/blob/master/src/bpf_helpers.h (barrier_var)",
+  "equivalence": "For every u32 index, the runtime cell index remains index & 255; the empty asm has no instructions and the added check never rejects this masked value",
+  "hash_functions_changed": false,
+  "seeds_changed": false,
+  "decision_rules_changed": false,
+  "previous_attempt": "normal_pilot_01",
+  "patches": [
+    {
+      "path": "/home/kicba/research_phase1_20261023/phase2/bpf_packed.c",
+      "before_sha256": "3d019987f3e47291acbcb457a7da069e96e81400c2d67ef32145087cd77b8a85",
+      "after_sha256": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+      "diff": "--- \n+++ \n@@ -25,7 +25,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/research_phase1_20261023/call_completion/bpf.c",
+      "before_sha256": "a0ed0bfea17aed458892702a8526d015b80ac3247c4c71af2b09dc99923a54eb",
+      "after_sha256": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+      "diff": "--- \n+++ \n@@ -114,7 +114,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/research_phase2_20261023/phase2/bpf_packed.c",
+      "before_sha256": "3d019987f3e47291acbcb457a7da069e96e81400c2d67ef32145087cd77b8a85",
+      "after_sha256": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+      "diff": "--- \n+++ \n@@ -25,7 +25,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/research_phase2_20261023/call_completion/bpf.c",
+      "before_sha256": "a0ed0bfea17aed458892702a8526d015b80ac3247c4c71af2b09dc99923a54eb",
+      "after_sha256": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+      "diff": "--- \n+++ \n@@ -114,7 +114,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/closure_20261102/current/phase2/bpf_packed.c",
+      "before_sha256": "3d019987f3e47291acbcb457a7da069e96e81400c2d67ef32145087cd77b8a85",
+      "after_sha256": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+      "diff": "--- \n+++ \n@@ -25,7 +25,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/closure_20261102/current/call_completion/bpf.c",
+      "before_sha256": "a0ed0bfea17aed458892702a8526d015b80ac3247c4c71af2b09dc99923a54eb",
+      "after_sha256": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+      "diff": "--- \n+++ \n@@ -114,7 +114,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/call_completion_20261103/code/phase2/bpf_packed.c",
+      "before_sha256": "3d019987f3e47291acbcb457a7da069e96e81400c2d67ef32145087cd77b8a85",
+      "after_sha256": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+      "diff": "--- \n+++ \n@@ -25,7 +25,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    },
+    {
+      "path": "/home/kicba/call_completion_20261103/code/call_completion/bpf.c",
+      "before_sha256": "a0ed0bfea17aed458892702a8526d015b80ac3247c4c71af2b09dc99923a54eb",
+      "after_sha256": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+      "diff": "--- \n+++ \n@@ -114,7 +114,12 @@\n \n static __always_inline void update_cell(struct packed_state *s, u32 index, u64 check)\n {\n-    struct packed_cell *cell = &s->cells[index & 255U];\n+    u64 bounded_index = (u64)index & 255ULL;\n+    /* Preserve the 64-bit bound across LLVM optimizations (barrier_var idiom). */\n+    asm volatile(\"\" : \"+r\"(bounded_index));\n+    if (bounded_index >= 256ULL)\n+        return;\n+    struct packed_cell *cell = &s->cells[bounded_index];\n     cell->count++;\n     cell->key_xor ^= s->pending.key_hash;\n     cell->inode_xor ^= s->pending.inode;\n"
+    }
+  ]
+}

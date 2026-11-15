@@ -1,0 +1,45 @@
+{
+  "network": {
+    "before_sha256": "836606609b53bf887bf0abdace601bdd2ea6687b847c917f9af150b1fd1308c5",
+    "after_sha256": "034b0c1a08437cc0fe512a30b070f9f9a6a4f8f18ecb4abe863c1c954deaee97",
+    "reason": "Mark deliberately isolated link optional for boot completion; addresses and no-default-route policy unchanged",
+    "diff": "--- \n+++ \n@@ -2,6 +2,7 @@\n   version: 2\n   ethernets:\n     eth0:\n+      optional: true\n       dhcp4: false\n       dhcp6: false\n       accept-ra: false\n"
+  },
+  "decloaker": {
+    "archive_sha256": "417f15eeb6e374c43ea12c7037e72711dbb06bd2c4e7d42d2f67ed859add162b",
+    "binary_sha256": "a275fea94173b48bb15bab215965cbf2cce76e12137f27248bb60696864428ca",
+    "path": "/home/kicba/ubuntu26_20261114/runtime_setup_01/decloaker-v0.0"
+  },
+  "trace_loader": {
+    "before_sha256": "df9e9e926f1edca5caba2ddc7b6bfd02f175ad0d5a205df5c3d2a462cebf68bf",
+    "after_sha256": "c1183b07aab3ffacdde4da13f6621e1079e570cb7789e90c1825dda3d3689f5b",
+    "diff": "--- \n+++ \n@@ -10,7 +10,7 @@\n \n ROOTKIT_NAME = \"kicba_d7_hiding\"\n KERNEL_OBJECT_PATH = (\n-    \"/home/kicba/kicba/attack_variants/d7_controls_r2/\"\n+    \"/home/kicba/research_phase2_20261023/attack_variants/d7_controls_r2/\"\n )\n \n \n"
+  },
+  "trace_sources": {
+    "exclude_records.py": "6671dcf4194edfe7429ae128583ac01bf1f96f07ace47ddfdc25b42bd4be894c",
+    "run_matrix.py": "fd2f5b53d4e07adb4964c92f672f06f659dd18c05bf234958ca313b0556366b5",
+    "get_statistics.py": "4a9abe1428c6d7df2e85d071905becb90daabee2c490dc16db1563eb008fed3e",
+    "validate_d9_external_matrix.py": "7772bad22a3839c8358cb74e728af0bb3c871b742f13c6ed293759abfb7996d3",
+    "count_events.py": "8f2fc3b7bf86dfaeb907258ec0387f743a43dabd142c29a184a1ff1f652ddabf",
+    "validate_collection.py": "143f5bea2aa52d7a8bcc26e79b5e748cbf9e85c64b2b2f056c327091f2570428",
+    "validate_four_scenario.py": "a57ccfaeff393541a0fec31194cfa41ae8aa1370c73514255b9bf27efabe5ae1",
+    "LICENSE": "230184f60bae2feaf244f10a8bac053c8ff33a183bcc365b4d8b876d2b7f4809",
+    "linux.py": "c1183b07aab3ffacdde4da13f6621e1079e570cb7789e90c1825dda3d3689f5b",
+    "data_classes.py": "21cf905285871a34be89dd57f56df813fbb3f874b2264f2b976f968ba2e63f93",
+    "probing.py": "d78413f49db2c55af985c03444e3f75b07d4dd86fdf60a0bedb2c9ca32146e51",
+    "ls-basic.c": "033cd22a18ac963bbfe3606c27c12f61282a9d101701f4ff57f3b83a74eec788",
+    "kernel.c": "e87200a1a6b04be54bb1a3e05cc933d103d7668eb1bafec303952f3ca19f7f95",
+    "requirements.txt": "6db85702ded5f5de0004eaf1b4b34259dc7a25090ebf49c361f374b3b7ddc328",
+    "ls-basic": "bffa367d2e191c5fa296a7fc83d43ce079512cc51b66871206489808014e2c9e",
+    "analyze_fixed_alpha.py": "129e3c1aef683e9b6fc040fde70462a7ba82795ce27c94f138dbd74ccdfd5872",
+    "summarize_offline.py": "e7add1137bed0988c3709aca6e5f1d64d184ef1dbb0adadd76288063c723e864",
+    "evaluate.py": "2ffba8c49247fb27c69f6a728fdebcd2209f370cd8c2b9a253fecfe5825f7bcc",
+    "process_data.py": "c5dac59c1f709f724292a0770b56d4b1930f592f08ce9119bf23325c18435493",
+    "hooks.h": "3f37c48871c82e221287b33fabbcec699ae5d4d080517ea6264fca92de730f45",
+    "README.md": "c9a4df83b94b3e568e01298293c00eb9e90d511423f0996533cac1821dcd20c0",
+    "run.py": "dbc3b108ff555b18aff54051da7f1e31643249382a5a81da64aa69b1fde4946e",
+    "write_formal_results.py": "207b9380884f2c3ff104d608ce4f6f36f79386c8f3ac3c702e287994452cfa10",
+    "prepare_four_scenario_view.py": "7e5c0f19e85a2a3855638641bfc13b3b90bd70d47b1c65f1d8a45e86465cd15a"
+  },
+  "public_sample_port_root": "/home/kicba/public_sample_linux7_port_20261114"
+}

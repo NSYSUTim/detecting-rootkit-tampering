@@ -1,0 +1,1239 @@
+{
+  "schema_version": 1,
+  "protocol_revision": "D9-exact-trace-resource-baseline-r1-2026-09-24",
+  "evidence_role": "single_boot_development_resource_baseline_not_confirmatory",
+  "baseline_scope": "Efficient accepted-entry map trace implemented for resource comparison; not a line-for-line reproduction of Synacktiv and not a complete malicious-rootkit classifier.",
+  "created_utc": "2026-11-14T11:39:18.780624+00:00",
+  "environment": {
+    "kernel": "7.0.0-43-generic",
+    "boot_id": "ece9c8db-c7eb-4750-bfdd-a08153c9f914"
+  },
+  "parameters": {
+    "quick": false,
+    "iterations": 2,
+    "repeats": 3,
+    "seed": 12012,
+    "cardinalities": [
+      512,
+      8192,
+      65536
+    ],
+    "conditions": [
+      "baseline",
+      "mixed"
+    ]
+  },
+  "source_hashes": {
+    "runner": "9e1cbffdadc109b0b42aa7b8e9d785de70109405883141bb2a3e830ff46bd1ef",
+    "d9_bpf": "9e0c09c8d90810515b4144c8c405e5210eb6e275ca73db754e0b64bdbd24c500",
+    "exact_bpf": "44754022d5bd835cdf82e78f2c1445838e9190393a44585b34c9201ebd14e30e"
+  },
+  "rows": [
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 23330660,
+      "cpu_seconds": 0.024548999999999488,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 33450412,
+      "cpu_seconds": 0.034713999999999245,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        },
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 5512934,
+      "cpu_seconds": 0.006337000000000259,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "exact_accepted_map_trace",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 39821548,
+      "cpu_seconds": 0.04066900000000029,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        },
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "exact_accepted_map_trace",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 20193520,
+      "cpu_seconds": 0.021066999999999503,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "exact_accepted_map_trace",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 5357292,
+      "cpu_seconds": 0.0062389999999998835,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 22190556,
+      "cpu_seconds": 0.02382400000000029,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 29960535,
+      "cpu_seconds": 0.030842999999999066,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        },
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 4333564,
+      "cpu_seconds": 0.005097999999999381,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 44766912,
+      "cpu_seconds": 0.04252700000000065,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        },
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 7762012,
+      "cpu_seconds": 0.005355999999999916,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 33400827,
+      "cpu_seconds": 0.030839999999999534,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 7416352,
+      "cpu_seconds": 0.005573999999999302,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 34105738,
+      "cpu_seconds": 0.031910999999999135,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 43012607,
+      "cpu_seconds": 0.040733999999998716,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        },
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 7495633,
+      "cpu_seconds": 0.005376000000001824,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 40932377,
+      "cpu_seconds": 0.03767600000000115,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 514,
+          "rejected_callbacks": 0
+        }
+      ]
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 45905498,
+      "cpu_seconds": 0.04319899999999954,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        },
+        {
+          "accepted_events": 514,
+          "rejected_callbacks": 0,
+          "logical_trace_payload_bytes": 143920
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "exact_accepted_map_trace",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 347659480,
+      "cpu_seconds": 0.3486009999999986,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        },
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "exact_accepted_map_trace",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 59659701,
+      "cpu_seconds": 0.06088200000000121,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "exact_accepted_map_trace",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 10613321,
+      "cpu_seconds": 0.011274000000000228,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 49021096,
+      "cpu_seconds": 0.049914000000001124,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 11777732,
+      "cpu_seconds": 0.012523999999997315,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 347535906,
+      "cpu_seconds": 0.3482820000000011,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        },
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 10809455,
+      "cpu_seconds": 0.01171499999999881,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 51212483,
+      "cpu_seconds": 0.0522980000000004,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 359385008,
+      "cpu_seconds": 0.3604730000000007,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        },
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 79365858,
+      "cpu_seconds": 0.07685299999999806,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 501629847,
+      "cpu_seconds": 0.498424,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        },
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 16643518,
+      "cpu_seconds": 0.01449699999999865,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 81609013,
+      "cpu_seconds": 0.07919499999999857,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 494596463,
+      "cpu_seconds": 0.491931000000001,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        },
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "exact_accepted_map_trace",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 16732147,
+      "cpu_seconds": 0.014324000000002002,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 509803375,
+      "cpu_seconds": 0.5056170000000009,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        },
+        {
+          "accepted_events": 8194,
+          "rejected_callbacks": 5,
+          "logical_trace_payload_bytes": 2294320
+        }
+      ]
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 17587793,
+      "cpu_seconds": 0.015361999999999654,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 76364349,
+      "cpu_seconds": 0.074074999999997,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 8194,
+          "rejected_callbacks": 5
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 66835802,
+      "cpu_seconds": 0.06763400000000175,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 2941168430,
+      "cpu_seconds": 2.9415489999999984,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        },
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 279492872,
+      "cpu_seconds": 0.2808029999999988,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 62367147,
+      "cpu_seconds": 0.06330600000000075,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 2959842564,
+      "cpu_seconds": 2.9605289999999975,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        },
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 293546282,
+      "cpu_seconds": 0.2945920000000015,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 59620540,
+      "cpu_seconds": 0.060501000000002136,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 2969415417,
+      "cpu_seconds": 2.9707209999999904,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        },
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "exact_accepted_map_trace",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 284236189,
+      "cpu_seconds": 0.28528199999999515,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 84347755,
+      "cpu_seconds": 0.08212400000000741,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 418101030,
+      "cpu_seconds": 0.41682199999999625,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 4733695956,
+      "cpu_seconds": 4.728093000000001,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        },
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 482111181,
+      "cpu_seconds": 0.4793099999999981,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 100303547,
+      "cpu_seconds": 0.09773799999999966,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "exact_accepted_map_trace"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 5050404503,
+      "cpu_seconds": 5.039773000000004,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        },
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "exact_accepted_map_trace",
+      "wall_ns": 4284493024,
+      "cpu_seconds": 4.2726320000000015,
+      "iterations": 2,
+      "detail": [
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        },
+        {
+          "accepted_events": 65538,
+          "rejected_callbacks": 40,
+          "logical_trace_payload_bytes": 18350640
+        }
+      ]
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 85472994,
+      "cpu_seconds": 0.08313299999998947,
+      "iterations": 2,
+      "detail": []
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "exact_accepted_map_trace",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 440610476,
+      "cpu_seconds": 0.4381180000000029,
+      "iterations": 2,
+      "detail": [
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        },
+        {
+          "logical_payload_bytes": 12312,
+          "accepted_events": 65538,
+          "rejected_callbacks": 40
+        }
+      ]
+    }
+  ]
+}

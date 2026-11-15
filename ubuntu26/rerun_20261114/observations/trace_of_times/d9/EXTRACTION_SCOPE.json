@@ -1,0 +1,5 @@
+{
+  "original_archive_preserved": true,
+  "scope": "Data/source extraction only; native filesystem fixture names and links remain in the tar archive",
+  "skipped_fixture_members": []
+}

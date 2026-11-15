@@ -1,0 +1,44 @@
+[
+  {
+    "cells": 64,
+    "differences": 32,
+    "trials": 400,
+    "fully_recovered": 390,
+    "incorrect_successes": 0
+  },
+  {
+    "cells": 256,
+    "differences": 32,
+    "trials": 400,
+    "fully_recovered": 400,
+    "incorrect_successes": 0
+  },
+  {
+    "cells": 2048,
+    "differences": 1000,
+    "trials": 200,
+    "fully_recovered": 200,
+    "incorrect_successes": 0
+  },
+  {
+    "cells": 2048,
+    "differences": 1500,
+    "trials": 200,
+    "fully_recovered": 200,
+    "incorrect_successes": 0
+  },
+  {
+    "cells": 2048,
+    "differences": 1600,
+    "trials": 200,
+    "fully_recovered": 200,
+    "incorrect_successes": 0
+  },
+  {
+    "cells": 2048,
+    "differences": 1700,
+    "trials": 200,
+    "fully_recovered": 8,
+    "incorrect_successes": 0
+  }
+]

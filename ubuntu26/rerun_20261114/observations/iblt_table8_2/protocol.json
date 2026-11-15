@@ -1,0 +1,40 @@
+{
+  "master_seed": 20261114,
+  "settings": [
+    [
+      64,
+      32,
+      400
+    ],
+    [
+      256,
+      32,
+      400
+    ],
+    [
+      2048,
+      1000,
+      200
+    ],
+    [
+      2048,
+      1500,
+      200
+    ],
+    [
+      2048,
+      1600,
+      200
+    ],
+    [
+      2048,
+      1700,
+      200
+    ]
+  ],
+  "kernel": "7.0.0-43-generic",
+  "python": "3.14.4 (main, Aug 20 2026, 10:41:58) [GCC 15.2.0]",
+  "scope": "Report Table 8-2 design with newly seeded independent pure-removal trials",
+  "iblt_sha256": "c0aa7f06550ced14b81a379e614ac8b5c14dfea148a30df8c28ccc6c5a112cd0",
+  "started_utc": "2026-11-14T11:40:06.052467+00:00"
+}

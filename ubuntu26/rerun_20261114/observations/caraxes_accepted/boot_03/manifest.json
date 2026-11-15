@@ -1,0 +1,399 @@
+{
+  "kernel": "7.0.0-43-generic",
+  "boot_id": "5e032664-b9f5-4eef-9511-cc13941c2d27",
+  "boot_index": 3,
+  "pilot": false,
+  "fixture": "/home/kicba/ubuntu26_20261114/observations/caraxes_accepted_scope_boot_03/fixture",
+  "original": [
+    {
+      "name_hex": "2e",
+      "inode": 1180551,
+      "d_type": 4
+    },
+    {
+      "name_hex": "2e2e",
+      "inode": 1180550,
+      "d_type": 4
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303430",
+      "inode": 1180592,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303439",
+      "inode": 1180601,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303034",
+      "inode": 1180556,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303432",
+      "inode": 1180594,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303533",
+      "inode": 1180605,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303239",
+      "inode": 1180581,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303232",
+      "inode": 1180574,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303235",
+      "inode": 1180577,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303633",
+      "inode": 1180615,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303032",
+      "inode": 1180554,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303137",
+      "inode": 1180569,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303236",
+      "inode": 1180578,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303336",
+      "inode": 1180588,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303434",
+      "inode": 1180596,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303233",
+      "inode": 1180575,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303132",
+      "inode": 1180564,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303631",
+      "inode": 1180613,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303030",
+      "inode": 1180552,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303031",
+      "inode": 1180553,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303238",
+      "inode": 1180580,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303035",
+      "inode": 1180557,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303538",
+      "inode": 1180610,
+      "d_type": 8
+    },
+    {
+      "name_hex": "7363616e5f636f6e74726f6c",
+      "inode": 1180619,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303539",
+      "inode": 1180611,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303532",
+      "inode": 1180604,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303334",
+      "inode": 1180586,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303436",
+      "inode": 1180598,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303333",
+      "inode": 1180585,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303139",
+      "inode": 1180571,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303332",
+      "inode": 1180584,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303130",
+      "inode": 1180562,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303433",
+      "inode": 1180595,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303536",
+      "inode": 1180608,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303435",
+      "inode": 1180597,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303037",
+      "inode": 1180559,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6d6964646c655f636172617865735f6974656d",
+      "inode": 1180617,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303038",
+      "inode": 1180560,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303534",
+      "inode": 1180606,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303133",
+      "inode": 1180565,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303337",
+      "inode": 1180589,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303331",
+      "inode": 1180583,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303136",
+      "inode": 1180568,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303531",
+      "inode": 1180603,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303231",
+      "inode": 1180573,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303339",
+      "inode": 1180591,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303138",
+      "inode": 1180570,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303630",
+      "inode": 1180612,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303537",
+      "inode": 1180609,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303135",
+      "inode": 1180567,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303134",
+      "inode": 1180566,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303437",
+      "inode": 1180599,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303230",
+      "inode": 1180572,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303338",
+      "inode": 1180590,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303530",
+      "inode": 1180602,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303237",
+      "inode": 1180579,
+      "d_type": 8
+    },
+    {
+      "name_hex": "636172617865735f6669727374",
+      "inode": 1180616,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303330",
+      "inode": 1180582,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303438",
+      "inode": 1180600,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303036",
+      "inode": 1180558,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303335",
+      "inode": 1180587,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303431",
+      "inode": 1180593,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303234",
+      "inode": 1180576,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303632",
+      "inode": 1180614,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303535",
+      "inode": 1180607,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303039",
+      "inode": 1180561,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303033",
+      "inode": 1180555,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6c6173745f63617261786573",
+      "inode": 1180618,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303131",
+      "inode": 1180563,
+      "d_type": 8
+    }
+  ],
+  "module_sha256": {
+    "getdents64": "16d28a9a9c61a6f497eacff1dc8560894432c9a9ffa1180bef1f15f14f342888",
+    "filldir": "37299c9f1c54a2256144e3e189d19692349af938932e20bfa60dbdbd18b0d709"
+  },
+  "probe_sha256": "07255fe2083cee14edae4874892a74678d3f8d7722410acb414b843d6e189fc8",
+  "source_sha256": {
+    "/home/kicba/closure_20261102/current/finalization/tracefs_measurement.py": "13e6b73b61b5721c7187df19a95546d510cfafb1b2315f6d57489128e33ccb3f",
+    "/home/kicba/closure_20261102/current/finalization/measurement.py": "867ebd2f381212feea28df1e74d6cb57214f3ce232328067b1d809869eeb2f8f",
+    "/home/kicba/closure_20261102/current/phase2/measurement.py": "4f90c83399f93a4cfd476598126e9fd972da6e9e922363a2a5f4ed34b70e97bb",
+    "/home/kicba/closure_20261102/current/phase2/bpf_packed.c": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+    "/home/kicba/closure_20261102/current/src/kicba/recovery_validation.py": "6a8b599f9dbea204a3022bc1157b8214e78714d684bc9d18a08dece4384fd4cd",
+    "/home/kicba/closure_20261102/current/comparison/public_rootkit/run_native.py": "70d0d826c56522d780c150ac518ef8c6ed7c7ff83443824cc8f989017294131b",
+    "/home/kicba/closure_20261102/current/comparison/public_rootkit/PROTOCOL.md": "c2cc8f91fae5de336b3e8ce6ef3cf9fb6beeaf675e35fdfc7caba8105cc28f24"
+  },
+  "environment": {
+    "argv": [
+      "uname",
+      "-a"
+    ],
+    "returncode": 0,
+    "stdout": "Linux kicba-ubuntu26 7.0.0-43-generic #43-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct 23 13:25:25 UTC 2026 x86_64 GNU/Linux\n",
+    "stderr": ""
+  },
+  "package_versions": {
+    "argv": [
+      "dpkg-query",
+      "-W",
+      "bcc",
+      "bpfcc-tools",
+      "libbpfcc",
+      "clang-11",
+      "llvm-11",
+      "libc6"
+    ],
+    "returncode": 1,
+    "stdout": "bpfcc-tools\t0.35.0+ds-1ubuntu2\nlibbpfcc:amd64\t0.35.0+ds-1ubuntu2\nlibc6:amd64\t2.43-2ubuntu2.7\n",
+    "stderr": "dpkg-query: no packages found matching bcc\ndpkg-query: no packages found matching clang-11\ndpkg-query: no packages found matching llvm-11\n"
+  },
+  "tainted_before": "0",
+  "upstream_commit": "899e8be6b5f6c7236bd23b52aa65051de757e0b3"
+}

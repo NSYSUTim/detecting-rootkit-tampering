@@ -1,0 +1,47 @@
+{
+  "upstream_commit": "899e8be6b5f6c7236bd23b52aa65051de757e0b3",
+  "source_sha256": {
+    "hooks_filldir.h": "ad0ce8025fd03f98c1bf9dc9279e2895b6c9559b3de2ee94d9eb3d32cf12f5f6",
+    "rootkit.h": "9187acf3bad0123f8e6e60f73e0177a84bec86f5931c1338c26218ebe937e9f9",
+    "hooks_getdents64.h": "2d87bcd6b8d0afc05e1c9f62f1f300bcc59f69f72f2bdd08249137e62f90e517",
+    "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "stdlib.h": "36072702007f6cbb3ab7c756363a91b3bb516679fddfcac23b9b6a168b53eb02",
+    "Makefile": "be25ea253338c2f19016258ef27867fba8524d3b0e39224bad5f37bf72c4b7a5",
+    "caraxes.c": "a7bfdb89016eea9529211b8cd536bba88279ab82067e502fc30868d3ae03efb9",
+    "hooks.h": "390d7196cf74db5f08c178eb5414240cab8f7848d1eefb5c41e3747426374840",
+    "README.md": "b5d4586a841c54953c504c0d1df51a7bb8f62b75aee8412cea6071e952675e75",
+    "ftrace_helper.h": "6c392d9fd71c297cfa2b37028d34c0ea2e7916ded6cfc8589315359edc662d5d"
+  },
+  "builds": {
+    "getdents64": {
+      "returncode": 2,
+      "source_sha256": {
+        "hooks_filldir.h": "ad0ce8025fd03f98c1bf9dc9279e2895b6c9559b3de2ee94d9eb3d32cf12f5f6",
+        "rootkit.h": "9187acf3bad0123f8e6e60f73e0177a84bec86f5931c1338c26218ebe937e9f9",
+        "hooks_getdents64.h": "2d87bcd6b8d0afc05e1c9f62f1f300bcc59f69f72f2bdd08249137e62f90e517",
+        "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "stdlib.h": "36072702007f6cbb3ab7c756363a91b3bb516679fddfcac23b9b6a168b53eb02",
+        "Makefile": "be25ea253338c2f19016258ef27867fba8524d3b0e39224bad5f37bf72c4b7a5",
+        "caraxes.c": "a7bfdb89016eea9529211b8cd536bba88279ab82067e502fc30868d3ae03efb9",
+        "hooks.h": "390d7196cf74db5f08c178eb5414240cab8f7848d1eefb5c41e3747426374840",
+        "README.md": "b5d4586a841c54953c504c0d1df51a7bb8f62b75aee8412cea6071e952675e75",
+        "ftrace_helper.h": "6c392d9fd71c297cfa2b37028d34c0ea2e7916ded6cfc8589315359edc662d5d"
+      }
+    },
+    "filldir": {
+      "returncode": 2,
+      "source_sha256": {
+        "hooks_filldir.h": "ad0ce8025fd03f98c1bf9dc9279e2895b6c9559b3de2ee94d9eb3d32cf12f5f6",
+        "rootkit.h": "9187acf3bad0123f8e6e60f73e0177a84bec86f5931c1338c26218ebe937e9f9",
+        "hooks_getdents64.h": "2d87bcd6b8d0afc05e1c9f62f1f300bcc59f69f72f2bdd08249137e62f90e517",
+        "LICENSE": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+        "stdlib.h": "36072702007f6cbb3ab7c756363a91b3bb516679fddfcac23b9b6a168b53eb02",
+        "Makefile": "be25ea253338c2f19016258ef27867fba8524d3b0e39224bad5f37bf72c4b7a5",
+        "caraxes.c": "a7bfdb89016eea9529211b8cd536bba88279ab82067e502fc30868d3ae03efb9",
+        "hooks.h": "bc6cf530671745c129a8bcd22c527fceed7ff2ca422a6dccc4880a71512b514a",
+        "README.md": "b5d4586a841c54953c504c0d1df51a7bb8f62b75aee8412cea6071e952675e75",
+        "ftrace_helper.h": "6c392d9fd71c297cfa2b37028d34c0ea2e7916ded6cfc8589315359edc662d5d"
+      }
+    }
+  }
+}

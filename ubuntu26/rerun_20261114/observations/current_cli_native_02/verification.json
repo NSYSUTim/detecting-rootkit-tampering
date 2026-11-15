@@ -1,0 +1,76 @@
+{
+  "passed": true,
+  "checks": 12,
+  "rows": [
+    {
+      "tag": "normal_128_current",
+      "verdict": "equal",
+      "alarm": false
+    },
+    {
+      "tag": "normal_128_accepted",
+      "verdict": "equal",
+      "alarm": false
+    },
+    {
+      "tag": "normal_65536_current",
+      "verdict": "equal",
+      "alarm": false
+    },
+    {
+      "tag": "normal_65536_accepted",
+      "verdict": "equal",
+      "alarm": false
+    },
+    {
+      "tag": "getdents64_128_current",
+      "verdict": "different",
+      "alarm": true
+    },
+    {
+      "tag": "getdents64_128_accepted",
+      "verdict": "different",
+      "alarm": true
+    },
+    {
+      "tag": "getdents64_65536_current",
+      "verdict": "different",
+      "alarm": true
+    },
+    {
+      "tag": "getdents64_65536_accepted",
+      "verdict": "different",
+      "alarm": true
+    },
+    {
+      "tag": "filldir_128_current",
+      "verdict": "completion_anomaly",
+      "alarm": true
+    },
+    {
+      "tag": "filldir_128_accepted",
+      "verdict": "equal",
+      "alarm": false
+    },
+    {
+      "tag": "filldir_65536_current",
+      "verdict": "completion_anomaly",
+      "alarm": true
+    },
+    {
+      "tag": "filldir_65536_accepted",
+      "verdict": "equal",
+      "alarm": false
+    }
+  ],
+  "kernel": "7.0.0-43-generic",
+  "fixture": "/home/kicba/ubuntu26_20261114/observations/caraxes_call_scope_boot_03/fixture",
+  "boot_id": "16ae8a78-f5a4-4eee-b87a-cab156ad0b51",
+  "source_sha256": {
+    "scan_directory.py": "7d1473c9509be951f66ac5ce9e8cf14f022b94eab34bf8daaac3c9a5d2b7d4bc",
+    "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+    "call_completion/bpf.c": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+    "src/kicba/call_completion.py": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578"
+  },
+  "module_absent": true
+}

@@ -1,0 +1,63 @@
+{
+  "boot_id": "e354b159-3e76-445a-94e3-43b829fb9459",
+  "boot_index": 1,
+  "pilot": false,
+  "states": [
+    "normal",
+    "reorder",
+    "insert",
+    "grow",
+    "shrink",
+    "inode",
+    "type",
+    "remove",
+    "filldir_hiding",
+    "getdents_hiding",
+    "policy_filter",
+    "getdents_substitution",
+    "filldir_pass",
+    "filldir_active",
+    "getdents_pass",
+    "getdents_active"
+  ],
+  "buffers": [
+    128,
+    256,
+    4096,
+    65536
+  ],
+  "source_sha256": {
+    "call_completion/orchestrate.py": "d339e93fa5dc055221e921f8f4ebc6b34c39d45f515d894444d734a54d613cdb",
+    "call_completion/run_regression.py": "07c8b83eb1d6a364dfc9a63e5bef1bed7acd231fd1c2a68014ca486be3217d7d",
+    "call_completion/__init__.py": "c536861193523b3cd931967619ca7bef8893cf777d366fa67021ca0c4532e896",
+    "call_completion/PROTOCOL.md": "f0bf2daae996e8d6a75ce3af8958a67d9a71cec33d25c769f673f4a4942b251d",
+    "call_completion/run_public_sample.py": "02c7de3b3295b97fedcca0a8ed641f054736f4d1fcb66add3d4a9f1e0884ec3e",
+    "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+    "call_completion/PILOT_NOTES.md": "a6d67f274a0e5ec6c48ee6ecda716731c2903bd5ed8762f90e9ea96c85bc08d7",
+    "call_completion/run_cost.py": "76736bf15fb5feb8a1cd2fe00c63326bdfdb16fd5580cc418b655bcbf886e219",
+    "call_completion/README.md": "fe4f201ae2b7271733f302c3c784133a2ddefc14bb9b8ce8637f538d9421c36f",
+    "call_completion/build_bpf.py": "16a663a04272b1f3e05503b33a5a50d0f0fcff24df76aec8158302644b8883d5",
+    "call_completion/summarize.py": "67d341a8d56b928e7ef7bf8fd74eaedec31478add0c17bfb8d1526cc0896c35f",
+    "call_completion/prepare_deployment.py": "dcde47047ff9863157bf3e370635cb0e11f893229cdcab304219fd176938df82",
+    "call_completion/bpf.c": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+    "call_completion/prepare_regression.py": "e7c3b39f1b3ce097d93c60bdc5f1217d576bc3821f051a30a734fb21dcfadce7",
+    "src/kicba/call_completion.py": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578",
+    "src/kicba/reconciliation.py": "c0aa7f06550ced14b81a379e614ac8b5c14dfea148a30df8c28ccc6c5a112cd0",
+    "src/kicba/__init__.py": "05ea9bdc28e39840da039310f9d2bbfb32ea3ced6de78607c8e383672fd87e4c",
+    "src/kicba/terminal_rejection.py": "70ead258f1e7c7cf90cd2e385f1d6a0e1e3a3e7ad1dccf6be71028c8d2ca6f7a",
+    "src/kicba/recovery_validation.py": "6a8b599f9dbea204a3022bc1157b8214e78714d684bc9d18a08dece4384fd4cd"
+  },
+  "probe_sha256": "07255fe2083cee14edae4874892a74678d3f8d7722410acb414b843d6e189fc8",
+  "dynamic_sha256": "1ff972e2c7d03f31d6fb0dd6596b853e421bf72571856d51fd6acb6dab0ba88f",
+  "modules": {
+    "/home/kicba/research_phase2_20261023/phase2/bin/7.0.0-43-generic/phase2_transform.ko": "7b8eca44d9517d3a86fd60e56641b960309117d8cd7f8e1ba68233589565d542",
+    "/home/kicba/research_phase2_20261023/phase2/bin/7.0.0-43-generic/kicba_d7_hiding.ko": "084be099c87bde42df0f8a957f5cd17c42e212451e9ac1cfde1b328ab96e6e19",
+    "/home/kicba/research_phase1_20261023/attack_variants/d8_getdents_controls/kicba_d8_getdents_hiding.ko": "adb45bd01153b06568a5a3d8ed686ce716f29b179544a363ca7df1f97764687b",
+    "/home/kicba/research_phase1_20261023/attack_variants/d8_getdents_controls/kicba_d8_getdents_policy.ko": "9b6e418156c20edb4adfdf76dacc84851a8aa40ba642f70f098f704022e4e63f",
+    "/home/kicba/research_phase2_20261023/phase2/bin/7.0.0-43-generic/kicba_d9_getdents_substitute.ko": "57d0a85fe2bb23c6905c90fb587ca9077c47419a7b880f6ec36fae666e22f066",
+    "/home/kicba/research_phase1_20261023/attack_variants/d7_controls_r2/kicba_d7_pass.ko": "3084919eef548cec250dd7f2c19a29dbb7d7d7a44243c05671617fa0b8fee0a1",
+    "/home/kicba/research_phase1_20261023/attack_variants/d7_controls_r2/kicba_d7_active.ko": "cfe67573428198937beaaf387f94e55229e64bbfcabb8fb0bf4f9041c57dcf89",
+    "/home/kicba/research_phase1_20261023/attack_variants/d8_getdents_controls/kicba_d8_getdents_pass.ko": "71ab3190dbf6bdb69d8775ae04e2585e8db342b0eefb319c628dfcbfc9a6d707",
+    "/home/kicba/research_phase1_20261023/attack_variants/d8_getdents_controls/kicba_d8_getdents_active.ko": "e664d12975ecd1fdf0301ab96d5a75dcd26ae4b2d1aec41a04303d5819de30b5"
+  }
+}

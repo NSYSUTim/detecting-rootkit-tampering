@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "files": {
+    "collector/bpf_d9_reconciliation.c": "9e0c09c8d90810515b4144c8c405e5210eb6e275ca73db754e0b64bdbd24c500",
+    "collector/d9_reconciliation_hash.h": "9077237df5ca2bc745fd20ecb156f2282c09e18cb46bf9c8965942c9695fed06",
+    "collector/d9_enum_probe.c": "c59284e540040b6e82d1b902d5094364f412432bfffb6a9c323fee23a63f21e2",
+    "collector/bin/d9_enum_probe": "de974b6c2c83afea0f2d05cf979bd05295e6dee30f5f5e8a59c09b484e1a7ed6",
+    "src/kicba/reconciliation.py": "c0aa7f06550ced14b81a379e614ac8b5c14dfea148a30df8c28ccc6c5a112cd0",
+    "attack_variants/d7_controls_r2/kicba_d7_hiding.ko": "084be099c87bde42df0f8a957f5cd17c42e212451e9ac1cfde1b328ab96e6e19",
+    "phase2/measurement.py": "4f90c83399f93a4cfd476598126e9fd972da6e9e922363a2a5f4ed34b70e97bb",
+    "phase2/run_campaign.py": "1ee65d3aa13263c0a8b036cff95903c8f3dc36cb167664b112cc6815fc759d49",
+    "phase2/bpf_packed.c": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+    "phase2/enum_dynamic.c": "7a9b086b53675a45d1a9a4050a78c494b8d16f59c133aeb860d76d8f74c695ed",
+    "phase2/bin/enum_dynamic": "1ff972e2c7d03f31d6fb0dd6596b853e421bf72571856d51fd6acb6dab0ba88f",
+    "phase1/run_experiments.py": "5d47b55ca0f1ce7fbe4666bd44af23441aeb474e6df72c1afa4b0d47b167f0a3",
+    "phase1/coverage.py": "9ac0b391b1493cce6d3b8d12b97de709581e7793c0a8bf07857080ac4cef0cdc"
+  }
+}

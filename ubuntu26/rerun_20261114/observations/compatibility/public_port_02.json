@@ -1,0 +1,30 @@
+{
+  "revision": "CARAXES_linux7_API_port_02",
+  "parent": "/home/kicba/ubuntu26_20261114/external_ports_01/PORTS.json",
+  "patches": [
+    {
+      "path": "/home/kicba/public_sample_20261102/build_linux7_port_02/getdents64/stdlib.h",
+      "before_sha256": "ddfd08235760cd069e0dc4b3e929d01ced62e6d47f11e54a1c7acd7b2ccef895",
+      "after_sha256": "88fc5842a766cb31434f7e5084ff5595b5c2e44e7e43a2858a540cf6a6545d37",
+      "diff": "--- \n+++ \n@@ -150,7 +150,7 @@\n \tint rc;\n \n \tif (socket && addr) {\n-\t\trc = kernel_bind(socket, addr, addrlen);\n+\t\trc = kernel_bind(socket, (struct sockaddr_unsized *)addr, addrlen);\n \t\tif (rc < 0) {\n \t\t\terrno = rc;\n \t\t\treturn -1;\n"
+    },
+    {
+      "path": "/home/kicba/public_sample_20261102/build_linux7_port_02/filldir/stdlib.h",
+      "before_sha256": "ddfd08235760cd069e0dc4b3e929d01ced62e6d47f11e54a1c7acd7b2ccef895",
+      "after_sha256": "88fc5842a766cb31434f7e5084ff5595b5c2e44e7e43a2858a540cf6a6545d37",
+      "diff": "--- \n+++ \n@@ -150,7 +150,7 @@\n \tint rc;\n \n \tif (socket && addr) {\n-\t\trc = kernel_bind(socket, addr, addrlen);\n+\t\trc = kernel_bind(socket, (struct sockaddr_unsized *)addr, addrlen);\n \t\tif (rc < 0) {\n \t\t\terrno = rc;\n \t\t\treturn -1;\n"
+    }
+  ],
+  "builds": [
+    {
+      "mode": "getdents64",
+      "returncode": 0,
+      "module_sha256": "16d28a9a9c61a6f497eacff1dc8560894432c9a9ffa1180bef1f15f14f342888"
+    },
+    {
+      "mode": "filldir",
+      "returncode": 0,
+      "module_sha256": "37299c9f1c54a2256144e3e189d19692349af938932e20bfa60dbdbd18b0d709"
+    }
+  ]
+}

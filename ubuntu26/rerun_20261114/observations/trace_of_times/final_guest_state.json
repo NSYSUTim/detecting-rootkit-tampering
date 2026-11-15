@@ -1,0 +1,84 @@
+{
+  "hostname": "kicba-ubuntu26",
+  "kernel": "7.0.0-43-generic",
+  "boot_id": "512098e8-3e9e-4f30-a80b-ad2a1b6ff8d2",
+  "research_modules_remaining": [],
+  "research_probe_definitions_remaining": [],
+  "all_loaded_modules": [
+    "qrtr",
+    "nfnetlink",
+    "cfg80211",
+    "binfmt_misc",
+    "nls_iso8859_1",
+    "intel_rapl_msr",
+    "intel_rapl_common",
+    "intel_uncore_frequency_common",
+    "intel_pmc_core",
+    "pmt_telemetry",
+    "pmt_discovery",
+    "pmt_class",
+    "intel_pmc_ssram_telemetry",
+    "intel_vsec",
+    "rapl",
+    "vmgenid",
+    "hyperv_drm",
+    "hv_balloon",
+    "hv_utils",
+    "joydev",
+    "mac_hid",
+    "sch_fq_codel",
+    "efi_pstore",
+    "dm_multipath",
+    "hv_sock",
+    "vsock",
+    "serio_raw",
+    "hid_generic",
+    "hv_storvsc",
+    "hid_hyperv",
+    "scsi_transport_fc",
+    "hv_netvsc",
+    "hid",
+    "hyperv_keyboard",
+    "hv_vmbus",
+    "ghash_clmulni_intel",
+    "msr",
+    "dmi_sysfs",
+    "autofs4",
+    "aesni_intel"
+  ],
+  "ipv4_default_route": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "ipv6_default_route": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "experiment_user_passwordless_sudo": true,
+  "grub_environment": {
+    "returncode": 0,
+    "stdout": "saved_entry=gnulinux-advanced-7905d5c4-52de-4c37-b864-ce5d737b095e>gnulinux-7.0.0-43-generic-advanced-7905d5c4-52de-4c37-b864-ce5d737b095e\nnext_entry=\n",
+    "stderr": ""
+  },
+  "primary_kernel_default_recorded": true,
+  "update_units": {
+    "apt-daily.timer": {
+      "returncode": 0,
+      "stdout": "ActiveState=active\nUnitFileState=enabled\n",
+      "stderr": ""
+    },
+    "apt-daily-upgrade.timer": {
+      "returncode": 0,
+      "stdout": "ActiveState=active\nUnitFileState=enabled\n",
+      "stderr": ""
+    },
+    "unattended-upgrades.service": {
+      "returncode": 0,
+      "stdout": "ActiveState=active\nUnitFileState=enabled\n",
+      "stderr": ""
+    }
+  },
+  "passed": true
+}

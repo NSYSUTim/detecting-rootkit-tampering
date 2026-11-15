@@ -1,0 +1,13 @@
+{
+  "created_utc": "2026-11-15T02:14:22.703120+00:00",
+  "base_commit": "0e03ddcb7bd243271d22d75e925fe9e80c66ea60",
+  "repository": "NSYSUTim/kicba-thesis-artifact",
+  "added_prefix": "ubuntu26/",
+  "existing_paths_modified": false,
+  "existing_ubuntu22_moved": false,
+  "formal_documents_included": false,
+  "default_experiment_switched": false,
+  "measurement_records_changed": false,
+  "source_folder": "independent Ubuntu 26 rerun and follow-up evidence",
+  "future_promotion_requires_separate_confirmation": true
+}

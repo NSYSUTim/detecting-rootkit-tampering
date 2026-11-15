@@ -1,0 +1,11 @@
+{
+  "status": "load_compatibility_failure",
+  "compilation_succeeded": true,
+  "pilot_completed": false,
+  "formal_trials_started": false,
+  "kernel": "7.0.0-43-generic",
+  "observed_failure": "General protection fault at mov-to-CR0 in diamorphine_init, followed by kernel panic",
+  "original_source_changed": false,
+  "automatically_recovered": true,
+  "decision": "Retain failed pilot as compatibility evidence; no repeated loading without a source-supported correction."
+}

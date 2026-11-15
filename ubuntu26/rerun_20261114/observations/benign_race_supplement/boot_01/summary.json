@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "groups": {
+    "ext4": {
+      "attempts": 5,
+      "exercised": 5,
+      "false_alarms": 0
+    },
+    "tmpfs": {
+      "attempts": 5,
+      "exercised": 5,
+      "false_alarms": 0
+    }
+  }
+}

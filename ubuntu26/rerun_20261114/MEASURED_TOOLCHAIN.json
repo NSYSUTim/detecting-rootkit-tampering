@@ -1,0 +1,20 @@
+{
+  "source": "observations/matrix/boot_01/environment_before.json",
+  "package_inventory_sha256": "897058e530e5282ed10825dea3b2e02bd86c501729cbd221979c7f03c793f4f4",
+  "python_runtime": "3.14.4",
+  "packages": {
+    "libbpfcc:amd64": "0.35.0+ds-1ubuntu2",
+    "python3-bpfcc": "0.35.0+ds-1ubuntu2",
+    "clang": "1:21.1.6-71",
+    "clang-21": "1:21.1.8-6ubuntu1",
+    "llvm": "1:21.1.6-71",
+    "llvm-21": "1:21.1.8-6ubuntu1",
+    "libllvm21:amd64": "1:21.1.8-6ubuntu1",
+    "gcc-15": "15.2.0-16ubuntu1",
+    "python3": "3.14.3-0ubuntu2",
+    "python3.14": "3.14.4-1ubuntu0.2",
+    "libc6:amd64": "2.43-2ubuntu2.7",
+    "python3-numpy": "1:2.3.5+ds-3ubuntu1",
+    "python3-pandas": "2.3.3+dfsg-3ubuntu1"
+  }
+}

@@ -1,0 +1,521 @@
+{
+  "passed": true,
+  "scope": "Evidence and oracle verification; does not override unmet formal acceptance criteria",
+  "rows_replayed": 6504,
+  "campaigns": [
+    {
+      "environment": "ubuntu26_generic",
+      "boot_index": 1,
+      "boot_id": "cb9f16b5-e86e-46ae-b901-37823380accc",
+      "formal_acceptance_passed": true,
+      "failed_criteria": [],
+      "static_measured": 960,
+      "static_differences": 760,
+      "dynamic": 80,
+      "dynamic_unexercised": 0,
+      "paired_costs": {
+        "512/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.4500059149770479,
+            "q1": 0.4087824562907398,
+            "q3": 0.5605623662497058,
+            "min": 0.18413591987773853,
+            "max": 1.2033304641539926
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "512/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.41525257797547965,
+            "q1": 0.3750865149725066,
+            "q3": 0.45682477654519654,
+            "min": 0.2867745657057947,
+            "max": 0.5865374427977903
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5165083237515407,
+            "q1": 0.42400268557865395,
+            "q3": 0.5392199745601729,
+            "min": 0.37795137823832325,
+            "max": 0.6105333886462285
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.46625647359803535,
+            "q1": 0.42790557178572225,
+            "q3": 0.48355972285355586,
+            "min": 0.2624029461069212,
+            "max": 0.6269520614137912
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.6181702851977959,
+            "q1": 0.607706270985703,
+            "q3": 0.7008524698169959,
+            "min": 0.5400246352362479,
+            "max": 0.7812881975052933
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5628991192418533,
+            "q1": 0.5165925333656288,
+            "q3": 0.6298285419751456,
+            "min": 0.49410617148100056,
+            "max": 0.7424990530867714
+          },
+          "incomplete_or_invalid_blocks": 0
+        }
+      }
+    },
+    {
+      "environment": "ubuntu26_generic",
+      "boot_index": 2,
+      "boot_id": "4569812c-288f-421f-81e5-d8aa90ae4f55",
+      "formal_acceptance_passed": true,
+      "failed_criteria": [],
+      "static_measured": 960,
+      "static_differences": 760,
+      "dynamic": 80,
+      "dynamic_unexercised": 0,
+      "paired_costs": {
+        "512/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.43527981610071803,
+            "q1": 0.3975906009674551,
+            "q3": 0.474973200851033,
+            "min": 0.3414919056479238,
+            "max": 0.6083399938757003
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "512/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.4726124031536766,
+            "q1": 0.3704397050165628,
+            "q3": 0.5613392242789279,
+            "min": 0.2799091189934925,
+            "max": 0.8335317347087242
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5207210198284002,
+            "q1": 0.46894828453179904,
+            "q3": 0.5660163653203059,
+            "min": 0.38058791148928306,
+            "max": 0.6327246575376079
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5282436733901997,
+            "q1": 0.44259855574942875,
+            "q3": 0.5620293452869478,
+            "min": 0.30878834486883705,
+            "max": 0.7797466167415703
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5791444831513539,
+            "q1": 0.5016896939393138,
+            "q3": 0.6719313544314769,
+            "min": 0.46114816715951407,
+            "max": 0.8070879686080414
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5626497872624785,
+            "q1": 0.49800083976106324,
+            "q3": 0.6081653648176244,
+            "min": 0.4779168917841528,
+            "max": 0.8948186020111882
+          },
+          "incomplete_or_invalid_blocks": 0
+        }
+      }
+    },
+    {
+      "environment": "ubuntu26_generic",
+      "boot_index": 3,
+      "boot_id": "5eb146cc-e461-4635-a3df-a1c39d277435",
+      "formal_acceptance_passed": true,
+      "failed_criteria": [],
+      "static_measured": 960,
+      "static_differences": 760,
+      "dynamic": 80,
+      "dynamic_unexercised": 0,
+      "paired_costs": {
+        "512/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.4656960836229614,
+            "q1": 0.37729123560300526,
+            "q3": 0.543994522432308,
+            "min": 0.23904122817817713,
+            "max": 0.9615355833489083
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "512/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.42703624953003927,
+            "q1": 0.3456111630569517,
+            "q3": 0.4490616732742236,
+            "min": 0.2688537207159597,
+            "max": 0.7223528888731899
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5637828402556648,
+            "q1": 0.5287237419353972,
+            "q3": 0.6481674242277158,
+            "min": 0.4439843559664785,
+            "max": 1.0355886964074295
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.518818500550307,
+            "q1": 0.42381619694510836,
+            "q3": 0.6821272188145869,
+            "min": 0.39409422025732677,
+            "max": 0.7613388589300846
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5707002935233649,
+            "q1": 0.4416542512287869,
+            "q3": 0.6263245223586511,
+            "min": 0.3386648849140851,
+            "max": 1.1076508531946998
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5104175951848775,
+            "q1": 0.41447902650440227,
+            "q3": 0.5590515805097409,
+            "min": 0.41037941297204156,
+            "max": 1.1531374373770433
+          },
+          "incomplete_or_invalid_blocks": 0
+        }
+      }
+    },
+    {
+      "environment": "ubuntu26_oem",
+      "boot_index": 1,
+      "boot_id": "95bb5dd8-a51d-437a-8555-e085dba1f6d1",
+      "formal_acceptance_passed": true,
+      "failed_criteria": [],
+      "static_measured": 960,
+      "static_differences": 760,
+      "dynamic": 80,
+      "dynamic_unexercised": 0,
+      "paired_costs": {
+        "512/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.37979024423651586,
+            "q1": 0.2370884799634071,
+            "q3": 0.4035872152709695,
+            "min": 0.19344484273365806,
+            "max": 0.4214633489699878
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "512/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.4415313996952834,
+            "q1": 0.4185832926863537,
+            "q3": 0.5186182212893516,
+            "min": 0.3571860053411572,
+            "max": 0.5958296128253258
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5480871248106388,
+            "q1": 0.5284918240312393,
+            "q3": 0.6644879415018681,
+            "min": 0.4531534805407137,
+            "max": 1.091207599209915
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.4531957780589972,
+            "q1": 0.40293362139636146,
+            "q3": 0.5597119053511742,
+            "min": 0.28704170674480983,
+            "max": 0.713324568440169
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5452775389425749,
+            "q1": 0.49523442313099986,
+            "q3": 0.6036929144285608,
+            "min": 0.40566870405041505,
+            "max": 0.6890449443396686
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5369785232958273,
+            "q1": 0.49924368030175903,
+            "q3": 0.5528574556845421,
+            "min": 0.4588417552594123,
+            "max": 0.5809721318466794
+          },
+          "incomplete_or_invalid_blocks": 0
+        }
+      }
+    },
+    {
+      "environment": "ubuntu26_oem",
+      "boot_index": 2,
+      "boot_id": "e39e416a-573b-4798-91c0-e05b12d0404c",
+      "formal_acceptance_passed": false,
+      "failed_criteria": [
+        "dynamic_not_exercised"
+      ],
+      "static_measured": 960,
+      "static_differences": 760,
+      "dynamic": 80,
+      "dynamic_unexercised": 1,
+      "paired_costs": {
+        "512/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.40858632257759653,
+            "q1": 0.3271925713179975,
+            "q3": 0.43687723279354246,
+            "min": 0.2685957233286066,
+            "max": 0.4722950362026116
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "512/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.47323820191963406,
+            "q1": 0.38815895740970535,
+            "q3": 0.5215292640109914,
+            "min": 0.30096115356468345,
+            "max": 0.6642812178743805
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5369540113149616,
+            "q1": 0.46861385346386764,
+            "q3": 0.7186123166586796,
+            "min": 0.23439075628643527,
+            "max": 1.1346532553556994
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5322160181652947,
+            "q1": 0.3852696267552024,
+            "q3": 0.5791810602235312,
+            "min": 0.3472494521311329,
+            "max": 0.7610846854856634
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5805863342505129,
+            "q1": 0.540673139107403,
+            "q3": 0.739240687206723,
+            "min": 0.4739204158506123,
+            "max": 0.8824964858968001
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5465049841359355,
+            "q1": 0.49665384036847715,
+            "q3": 0.6447151321750857,
+            "min": 0.4372444681142572,
+            "max": 0.6784897514004292
+          },
+          "incomplete_or_invalid_blocks": 0
+        }
+      }
+    },
+    {
+      "environment": "ubuntu26_oem",
+      "boot_index": 3,
+      "boot_id": "562c9109-f354-4fe6-a6da-ab6acb2f45d0",
+      "formal_acceptance_passed": true,
+      "failed_criteria": [],
+      "static_measured": 960,
+      "static_differences": 760,
+      "dynamic": 80,
+      "dynamic_unexercised": 0,
+      "paired_costs": {
+        "512/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.469583445079497,
+            "q1": 0.4482687861313807,
+            "q3": 0.5670878352153096,
+            "min": 0.24400167131013228,
+            "max": 0.8324299880234527
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "512/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5185476656692439,
+            "q1": 0.4206858403218596,
+            "q3": 0.5545565501027722,
+            "min": 0.3522850062882679,
+            "max": 0.6162088988497418
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5789743214299068,
+            "q1": 0.443520187860594,
+            "q3": 0.5995681267160066,
+            "min": 0.35310180662979435,
+            "max": 0.7723707153181919
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "8192/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.4577299708525573,
+            "q1": 0.41882720052020916,
+            "q3": 0.5966574944690322,
+            "min": 0.3415121947659943,
+            "max": 0.8239627433299357
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/baseline": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.5909146183666818,
+            "q1": 0.560294081892621,
+            "q3": 0.6892420243030618,
+            "min": 0.4866109287374163,
+            "max": 0.7371317454181169
+          },
+          "incomplete_or_invalid_blocks": 0
+        },
+        "65536/cpu": {
+          "paired_blocks": 10,
+          "candidate_over_legacy": {
+            "n": 10,
+            "median": 0.6131421210773805,
+            "q1": 0.5660981497897046,
+            "q3": 0.6387091555624361,
+            "min": 0.38523733505650487,
+            "max": 0.6474112228112419
+          },
+          "incomplete_or_invalid_blocks": 0
+        }
+      }
+    }
+  ],
+  "formal_campaigns_passed": 5,
+  "formal_campaigns_not_fully_passed": 1
+}

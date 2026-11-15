@@ -1,0 +1,214 @@
+{
+  "passed": true,
+  "hash_verified_files": 1147,
+  "counts": {
+    "native_capture_scans": 220,
+    "offline_real_inode_fixtures": 330,
+    "unmodified_probe_scans": 15,
+    "oem_dynamic_scans": 80,
+    "oem_dynamic_exercised": 80
+  },
+  "native_cohorts": [
+    {
+      "folder": "primary_256",
+      "scans": 100,
+      "complete": 100,
+      "unrecovered": []
+    },
+    {
+      "folder": "selected_failure_256",
+      "scans": 100,
+      "complete": 0,
+      "unrecovered": [
+        {
+          "name": "J2SZQ2_caraxes_8W",
+          "name_hex": "4a32535a51325f636172617865735f3857",
+          "inode": 1639255,
+          "d_type": 8,
+          "hidden": true,
+          "token": [
+            6300981073164629134,
+            1639255,
+            8
+          ],
+          "positions": [
+            118,
+            225,
+            24
+          ]
+        },
+        {
+          "name": "MF9_caraxes_83PWJ",
+          "name_hex": "4d46395f636172617865735f383350574a",
+          "inode": 1639261,
+          "d_type": 8,
+          "hidden": true,
+          "token": [
+            18337915970124499958,
+            1639261,
+            8
+          ],
+          "positions": [
+            118,
+            24,
+            225
+          ]
+        }
+      ]
+    },
+    {
+      "folder": "same_fixture_512",
+      "scans": 10,
+      "complete": 10,
+      "unrecovered": []
+    },
+    {
+      "folder": "same_fixture_1024",
+      "scans": 10,
+      "complete": 10,
+      "unrecovered": []
+    }
+  ],
+  "collision": {
+    "unrecovered": [
+      {
+        "name": "J2SZQ2_caraxes_8W",
+        "name_hex": "4a32535a51325f636172617865735f3857",
+        "inode": 1639255,
+        "d_type": 8,
+        "hidden": true,
+        "token": [
+          6300981073164629134,
+          1639255,
+          8
+        ],
+        "positions": [
+          118,
+          225,
+          24
+        ]
+      },
+      {
+        "name": "MF9_caraxes_83PWJ",
+        "name_hex": "4d46395f636172617865735f383350574a",
+        "inode": 1639261,
+        "d_type": 8,
+        "hidden": true,
+        "token": [
+          18337915970124499958,
+          1639261,
+          8
+        ],
+        "positions": [
+          118,
+          24,
+          225
+        ]
+      }
+    ],
+    "residual_cells": [
+      {
+        "index": 24,
+        "fields": [
+          2,
+          12181332697181077368,
+          10,
+          0,
+          12389031724435472278
+        ]
+      },
+      {
+        "index": 118,
+        "fields": [
+          2,
+          12181332697181077368,
+          10,
+          0,
+          12389031724435472278
+        ]
+      },
+      {
+        "index": 225,
+        "fields": [
+          2,
+          12181332697181077368,
+          10,
+          0,
+          12389031724435472278
+        ]
+      }
+    ],
+    "explanation": "Two distinct tokens occupy the same three cells; every remaining cell has count +2, so no pure cell remains."
+  },
+  "oem_groups": [
+    {
+      "fs": "ext4",
+      "implementation": "legacy",
+      "buffer": 256,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "ext4",
+      "implementation": "legacy",
+      "buffer": 65536,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "ext4",
+      "implementation": "packed",
+      "buffer": 256,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "ext4",
+      "implementation": "packed",
+      "buffer": 65536,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "tmpfs",
+      "implementation": "legacy",
+      "buffer": 256,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "tmpfs",
+      "implementation": "legacy",
+      "buffer": 65536,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "tmpfs",
+      "implementation": "packed",
+      "buffer": 256,
+      "attempted": 10,
+      "exercised": 10
+    },
+    {
+      "fs": "tmpfs",
+      "implementation": "packed",
+      "buffer": 65536,
+      "attempted": 10,
+      "exercised": 10
+    }
+  ],
+  "historical_missing_names_known": false,
+  "formal_results_replaced": false,
+  "final_guest_health": {
+    "kernel": "7.0.0-43-generic",
+    "boot_id": "bd3b212d-a614-42b4-b6d0-b227a9843c18",
+    "research_modules": [],
+    "default_routes": [
+      "",
+      ""
+    ],
+    "research_probes": [],
+    "passed": true
+  }
+}

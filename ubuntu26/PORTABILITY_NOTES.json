@@ -1,0 +1,8 @@
+{
+  "followup_verifier": {
+    "original_sha256": "61d99d93b3a22c2a201bf89d06922fb0acb0925c6564f8047908c9c10291ba2b",
+    "published_sha256": "94a544d6d14eb090f8c42f548197da76a16de88db7cabfd3549d8940d066b92d",
+    "changes": "Resolve the independent replay implementation from the archived measured sources; verify all 13 source files against SOURCE_DOWNLOAD_VERIFICATION.json. Measurement records are unchanged."
+  },
+  "original_rerun_helpers": "Preserved byte-for-byte as historical helpers. Some retain the original VM or repository paths; use verify_bundle.py for portable integrity and restoration."
+}

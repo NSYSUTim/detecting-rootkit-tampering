@@ -1,0 +1,9 @@
+{
+  "boot_index": 1,
+  "boot_id": "abd2dad3-12d1-4e4e-b18a-dcfd72c62efb",
+  "kernel": "7.0.0-43-generic",
+  "regular_entries": 16,
+  "required_exercised_per_fs": 5,
+  "buffer_size": 64,
+  "retained_original_cohort": true
+}

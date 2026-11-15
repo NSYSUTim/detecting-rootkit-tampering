@@ -1,0 +1,23 @@
+{
+  "purpose": "Trace of the Times four-scenario head-to-head view",
+  "included_scenarios": [
+    "default",
+    "file_count",
+    "system_load",
+    "filename_length"
+  ],
+  "excluded_scenario": "ls_basic",
+  "selection_reason": "ls_basic uses legacy getdents/filldir, outside D9 getdents64/filldir64 scope",
+  "collection_sha256": "8a7760455d39d14df0d8e30352e7497d31c6315dbb8be39cea323e4ec3f6ca38",
+  "event_count": 1000,
+  "counts": {
+    "default/normal": 150,
+    "default/rootkit": 100,
+    "file_count/normal": 150,
+    "file_count/rootkit": 100,
+    "filename_length/normal": 150,
+    "filename_length/rootkit": 100,
+    "system_load/normal": 150,
+    "system_load/rootkit": 100
+  }
+}

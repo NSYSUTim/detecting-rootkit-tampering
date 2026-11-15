@@ -1,0 +1,240 @@
+{
+  "role": "frozen_excluded_d9_timing_comparator",
+  "not_primary_proposed_method": true,
+  "fit_protocol": "D9-reconciliation-campaign-r1-2026-09-24",
+  "fit_evidence_role": "excluded_single_boot_timing_calibration",
+  "feature": "log(median userspace scan_ns over 20 transactions)",
+  "strata": [
+    "background condition",
+    "getdents64 buffer size"
+  ],
+  "threshold_rules": {
+    "mad": "median + 3 * 1.4826 * MAD among five non-suppression controls with three repeats per stratum",
+    "envelope": "maximum non-suppression calibration feature plus 0.01 log-unit in each stratum"
+  },
+  "direction": "alert_when_feature_above_corresponding_stratum_threshold",
+  "fit_control_states": [
+    "filldir_active",
+    "filldir_pass",
+    "getdents_active",
+    "getdents_pass",
+    "unloaded"
+  ],
+  "thresholds_mad": {
+    "baseline|128": 15.117957923949128,
+    "baseline|256": 15.24452479867217,
+    "baseline|4096": 15.159494050516967,
+    "baseline|65536": 15.37366528642278,
+    "cpu|128": 15.443854664222536,
+    "cpu|256": 15.057027372133184,
+    "cpu|4096": 14.775134042177957,
+    "cpu|65536": 14.796593542790884,
+    "memory|128": 16.033590773554486,
+    "memory|256": 15.996355872548666,
+    "memory|4096": 15.247126873846147,
+    "memory|65536": 14.942226685802423,
+    "mixed|128": 15.820777641067954,
+    "mixed|256": 15.401435903229311,
+    "mixed|4096": 14.813863266761196,
+    "mixed|65536": 15.274270875410693
+  },
+  "thresholds_envelope": {
+    "baseline|128": 15.204819074795408,
+    "baseline|256": 15.093910767879677,
+    "baseline|4096": 14.944368676353452,
+    "baseline|65536": 14.958123387852883,
+    "cpu|128": 15.16862180598263,
+    "cpu|256": 15.051924710979256,
+    "cpu|4096": 14.884810649294552,
+    "cpu|65536": 14.969059882743313,
+    "memory|128": 15.206137388933245,
+    "memory|256": 15.110425911139059,
+    "memory|4096": 14.907816789204704,
+    "memory|65536": 14.92245412175183,
+    "mixed|128": 15.2622995821506,
+    "mixed|256": 15.15574581254917,
+    "mixed|4096": 14.974311239173973,
+    "mixed|65536": 14.974298082892487
+  },
+  "calibration": {
+    "baseline|128": {
+      "control_batches": 15,
+      "log_median_center": 14.510456120465598,
+      "log_median_mad": 0.13658478427166898,
+      "threshold_mad": 15.117957923949128,
+      "threshold_envelope": 15.204819074795408,
+      "calibration_alerts_mad": 1,
+      "calibration_alerts_envelope": 0
+    },
+    "baseline|256": {
+      "control_batches": 15,
+      "log_median_center": 14.416735139383881,
+      "log_median_mad": 0.1861121586600767,
+      "threshold_mad": 15.24452479867217,
+      "threshold_envelope": 15.093910767879677,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "baseline|4096": {
+      "control_batches": 15,
+      "log_median_center": 14.451224051505967,
+      "log_median_mad": 0.15924052318247206,
+      "threshold_mad": 15.159494050516967,
+      "threshold_envelope": 14.944368676353452,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "baseline|65536": {
+      "control_batches": 15,
+      "log_median_center": 14.336176704574557,
+      "log_median_mad": 0.23325882050636793,
+      "threshold_mad": 15.37366528642278,
+      "threshold_envelope": 14.958123387852883,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "cpu|128": {
+      "control_batches": 15,
+      "log_median_center": 14.787956834306286,
+      "log_median_mad": 0.14746567514642095,
+      "threshold_mad": 15.443854664222536,
+      "threshold_envelope": 15.16862180598263,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "cpu|256": {
+      "control_batches": 15,
+      "log_median_center": 14.614761053238507,
+      "log_median_mad": 0.0994348484407297,
+      "threshold_mad": 15.057027372133184,
+      "threshold_envelope": 15.051924710979256,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "cpu|4096": {
+      "control_batches": 15,
+      "log_median_center": 14.437593437393186,
+      "log_median_mad": 0.07588933962515654,
+      "threshold_mad": 14.775134042177957,
+      "threshold_envelope": 14.884810649294552,
+      "calibration_alerts_mad": 4,
+      "calibration_alerts_envelope": 0
+    },
+    "cpu|65536": {
+      "control_batches": 15,
+      "log_median_center": 14.464148485664486,
+      "log_median_mad": 0.07474370635514127,
+      "threshold_mad": 14.796593542790884,
+      "threshold_envelope": 14.969059882743313,
+      "calibration_alerts_mad": 5,
+      "calibration_alerts_envelope": 0
+    },
+    "memory|128": {
+      "control_batches": 15,
+      "log_median_center": 14.81769968102241,
+      "log_median_mad": 0.2733691021475959,
+      "threshold_mad": 16.033590773554486,
+      "threshold_envelope": 15.206137388933245,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "memory|256": {
+      "control_batches": 15,
+      "log_median_center": 14.627231350481678,
+      "log_median_mad": 0.3078206129023311,
+      "threshold_mad": 15.996355872548666,
+      "threshold_envelope": 15.110425911139059,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "memory|4096": {
+      "control_batches": 15,
+      "log_median_center": 14.448861023898028,
+      "log_median_mad": 0.1794743131319123,
+      "threshold_mad": 15.247126873846147,
+      "threshold_envelope": 14.907816789204704,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "memory|65536": {
+      "control_batches": 15,
+      "log_median_center": 14.480767650703989,
+      "log_median_mad": 0.10374995168362666,
+      "threshold_mad": 14.942226685802423,
+      "threshold_envelope": 14.92245412175183,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "mixed|128": {
+      "control_batches": 15,
+      "log_median_center": 14.862581275812754,
+      "log_median_mad": 0.21543153137623072,
+      "threshold_mad": 15.820777641067954,
+      "threshold_envelope": 15.2622995821506,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "mixed|256": {
+      "control_batches": 15,
+      "log_median_center": 14.6228092994619,
+      "log_median_mad": 0.1750588164412541,
+      "threshold_mad": 15.401435903229311,
+      "threshold_envelope": 15.15574581254917,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    },
+    "mixed|4096": {
+      "control_batches": 15,
+      "log_median_center": 14.444212813006441,
+      "log_median_mad": 0.08310860509797102,
+      "threshold_mad": 14.813863266761196,
+      "threshold_envelope": 14.974311239173973,
+      "calibration_alerts_mad": 2,
+      "calibration_alerts_envelope": 0
+    },
+    "mixed|65536": {
+      "control_batches": 15,
+      "log_median_center": 14.505906206529616,
+      "log_median_mad": 0.17275162302285985,
+      "threshold_mad": 15.274270875410693,
+      "threshold_envelope": 14.974298082892487,
+      "calibration_alerts_mad": 0,
+      "calibration_alerts_envelope": 0
+    }
+  },
+  "calibration_only_alert_rates": {
+    "mad": {
+      "filldir_active": 0.16666666666666666,
+      "filldir_pass": 0.08333333333333333,
+      "getdents_active": 0.0,
+      "getdents_pass": 0.0,
+      "unloaded": 0.0
+    },
+    "envelope": {
+      "filldir_active": 0.0,
+      "filldir_pass": 0.0,
+      "getdents_active": 0.0,
+      "getdents_pass": 0.0,
+      "unloaded": 0.0
+    }
+  },
+  "input_sha256": "51801caf51421d97df204552b919c410f797ae0a370675eddc80d091ffbbbe9d",
+  "input_source_hashes": {
+    "runner": "29ffbf5460772e0f86d41740ab45e426d87fab0ae18a5f125f1755d63dd99d3a",
+    "smoke_helper": "5bf40b6776b6c87ae136694a4feba029102996e86360920d4b785cc2cbf8860a",
+    "boundary_helper": "4a7039519e06903431c33267e7f9e8245dac77f177377086b03ec611d8627d08",
+    "bpf": "9e0c09c8d90810515b4144c8c405e5210eb6e275ca73db754e0b64bdbd24c500",
+    "hash_header": "9077237df5ca2bc745fd20ecb156f2282c09e18cb46bf9c8965942c9695fed06",
+    "probe": "de974b6c2c83afea0f2d05cf979bd05295e6dee30f5f5e8a59c09b484e1a7ed6",
+    "module_filldir_pass": "3084919eef548cec250dd7f2c19a29dbb7d7d7a44243c05671617fa0b8fee0a1",
+    "module_filldir_active": "cfe67573428198937beaaf387f94e55229e64bbfcabb8fb0bf4f9041c57dcf89",
+    "module_filldir_hiding": "084be099c87bde42df0f8a957f5cd17c42e212451e9ac1cfde1b328ab96e6e19",
+    "module_getdents_pass": "71ab3190dbf6bdb69d8775ae04e2585e8db342b0eefb319c628dfcbfc9a6d707",
+    "module_getdents_active": "e664d12975ecd1fdf0301ab96d5a75dcd26ae4b2d1aec41a04303d5819de30b5",
+    "module_getdents_hiding": "adb45bd01153b06568a5a3d8ed686ce716f29b179544a363ca7df1f97764687b",
+    "module_policy_filter": "9b6e418156c20edb4adfdf76dacc84851a8aa40ba642f70f098f704022e4e63f",
+    "module_getdents_substitution": "57d0a85fe2bb23c6905c90fb587ca9077c47419a7b880f6ec36fae666e22f066"
+  },
+  "script_sha256": "17398bb7d97ee8a1369350bb5cd08a4c29eb2310da7e919dff8f9fdc3a40da82",
+  "warning": "This is a simple comparison baseline, not a reproduction of all timing detectors. Formal labels and formal observations must not be used to tune these thresholds."
+}

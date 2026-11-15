@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "scope": "Supplementary cohorts are separate from original formal measurements",
+  "exercised_benign_races": 30,
+  "benign_race_boot_ids": [
+    "abd2dad3-12d1-4e4e-b18a-dcfd72c62efb",
+    "d1ef1d07-6440-4a6f-8694-a59bd3aaa481",
+    "95c91ecf-28e4-4081-ad9d-dd22adf36e01"
+  ],
+  "oem_dynamic": {
+    "scans": 80,
+    "exercised": 79,
+    "boot_id": "85a61855-e11a-4ca0-8b37-aa59becfeb5b",
+    "python": "3.14.4"
+  },
+  "entry_gate": {
+    "boot_ids": [
+      "abd2dad3-12d1-4e4e-b18a-dcfd72c62efb",
+      "4569812c-288f-421f-81e5-d8aa90ae4f55",
+      "5eb146cc-e461-4635-a3df-a1c39d277435"
+    ],
+    "telemetry_rows_checked": 390,
+    "controlled_measured": 216,
+    "unprobed_controls": 72,
+    "entry_faults_invalid": 30,
+    "return_faults_invalid": 48
+  },
+  "cli": {
+    "passing_checks": 12,
+    "extra_fixture_failure_retained": true,
+    "malformed_result_correctly_invalid": true
+  },
+  "fixed_compaction_controls": {
+    "scans": 12,
+    "all_modules_absent": true
+  }
+}

@@ -1,0 +1,8 @@
+{"event": "completed_job_retained", "name": "guest_original_probe_control.py"}
+{"event": "reboot_requested", "kernel": "7.0.0-1018-oem"}
+{"event": "reboot_ready", "boot_id": "a3474092-29eb-432d-b48a-df0fcb139980", "kernel": "7.0.0-1018-oem"}
+{"event": "job_completed", "name": "guest_oem_dynamic.py", "returncode": 0}
+{"event": "reboot_requested", "kernel": "7.0.0-43-generic"}
+{"event": "reboot_ready", "boot_id": "bd3b212d-a614-42b4-b6d0-b227a9843c18", "kernel": "7.0.0-43-generic"}
+{"event": "final_health", "record": "{\"kernel\": \"7.0.0-43-generic\", \"boot_id\": \"bd3b212d-a614-42b4-b6d0-b227a9843c18\", \"research_modules\": [], \"default_routes\": [\"\", \"\"], \"research_probes\": [], \"passed\": true}\n"}
+{"event": "evidence_downloaded_verified", "files": 1147, "archive_sha256": "e6bf260bf99147ec56a9c50356adcc6ac09ab34758d88f33554fea864443d533"}

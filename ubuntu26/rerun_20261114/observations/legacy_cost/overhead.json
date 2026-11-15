@@ -1,0 +1,1873 @@
+{
+  "schema_version": 1,
+  "protocol_revision": "D9-reconciliation-overhead-development-r1-2026-09-24",
+  "evidence_role": "single_boot_development_overhead_not_confirmatory",
+  "created_utc": "2026-11-14T11:38:31.256037+00:00",
+  "environment": {
+    "kernel": "7.0.0-43-generic",
+    "boot_id": "ece9c8db-c7eb-4750-bfdd-a08153c9f914"
+  },
+  "parameters": {
+    "quick": false,
+    "iterations_per_batch": 10,
+    "repeats": 3,
+    "seed": 12011,
+    "buffer_size": 65536,
+    "cells": 256,
+    "cardinalities": [
+      512,
+      8192,
+      65536
+    ],
+    "conditions": [
+      "baseline",
+      "cpu",
+      "memory",
+      "mixed"
+    ]
+  },
+  "source_hashes": {
+    "runner": "848ad533719e2e33654ee37aac3198e4b2971b00c38c79246f02b3edbc1861f6",
+    "bpf": "9e0c09c8d90810515b4144c8c405e5210eb6e275ca73db754e0b64bdbd24c500",
+    "raw_probe": "8b4d982f789aa2945d26cb138f96079a9fa34d008600773d53f3b9923f3daaf6",
+    "d9_probe": "de974b6c2c83afea0f2d05cf979bd05295e6dee30f5f5e8a59c09b484e1a7ed6"
+  },
+  "rows": [
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 105669352,
+      "cpu_seconds": 0.11040899999999976,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1146517.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 21691543,
+      "cpu_seconds": 0.023270999999999376,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 25667347,
+      "cpu_seconds": 0.029803000000000246,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 293923.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 20622640,
+      "cpu_seconds": 0.022952000000000083,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 26659079,
+      "cpu_seconds": 0.0312209999999995,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 273981.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 113303692,
+      "cpu_seconds": 0.11676200000000048,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1202144.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 102731520,
+      "cpu_seconds": 0.10794500000000085,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1143639.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 31442875,
+      "cpu_seconds": 0.03623300000000018,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 375740.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 19231265,
+      "cpu_seconds": 0.022370999999999697,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 31771888,
+      "cpu_seconds": 0.028671000000000113,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 310161.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 35631591,
+      "cpu_seconds": 0.029607999999999635,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 127983042,
+      "cpu_seconds": 0.12947000000000042,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1409775.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 138115219,
+      "cpu_seconds": 0.1415399999999991,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1566268.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 31736084,
+      "cpu_seconds": 0.03653200000000023,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 402547.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 21253335,
+      "cpu_seconds": 0.02441399999999838,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 33511092,
+      "cpu_seconds": 0.03720999999999819,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 402168.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 29750956,
+      "cpu_seconds": 0.03044699999999878,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 135188565,
+      "cpu_seconds": 0.13959200000000038,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1639736.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 29427848,
+      "cpu_seconds": 0.031022999999999357,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 107506685,
+      "cpu_seconds": 0.1119860000000017,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1485332.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 27023732,
+      "cpu_seconds": 0.031216999999999828,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 391409.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 39579552,
+      "cpu_seconds": 0.042588999999999544,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 399678.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 109528673,
+      "cpu_seconds": 0.11215000000000153,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1609127.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 29354068,
+      "cpu_seconds": 0.03157599999999938,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 133194441,
+      "cpu_seconds": 0.1373079999999991,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1573811.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 21995331,
+      "cpu_seconds": 0.025797000000000736,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 29856934,
+      "cpu_seconds": 0.03426800000000085,
+      "iterations": 10,
+      "stdout_bytes": 144881,
+      "median_probe_scan_ns": 288159.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 35410112,
+      "cpu_seconds": 0.024589999999998113,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 57994857,
+      "cpu_seconds": 0.04416199999999826,
+      "iterations": 10,
+      "stdout_bytes": 144882,
+      "median_probe_scan_ns": 419611.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 155467007,
+      "cpu_seconds": 0.14332600000000184,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1589566.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 163276440,
+      "cpu_seconds": 0.1502490000000023,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1606889.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 49073774,
+      "cpu_seconds": 0.028985999999999734,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 45229252,
+      "cpu_seconds": 0.03354900000000072,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 412654.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 35915390,
+      "cpu_seconds": 0.023820999999998094,
+      "iterations": 10,
+      "stdout_bytes": 40,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 42337568,
+      "cpu_seconds": 0.0315039999999982,
+      "iterations": 10,
+      "stdout_bytes": 144880,
+      "median_probe_scan_ns": 389821.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 512,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 161202761,
+      "cpu_seconds": 0.14916900000000055,
+      "iterations": 10,
+      "stdout_bytes": 144890,
+      "median_probe_scan_ns": 1627731.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 51546211,
+      "cpu_seconds": 0.05414499999999833,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 71313012,
+      "cpu_seconds": 0.07582700000000031,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 4343943.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 277321731,
+      "cpu_seconds": 0.2822829999999996,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 16911056.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 55398959,
+      "cpu_seconds": 0.05757600000000451,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 264586158,
+      "cpu_seconds": 0.27169100000000057,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 16849813.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 72241692,
+      "cpu_seconds": 0.07626499999999936,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 4552651.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 68179663,
+      "cpu_seconds": 0.07227100000000419,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 4365005.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 53327655,
+      "cpu_seconds": 0.05668199999999857,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 282973587,
+      "cpu_seconds": 0.2879049999999985,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 16564583.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 77242624,
+      "cpu_seconds": 0.07594699999999577,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 75539894,
+      "cpu_seconds": 0.07817199999999858,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 4730386.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 346652824,
+      "cpu_seconds": 0.3502560000000017,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 23500021.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 80560603,
+      "cpu_seconds": 0.08144700000000071,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 4822744.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 71029451,
+      "cpu_seconds": 0.07095299999999938,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 312415607,
+      "cpu_seconds": 0.31468999999999525,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 16824611.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 328502173,
+      "cpu_seconds": 0.3322819999999993,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 21236204.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 85429560,
+      "cpu_seconds": 0.08917999999999893,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 5857823.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 62919244,
+      "cpu_seconds": 0.0662169999999982,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 76840801,
+      "cpu_seconds": 0.0829700000000031,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 70684836,
+      "cpu_seconds": 0.07445900000000094,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 4406552.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 291851875,
+      "cpu_seconds": 0.29750400000000354,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 17686110.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 97377148,
+      "cpu_seconds": 0.1032690000000045,
+      "iterations": 10,
+      "stdout_bytes": 149881,
+      "median_probe_scan_ns": 5327638.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 72520417,
+      "cpu_seconds": 0.07752199999999476,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 291231013,
+      "cpu_seconds": 0.2961080000000038,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 19121062.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 92836172,
+      "cpu_seconds": 0.0985990000000001,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 5894061.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 292505571,
+      "cpu_seconds": 0.29787600000000225,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 17276991.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 51976255,
+      "cpu_seconds": 0.055644000000000915,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 387479922,
+      "cpu_seconds": 0.373931000000006,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 23769631.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 89915192,
+      "cpu_seconds": 0.078870000000002,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 100220466,
+      "cpu_seconds": 0.08826599999999729,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 5962940.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 82178892,
+      "cpu_seconds": 0.07007700000000483,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 390279307,
+      "cpu_seconds": 0.3779790000000034,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 24061704.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 100869547,
+      "cpu_seconds": 0.08927500000000066,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 5981017.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 96413069,
+      "cpu_seconds": 0.08462399999999803,
+      "iterations": 10,
+      "stdout_bytes": 50,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 101857950,
+      "cpu_seconds": 0.09101700000000079,
+      "iterations": 10,
+      "stdout_bytes": 149880,
+      "median_probe_scan_ns": 6094500.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 8192,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "userspace_sketch",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 388216725,
+      "cpu_seconds": 0.37632999999999583,
+      "iterations": 10,
+      "stdout_bytes": 149890,
+      "median_probe_scan_ns": 24142959.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 366389147,
+      "cpu_seconds": 0.37046399999999835,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 32940398.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 303275727,
+      "cpu_seconds": 0.30786799999999914,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1459124710,
+      "cpu_seconds": 1.4708109999999905,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 132666341.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1483842367,
+      "cpu_seconds": 1.4883769999999998,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 134038912.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 389130339,
+      "cpu_seconds": 0.39506000000000085,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 34388801.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 1,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 350151617,
+      "cpu_seconds": 0.37651799999999724,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1450236674,
+      "cpu_seconds": 1.4567600000000098,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 133956980.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 394318566,
+      "cpu_seconds": 0.3996009999999899,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 34657344.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "baseline",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 316000597,
+      "cpu_seconds": 0.31887200000000604,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 385833632,
+      "cpu_seconds": 0.3910160000000005,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1942201065,
+      "cpu_seconds": 1.946745,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 185942746.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 472590701,
+      "cpu_seconds": 0.47639099999999246,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 42210783.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 378196169,
+      "cpu_seconds": 0.3831290000000038,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1808223514,
+      "cpu_seconds": 1.809964000000008,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 170136827.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 1,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 447692206,
+      "cpu_seconds": 0.4521309999999943,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 43601937.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1875449011,
+      "cpu_seconds": 1.8777019999999993,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 178196129.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 469247810,
+      "cpu_seconds": 0.4741199999999992,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 46619071.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "cpu",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "userspace_sketch",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 355436436,
+      "cpu_seconds": 0.3597510000000028,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 431726054,
+      "cpu_seconds": 0.43611699999999587,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 39947804.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1677588350,
+      "cpu_seconds": 1.682585000000003,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 153721555.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 0,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 328477944,
+      "cpu_seconds": 0.33174600000000964,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 406193441,
+      "cpu_seconds": 0.40876599999999996,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 33868797.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 370574444,
+      "cpu_seconds": 0.37635899999999367,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "raw_count",
+        "full_d9"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1616622716,
+      "cpu_seconds": 1.6220739999999978,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 147739752.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 398800827,
+      "cpu_seconds": 0.4030959999999908,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1653357558,
+      "cpu_seconds": 1.6585890000000063,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 155003987.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "memory",
+      "repeat": 2,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 421802983,
+      "cpu_seconds": 0.4257249999999999,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 38967623.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 432886956,
+      "cpu_seconds": 0.4199509999999975,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 1996922885,
+      "cpu_seconds": 1.9834589999999963,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 184732389.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 0,
+      "order": [
+        "raw_count",
+        "full_d9",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 512453009,
+      "cpu_seconds": 0.5001630000000006,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 46610955.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 504963591,
+      "cpu_seconds": 0.49395699999998044,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 46561273.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 2098054761,
+      "cpu_seconds": 2.0854830000000106,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 195964230.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 1,
+      "order": [
+        "userspace_sketch",
+        "full_d9",
+        "raw_count"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 419751972,
+      "cpu_seconds": 0.4071740000000119,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "full_d9",
+      "wall_ns": 2047129841,
+      "cpu_seconds": 2.032143000000005,
+      "iterations": 10,
+      "stdout_bytes": 152960,
+      "median_probe_scan_ns": 189825065.0,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 12312
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "raw_count",
+      "wall_ns": 420060089,
+      "cpu_seconds": 0.407511999999997,
+      "iterations": 10,
+      "stdout_bytes": 60,
+      "median_probe_scan_ns": null,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    },
+    {
+      "cardinality": 65536,
+      "condition": "mixed",
+      "repeat": 2,
+      "order": [
+        "full_d9",
+        "raw_count",
+        "userspace_sketch"
+      ],
+      "mode": "userspace_sketch",
+      "wall_ns": 510247425,
+      "cpu_seconds": 0.49917399999998224,
+      "iterations": 10,
+      "stdout_bytes": 152950,
+      "median_probe_scan_ns": 46676795.5,
+      "configured_logical_bpf_map_payload_upper_bound_bytes": 0
+    }
+  ]
+}

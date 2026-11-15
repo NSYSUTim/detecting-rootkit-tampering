@@ -1,0 +1,23 @@
+{
+  "measured": 72,
+  "actual_differences": 54,
+  "unexercised": 6,
+  "all_measured_passed": true,
+  "controls": 24,
+  "controls_passed": true,
+  "entry_injected": 10,
+  "entry_rejected": 10,
+  "entry_miss_seen_each": true,
+  "entry_pre_gate_equal_each": true,
+  "normal_controls": 22,
+  "normal_valid": 22,
+  "return_injected": 16,
+  "return_rejected": 16,
+  "return_misses_seen": true,
+  "load_order": 6,
+  "load_order_passed": true,
+  "overcapacity_passed": true,
+  "boundary_passed": true,
+  "protected_sources_unchanged": true,
+  "passed": true
+}

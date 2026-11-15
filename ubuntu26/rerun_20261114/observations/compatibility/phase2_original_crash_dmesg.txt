@@ -1,0 +1,1065 @@
+[    0.000000] [      T0] Linux version 7.0.0-43-generic (buildd@lcy02-amd64-080) (x86_64-linux-gnu-gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0, GNU ld (GNU Binutils for Ubuntu) 2.46) #43-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct 23 13:25:25 UTC 2026 (Ubuntu 7.0.0-43.43-generic 7.0.14)
+[    0.000000] [      T0] Command line: BOOT_IMAGE=/boot/vmlinuz-7.0.0-43-generic root=UUID=7905d5c4-52de-4c37-b864-ce5d737b095e ro crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M
+[    0.000000] [      T0] KERNEL supported cpus:
+[    0.000000] [      T0]   Intel GenuineIntel
+[    0.000000] [      T0]   AMD AuthenticAMD
+[    0.000000] [      T0]   Hygon HygonGenuine
+[    0.000000] [      T0]   Centaur CentaurHauls
+[    0.000000] [      T0]   zhaoxin   Shanghai  
+[    0.000000] [      T0] x86/CPU: Model not found in latest microcode list
+[    0.000000] [      T0] BIOS-provided physical RAM map:
+[    0.000000] [      T0] BIOS-e820: [mem 0x0000000000000000-0x000000000009ffff]  System RAM
+[    0.000000] [      T0] BIOS-e820: [gap 0x00000000000a0000-0x00000000000bffff]
+[    0.000000] [      T0] BIOS-e820: [mem 0x00000000000c0000-0x00000000000fffff]  device reserved
+[    0.000000] [      T0] BIOS-e820: [mem 0x0000000000100000-0x00000000f7f40fff]  System RAM
+[    0.000000] [      T0] BIOS-e820: [mem 0x00000000f7f41000-0x00000000f7fc4fff]  device reserved
+[    0.000000] [      T0] BIOS-e820: [mem 0x00000000f7fc5000-0x00000000f7fd1fff]  System RAM
+[    0.000000] [      T0] BIOS-e820: [mem 0x00000000f7fd2000-0x00000000f7ffafff]  ACPI data
+[    0.000000] [      T0] BIOS-e820: [mem 0x00000000f7ffb000-0x00000000f7ffefff]  ACPI NVS
+[    0.000000] [      T0] BIOS-e820: [mem 0x00000000f7fff000-0x00000000f7ffffff]  System RAM
+[    0.000000] [      T0] BIOS-e820: [gap 0x00000000f8000000-0x00000000ffffffff]
+[    0.000000] [      T0] BIOS-e820: [mem 0x0000000100000000-0x0000000207ffffff]  System RAM
+[    0.000000] [      T0] NX (Execute Disable) protection: active
+[    0.000000] [      T0] APIC: Static calls initialized
+[    0.000000] [      T0] efi: EFI v2.7 by Microsoft
+[    0.000000] [      T0] efi: ACPI=0xf7ffa000 ACPI 2.0=0xf7ffa014 SMBIOS=0xf7f85000 SMBIOS 3.0=0xf7f83000 MEMATTR=0xf6c30a98 MOKvar=0xf7f80000 INITRD=0xf6a68018 RNG=0xf7fd3018 
+[    0.000000] [      T0] random: crng init done
+[    0.000000] [      T0] SMBIOS 3.1.0 present.
+[    0.000000] [      T0] DMI: Microsoft Corporation Virtual Machine/Virtual Machine, BIOS Hyper-V UEFI Release v4.1 09/25/2025
+[    0.000000] [      T0] DMI: Memory slots populated: 2/2
+[    0.000000] [      T0] secureboot: Secure boot disabled
+[    0.000000] [      T0] Hypervisor detected: Microsoft Hyper-V
+[    0.000000] [      T0] Hyper-V: privilege flags low 0xae7f, high 0x3b8030, ext 0x62, hints 0x9a0e24, misc 0xe0bed7b2
+[    0.000000] [      T0] Hyper-V: Nested features: 0x0
+[    0.000000] [      T0] Hyper-V: LAPIC Timer Frequency: 0x30d40
+[    0.000000] [      T0] Hyper-V: Using hypercall for remote TLB flush
+[    0.000000] [      T0] clocksource: hyperv_clocksource_tsc_page: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+[    0.000000] [      T0] clocksource: hyperv_clocksource_msr: mask: 0xffffffffffffffff max_cycles: 0x24e6a1710, max_idle_ns: 440795202120 ns
+[    0.000000] [      T0] tsc: Detected 2611.212 MHz processor
+[    0.000013] [      T0] e820: update [mem 0x00000000-0x00000fff] System RAM ==> device reserved
+[    0.000019] [      T0] e820: remove [mem 0x000a0000-0x000fffff] System RAM
+[    0.000030] [      T0] last_pfn = 0x208000 max_arch_pfn = 0x400000000
+[    0.000089] [      T0] MTRR map: 3 entries (2 fixed + 1 variable; max 18), built from 8 variable MTRRs
+[    0.000095] [      T0] x86/PAT: Configuration [0-7]: WB  WC  UC- UC  WB  WP  UC- WT  
+[    0.000209] [      T0] last_pfn = 0xf8000 max_arch_pfn = 0x400000000
+[    0.022364] [      T0] Using GB pages for direct mapping
+[    0.022819] [      T0] secureboot: Secure boot disabled
+[    0.022821] [      T0] RAMDISK: [mem 0xee3c7000-0xf226bfff]
+[    0.022832] [      T0] ACPI: Early table checksum verification disabled
+[    0.022838] [      T0] ACPI: RSDP 0x00000000F7FFA014 000024 (v02 VRTUAL)
+[    0.022848] [      T0] ACPI: XSDT 0x00000000F7FF90E8 000054 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022859] [      T0] ACPI: FACP 0x00000000F7FF8000 000114 (v06 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022868] [      T0] ACPI: DSDT 0x00000000F7FD7000 01E11C (v02 MSFTVM DSDT01   00000001 INTL 20230628)
+[    0.022875] [      T0] ACPI: FACS 0x00000000F7FFE000 000040
+[    0.022880] [      T0] ACPI: OEM0 0x00000000F7FF7000 000064 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022886] [      T0] ACPI: WAET 0x00000000F7FF6000 000028 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022891] [      T0] ACPI: APIC 0x00000000F7FD6000 000068 (v04 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022896] [      T0] ACPI: SRAT 0x00000000F7FD5000 0002F0 (v02 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022901] [      T0] ACPI: BGRT 0x00000000F7FD4000 000038 (v01 VRTUAL MICROSFT 00000001 MSFT 00000001)
+[    0.022906] [      T0] ACPI: Reserving FACP table memory at [mem 0xf7ff8000-0xf7ff8113]
+[    0.022909] [      T0] ACPI: Reserving DSDT table memory at [mem 0xf7fd7000-0xf7ff511b]
+[    0.022910] [      T0] ACPI: Reserving FACS table memory at [mem 0xf7ffe000-0xf7ffe03f]
+[    0.022912] [      T0] ACPI: Reserving OEM0 table memory at [mem 0xf7ff7000-0xf7ff7063]
+[    0.022913] [      T0] ACPI: Reserving WAET table memory at [mem 0xf7ff6000-0xf7ff6027]
+[    0.022914] [      T0] ACPI: Reserving APIC table memory at [mem 0xf7fd6000-0xf7fd6067]
+[    0.022915] [      T0] ACPI: Reserving SRAT table memory at [mem 0xf7fd5000-0xf7fd52ef]
+[    0.022917] [      T0] ACPI: Reserving BGRT table memory at [mem 0xf7fd4000-0xf7fd4037]
+[    0.022992] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x00000000-0xf7ffffff] hotplug
+[    0.022996] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000-0x207ffffff] hotplug
+[    0.022999] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x208000000-0xfdfffffff] hotplug
+[    0.023001] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000-0xffffffffff] hotplug
+[    0.023003] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x10000000000-0x1ffffffffff] hotplug
+[    0.023005] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x20000000000-0x3ffffffffff] hotplug
+[    0.023006] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x40000000000-0x7ffffffffff] hotplug
+[    0.023008] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x80000000000-0xfffffffffff] hotplug
+[    0.023010] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x100000000000-0x1fffffffffff] hotplug
+[    0.023012] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x200000000000-0x3fffffffffff] hotplug
+[    0.023013] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x400000000000-0x7fffffffffff] hotplug
+[    0.023015] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x800000000000-0xffffffffffff] hotplug
+[    0.023017] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x1000000000000-0x1ffffffffffff] hotplug
+[    0.023019] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x2000000000000-0x3ffffffffffff] hotplug
+[    0.023020] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x4000000000000-0x7ffffffffffff] hotplug
+[    0.023022] [      T0] ACPI: SRAT: Node 0 PXM 0 [mem 0x8000000000000-0xfffffffffffff] hotplug
+[    0.023029] [      T0] NUMA: Node 0 [mem 0x00001000-0xf7ffffff] + [mem 0x100000000-0x207ffffff] -> [mem 0x00001000-0x207ffffff]
+[    0.023045] [      T0] NODE_DATA(0) allocated [mem 0x207fd3280-0x207ffdfff]
+[    0.023404] [      T0] crashkernel reserved: 0x00000000ce000000 - 0x00000000ee000000 (512 MB)
+[    0.023482] [      T0] ACPI: PM-Timer IO Port: 0x408
+[    0.023501] [      T0] ACPI: LAPIC_NMI (acpi_id[0x01] dfl dfl lint[0x1])
+[    0.023934] [      T0] IOAPIC[0]: apic_id 4, version 17, address 0xfec00000, GSI 0-23
+[    0.023942] [      T0] ACPI: INT_SRC_OVR (bus 0 bus_irq 9 global_irq 9 high level)
+[    0.023952] [      T0] ACPI: Using ACPI (MADT) for SMP configuration information
+[    0.023964] [      T0] e820: update [mem 0xf6c40000-0xf6c46fff] System RAM ==> device reserved
+[    0.023981] [      T0] TSC deadline timer available
+[    0.023985] [      T0] CPU topo: Max. logical packages:   1
+[    0.023987] [      T0] CPU topo: Max. logical nodes:      1
+[    0.023988] [      T0] CPU topo: Num. nodes per package:  1
+[    0.023991] [      T0] CPU topo: Max. logical dies:       1
+[    0.023992] [      T0] CPU topo: Max. dies per package:   1
+[    0.023997] [      T0] CPU topo: Max. threads per core:   2
+[    0.023999] [      T0] CPU topo: Num. cores per package:     2
+[    0.024000] [      T0] CPU topo: Num. threads per package:   4
+[    0.024001] [      T0] CPU topo: Allowing 4 present CPUs plus 0 hotplug CPUs
+[    0.024023] [      T0] PM: hibernation: Registered nosave memory: [mem 0x00000000-0x00000fff]
+[    0.024026] [      T0] PM: hibernation: Registered nosave memory: [mem 0x000a0000-0x000fffff]
+[    0.024029] [      T0] PM: hibernation: Registered nosave memory: [mem 0xf6c40000-0xf6c46fff]
+[    0.024031] [      T0] PM: hibernation: Registered nosave memory: [mem 0xf7f41000-0xf7fc4fff]
+[    0.024033] [      T0] PM: hibernation: Registered nosave memory: [mem 0xf7fd2000-0xf7ffefff]
+[    0.024035] [      T0] PM: hibernation: Registered nosave memory: [mem 0xf8000000-0xffffffff]
+[    0.024038] [      T0] [gap 0xf8000000-0xffffffff] available for PCI devices
+[    0.024040] [      T0] Booting paravirtualized kernel on Hyper-V
+[    0.024044] [      T0] clocksource: refined-jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1910969940391419 ns
+[    0.024090] [      T0] Zone ranges:
+[    0.024091] [      T0]   DMA      [mem 0x0000000000001000-0x0000000000ffffff]
+[    0.024095] [      T0]   DMA32    [mem 0x0000000001000000-0x00000000ffffffff]
+[    0.024098] [      T0]   Normal   [mem 0x0000000100000000-0x0000000207ffffff]
+[    0.024100] [      T0]   Device   empty
+[    0.024102] [      T0] Movable zone start for each node
+[    0.024105] [      T0] Early memory node ranges
+[    0.024105] [      T0]   node   0: [mem 0x0000000000001000-0x000000000009ffff]
+[    0.024108] [      T0]   node   0: [mem 0x0000000000100000-0x00000000f7f40fff]
+[    0.024110] [      T0]   node   0: [mem 0x00000000f7fc5000-0x00000000f7fd1fff]
+[    0.024112] [      T0]   node   0: [mem 0x00000000f7fff000-0x00000000f7ffffff]
+[    0.024113] [      T0]   node   0: [mem 0x0000000100000000-0x0000000207ffffff]
+[    0.024116] [      T0] Initmem setup node 0 [mem 0x0000000000001000-0x0000000207ffffff]
+[    0.024134] [      T0] On node 0, zone DMA: 1 pages in unavailable ranges
+[    0.024189] [      T0] On node 0, zone DMA: 96 pages in unavailable ranges
+[    0.032249] [      T0] On node 0, zone DMA32: 132 pages in unavailable ranges
+[    0.032254] [      T0] On node 0, zone DMA32: 45 pages in unavailable ranges
+[    0.041999] [      T0] setup_percpu: NR_CPUS:8192 nr_cpumask_bits:4 nr_cpu_ids:4 nr_node_ids:1
+[    0.042402] [      T0] percpu: Embedded 85 pages/cpu s225280 r8192 d114688 u524288
+[    0.042412] [      T0] pcpu-alloc: s225280 r8192 d114688 u524288 alloc=1*2097152
+[    0.042417] [      T0] pcpu-alloc: [0] 0 1 2 3 
+[    0.042451] [      T0] Hyper-V: PV spinlocks enabled
+[    0.042455] [      T0] PV qspinlock hash table entries: 256 (order: 0, 4096 bytes, linear)
+[    0.042459] [      T0] Kernel command line: BOOT_IMAGE=/boot/vmlinuz-7.0.0-43-generic root=UUID=7905d5c4-52de-4c37-b864-ce5d737b095e ro crashkernel=2G-4G:320M,4G-32G:512M,32G-64G:1024M,64G-128G:2048M,128G-:4096M
+[    0.042540] [      T0] printk: log buffer data + meta data: 262144 + 1114112 = 1376256 bytes
+[    0.043507] [      T0] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    0.043999] [      T0] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    0.044161] [      T0] software IO TLB: area num 4.
+[    0.060769] [      T0] Fallback order for Node 0: 0 
+[    0.060777] [      T0] Built 1 zonelists, mobility grouping on.  Total pages: 2096878
+[    0.060780] [      T0] Policy zone: Normal
+[    0.060796] [      T0] mem auto-init: stack:all(zero), heap alloc:on, heap free:off
+[    0.083336] [      T0] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.100736] [      T0] ftrace: allocating 64131 entries in 252 pages
+[    0.100743] [      T0] ftrace: allocated 252 pages with 6 groups
+[    0.101758] [      T0] Dynamic Preempt: lazy
+[    0.101884] [      T0] rcu: Preemptible hierarchical RCU implementation.
+[    0.101887] [      T0] rcu: 	RCU restricting CPUs from NR_CPUS=8192 to nr_cpu_ids=4.
+[    0.101890] [      T0] 	Trampoline variant of Tasks RCU enabled.
+[    0.101892] [      T0] 	Rude variant of Tasks RCU enabled.
+[    0.101892] [      T0] 	Tracing variant of Tasks RCU enabled.
+[    0.101894] [      T0] rcu: RCU calculated value of scheduler-enlistment delay is 100 jiffies.
+[    0.101895] [      T0] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    0.101910] [      T0] RCU Tasks: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.101914] [      T0] RCU Tasks Rude: Setting shift to 2 and lim to 1 rcu_task_cb_adjust=1 rcu_task_cpu_ids=4.
+[    0.112730] [      T0] Using NULL legacy PIC
+[    0.112734] [      T0] NR_IRQS: 524544, nr_irqs: 456, preallocated irqs: 0
+[    0.112839] [      T0] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    0.113709] [      T0] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 1911260446275000 ns
+[    0.113848] [      T0] Console: colour dummy device 80x25
+[    0.113854] [      T0] printk: legacy console [tty0] enabled
+[    0.114322] [      T0] ACPI: Core revision 20251212
+[    0.114538] [      T0] Failed to register legacy timer interrupt
+[    0.114544] [      T0] APIC: Switch to symmetric I/O mode setup
+[    0.119644] [      T0] x2apic enabled
+[    0.122710] [      T0] APIC: Switched APIC routing to: physical x2apic
+[    0.122727] [      T0] Hyper-V: Hypervisor Build 10.0.26100.9711-9-0
+[    0.122735] [      T0] Hyper-V: enabling crash_kexec_post_notifiers
+[    0.122852] [      T0] Hyper-V: Using IPI hypercalls
+[    0.122859] [      T0] APIC: send_IPI() replaced with hv_send_ipi()
+[    0.122871] [      T0] APIC: send_IPI_mask() replaced with hv_send_ipi_mask()
+[    0.122878] [      T0] APIC: send_IPI_mask_allbutself() replaced with hv_send_ipi_mask_allbutself()
+[    0.122885] [      T0] APIC: send_IPI_allbutself() replaced with hv_send_ipi_allbutself()
+[    0.122893] [      T0] APIC: send_IPI_all() replaced with hv_send_ipi_all()
+[    0.122899] [      T0] APIC: send_IPI_self() replaced with hv_send_ipi_self()
+[    0.123074] [      T0] clocksource: tsc-early: mask: 0xffffffffffffffff max_cycles: 0x25a39b8b044, max_idle_ns: 440795284072 ns
+[    0.123093] [      T0] Calibrating delay loop (skipped), value calculated using timer frequency.. 5222.42 BogoMIPS (lpj=2611212)
+[    0.123267] [      T0] x86/cpu: User Mode Instruction Prevention (UMIP) activated
+[    0.123313] [      T0] Last level iTLB entries: 4KB 0, 2MB 0, 4MB 0
+[    0.123319] [      T0] Last level dTLB entries: 4KB 0, 2MB 0, 4MB 0, 1GB 0
+[    0.123333] [      T0] mitigations: Enabled attack vectors: user_kernel, user_user, guest_host, guest_guest, SMT mitigations: auto
+[    0.123347] [      T0] Speculative Store Bypass: Mitigation: Speculative Store Bypass disabled via prctl
+[    0.123353] [      T0] Spectre V2 : Mitigation: Enhanced / Automatic IBRS
+[    0.123357] [      T0] RETBleed: Mitigation: Enhanced IBRS
+[    0.123361] [      T0] Register File Data Sampling: Mitigation: Clear Register File
+[    0.123365] [      T0] Spectre V1 : Mitigation: usercopy/swapgs barriers and __user pointer sanitization
+[    0.123371] [      T0] Spectre V2 : Spectre v2 / PBRSB-eIBRS: Retire a single CALL on VMEXIT
+[    0.123382] [      T0] Spectre V2 : Enabling IBPB for BPF
+[    0.123387] [      T0] Spectre V2 : mitigation: Enabling conditional Indirect Branch Prediction Barrier
+[    0.123426] [      T0] x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+[    0.123433] [      T0] x86/fpu: Supporting XSAVE feature 0x002: 'SSE registers'
+[    0.123437] [      T0] x86/fpu: Supporting XSAVE feature 0x004: 'AVX registers'
+[    0.123441] [      T0] x86/fpu: Supporting XSAVE feature 0x800: 'Control-flow User registers'
+[    0.123446] [      T0] x86/fpu: Supporting XSAVE feature 0x1000: 'Control-flow Kernel registers (KVM only)'
+[    0.123452] [      T0] x86/fpu: xstate_offset[2]:  576, xstate_sizes[2]:  256
+[    0.123457] [      T0] x86/fpu: xstate_offset[11]:  832, xstate_sizes[11]:   16
+[    0.123462] [      T0] x86/fpu: xstate_offset[12]:  848, xstate_sizes[12]:   24
+[    0.123466] [      T0] x86/fpu: Enabled xstate features 0x1807, context size is 872 bytes, using 'compacted' format.
+[    0.124087] [      T0] Freeing SMP alternatives memory: 56K
+[    0.124087] [      T0] pid_max: default: 32768 minimum: 301
+[    0.124087] [      T0] landlock: Up and running.
+[    0.124087] [      T0] Yama: becoming mindful.
+[    0.124087] [      T0] AppArmor: AppArmor initialized
+[    0.124087] [      T0] AppArmor: AppArmor secmark mediation reserved: ready to be enabled
+[    0.124087] [      T0] LSM support for eBPF active
+[    0.124087] [      T0] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.124087] [      T0] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    0.124087] [      T0] VFS: Finished mounting rootfs on nullfs
+[    0.124087] [      T1] smpboot: CPU0: 13th Gen Intel(R) Core(TM) i7-1355U (family: 0x6, model: 0xba, stepping: 0x3)
+[    0.124087] [      T1] Performance Events: unsupported CPU family 6 model 186 no PMU driver, software events only.
+[    0.124087] [      T1] signal: max sigframe size: 1776
+[    0.124087] [      T1] rcu: Hierarchical SRCU implementation.
+[    0.124087] [      T1] rcu: 	Max phase no-delay instances is 400.
+[    0.124087] [      T1] Timer migration: 1 hierarchy levels; 8 children per group; 1 crossnode level
+[    0.124215] [      T1] NMI watchdog: Perf NMI watchdog permanently disabled
+[    0.124320] [      T1] smp: Bringing up secondary CPUs ...
+[    0.124528] [      T1] smpboot: x86: Booting SMP configuration:
+[    0.124532] [      T1] .... node  #0, CPUs:      #2 #1 #3
+[    0.129354] [      T1] smp: Brought up 1 node, 4 CPUs
+[    0.129369] [      T1] smpboot: Total of 4 processors activated (20889.69 BogoMIPS)
+[    0.130342] [      T1] Memory: 5269448K/8387512K available (23912K kernel code, 4961K rwdata, 16720K rodata, 5316K init, 5824K bss, 3107848K reserved, 0K cma-reserved)
+[    0.131340] [      T1] devtmpfs: initialized
+[    0.131340] [      T1] x86/mm: Memory block size: 128MB
+[    0.133146] [      T1] ACPI: PM: Registering ACPI NVS region [mem 0xf7ffb000-0xf7ffefff] (16384 bytes)
+[    0.134129] [      T1] posixtimers hash table entries: 2048 (order: 3, 32768 bytes, linear)
+[    0.134159] [      T1] futex hash table entries: 1024 (65536 bytes on 1 NUMA nodes, total 64 KiB, linear).
+[    0.135128] [      T1] PM: RTC time: 05:55:47, date: 2026-11-14
+[    0.136528] [      T1] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    0.136844] [      T1] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    0.136990] [      T1] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    0.137173] [      T1] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    0.137196] [      T1] audit: initializing netlink subsys (disabled)
+[    0.138102] [     T44] audit: type=2000 audit(1794635747.015:1): state=initialized audit_enabled=0 res=1
+[    0.138381] [      T1] thermal_sys: Registered thermal governor 'fair_share'
+[    0.138386] [      T1] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.138394] [      T1] thermal_sys: Registered thermal governor 'step_wise'
+[    0.138397] [      T1] thermal_sys: Registered thermal governor 'user_space'
+[    0.138401] [      T1] thermal_sys: Registered thermal governor 'power_allocator'
+[    0.138452] [      T1] cpuidle: using governor ladder
+[    0.138452] [      T1] cpuidle: using governor menu
+[    0.140061] [      T1] efi: Freeing EFI boot services memory: 13680K
+[    0.140074] [      T1] acpiphp: ACPI Hot Plug PCI Controller Driver version: 0.5
+[    0.140320] [      T1] e820: register RAM buffer resource [mem 0xf6c40000-0xf7ffffff]
+[    0.140328] [      T1] e820: register RAM buffer resource [mem 0xf7f41000-0xf7ffffff]
+[    0.140332] [      T1] e820: register RAM buffer resource [mem 0xf7fd2000-0xf7ffffff]
+[    0.140575] [      T1] kprobes: kprobe jump-optimization is enabled. All kprobes are optimized if possible.
+[    0.141842] [      T1] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    0.141842] [      T1] HugeTLB: 16380 KiB vmemmap can be freed for a 1.00 GiB page
+[    0.141842] [      T1] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    0.141842] [      T1] HugeTLB: 28 KiB vmemmap can be freed for a 2.00 MiB page
+[    0.177734] [      T1] fbcon: Taking over console
+[    0.177789] [      T1] ACPI: Added _OSI(Module Device)
+[    0.177794] [      T1] ACPI: Added _OSI(Processor Device)
+[    0.177799] [      T1] ACPI: Added _OSI(Processor Aggregator Device)
+[    0.190901] [      T1] ACPI: 1 ACPI AML tables successfully acquired and loaded
+[    0.196212] [      T1] ACPI: \_SB_: platform _OSC: OS support mask [006e7eff]
+[    0.196212] [      T1] ACPI: Interpreter enabled
+[    0.196212] [      T1] ACPI: PM: (supports S0 S5)
+[    0.196212] [      T1] ACPI: Using IOAPIC for interrupt routing
+[    0.196274] [      T1] PCI: Using host bridge windows from ACPI; if necessary, use "pci=nocrs" and report a bug
+[    0.196281] [      T1] PCI: Ignoring E820 reservations for host bridge windows
+[    0.196717] [      T1] ACPI: Enabled 2 GPEs in block 00 to 0F
+[    0.201124] [      T1] iommu: Default domain type: Translated
+[    0.201138] [      T1] iommu: DMA domain TLB invalidation policy: lazy mode
+[    0.201324] [      T1] SCSI subsystem initialized
+[    0.202164] [      T1] libata version 3.00 loaded.
+[    0.202219] [      T1] ACPI: bus type USB registered
+[    0.202249] [      T1] usbcore: registered new interface driver usbfs
+[    0.202272] [      T1] usbcore: registered new interface driver hub
+[    0.202285] [      T1] usbcore: registered new device driver usb
+[    0.202327] [      T1] pps_core: LinuxPPS API ver. 1 registered
+[    0.202331] [      T1] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    0.202338] [      T1] PTP clock support registered
+[    0.203191] [      T1] EDAC MC: Ver: 3.0.0
+[    0.204098] [      T1] efivars: Registered efivars operations
+[    0.204358] [      T1] NetLabel: Initializing
+[    0.204367] [      T1] NetLabel:  domain hash size = 128
+[    0.204371] [      T1] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    0.204407] [      T1] NetLabel:  unlabeled traffic allowed by default
+[    0.205143] [      T1] mctp: management component transport protocol core
+[    0.205143] [      T1] NET: Registered PF_MCTP protocol family
+[    0.205143] [      T1] PCI: Using ACPI for IRQ routing
+[    0.205143] [      T1] PCI: System does not support PCI
+[    0.205224] [      T1] vgaarb: loaded
+[    0.211986] [      T1] clocksource: Switched to clocksource tsc-early
+[    0.212575] [      T1] VFS: Disk quotas dquot_6.6.0
+[    0.212597] [      T1] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    0.213267] [      T1] AppArmor: AppArmor Filesystem Enabled
+[    0.213308] [      T1] pnp: PnP ACPI init
+[    0.213725] [      T1] pnp: PnP ACPI: found 0 devices
+[    0.230253] [      T1] clocksource: acpi_pm: mask: 0xffffff max_cycles: 0xffffff, max_idle_ns: 2085701024 ns
+[    0.230415] [      T1] NET: Registered PF_INET protocol family
+[    0.230628] [      T1] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    0.260977] [      T1] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    0.261041] [      T1] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    0.261120] [      T1] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    0.261507] [      T1] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    0.261782] [      T1] TCP: Hash tables configured (established 65536 bind 65536)
+[    0.261916] [      T1] MPTCP token hash table entries: 8192 (order: 6, 196608 bytes, linear)
+[    0.261999] [      T1] UDP hash table entries: 4096 (order: 6, 262144 bytes, linear)
+[    0.262072] [      T1] UDP-Lite hash table entries: 4096 (order: 6, 262144 bytes, linear)
+[    0.262191] [      T1] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    0.262214] [      T1] NET: Registered PF_XDP protocol family
+[    0.262228] [      T1] PCI: CLS 0 bytes, default 64
+[    0.262297] [      T1] PCI-DMA: Using software bounce buffering for IO (SWIOTLB)
+[    0.262302] [      T1] software IO TLB: mapped [mem 0x00000000f2c30000-0x00000000f6c30000] (64MB)
+[    0.262370] [      T1] clocksource: tsc: mask: 0xffffffffffffffff max_cycles: 0x25a39b8b044, max_idle_ns: 440795284072 ns
+[    0.262638] [      T1] clocksource: Switched to clocksource tsc
+[    0.262726] [     T12] Trying to unpack rootfs image as initramfs...
+[    0.266625] [      T1] Initialise system trusted keyrings
+[    0.266652] [      T1] Key type blacklist registered
+[    0.267199] [      T1] workingset: timestamp_bits=36 max_order=21 bucket_order=0
+[    0.267962] [      T1] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.268733] [      T1] fuse: init (API version 7.45)
+[    0.270287] [      T1] integrity: Platform Keyring initialized
+[    0.270300] [      T1] integrity: Machine keyring initialized
+[    0.287744] [      T1] Key type asymmetric registered
+[    0.287758] [      T1] Asymmetric key parser 'x509' registered
+[    0.287823] [      T1] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    0.288874] [      T1] io scheduler mq-deadline registered
+[    0.290635] [      T1] ledtrig-cpu: registered to indicate activity on CPUs
+[    0.291278] [      T1] ACPI: AC: AC Adapter [AC1] (on-line)
+[    0.300638] [     T47] ACPI: battery: Slot [BAT1] (battery present)
+[    0.301835] [      T1] Serial: 8250/16550 driver, 32 ports, IRQ sharing enabled
+[    0.308598] [      T1] Linux agpgart interface v0.103
+[    0.312283] [      T1] loop: module loaded
+[    0.313079] [      T1] ACPI: bus type drm_connector registered
+[    0.313368] [      T1] tun: Universal TUN/TAP device driver, 1.6
+[    0.313778] [      T1] PPP generic driver version 2.4.2
+[    0.314085] [      T1] i8042: PNP: No PS/2 controller found.
+[    0.314358] [      T1] mousedev: PS/2 mouse device common for all mice
+[    0.322060] [      T1] rtc_cmos PNP0B00:00: registered as rtc0
+[    0.322717] [      T1] rtc_cmos PNP0B00:00: setting system clock to 2026-11-14T05:55:47 UTC (1794635747)
+[    0.323046] [      T1] rtc_cmos PNP0B00:00: alarms up to one month, 114 bytes nvram
+[    0.323076] [      T1] i2c_dev: i2c /dev entries driver
+[    0.323122] [      T1] device-mapper: core: CONFIG_IMA_DISABLE_HTABLE is disabled. Duplicate IMA measurements will not be recorded in the IMA log.
+[    0.323166] [      T1] device-mapper: uevent: version 1.0.3
+[    0.323345] [      T1] device-mapper: ioctl: 4.50.0-ioctl (2025-04-28) initialised: dm-devel@lists.linux.dev
+[    0.323356] [      T1] intel_pstate: CPU model not supported
+[    0.323905] [      T1] simple-framebuffer simple-framebuffer.0: [drm] Registered 1 planes with drm panic
+[    0.324044] [      T1] [drm] Initialized simpledrm 1.0.0 for simple-framebuffer.0 on minor 0
+[    0.328007] [      T1] Console: switching to colour frame buffer device 128x48
+[    0.329130] [      T1] simple-framebuffer simple-framebuffer.0: [drm] fb0: simpledrmdrmfb frame buffer device
+[    0.329304] [      T1] drop_monitor: Initializing network drop monitor service
+[    0.329917] [      T1] NET: Registered PF_INET6 protocol family
+[    0.330936] [      T1] Segment Routing with IPv6
+[    0.330965] [      T1] In-situ OAM (IOAM) with IPv6
+[    0.331013] [      T1] NET: Registered PF_PACKET protocol family
+[    0.331433] [      T1] Key type dns_resolver registered
+[    0.332926] [      T1] IPI shorthand broadcast: enabled
+[    0.336080] [      T1] sched_clock: Marking stable (326010259, 9379818)->(401549085, -66159008)
+[    0.337505] [      T1] registered taskstats version 1
+[    0.340267] [      T1] Loading compiled-in X.509 certificates
+[    0.341688] [      T1] Loaded X.509 cert 'Build time autogenerated kernel key: e4e7bb514691cdce8ce01982c3f9a58d01bc4035'
+[    0.342705] [      T1] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing 2025 Kmod: d541cef61dc7e793b7eb7e899970a2eef0b5dc8c'
+[    0.343607] [      T1] Loaded X.509 cert 'Canonical Ltd. Live Patch Signing: 14df34d1a87cf37625abec039ef2bf521249b969'
+[    0.344376] [      T1] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing 2025 Kmod: 4627603d2357a2a3f81006370894c221175893e9'
+[    0.345229] [      T1] Loaded X.509 cert 'Canonical Ltd. Kernel Module Signing: 88f752e560a1e0737e31163a466ad7b70a850c19'
+[    0.345253] [      T1] blacklist: Loading compiled-in revocation X.509 certificates
+[    0.345306] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing: 61482aa2830d0ab2ad5af10b7250da9033ddcef0'
+[    0.345341] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2017): 242ade75ac4a15e50d50c84b0d45ff3eae707a03'
+[    0.345376] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (ESM 2018): 365188c1d374d6b07c3c8f240f8ef722433d6a8b'
+[    0.345508] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2019): c0746fd6c5da3ae827864651ad66ae47fe24b3e8'
+[    0.345551] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v1): a8d54bbb3825cfb94fa13c9f8a594a195c107b8d'
+[    0.345587] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v2): 4cf046892d6fd3c9a5b03f98d845f90851dc6a8c'
+[    0.346010] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (2021 v3): 100437bb6de6e469b581e61cd66bce3ef4ed53af'
+[    0.347011] [      T1] Loaded X.509 cert 'Canonical Ltd. Secure Boot Signing (Ubuntu Core 2019): c1d57b8f6b743f23ee41f4f7ee292f06eecadfb9'
+[    0.355201] [      T1] Demotion targets for Node 0: null
+[    0.356924] [      T1] Key type .fscrypt registered
+[    0.357354] [      T1] Key type fscrypt-provisioning registered
+[    0.358664] [      T1] Key type big_key registered
+[    0.558264] [     T12] Freeing initrd memory: 64148K
+[    0.597147] [      T1] Key type encrypted registered
+[    0.598500] [      T1] AppArmor: AppArmor sha256 policy hashing enabled
+[    0.598890] [      T1] ima: No TPM chip found, activating TPM-bypass!
+[    0.599291] [      T1] Loading compiled-in module X.509 certificates
+[    0.600669] [      T1] Loaded X.509 cert 'Build time autogenerated kernel key: e4e7bb514691cdce8ce01982c3f9a58d01bc4035'
+[    0.601028] [      T1] ima: Allocated hash algorithm: sha256
+[    0.601421] [      T1] ima: No architecture policies found
+[    0.601837] [      T1] evm: Initialising EVM extended attributes:
+[    0.602170] [      T1] evm: security.selinux
+[    0.603058] [      T1] evm: security.SMACK64
+[    0.603920] [      T1] evm: security.SMACK64EXEC
+[    0.604247] [      T1] evm: security.SMACK64TRANSMUTE
+[    0.605152] [      T1] evm: security.SMACK64MMAP
+[    0.606017] [      T1] evm: security.apparmor
+[    0.606377] [      T1] evm: security.ima
+[    0.607285] [      T1] evm: security.capability
+[    0.608095] [      T1] evm: HMAC attrs: 0x1
+[    0.609921] [      T1] integrity: Loading X.509 certificate: UEFI:db
+[    0.610298] [      T1] integrity: Loaded X.509 cert 'Microsoft Windows Production PCA 2011: a92902398e16c49778cd90f99e4f9ae17c55af53'
+[    0.610752] [      T1] integrity: Loading X.509 certificate: UEFI:db
+[    0.611074] [      T1] integrity: Loaded X.509 cert 'Microsoft Corporation: Windows UEFI CA 2023: aefc5fbbbe055d8f8daa585473499417ab5a5272'
+[    0.615686] [      T1] PM:   Magic number: 2:502:921
+[    0.617282] [      T1] RAS: Correctable Errors collector initialized.
+[    0.618563] [      T1] clk: Disabling unused clocks
+[    0.618933] [      T1] PM: genpd: Disabling unused power domains
+[    0.635957] [      T1] Freeing unused decrypted memory: 2028K
+[    0.638418] [      T1] Freeing unused kernel image (initmem) memory: 5316K
+[    0.638801] [      T1] Write protecting the kernel read-only data: 43008k
+[    0.640386] [      T1] Freeing unused kernel image (text/rodata gap) memory: 660K
+[    0.641964] [      T1] Freeing unused kernel image (rodata/data gap) memory: 1712K
+[    0.663493] [      T1] x86/mm: Checked W+X mappings: passed, no W+X pages found.
+[    0.663866] [      T1] Run /init as init process
+[    0.664211] [      T1]   with arguments:
+[    0.664214] [      T1]     /init
+[    0.664216] [      T1]   with environment:
+[    0.664218] [      T1]     HOME=/
+[    0.664219] [      T1]     TERM=linux
+[    0.676590] [      T1] systemd[1]: Inserted module 'autofs4'
+[    0.772116] [      T1] systemd[1]: Successfully made /usr/ read-only.
+[    0.774227] [      T1] systemd[1]: systemd 259.9-0ubuntu0.1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[    0.775966] [      T1] systemd[1]: Detected virtualization microsoft.
+[    0.776304] [      T1] systemd[1]: Detected architecture x86-64.
+[    0.776766] [      T1] systemd[1]: Running in initrd.
+[    0.778037] [      T1] systemd[1]: Hostname set to <kicba-ubuntu26>.
+[    0.906347] [      T1] systemd[1]: bpf-restrict-fs: LSM BPF program attached
+[    1.023943] [      T1] systemd[1]: Queued start job for default target initrd.target.
+[    1.033632] [      T1] systemd[1]: Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+[    1.034620] [      T1] systemd[1]: Expecting device dev-disk-by\x2duuid-274E\x2dADF0.device - /dev/disk/by-uuid/274E-ADF0...
+[    1.035488] [      T1] systemd[1]: Expecting device dev-disk-by\x2duuid-7905d5c4\x2d52de\x2d4c37\x2db864\x2dce5d737b095e.device - /dev/disk/by-uuid/7905d5c4-52de-4c37-b864-ce5d737b095e...
+[    1.037271] [      T1] systemd[1]: Reached target initrd-usr-fs.target - Initrd /usr File System.
+[    1.038991] [      T1] systemd[1]: Reached target paths.target - Path Units.
+[    1.039972] [      T1] systemd[1]: Reached target slices.target - Slice Units.
+[    1.040952] [      T1] systemd[1]: Reached target swap.target - Swaps.
+[    1.041868] [      T1] systemd[1]: Reached target timers.target - Timer Units.
+[    1.042943] [      T1] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[    1.044079] [      T1] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[    1.045351] [      T1] systemd[1]: Listening on systemd-networkd.socket - Network Management Netlink Socket.
+[    1.046825] [      T1] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    1.047989] [      T1] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[    1.048988] [      T1] systemd[1]: Reached target sockets.target - Socket Units.
+[    1.052938] [      T1] systemd[1]: Starting dracut-cmdline-ask.service - dracut ask for additional cmdline parameters...
+[    1.056122] [      T1] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[    1.058552] [      T1] systemd[1]: systemd-battery-check.service - Early Battery Level Check skipped, unmet condition check ConditionVirtualization=no
+[    1.073609] [      T1] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    1.079125] [      T1] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    1.083347] [      T1] systemd[1]: Starting systemd-network-generator.service - Generate Network Units from Kernel Command Line...
+[    1.087136] [      T1] systemd[1]: systemd-pcrphase-initrd.service - TPM PCR Barrier (initrd) skipped, unmet condition check ConditionSecurity=measured-uki
+[    1.090876] [      T1] systemd[1]: Finished dracut-cmdline-ask.service - dracut ask for additional cmdline parameters.
+[    1.096064] [      T1] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[    1.098574] [      T1] systemd[1]: Finished systemd-network-generator.service - Generate Network Units from Kernel Command Line.
+[    1.102037] [      T1] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[    1.105119] [      T1] systemd[1]: Reached target network-pre.target - Preparation for Network.
+[    1.107953] [      T1] systemd[1]: Listening on systemd-networkd-resolve-hook.socket - Network Management Resolve Hook Socket.
+[    1.109109] [    T130] systemd-journald[130]: Collecting audit messages is disabled.
+[    1.112002] [      T1] systemd[1]: Starting dracut-cmdline.service - dracut cmdline hook...
+[    1.115979] [      T1] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[    1.126061] [      T1] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[    1.130107] [      T1] systemd[1]: Started systemd-journald.service - Journal Service.
+[    1.733277] [    T270] hv_vmbus: hv_mmio=[mem 0xf8000000-0xfed3ffff],[mem 0xfe0000000-0xfffffffff] fb=[mem 0xf8000000-0xfbffffff]
+[    1.734787] [    T270] hv_vmbus: Vmbus version:6.0
+[    1.758355] [    T286] hv_vmbus: registering driver hyperv_keyboard
+[    1.767116] [    T278] hid: raw HID events driver (C) Jiri Kosina
+[    1.770286] [    T278] hv_vmbus: registering driver hid_hyperv
+[    1.774445] [     T58] input: AT Translated Set 2 keyboard as /devices/LNXSYSTM:00/LNXSYBUS:00/ACPI0004:00/MSFT1000:00/d34b2567-b9b6-42b9-8778-0a4ec0b955bf/serio0/input/input0
+[    1.774610] [    T257] hv_vmbus: registering driver hv_storvsc
+[    1.776702] [     T12] input: Microsoft Vmbus HID-compliant Mouse as /devices/0006:045E:0621.0001/input/input1
+[    1.785890] [     T12] hid-hyperv 0006:045E:0621.0001: input: VIRTUAL HID v0.01 Mouse [Microsoft Vmbus HID-compliant Mouse] on 
+[    1.788185] [     T47] scsi host0: storvsc_host_t
+[    1.790528] [    T270] hv_vmbus: registering driver hv_netvsc
+[    1.791547] [     T47] scsi 0:0:0:0: Direct-Access     Msft     Virtual Disk     1.0  PQ: 0 ANSI: 5
+[    1.794704] [     T47] scsi 0:0:0:1: CD-ROM            Msft     Virtual DVD-ROM  1.0  PQ: 0 ANSI: 0
+[    1.794931] [     T47] scsi 0:0:0:2: CD-ROM            Msft     Virtual DVD-ROM  1.0  PQ: 0 ANSI: 0
+[    1.802439] [     T47] sd 0:0:0:0: Attached scsi generic sg0 type 0
+[    1.802648] [     T80] sd 0:0:0:0: [sda] 167772160 512-byte logical blocks: (85.9 GB/80.0 GiB)
+[    1.802656] [     T80] sd 0:0:0:0: [sda] 4096-byte physical blocks
+[    1.802811] [     T80] sd 0:0:0:0: [sda] Write Protect is off
+[    1.802819] [     T80] sd 0:0:0:0: [sda] Mode Sense: 0f 00 00 00
+[    1.803154] [     T80] sd 0:0:0:0: [sda] Write cache: enabled, read cache: enabled, doesn't support DPO or FUA
+[    1.803286] [     T47] sr 0:0:0:1: [sr0] scsi-1 drive
+[    1.803686] [     T47] cdrom: Uniform CD-ROM driver Revision: 3.20
+[    1.805990] [     T47] sr 0:0:0:1: Attached scsi CD-ROM sr0
+[    1.806271] [     T47] sr 0:0:0:1: Attached scsi generic sg1 type 5
+[    1.807030] [     T47] sr 0:0:0:2: [sr1] scsi-1 drive
+[    1.809948] [     T47] sr 0:0:0:2: Attached scsi CD-ROM sr1
+[    1.810187] [     T47] sr 0:0:0:2: Attached scsi generic sg2 type 5
+[    1.816835] [     T80]  sda: sda1 sda2
+[    1.817365] [     T80] sd 0:0:0:0: [sda] Attached SCSI disk
+[    2.225634] [    T375] EXT4-fs (sda2): mounted filesystem 7905d5c4-52de-4c37-b864-ce5d737b095e ro with ordered data mode. Quota mode: none.
+[    2.555869] [    T130] systemd-journald[130]: Received SIGTERM from PID 1 (systemd).
+[    2.647436] [      T1] NET: Registered PF_VSOCK protocol family
+[    2.651147] [      T1] hv_vmbus: registering driver hv_sock
+[    2.656170] [      T1] systemd[1]: systemd 259.9-0ubuntu0.1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[    2.656180] [      T1] systemd[1]: Detected virtualization microsoft.
+[    2.656199] [      T1] systemd[1]: Detected architecture x86-64.
+[    2.808538] [      T1] systemd[1]: bpf-restrict-fs: LSM BPF program attached
+[    3.168790] [      T1] systemd[1]: /usr/lib/systemd/system/xfs_scrub_all.service:26: Support for option CPUAccounting= has been removed and it is ignored
+[    3.170063] [      T1] systemd[1]: /usr/lib/systemd/system/system-xfs_scrub.slice:15: Support for option CPUAccounting= has been removed and it is ignored
+[    3.337896] [      T1] systemd[1]: initrd-switch-root.service: Deactivated successfully.
+[    3.338171] [      T1] systemd[1]: Stopped initrd-switch-root.service - Switch Root.
+[    3.341958] [      T1] systemd[1]: systemd-journald.service: Scheduled restart job, restart counter is at 1.
+[    3.343003] [      T1] systemd[1]: Created slice system-systemd\x2dfsck.slice - Slice /system/systemd-fsck.
+[    3.440271] [      T1] systemd[1]: Created slice system-xfs_scrub.slice - xfs_scrub background service slice.
+[    3.441703] [      T1] systemd[1]: Created slice user.slice - User and Session Slice.
+[    3.442315] [      T1] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[    3.443253] [      T1] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[    3.444455] [      T1] systemd[1]: Expecting device dev-disk-by\x2duuid-274E\x2dADF0.device - /dev/disk/by-uuid/274E-ADF0...
+[    3.445607] [      T1] systemd[1]: Reached target imports.target - Image Downloads.
+[    3.446532] [      T1] systemd[1]: Stopped target initrd-switch-root.target - Switch Root.
+[    3.447029] [      T1] systemd[1]: Stopped target initrd-fs.target - Initrd File Systems.
+[    3.447821] [      T1] systemd[1]: Stopped target initrd-root-fs.target - Initrd Root File System.
+[    3.448302] [      T1] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[    3.449001] [      T1] systemd[1]: Reached target slices.target - Slice Units.
+[    3.449522] [      T1] systemd[1]: Reached target snapd.mounts-pre.target - Mounting snaps.
+[    3.449975] [      T1] systemd[1]: Reached target time-set.target - System Time Set.
+[    3.450623] [      T1] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[    3.451372] [      T1] systemd[1]: Listening on dm-event.socket - Device-mapper event daemon FIFOs.
+[    3.453051] [      T1] systemd[1]: Listening on lvm2-lvmpolld.socket - LVM2 poll daemon socket.
+[    3.453976] [      T1] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[    3.456903] [      T1] systemd[1]: Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[    3.459882] [      T1] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[    3.463073] [      T1] systemd[1]: Listening on systemd-factory-reset.socket - Factory Reset Management.
+[    3.467791] [      T1] systemd[1]: Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[    3.469397] [      T1] systemd[1]: Listening on systemd-networkd-varlink.socket - Network Management Varlink Socket.
+[    3.470646] [      T1] systemd[1]: Listening on systemd-networkd.socket - Network Management Netlink Socket.
+[    3.471663] [      T1] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[    3.471700] [      T1] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[    3.471847] [      T1] systemd[1]: Listening on systemd-resolved-monitor.socket - Resolve Monitor Varlink Socket.
+[    3.472348] [      T1] systemd[1]: Listening on systemd-resolved-varlink.socket - Resolve Service Varlink Socket.
+[    3.472956] [      T1] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[    3.473875] [      T1] systemd[1]: Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[    3.476795] [      T1] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+[    3.483259] [      T1] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[    3.489542] [      T1] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[    3.495278] [      T1] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[    3.504475] [      T1] systemd[1]: Starting systemd-journald.service - Journal Service...
+[    3.512553] [      T1] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+[    3.517478] [      T1] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[    3.523162] [      T1] systemd[1]: Starting lvm2-monitor.service - Monitoring of LVM2 mirrors, snapshots etc. using dmeventd or progress polling...
+[    3.526721] [      T1] systemd[1]: modprobe@configfs.service - Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[    3.534729] [      T1] systemd[1]: Starting modprobe@dm_multipath.service - Load Kernel Module dm_multipath...
+[    3.539529] [      T1] systemd[1]: modprobe@drm.service - Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[    3.544690] [      T1] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[    3.546608] [      T1] systemd[1]: modprobe@fuse.service - Load Kernel Module fuse skipped, unmet condition check ConditionKernelModuleLoaded=!fuse
+[    3.550018] [    T484] systemd-journald[484]: Collecting audit messages is disabled.
+[    3.550833] [      T1] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[    3.552933] [      T1] systemd[1]: netplan-ovs-cleanup.service - OpenVSwitch configuration for cleanup skipped, unmet condition check ConditionFileIsExecutable=/usr/bin/ovs-vsctl
+[    3.553336] [      T1] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[    3.561739] [      T1] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+[    3.562577] [      T1] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    3.564798] [    T497] pstore: Using crash dump compression: deflate
+[    3.567006] [      T1] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[    3.568769] [      T1] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[    3.568833] [      T1] systemd[1]: systemd-pcrnvdone.service - TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionPathExists=/etc/initrd-release
+[    3.568884] [      T1] systemd[1]: systemd-pcrproduct.service - TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[    3.573892] [      T1] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[    3.582045] [      T1] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[    3.590171] [      T1] systemd[1]: Started systemd-journald.service - Journal Service.
+[    3.597378] [    T497] pstore: Registered efi_pstore as persistent store backend
+[    3.620550] [    T508] EXT4-fs (sda2): re-mounted 7905d5c4-52de-4c37-b864-ce5d737b095e r/w.
+[    3.664401] [    T525] Adding 4194300k swap on /swap.img.  Priority:-1 extents:10 across:4816892k 
+[    3.680736] [    T484] systemd-journald[484]: Received client request to flush runtime journal.
+[    4.373680] [    T602] loop0: detected capacity change from 0 to 136816
+[    4.374064] [    T604] loop1: detected capacity change from 0 to 3088
+[    4.394987] [    T605] loop2: detected capacity change from 0 to 102608
+[    4.692293] [    T580] hv_utils: Registering HyperV Utility Driver
+[    4.692308] [    T580] hv_vmbus: registering driver hv_utils
+[    4.693554] [      C0] hv_utils: Heartbeat IC version 3.0
+[    4.698627] [      C0] hv_utils: Shutdown IC version 3.2
+[    4.700626] [      C0] hv_utils: VSS IC version 5.0
+[    4.701273] [      C0] hv_utils: TimeSync IC version 4.0
+[    4.717620] [    T569] hv_vmbus: registering driver hv_balloon
+[    4.721245] [     T47] hv_balloon: Using Dynamic Memory protocol version 2.0
+[    4.808145] [    T571] hv_vmbus: registering driver hyperv_drm
+[    4.809647] [     T56] hyperv_drm 5620e0c7-8062-4dce-aeb7-520c7ef76171: [drm] Synthvid Version major 3, minor 5
+[    4.887593] [     T56] Console: switching to colour dummy device 80x25
+[    4.998946] [    T572] RAPL PMU: API unit is 2^-32 Joules, 0 fixed counters, 10737418240 ms ovfl timer
+[    5.037315] [     T56] hyperv_drm 5620e0c7-8062-4dce-aeb7-520c7ef76171: [drm] Registered 1 planes with drm panic
+[    5.040583] [     T56] [drm] Initialized hyperv_drm 1.0.0 for 5620e0c7-8062-4dce-aeb7-520c7ef76171 on minor 1
+[    5.113475] [     T56] Console: switching to colour frame buffer device 128x48
+[    5.131031] [     T56] hyperv_drm 5620e0c7-8062-4dce-aeb7-520c7ef76171: [drm] fb0: hyperv_drmdrmfb frame buffer device
+[    5.317681] [    T582] intel_rapl_msr: PL4 support detected.
+[    5.519277] [     T44] audit: type=1400 audit(1794635755.719:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="1password" pid=808 comm="apparmor_parser"
+[    5.521274] [     T44] audit: type=1400 audit(1794635755.722:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name=4D6F6E676F444220436F6D70617373 pid=810 comm="apparmor_parser"
+[    5.521994] [     T44] audit: type=1400 audit(1794635755.723:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="QtWebEngineProcess" pid=811 comm="apparmor_parser"
+[    5.524920] [     T44] audit: type=1400 audit(1794635755.726:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="Discord" pid=809 comm="apparmor_parser"
+[    5.548841] [     T44] audit: type=1400 audit(1794635755.749:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="balena-etcher" pid=836 comm="apparmor_parser"
+[    5.670014] [     T44] audit: type=1400 audit(1794635755.871:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="bfdd" pid=842 comm="apparmor_parser"
+[    5.701145] [     T44] audit: type=1400 audit(1794635755.902:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="babeld" pid=827 comm="apparmor_parser"
+[    5.711773] [     T44] audit: type=1400 audit(1794635755.913:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="alsamixer" pid=826 comm="apparmor_parser"
+[    5.726604] [     T44] audit: type=1400 audit(1794635755.928:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="brave" pid=869 comm="apparmor_parser"
+[    5.734154] [     T44] audit: type=1400 audit(1794635755.935:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="buildah" pid=874 comm="apparmor_parser"
+[    6.097548] [    T930] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    6.101677] [    T930] Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    6.101992] [    T930] Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[   19.958874] [     T44] kauditd_printk_skb: 176 callbacks suppressed
+[   19.958884] [     T44] audit: type=1400 audit(1794635770.161:188): apparmor="DENIED" operation="sendmsg" class="file" profile="systemd-detect-virt" name="/att/systemd-detect-virt/run/systemd/journal/socket" pid=5276 comm="systemd-detect-" requested_mask="w" denied_mask="w" fsuid=0 ouid=0
+[   19.959207] [     T44] audit: type=1400 audit(1794635770.161:189): apparmor="DENIED" operation="capable" class="cap" profile="systemd-detect-virt" pid=5276 comm="systemd-detect-" capability=38  capname="perfmon"
+[   19.961639] [     T44] audit: type=1400 audit(1794635770.163:190): apparmor="DENIED" operation="sendmsg" class="file" profile="systemd-detect-virt" name="/att/systemd-detect-virt/run/systemd/notify" pid=5276 comm="systemd-detect-" requested_mask="w" denied_mask="w" fsuid=0 ouid=0
+[   20.115214] [     T44] audit: type=1400 audit(1794635770.316:191): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="rsyslogd" pid=5250 comm="apparmor_parser"
+[   20.348499] [   T5354] loop3: detected capacity change from 0 to 8
+[   20.466325] [   T5368] NET: Registered PF_QIPCRTR protocol family
+[   20.739835] [     T44] audit: type=1400 audit(1794635770.941:192): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="/usr/lib/snapd/snap-confine" pid=5383 comm="apparmor_parser"
+[   21.700823] [     T44] audit: type=1400 audit(1794635771.902:193): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/27710/usr/lib/snapd/snap-confine" pid=5504 comm="apparmor_parser"
+[   21.734303] [     T44] audit: type=1400 audit(1794635771.935:194): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.hwctl" pid=5506 comm="apparmor_parser"
+[   21.939119] [     T44] audit: type=1400 audit(1794635772.140:195): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.hwctl.hook.configure" pid=5507 comm="apparmor_parser"
+[   21.967407] [     T44] audit: type=1400 audit(1794635772.168:196): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.hwctl.hwctl" pid=5508 comm="apparmor_parser"
+[   22.295499] [     T44] audit: type=1400 audit(1794635772.496:197): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.hwctl.hwctl-daemon" pid=5509 comm="apparmor_parser"
+[   27.261521] [      C0] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[   27.378217] [      C2] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+[   53.272345] [      C0] hv_balloon: Max. dynamic memory size: 8192 MB
+[  112.907804] [     T44] audit: type=1400 audit(1794635862.770:198): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=5720 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  112.907818] [     T44] audit: type=1400 audit(1794635862.770:199): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=5720 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  112.907822] [     T44] audit: type=1400 audit(1794635862.770:200): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=5720 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  112.907824] [     T44] audit: type=1400 audit(1794635862.770:201): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=5720 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  234.262536] [     T44] audit: type=1400 audit(1794635984.122:202): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6577 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  234.262553] [     T44] audit: type=1400 audit(1794635984.122:203): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6577 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  234.262734] [     T44] audit: type=1400 audit(1794635984.122:204): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6577 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  234.262744] [     T44] audit: type=1400 audit(1794635984.122:205): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6577 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  234.262908] [     T44] audit: type=1400 audit(1794635984.122:206): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6577 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  234.262916] [     T44] audit: type=1400 audit(1794635984.122:207): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6577 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  235.051102] [      C2] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[  237.402462] [     T44] audit: type=1400 audit(1794635987.262:208): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6770 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  237.402478] [     T44] audit: type=1400 audit(1794635987.262:209): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6770 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  237.402694] [     T44] audit: type=1400 audit(1794635987.262:210): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6770 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  237.402697] [     T44] audit: type=1400 audit(1794635987.262:211): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6770 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  322.604229] [     T44] kauditd_printk_skb: 4 callbacks suppressed
+[  322.604236] [     T44] audit: type=1400 audit(1794636072.467:216): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6883 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  322.604246] [     T44] audit: type=1400 audit(1794636072.467:217): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6883 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  322.604469] [     T44] audit: type=1400 audit(1794636072.467:218): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=6883 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  322.604480] [     T44] audit: type=1400 audit(1794636072.467:219): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=6883 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  502.820583] [     T44] audit: type=1400 audit(1794636252.687:220): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=7101 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  502.820597] [     T44] audit: type=1400 audit(1794636252.687:221): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=7101 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  502.820907] [     T44] audit: type=1400 audit(1794636252.688:222): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=7101 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  502.820913] [     T44] audit: type=1400 audit(1794636252.688:223): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=7101 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  597.931989] [      C0] workqueue: acpi_os_execute_deferred hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[  688.255272] [      C0] workqueue: acpi_os_execute_deferred hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+[  778.497266] [  T11695] NET: Registered PF_ALG protocol family
+[  803.360862] [     T44] audit: type=1400 audit(1794636553.226:224): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=16335 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.360877] [     T44] audit: type=1400 audit(1794636553.226:225): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=16335 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.361076] [     T44] audit: type=1400 audit(1794636553.226:226): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=16335 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.361080] [     T44] audit: type=1400 audit(1794636553.226:227): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=16335 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.638743] [     T44] audit: type=1400 audit(1794636553.503:228): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=16340 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.638757] [     T44] audit: type=1400 audit(1794636553.503:229): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=16340 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.638976] [     T44] audit: type=1400 audit(1794636553.504:230): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=16340 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  803.638987] [     T44] audit: type=1400 audit(1794636553.504:231): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=16340 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  836.001061] [     T44] audit: type=1400 audit(1794636585.866:232): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=16966 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  836.001074] [     T44] audit: type=1400 audit(1794636585.866:233): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=16966 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  836.001284] [     T44] audit: type=1400 audit(1794636585.866:234): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=16966 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  836.001288] [     T44] audit: type=1400 audit(1794636585.866:235): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=16966 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  911.418380] [     T44] audit: type=1400 audit(1794636661.283:236): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=17477 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  911.418394] [     T44] audit: type=1400 audit(1794636661.283:237): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=17477 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  911.418561] [     T44] audit: type=1400 audit(1794636661.283:238): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=17477 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  911.418564] [     T44] audit: type=1400 audit(1794636661.283:239): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=17477 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[  932.774623] [      C0] workqueue: acpi_os_execute_deferred hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+[  967.820398] [      C0] hv_utils: TimeSync IC version 4.0
+[  974.307620] [      C0] hv_storvsc 7ccf1806-fe4f-4167-a851-329c2c6d0664: tag#87 cmd 0x2a status: scsi 0x2 srb 0x84 host 0xc0000001
+[  977.980330] [     T91] ------------[ cut here ]------------
+[  977.980340] [     T91] [CRTC:36:crtc-0] vblank wait timed out
+[  977.980344] [     T91] WARNING: drivers/gpu/drm/drm_atomic_helper.c:1921 at drm_atomic_helper_wait_for_vblanks.part.0+0x240/0x260, CPU#2: kworker/2:2/91
+[  977.980359] [     T91] Modules linked in: algif_hash af_alg qrtr cpuid nfnetlink cfg80211 binfmt_misc nls_iso8859_1 intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec rapl vmgenid hyperv_drm hv_balloon hv_utils joydev mac_hid sch_fq_codel dm_multipath efi_pstore hv_sock vsock serio_raw hid_generic hv_netvsc hv_storvsc hid_hyperv hid scsi_transport_fc hyperv_keyboard hv_vmbus ghash_clmulni_intel msr dmi_sysfs autofs4 aesni_intel
+[  977.980414] [     T91] CPU: 2 UID: 0 PID: 91 Comm: kworker/2:2 Kdump: loaded Not tainted 7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+[  977.980419] [     T91] Hardware name: Microsoft Corporation Virtual Machine/Virtual Machine, BIOS Hyper-V UEFI Release v4.1 09/25/2025
+[  977.980423] [     T91] Workqueue: events drm_fb_helper_damage_work
+[  977.980430] [     T91] RIP: 0010:drm_atomic_helper_wait_for_vblanks.part.0+0x247/0x260
+[  977.980437] [     T91] Code: ff 84 c0 74 86 48 8d 75 a8 4c 89 ff e8 22 49 33 ff 8b 45 98 85 c0 0f 85 f7 fe ff ff 48 8d 3d d0 21 d4 01 48 8b 53 20 8b 73 60 <67> 48 0f b9 3a e9 df fe ff ff e8 1a af 57 00 66 2e 0f 1f 84 00 00
+[  977.980440] [     T91] RSP: 0018:ffffd4e7c02ebb38 EFLAGS: 00010246
+[  977.980444] [     T91] RAX: 0000000000000000 RBX: ffff8ebb05570bb0 RCX: 0000000000000000
+[  977.980447] [     T91] RDX: ffff8ebb00322758 RSI: 0000000000000024 RDI: ffffffffb13039f0
+[  977.980449] [     T91] RBP: ffffd4e7c02ebba8 R08: 0000000000000000 R09: 0000000000000000
+[  977.980452] [     T91] R10: 0000000000000000 R11: 0000000000000000 R12: 0000000000000000
+[  977.980453] [     T91] R13: 0000000000000000 R14: ffff8ebb02222700 R15: ffff8ebb00bd0430
+[  977.980456] [     T91] FS:  0000000000000000(0000) GS:ffff8ebc4e4f7000(0000) knlGS:0000000000000000
+[  977.980459] [     T91] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[  977.980462] [     T91] CR2: 00005e52163f7e90 CR3: 000000010755a006 CR4: 0000000000b70ef0
+[  977.980468] [     T91] Call Trace:
+[  977.980471] [     T91]  <TASK>
+[  977.980477] [     T91]  ? __pfx_autoremove_wake_function+0x10/0x10
+[  977.980484] [     T91]  drm_atomic_helper_commit_tail+0xa9/0xd0
+[  977.980488] [     T91]  commit_tail+0x116/0x1b0
+[  977.980491] [     T91]  ? drm_atomic_helper_swap_state+0x34b/0x410
+[  977.980497] [     T91]  drm_atomic_helper_commit+0x153/0x190
+[  977.980500] [     T91]  drm_atomic_commit+0xad/0xf0
+[  977.980506] [     T91]  ? __pfx___drm_printfn_info+0x10/0x10
+[  977.980522] [     T91]  drm_atomic_helper_dirtyfb+0x1d6/0x2c0
+[  977.980528] [     T91]  drm_fbdev_shmem_helper_fb_dirty+0x4d/0xf0
+[  977.980534] [     T91]  drm_fb_helper_fb_dirty+0x1f4/0x450
+[  977.980542] [     T91]  drm_fb_helper_damage_work+0x2c/0x40
+[  977.980545] [     T91]  process_one_work+0x1ac/0x3d0
+[  977.980553] [     T91]  worker_thread+0x1b8/0x360
+[  977.980558] [     T91]  ? _raw_spin_unlock_irqrestore+0x11/0x60
+[  977.980567] [     T91]  ? __pfx_worker_thread+0x10/0x10
+[  977.980572] [     T91]  kthread+0xf7/0x130
+[  977.980575] [     T91]  ? __pfx_kthread+0x10/0x10
+[  977.980579] [     T91]  ret_from_fork+0x195/0x2a0
+[  977.980583] [     T91]  ? __pfx_kthread+0x10/0x10
+[  977.980586] [     T91]  ? __pfx_kthread+0x10/0x10
+[  977.980589] [     T91]  ret_from_fork_asm+0x1a/0x30
+[  977.980598] [     T91]  </TASK>
+[  977.980599] [     T91] ---[ end trace 0000000000000000 ]---
+[  978.359933] [      C0] workqueue: acpi_os_execute_deferred hogged CPU for >10000us 11 times, consider switching to WQ_UNBOUND
+[ 1463.082644] [      C0] workqueue: power_supply_changed_work hogged CPU for >10000us 4 times, consider switching to WQ_UNBOUND
+[ 1528.362980] [      C0] workqueue: power_supply_changed_work hogged CPU for >10000us 5 times, consider switching to WQ_UNBOUND
+[ 2315.253067] [      C0] workqueue: power_supply_changed_work hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+[ 2429.875006] [      C0] workqueue: acpi_os_execute_deferred hogged CPU for >10000us 19 times, consider switching to WQ_UNBOUND
+[ 3045.337530] [      C0] hv_storvsc 7ccf1806-fe4f-4167-a851-329c2c6d0664: tag#169 cmd 0xa1 status: scsi 0x2 srb 0x86 host 0xc0000001
+[ 3379.893458] [      C0] workqueue: power_supply_changed_work hogged CPU for >10000us 11 times, consider switching to WQ_UNBOUND
+[ 5195.819168] [     T44] audit: type=1400 audit(1794640947.341:240): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=18149 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5195.819185] [     T44] audit: type=1400 audit(1794640947.341:241): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=18149 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5195.819370] [     T44] audit: type=1400 audit(1794640947.341:242): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=18149 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5195.819378] [     T44] audit: type=1400 audit(1794640947.341:243): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=18149 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5253.913445] [  T18331] NOTICE: Automounting of tracing to debugfs is deprecated and will be removed in 2030
+[ 5314.212089] [     T44] audit: type=1400 audit(1794641065.734:244): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=18398 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5314.212106] [     T44] audit: type=1400 audit(1794641065.735:245): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=18398 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5314.212221] [     T44] audit: type=1400 audit(1794641065.735:246): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=18398 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5314.212232] [     T44] audit: type=1400 audit(1794641065.735:247): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=18398 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5585.777056] [     T44] audit: type=1400 audit(1794641337.303:248): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=20000 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5585.777068] [     T44] audit: type=1400 audit(1794641337.303:249): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=20000 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5585.777237] [     T44] audit: type=1400 audit(1794641337.303:250): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=20000 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5585.777240] [     T44] audit: type=1400 audit(1794641337.303:251): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=20000 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5814.254367] [     T44] audit: type=1400 audit(1794641565.782:252): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=20125 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5814.254383] [     T44] audit: type=1400 audit(1794641565.782:253): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=20125 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5814.254626] [     T44] audit: type=1400 audit(1794641565.783:254): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=20125 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5814.254657] [     T44] audit: type=1400 audit(1794641565.783:255): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=20125 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5819.604748] [      C0] workqueue: drm_fb_helper_damage_work hogged CPU for >10000us 7 times, consider switching to WQ_UNBOUND
+[ 5906.815758] [     T44] audit: type=1400 audit(1794641658.344:256): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=20328 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5906.815851] [     T44] audit: type=1400 audit(1794641658.344:257): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=20328 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5906.815946] [     T44] audit: type=1400 audit(1794641658.345:258): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=20328 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 5906.815950] [     T44] audit: type=1400 audit(1794641658.345:259): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=20328 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6257.158074] [     T44] audit: type=1400 audit(1794642008.690:260): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=21999 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6257.158140] [     T44] audit: type=1400 audit(1794642008.690:261): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=21999 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6257.158336] [     T44] audit: type=1400 audit(1794642008.690:262): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=21999 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6257.158340] [     T44] audit: type=1400 audit(1794642008.690:263): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=21999 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6259.873433] [  T22102] kicba_d7_active: loading out-of-tree module taints kernel.
+[ 6259.873447] [  T22102] kicba_d7_active: module verification failed: signature and/or required key missing - tainting kernel
+[ 6259.890035] [  T22102] installed hook on fillonedir
+[ 6259.905025] [  T22102] installed hook on filldir
+[ 6259.912717] [  T22102] installed hook on filldir64
+[ 6259.927484] [  T22102] installed hook on compat_fillonedir
+[ 6259.941765] [  T22102] installed hook on compat_filldir
+[ 6317.825250] [     T44] audit: type=1400 audit(1794642069.357:264): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22229 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6317.825264] [     T44] audit: type=1400 audit(1794642069.357:265): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22229 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6317.825447] [     T44] audit: type=1400 audit(1794642069.357:266): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22229 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6317.825450] [     T44] audit: type=1400 audit(1794642069.357:267): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22229 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6535.636577] [     T44] audit: type=1400 audit(1794642287.170:268): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22348 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6535.636594] [     T44] audit: type=1400 audit(1794642287.170:269): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22348 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6535.636762] [     T44] audit: type=1400 audit(1794642287.170:270): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22348 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6535.636772] [     T44] audit: type=1400 audit(1794642287.170:271): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22348 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6645.612960] [     T44] audit: type=1400 audit(1794642397.148:272): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22797 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6645.612975] [     T44] audit: type=1400 audit(1794642397.148:273): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22797 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6645.613318] [     T44] audit: type=1400 audit(1794642397.148:274): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22797 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6645.613331] [     T44] audit: type=1400 audit(1794642397.148:275): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22797 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6645.613335] [     T44] audit: type=1400 audit(1794642397.148:276): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22797 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6645.613339] [     T44] audit: type=1400 audit(1794642397.148:277): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22797 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6646.171576] [     T44] audit: type=1400 audit(1794642397.707:278): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22860 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6646.171591] [     T44] audit: type=1400 audit(1794642397.707:279): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22860 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6646.171789] [     T44] audit: type=1400 audit(1794642397.707:280): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=22860 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6646.171799] [     T44] audit: type=1400 audit(1794642397.707:281): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=22860 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6648.938225] [  T23310] installed hook on fillonedir
+[ 6648.955266] [  T23310] installed hook on filldir
+[ 6648.964371] [  T23310] installed hook on filldir64
+[ 6648.982238] [  T23310] installed hook on compat_fillonedir
+[ 6648.996139] [  T23310] installed hook on compat_filldir
+[ 6650.068577] [  T23342] installed hook on fillonedir
+[ 6650.081237] [  T23342] installed hook on filldir
+[ 6650.090216] [  T23342] installed hook on filldir64
+[ 6650.105567] [  T23342] installed hook on compat_fillonedir
+[ 6650.120431] [  T23342] installed hook on compat_filldir
+[ 6651.185324] [  T23367] installed hook on fillonedir
+[ 6651.205067] [  T23367] installed hook on filldir
+[ 6651.212036] [  T23367] installed hook on filldir64
+[ 6651.228036] [  T23367] installed hook on compat_fillonedir
+[ 6651.248069] [  T23367] installed hook on compat_filldir
+[ 6652.323436] [  T23394] installed hook on __x64_sys_getdents64
+[ 6652.534893] [  T23397] installed hook on __x64_sys_getdents64
+[ 6652.780385] [  T23418] installed hook on fillonedir
+[ 6652.796083] [  T23418] installed hook on filldir
+[ 6652.805908] [  T23418] installed hook on filldir64
+[ 6652.824242] [  T23418] installed hook on compat_fillonedir
+[ 6652.838312] [  T23418] installed hook on compat_filldir
+[ 6653.910616] [  T23611] installed hook on __x64_sys_getdents64
+[ 6654.129938] [  T23614] installed hook on fillonedir
+[ 6654.144004] [  T23614] installed hook on filldir
+[ 6654.152177] [  T23614] installed hook on filldir64
+[ 6654.168266] [  T23614] installed hook on compat_fillonedir
+[ 6654.184623] [  T23614] installed hook on compat_filldir
+[ 6655.258523] [  T23640] installed hook on fillonedir
+[ 6655.270916] [  T23640] installed hook on filldir
+[ 6655.279414] [  T23640] installed hook on filldir64
+[ 6655.299526] [  T23640] installed hook on compat_fillonedir
+[ 6655.313267] [  T23640] installed hook on compat_filldir
+[ 6656.396169] [  T23685] installed hook on __x64_sys_getdents64
+[ 6656.613236] [  T23688] installed hook on fillonedir
+[ 6656.628958] [  T23688] installed hook on filldir
+[ 6656.638311] [  T23688] installed hook on filldir64
+[ 6656.653135] [  T23688] installed hook on compat_fillonedir
+[ 6656.668672] [  T23688] installed hook on compat_filldir
+[ 6657.730182] [  T23714] installed hook on __x64_sys_getdents64
+[ 6657.951737] [  T23717] installed hook on fillonedir
+[ 6657.965303] [  T23717] installed hook on filldir
+[ 6657.974284] [  T23717] installed hook on filldir64
+[ 6657.994035] [  T23717] installed hook on compat_fillonedir
+[ 6658.009661] [  T23717] installed hook on compat_filldir
+[ 6659.084369] [  T23782] installed hook on __x64_sys_getdents64
+[ 6659.312548] [  T23823] installed hook on __x64_sys_getdents64
+[ 6659.526824] [  T23857] installed hook on __x64_sys_getdents64
+[ 6659.769000] [  T23898] installed hook on __x64_sys_getdents64
+[ 6659.971204] [  T23940] installed hook on __x64_sys_getdents64
+[ 6660.191150] [  T23954] installed hook on __x64_sys_getdents64
+[ 6660.415736] [  T23958] installed hook on __x64_sys_getdents64
+[ 6660.637176] [  T23961] installed hook on __x64_sys_getdents64
+[ 6660.886280] [  T23964] installed hook on __x64_sys_getdents64
+[ 6661.089873] [  T23968] installed hook on fillonedir
+[ 6661.104810] [  T23968] installed hook on filldir
+[ 6661.114728] [  T23968] installed hook on filldir64
+[ 6661.138347] [  T23968] installed hook on compat_fillonedir
+[ 6661.153108] [  T23968] installed hook on compat_filldir
+[ 6662.215148] [  T23999] installed hook on __x64_sys_getdents64
+[ 6980.333154] [     T44] kauditd_printk_skb: 2 callbacks suppressed
+[ 6980.333163] [     T44] audit: type=1400 audit(1794642731.870:284): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=25066 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6980.333175] [     T44] audit: type=1400 audit(1794642731.870:285): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=25066 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6980.333179] [     T44] audit: type=1400 audit(1794642731.871:286): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=25066 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 6980.333182] [     T44] audit: type=1400 audit(1794642731.871:287): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=25066 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7433.310348] [     T44] audit: type=1400 audit(1794643184.852:288): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=26593 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7433.310363] [     T44] audit: type=1400 audit(1794643184.853:289): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=26593 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7433.310631] [     T44] audit: type=1400 audit(1794643184.853:290): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=26593 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7433.310645] [     T44] audit: type=1400 audit(1794643184.853:291): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=26593 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7440.136331] [  T26761] installed hook on fillonedir
+[ 7440.147534] [  T26761] installed hook on filldir
+[ 7440.159123] [  T26761] installed hook on filldir64
+[ 7440.172000] [  T26761] installed hook on compat_fillonedir
+[ 7440.184697] [  T26761] installed hook on compat_filldir
+[ 7441.536179] [  T26766] installed hook on fillonedir
+[ 7441.551084] [  T26766] installed hook on filldir
+[ 7441.558142] [  T26766] installed hook on filldir64
+[ 7441.577390] [  T26766] installed hook on compat_fillonedir
+[ 7441.592725] [  T26766] installed hook on compat_filldir
+[ 7443.004459] [  T26770] installed hook on fillonedir
+[ 7443.017134] [  T26770] installed hook on filldir
+[ 7443.029196] [  T26770] installed hook on filldir64
+[ 7443.041382] [  T26770] installed hook on compat_fillonedir
+[ 7443.053022] [  T26770] installed hook on compat_filldir
+[ 7445.372047] [  T26774] installed hook on fillonedir
+[ 7445.387920] [  T26774] installed hook on filldir
+[ 7445.396350] [  T26774] installed hook on filldir64
+[ 7445.411327] [  T26774] installed hook on compat_fillonedir
+[ 7445.426167] [  T26774] installed hook on compat_filldir
+[ 7447.774725] [  T26778] installed hook on fillonedir
+[ 7447.786664] [  T26778] installed hook on filldir
+[ 7447.798505] [  T26778] installed hook on filldir64
+[ 7447.810353] [  T26778] installed hook on compat_fillonedir
+[ 7447.822753] [  T26778] installed hook on compat_filldir
+[ 7448.473668] [  T26782] installed hook on fillonedir
+[ 7448.488490] [  T26782] installed hook on filldir
+[ 7448.500414] [  T26782] installed hook on filldir64
+[ 7448.513540] [  T26782] installed hook on compat_fillonedir
+[ 7448.527331] [  T26782] installed hook on compat_filldir
+[ 7449.832949] [  T26786] installed hook on fillonedir
+[ 7449.847920] [  T26786] installed hook on filldir
+[ 7449.855062] [  T26786] installed hook on filldir64
+[ 7449.871611] [  T26786] installed hook on compat_fillonedir
+[ 7449.887406] [  T26786] installed hook on compat_filldir
+[ 7451.266696] [  T26790] installed hook on fillonedir
+[ 7451.279784] [  T26790] installed hook on filldir
+[ 7451.290778] [  T26790] installed hook on filldir64
+[ 7451.301939] [  T26790] installed hook on compat_fillonedir
+[ 7451.312827] [  T26790] installed hook on compat_filldir
+[ 7453.819594] [  T26795] installed hook on fillonedir
+[ 7453.834192] [  T26795] installed hook on filldir
+[ 7453.842448] [  T26795] installed hook on filldir64
+[ 7453.857171] [  T26795] installed hook on compat_fillonedir
+[ 7453.872118] [  T26795] installed hook on compat_filldir
+[ 7456.169874] [  T26799] installed hook on fillonedir
+[ 7456.181647] [  T26799] installed hook on filldir
+[ 7456.194114] [  T26799] installed hook on filldir64
+[ 7456.204958] [  T26799] installed hook on compat_fillonedir
+[ 7456.216019] [  T26799] installed hook on compat_filldir
+[ 7456.871175] [  T26803] installed hook on __x64_sys_getdents64
+[ 7457.749168] [  T26807] installed hook on __x64_sys_getdents64
+[ 7458.635816] [  T26811] installed hook on __x64_sys_getdents64
+[ 7460.502221] [  T26816] installed hook on __x64_sys_getdents64
+[ 7462.425511] [  T26820] installed hook on __x64_sys_getdents64
+[ 7462.623087] [  T26824] installed hook on __x64_sys_getdents64
+[ 7463.505243] [  T26828] installed hook on __x64_sys_getdents64
+[ 7464.397405] [  T26832] installed hook on __x64_sys_getdents64
+[ 7466.311649] [  T26836] installed hook on __x64_sys_getdents64
+[ 7468.191175] [  T26840] installed hook on __x64_sys_getdents64
+[ 7468.398485] [  T26844] installed hook on __x64_sys_getdents64
+[ 7469.267894] [  T26848] installed hook on __x64_sys_getdents64
+[ 7470.139449] [  T26852] installed hook on __x64_sys_getdents64
+[ 7471.942414] [  T26856] installed hook on __x64_sys_getdents64
+[ 7473.871159] [  T26860] installed hook on __x64_sys_getdents64
+[ 7752.401541] [     T44] audit: type=1400 audit(1794643503.946:292): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=26939 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7752.401554] [     T44] audit: type=1400 audit(1794643503.947:293): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=26939 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7752.401716] [     T44] audit: type=1400 audit(1794643503.947:294): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=26939 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7752.401720] [     T44] audit: type=1400 audit(1794643503.947:295): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=26939 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7786.990864] [      C3] hrtimer: interrupt took 6069296 ns
+[ 7980.493675] [     T44] audit: type=1400 audit(1794643732.041:296): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=27467 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7980.493690] [     T44] audit: type=1400 audit(1794643732.041:297): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=27467 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7980.493890] [     T44] audit: type=1400 audit(1794643732.041:298): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=27467 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7980.493894] [     T44] audit: type=1400 audit(1794643732.041:299): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=27467 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 7980.766466] [      C2] TCP: eth0: Driver has suspect GRO implementation, TCP performance may be compromised.
+[ 7983.113626] [      C0] workqueue: acpi_os_execute_deferred hogged CPU for >10000us 35 times, consider switching to WQ_UNBOUND
+[ 8309.498728] [     T44] audit: type=1400 audit(1794644061.049:300): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=28320 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 8309.498774] [     T44] audit: type=1400 audit(1794644061.049:301): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=28320 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 8309.499038] [     T44] audit: type=1400 audit(1794644061.049:302): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/nsswitch.conf" pid=28320 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 8309.499047] [     T44] audit: type=1400 audit(1794644061.049:303): apparmor="DENIED" operation="open" class="file" profile="who" name="/etc/passwd" pid=28320 comm="who" requested_mask="r" denied_mask="r" fsuid=0 ouid=0
+[ 8316.531308] [  T28563] phase2_transform: module verification failed: signature and/or required key missing - tainting kernel
+[ 8316.547631] [  T28563] installed hook on __x64_sys_getdents64
+[ 8316.623500] [  T28567] installed hook on __x64_sys_getdents64
+[ 8316.767132] [  T28570] installed hook on __x64_sys_getdents64
+[ 8316.908461] [  T28573] installed hook on __x64_sys_getdents64
+[ 8317.024469] [  T28576] installed hook on __x64_sys_getdents64
+[ 8317.179656] [  T28579] installed hook on __x64_sys_getdents64
+[ 8317.322973] [  T28582] installed hook on __x64_sys_getdents64
+[ 8317.430224] [  T28585] installed hook on __x64_sys_getdents64
+[ 8317.593087] [  T28588] installed hook on __x64_sys_getdents64
+[ 8317.748552] [  T28591] installed hook on __x64_sys_getdents64
+[ 8317.858977] [  T28594] installed hook on __x64_sys_getdents64
+[ 8318.006100] [  T28597] installed hook on __x64_sys_getdents64
+[ 8318.152114] [  T28600] installed hook on __x64_sys_getdents64
+[ 8318.267218] [  T28603] installed hook on __x64_sys_getdents64
+[ 8318.412993] [  T28606] installed hook on __x64_sys_getdents64
+[ 8318.562825] [  T28609] installed hook on __x64_sys_getdents64
+[ 8318.671519] [  T28612] installed hook on __x64_sys_getdents64
+[ 8318.812296] [  T28615] installed hook on __x64_sys_getdents64
+[ 8318.947477] [  T28618] installed hook on __x64_sys_getdents64
+[ 8319.070176] [  T28621] installed hook on __x64_sys_getdents64
+[ 8319.227246] [  T28624] installed hook on __x64_sys_getdents64
+[ 8319.367913] [  T28627] installed hook on __x64_sys_getdents64
+[ 8319.478665] [  T28630] installed hook on __x64_sys_getdents64
+[ 8319.629346] [  T28633] installed hook on __x64_sys_getdents64
+[ 8319.787670] [  T28636] installed hook on __x64_sys_getdents64
+[ 8319.886508] [  T28639] installed hook on __x64_sys_getdents64
+[ 8320.035623] [  T28642] installed hook on __x64_sys_getdents64
+[ 8320.174127] [  T28645] installed hook on __x64_sys_getdents64
+[ 8320.287809] [  T28648] installed hook on __x64_sys_getdents64
+[ 8320.440341] [  T28651] installed hook on __x64_sys_getdents64
+[ 8320.595180] [  T28654] installed hook on __x64_sys_getdents64
+[ 8320.703649] [  T28657] installed hook on __x64_sys_getdents64
+[ 8320.859402] [  T28660] installed hook on __x64_sys_getdents64
+[ 8321.005798] [  T28663] installed hook on __x64_sys_getdents64
+[ 8321.136381] [  T28666] installed hook on __x64_sys_getdents64
+[ 8321.284716] [  T28669] installed hook on __x64_sys_getdents64
+[ 8321.424759] [  T28672] installed hook on __x64_sys_getdents64
+[ 8321.540513] [  T28675] installed hook on __x64_sys_getdents64
+[ 8321.702376] [  T28678] installed hook on __x64_sys_getdents64
+[ 8321.865894] [  T28681] installed hook on __x64_sys_getdents64
+[ 8321.977163] [  T28684] installed hook on __x64_sys_getdents64
+[ 8322.127876] [  T28687] installed hook on __x64_sys_getdents64
+[ 8322.283432] [  T28690] installed hook on fillonedir
+[ 8322.298716] [  T28690] installed hook on filldir
+[ 8322.310533] [  T28690] installed hook on filldir64
+[ 8322.321547] [  T28690] installed hook on compat_fillonedir
+[ 8322.333641] [  T28690] installed hook on compat_filldir
+[ 8322.872543] [  T28693] installed hook on fillonedir
+[ 8322.885790] [  T28693] installed hook on filldir
+[ 8322.903268] [  T28693] installed hook on filldir64
+[ 8322.920535] [  T28693] installed hook on compat_fillonedir
+[ 8322.935159] [  T28693] installed hook on compat_filldir
+[ 8323.539775] [  T28696] installed hook on fillonedir
+[ 8323.554025] [  T28696] installed hook on filldir
+[ 8323.569071] [  T28696] installed hook on filldir64
+[ 8323.583125] [  T28696] installed hook on compat_fillonedir
+[ 8323.596381] [  T28696] installed hook on compat_filldir
+[ 8324.215769] [  T28699] installed hook on fillonedir
+[ 8324.232193] [  T28699] installed hook on filldir
+[ 8324.245254] [  T28699] installed hook on filldir64
+[ 8324.257214] [  T28699] installed hook on compat_fillonedir
+[ 8324.269598] [  T28699] installed hook on compat_filldir
+[ 8324.794667] [  T28702] installed hook on fillonedir
+[ 8324.807676] [  T28702] installed hook on filldir
+[ 8324.820618] [  T28702] installed hook on filldir64
+[ 8324.832896] [  T28702] installed hook on compat_fillonedir
+[ 8324.846360] [  T28702] installed hook on compat_filldir
+[ 8325.475966] [  T28705] installed hook on fillonedir
+[ 8325.487399] [  T28705] installed hook on filldir
+[ 8325.499918] [  T28705] installed hook on filldir64
+[ 8325.513164] [  T28705] installed hook on compat_fillonedir
+[ 8325.525391] [  T28705] installed hook on compat_filldir
+[ 8326.131707] [  T28708] installed hook on __x64_sys_getdents64
+[ 8326.252689] [  T28711] installed hook on __x64_sys_getdents64
+[ 8326.391805] [  T28714] installed hook on __x64_sys_getdents64
+[ 8326.529667] [  T28717] installed hook on __x64_sys_getdents64
+[ 8326.653685] [  T28720] installed hook on __x64_sys_getdents64
+[ 8326.804401] [  T28723] installed hook on __x64_sys_getdents64
+[ 8326.966378] [  T28726] installed hook on __x64_sys_getdents64
+[ 8326.977247] [  T28726] installed hook on __x64_sys_getdents
+[ 8326.977255] [  T28726] rootkit: Loaded >:-)
+[ 8326.980550] [  T28727] ------------[ cut here ]------------
+[ 8326.980557] [  T28727] memcmp: detected buffer overflow: 8 byte read of buffer size 5
+[ 8326.980563] [  T28727] WARNING: lib/string_helpers.c:1036 at __fortify_report+0x4d/0xa0, CPU#0: d9_enum_probe/28727
+[ 8326.980579] [  T28727] Modules linked in: phase2_independent(OE) algif_hash af_alg qrtr cpuid nfnetlink cfg80211 binfmt_misc nls_iso8859_1 intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec rapl vmgenid hyperv_drm hv_balloon hv_utils joydev mac_hid sch_fq_codel dm_multipath efi_pstore hv_sock vsock serio_raw hid_generic hv_netvsc hv_storvsc hid_hyperv hid scsi_transport_fc hyperv_keyboard hv_vmbus ghash_clmulni_intel msr dmi_sysfs autofs4 aesni_intel [last unloaded: kicba_d9_getdents_substitute(OE)]
+[ 8326.980663] [  T28727] CPU: 0 UID: 0 PID: 28727 Comm: d9_enum_probe Kdump: loaded Tainted: G        W  OE       7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+[ 8326.980673] [  T28727] Tainted: [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+[ 8326.980676] [  T28727] Hardware name: Microsoft Corporation Virtual Machine/Virtual Machine, BIOS Hyper-V UEFI Release v4.1 09/25/2025
+[ 8326.980680] [  T28727] RIP: 0010:__fortify_report+0x50/0xa0
+[ 8326.980687] [  T28727] Code: 11 73 42 83 e1 01 48 8b 34 c5 00 cc ca af 48 c7 c1 cb ac 43 b0 48 c7 c0 c1 ac 43 b0 48 0f 44 c8 48 8d 3d 73 62 20 02 4c 89 ca <67> 48 0f b9 3a c9 31 c0 31 d2 31 c9 31 f6 31 ff 45 31 c0 45 31 c9
+[ 8326.980692] [  T28727] RSP: 0018:ffffd4e7c0477e60 EFLAGS: 00010246
+[ 8326.980698] [  T28727] RAX: ffffffffb043acc1 RBX: 00000000000000e0 RCX: ffffffffb043acc1
+[ 8326.980702] [  T28727] RDX: 0000000000000008 RSI: ffffffffb04013c9 RDI: ffffffffb12fa770
+[ 8326.980706] [  T28727] RBP: ffffd4e7c0477e80 R08: 0000000000000005 R09: 0000000000000008
+[ 8326.980709] [  T28727] R10: ffffffffffffffe8 R11: 0000000000000000 R12: 000058a389e8e010
+[ 8326.980714] [  T28727] R13: 00000000000000e0 R14: ffff8ebb0038cb00 R15: 00000000000000e0
+[ 8326.980718] [  T28727] FS:  00007a32c3a0a740(0000) GS:ffff8ebc4e3f7000(0000) knlGS:0000000000000000
+[ 8326.980722] [  T28727] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 8326.980726] [  T28727] CR2: 000058a389e91008 CR3: 00000001021cd003 CR4: 0000000000b70ef0
+[ 8326.980734] [  T28727] Call Trace:
+[ 8326.980739] [  T28727]  <TASK>
+[ 8326.980744] [  T28727]  ? __check_object_size+0x86/0x100
+[ 8326.980755] [  T28727]  __fortify_panic+0xd/0xf
+[ 8326.980764] [  T28727]  hook_getdents64.cold+0xf/0x2f [phase2_independent]
+[ 8326.980772] [  T28727]  x64_sys_call+0x100b/0x2390
+[ 8326.980781] [  T28727]  do_syscall_64+0x105/0x580
+[ 8326.980791] [  T28727]  ? exc_page_fault+0x94/0x1e0
+[ 8326.980797] [  T28727]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 8326.980804] [  T28727] RIP: 0033:0x7a32c3734a8d
+[ 8326.980817] [  T28727] Code: ff c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d 4b d3 0d 00 f7 d8 64 89 01 48
+[ 8326.980821] [  T28727] RSP: 002b:00007ffc1a2cb958 EFLAGS: 00000246 ORIG_RAX: 00000000000000d9
+[ 8326.980827] [  T28727] RAX: ffffffffffffffda RBX: 000058a389e8e0c8 RCX: 00007a32c3734a8d
+[ 8326.980831] [  T28727] RDX: 0000000000000100 RSI: 000058a389e8e010 RDI: 0000000000000004
+[ 8326.980834] [  T28727] RBP: 000058a389e8e0db R08: 00007a32c3812ac8 R09: 00000000000000e0
+[ 8326.980836] [  T28727] R10: 000058a389e91960 R11: 0000000000000246 R12: 94d049bb133111eb
+[ 8326.980839] [  T28727] R13: bf58476d1ce4e5b9 R14: 0000000000000011 R15: 00000000000000e0
+[ 8326.980844] [  T28727]  </TASK>
+[ 8326.980846] [  T28727] ---[ end trace 0000000000000000 ]---
+[ 8326.980871] [  T28727] ------------[ cut here ]------------
+[ 8326.980913] [  T28727] kernel BUG at lib/string_helpers.c:1044!
+[ 8326.981182] [  T28727] Oops: invalid opcode: 0000 [#1] SMP NOPTI
+[ 8326.981396] [  T28727] CPU: 0 UID: 0 PID: 28727 Comm: d9_enum_probe Kdump: loaded Tainted: G        W  OE       7.0.0-43-generic #43-Ubuntu PREEMPT(lazy) 
+[ 8326.982031] [  T28727] Tainted: [W]=WARN, [O]=OOT_MODULE, [E]=UNSIGNED_MODULE
+[ 8326.982354] [  T28727] Hardware name: Microsoft Corporation Virtual Machine/Virtual Machine, BIOS Hyper-V UEFI Release v4.1 09/25/2025
+[ 8326.982716] [  T28727] RIP: 0010:__fortify_panic+0xd/0xf
+[ 8326.983193] [  T28727] Code: 49 21 d7 e9 0f 20 a7 00 e9 35 20 a7 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 55 40 0f b6 ff 48 89 e5 e8 a3 39 a7 00 <0f> 0b 48 8b 95 28 ff ff ff 48 8b b5 30 ff ff ff 4c 89 e9 48 c7 c7
+[ 8326.984010] [  T28727] RSP: 0018:ffffd4e7c0477e90 EFLAGS: 00010246
+[ 8326.984340] [  T28727] RAX: 0000000000000000 RBX: 00000000000000e0 RCX: 0000000000000000
+[ 8326.984715] [  T28727] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[ 8326.985048] [  T28727] RBP: ffffd4e7c0477e90 R08: 0000000000000000 R09: 0000000000000000
+[ 8326.985379] [  T28727] R10: ffffffffffffffe8 R11: 0000000000000000 R12: 000058a389e8e010
+[ 8326.985754] [  T28727] R13: 00000000000000e0 R14: ffff8ebb0038cb00 R15: 00000000000000e0
+[ 8326.986119] [  T28727] FS:  00007a32c3a0a740(0000) GS:ffff8ebc4e3f7000(0000) knlGS:0000000000000000
+[ 8326.986460] [  T28727] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 8326.986802] [  T28727] CR2: 000058a389e91008 CR3: 00000001021cd003 CR4: 0000000000b70ef0
+[ 8326.987139] [  T28727] Call Trace:
+[ 8326.987477] [  T28727]  <TASK>
+[ 8326.987833] [  T28727]  hook_getdents64.cold+0xf/0x2f [phase2_independent]
+[ 8326.988203] [  T28727]  x64_sys_call+0x100b/0x2390
+[ 8326.988564] [  T28727]  do_syscall_64+0x105/0x580
+[ 8326.988900] [  T28727]  ? exc_page_fault+0x94/0x1e0
+[ 8326.989236] [  T28727]  entry_SYSCALL_64_after_hwframe+0x76/0x7e
+[ 8326.989605] [  T28727] RIP: 0033:0x7a32c3734a8d
+[ 8326.989955] [  T28727] Code: ff c3 66 2e 0f 1f 84 00 00 00 00 00 90 f3 0f 1e fa 48 89 f8 48 89 f7 48 89 d6 48 89 ca 4d 89 c2 4d 89 c8 4c 8b 4c 24 08 0f 05 <48> 3d 01 f0 ff ff 73 01 c3 48 8b 0d 4b d3 0d 00 f7 d8 64 89 01 48
+[ 8326.990977] [  T28727] RSP: 002b:00007ffc1a2cb958 EFLAGS: 00000246 ORIG_RAX: 00000000000000d9
+[ 8326.991538] [  T28727] RAX: ffffffffffffffda RBX: 000058a389e8e0c8 RCX: 00007a32c3734a8d
+[ 8326.991972] [  T28727] RDX: 0000000000000100 RSI: 000058a389e8e010 RDI: 0000000000000004
+[ 8326.992551] [  T28727] RBP: 000058a389e8e0db R08: 00007a32c3812ac8 R09: 00000000000000e0
+[ 8326.993010] [  T28727] R10: 000058a389e91960 R11: 0000000000000246 R12: 94d049bb133111eb
+[ 8326.993397] [  T28727] R13: bf58476d1ce4e5b9 R14: 0000000000000011 R15: 00000000000000e0
+[ 8326.993896] [  T28727]  </TASK>
+[ 8326.994271] [  T28727] Modules linked in: phase2_independent(OE) algif_hash af_alg qrtr cpuid nfnetlink cfg80211 binfmt_misc nls_iso8859_1 intel_rapl_msr intel_rapl_common intel_uncore_frequency_common intel_pmc_core pmt_telemetry pmt_discovery pmt_class intel_pmc_ssram_telemetry intel_vsec rapl vmgenid hyperv_drm hv_balloon hv_utils joydev mac_hid sch_fq_codel dm_multipath efi_pstore hv_sock vsock serio_raw hid_generic hv_netvsc hv_storvsc hid_hyperv hid scsi_transport_fc hyperv_keyboard hv_vmbus ghash_clmulni_intel msr dmi_sysfs autofs4 aesni_intel [last unloaded: kicba_d9_getdents_substitute(OE)]
+[ 8326.996815] [  T28727] ---[ end trace 0000000000000000 ]---
+[ 8327.727175] [  T28727] RIP: 0010:__fortify_panic+0xd/0xf
+[ 8327.728216] [  T28727] Code: 49 21 d7 e9 0f 20 a7 00 e9 35 20 a7 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 55 40 0f b6 ff 48 89 e5 e8 a3 39 a7 00 <0f> 0b 48 8b 95 28 ff ff ff 48 8b b5 30 ff ff ff 4c 89 e9 48 c7 c7
+[ 8327.729658] [  T28727] RSP: 0018:ffffd4e7c0477e90 EFLAGS: 00010246
+[ 8327.730237] [  T28727] RAX: 0000000000000000 RBX: 00000000000000e0 RCX: 0000000000000000
+[ 8327.731005] [  T28727] RDX: 0000000000000000 RSI: 0000000000000000 RDI: 0000000000000000
+[ 8327.731658] [  T28727] RBP: ffffd4e7c0477e90 R08: 0000000000000000 R09: 0000000000000000
+[ 8327.732331] [  T28727] R10: ffffffffffffffe8 R11: 0000000000000000 R12: 000058a389e8e010
+[ 8327.733139] [  T28727] R13: 00000000000000e0 R14: ffff8ebb0038cb00 R15: 00000000000000e0
+[ 8327.733855] [  T28727] FS:  00007a32c3a0a740(0000) GS:ffff8ebc4e4f7000(0000) knlGS:0000000000000000
+[ 8327.734399] [  T28727] CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+[ 8327.735048] [  T28727] CR2: 00005c4655a76c58 CR3: 00000001021cd005 CR4: 0000000000b70ef0
+[ 8327.738145] [  T28727] Kernel panic - not syncing: Fatal exception
+[ 8327.739333] [  T28727] Kernel Offset: 0x2d400000 from 0xffffffff81000000 (relocation range: 0xffffffff80000000-0xffffffffbfffffff)

@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-11-14T08:26:15.357219+00:00",
+  "original_failures_retained": true,
+  "classification": "explicit compatibility ports, not unchanged upstream results",
+  "patches": [
+    {
+      "path": "/home/kicba/research_phase1_20261023/phase2/third_party/xcellerator/ported/rootkit.c",
+      "before_sha256": "00817e656991a5f785b77f84f7da1645c7baf083fadff093d2b30378bdb952e9",
+      "after_sha256": "c39e7d579ab1fac1f74f52aff2c0840a64054aad622af123e85a8f8aad2cce23",
+      "reason": "FORTIFY caught an 8-byte memcmp on a final short name with only 5 bytes remaining; strncmp stops at NUL, preserving prefix matching for valid filenames",
+      "diff": "--- \n+++ \n@@ -68,7 +68,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -154,7 +154,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -227,7 +227,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -304,7 +304,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n"
+    },
+    {
+      "path": "/home/kicba/research_phase2_20261023/phase2/third_party/xcellerator/ported/rootkit.c",
+      "before_sha256": "00817e656991a5f785b77f84f7da1645c7baf083fadff093d2b30378bdb952e9",
+      "after_sha256": "c39e7d579ab1fac1f74f52aff2c0840a64054aad622af123e85a8f8aad2cce23",
+      "reason": "FORTIFY caught an 8-byte memcmp on a final short name with only 5 bytes remaining; strncmp stops at NUL, preserving prefix matching for valid filenames",
+      "diff": "--- \n+++ \n@@ -68,7 +68,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -154,7 +154,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -227,7 +227,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -304,7 +304,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n"
+    },
+    {
+      "path": "/home/kicba/closure_20261102/current/phase2/third_party/xcellerator/ported/rootkit.c",
+      "before_sha256": "00817e656991a5f785b77f84f7da1645c7baf083fadff093d2b30378bdb952e9",
+      "after_sha256": "c39e7d579ab1fac1f74f52aff2c0840a64054aad622af123e85a8f8aad2cce23",
+      "reason": "FORTIFY caught an 8-byte memcmp on a final short name with only 5 bytes remaining; strncmp stops at NUL, preserving prefix matching for valid filenames",
+      "diff": "--- \n+++ \n@@ -68,7 +68,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -154,7 +154,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -227,7 +227,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -304,7 +304,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n"
+    },
+    {
+      "path": "/home/kicba/call_completion_20261103/code/phase2/third_party/xcellerator/ported/rootkit.c",
+      "before_sha256": "00817e656991a5f785b77f84f7da1645c7baf083fadff093d2b30378bdb952e9",
+      "after_sha256": "c39e7d579ab1fac1f74f52aff2c0840a64054aad622af123e85a8f8aad2cce23",
+      "reason": "FORTIFY caught an 8-byte memcmp on a final short name with only 5 bytes remaining; strncmp stops at NUL, preserving prefix matching for valid filenames",
+      "diff": "--- \n+++ \n@@ -68,7 +68,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -154,7 +154,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -227,7 +227,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n@@ -304,7 +304,7 @@\n         current_dir = (void *)dirent_ker + offset;\n \n         /* Compare current_dir->d_name to PREFIX */\n-        if ( memcmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n+        if ( strncmp(PREFIX, current_dir->d_name, strlen(PREFIX)) == 0)\n         {\n             /* If PREFIX is contained in the first struct in the list, then we have to shift everything else up by it's size */\n             if ( current_dir == dirent_ker )\n"
+    },
+    {
+      "path": "/home/kicba/public_sample_20261102/build_linux7_port/getdents64/stdlib.h",
+      "before_sha256": "36072702007f6cbb3ab7c756363a91b3bb516679fddfcac23b9b6a168b53eb02",
+      "after_sha256": "ddfd08235760cd069e0dc4b3e929d01ced62e6d47f11e54a1c7acd7b2ccef895",
+      "reason": "Match Linux-7 callback address type; directory-filter code unchanged; networking remains untested",
+      "reference": "https://github.com/torvalds/linux/blob/v7.0/include/linux/socket.h",
+      "diff": "--- \n+++ \n@@ -184,7 +184,7 @@\n \tint rc;\n \n \tif (socket && addr) {\n-\t\trc = kernel_connect(socket, addr, addrlen, 0);\n+\t\trc = kernel_connect(socket, (struct sockaddr_unsized *)addr, addrlen, 0);\n \t\tif (rc < 0) {\n \t\t\terrno = rc;\n \t\t\treturn -1;\n"
+    },
+    {
+      "path": "/home/kicba/public_sample_20261102/build_linux7_port/filldir/stdlib.h",
+      "before_sha256": "36072702007f6cbb3ab7c756363a91b3bb516679fddfcac23b9b6a168b53eb02",
+      "after_sha256": "ddfd08235760cd069e0dc4b3e929d01ced62e6d47f11e54a1c7acd7b2ccef895",
+      "reason": "Match Linux-7 callback address type; directory-filter code unchanged; networking remains untested",
+      "reference": "https://github.com/torvalds/linux/blob/v7.0/include/linux/socket.h",
+      "diff": "--- \n+++ \n@@ -184,7 +184,7 @@\n \tint rc;\n \n \tif (socket && addr) {\n-\t\trc = kernel_connect(socket, addr, addrlen, 0);\n+\t\trc = kernel_connect(socket, (struct sockaddr_unsized *)addr, addrlen, 0);\n \t\tif (rc < 0) {\n \t\t\terrno = rc;\n \t\t\treturn -1;\n"
+    }
+  ],
+  "builds": [
+    {
+      "kind": "independent_port",
+      "kernel": "7.0.0-43-generic",
+      "returncode": 0,
+      "argv": [
+        "make",
+        "-j2",
+        "-C",
+        "/lib/modules/7.0.0-43-generic/build",
+        "M=/home/kicba/ubuntu26_20261114/external_ports_01/7.0.0-43-generic",
+        "modules"
+      ],
+      "sha256": "a3f8607a74a55c09feef9480e5492fc2fa835e69395a2b56a49184a241f05273"
+    },
+    {
+      "kind": "independent_port",
+      "kernel": "7.0.0-1018-oem",
+      "returncode": 0,
+      "argv": [
+        "make",
+        "-j2",
+        "-C",
+        "/lib/modules/7.0.0-1018-oem/build",
+        "M=/home/kicba/ubuntu26_20261114/external_ports_01/7.0.0-1018-oem",
+        "modules"
+      ],
+      "sha256": "d9c051ce64126bf3f8e719a54c8a1991e58d5aa1735136ff4170c86e4a7ba041"
+    },
+    {
+      "kind": "caraxes_linux7_port",
+      "mode": "getdents64",
+      "returncode": 2,
+      "argv": [
+        "make",
+        "PWD=/home/kicba/public_sample_20261102/build_linux7_port/getdents64"
+      ]
+    },
+    {
+      "kind": "caraxes_linux7_port",
+      "mode": "filldir",
+      "returncode": 2,
+      "argv": [
+        "make",
+        "PWD=/home/kicba/public_sample_20261102/build_linux7_port/filldir"
+      ]
+    }
+  ]
+}

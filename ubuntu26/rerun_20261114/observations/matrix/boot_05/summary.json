@@ -1,0 +1,12 @@
+{
+  "boot_index": 5,
+  "boot_id": "3fd56da1-e1a8-4344-a9a3-57e3a0fab4a8",
+  "completed": true,
+  "returncode": 0,
+  "batches": 144,
+  "transactions": 2880,
+  "successful": true,
+  "failures": [],
+  "sources_match": true,
+  "environment_unchanged": true
+}

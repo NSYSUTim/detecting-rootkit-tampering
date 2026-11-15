@@ -1,0 +1,117 @@
+{
+  "passed": true,
+  "decloaker": {
+    "boots": 9,
+    "rows": 720,
+    "positive": 180,
+    "negative": 540,
+    "detected": 0,
+    "false_alerts": 0,
+    "failed": 0
+  },
+  "phase1": {
+    "coverage": [
+      {
+        "maxactive_1": {
+          "windows": 30,
+          "missed_windows": 30,
+          "missed_total": 3161060,
+          "transactions": 560,
+          "invalid_transactions": 560,
+          "false_valid_when_missed": 0
+        },
+        "maxactive_256": {
+          "windows": 30,
+          "missed_windows": 0,
+          "missed_total": 0,
+          "transactions": 560,
+          "invalid_transactions": 0,
+          "false_valid_when_missed": 0
+        },
+        "normal": {
+          "windows": 30,
+          "equal": 30,
+          "different": 0,
+          "invalid": 0,
+          "decode_failures": 0
+        }
+      },
+      {
+        "maxactive_1": {
+          "windows": 30,
+          "missed_windows": 30,
+          "missed_total": 3249405,
+          "transactions": 560,
+          "invalid_transactions": 560,
+          "false_valid_when_missed": 0
+        },
+        "maxactive_256": {
+          "windows": 30,
+          "missed_windows": 0,
+          "missed_total": 0,
+          "transactions": 560,
+          "invalid_transactions": 0,
+          "false_valid_when_missed": 0
+        },
+        "normal": {
+          "windows": 30,
+          "equal": 30,
+          "different": 0,
+          "invalid": 0,
+          "decode_failures": 0
+        }
+      },
+      {
+        "maxactive_1": {
+          "windows": 30,
+          "missed_windows": 30,
+          "missed_total": 3112661,
+          "transactions": 560,
+          "invalid_transactions": 560,
+          "false_valid_when_missed": 0
+        },
+        "maxactive_256": {
+          "windows": 30,
+          "missed_windows": 0,
+          "missed_total": 0,
+          "transactions": 560,
+          "invalid_transactions": 0,
+          "false_valid_when_missed": 0
+        },
+        "normal": {
+          "windows": 30,
+          "equal": 30,
+          "different": 0,
+          "invalid": 0,
+          "decode_failures": 0
+        }
+      }
+    ],
+    "fidelity": [
+      {
+        "trials": 600,
+        "full_trials": 240,
+        "setup_failures": 0,
+        "output_mismatch": 0,
+        "verdict_mismatch": 0,
+        "decode_mismatch": 0
+      },
+      {
+        "trials": 600,
+        "full_trials": 240,
+        "setup_failures": 0,
+        "output_mismatch": 0,
+        "verdict_mismatch": 0,
+        "decode_mismatch": 0
+      },
+      {
+        "trials": 600,
+        "full_trials": 240,
+        "setup_failures": 0,
+        "output_mismatch": 0,
+        "verdict_mismatch": 0,
+        "decode_mismatch": 0
+      }
+    ]
+  }
+}

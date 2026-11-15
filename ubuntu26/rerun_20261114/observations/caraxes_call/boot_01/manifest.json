@@ -1,0 +1,402 @@
+{
+  "kernel": "7.0.0-43-generic",
+  "boot_id": "8efcec1f-f8bc-4d2e-897e-4a617da0f6db",
+  "boot_index": 1,
+  "pilot": false,
+  "fixture": "/home/kicba/ubuntu26_20261114/observations/caraxes_call_scope_boot_01/fixture",
+  "original": [
+    {
+      "name_hex": "2e",
+      "inode": 1179924,
+      "d_type": 4
+    },
+    {
+      "name_hex": "2e2e",
+      "inode": 1179923,
+      "d_type": 4
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303430",
+      "inode": 1179965,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303439",
+      "inode": 1179974,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303034",
+      "inode": 1179929,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303432",
+      "inode": 1179967,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303533",
+      "inode": 1179978,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303239",
+      "inode": 1179954,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303232",
+      "inode": 1179947,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303235",
+      "inode": 1179950,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303633",
+      "inode": 1179988,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303032",
+      "inode": 1179927,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303137",
+      "inode": 1179942,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303236",
+      "inode": 1179951,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303336",
+      "inode": 1179961,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303434",
+      "inode": 1179969,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303233",
+      "inode": 1179948,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303132",
+      "inode": 1179937,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303631",
+      "inode": 1179986,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303030",
+      "inode": 1179925,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303031",
+      "inode": 1179926,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303238",
+      "inode": 1179953,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303035",
+      "inode": 1179930,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303538",
+      "inode": 1179983,
+      "d_type": 8
+    },
+    {
+      "name_hex": "7363616e5f636f6e74726f6c",
+      "inode": 1179992,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303539",
+      "inode": 1179984,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303532",
+      "inode": 1179977,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303334",
+      "inode": 1179959,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303436",
+      "inode": 1179971,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303333",
+      "inode": 1179958,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303139",
+      "inode": 1179944,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303332",
+      "inode": 1179957,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303130",
+      "inode": 1179935,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303433",
+      "inode": 1179968,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303536",
+      "inode": 1179981,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303435",
+      "inode": 1179970,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303037",
+      "inode": 1179932,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6d6964646c655f636172617865735f6974656d",
+      "inode": 1179990,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303038",
+      "inode": 1179933,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303534",
+      "inode": 1179979,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303133",
+      "inode": 1179938,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303337",
+      "inode": 1179962,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303331",
+      "inode": 1179956,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303136",
+      "inode": 1179941,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303531",
+      "inode": 1179976,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303231",
+      "inode": 1179946,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303339",
+      "inode": 1179964,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303138",
+      "inode": 1179943,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303630",
+      "inode": 1179985,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303537",
+      "inode": 1179982,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303135",
+      "inode": 1179940,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303134",
+      "inode": 1179939,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303437",
+      "inode": 1179972,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303230",
+      "inode": 1179945,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303338",
+      "inode": 1179963,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303530",
+      "inode": 1179975,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303237",
+      "inode": 1179952,
+      "d_type": 8
+    },
+    {
+      "name_hex": "636172617865735f6669727374",
+      "inode": 1179989,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303330",
+      "inode": 1179955,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303438",
+      "inode": 1179973,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303036",
+      "inode": 1179931,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303335",
+      "inode": 1179960,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303431",
+      "inode": 1179966,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303234",
+      "inode": 1179949,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303632",
+      "inode": 1179987,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303535",
+      "inode": 1179980,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303039",
+      "inode": 1179934,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303033",
+      "inode": 1179928,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6c6173745f63617261786573",
+      "inode": 1179991,
+      "d_type": 8
+    },
+    {
+      "name_hex": "6f7264696e6172795f30303131",
+      "inode": 1179936,
+      "d_type": 8
+    }
+  ],
+  "module_sha256": {
+    "getdents64": "16d28a9a9c61a6f497eacff1dc8560894432c9a9ffa1180bef1f15f14f342888",
+    "filldir": "37299c9f1c54a2256144e3e189d19692349af938932e20bfa60dbdbd18b0d709"
+  },
+  "probe_sha256": "07255fe2083cee14edae4874892a74678d3f8d7722410acb414b843d6e189fc8",
+  "source_sha256": {
+    "/home/kicba/call_completion_20261103/code/finalization/tracefs_measurement.py": "13e6b73b61b5721c7187df19a95546d510cfafb1b2315f6d57489128e33ccb3f",
+    "/home/kicba/call_completion_20261103/code/finalization/measurement.py": "867ebd2f381212feea28df1e74d6cb57214f3ce232328067b1d809869eeb2f8f",
+    "/home/kicba/call_completion_20261103/code/phase2/measurement.py": "4f90c83399f93a4cfd476598126e9fd972da6e9e922363a2a5f4ed34b70e97bb",
+    "/home/kicba/call_completion_20261103/code/phase2/bpf_packed.c": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+    "/home/kicba/call_completion_20261103/code/src/kicba/recovery_validation.py": "6a8b599f9dbea204a3022bc1157b8214e78714d684bc9d18a08dece4384fd4cd",
+    "/home/kicba/call_completion_20261103/code/src/kicba/call_completion.py": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578",
+    "/home/kicba/call_completion_20261103/code/call_completion/bpf.c": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+    "/home/kicba/call_completion_20261103/code/call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+    "/home/kicba/call_completion_20261103/code/call_completion/run_public_sample.py": "acec584a93b942f795c9c309578a8089a7c35c90a3f59837bea0757f87e69588",
+    "/home/kicba/call_completion_20261103/code/call_completion/PROTOCOL.md": "f0bf2daae996e8d6a75ce3af8958a67d9a71cec33d25c769f673f4a4942b251d"
+  },
+  "environment": {
+    "argv": [
+      "uname",
+      "-a"
+    ],
+    "returncode": 0,
+    "stdout": "Linux kicba-ubuntu26 7.0.0-43-generic #43-Ubuntu SMP PREEMPT_DYNAMIC Fri Oct 23 13:25:25 UTC 2026 x86_64 GNU/Linux\n",
+    "stderr": ""
+  },
+  "package_versions": {
+    "argv": [
+      "dpkg-query",
+      "-W",
+      "bcc",
+      "bpfcc-tools",
+      "libbpfcc",
+      "clang-11",
+      "llvm-11",
+      "libc6"
+    ],
+    "returncode": 1,
+    "stdout": "bpfcc-tools\t0.35.0+ds-1ubuntu2\nlibbpfcc:amd64\t0.35.0+ds-1ubuntu2\nlibc6:amd64\t2.43-2ubuntu2.7\n",
+    "stderr": "dpkg-query: no packages found matching bcc\ndpkg-query: no packages found matching clang-11\ndpkg-query: no packages found matching llvm-11\n"
+  },
+  "tainted_before": "12288",
+  "upstream_commit": "899e8be6b5f6c7236bd23b52aa65051de757e0b3"
+}

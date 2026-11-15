@@ -1,0 +1,40 @@
+{
+  "scans": 80,
+  "exercised": 79,
+  "all_valid_equal": true,
+  "groups": {
+    "ext4/legacy/256": {
+      "n": 10,
+      "exercised": 10
+    },
+    "ext4/legacy/65536": {
+      "n": 10,
+      "exercised": 10
+    },
+    "ext4/packed/256": {
+      "n": 10,
+      "exercised": 10
+    },
+    "ext4/packed/65536": {
+      "n": 10,
+      "exercised": 10
+    },
+    "tmpfs/legacy/256": {
+      "n": 10,
+      "exercised": 10
+    },
+    "tmpfs/legacy/65536": {
+      "n": 10,
+      "exercised": 10
+    },
+    "tmpfs/packed/256": {
+      "n": 10,
+      "exercised": 10
+    },
+    "tmpfs/packed/65536": {
+      "n": 10,
+      "exercised": 9
+    }
+  },
+  "passed": true
+}

@@ -1,0 +1,5002 @@
+Processed all files from /home/kicba/ubuntu26_20261114/trace_work/events
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 1)
+ Threshold=1e-30
+ Time=0.02191329002380371
+ TP=500
+ FP=30
+ TN=470
+ FN=0
+ TPR=R=1.0
+ FPR=0.06
+ TNR=0.94
+ P=0.9433962264150944
+ F1=0.970873786407767
+ ACC=0.97
+ MCC=0.9416965821485117
+
+Confusion Matrix (Run 1)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	27	73		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	2	98	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	6	94	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+64	36	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 2)
+ Threshold=1e-30
+ Time=0.01374363899230957
+ TP=500
+ FP=32
+ TN=468
+ FN=0
+ TPR=R=1.0
+ FPR=0.064
+ TNR=0.936
+ P=0.9398496240601504
+ F1=0.9689922480620154
+ ACC=0.968
+ MCC=0.9379228369755696
+
+Confusion Matrix (Run 2)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	50	50		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+73	27	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 3)
+ Threshold=1e-30
+ Time=0.016686677932739258
+ TP=500
+ FP=27
+ TN=473
+ FN=0
+ TPR=R=1.0
+ FPR=0.054
+ TNR=0.946
+ P=0.9487666034155597
+ F1=0.9737098344693281
+ ACC=0.973
+ MCC=0.9473822918078634
+
+Confusion Matrix (Run 3)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	24	76		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+64	36	100	0	100	0	100	0	4	96		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 4)
+ Threshold=1e-30
+ Time=0.016376972198486328
+ TP=500
+ FP=38
+ TN=462
+ FN=0
+ TPR=R=1.0
+ FPR=0.076
+ TNR=0.924
+ P=0.929368029739777
+ F1=0.9633911368015414
+ ACC=0.962
+ MCC=0.9266801279187732
+
+Confusion Matrix (Run 4)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	34	66		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+62	38	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 5)
+ Threshold=1e-30
+ Time=0.013389348983764648
+ TP=500
+ FP=42
+ TN=458
+ FN=0
+ TPR=R=1.0
+ FPR=0.084
+ TNR=0.916
+ P=0.922509225092251
+ F1=0.9596928982725528
+ ACC=0.958
+ MCC=0.9192488510650975
+
+Confusion Matrix (Run 5)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	34	66		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	14	86	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+67	33	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 6)
+ Threshold=1e-30
+ Time=0.013828516006469727
+ TP=500
+ FP=30
+ TN=470
+ FN=0
+ TPR=R=1.0
+ FPR=0.06
+ TNR=0.94
+ P=0.9433962264150944
+ F1=0.970873786407767
+ ACC=0.97
+ MCC=0.9416965821485117
+
+Confusion Matrix (Run 6)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	37	63		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	4	96	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+42	58	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 7)
+ Threshold=1e-30
+ Time=0.018619060516357422
+ TP=500
+ FP=41
+ TN=459
+ FN=0
+ TPR=R=1.0
+ FPR=0.082
+ TNR=0.918
+ P=0.9242144177449169
+ F1=0.9606147934678194
+ ACC=0.959
+ MCC=0.9211019680197375
+
+Confusion Matrix (Run 7)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+15	85	100	0	100	0	100	0	37	63		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+64	36	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 8)
+ Threshold=1e-30
+ Time=0.021968364715576172
+ TP=500
+ FP=34
+ TN=466
+ FN=0
+ TPR=R=1.0
+ FPR=0.068
+ TNR=0.932
+ P=0.9363295880149812
+ F1=0.9671179883945842
+ ACC=0.966
+ MCC=0.9341622857030584
+
+Confusion Matrix (Run 8)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+4	96	100	0	100	0	100	0	15	85		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+47	53	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 9)
+ Threshold=1e-30
+ Time=0.01642298698425293
+ TP=500
+ FP=49
+ TN=451
+ FN=0
+ TPR=R=1.0
+ FPR=0.098
+ TNR=0.902
+ P=0.9107468123861566
+ F1=0.9532888465204957
+ ACC=0.951
+ MCC=0.9063628549164585
+
+Confusion Matrix (Run 9)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+16	84	100	0	100	0	100	0	61	39		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	13	87	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+54	46	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 10)
+ Threshold=1e-30
+ Time=0.01278996467590332
+ TP=500
+ FP=35
+ TN=465
+ FN=0
+ TPR=R=1.0
+ FPR=0.07
+ TNR=0.93
+ P=0.9345794392523364
+ F1=0.966183574879227
+ ACC=0.965
+ MCC=0.9322869078264872
+
+Confusion Matrix (Run 10)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	27	73		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+50	50	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 11)
+ Threshold=1e-30
+ Time=0.012843847274780273
+ TP=500
+ FP=45
+ TN=455
+ FN=0
+ TPR=R=1.0
+ FPR=0.09
+ TNR=0.91
+ P=0.9174311926605505
+ F1=0.9569377990430622
+ ACC=0.955
+ MCC=0.9137080416200247
+
+Confusion Matrix (Run 11)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	48	52		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	15	85	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+55	45	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 12)
+ Threshold=1e-30
+ Time=0.014832258224487305
+ TP=500
+ FP=47
+ TN=453
+ FN=0
+ TPR=R=1.0
+ FPR=0.094
+ TNR=0.906
+ P=0.9140767824497258
+ F1=0.9551098376313276
+ ACC=0.953
+ MCC=0.9100294307875167
+
+Confusion Matrix (Run 12)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	41	59		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	12	88	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	13	87	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+62	38	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 13)
+ Threshold=1e-30
+ Time=0.0151519775390625
+ TP=500
+ FP=42
+ TN=458
+ FN=0
+ TPR=R=1.0
+ FPR=0.084
+ TNR=0.916
+ P=0.922509225092251
+ F1=0.9596928982725528
+ ACC=0.958
+ MCC=0.9192488510650975
+
+Confusion Matrix (Run 13)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	40	60		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	9	91	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+70	30	100	0	100	0	100	0	11	89		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 14)
+ Threshold=1e-30
+ Time=0.013498783111572266
+ TP=500
+ FP=36
+ TN=464
+ FN=0
+ TPR=R=1.0
+ FPR=0.072
+ TNR=0.928
+ P=0.9328358208955224
+ F1=0.9652509652509652
+ ACC=0.964
+ MCC=0.9304147686870865
+
+Confusion Matrix (Run 14)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	22	78		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+62	38	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 15)
+ Threshold=1e-30
+ Time=0.01865363121032715
+ TP=500
+ FP=46
+ TN=454
+ FN=0
+ TPR=R=1.0
+ FPR=0.092
+ TNR=0.908
+ P=0.9157509157509157
+ F1=0.9560229445506692
+ ACC=0.954
+ MCC=0.9118672225175284
+
+Confusion Matrix (Run 15)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+20	80	100	0	100	0	100	0	57	43		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+70	30	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 16)
+ Threshold=1e-30
+ Time=0.013221502304077148
+ TP=500
+ FP=27
+ TN=473
+ FN=0
+ TPR=R=1.0
+ FPR=0.054
+ TNR=0.946
+ P=0.9487666034155597
+ F1=0.9737098344693281
+ ACC=0.973
+ MCC=0.9473822918078634
+
+Confusion Matrix (Run 16)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+3	97	100	0	100	0	100	0	20	80		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	3	97	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	6	94	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+54	46	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 17)
+ Threshold=1e-30
+ Time=0.012754440307617188
+ TP=500
+ FP=31
+ TN=469
+ FN=0
+ TPR=R=1.0
+ FPR=0.062
+ TNR=0.938
+ P=0.9416195856873822
+ F1=0.9699321047526673
+ ACC=0.969
+ MCC=0.9398080502819522
+
+Confusion Matrix (Run 17)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	44	56		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+58	42	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 18)
+ Threshold=1e-30
+ Time=0.013244152069091797
+ TP=500
+ FP=43
+ TN=457
+ FN=0
+ TPR=R=1.0
+ FPR=0.086
+ TNR=0.914
+ P=0.9208103130755064
+ F1=0.9587727708533078
+ ACC=0.957
+ MCC=0.9173988370120233
+
+Confusion Matrix (Run 18)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	45	55		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	9	91	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+61	39	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 19)
+ Threshold=1e-30
+ Time=0.015370368957519531
+ TP=500
+ FP=31
+ TN=469
+ FN=0
+ TPR=R=1.0
+ FPR=0.062
+ TNR=0.938
+ P=0.9416195856873822
+ F1=0.9699321047526673
+ ACC=0.969
+ MCC=0.9398080502819522
+
+Confusion Matrix (Run 19)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	49	51		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	99	1		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+74	26	100	0	100	0	100	0	4	96		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 20)
+ Threshold=1e-30
+ Time=0.013099193572998047
+ TP=500
+ FP=35
+ TN=465
+ FN=0
+ TPR=R=1.0
+ FPR=0.07
+ TNR=0.93
+ P=0.9345794392523364
+ F1=0.966183574879227
+ ACC=0.965
+ MCC=0.9322869078264872
+
+Confusion Matrix (Run 20)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	32	68		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	9	91	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+45	55	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 21)
+ Threshold=1e-30
+ Time=0.013117074966430664
+ TP=500
+ FP=45
+ TN=455
+ FN=0
+ TPR=R=1.0
+ FPR=0.09
+ TNR=0.91
+ P=0.9174311926605505
+ F1=0.9569377990430622
+ ACC=0.955
+ MCC=0.9137080416200247
+
+Confusion Matrix (Run 21)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+12	88	100	0	100	0	100	0	41	59		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	13	87	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+41	59	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 22)
+ Threshold=1e-30
+ Time=0.012865066528320312
+ TP=500
+ FP=45
+ TN=455
+ FN=0
+ TPR=R=1.0
+ FPR=0.09
+ TNR=0.91
+ P=0.9174311926605505
+ F1=0.9569377990430622
+ ACC=0.955
+ MCC=0.9137080416200247
+
+Confusion Matrix (Run 22)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	25	75		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	16	84	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	13	87	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+55	45	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 23)
+ Threshold=1e-30
+ Time=0.01323699951171875
+ TP=500
+ FP=35
+ TN=465
+ FN=0
+ TPR=R=1.0
+ FPR=0.07
+ TNR=0.93
+ P=0.9345794392523364
+ F1=0.966183574879227
+ ACC=0.965
+ MCC=0.9322869078264872
+
+Confusion Matrix (Run 23)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	32	68		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+41	59	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 24)
+ Threshold=1e-30
+ Time=0.015717029571533203
+ TP=500
+ FP=33
+ TN=467
+ FN=0
+ TPR=R=1.0
+ FPR=0.066
+ TNR=0.934
+ P=0.9380863039399625
+ F1=0.968054211035818
+ ACC=0.967
+ MCC=0.9360409221182185
+
+Confusion Matrix (Run 24)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	25	75		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+65	35	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 25)
+ Threshold=1e-30
+ Time=0.013303518295288086
+ TP=500
+ FP=49
+ TN=451
+ FN=0
+ TPR=R=1.0
+ FPR=0.098
+ TNR=0.902
+ P=0.9107468123861566
+ F1=0.9532888465204957
+ ACC=0.951
+ MCC=0.9063628549164585
+
+Confusion Matrix (Run 25)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	33	67		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	16	84	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+74	26	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 26)
+ Threshold=1e-30
+ Time=0.013132572174072266
+ TP=500
+ FP=53
+ TN=447
+ FN=0
+ TPR=R=1.0
+ FPR=0.106
+ TNR=0.894
+ P=0.9041591320072333
+ F1=0.949667616334283
+ ACC=0.947
+ MCC=0.8990652167748825
+
+Confusion Matrix (Run 26)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+16	84	100	0	100	0	100	0	70	30		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	16	84	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+84	16	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 27)
+ Threshold=1e-30
+ Time=0.013109207153320312
+ TP=500
+ FP=52
+ TN=448
+ FN=0
+ TPR=R=1.0
+ FPR=0.104
+ TNR=0.896
+ P=0.9057971014492754
+ F1=0.9505703422053232
+ ACC=0.948
+ MCC=0.9008852329229016
+
+Confusion Matrix (Run 27)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	34	66		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	13	87	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+36	64	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 28)
+ Threshold=1e-30
+ Time=0.013976812362670898
+ TP=500
+ FP=37
+ TN=463
+ FN=0
+ TPR=R=1.0
+ FPR=0.074
+ TNR=0.926
+ P=0.931098696461825
+ F1=0.9643201542912246
+ ACC=0.963
+ MCC=0.9285458485845758
+
+Confusion Matrix (Run 28)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	56	44		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+72	28	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 29)
+ Threshold=1e-30
+ Time=0.012940168380737305
+ TP=500
+ FP=30
+ TN=470
+ FN=0
+ TPR=R=1.0
+ FPR=0.06
+ TNR=0.94
+ P=0.9433962264150944
+ F1=0.970873786407767
+ ACC=0.97
+ MCC=0.9416965821485117
+
+Confusion Matrix (Run 29)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	19	81		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	4	96	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+71	29	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 30)
+ Threshold=1e-30
+ Time=0.013683557510375977
+ TP=500
+ FP=45
+ TN=455
+ FN=0
+ TPR=R=1.0
+ FPR=0.09
+ TNR=0.91
+ P=0.9174311926605505
+ F1=0.9569377990430622
+ ACC=0.955
+ MCC=0.9137080416200247
+
+Confusion Matrix (Run 30)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+15	85	100	0	100	0	100	0	22	78		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	16	84	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+71	29	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 31)
+ Threshold=1e-30
+ Time=0.013633489608764648
+ TP=500
+ FP=44
+ TN=456
+ FN=0
+ TPR=R=1.0
+ FPR=0.088
+ TNR=0.912
+ P=0.9191176470588235
+ F1=0.9578544061302682
+ ACC=0.956
+ MCC=0.9155519068396106
+
+Confusion Matrix (Run 31)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	39	61		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+70	30	100	0	100	0	100	0	14	86		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 32)
+ Threshold=1e-30
+ Time=0.013469696044921875
+ TP=500
+ FP=28
+ TN=472
+ FN=0
+ TPR=R=1.0
+ FPR=0.056
+ TNR=0.944
+ P=0.946969696969697
+ F1=0.9727626459143969
+ ACC=0.972
+ MCC=0.9454836825347087
+
+Confusion Matrix (Run 32)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	23	77		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	4	96	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+78	22	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 33)
+ Threshold=1e-30
+ Time=0.01307225227355957
+ TP=500
+ FP=43
+ TN=457
+ FN=0
+ TPR=R=1.0
+ FPR=0.086
+ TNR=0.914
+ P=0.9208103130755064
+ F1=0.9587727708533078
+ ACC=0.957
+ MCC=0.9173988370120233
+
+Confusion Matrix (Run 33)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	37	63		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	12	88	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+60	40	100	0	100	0	100	0	11	89		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 34)
+ Threshold=1e-30
+ Time=0.012932300567626953
+ TP=500
+ FP=40
+ TN=460
+ FN=0
+ TPR=R=1.0
+ FPR=0.08
+ TNR=0.92
+ P=0.9259259259259259
+ F1=0.9615384615384616
+ ACC=0.96
+ MCC=0.9229582069908973
+
+Confusion Matrix (Run 34)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	39	61		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+51	49	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 35)
+ Threshold=1e-30
+ Time=0.012966156005859375
+ TP=500
+ FP=34
+ TN=466
+ FN=0
+ TPR=R=1.0
+ FPR=0.068
+ TNR=0.932
+ P=0.9363295880149812
+ F1=0.9671179883945842
+ ACC=0.966
+ MCC=0.9341622857030584
+
+Confusion Matrix (Run 35)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	28	72		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+67	33	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 36)
+ Threshold=1e-30
+ Time=0.013140678405761719
+ TP=500
+ FP=46
+ TN=454
+ FN=0
+ TPR=R=1.0
+ FPR=0.092
+ TNR=0.908
+ P=0.9157509157509157
+ F1=0.9560229445506692
+ ACC=0.954
+ MCC=0.9118672225175284
+
+Confusion Matrix (Run 36)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+14	86	100	0	100	0	100	0	57	43		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	15	85	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+73	27	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 37)
+ Threshold=1e-30
+ Time=0.01372838020324707
+ TP=500
+ FP=49
+ TN=451
+ FN=0
+ TPR=R=1.0
+ FPR=0.098
+ TNR=0.902
+ P=0.9107468123861566
+ F1=0.9532888465204957
+ ACC=0.951
+ MCC=0.9063628549164585
+
+Confusion Matrix (Run 37)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	38	62		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	15	85	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+63	37	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 38)
+ Threshold=1e-30
+ Time=0.01411128044128418
+ TP=500
+ FP=43
+ TN=457
+ FN=0
+ TPR=R=1.0
+ FPR=0.086
+ TNR=0.914
+ P=0.9208103130755064
+ F1=0.9587727708533078
+ ACC=0.957
+ MCC=0.9173988370120233
+
+Confusion Matrix (Run 38)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	38	62		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	15	85	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+67	33	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 39)
+ Threshold=1e-30
+ Time=0.013934612274169922
+ TP=500
+ FP=56
+ TN=444
+ FN=0
+ TPR=R=1.0
+ FPR=0.112
+ TNR=0.888
+ P=0.8992805755395683
+ F1=0.946969696969697
+ ACC=0.944
+ MCC=0.8936224880110933
+
+Confusion Matrix (Run 39)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+12	88	100	0	100	0	100	0	39	61		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	13	87	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	18	82	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+75	25	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 40)
+ Threshold=1e-30
+ Time=0.013412952423095703
+ TP=500
+ FP=45
+ TN=455
+ FN=0
+ TPR=R=1.0
+ FPR=0.09
+ TNR=0.91
+ P=0.9174311926605505
+ F1=0.9569377990430622
+ ACC=0.955
+ MCC=0.9137080416200247
+
+Confusion Matrix (Run 40)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+14	86	100	0	100	0	100	0	47	53		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	13	87	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+69	31	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 41)
+ Threshold=1e-30
+ Time=0.013707876205444336
+ TP=500
+ FP=59
+ TN=441
+ FN=0
+ TPR=R=1.0
+ FPR=0.118
+ TNR=0.882
+ P=0.8944543828264758
+ F1=0.9442870632672332
+ ACC=0.941
+ MCC=0.8882053623194085
+
+Confusion Matrix (Run 41)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+16	84	100	0	100	0	100	0	46	54		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	14	86	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	13	87	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+57	43	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 42)
+ Threshold=1e-30
+ Time=0.013429641723632812
+ TP=500
+ FP=29
+ TN=471
+ FN=0
+ TPR=R=1.0
+ FPR=0.058
+ TNR=0.942
+ P=0.945179584120983
+ F1=0.9718172983479106
+ ACC=0.971
+ MCC=0.9435884527917697
+
+Confusion Matrix (Run 42)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	25	75		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+75	25	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 43)
+ Threshold=1e-30
+ Time=0.013407707214355469
+ TP=500
+ FP=33
+ TN=467
+ FN=0
+ TPR=R=1.0
+ FPR=0.066
+ TNR=0.934
+ P=0.9380863039399625
+ F1=0.968054211035818
+ ACC=0.967
+ MCC=0.9360409221182185
+
+Confusion Matrix (Run 43)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	23	77		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+63	37	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 44)
+ Threshold=1e-30
+ Time=0.012721776962280273
+ TP=500
+ FP=28
+ TN=472
+ FN=0
+ TPR=R=1.0
+ FPR=0.056
+ TNR=0.944
+ P=0.946969696969697
+ F1=0.9727626459143969
+ ACC=0.972
+ MCC=0.9454836825347087
+
+Confusion Matrix (Run 44)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	33	67		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	4	96	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+43	57	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 45)
+ Threshold=1e-30
+ Time=0.012806415557861328
+ TP=500
+ FP=36
+ TN=464
+ FN=0
+ TPR=R=1.0
+ FPR=0.072
+ TNR=0.928
+ P=0.9328358208955224
+ F1=0.9652509652509652
+ ACC=0.964
+ MCC=0.9304147686870865
+
+Confusion Matrix (Run 45)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	40	60		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+52	48	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 46)
+ Threshold=1e-30
+ Time=0.013175725936889648
+ TP=500
+ FP=42
+ TN=458
+ FN=0
+ TPR=R=1.0
+ FPR=0.084
+ TNR=0.916
+ P=0.922509225092251
+ F1=0.9596928982725528
+ ACC=0.958
+ MCC=0.9192488510650975
+
+Confusion Matrix (Run 46)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+15	85	100	0	100	0	100	0	48	52		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	4	96	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	8	92	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+55	45	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 47)
+ Threshold=1e-30
+ Time=0.012835979461669922
+ TP=500
+ FP=53
+ TN=447
+ FN=0
+ TPR=R=1.0
+ FPR=0.106
+ TNR=0.894
+ P=0.9041591320072333
+ F1=0.949667616334283
+ ACC=0.947
+ MCC=0.8990652167748825
+
+Confusion Matrix (Run 47)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+17	83	100	0	100	0	100	0	38	62		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+65	35	100	0	100	0	100	0	15	85		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 48)
+ Threshold=1e-30
+ Time=0.11159658432006836
+ TP=500
+ FP=41
+ TN=459
+ FN=0
+ TPR=R=1.0
+ FPR=0.082
+ TNR=0.918
+ P=0.9242144177449169
+ F1=0.9606147934678194
+ ACC=0.959
+ MCC=0.9211019680197375
+
+Confusion Matrix (Run 48)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	25	75		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+83	17	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 49)
+ Threshold=1e-30
+ Time=0.017904996871948242
+ TP=500
+ FP=52
+ TN=448
+ FN=0
+ TPR=R=1.0
+ FPR=0.104
+ TNR=0.896
+ P=0.9057971014492754
+ F1=0.9505703422053232
+ ACC=0.948
+ MCC=0.9008852329229016
+
+Confusion Matrix (Run 49)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	42	58		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	18	82	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	14	86	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+41	59	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 50)
+ Threshold=1e-30
+ Time=0.014891624450683594
+ TP=500
+ FP=40
+ TN=460
+ FN=0
+ TPR=R=1.0
+ FPR=0.08
+ TNR=0.92
+ P=0.9259259259259259
+ F1=0.9615384615384616
+ ACC=0.96
+ MCC=0.9229582069908973
+
+Confusion Matrix (Run 50)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	24	76		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+58	42	100	0	100	0	100	0	2	98		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 51)
+ Threshold=1e-30
+ Time=0.024040937423706055
+ TP=500
+ FP=57
+ TN=443
+ FN=0
+ TPR=R=1.0
+ FPR=0.114
+ TNR=0.886
+ P=0.8976660682226212
+ F1=0.9460737937559129
+ ACC=0.943
+ MCC=0.8918139584270042
+
+Confusion Matrix (Run 51)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+18	82	100	0	100	0	100	0	49	51		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	16	84	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	13	87	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+54	46	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 52)
+ Threshold=1e-30
+ Time=0.014534473419189453
+ TP=500
+ FP=23
+ TN=477
+ FN=0
+ TPR=R=1.0
+ FPR=0.046
+ TNR=0.954
+ P=0.9560229445506692
+ F1=0.9775171065493646
+ ACC=0.977
+ MCC=0.9550109366396484
+
+Confusion Matrix (Run 52)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+4	96	100	0	100	0	100	0	19	81		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+51	49	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 53)
+ Threshold=1e-30
+ Time=0.013771772384643555
+ TP=500
+ FP=42
+ TN=458
+ FN=0
+ TPR=R=1.0
+ FPR=0.084
+ TNR=0.916
+ P=0.922509225092251
+ F1=0.9596928982725528
+ ACC=0.958
+ MCC=0.9192488510650975
+
+Confusion Matrix (Run 53)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	25	75		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	14	86	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+60	40	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 54)
+ Threshold=1e-30
+ Time=0.01370692253112793
+ TP=500
+ FP=34
+ TN=466
+ FN=0
+ TPR=R=1.0
+ FPR=0.068
+ TNR=0.932
+ P=0.9363295880149812
+ F1=0.9671179883945842
+ ACC=0.966
+ MCC=0.9341622857030584
+
+Confusion Matrix (Run 54)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	30	70		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+67	33	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 55)
+ Threshold=1e-30
+ Time=0.013059616088867188
+ TP=500
+ FP=47
+ TN=453
+ FN=0
+ TPR=R=1.0
+ FPR=0.094
+ TNR=0.906
+ P=0.9140767824497258
+ F1=0.9551098376313276
+ ACC=0.953
+ MCC=0.9100294307875167
+
+Confusion Matrix (Run 55)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	38	62		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	14	86	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+64	36	100	0	100	0	100	0	14	86		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 56)
+ Threshold=1e-30
+ Time=0.013433456420898438
+ TP=500
+ FP=46
+ TN=454
+ FN=0
+ TPR=R=1.0
+ FPR=0.092
+ TNR=0.908
+ P=0.9157509157509157
+ F1=0.9560229445506692
+ ACC=0.954
+ MCC=0.9118672225175284
+
+Confusion Matrix (Run 56)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+19	81	100	0	100	0	100	0	51	49		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+47	53	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 57)
+ Threshold=1e-30
+ Time=0.012954473495483398
+ TP=500
+ FP=35
+ TN=465
+ FN=0
+ TPR=R=1.0
+ FPR=0.07
+ TNR=0.93
+ P=0.9345794392523364
+ F1=0.966183574879227
+ ACC=0.965
+ MCC=0.9322869078264872
+
+Confusion Matrix (Run 57)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	36	64		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	0	100	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+78	22	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 58)
+ Threshold=1e-30
+ Time=0.0191342830657959
+ TP=500
+ FP=59
+ TN=441
+ FN=0
+ TPR=R=1.0
+ FPR=0.118
+ TNR=0.882
+ P=0.8944543828264758
+ F1=0.9442870632672332
+ ACC=0.941
+ MCC=0.8882053623194085
+
+Confusion Matrix (Run 58)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+16	84	100	0	100	0	100	0	36	64		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	21	79	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+55	45	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 59)
+ Threshold=1e-30
+ Time=0.013219594955444336
+ TP=500
+ FP=51
+ TN=449
+ FN=0
+ TPR=R=1.0
+ FPR=0.102
+ TNR=0.898
+ P=0.9074410163339383
+ F1=0.9514747859181731
+ ACC=0.949
+ MCC=0.9027081658364882
+
+Confusion Matrix (Run 59)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+15	85	100	0	100	0	100	0	51	49		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	13	87	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+47	53	100	0	100	0	100	0	11	89		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 60)
+ Threshold=1e-30
+ Time=0.014087438583374023
+ TP=500
+ FP=34
+ TN=466
+ FN=0
+ TPR=R=1.0
+ FPR=0.068
+ TNR=0.932
+ P=0.9363295880149812
+ F1=0.9671179883945842
+ ACC=0.966
+ MCC=0.9341622857030584
+
+Confusion Matrix (Run 60)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+12	88	100	0	100	0	100	0	42	58		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	3	97	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	13	87	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+38	62	100	0	100	0	100	0	3	97		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 61)
+ Threshold=1e-30
+ Time=0.013468742370605469
+ TP=500
+ FP=53
+ TN=447
+ FN=0
+ TPR=R=1.0
+ FPR=0.106
+ TNR=0.894
+ P=0.9041591320072333
+ F1=0.949667616334283
+ ACC=0.947
+ MCC=0.8990652167748825
+
+Confusion Matrix (Run 61)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+20	80	100	0	100	0	100	0	46	54		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	17	83	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+76	24	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 62)
+ Threshold=1e-30
+ Time=0.015322685241699219
+ TP=500
+ FP=43
+ TN=457
+ FN=0
+ TPR=R=1.0
+ FPR=0.086
+ TNR=0.914
+ P=0.9208103130755064
+ F1=0.9587727708533078
+ ACC=0.957
+ MCC=0.9173988370120233
+
+Confusion Matrix (Run 62)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+20	80	100	0	100	0	100	0	54	46		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+50	50	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 63)
+ Threshold=1e-30
+ Time=0.012696266174316406
+ TP=500
+ FP=29
+ TN=471
+ FN=0
+ TPR=R=1.0
+ FPR=0.058
+ TNR=0.942
+ P=0.945179584120983
+ F1=0.9718172983479106
+ ACC=0.971
+ MCC=0.9435884527917697
+
+Confusion Matrix (Run 63)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	21	79		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	0	100	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+43	57	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 64)
+ Threshold=1e-30
+ Time=0.01342320442199707
+ TP=500
+ FP=42
+ TN=458
+ FN=0
+ TPR=R=1.0
+ FPR=0.084
+ TNR=0.916
+ P=0.922509225092251
+ F1=0.9596928982725528
+ ACC=0.958
+ MCC=0.9192488510650975
+
+Confusion Matrix (Run 64)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	34	66		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+69	31	100	0	100	0	100	0	4	96		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 65)
+ Threshold=1e-30
+ Time=0.013818740844726562
+ TP=500
+ FP=44
+ TN=456
+ FN=0
+ TPR=R=1.0
+ FPR=0.088
+ TNR=0.912
+ P=0.9191176470588235
+ F1=0.9578544061302682
+ ACC=0.956
+ MCC=0.9155519068396106
+
+Confusion Matrix (Run 65)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	46	54		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	15	85	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+76	24	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 66)
+ Threshold=1e-30
+ Time=0.012969255447387695
+ TP=500
+ FP=46
+ TN=454
+ FN=0
+ TPR=R=1.0
+ FPR=0.092
+ TNR=0.908
+ P=0.9157509157509157
+ F1=0.9560229445506692
+ ACC=0.954
+ MCC=0.9118672225175284
+
+Confusion Matrix (Run 66)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+12	88	100	0	100	0	100	0	40	60		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	4	96	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	15	85	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+74	26	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 67)
+ Threshold=1e-30
+ Time=0.01607370376586914
+ TP=500
+ FP=31
+ TN=469
+ FN=0
+ TPR=R=1.0
+ FPR=0.062
+ TNR=0.938
+ P=0.9416195856873822
+ F1=0.9699321047526673
+ ACC=0.969
+ MCC=0.9398080502819522
+
+Confusion Matrix (Run 67)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	35	65		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	3	97	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	9	91	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+75	25	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 68)
+ Threshold=1e-30
+ Time=0.013722419738769531
+ TP=500
+ FP=36
+ TN=464
+ FN=0
+ TPR=R=1.0
+ FPR=0.072
+ TNR=0.928
+ P=0.9328358208955224
+ F1=0.9652509652509652
+ ACC=0.964
+ MCC=0.9304147686870865
+
+Confusion Matrix (Run 68)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	35	65		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+50	50	100	0	100	0	100	0	12	88		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 69)
+ Threshold=1e-30
+ Time=0.013225078582763672
+ TP=500
+ FP=40
+ TN=460
+ FN=0
+ TPR=R=1.0
+ FPR=0.08
+ TNR=0.92
+ P=0.9259259259259259
+ F1=0.9615384615384616
+ ACC=0.96
+ MCC=0.9229582069908973
+
+Confusion Matrix (Run 69)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	44	56		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	12	88	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+54	46	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 70)
+ Threshold=1e-30
+ Time=0.015435218811035156
+ TP=500
+ FP=53
+ TN=447
+ FN=0
+ TPR=R=1.0
+ FPR=0.106
+ TNR=0.894
+ P=0.9041591320072333
+ F1=0.949667616334283
+ ACC=0.947
+ MCC=0.8990652167748825
+
+Confusion Matrix (Run 70)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+18	82	100	0	100	0	100	0	47	53		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	7	93	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+84	16	100	0	100	0	100	0	11	89		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 71)
+ Threshold=1e-30
+ Time=0.015272140502929688
+ TP=500
+ FP=43
+ TN=457
+ FN=0
+ TPR=R=1.0
+ FPR=0.086
+ TNR=0.914
+ P=0.9208103130755064
+ F1=0.9587727708533078
+ ACC=0.957
+ MCC=0.9173988370120233
+
+Confusion Matrix (Run 71)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+15	85	100	0	100	0	100	0	53	47		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+77	23	100	0	100	0	100	0	11	89		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 72)
+ Threshold=1e-30
+ Time=0.013551950454711914
+ TP=500
+ FP=24
+ TN=476
+ FN=0
+ TPR=R=1.0
+ FPR=0.048
+ TNR=0.952
+ P=0.9541984732824428
+ F1=0.9765625
+ ACC=0.976
+ MCC=0.9530986027504633
+
+Confusion Matrix (Run 72)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	27	73		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	3	97	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+59	41	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 73)
+ Threshold=1e-30
+ Time=0.0171968936920166
+ TP=500
+ FP=36
+ TN=464
+ FN=0
+ TPR=R=1.0
+ FPR=0.072
+ TNR=0.928
+ P=0.9328358208955224
+ F1=0.9652509652509652
+ ACC=0.964
+ MCC=0.9304147686870865
+
+Confusion Matrix (Run 73)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	34	66		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+48	52	100	0	100	0	100	0	4	96		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 74)
+ Threshold=1e-30
+ Time=0.013973236083984375
+ TP=500
+ FP=39
+ TN=461
+ FN=0
+ TPR=R=1.0
+ FPR=0.078
+ TNR=0.922
+ P=0.9276437847866419
+ F1=0.9624639076034649
+ ACC=0.961
+ MCC=0.9248175871885677
+
+Confusion Matrix (Run 74)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	36	64		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	9	91	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+53	47	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 75)
+ Threshold=1e-30
+ Time=0.01360011100769043
+ TP=500
+ FP=45
+ TN=455
+ FN=0
+ TPR=R=1.0
+ FPR=0.09
+ TNR=0.91
+ P=0.9174311926605505
+ F1=0.9569377990430622
+ ACC=0.955
+ MCC=0.9137080416200247
+
+Confusion Matrix (Run 75)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	26	74		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	15	85	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+69	31	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 76)
+ Threshold=1e-30
+ Time=0.013407468795776367
+ TP=500
+ FP=38
+ TN=462
+ FN=0
+ TPR=R=1.0
+ FPR=0.076
+ TNR=0.924
+ P=0.929368029739777
+ F1=0.9633911368015414
+ ACC=0.962
+ MCC=0.9266801279187732
+
+Confusion Matrix (Run 76)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	32	68		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	8	92	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+39	61	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 77)
+ Threshold=1e-30
+ Time=0.01567244529724121
+ TP=500
+ FP=29
+ TN=471
+ FN=0
+ TPR=R=1.0
+ FPR=0.058
+ TNR=0.942
+ P=0.945179584120983
+ F1=0.9718172983479106
+ ACC=0.971
+ MCC=0.9435884527917697
+
+Confusion Matrix (Run 77)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+2	98	100	0	100	0	100	0	19	81		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	4	96	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	8	92	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+75	25	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 78)
+ Threshold=1e-30
+ Time=0.013076066970825195
+ TP=500
+ FP=40
+ TN=460
+ FN=0
+ TPR=R=1.0
+ FPR=0.08
+ TNR=0.92
+ P=0.9259259259259259
+ F1=0.9615384615384616
+ ACC=0.96
+ MCC=0.9229582069908973
+
+Confusion Matrix (Run 78)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+15	85	100	0	100	0	100	0	43	57		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+51	49	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 79)
+ Threshold=1e-30
+ Time=0.013456344604492188
+ TP=500
+ FP=34
+ TN=466
+ FN=0
+ TPR=R=1.0
+ FPR=0.068
+ TNR=0.932
+ P=0.9363295880149812
+ F1=0.9671179883945842
+ ACC=0.966
+ MCC=0.9341622857030584
+
+Confusion Matrix (Run 79)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	28	72		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	7	93	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+59	41	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 80)
+ Threshold=1e-30
+ Time=0.013350486755371094
+ TP=500
+ FP=35
+ TN=465
+ FN=0
+ TPR=R=1.0
+ FPR=0.07
+ TNR=0.93
+ P=0.9345794392523364
+ F1=0.966183574879227
+ ACC=0.965
+ MCC=0.9322869078264872
+
+Confusion Matrix (Run 80)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	37	63		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	5	95	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+56	44	100	0	100	0	100	0	4	96		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 81)
+ Threshold=1e-30
+ Time=0.013199567794799805
+ TP=500
+ FP=46
+ TN=454
+ FN=0
+ TPR=R=1.0
+ FPR=0.092
+ TNR=0.908
+ P=0.9157509157509157
+ F1=0.9560229445506692
+ ACC=0.954
+ MCC=0.9118672225175284
+
+Confusion Matrix (Run 81)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+14	86	100	0	100	0	100	0	50	50		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	6	94	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+59	41	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 82)
+ Threshold=1e-30
+ Time=0.017807960510253906
+ TP=500
+ FP=38
+ TN=462
+ FN=0
+ TPR=R=1.0
+ FPR=0.076
+ TNR=0.924
+ P=0.929368029739777
+ F1=0.9633911368015414
+ ACC=0.962
+ MCC=0.9266801279187732
+
+Confusion Matrix (Run 82)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	24	76		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+39	61	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 83)
+ Threshold=1e-30
+ Time=0.01356959342956543
+ TP=500
+ FP=43
+ TN=457
+ FN=0
+ TPR=R=1.0
+ FPR=0.086
+ TNR=0.914
+ P=0.9208103130755064
+ F1=0.9587727708533078
+ ACC=0.957
+ MCC=0.9173988370120233
+
+Confusion Matrix (Run 83)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	29	71		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	10	90	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+64	36	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 84)
+ Threshold=1e-30
+ Time=0.01625680923461914
+ TP=500
+ FP=50
+ TN=450
+ FN=0
+ TPR=R=1.0
+ FPR=0.1
+ TNR=0.9
+ P=0.9090909090909091
+ F1=0.9523809523809523
+ ACC=0.95
+ MCC=0.9045340337332909
+
+Confusion Matrix (Run 84)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+19	81	100	0	100	0	100	0	66	34		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	9	91	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	6	94	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+34	66	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 85)
+ Threshold=1e-30
+ Time=0.013712167739868164
+ TP=500
+ FP=37
+ TN=463
+ FN=0
+ TPR=R=1.0
+ FPR=0.074
+ TNR=0.926
+ P=0.931098696461825
+ F1=0.9643201542912246
+ ACC=0.963
+ MCC=0.9285458485845758
+
+Confusion Matrix (Run 85)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	36	64		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	11	89	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+62	38	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 86)
+ Threshold=1e-30
+ Time=0.013694286346435547
+ TP=500
+ FP=36
+ TN=464
+ FN=0
+ TPR=R=1.0
+ FPR=0.072
+ TNR=0.928
+ P=0.9328358208955224
+ F1=0.9652509652509652
+ ACC=0.964
+ MCC=0.9304147686870865
+
+Confusion Matrix (Run 86)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	20	80		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	6	94	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+44	56	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 87)
+ Threshold=1e-30
+ Time=0.01451420783996582
+ TP=500
+ FP=49
+ TN=451
+ FN=0
+ TPR=R=1.0
+ FPR=0.098
+ TNR=0.902
+ P=0.9107468123861566
+ F1=0.9532888465204957
+ ACC=0.951
+ MCC=0.9063628549164585
+
+Confusion Matrix (Run 87)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+17	83	100	0	100	0	100	0	58	42		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	14	86	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+98	2	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+45	55	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 88)
+ Threshold=1e-30
+ Time=0.013254165649414062
+ TP=500
+ FP=40
+ TN=460
+ FN=0
+ TPR=R=1.0
+ FPR=0.08
+ TNR=0.92
+ P=0.9259259259259259
+ F1=0.9615384615384616
+ ACC=0.96
+ MCC=0.9229582069908973
+
+Confusion Matrix (Run 88)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+4	96	100	0	100	0	100	0	29	71		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+53	47	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 89)
+ Threshold=1e-30
+ Time=0.013812065124511719
+ TP=500
+ FP=29
+ TN=471
+ FN=0
+ TPR=R=1.0
+ FPR=0.058
+ TNR=0.942
+ P=0.945179584120983
+ F1=0.9718172983479106
+ ACC=0.971
+ MCC=0.9435884527917697
+
+Confusion Matrix (Run 89)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	30	70		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	3	97	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+57	43	100	0	100	0	100	0	4	96		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 90)
+ Threshold=1e-30
+ Time=0.01287388801574707
+ TP=500
+ FP=41
+ TN=459
+ FN=0
+ TPR=R=1.0
+ FPR=0.082
+ TNR=0.918
+ P=0.9242144177449169
+ F1=0.9606147934678194
+ ACC=0.959
+ MCC=0.9211019680197375
+
+Confusion Matrix (Run 90)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+14	86	100	0	100	0	100	0	54	46		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	10	90	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+69	31	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 91)
+ Threshold=1e-30
+ Time=0.013439416885375977
+ TP=500
+ FP=23
+ TN=477
+ FN=0
+ TPR=R=1.0
+ FPR=0.046
+ TNR=0.954
+ P=0.9560229445506692
+ F1=0.9775171065493646
+ ACC=0.977
+ MCC=0.9550109366396484
+
+Confusion Matrix (Run 91)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+7	93	100	0	100	0	100	0	44	56		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	2	98	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+60	40	100	0	100	0	100	0	8	92		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 92)
+ Threshold=1e-30
+ Time=0.013349533081054688
+ TP=500
+ FP=49
+ TN=451
+ FN=0
+ TPR=R=1.0
+ FPR=0.098
+ TNR=0.902
+ P=0.9107468123861566
+ F1=0.9532888465204957
+ ACC=0.951
+ MCC=0.9063628549164585
+
+Confusion Matrix (Run 92)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+17	83	100	0	100	0	100	0	58	42		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+54	46	100	0	100	0	100	0	12	88		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 93)
+ Threshold=1e-30
+ Time=0.02208542823791504
+ TP=500
+ FP=41
+ TN=459
+ FN=0
+ TPR=R=1.0
+ FPR=0.082
+ TNR=0.918
+ P=0.9242144177449169
+ F1=0.9606147934678194
+ ACC=0.959
+ MCC=0.9211019680197375
+
+Confusion Matrix (Run 93)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+8	92	100	0	100	0	100	0	33	67		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	11	89	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+82	18	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 94)
+ Threshold=1e-30
+ Time=0.012891054153442383
+ TP=500
+ FP=38
+ TN=462
+ FN=0
+ TPR=R=1.0
+ FPR=0.076
+ TNR=0.924
+ P=0.929368029739777
+ F1=0.9633911368015414
+ ACC=0.962
+ MCC=0.9266801279187732
+
+Confusion Matrix (Run 94)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+10	90	100	0	100	0	100	0	31	69		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	4	96	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	15	85	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	2	98	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+66	34	100	0	100	0	100	0	7	93		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 95)
+ Threshold=1e-30
+ Time=0.01355123519897461
+ TP=500
+ FP=44
+ TN=456
+ FN=0
+ TPR=R=1.0
+ FPR=0.088
+ TNR=0.912
+ P=0.9191176470588235
+ F1=0.9578544061302682
+ ACC=0.956
+ MCC=0.9155519068396106
+
+Confusion Matrix (Run 95)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+13	87	100	0	100	0	100	0	47	53		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	7	93	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	12	88	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+68	32	100	0	100	0	100	0	9	91		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 96)
+ Threshold=1e-30
+ Time=0.01333165168762207
+ TP=500
+ FP=31
+ TN=469
+ FN=0
+ TPR=R=1.0
+ FPR=0.062
+ TNR=0.938
+ P=0.9416195856873822
+ F1=0.9699321047526673
+ ACC=0.969
+ MCC=0.9398080502819522
+
+Confusion Matrix (Run 96)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	24	76		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	7	93	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+99	1	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+61	39	100	0	100	0	100	0	6	94		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 97)
+ Threshold=1e-30
+ Time=0.012911081314086914
+ TP=500
+ FP=31
+ TN=469
+ FN=0
+ TPR=R=1.0
+ FPR=0.062
+ TNR=0.938
+ P=0.9416195856873822
+ F1=0.9699321047526673
+ ACC=0.969
+ MCC=0.9398080502819522
+
+Confusion Matrix (Run 97)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	29	71		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	9	91	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	1	99	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+52	48	100	0	100	0	100	0	5	95		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 98)
+ Threshold=1e-30
+ Time=0.01300358772277832
+ TP=500
+ FP=38
+ TN=462
+ FN=0
+ TPR=R=1.0
+ FPR=0.076
+ TNR=0.924
+ P=0.929368029739777
+ F1=0.9633911368015414
+ ACC=0.962
+ MCC=0.9266801279187732
+
+Confusion Matrix (Run 98)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+6	94	100	0	100	0	100	0	42	58		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	10	90	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	4	96	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+68	32	100	0	100	0	100	0	13	87		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 99)
+ Threshold=1e-30
+ Time=0.013390541076660156
+ TP=500
+ FP=41
+ TN=459
+ FN=0
+ TPR=R=1.0
+ FPR=0.082
+ TNR=0.918
+ P=0.9242144177449169
+ F1=0.9606147934678194
+ ACC=0.959
+ MCC=0.9211019680197375
+
+Confusion Matrix (Run 99)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+11	89	100	0	100	0	100	0	28	72		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	8	92	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	6	94	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	6	94	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+55	45	100	0	100	0	100	0	10	90		Neg - Actual	filename_length
+
+Normal batches: 750
+  Normal batches for training: 250
+    default: 50
+    file_count: 50
+    system_load: 50
+    ls_basic: 50
+    filename_length: 50
+  Normal batches for testing: 500
+    default: 100
+    file_count: 100
+    system_load: 100
+    ls_basic: 100
+    filename_length: 100
+Anomalous batches: 500
+  default: 100
+  file_count: 100
+  system_load: 100
+  ls_basic: 100
+  filename_length: 100
+
+Results (Run 100)
+ Threshold=1e-30
+ Time=0.014484882354736328
+ TP=500
+ FP=33
+ TN=467
+ FN=0
+ TPR=R=1.0
+ FPR=0.066
+ TNR=0.934
+ P=0.9380863039399625
+ F1=0.968054211035818
+ ACC=0.967
+ MCC=0.9360409221182185
+
+Confusion Matrix (Run 100)
+Predicted
+default		file_count	system_load	ls_basic	filename_length	
+Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	Pos	Neg	
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	default
+9	91	100	0	100	0	100	0	30	70		Neg - Actual	default
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	file_count
+100	0	5	95	100	0	100	0	100	0		Neg - Actual	file_count
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	system_load
+100	0	100	0	5	95	100	0	100	0		Neg - Actual	system_load
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	ls_basic
+100	0	100	0	100	0	3	97	100	0		Neg - Actual	ls_basic
+100	0	100	0	100	0	100	0	100	0		Pos - Actual	filename_length
+58	42	100	0	100	0	100	0	11	89		Neg - Actual	filename_length
+

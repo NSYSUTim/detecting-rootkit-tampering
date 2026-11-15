@@ -1,0 +1,2263 @@
+{
+  "completed_utc": "2026-11-14T11:42:58.136029+00:00",
+  "status": "complete",
+  "elapsed_seconds": 120.85140510899998,
+  "protocol_sha256": "e6cf19fd551a6ef3e569aa45d4c3699f556e7e9607c32ede29b3fa78f683c130",
+  "validation": {
+    "baseline_row_and_decode_parity": 96,
+    "positions_distinct_and_nested": 256,
+    "common_stream_cancellation": 256,
+    "duplicate_failure_control": 256
+  },
+  "variant_decodes": 36864,
+  "input_cases": 9216,
+  "incorrect_successes": 0,
+  "primary": [
+    {
+      "k": 2,
+      "trials": 2048,
+      "exact_successes": 2006,
+      "exact_rate": 0.9794921875,
+      "wilson95": [
+        0.972396641817332,
+        0.9847923220555486
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 373422.0,
+      "median_decode_ns": 871915.5
+    },
+    {
+      "k": 3,
+      "trials": 2048,
+      "exact_successes": 2048,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9981277993949387,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 435921.0,
+      "median_decode_ns": 1046480.5
+    },
+    {
+      "k": 4,
+      "trials": 2048,
+      "exact_successes": 2048,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9981277993949387,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 495036.0,
+      "median_decode_ns": 1213109.5
+    },
+    {
+      "k": 5,
+      "trials": 2048,
+      "exact_successes": 2048,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9981277993949387,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 550680.5,
+      "median_decode_ns": 1373096.5
+    }
+  ],
+  "primary_paired_tests": [
+    {
+      "other_k": 2,
+      "k3_only_correct": 42,
+      "other_only_correct": 0,
+      "two_sided_exact_p": 4.547473508864641e-13,
+      "holm_adjusted_p": 1.3642420526593924e-12
+    },
+    {
+      "other_k": 4,
+      "k3_only_correct": 0,
+      "other_only_correct": 0,
+      "two_sided_exact_p": 1.0,
+      "holm_adjusted_p": 1.0
+    },
+    {
+      "other_k": 5,
+      "k3_only_correct": 0,
+      "other_only_correct": 0,
+      "two_sided_exact_p": 1.0,
+      "holm_adjusted_p": 1.0
+    }
+  ],
+  "k3_strict_recovery_superiority_demonstrated": false,
+  "universal_optimality_proven": false,
+  "groups": [
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 512,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 452521.0,
+      "median_decode_ns": 1044449.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 512,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 521619.0,
+      "median_decode_ns": 1244935.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 512,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 655427.0,
+      "median_decode_ns": 1624159.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 512,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 576035.5,
+      "median_decode_ns": 1449553.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 255,
+      "exact_rate": 0.99609375,
+      "wilson95": [
+        0.9782090246194175,
+        0.9993101178330381
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1527301.0,
+      "median_decode_ns": 3225786.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 2011319.5,
+      "median_decode_ns": 4118349.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 99,
+      "exact_rate": 0.38671875,
+      "wilson95": [
+        0.3291562242738866,
+        0.4476307431975999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1302615.5,
+      "median_decode_ns": 2756405.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1756955.5,
+      "median_decode_ns": 3664594.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 64,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 920555.5,
+      "median_decode_ns": 2103753.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 64,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 239,
+      "exact_rate": 0.93359375,
+      "wilson95": [
+        0.896237847364858,
+        0.9581292771408316
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 694990.0,
+      "median_decode_ns": 1535225.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 64,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 793116.0,
+      "median_decode_ns": 1823378.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 64,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1035305.0,
+      "median_decode_ns": 2378962.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1530382.5,
+      "median_decode_ns": 3408986.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 99,
+      "exact_rate": 0.38671875,
+      "wilson95": [
+        0.3291562242738866,
+        0.4476307431975999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1285982.5,
+      "median_decode_ns": 2728526.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1995350.5,
+      "median_decode_ns": 4651529.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1777470.0,
+      "median_decode_ns": 4034802.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1962459.5,
+      "median_decode_ns": 3921333.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 108,
+      "exact_rate": 0.421875,
+      "wilson95": [
+        0.36297114591343,
+        0.4830888316531124
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1302694.0,
+      "median_decode_ns": 2693579.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1716774.5,
+      "median_decode_ns": 3669017.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 128,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1509095.0,
+      "median_decode_ns": 3287996.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 1,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 71331.0,
+      "median_decode_ns": 174793.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 1,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 75161.5,
+      "median_decode_ns": 191076.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 1,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 69043.0,
+      "median_decode_ns": 172836.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 1,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 73486.0,
+      "median_decode_ns": 184698.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 64,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 447678.0,
+      "median_decode_ns": 889813.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 64,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 144,
+      "exact_rate": 0.5625,
+      "wilson95": [
+        0.5012513172897817,
+        0.6219007006569843
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 323200.0,
+      "median_decode_ns": 672323.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 64,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 255,
+      "exact_rate": 0.99609375,
+      "wilson95": [
+        0.9782090246194175,
+        0.9993101178330381
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 500051.0,
+      "median_decode_ns": 975427.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 64,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 251,
+      "exact_rate": 0.98046875,
+      "wilson95": [
+        0.9551018677503436,
+        0.9916292702154206
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 393089.0,
+      "median_decode_ns": 789979.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 32,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 352632.0,
+      "median_decode_ns": 167796.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 32,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 300874.0,
+      "median_decode_ns": 265803.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 32,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 466147.5,
+      "median_decode_ns": 53579.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 32,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 432330.0,
+      "median_decode_ns": 93241.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1906749.5,
+      "median_decode_ns": 4491412.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 100,
+      "exact_rate": 0.390625,
+      "wilson95": [
+        0.33289789371255574,
+        0.45158607488060365
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1297302.5,
+      "median_decode_ns": 2783452.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1707239.0,
+      "median_decode_ns": 3885651.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 128,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 255,
+      "exact_rate": 0.99609375,
+      "wilson95": [
+        0.9782090246194175,
+        0.9993101178330381
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1512160.0,
+      "median_decode_ns": 3537344.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 4,
+      "trials": 1024,
+      "exact_successes": 1024,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9962625959599825,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 511218.5,
+      "median_decode_ns": 1240401.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 2,
+      "trials": 1024,
+      "exact_successes": 1001,
+      "exact_rate": 0.9775390625,
+      "wilson95": [
+        0.9665214594321182,
+        0.9849871527249744
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 392833.0,
+      "median_decode_ns": 894456.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 3,
+      "trials": 1024,
+      "exact_successes": 1024,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9962625959599825,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 453769.0,
+      "median_decode_ns": 1066576.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 5,
+      "trials": 1024,
+      "exact_successes": 1024,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9962625959599825,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 564877.5,
+      "median_decode_ns": 1400117.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 64,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 134,
+      "exact_rate": 0.5234375,
+      "wilson95": [
+        0.46236240094817116,
+        0.5838196057818662
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 326111.5,
+      "median_decode_ns": 678858.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 64,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 516352.0,
+      "median_decode_ns": 1102723.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 64,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 446788.5,
+      "median_decode_ns": 982687.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 64,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 252,
+      "exact_rate": 0.984375,
+      "wilson95": [
+        0.9605207372908033,
+        0.9939074017966336
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 394390.0,
+      "median_decode_ns": 852073.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 512,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 473685.5,
+      "median_decode_ns": 1056720.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 512,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 609673.0,
+      "median_decode_ns": 1447048.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 512,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 532213.0,
+      "median_decode_ns": 1249938.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 512,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 668429.5,
+      "median_decode_ns": 1642213.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 128,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 535270.5,
+      "median_decode_ns": 1198299.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 128,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 231,
+      "exact_rate": 0.90234375,
+      "wilson95": [
+        0.8598151377544601,
+        0.9329759777778466
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 363048.5,
+      "median_decode_ns": 797811.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 128,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 255,
+      "exact_rate": 0.99609375,
+      "wilson95": [
+        0.9782090246194175,
+        0.9993101178330381
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 413607.5,
+      "median_decode_ns": 937367.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 128,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 483544.0,
+      "median_decode_ns": 1078466.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 512,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 8060651.5,
+      "median_decode_ns": 179803.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 512,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 5037294.5,
+      "median_decode_ns": 613970.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 512,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 7102606.5,
+      "median_decode_ns": 201785.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 512,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 6139151.0,
+      "median_decode_ns": 288709.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 32,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 339591.5,
+      "median_decode_ns": 354025.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 32,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 462658.0,
+      "median_decode_ns": 169027.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 32,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 526767.5,
+      "median_decode_ns": 128289.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 32,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 408979.0,
+      "median_decode_ns": 273549.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 512,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 7477507.0,
+      "median_decode_ns": 585096.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 512,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 8445222.5,
+      "median_decode_ns": 515585.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 512,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 5267478.0,
+      "median_decode_ns": 1030370.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 512,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 6335499.0,
+      "median_decode_ns": 698601.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 4,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 126532.0,
+      "median_decode_ns": 315707.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 4,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 134826.0,
+      "median_decode_ns": 313133.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 4,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 149708.5,
+      "median_decode_ns": 375806.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 4,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 150861.0,
+      "median_decode_ns": 379219.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 16,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 271006.0,
+      "median_decode_ns": 671474.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 16,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 297182.0,
+      "median_decode_ns": 746397.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 16,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 324471.0,
+      "median_decode_ns": 858591.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 16,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 255,
+      "exact_rate": 0.99609375,
+      "wilson95": [
+        0.9782090246194175,
+        0.9993101178330381
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 234673.5,
+      "median_decode_ns": 552664.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 502690.0,
+      "median_decode_ns": 1169655.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 587236.5,
+      "median_decode_ns": 1557866.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 250,
+      "exact_rate": 0.9765625,
+      "wilson95": [
+        0.9498190043999489,
+        0.9892151324441424
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 416314.5,
+      "median_decode_ns": 967620.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 569404.5,
+      "median_decode_ns": 1379388.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 2864620.5,
+      "median_decode_ns": 2554362.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 4453281.5,
+      "median_decode_ns": 974560.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3290775.5,
+      "median_decode_ns": 2037239.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3770721.0,
+      "median_decode_ns": 1336173.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 4,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 118613.5,
+      "median_decode_ns": 301979.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 4,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 109956.0,
+      "median_decode_ns": 272386.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 4,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 136924.0,
+      "median_decode_ns": 357930.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 4,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 134032.0,
+      "median_decode_ns": 329693.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 128,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 255,
+      "exact_rate": 0.99609375,
+      "wilson95": [
+        0.9782090246194175,
+        0.9993101178330381
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 461437.5,
+      "median_decode_ns": 1078212.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 128,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 244,
+      "exact_rate": 0.953125,
+      "wilson95": [
+        0.9198669811156821,
+        0.9729851489983719
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 387341.5,
+      "median_decode_ns": 859737.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 128,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 543998.5,
+      "median_decode_ns": 1226364.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "capacity_sensitivity",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 128,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 592056.5,
+      "median_decode_ns": 1419006.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 2983576.5,
+      "median_decode_ns": 1804891.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3932932.0,
+      "median_decode_ns": 884473.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3427350.5,
+      "median_decode_ns": 1213449.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "substitution",
+      "difference": 256,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 2577803.0,
+      "median_decode_ns": 2354431.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 1,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 70370.5,
+      "median_decode_ns": 175567.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 1,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 72561.5,
+      "median_decode_ns": 182453.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 1,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 69176.5,
+      "median_decode_ns": 166952.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 1,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 73968.0,
+      "median_decode_ns": 189370.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 5260126.5,
+      "median_decode_ns": 580117.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3480544.0,
+      "median_decode_ns": 2816635.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 4522406.5,
+      "median_decode_ns": 993647.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3874769.5,
+      "median_decode_ns": 1932263.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 2519363.0,
+      "median_decode_ns": 2029542.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3570859.0,
+      "median_decode_ns": 695447.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 4006164.5,
+      "median_decode_ns": 404670.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 256,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 0,
+      "exact_rate": 0.0,
+      "wilson95": [
+        0,
+        0.01478385642587143
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 3158868.0,
+      "median_decode_ns": 1280074.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 16,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 60598.0,
+      "median_decode_ns": 147568.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 16,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 83507.0,
+      "median_decode_ns": 227347.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 16,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 76688.0,
+      "median_decode_ns": 201161.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "missing",
+      "difference": 16,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 67877.0,
+      "median_decode_ns": 174950.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 134437.0,
+      "median_decode_ns": 341449.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 118406.5,
+      "median_decode_ns": 296914.5
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 254,
+      "exact_rate": 0.9921875,
+      "wilson95": [
+        0.9719672316984642,
+        0.9978549096323186
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 104399.0,
+      "median_decode_ns": 247318.0
+    },
+    {
+      "family": "symmetric_salts",
+      "role": "hash_family_sensitivity",
+      "mode": "missing",
+      "difference": 32,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 148800.0,
+      "median_decode_ns": 382611.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 5,
+      "trials": 1024,
+      "exact_successes": 1024,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9962625959599825,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 531531.0,
+      "median_decode_ns": 1350873.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 2,
+      "trials": 1024,
+      "exact_successes": 1005,
+      "exact_rate": 0.9814453125,
+      "wilson95": [
+        0.9712021813444669,
+        0.9880897323435631
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 356945.5,
+      "median_decode_ns": 851407.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 4,
+      "trials": 1024,
+      "exact_successes": 1024,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9962625959599825,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 473250.5,
+      "median_decode_ns": 1194504.5
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "primary",
+      "mode": "substitution",
+      "difference": 32,
+      "cells": 256,
+      "k": 3,
+      "trials": 1024,
+      "exact_successes": 1024,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9962625959599825,
+        1
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 416708.5,
+      "median_decode_ns": 1031093.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 64,
+      "cells": 256,
+      "k": 4,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 912249.0,
+      "median_decode_ns": 2157348.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 64,
+      "cells": 256,
+      "k": 3,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 783998.0,
+      "median_decode_ns": 1882152.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 64,
+      "cells": 256,
+      "k": 5,
+      "trials": 256,
+      "exact_successes": 256,
+      "exact_rate": 1.0,
+      "wilson95": [
+        0.9852161435741286,
+        0.9999999999999999
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 1044725.0,
+      "median_decode_ns": 2509568.0
+    },
+    {
+      "family": "deployed_prefix",
+      "role": "difference_stress",
+      "mode": "substitution",
+      "difference": 64,
+      "cells": 256,
+      "k": 2,
+      "trials": 256,
+      "exact_successes": 230,
+      "exact_rate": 0.8984375,
+      "wilson95": [
+        0.8553490986352725,
+        0.9297450157753611
+      ],
+      "incorrect_successes": 0,
+      "median_build_ns": 678379.0,
+      "median_decode_ns": 1540212.0
+    }
+  ],
+  "limits": [
+    "Offline Python simulation, not Linux/eBPF integration or rootkit detection accuracy",
+    "Random unique-token inputs; no proof for adversarial hashes or general multisets",
+    "Net difference is inserted directly as in original capacity sweep; common-stream cancellation separately checked",
+    "3 vs 4/5 uses a predeclared extension of deployed hashing; second family checks limited sensitivity",
+    "Zero observed failures does not imply zero population failure probability; timings specific to this process and host"
+  ]
+}

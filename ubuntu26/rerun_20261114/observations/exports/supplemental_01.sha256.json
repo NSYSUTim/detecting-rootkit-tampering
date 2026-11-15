@@ -1,0 +1,15 @@
+{
+  "sha256": "ec63341d70a3e612ebb7e7bb34b696502fd7fa6e81dc5d41381aaf323782dc3e",
+  "bytes": 3177230,
+  "folders": [
+    "phase2_oem_dynamic_supplement_01",
+    "entry_gate_scope_boot_01",
+    "benign_race_supplement_boot_01",
+    "benign_race_supplement_boot_02",
+    "benign_race_supplement_boot_03",
+    "current_cli_native_01",
+    "current_cli_native_02",
+    "control_repair",
+    "compatibility/diamorphine_pilot_01"
+  ]
+}

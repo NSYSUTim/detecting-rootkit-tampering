@@ -1,0 +1,123 @@
+{
+  "passed": true,
+  "source_files_by_tree": {
+    "phase1": 92,
+    "phase2": 92,
+    "entry": 92,
+    "current": 92
+  },
+  "checked_source_files": 368,
+  "canonical_critical_source_checks": [
+    {
+      "path": "src/kicba/reconciliation.py",
+      "sha256": "c0aa7f06550ced14b81a379e614ac8b5c14dfea148a30df8c28ccc6c5a112cd0",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "src/kicba/call_completion.py",
+      "sha256": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "collector/bpf_d9_reconciliation.c",
+      "sha256": "9e0c09c8d90810515b4144c8c405e5210eb6e275ca73db754e0b64bdbd24c500",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "phase2/bpf_packed.c",
+      "sha256": "c36789e94c6a5707b4e6581cdbfff6a7204bc8839e9a22407894fdfb03f4215f",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "call_completion/bpf.c",
+      "sha256": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "phase1/enum_probe.c",
+      "sha256": "7b88b3674e9cf5c1e725a237ef6a2e8a257b587ee959b6270feb0ffc04bf1dd2",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "collector/d9_enum_probe.c",
+      "sha256": "c59284e540040b6e82d1b902d5094364f412432bfffb6a9c323fee23a63f21e2",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "scan_directory.py",
+      "sha256": "7d1473c9509be951f66ac5ce9e8cf14f022b94eab34bf8daaac3c9a5d2b7d4bc",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "call_completion/measurement.py",
+      "sha256": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "finalization/tracefs_measurement.py",
+      "sha256": "13e6b73b61b5721c7187df19a95546d510cfafb1b2315f6d57489128e33ccb3f",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    },
+    {
+      "path": "phase2/measurement.py",
+      "sha256": "4f90c83399f93a4cfd476598126e9fd972da6e9e922363a2a5f4ed34b70e97bb",
+      "matching_trees": [
+        "current",
+        "entry",
+        "phase1",
+        "phase2"
+      ]
+    }
+  ],
+  "scope": "Exact archived-file hashes and current critical algorithms; preserves distinct historical runners rather than overwriting them wholesale"
+}

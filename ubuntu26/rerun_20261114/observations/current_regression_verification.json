@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "boot_ids": [
+    "e354b159-3e76-445a-94e3-43b829fb9459",
+    "4569812c-288f-421f-81e5-d8aa90ae4f55",
+    "5eb146cc-e461-4635-a3df-a1c39d277435"
+  ],
+  "telemetry_rows_replayed": 1437,
+  "controlled_assessments": 960,
+  "benign_race_exercised": 15,
+  "benign_race_unexercised": 15,
+  "groups": {
+    "regression": {
+      "n": 960,
+      "verdicts": {
+        "equal": 405,
+        "different": 555
+      },
+      "alarms": 555
+    },
+    "normal": {
+      "n": 120,
+      "verdicts": {
+        "equal": 120
+      },
+      "alarms": 0
+    },
+    "dynamic": {
+      "n": 240,
+      "verdicts": {
+        "equal": 240
+      },
+      "alarms": 0
+    },
+    "benign_race": {
+      "n": 30,
+      "verdicts": {
+        "equal": 30
+      },
+      "alarms": 0
+    },
+    "syscall_error": {
+      "n": 6,
+      "verdicts": {
+        "invalid": 6
+      },
+      "alarms": 0
+    },
+    "missing_call_telemetry": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 6
+      },
+      "alarms": 0
+    },
+    "bad_pair_count": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 3,
+        "different": 3
+      },
+      "alarms": 3
+    },
+    "detached_enter": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 3,
+        "different": 3
+      },
+      "alarms": 3
+    },
+    "detached_exit": {
+      "n": 6,
+      "verdicts": {
+        "inconclusive": 3,
+        "different": 3
+      },
+      "alarms": 3
+    },
+    "entry_fault_control_before": {
+      "n": 3,
+      "verdicts": {
+        "equal": 3
+      },
+      "alarms": 0
+    },
+    "entry_probe_miss": {
+      "n": 3,
+      "verdicts": {
+        "invalid": 3
+      },
+      "alarms": 0
+    },
+    "entry_fault_control_after": {
+      "n": 3,
+      "verdicts": {
+        "equal": 3
+      },
+      "alarms": 0
+    },
+    "return_probe_pressure": {
+      "n": 48,
+      "verdicts": {
+        "invalid": 48
+      },
+      "alarms": 0
+    }
+  }
+}

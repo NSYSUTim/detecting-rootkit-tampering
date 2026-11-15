@@ -1,0 +1,15 @@
+{
+  "boot_id": "e354b159-3e76-445a-94e3-43b829fb9459",
+  "boot_index": 1,
+  "kernel": "7.0.0-43-generic",
+  "pilot": false,
+  "blocks": 5,
+  "buffer": 65536,
+  "boundary": "before scanner registration/start to after all identity and (new version) completion checks; BPF compilation/attachment outside",
+  "source_sha256": {
+    "call_completion/measurement.py": "afe1d956d6005d2c1cb6bfb1c371bab91c80f5d813b7812c605651c451d71eb1",
+    "call_completion/bpf.c": "9342fa278187f452aa878b5b3d2b9210d146731c35f46b9414f415439a721edf",
+    "src/kicba/call_completion.py": "850d3fd19195c5477dd6f7e4bd2d82be3d3a7c8d8754af2e6380c11789d56578",
+    "call_completion/run_cost.py": "76736bf15fb5feb8a1cd2fe00c63326bdfdb16fd5580cc418b655bcbf886e219"
+  }
+}

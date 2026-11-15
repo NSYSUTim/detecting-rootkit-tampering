@@ -1,0 +1,150 @@
+{
+  "passed": true,
+  "checked_observations_and_controls": 804,
+  "boot_ids": {
+    "caraxes_accepted": [
+      "8efcec1f-f8bc-4d2e-897e-4a617da0f6db",
+      "4380ce72-7f15-4aa1-9a24-1ea777990447",
+      "5e032664-b9f5-4eef-9511-cc13941c2d27"
+    ],
+    "caraxes_call": [
+      "8efcec1f-f8bc-4d2e-897e-4a617da0f6db",
+      "4380ce72-7f15-4aa1-9a24-1ea777990447",
+      "5e032664-b9f5-4eef-9511-cc13941c2d27"
+    ]
+  },
+  "groups": [
+    {
+      "suite": "caraxes_accepted",
+      "mode": "normal",
+      "n": 60,
+      "verdicts": {
+        "equal": 60
+      },
+      "alarms": 0,
+      "verified_recovery": 0,
+      "accepted_range": [
+        70,
+        70
+      ],
+      "received_range": [
+        70,
+        70
+      ],
+      "external_missing_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "suite": "caraxes_accepted",
+      "mode": "getdents64",
+      "n": 120,
+      "verdicts": {
+        "different": 120
+      },
+      "alarms": 120,
+      "verified_recovery": 120,
+      "accepted_range": [
+        70,
+        70
+      ],
+      "received_range": [
+        67,
+        67
+      ],
+      "external_missing_range": [
+        3,
+        3
+      ]
+    },
+    {
+      "suite": "caraxes_accepted",
+      "mode": "filldir",
+      "n": 120,
+      "verdicts": {
+        "equal": 120
+      },
+      "alarms": 0,
+      "verified_recovery": 0,
+      "accepted_range": [
+        36,
+        36
+      ],
+      "received_range": [
+        36,
+        36
+      ],
+      "external_missing_range": [
+        34,
+        34
+      ]
+    },
+    {
+      "suite": "caraxes_call",
+      "mode": "normal",
+      "n": 60,
+      "verdicts": {
+        "equal": 60
+      },
+      "alarms": 0,
+      "verified_recovery": 0,
+      "accepted_range": [
+        70,
+        70
+      ],
+      "received_range": [
+        70,
+        70
+      ],
+      "external_missing_range": [
+        0,
+        0
+      ]
+    },
+    {
+      "suite": "caraxes_call",
+      "mode": "getdents64",
+      "n": 120,
+      "verdicts": {
+        "different": 120
+      },
+      "alarms": 120,
+      "verified_recovery": 120,
+      "accepted_range": [
+        70,
+        70
+      ],
+      "received_range": [
+        67,
+        67
+      ],
+      "external_missing_range": [
+        3,
+        3
+      ]
+    },
+    {
+      "suite": "caraxes_call",
+      "mode": "filldir",
+      "n": 120,
+      "verdicts": {
+        "completion_anomaly": 120
+      },
+      "alarms": 120,
+      "verified_recovery": 0,
+      "accepted_range": [
+        36,
+        36
+      ],
+      "received_range": [
+        36,
+        36
+      ],
+      "external_missing_range": [
+        34,
+        34
+      ]
+    }
+  ]
+}

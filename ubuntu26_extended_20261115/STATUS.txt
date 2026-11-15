@@ -2,7 +2,7 @@ Ubuntu 26 延伸實驗目前進度
 2026-11-16T07:09:22.723133+08:00
 新版收斂計畫、保存資料核對及 Trace 正常組更新
 
-• 新版收斂 133 筆候選為 6 組既有實測或研究控制、2 個優先候選與 1 個可選邊界案例。TripleCross、bad-bpf 的 7.0 執行證據仍待取得，KoviD 保留固定建置失敗。新版入口 updates/20261116_revised_plan/新版計畫導讀.txt。
+• 已評估 133 筆 repo 來源，包含實測、研究控制、文獻引用、工具、索引及排除項目；這不是 133 個待跑樣本。主表保留六組實測／研究控制。選樣層面的待補實證為 TripleCross、bad-bpf 兩項，KoviD 為一項可選案例。其他實驗任務仍依原進度分別追蹤。入口 updates/20261116_revised_plan/新版計畫導讀.txt；逐筆決定 updates/20261116_revised_plan/來源普查與納入決定.txt。
 • Singularity 原 1,920 筆目錄掃描核對 7,812 筆解出事件成功。這是原資料與真值核對，啟用期間取檔與 /proc 仍未測。詳見 updates/20261116_singularity_evidence_audit/README.txt。
 • Trace 新正常組 50 批、5,000 次列舉。其中 40 批有舊凍結模型。新陽性組仍未採集。詳見 updates/20261116_trace_normal/README.txt。
 • CARAXES 取檔分項計時已上傳，見 updates/20261116_forensic_timing/。

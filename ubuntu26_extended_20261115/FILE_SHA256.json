@@ -12,8 +12,8 @@
     "sha256": "45ea971fab3d26d2e1af8e580e403dc40aa80f6df22b2431bfb7c75ee4512f78"
   },
   "STATUS.txt": {
-    "bytes": 5227,
-    "sha256": "378a633d07f84a4dcbbbf82f041e912d64c54ec44e3e62c064c98a21e9fff864"
+    "bytes": 5420,
+    "sha256": "f176c184b026d4e788a10e43525e3513358d92ec269480d89dcd6dafa07aa36b"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -175,6 +175,10 @@
     "bytes": 1542,
     "sha256": "4d8db73112659d2006cffd55647cf7a390558e11b0d998a796d9ac9b7771715b"
   },
+  "updates/20261116_revised_plan/來源普查與納入決定.txt": {
+    "bytes": 26429,
+    "sha256": "fb70ad6da740d633dab946fc36f3fc90572501a8d8065b0701e9ecacb037ff7c"
+  },
   "updates/20261116_revised_plan/候選逐項評估.txt": {
     "bytes": 26295,
     "sha256": "9517ef4a1ee87da28c89fcbde3628fb4c61334e6d76cc41706f57d922f3eb1f4"
@@ -184,8 +188,8 @@
     "sha256": "c787d5a813ec72d28f281efe48db9c8c4f941b15842323298a1c4fcd5b1b0fdf"
   },
   "updates/20261116_revised_plan/新版計畫導讀.txt": {
-    "bytes": 2845,
-    "sha256": "99c917f1213f327514ce7d3ddfa44772e5debd7f918b89b1f0e50718431b9e3e"
+    "bytes": 3448,
+    "sha256": "100987d56685ef02c6bea8eac3597873c30060ccd95eb9af811e18babb6851d1"
   },
   "updates/20261116_singularity_evidence_audit/EVIDENCE_AUDIT.json": {
     "bytes": 595,

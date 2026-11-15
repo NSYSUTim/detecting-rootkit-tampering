@@ -1,58 +1,58 @@
 {
   "EVIDENCE_INDEX.json": {
-    "bytes": 2260,
-    "sha256": "840949e14650945bad0933e9d9bba12a076c55e1e11834861bfcc1c92d224c16"
+    "bytes": 2201,
+    "sha256": "75c6d6b4d4ca9a6d0489513597372f422428c97bc3cb966ff155f109865a16da"
   },
   "metrics/application_component_cost.json": {
-    "bytes": 90896,
-    "sha256": "cfdd5a407f201127a39d9aab107bb08b8c6488ae01ec3b482aa8376e22365ffe"
+    "bytes": 86847,
+    "sha256": "11bb140fcce3c9dc123c2ceb96ddabb54f589c1bf522f8253dce41eeb3628cc5"
   },
   "metrics/comparison_verification.json": {
-    "bytes": 7191,
-    "sha256": "893883541ace83e246ff0141203297364da8ec479655a91e4fdeaf0d50ec0d68"
+    "bytes": 6896,
+    "sha256": "688d330be776cc58724675b5651b6def89401ad32c946d3d50ab40253119a67e"
   },
   "metrics/complementary_tool_availability.json": {
-    "bytes": 660,
-    "sha256": "92bf8cb624e82fae06c6be1910dc70bf1a94cc5f21070a74bfc970802cd854d6"
+    "bytes": 655,
+    "sha256": "839c05867d43e0d2ecd1749706e86830e0766a9eff3a57a33da5b7ae5084783f"
   },
   "metrics/core_cost_and_os_comparison.json": {
-    "bytes": 139728,
-    "sha256": "3e68724c6a0d92add62a9988210d24d50d9b122b470375def07abd81258bcbbb"
+    "bytes": 134055,
+    "sha256": "6139221443955b9933e8ea4652dbc68d7919befb52214637c151a11e2820b33d"
   },
   "metrics/decloaker_path_verification.json": {
-    "bytes": 965,
-    "sha256": "79d5f51fb966792da373f4a0a2586992200959d92c8b673d3d1aff8b6c1da67b"
+    "bytes": 942,
+    "sha256": "697bc7e601ff6ba2d1d330828a9c18df2aae05b23943c949eb74109f8286ce8b"
   },
   "metrics/directory_control_verification.json": {
-    "bytes": 12267,
-    "sha256": "87bd5d44ed4446847eee3954da52b407844499a211c4dd8abdab3f41e24cf358"
+    "bytes": 11781,
+    "sha256": "7f5caebe5dd1cb3eb1f3448fc43a21c021e61c9d2728cab93d89321df23a84a3"
   },
   "PLAN_STATUS.json": {
-    "bytes": 10845,
-    "sha256": "c5c14287109c26b26d2ac5f50507dd79c585af60fd954d2f393c87c753b9293e"
+    "bytes": 10595,
+    "sha256": "13bafc7e67431e41c97eeb976ee15f462b72bf7451d1b362fedbf59e290d444d"
   },
   "reports/應用程式端成本.txt": {
     "bytes": 2740,
     "sha256": "5fbefe17fa1d38ed4439ca5bd79b8bbe64a22d029f9c414061a7e27dc9ea9587"
   },
   "reports/正常控制與比較.txt": {
-    "bytes": 5913,
-    "sha256": "a79b3178eaed246215ff2a3c763b0c76626968fc2c766e3de21dcbcd0527f12c"
+    "bytes": 5870,
+    "sha256": "9209a9425b42dc5cd57e61f4f83884c0eb75b1733de9ae25af6a2f32b6d7e22d"
   },
   "reports/版本比較與取檔.txt": {
-    "bytes": 12795,
-    "sha256": "c26ad4d75b4eb601cc7f038c4c6610bfb502def43817d192a78f0433f8df22da"
+    "bytes": 12709,
+    "sha256": "46453591e4566ad1fd66d8711694e4a0d0aa4586b7c416cc83b33a6213da801a"
   },
   "RESULTS.json": {
-    "bytes": 17343,
-    "sha256": "fad66a0057a0f6b63120da42c279a525fedc28aac93285da83e0d99e2508bcd2"
+    "bytes": 16695,
+    "sha256": "169ccf4230e1760c4803443ac2a43b3943d22bc065ec54544a7e7f6390216046"
   },
   "STATUS.txt": {
-    "bytes": 3050,
-    "sha256": "2d5ed881183cc191afaf9b5a5719a547454aaeb4ab39aadfb64b8ecdec815986"
+    "bytes": 3016,
+    "sha256": "b38d94569b51c837611c54574bbd20fbc2449dbbe99ddda24c3c47732c0d99c0"
   },
   "計數說明.txt": {
-    "bytes": 1387,
-    "sha256": "975ba9299c902121ea7174087134e2ce7ddcfadb8ff2eaf13b8476117ae34f67"
+    "bytes": 1377,
+    "sha256": "14540b43225bb3a7084b4378be872239c54b0e9fb5001f1f01adfab613c3ece8"
   }
 }

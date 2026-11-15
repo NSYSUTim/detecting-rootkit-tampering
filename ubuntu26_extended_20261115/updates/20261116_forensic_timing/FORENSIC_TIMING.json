@@ -1,0 +1,1241 @@
+{
+  "scope": "Saved CARAXES live forensic observations on the three Ubuntu 26 boots",
+  "timings": {
+    "content_dump_1048576_bytes": {
+      "n": 150,
+      "median_ms": 5.99,
+      "p95_ms": 9.345
+    },
+    "content_dump_4096_bytes": {
+      "n": 150,
+      "median_ms": 3.957,
+      "p95_ms": 6.337
+    },
+    "iblt_decode_per_valid_alarm": {
+      "n": 116,
+      "median_ms": 1.158,
+      "p95_ms": 1.587
+    },
+    "inode_to_name_per_command": {
+      "n": 100,
+      "median_ms": 4.424,
+      "p95_ms": 6.571
+    }
+  },
+  "p95_method": "nearest rank",
+  "rows": [
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_00_buffer_256",
+      "iblt_ns": 1485964,
+      "lookup_ns": 6263834,
+      "extraction_ns": [
+        4437006
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_00_buffer_65536",
+      "iblt_ns": 1309172,
+      "lookup_ns": 4089334,
+      "extraction_ns": [
+        3250781
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_01_buffer_256",
+      "iblt_ns": 1004558,
+      "lookup_ns": 4721353,
+      "extraction_ns": [
+        6752723
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_01_buffer_65536",
+      "iblt_ns": 1033355,
+      "lookup_ns": 8091550,
+      "extraction_ns": [
+        5017713
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_03_buffer_65536",
+      "iblt_ns": 1364598,
+      "lookup_ns": 6872780,
+      "extraction_ns": [
+        3728140,
+        4578061,
+        4224099,
+        3727642,
+        3157647,
+        3245646,
+        4374645,
+        3558908
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_06_buffer_256",
+      "iblt_ns": 1569021,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_07_buffer_256",
+      "iblt_ns": 1181379,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_08_buffer_256",
+      "iblt_ns": 1156017,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_09_buffer_256",
+      "iblt_ns": 997808,
+      "lookup_ns": 3738257,
+      "extraction_ns": [
+        6188411
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_09_buffer_65536",
+      "iblt_ns": 1057388,
+      "lookup_ns": 3801037,
+      "extraction_ns": [
+        4967179
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_10_buffer_256",
+      "iblt_ns": 1231040,
+      "lookup_ns": 3812126,
+      "extraction_ns": [
+        4894073
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_10_buffer_65536",
+      "iblt_ns": 1015310,
+      "lookup_ns": 3801429,
+      "extraction_ns": [
+        4934516
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_12_buffer_65536",
+      "iblt_ns": 1638988,
+      "lookup_ns": 6299869,
+      "extraction_ns": [
+        6341056,
+        7219210,
+        6470452,
+        7366475,
+        5963624,
+        9345053,
+        5100914,
+        5372607
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_15_buffer_256",
+      "iblt_ns": 1247040,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_16_buffer_256",
+      "iblt_ns": 1083069,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "detector_first_group_17_buffer_256",
+      "iblt_ns": 1072233,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_00_buffer_256",
+      "iblt_ns": 1068365,
+      "lookup_ns": 4915565,
+      "extraction_ns": [
+        4116879
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_00_buffer_65536",
+      "iblt_ns": 1107849,
+      "lookup_ns": 4954315,
+      "extraction_ns": [
+        6336957
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_01_buffer_256",
+      "iblt_ns": 1011773,
+      "lookup_ns": 4295936,
+      "extraction_ns": [
+        3737681
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_01_buffer_65536",
+      "iblt_ns": 1007445,
+      "lookup_ns": 4199732,
+      "extraction_ns": [
+        4720439
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_03_buffer_65536",
+      "iblt_ns": 1302905,
+      "lookup_ns": 5094946,
+      "extraction_ns": [
+        3718349,
+        3776933,
+        3803596,
+        4089365,
+        3718103,
+        3780529,
+        4887548,
+        3797492
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_06_buffer_256",
+      "iblt_ns": 1334204,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_07_buffer_256",
+      "iblt_ns": 1129394,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_08_buffer_256",
+      "iblt_ns": 1132792,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_09_buffer_256",
+      "iblt_ns": 1022182,
+      "lookup_ns": 4171679,
+      "extraction_ns": [
+        4972477
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_09_buffer_65536",
+      "iblt_ns": 1054739,
+      "lookup_ns": 4184361,
+      "extraction_ns": [
+        5660027
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_10_buffer_256",
+      "iblt_ns": 1156370,
+      "lookup_ns": 3834990,
+      "extraction_ns": [
+        5153536
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_10_buffer_65536",
+      "iblt_ns": 1099086,
+      "lookup_ns": 3825573,
+      "extraction_ns": [
+        6129443
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_12_buffer_65536",
+      "iblt_ns": 1324096,
+      "lookup_ns": 4319810,
+      "extraction_ns": [
+        5147073,
+        6618210,
+        5239507,
+        5863740,
+        4780268,
+        4755569,
+        5238021,
+        4693963
+      ]
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_15_buffer_256",
+      "iblt_ns": 1114014,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_16_buffer_256",
+      "iblt_ns": 1129892,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "2d244833-cd2d-439c-937c-4a0e594b6c4e",
+      "case": "sample_first_group_17_buffer_256",
+      "iblt_ns": 1242741,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_00_buffer_256",
+      "iblt_ns": 1219030,
+      "lookup_ns": 4625608,
+      "extraction_ns": [
+        3986063
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_00_buffer_65536",
+      "iblt_ns": 1089832,
+      "lookup_ns": 4166157,
+      "extraction_ns": [
+        3442893
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_02_buffer_256",
+      "iblt_ns": 1131102,
+      "lookup_ns": 4804994,
+      "extraction_ns": [
+        5205315
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_02_buffer_65536",
+      "iblt_ns": 1110822,
+      "lookup_ns": 4417609,
+      "extraction_ns": [
+        3702087
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_03_buffer_256",
+      "iblt_ns": 1311322,
+      "lookup_ns": 4432226,
+      "extraction_ns": [
+        3938385,
+        3640852,
+        4760388,
+        3985954,
+        3678771,
+        7398112,
+        3853467,
+        3640343
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_03_buffer_65536",
+      "iblt_ns": 1250456,
+      "lookup_ns": 4740742,
+      "extraction_ns": [
+        4395915,
+        3553814,
+        3539711,
+        6025369,
+        4236151,
+        3915594,
+        3866030,
+        6115471
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_04_buffer_65536",
+      "iblt_ns": 1091923,
+      "lookup_ns": 4377499,
+      "extraction_ns": [
+        4792954
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_05_buffer_65536",
+      "iblt_ns": 1278235,
+      "lookup_ns": 4245046,
+      "extraction_ns": [
+        5284750,
+        4223285,
+        4146877,
+        4891985,
+        3858943,
+        3768831,
+        3737942,
+        4193665
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_06_buffer_65536",
+      "iblt_ns": 1114979,
+      "lookup_ns": 4357130,
+      "extraction_ns": [
+        4342096,
+        3924378
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_07_buffer_65536",
+      "iblt_ns": 1160443,
+      "lookup_ns": 4210054,
+      "extraction_ns": [
+        3868039,
+        4456977,
+        3913244
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_09_buffer_256",
+      "iblt_ns": 1143237,
+      "lookup_ns": 3707267,
+      "extraction_ns": [
+        7619495
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_09_buffer_65536",
+      "iblt_ns": 1240340,
+      "lookup_ns": 4388113,
+      "extraction_ns": [
+        5080902
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_11_buffer_256",
+      "iblt_ns": 1069507,
+      "lookup_ns": 3665292,
+      "extraction_ns": [
+        6701188
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_11_buffer_65536",
+      "iblt_ns": 994445,
+      "lookup_ns": 5157773,
+      "extraction_ns": [
+        4941637
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_12_buffer_256",
+      "iblt_ns": 1193354,
+      "lookup_ns": 4038994,
+      "extraction_ns": [
+        5627101,
+        7772542,
+        6372835,
+        9538739,
+        13628154,
+        6835607,
+        6462177,
+        5517436
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_12_buffer_65536",
+      "iblt_ns": 1207523,
+      "lookup_ns": 6571123,
+      "extraction_ns": [
+        5048537,
+        6168342,
+        5457354,
+        6022506,
+        5321028,
+        5478320,
+        5557863,
+        6330677
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_13_buffer_65536",
+      "iblt_ns": 1365811,
+      "lookup_ns": 3845326,
+      "extraction_ns": [
+        6498235
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_14_buffer_65536",
+      "iblt_ns": 1300059,
+      "lookup_ns": 4665981,
+      "extraction_ns": [
+        6016667,
+        7255383,
+        5739180,
+        6288280,
+        6441374,
+        6501122,
+        5075509,
+        5604747
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_15_buffer_65536",
+      "iblt_ns": 1471041,
+      "lookup_ns": 3748677,
+      "extraction_ns": [
+        8386389,
+        6076151
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "detector_first_group_16_buffer_65536",
+      "iblt_ns": 1220200,
+      "lookup_ns": 3788144,
+      "extraction_ns": [
+        8402555,
+        6160032,
+        8617227
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_00_buffer_256",
+      "iblt_ns": 1008590,
+      "lookup_ns": 4243786,
+      "extraction_ns": [
+        3730492
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_00_buffer_65536",
+      "iblt_ns": 1021548,
+      "lookup_ns": 4665822,
+      "extraction_ns": [
+        3561326
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_02_buffer_256",
+      "iblt_ns": 1023291,
+      "lookup_ns": 4359341,
+      "extraction_ns": [
+        3556771
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_02_buffer_65536",
+      "iblt_ns": 1077749,
+      "lookup_ns": 5118515,
+      "extraction_ns": [
+        3841506
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_03_buffer_256",
+      "iblt_ns": 1566716,
+      "lookup_ns": 4575786,
+      "extraction_ns": [
+        3915853,
+        3587496,
+        4553867,
+        3371176,
+        3537651,
+        3218767,
+        4253185,
+        3177635
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_03_buffer_65536",
+      "iblt_ns": 1211179,
+      "lookup_ns": 6237516,
+      "extraction_ns": [
+        4032953,
+        7361278,
+        4421472,
+        7738614,
+        4289740,
+        3640953,
+        3667440,
+        4436540
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_04_buffer_65536",
+      "iblt_ns": 1184941,
+      "lookup_ns": 4667469,
+      "extraction_ns": [
+        3971103
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_05_buffer_65536",
+      "iblt_ns": 1269023,
+      "lookup_ns": 4183075,
+      "extraction_ns": [
+        5363398,
+        3537694,
+        3505687,
+        4547458,
+        4686543,
+        4333336,
+        3546593,
+        4420617
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_06_buffer_65536",
+      "iblt_ns": 1152041,
+      "lookup_ns": 6008558,
+      "extraction_ns": [
+        3905982,
+        4476015
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_07_buffer_65536",
+      "iblt_ns": 1517225,
+      "lookup_ns": 4585908,
+      "extraction_ns": [
+        3883276,
+        3989055,
+        3457107
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_09_buffer_256",
+      "iblt_ns": 995138,
+      "lookup_ns": 4678545,
+      "extraction_ns": [
+        5054926
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_09_buffer_65536",
+      "iblt_ns": 1024186,
+      "lookup_ns": 3683682,
+      "extraction_ns": [
+        5821539
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_11_buffer_256",
+      "iblt_ns": 993657,
+      "lookup_ns": 3901608,
+      "extraction_ns": [
+        5548004
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_11_buffer_65536",
+      "iblt_ns": 1102153,
+      "lookup_ns": 3690094,
+      "extraction_ns": [
+        9059809
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_12_buffer_256",
+      "iblt_ns": 1387808,
+      "lookup_ns": 5046028,
+      "extraction_ns": [
+        5236939,
+        5367491,
+        6129666,
+        6156761,
+        6025659,
+        10402500,
+        5370139,
+        7723022
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_12_buffer_65536",
+      "iblt_ns": 1250583,
+      "lookup_ns": 4004831,
+      "extraction_ns": [
+        5477367,
+        5514837,
+        5789277,
+        5577458,
+        5824185,
+        5494480,
+        6926381,
+        5489733
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_13_buffer_65536",
+      "iblt_ns": 1577698,
+      "lookup_ns": 4974361,
+      "extraction_ns": [
+        6454960
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_14_buffer_65536",
+      "iblt_ns": 1282159,
+      "lookup_ns": 4092230,
+      "extraction_ns": [
+        5420272,
+        5027404,
+        5317074,
+        4914100,
+        5407500,
+        5501059,
+        6352341,
+        5332377
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_15_buffer_65536",
+      "iblt_ns": 1138499,
+      "lookup_ns": 4215228,
+      "extraction_ns": [
+        5313744,
+        4967669
+      ]
+    },
+    {
+      "boot": "38957723-1f27-4bac-bdf0-3c93e52ea7d6",
+      "case": "sample_first_group_16_buffer_65536",
+      "iblt_ns": 1152573,
+      "lookup_ns": 3744636,
+      "extraction_ns": [
+        6894851,
+        4968612,
+        5865991
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_01_buffer_256",
+      "iblt_ns": 1125858,
+      "lookup_ns": 8540672,
+      "extraction_ns": [
+        3985810
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_01_buffer_65536",
+      "iblt_ns": 1046808,
+      "lookup_ns": 4897929,
+      "extraction_ns": [
+        3731966
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_02_buffer_256",
+      "iblt_ns": 1013150,
+      "lookup_ns": 4619159,
+      "extraction_ns": [
+        3923816
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_02_buffer_65536",
+      "iblt_ns": 969035,
+      "lookup_ns": 4140412,
+      "extraction_ns": [
+        4056661
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_03_buffer_65536",
+      "iblt_ns": 1662485,
+      "lookup_ns": 4274602,
+      "extraction_ns": [
+        3687249
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_04_buffer_65536",
+      "iblt_ns": 1210057,
+      "lookup_ns": 4359038,
+      "extraction_ns": [
+        3581320,
+        6431589,
+        4514252,
+        4969199,
+        4678600,
+        4114499,
+        5231167,
+        4002304
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_05_buffer_65536",
+      "iblt_ns": 1030364,
+      "lookup_ns": 4442946,
+      "extraction_ns": [
+        6052987
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_06_buffer_65536",
+      "iblt_ns": 1286042,
+      "lookup_ns": 4485695,
+      "extraction_ns": [
+        4992565,
+        4463587,
+        4365486,
+        5485595
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_07_buffer_256",
+      "iblt_ns": 1484865,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_07_buffer_65536",
+      "iblt_ns": 1237100,
+      "lookup_ns": 4496183,
+      "extraction_ns": [
+        4169024,
+        3907234,
+        4210329,
+        4110294,
+        3764000,
+        3476578
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_08_buffer_65536",
+      "iblt_ns": 1450125,
+      "lookup_ns": 5160962,
+      "extraction_ns": [
+        3802976,
+        4567353,
+        3542269,
+        3349427,
+        5020431
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_10_buffer_256",
+      "iblt_ns": 1191227,
+      "lookup_ns": 4343981,
+      "extraction_ns": [
+        8498610
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_10_buffer_65536",
+      "iblt_ns": 1195231,
+      "lookup_ns": 3997510,
+      "extraction_ns": [
+        5409528
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_11_buffer_256",
+      "iblt_ns": 984843,
+      "lookup_ns": 8108715,
+      "extraction_ns": [
+        6141382
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_11_buffer_65536",
+      "iblt_ns": 1018959,
+      "lookup_ns": 3702913,
+      "extraction_ns": [
+        5336451
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_12_buffer_65536",
+      "iblt_ns": 1026462,
+      "lookup_ns": 4039920,
+      "extraction_ns": [
+        6141968
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_13_buffer_65536",
+      "iblt_ns": 1509151,
+      "lookup_ns": 8075955,
+      "extraction_ns": [
+        8622863,
+        8071976,
+        8493919,
+        6053612,
+        7041569,
+        7335695,
+        6840523,
+        6163567
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_14_buffer_65536",
+      "iblt_ns": 1291519,
+      "lookup_ns": 5901983,
+      "extraction_ns": [
+        9400007
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_15_buffer_65536",
+      "iblt_ns": 1625636,
+      "lookup_ns": 4429492,
+      "extraction_ns": [
+        6907298,
+        6408169,
+        6962497,
+        7850932
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_16_buffer_256",
+      "iblt_ns": 1603440,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_16_buffer_65536",
+      "iblt_ns": 1221065,
+      "lookup_ns": 4520178,
+      "extraction_ns": [
+        6761789,
+        7867204,
+        6728749,
+        9137815,
+        6903252,
+        7883191
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "detector_first_group_17_buffer_65536",
+      "iblt_ns": 1286733,
+      "lookup_ns": 4948887,
+      "extraction_ns": [
+        7639498,
+        11564054,
+        7229384,
+        10290698,
+        7416778
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_01_buffer_256",
+      "iblt_ns": 1240487,
+      "lookup_ns": 5130048,
+      "extraction_ns": [
+        3733259
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_01_buffer_65536",
+      "iblt_ns": 1023517,
+      "lookup_ns": 4268720,
+      "extraction_ns": [
+        3965669
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_02_buffer_256",
+      "iblt_ns": 1069225,
+      "lookup_ns": 4935366,
+      "extraction_ns": [
+        3947795
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_02_buffer_65536",
+      "iblt_ns": 1431895,
+      "lookup_ns": 4339604,
+      "extraction_ns": [
+        4015517
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_03_buffer_65536",
+      "iblt_ns": 1109078,
+      "lookup_ns": 4313884,
+      "extraction_ns": [
+        3257453
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_04_buffer_65536",
+      "iblt_ns": 1586964,
+      "lookup_ns": 4947267,
+      "extraction_ns": [
+        4198729,
+        3800214,
+        3663197,
+        3797845,
+        6245453,
+        3786014,
+        3425890,
+        3894390
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_05_buffer_65536",
+      "iblt_ns": 1133800,
+      "lookup_ns": 4465105,
+      "extraction_ns": [
+        3896636
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_06_buffer_65536",
+      "iblt_ns": 1160588,
+      "lookup_ns": 4040533,
+      "extraction_ns": [
+        3427750,
+        3220756,
+        3211073,
+        3236751
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_07_buffer_256",
+      "iblt_ns": 1586784,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_07_buffer_65536",
+      "iblt_ns": 1280226,
+      "lookup_ns": 4962740,
+      "extraction_ns": [
+        3809166,
+        4403649,
+        4164458,
+        3643942,
+        8200663,
+        5483136
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_08_buffer_65536",
+      "iblt_ns": 1201305,
+      "lookup_ns": 4724647,
+      "extraction_ns": [
+        4877381,
+        6398742,
+        3989348,
+        3588282,
+        5479950
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_10_buffer_256",
+      "iblt_ns": 1067399,
+      "lookup_ns": 6051044,
+      "extraction_ns": [
+        5430722
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_10_buffer_65536",
+      "iblt_ns": 1011262,
+      "lookup_ns": 4556450,
+      "extraction_ns": [
+        5928827
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_11_buffer_256",
+      "iblt_ns": 982777,
+      "lookup_ns": 3911321,
+      "extraction_ns": [
+        4938493
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_11_buffer_65536",
+      "iblt_ns": 981032,
+      "lookup_ns": 4180390,
+      "extraction_ns": [
+        5034897
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_12_buffer_65536",
+      "iblt_ns": 1067110,
+      "lookup_ns": 3946778,
+      "extraction_ns": [
+        4839674
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_13_buffer_65536",
+      "iblt_ns": 1310892,
+      "lookup_ns": 4766264,
+      "extraction_ns": [
+        6170128,
+        9222492,
+        5649596,
+        7723851,
+        5917373,
+        5809119,
+        6221114,
+        5774313
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_14_buffer_65536",
+      "iblt_ns": 1053932,
+      "lookup_ns": 5519840,
+      "extraction_ns": [
+        10752039
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_15_buffer_65536",
+      "iblt_ns": 1144624,
+      "lookup_ns": 4567161,
+      "extraction_ns": [
+        4659023,
+        4873949,
+        5786911,
+        4790158
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_16_buffer_256",
+      "iblt_ns": 1448605,
+      "lookup_ns": null,
+      "extraction_ns": []
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_16_buffer_65536",
+      "iblt_ns": 1232631,
+      "lookup_ns": 3765489,
+      "extraction_ns": [
+        5315152,
+        4976875,
+        5066343,
+        5013836,
+        5182038,
+        5274664
+      ]
+    },
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "case": "sample_first_group_17_buffer_65536",
+      "iblt_ns": 1322947,
+      "lookup_ns": 5032422,
+      "extraction_ns": [
+        6032285,
+        6353074,
+        5276425,
+        5322323,
+        7171117
+      ]
+    }
+  ],
+  "interpretation": "Lookup is one subprocess invocation for the decoded inodes of a scan. Dump is one subprocess invocation per recovered event. Process startup is included in both. File hashing time is not available as a separate timer."
+}

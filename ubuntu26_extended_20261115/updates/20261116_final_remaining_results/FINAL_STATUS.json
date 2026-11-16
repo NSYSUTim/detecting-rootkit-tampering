@@ -1,0 +1,60 @@
+{
+  "status": "complete_for_user_prioritized_scope",
+  "completed_at_local": "2026-11-16",
+  "environment": {
+    "distribution": "Ubuntu 26.04.1 LTS",
+    "kernel": "7.0.0-43-generic",
+    "isolation": "no IPv4 or IPv6 default route during live collection"
+  },
+  "completed": [
+    "brokepkg three-clean-boot matrix and offline raw/IBLT replay",
+    "Singularity corrected three-clean-boot /proc PID-hiding matrix",
+    "bad-bpf pinned build and three-clean-boot /proc PID-hiding matrix",
+    "Trace of Times fresh 50-normal plus 50-rootkit collection and frozen-threshold evaluation",
+    "comparison against archived Trace evaluation and Ubuntu 22/26 main results",
+    "report-ready conclusions"
+  ],
+  "terminal_non_runtime": [
+    {
+      "sample": "TripleCross",
+      "status": "incompatible_without_semantic_source_refactor",
+      "reason": "BPF handlers exceed the 512-byte stack limit under the modern toolchain/kernel verifier"
+    }
+  ],
+  "skipped_by_user_direction": [
+    {
+      "item": "Singularity active inode-to-name-to-content retrieval",
+      "pilot_result": "three detector inodes recovered; active sample blocked debugfs/block-device reads; post-reboot ncheck succeeded"
+    }
+  ],
+  "trace": {
+    "fresh_selected_batches": 100,
+    "fresh_selected_listing_runs": 10000,
+    "formal_scored_batches": 80,
+    "descriptive_unscored_ls_basic_batches": 20,
+    "function_interval_frozen": {
+      "threshold": 2.1544346900318954e-17,
+      "tp": 40,
+      "fp": 9,
+      "fn": 0,
+      "tn": 31,
+      "recall": 1.0,
+      "specificity": 0.775,
+      "accuracy": 0.8875,
+      "f1": 0.898876404494382
+    },
+    "sequence_frozen": {
+      "threshold": 0.0,
+      "tp": 0,
+      "fp": 0,
+      "fn": 40,
+      "tn": 40,
+      "recall": 0.0,
+      "specificity": 1.0,
+      "accuracy": 0.5,
+      "f1": 0.0
+    }
+  },
+  "original_results_or_written_report_modified": false
+}
+

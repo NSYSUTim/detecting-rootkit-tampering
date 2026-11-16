@@ -1,0 +1,26 @@
+  MKDIR    .output
+  MKDIR    .output/libbpf
+  LIB      libbpf.a
+  MKDIR    /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/bpf.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/btf.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/libbpf.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/libbpf_errno.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/netlink.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/nlattr.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/str_error.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/libbpf_probes.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/bpf_prog_linfo.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/xsk.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/btf_dump.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/hashmap.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/ringbuf.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/strset.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/linker.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/gen_loader.o
+  CC       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/staticobjs/relo_core.o
+  AR       /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/libbpf.a
+  INSTALL  bpf.h libbpf.h btf.h libbpf_common.h libbpf_legacy.h xsk.h bpf_helpers.h bpf_helper_defs.h bpf_tracing.h bpf_endian.h bpf_core_read.h skel_internal.h libbpf_version.h
+  INSTALL  /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/libbpf.pc
+  INSTALL  /home/kicba/ubuntu26_extended_20261116_triplecross_build/source/src/.output//libbpf/libbpf.a 
+  BPF      .output/kit.bpf.o

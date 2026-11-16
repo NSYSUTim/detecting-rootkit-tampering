@@ -1,0 +1,5 @@
+total 2320
+drwxr-xr-x  2 kicba kicba    4096 Nov 16  2026 .
+drwxr-xr-x 12 kicba kicba    4096 Nov 16 07:53 ..
+-rw-r--r--  1 kicba kicba 2310256 Nov 16  2026 kit
+-rw-r--r--  1 kicba kicba   50848 Nov 16  2026 tc.o

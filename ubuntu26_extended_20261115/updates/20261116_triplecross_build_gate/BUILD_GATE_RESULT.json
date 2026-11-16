@@ -1,0 +1,61 @@
+{
+  "sample": "h3xduck/TripleCross",
+  "pinned_commit": "d825d4c8c0575ad1cc9e23beab8b2e466a385fab",
+  "upstream_tested_environment": {
+    "distribution": "Ubuntu 21.04",
+    "kernel": "5.11.0",
+    "gcc": "10.3.0",
+    "clang": "12.0.0",
+    "glibc": "2.33"
+  },
+  "attempted_environment": {
+    "distribution": "Ubuntu 26.04 LTS (isolated research guest)",
+    "kernel": "7.0.0-43-generic",
+    "default_route": "none (isolated)"
+  },
+  "status": "build_gate_fail",
+  "attempts": [
+    {
+      "attempt_id": 1,
+      "boot": "c9c868bf-73db-48b2-a2d2-dd3504447fda",
+      "make_flags": "-j4",
+      "failure": "parallel race: module_manager.c compiled before bpftool generated kit.skel.h",
+      "upstream_source_modified": false
+    },
+    {
+      "attempt_id": 2,
+      "boot": "2a8bba5f-9536-4544-9990-d80f9640d1da",
+      "make_flags": "serial",
+      "failure": "ebpf/kit.bpf.c -> ebpf/include/bpf/fs.h -> <ctype.h> -> gnu/stubs-32.h missing (gcc-multilib not installed; VM has no default route so apt-install blocked)",
+      "upstream_source_modified": false
+    },
+    {
+      "attempt_id": 3,
+      "boot": "fdb904ab-f1d9-429f-8a98-52dee6ad85cf",
+      "make_flags": "serial",
+      "failure": "Same multilib issue, now from fs.h:12 <string.h>",
+      "upstream_source_modified": "dead-include removal (ctype.h) only",
+      "patch_verification": "no ctype function used anywhere in src/ebpf (grep-verified)"
+    },
+    {
+      "attempt_id": 4,
+      "boot": "347d215c-9289-4e2b-ad9b-232c41f08f75",
+      "make_flags": "serial",
+      "failure": "clang BPF backend refuses: 'BPF stack limit exceeded' at kit.bpf.c:67 (bpf_printk), :70, :92 (xdp_receive) and more. Modern clang + kernel 7.0 enforces 512-byte BPF stack strictly; kit.bpf.c's call chains exceed it.",
+      "upstream_source_modified": "dead-include removals (ctype.h, string.h) only; verified semantics-preserving. All memcpy calls use __builtin_memcpy (compiler builtin, not libc). strings.h header note confirms ebpf code intentionally avoids libc string functions."
+    }
+  ],
+  "verdict": "TripleCross does not build out of the box on Ubuntu 26.04 / kernel 7.0 with the project's pinned libbpf and clang 16+ toolchain. Even after removing provably dead libc includes (semantics-preserving build-env adaptation), the BPF stack limit is exceeded by kit.bpf.c's handler functions. Raising clang's -mllvm -bpf-stack-size would defer the failure to load time where the kernel verifier enforces the same limit. Taking the sample further would require non-trivial source refactoring (splitting XDP handlers, reducing on-stack buffers) which was out of scope.",
+  "scope_note": "Only two kinds of patches were applied, both documented in BUILD_ENV_COMPAT_PATCH.json: removing an unused #include <ctype.h> and removing an unused #include <string.h>. Both are dead code (verified by grep for every function those headers would provide). No behavioral change. Rootkit logic is bit-identical.",
+  "runtime_claims": {
+    "load_gate_reached": false,
+    "hiding_gate_reached": false,
+    "three_boot_matrix": false
+  },
+  "evidence_dirs": [
+    "build_result_c9c868bf-73db-48b2-a2d2-dd3504447fda",
+    "build_result_2a8bba5f-9536-4544-9990-d80f9640d1da",
+    "build_result_fdb904ab-f1d9-429f-8a98-52dee6ad85cf",
+    "build_result_347d215c-9289-4e2b-ad9b-232c41f08f75"
+  ]
+}

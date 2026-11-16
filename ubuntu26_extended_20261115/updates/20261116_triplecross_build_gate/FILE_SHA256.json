@@ -1,0 +1,14 @@
+{
+  "attempts/attempt_4_boot_347d215c/bin_listing.txt": "96f6a19738a9a2cd03707519ce309b95740ccdb4e3f400fac245a0f1e96939e4",
+  "attempts/attempt_4_boot_347d215c/kicba-triplecross-build-347d215c.stderr": "c7e52980524d5cc22d14f4d45c87dba0eb620aae809e4e246d7373054da51443",
+  "attempts/attempt_4_boot_347d215c/kicba-triplecross-build-347d215c.stdout": "42a51ca3fb370dbdf682809f1765c4af37586d573fe31993773246470b88a149",
+  "attempts/attempt_4_boot_347d215c/stage_result.json": "c3c017f63d7eda420121c1dbec855168103cc83cce1453f9a466fe4a884b9c3e",
+  "attempts/attempt_4_boot_347d215c/summary.json": "ea95e84a03d1c71e1a6f5ce13c432db2f93c358418fb0506494584cbeeef5e2a",
+  "attempts/attempt_4_boot_347d215c/tool_versions.json": "d5e6561334adf4dcd9ef0edee1a2f1cec18fe7a1af455d705e73bc91a6cfb25c",
+  "attempts/attempt_4_boot_347d215c/unit_final.txt": "b538e605bf9f8a00ad86ed335ea1e36bbd931b06b8c0e1545e6b33006ac3a393",
+  "BUILD_ENV_COMPAT_PATCH.json": "8bd65432fc022651b716c4fdf3f504f969b15603744afa1bf1e4edb6c881ae18",
+  "build_gate.py": "96d9b03093e9b9c73154884c395be560a91a5b7fc5e3bcb1df7fdd27f4f13440",
+  "BUILD_GATE_RESULT.json": "2d6640565872d9b32ed7ccd509d48b005538c30b8ad2437feeda4055350b7010",
+  "patch.diff": "014b162239796a256f5e182232dc407e70f1111c7a0f85ed16098bead037eb96",
+  "README.txt": "07bde604854f14e364fdbe0871b2bbf475026d60e32a403c154029ad1c2841f8"
+}

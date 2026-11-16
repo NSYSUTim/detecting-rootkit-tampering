@@ -1,0 +1,56 @@
+{
+  "clang": {
+    "returncode": 0,
+    "stdout": [
+      "Ubuntu clang version 21.1.8 (6ubuntu1)",
+      "Target: x86_64-pc-linux-gnu",
+      "Thread model: posix"
+    ],
+    "stderr": []
+  },
+  "llvm-strip": {
+    "returncode": 0,
+    "stdout": [
+      "llvm-strip, compatible with GNU strip",
+      "Ubuntu LLVM version 21.1.8",
+      "  Optimized build."
+    ],
+    "stderr": []
+  },
+  "bpftool": {
+    "returncode": 0,
+    "stdout": [
+      "bpftool v7.7.0",
+      "using libbpf v1.7",
+      "features:"
+    ],
+    "stderr": []
+  },
+  "make": {
+    "returncode": 0,
+    "stdout": [
+      "GNU Make 4.4.1",
+      "Built for x86_64-pc-linux-gnu",
+      "Copyright (C) 1988-2023 Free Software Foundation, Inc."
+    ],
+    "stderr": []
+  },
+  "gcc": {
+    "returncode": 0,
+    "stdout": [
+      "gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0",
+      "Copyright (C) 2025 Free Software Foundation, Inc.",
+      "This is free software; see the source for copying conditions.  There is NO"
+    ],
+    "stderr": []
+  },
+  "ld": {
+    "returncode": 0,
+    "stdout": [
+      "GNU ld (GNU Binutils for Ubuntu) 2.46",
+      "Copyright (C) 2026 Free Software Foundation, Inc.",
+      "This program is free software; you may redistribute it under the terms of"
+    ],
+    "stderr": []
+  }
+}

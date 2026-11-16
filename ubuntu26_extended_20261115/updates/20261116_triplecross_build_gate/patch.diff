@@ -1,0 +1,12 @@
+src/ebpf/include/bpf/fs.h	2023-03-09 02:34:21.000000000 +0800
+src/ebpf/include/bpf/fs.h	2026-11-16 07:51:47.118146400 +0800
+@@ -8,8 +8,7 @@
+ #include <string.h>
+ #include <linux/ptrace.h>
+ #include <linux/stat.h>*/
+-#include <ctype.h>
+-#include <string.h>
++/* [build-env compat] removed unused #include <ctype.h> and #include <string.h>: both pull in gnu/stubs-32.h which requires gcc-multilib not available in the isolated VM. No ctype function is actually used in the eBPF code, and all memcpy calls are __builtin_memcpy (a compiler builtin, not a libc function). Verified by grep. */
+ 
+ #include <bpf/bpf_helpers.h>
+ #include <bpf/bpf_tracing.h>

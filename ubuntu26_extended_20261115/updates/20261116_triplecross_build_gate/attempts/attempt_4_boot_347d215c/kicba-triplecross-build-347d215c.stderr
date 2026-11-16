@@ -1,0 +1,87 @@
+make: Warning: File 'Makefile' has modification time 390 s in the future
+make[1]: pkg-config: No such file or directory
+make[1]: Warning: File 'Makefile' has modification time 389 s in the future
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.
+ebpf/kit.bpf.c:92:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   92 | int xdp_receive(struct xdp_md *ctx){
+      |     ^
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/include/packet/protocol/tcp_helper.h:0:0
+ebpf/kit.bpf.c:129:9: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+  129 |         bpf_printk("E %i\n", bpf_ntohs(tcp->dest));
+      |         ^
+ebpf/kit.bpf.c:141:21: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+  141 |     if(payload_size == sizeof(CC_PROT_PHANTOM_COMMAND_REQUEST)){
+      |                     ^
+ebpf/kit.bpf.c:133:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+  133 |     bpf_printk("Detected 9000\n");
+      |     ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   67 |             bpf_printk("G");
+      |             ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+ebpf/kit.bpf.c:70:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   70 |     bpf_printk("Detected possible phantom shell command\n");
+      |     ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   67 |             bpf_printk("G");
+      |             ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+ebpf/kit.bpf.c:70:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   70 |     bpf_printk("Detected possible phantom shell command\n");
+      |     ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   67 |             bpf_printk("G");
+      |             ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+ebpf/kit.bpf.c:70:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   70 |     bpf_printk("Detected possible phantom shell command\n");
+      |     ^
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+   92 | int xdp_receive(struct xdp_md *ctx){
+      |     ^
+ebpf/kit.bpf.c:92:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   92 | int xdp_receive(struct xdp_md *ctx){
+      |     ^
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+ebpf/kit.bpf.c:92:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   92 | int xdp_receive(struct xdp_md *ctx){
+      |     ^
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   67 |             bpf_printk("G");
+      |             ^
+ebpf/kit.bpf.c:67:13: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+ebpf/kit.bpf.c:70:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   70 |     bpf_printk("Detected possible phantom shell command\n");
+      |     ^
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+   92 | int xdp_receive(struct xdp_md *ctx){
+      |     ^
+ebpf/kit.bpf.c:92:5: error: Looks like the BPF stack limit is exceeded. Please move large on stack variables into BPF per-cpu array map. For non-kernel uses, the stack can be increased using -mllvm -bpf-stack-size.
+
+   92 | int xdp_receive(struct xdp_md *ctx){
+      |     ^
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+ebpf/kit.bpf.c:92:5: note: could not determine the original source location for ebpf/kit.bpf.c:0:0
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [Makefile:77: .output/kit.bpf.o] Error 1

@@ -1,0 +1,8 @@
+{
+  "file": "src/ebpf/include/bpf/fs.h",
+  "line_changed": 11,
+  "kind": "build_env_compat_dead_include_removal",
+  "rationale": "ctype.h pulls in gnu/stubs-32.h which requires gcc-multilib. The isolated VM has no default route to apt-install, so multilib is unavailable. The include is DEAD in the eBPF source: no ctype function (isdigit/isalpha/isupper/islower/isspace/tolower/toupper/isalnum/isprint/isxdigit) is referenced in the ebpf/ tree. Removing the include preserves semantics bit-for-bit (dead-code removal, not a functional change).",
+  "original_sha256": "9cb9481218e0c99fc5393eb239073a5d1d61136dd0051bcad8080e6d5b215e7b",
+  "patched_sha256": "48a57ed7e93f267507e6934cf15ccb27a43b1268c02f77ceecac8d0d72b0834d"
+}

@@ -1,0 +1,7 @@
+{
+  "boot": "347d215c-9289-4e2b-ad9b-232c41f08f75",
+  "returncode": 2,
+  "unit_final": "ActiveState=failed\nResult=exit-code\nExecMainStatus=2",
+  "status": "fail",
+  "out_dir": "C:\\Users\\0402t\\\u684c\u9762\\\u5c08\u984c\\artifacts\\ubuntu26_extended_20261116_triplecross\\build_result_347d215c-9289-4e2b-ad9b-232c41f08f75"
+}

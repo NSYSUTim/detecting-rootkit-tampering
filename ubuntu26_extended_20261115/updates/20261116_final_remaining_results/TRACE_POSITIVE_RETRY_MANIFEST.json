@@ -1,0 +1,36 @@
+{
+  "status": "complete_with_preserved_retry",
+  "reason": "The original ls_basic_09 batch executed 100 listings but the trace contained 99 distinct listing PIDs.",
+  "policy": "Preserve the original batch, retry without overwriting it, and select only a retry with 100 observed PIDs.",
+  "original_not_selected": {
+    "scenario": "ls_basic",
+    "index": 9,
+    "path": "trace_positive_evidence/events/ls_basic_09.json.gz",
+    "sha256": "a43db3bbf92ee92ac69637d5ecd5ecf58ae19dd16e89d826198f8fb938df9b59",
+    "iterations": 100,
+    "observed_pids": 99
+  },
+  "retry_attempt_1_not_selected": {
+    "status": "harness_archival_failure_after_successful_acquisition",
+    "reason": "The retry wrapper initially searched the parent directory instead of the events subdirectory and therefore did not produce a result.json record.",
+    "path": "trace_positive_retry/events/events_2026-11-16T13_10_51.691214_rootkit.json.gz",
+    "sha256": "bf15f24c82ee00ff2f1ae2de78a1508c53120c4fdf32b9581b4c9e9f64db0fa5",
+    "iterations": 100,
+    "observed_pids": 100
+  },
+  "selected_retry": {
+    "scenario": "ls_basic",
+    "index": 9,
+    "attempt": 2,
+    "path": "trace_positive_retry/attempt_02/ls_basic_09.json.gz",
+    "result_path": "trace_positive_retry/attempt_02/result.json",
+    "sha256": "6596039fd4a16a03286dee874e0de8740d045f2a322932e699a865904f20b651",
+    "iterations": 100,
+    "observed_pids": 100,
+    "boot": "37183517-76ec-45d6-820c-ff169c4ebe12"
+  },
+  "selected_positive_batches": 50,
+  "selected_positive_listing_runs": 5000,
+  "extra_preserved_unselected_attempts": 2
+}
+

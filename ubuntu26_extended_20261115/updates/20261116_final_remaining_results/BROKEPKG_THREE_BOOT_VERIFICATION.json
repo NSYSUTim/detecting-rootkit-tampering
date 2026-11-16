@@ -1,0 +1,183 @@
+{
+  "status": "verified_complete",
+  "sample": "R3tr074/brokepkg",
+  "commit": "250f132f0d856cb46449de7a6d0dadd878309fb3",
+  "binary_sha256": "2a01623d9c7557896b44b5c460bdcf832aa82d12ee689ec3fb0d7c9afc779166",
+  "boots_planned": 3,
+  "boots_verified": 3,
+  "observations_verified": 1440,
+  "per_boot": [
+    {
+      "boot": "81157059-d6b6-426e-8ec3-d03c47089e3e",
+      "observations_sha256": "7c5cbe6def5b90e2ccbd4a5866f38cfa959bb43894c21902ae67a68022ee24b5",
+      "summary_sha256": "24ee7b0800dc0c10e7ab2426502f841357bc3a6b5e098b6fda18c9df74f61a6f",
+      "archive_sha256": "f83965a821f6fa7c5a5151058d1bc81d5a9c39a759311936e34f607fe2158b5d",
+      "archive_bytes": 1456219,
+      "counts": {
+        "unloaded": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 0,
+          "hiding_exercised": 0,
+          "decode_success": 160,
+          "actual_missing_entry_events": 0,
+          "unobserved_fixture_entry_events": 0
+        },
+        "loaded_no_marker": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 0,
+          "hiding_exercised": 0,
+          "decode_success": 160,
+          "actual_missing_entry_events": 0,
+          "unobserved_fixture_entry_events": 0
+        },
+        "active": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 160,
+          "hiding_exercised": 160,
+          "decode_success": 160,
+          "actual_missing_entry_events": 4344,
+          "unobserved_fixture_entry_events": 1524,
+          "configured_target_events": 4008,
+          "recovered_target_events": 2820,
+          "all_configured_targets_recovered": 136
+        }
+      },
+      "module_absent_at_end": true
+    },
+    {
+      "boot": "8b6aca96-b938-494a-bdbe-0971d22ab04d",
+      "observations_sha256": "2097412a8e8b834ec97d33c23de709406c2dc0bfa7007035c6ff9675c6a96fe7",
+      "summary_sha256": "bd8a65f79e7769c2476368cabf770ce64b49b993624f485aa2d3bc96c0f4757e",
+      "archive_sha256": "87c6d96978bdad9a4409bf0caf53c2e948078cf63537ca70ea1dc7ca5e5a7f30",
+      "archive_bytes": 1444910,
+      "counts": {
+        "unloaded": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 0,
+          "hiding_exercised": 0,
+          "decode_success": 160,
+          "actual_missing_entry_events": 0,
+          "unobserved_fixture_entry_events": 0
+        },
+        "loaded_no_marker": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 0,
+          "hiding_exercised": 0,
+          "decode_success": 160,
+          "actual_missing_entry_events": 0,
+          "unobserved_fixture_entry_events": 0
+        },
+        "active": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 160,
+          "hiding_exercised": 160,
+          "decode_success": 160,
+          "actual_missing_entry_events": 4344,
+          "unobserved_fixture_entry_events": 1524,
+          "configured_target_events": 4008,
+          "recovered_target_events": 2820,
+          "all_configured_targets_recovered": 136
+        }
+      },
+      "module_absent_at_end": true
+    },
+    {
+      "boot": "554c60c4-7beb-4b7e-82a8-e37bba3e8ced",
+      "observations_sha256": "d3692ad97e626965ac427c8fb2efa73d84d8b803f7e672a64390b1ab20eb8b77",
+      "summary_sha256": "4d6279dd174d8fbb8056560ae46ec24e0a9c50a878b86a6d13aae8b14958fcf8",
+      "archive_sha256": "f0916dc58543dd2fa4c41690f47f4c67eb98b15618b30c94a61d98d500c1e445",
+      "archive_bytes": 1445601,
+      "counts": {
+        "unloaded": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 0,
+          "hiding_exercised": 0,
+          "decode_success": 160,
+          "actual_missing_entry_events": 0,
+          "unobserved_fixture_entry_events": 0
+        },
+        "loaded_no_marker": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 0,
+          "hiding_exercised": 0,
+          "decode_success": 160,
+          "actual_missing_entry_events": 0,
+          "unobserved_fixture_entry_events": 0
+        },
+        "active": {
+          "attempted": 160,
+          "valid": 160,
+          "correct_alarm": 160,
+          "alarm": 160,
+          "hiding_exercised": 160,
+          "decode_success": 160,
+          "actual_missing_entry_events": 4344,
+          "unobserved_fixture_entry_events": 1524,
+          "configured_target_events": 4008,
+          "recovered_target_events": 2820,
+          "all_configured_targets_recovered": 136
+        }
+      },
+      "module_absent_at_end": true
+    }
+  ],
+  "aggregate": {
+    "unloaded": {
+      "attempted": 480,
+      "valid": 480,
+      "correct_alarm": 480,
+      "alarm": 0,
+      "hiding_exercised": 0,
+      "decode_success": 480,
+      "actual_missing_entry_events": 0,
+      "unobserved_fixture_entry_events": 0
+    },
+    "loaded_no_marker": {
+      "attempted": 480,
+      "valid": 480,
+      "correct_alarm": 480,
+      "alarm": 0,
+      "hiding_exercised": 0,
+      "decode_success": 480,
+      "actual_missing_entry_events": 0,
+      "unobserved_fixture_entry_events": 0
+    },
+    "active": {
+      "attempted": 480,
+      "valid": 480,
+      "correct_alarm": 480,
+      "alarm": 480,
+      "hiding_exercised": 480,
+      "decode_success": 480,
+      "actual_missing_entry_events": 13032,
+      "unobserved_fixture_entry_events": 4572,
+      "configured_target_events": 12024,
+      "recovered_target_events": 8460,
+      "all_configured_targets_recovered": 408
+    }
+  },
+  "interpretation": [
+    "All 480 active observations alerted and decoded the observed K-S difference.",
+    "All 960 unloaded or loaded-without-marker controls had no difference alarm.",
+    "A small enumeration buffer can end before every configured target reaches the upstream observer; this is separate from IBLT decode success."
+  ],
+  "original_results_and_report_modified": false,
+  "vm_contacted_by_this_audit": false
+}
+

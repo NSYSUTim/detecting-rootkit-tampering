@@ -1,0 +1,487 @@
+{
+  "status": "evidence_verified",
+  "sample": "pathtofile/bad-bpf pidhide",
+  "commit": "0fd3cd0bd4f3c1e6488a63d1e273bb7c36fa58d7",
+  "binary_sha256": "cba5ef998804ef1c4de210c66a08310bd56129a116c76213762fc85ac581bcdb",
+  "boots_verified": 3,
+  "observations_replayed": 240,
+  "per_boot": [
+    {
+      "boot": "48fe243d-e214-46e0-aa99-002f6098d060",
+      "protocol_sha256": "4fdf00ce0313e16937c84d325500268c1b072a8475d6c811115880cf015a7242",
+      "observations_sha256": "7c7b4c012bbcd2b270c605e50a8bac5b99668bcea5bf1db1fc4a263bbb7a8e5f",
+      "summary_sha256": "46b4b64e2a247202b68d8225dbaafea7d2e27fbc11527c777c79f6b66decef39",
+      "counts": {
+        "unloaded": {
+          "attempted": 40,
+          "hiding_exercised": 0,
+          "workers_alive": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 0
+        },
+        "active": {
+          "attempted": 40,
+          "hiding_exercised": 40,
+          "workers_alive": 40,
+          "sample_corrupted_invalid": 20,
+          "valid": 20,
+          "decode_success": 20,
+          "alarm": 20
+        }
+      },
+      "malformed_active_256": [
+        {
+          "case": "detector_first_00_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_01_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_02_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_03_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_04_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_05_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_06_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_07_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_08_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_09_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_10_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_11_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_12_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_13_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_14_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_15_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_16_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_17_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_18_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_19_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        }
+      ]
+    },
+    {
+      "boot": "a9c26be8-dd90-4296-8654-17c6f1055ce9",
+      "protocol_sha256": "49ce5f7e1bb376cbb740dd75bececdda1465917bf756ee6645f1945da7efd97a",
+      "observations_sha256": "beabf4e94fc9afcc6d3a7d164dc9857989ed3a49be882bfd6ddcb809867fa680",
+      "summary_sha256": "6391fd2d547b2df7e3d33b2a6628925e83b828dfda3e6561cfc932e33ad9c191",
+      "counts": {
+        "unloaded": {
+          "attempted": 40,
+          "hiding_exercised": 0,
+          "workers_alive": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 0
+        },
+        "active": {
+          "attempted": 40,
+          "hiding_exercised": 40,
+          "workers_alive": 40,
+          "sample_corrupted_invalid": 20,
+          "valid": 20,
+          "decode_success": 20,
+          "alarm": 20
+        }
+      },
+      "malformed_active_256": [
+        {
+          "case": "detector_first_00_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_01_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_02_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_03_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_04_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_05_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_06_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_07_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_08_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_09_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_10_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_11_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_12_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_13_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_14_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_15_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_16_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_17_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_18_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_19_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        }
+      ]
+    },
+    {
+      "boot": "3f2d8073-35d9-47cb-83da-047db99d6513",
+      "protocol_sha256": "7a1ab6923e87b211836e382f00274254ae063973b21673490ea11c7b71475b7f",
+      "observations_sha256": "cfbc55eb90174983d2af4b78a290d61cd4fabda62cd2e6fa40308221a7436c98",
+      "summary_sha256": "693b14d0522fd36c58266261c0ef626b4a324d623fb15fb16e88e628c9717ebe",
+      "counts": {
+        "unloaded": {
+          "attempted": 40,
+          "hiding_exercised": 0,
+          "workers_alive": 40,
+          "valid": 40,
+          "decode_success": 40,
+          "alarm": 0
+        },
+        "active": {
+          "attempted": 40,
+          "hiding_exercised": 40,
+          "workers_alive": 40,
+          "sample_corrupted_invalid": 20,
+          "valid": 20,
+          "decode_success": 20,
+          "alarm": 20
+        }
+      },
+      "malformed_active_256": [
+        {
+          "case": "detector_first_00_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_01_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_02_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_03_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_04_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_05_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_06_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_07_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_08_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_09_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_10_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_11_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_12_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_13_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_14_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_15_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_16_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_17_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_18_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        },
+        {
+          "case": "detector_first_19_active_256",
+          "raw_sha256": "82d03314e6d6a9a174d586c71f1f3f878be0b55703833bbbd357a8e8f6dec812",
+          "raw_bytes": 752,
+          "offline_parser_error": "invalid dirent length"
+        }
+      ]
+    }
+  ],
+  "aggregate": {
+    "unloaded": {
+      "attempted": 120,
+      "hiding_exercised": 0,
+      "workers_alive": 120,
+      "valid": 120,
+      "decode_success": 120,
+      "alarm": 0
+    },
+    "active": {
+      "attempted": 120,
+      "hiding_exercised": 120,
+      "workers_alive": 120,
+      "sample_corrupted_invalid": 60,
+      "valid": 60,
+      "decode_success": 60,
+      "alarm": 60
+    }
+  },
+  "classification": {
+    "unloaded_true_negative_controls": 120,
+    "unloaded_false_alarms": 0,
+    "active_hiding_exercised": 120,
+    "active_valid_65536": 60,
+    "active_detected_and_decoded_65536": 60,
+    "active_sample_corrupted_invalid_256": 60
+  },
+  "interpretation": [
+    "Every active trial independently confirmed the target PID was absent from /proc enumeration while its direct /proc entry still existed.",
+    "All valid 65536-byte active measurements alarmed and decoded successfully.",
+    "At 256 bytes, the unmodified sample produced malformed getdents64 records in every active trial; those observations are quality-invalid and are not false negatives.",
+    "All unloaded controls were valid, decoded, and produced no alarm."
+  ],
+  "original_results_and_report_modified": false,
+  "vm_contacted_by_this_audit": false
+}
+

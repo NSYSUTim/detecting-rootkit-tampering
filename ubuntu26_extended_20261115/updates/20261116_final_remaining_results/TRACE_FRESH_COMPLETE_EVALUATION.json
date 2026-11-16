@@ -1,0 +1,1809 @@
+{
+  "status": "complete",
+  "scope": "Fresh Ubuntu 26 traces: 50 normal + 50 selected-valid rootkit batches, 100 listing runs per batch.",
+  "fresh_batches": 100,
+  "fresh_listing_runs": 10000,
+  "calibrated_scenarios": [
+    "default",
+    "file_count",
+    "filename_length",
+    "system_load"
+  ],
+  "scored_batches": 80,
+  "excluded_descriptive_batches": 20,
+  "excluded": {
+    "normal:ls_basic": 10,
+    "rootkit:ls_basic": 10
+  },
+  "methods": {
+    "fun": {
+      "frozen": {
+        "threshold": 2.1544346900318954e-17,
+        "metrics": {
+          "tn": 31,
+          "fp": 9,
+          "fn": 0,
+          "tp": 40,
+          "precision": 0.8163265306122449,
+          "recall": 1.0,
+          "specificity": 0.775,
+          "accuracy": 0.8875,
+          "f1": 0.898876404494382
+        }
+      },
+      "frozen_by_scenario": {
+        "default": {
+          "tn": 6,
+          "fp": 4,
+          "fn": 0,
+          "tp": 10,
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "specificity": 0.6,
+          "accuracy": 0.8,
+          "f1": 0.8333333333333333
+        },
+        "file_count": {
+          "tn": 8,
+          "fp": 2,
+          "fn": 0,
+          "tp": 10,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "specificity": 0.8,
+          "accuracy": 0.9,
+          "f1": 0.9090909090909091
+        },
+        "filename_length": {
+          "tn": 8,
+          "fp": 2,
+          "fn": 0,
+          "tp": 10,
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "specificity": 0.8,
+          "accuracy": 0.9,
+          "f1": 0.9090909090909091
+        },
+        "system_load": {
+          "tn": 9,
+          "fp": 1,
+          "fn": 0,
+          "tp": 10,
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "specificity": 0.9,
+          "accuracy": 0.95,
+          "f1": 0.9523809523809523
+        }
+      },
+      "legacy_same_test_label_optimized": {
+        "threshold": 5e-324,
+        "metrics": {
+          "tn": 39,
+          "fp": 1,
+          "fn": 0,
+          "tp": 40,
+          "precision": 0.975609756097561,
+          "recall": 1.0,
+          "specificity": 0.975,
+          "accuracy": 0.9875,
+          "f1": 0.9876543209876543
+        }
+      },
+      "score_summary": {
+        "normal": {
+          "min": 0.0,
+          "median": 1.590396513460896e-05,
+          "max": 0.5085588823205565
+        },
+        "rootkit": {
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        }
+      }
+    },
+    "seq": {
+      "frozen": {
+        "threshold": 0.0,
+        "metrics": {
+          "tn": 40,
+          "fp": 0,
+          "fn": 40,
+          "tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "accuracy": 0.5,
+          "f1": 0.0
+        }
+      },
+      "frozen_by_scenario": {
+        "default": {
+          "tn": 10,
+          "fp": 0,
+          "fn": 10,
+          "tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "accuracy": 0.5,
+          "f1": 0.0
+        },
+        "file_count": {
+          "tn": 10,
+          "fp": 0,
+          "fn": 10,
+          "tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "accuracy": 0.5,
+          "f1": 0.0
+        },
+        "filename_length": {
+          "tn": 10,
+          "fp": 0,
+          "fn": 10,
+          "tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "accuracy": 0.5,
+          "f1": 0.0
+        },
+        "system_load": {
+          "tn": 10,
+          "fp": 0,
+          "fn": 10,
+          "tp": 0,
+          "precision": 0.0,
+          "recall": 0.0,
+          "specificity": 1.0,
+          "accuracy": 0.5,
+          "f1": 0.0
+        }
+      },
+      "legacy_same_test_label_optimized": {
+        "threshold": 5e-324,
+        "metrics": {
+          "tn": 35,
+          "fp": 5,
+          "fn": 0,
+          "tp": 40,
+          "precision": 0.8888888888888888,
+          "recall": 1.0,
+          "specificity": 0.875,
+          "accuracy": 0.9375,
+          "f1": 0.9411764705882353
+        }
+      },
+      "score_summary": {
+        "normal": {
+          "min": 0.0,
+          "median": 3.803106861901349e-12,
+          "max": 0.06123362446256585
+        },
+        "rootkit": {
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        }
+      }
+    }
+  },
+  "primary_rule": "Archived training models and thresholds frozen before these fresh traces; alarm if score < threshold.",
+  "legacy_rule": "Threshold selected to maximize F1 using these same fresh test labels; reported only as optimistic reproduction.",
+  "normal_protocol_sha256": "c9f868651e684eb34171815b76b375e67d026101733064f983b335f987743552",
+  "normal_collection_sha256": "cb22e25443978de7aa590fe9f31e10911c53d53c0a94a7a1deaeb3d8620f7f3a",
+  "positive_protocol_sha256": "6ae779d0876b7d331d163553aa87d233af2aecf84ec88184d7988974b89aaa91",
+  "positive_collection_sha256": "080c3b9dbbcc997c5f0ac03dab22b1c3120792fc7138bbbb0ef2300d65e04553",
+  "positive_retry_manifest_sha256": "a9b1bf9206820d8f22c5c8e048b8bd5cb2b274a280b4a0c216644ec76b3adcd0",
+  "positive_retry_policy": "One 99-PID ls_basic acquisition was preserved but replaced by a separately preserved 100-PID retry; ls_basic remains descriptive and outside the frozen four-scenario model.",
+  "archived_split_sha256": "d0e1a6027bb25d2a28503f63153f1cc3f3d42d57610d50537095892251ba9d3e",
+  "archived_thresholds_sha256": "a9f6a1182223f73f2a0cc408453897993e805d9aff7e4b7d6a8fd8abf436af74",
+  "predictions": [
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "4f9fe1451350b3a83cadd64e6014ca221bc64315d8c20ee24b041d1fed57367a",
+      "method": "fun",
+      "score": 0.20995160035596822,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "4f9fe1451350b3a83cadd64e6014ca221bc64315d8c20ee24b041d1fed57367a",
+      "method": "seq",
+      "score": 0.003511704443544026,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "bb5470f9530c95717e1df961d8c82d6d3fa455778bcd6f02923e2a3f4ff8cce5",
+      "method": "fun",
+      "score": 9.278478299460345e-19,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "bb5470f9530c95717e1df961d8c82d6d3fa455778bcd6f02923e2a3f4ff8cce5",
+      "method": "seq",
+      "score": 4.948258113056013e-14,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "563c8dc0bd3970adaa394f17589781dde0cf6fabb63e48abfdf86b06ea6eec10",
+      "method": "fun",
+      "score": 2.789832607006053e-203,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "563c8dc0bd3970adaa394f17589781dde0cf6fabb63e48abfdf86b06ea6eec10",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "e25108c91fcca2e44b674589bc051de3155bca8501cf1e9521631d285f51b911",
+      "method": "fun",
+      "score": 7.932952500734072e-212,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "e25108c91fcca2e44b674589bc051de3155bca8501cf1e9521631d285f51b911",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "0be9df8ba0614e683bd33f5ba9b64bbe79928cac25de32b224fa2900fcf17740",
+      "method": "fun",
+      "score": 0.14025814509803014,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "0be9df8ba0614e683bd33f5ba9b64bbe79928cac25de32b224fa2900fcf17740",
+      "method": "seq",
+      "score": 0.0005611451543904841,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "92f2de88d24416a9e07e95f1ce83346f2dc45c8fcee81e99948877767b2a823b",
+      "method": "fun",
+      "score": 0.016377939226791614,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "92f2de88d24416a9e07e95f1ce83346f2dc45c8fcee81e99948877767b2a823b",
+      "method": "seq",
+      "score": 3.550479621234178e-07,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "74653caa2f8297e12559fc59d8e3871a24d0a35110bc05190de10b913202e170",
+      "method": "fun",
+      "score": 2.9951197065737594e-05,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "74653caa2f8297e12559fc59d8e3871a24d0a35110bc05190de10b913202e170",
+      "method": "seq",
+      "score": 2.351892823190028e-09,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "c7762707e9a84c09f02f0172f6b109b96f66af667acd835bed5f2c98ef26c2b5",
+      "method": "fun",
+      "score": 0.004039036101494426,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "c7762707e9a84c09f02f0172f6b109b96f66af667acd835bed5f2c98ef26c2b5",
+      "method": "seq",
+      "score": 2.7861570467424946e-06,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "066aa099af3516fbe98156bfa8d3fa78db7f58c67a6637f52101c117a3959b7e",
+      "method": "fun",
+      "score": 4.787001522061166e-09,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "066aa099af3516fbe98156bfa8d3fa78db7f58c67a6637f52101c117a3959b7e",
+      "method": "seq",
+      "score": 8.99010805578602e-192,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "7a4aa03e6fa152a92f5579b47f7b9f413239c142ff16991d3eba03788cc1b7b8",
+      "method": "fun",
+      "score": 1.8567332034803293e-06,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "7a4aa03e6fa152a92f5579b47f7b9f413239c142ff16991d3eba03788cc1b7b8",
+      "method": "seq",
+      "score": 4.552608666913136e-12,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "e83d4dadd077b4e70256986469be86ec67d4b1194309ddb001789beb4c456c15",
+      "method": "fun",
+      "score": 6.2502975335432696e-18,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "e83d4dadd077b4e70256986469be86ec67d4b1194309ddb001789beb4c456c15",
+      "method": "seq",
+      "score": 6.2502975335432696e-18,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "d0a99719283bc2a257268095946ac5de6feacd8077c11e8bd7587625beb3a115",
+      "method": "fun",
+      "score": 0.5085588823205565,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "d0a99719283bc2a257268095946ac5de6feacd8077c11e8bd7587625beb3a115",
+      "method": "seq",
+      "score": 0.06123362446256585,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "1ab82518c09bc67cc77b84005bc0d1232749a0824cd77f5a3b1f7792c34f95a4",
+      "method": "fun",
+      "score": 4.462558337885421e-11,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "1ab82518c09bc67cc77b84005bc0d1232749a0824cd77f5a3b1f7792c34f95a4",
+      "method": "seq",
+      "score": 3.0536050568895614e-12,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "dec6ed2ee70e7b5837b09d3aeb1c1d5341171ba0d451f2de38d932b8cd46b589",
+      "method": "fun",
+      "score": 8.808305153455774e-53,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "dec6ed2ee70e7b5837b09d3aeb1c1d5341171ba0d451f2de38d932b8cd46b589",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "39c4a4e2446b14157217c7fef08f4c6aa9d53dde7ee63968a0a4a2aee5489c0c",
+      "method": "fun",
+      "score": 0.005616339888932048,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "39c4a4e2446b14157217c7fef08f4c6aa9d53dde7ee63968a0a4a2aee5489c0c",
+      "method": "seq",
+      "score": 9.020400971230271e-176,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "ae2cb8a5b1f1a21fdfb0ffbb6299e0610d83998ad54b50132ae5d02267491874",
+      "method": "fun",
+      "score": 1.191762448962055e-07,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "ae2cb8a5b1f1a21fdfb0ffbb6299e0610d83998ad54b50132ae5d02267491874",
+      "method": "seq",
+      "score": 3.700691678939545e-69,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "93a3f4c752c193f3c5e496981527a51d8047bfd73ad59778c5e3176ca2a27d37",
+      "method": "fun",
+      "score": 0.008289948505785603,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "93a3f4c752c193f3c5e496981527a51d8047bfd73ad59778c5e3176ca2a27d37",
+      "method": "seq",
+      "score": 1.414320195767931e-10,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "eb98dba906def32408ef4b045c328bd170a5ce729fcd5b49190d7ed1bdc2d47e",
+      "method": "fun",
+      "score": 0.03346025532470713,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "eb98dba906def32408ef4b045c328bd170a5ce729fcd5b49190d7ed1bdc2d47e",
+      "method": "seq",
+      "score": 2.842280893075596e-15,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "7b186e3e5f15d23d7537dd6e46418a44ad67d8d8aa90c1306cb93f81d732e368",
+      "method": "fun",
+      "score": 0.001186543020873227,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "7b186e3e5f15d23d7537dd6e46418a44ad67d8d8aa90c1306cb93f81d732e368",
+      "method": "seq",
+      "score": 8.290197737924765e-07,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "b91b6871a4140027426a90afb8e6a3137bbe4aa149646871fa022c6aa7a173df",
+      "method": "fun",
+      "score": 2.0220144061478007e-07,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "b91b6871a4140027426a90afb8e6a3137bbe4aa149646871fa022c6aa7a173df",
+      "method": "seq",
+      "score": 1.8864938962961035e-10,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "2f6894a182d1b22d9e17454ac940379e6971994d623d46329a064812ad12d7fc",
+      "method": "fun",
+      "score": 1.9179239926007353e-10,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "2f6894a182d1b22d9e17454ac940379e6971994d623d46329a064812ad12d7fc",
+      "method": "seq",
+      "score": 1.262726350403717e-16,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "d09c9cadfd5aa6ada7ab0f98b31ddd274e80138920fad02a466d7b0f5f7c107e",
+      "method": "fun",
+      "score": 0.04151654107320584,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "d09c9cadfd5aa6ada7ab0f98b31ddd274e80138920fad02a466d7b0f5f7c107e",
+      "method": "seq",
+      "score": 2.685743186600342e-06,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "806fa0df13907099b8fc90a8e3037623c45f8710ccbf5717e83db20fc4f51e2f",
+      "method": "fun",
+      "score": 0.07560094015700795,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "806fa0df13907099b8fc90a8e3037623c45f8710ccbf5717e83db20fc4f51e2f",
+      "method": "seq",
+      "score": 0.00025958194073903197,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "9718720e85af66d2d40b044c64cf47ecded20ff785d01fb5cb009382572a3f6b",
+      "method": "fun",
+      "score": 4.6184077974593233e-20,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "9718720e85af66d2d40b044c64cf47ecded20ff785d01fb5cb009382572a3f6b",
+      "method": "seq",
+      "score": 4.6184077974593233e-20,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "c63543e45bb4ab96c01c85431138b7551fa5520ce52fa5690eeddd2c9a4f0639",
+      "method": "fun",
+      "score": 2.888544613822555e-231,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "c63543e45bb4ab96c01c85431138b7551fa5520ce52fa5690eeddd2c9a4f0639",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "a84e73af3904e9d0f414ec018bed9a04afcbe65953929faa9316ffa26875fa1b",
+      "method": "fun",
+      "score": 4.68254812338574e-05,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "a84e73af3904e9d0f414ec018bed9a04afcbe65953929faa9316ffa26875fa1b",
+      "method": "seq",
+      "score": 1.389473044118221e-10,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "fa89a526ab1d1fc10d77a7eff365668022bb6ce67bdcc4c0835eeb57a2ae2a90",
+      "method": "fun",
+      "score": 0.001847304792577352,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "fa89a526ab1d1fc10d77a7eff365668022bb6ce67bdcc4c0835eeb57a2ae2a90",
+      "method": "seq",
+      "score": 1.367149495118913e-10,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "0a76f8b345313995bb5148789298af7a417ca6ca7a2ccc864c62a2d483db61c7",
+      "method": "fun",
+      "score": 8.5809983452515e-14,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "0a76f8b345313995bb5148789298af7a417ca6ca7a2ccc864c62a2d483db61c7",
+      "method": "seq",
+      "score": 1.364622781212157e-29,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "d287ede558d33ed9f14acf3c2d37e0b5e5d502ac2d009ad2429697952b62e33b",
+      "method": "fun",
+      "score": 0.178167941508929,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "d287ede558d33ed9f14acf3c2d37e0b5e5d502ac2d009ad2429697952b62e33b",
+      "method": "seq",
+      "score": 2.952240077102596e-06,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "1bb77b5c3055c97087e8f4b40b8a40690f247b98e44246ecffd4e5fa349df8e5",
+      "method": "fun",
+      "score": 0.0006158893802498387,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "1bb77b5c3055c97087e8f4b40b8a40690f247b98e44246ecffd4e5fa349df8e5",
+      "method": "seq",
+      "score": 1.22950677443841e-10,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "0687f6e623eab23dcb76cb0b3710f2bab2ee9b3cd41bdc1717d54b0b00789bfc",
+      "method": "fun",
+      "score": 0.020697310697545972,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "0687f6e623eab23dcb76cb0b3710f2bab2ee9b3cd41bdc1717d54b0b00789bfc",
+      "method": "seq",
+      "score": 1.06663655760578e-25,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "4a4a19b72c7efac1e18b58a340080929b83b45831ff1a79a1914c4436aadd40b",
+      "method": "fun",
+      "score": 5.687000200554682e-09,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "4a4a19b72c7efac1e18b58a340080929b83b45831ff1a79a1914c4436aadd40b",
+      "method": "seq",
+      "score": 9.931293817925285e-45,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "a2dd7dc046785c4b1adbce0c8ff95f0492f6ef7b2aa8da948f9ad6bfeedd4bd2",
+      "method": "fun",
+      "score": 4.7826473074035056e-15,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "a2dd7dc046785c4b1adbce0c8ff95f0492f6ef7b2aa8da948f9ad6bfeedd4bd2",
+      "method": "seq",
+      "score": 4.380632198927612e-15,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "dc1e05b62c0213c1e3cdfbb6c5738a350bb22d20c3e34c761a5277f7257e8f5d",
+      "method": "fun",
+      "score": 0.06260440150532491,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "dc1e05b62c0213c1e3cdfbb6c5738a350bb22d20c3e34c761a5277f7257e8f5d",
+      "method": "seq",
+      "score": 3.604214031553082e-06,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "3c7745fe7cad0fc9c636d6b44476c3f1f79c041f52811b1f80c7749a7b54e182",
+      "method": "fun",
+      "score": 1.1566884794990342e-06,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "3c7745fe7cad0fc9c636d6b44476c3f1f79c041f52811b1f80c7749a7b54e182",
+      "method": "seq",
+      "score": 9.914007064403354e-22,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "d5003be2f506f44e9ef73d0511c05bb8e192df8fb592dbd2656e9a22e773a58e",
+      "method": "fun",
+      "score": 0.2127396165153439,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "d5003be2f506f44e9ef73d0511c05bb8e192df8fb592dbd2656e9a22e773a58e",
+      "method": "seq",
+      "score": 0.00025584180173263377,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "acd2a7c9d5a0d34cc568501f327dfc52440df4176dd2b27fdc99065f12832042",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "acd2a7c9d5a0d34cc568501f327dfc52440df4176dd2b27fdc99065f12832042",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "3cf2a40ce452a42b64244d2720ba1fccc02e38c13d890bc21d412f858817eee8",
+      "method": "fun",
+      "score": 7.635481987483488e-09,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "3cf2a40ce452a42b64244d2720ba1fccc02e38c13d890bc21d412f858817eee8",
+      "method": "seq",
+      "score": 1.567173634603078e-11,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "6a14841fd9bb7fc693cf539b9e16433cd6e1a3358a60e5fb4c996573a5638575",
+      "method": "fun",
+      "score": 3.715278893873954e-82,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "normal",
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "6a14841fd9bb7fc693cf539b9e16433cd6e1a3358a60e5fb4c996573a5638575",
+      "method": "seq",
+      "score": 3.715278893873954e-82,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "06d60cbb7ad99bf1dfb93ac5a78b91bc7bc1d21595337b717046a66d1bcaaf6e",
+      "method": "fun",
+      "score": 0.0008445792744397836,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": false
+    },
+    {
+      "label": "normal",
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "06d60cbb7ad99bf1dfb93ac5a78b91bc7bc1d21595337b717046a66d1bcaaf6e",
+      "method": "seq",
+      "score": 5.830696799897433e-05,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "1da9805f44ade96c5964c10de3bfc517a397be43e78a06c4a21b01c767652acd",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "1da9805f44ade96c5964c10de3bfc517a397be43e78a06c4a21b01c767652acd",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "00d1f374340b70a7afa1a702df75e3b23b286946e7b24f91c018a942be031b39",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "00d1f374340b70a7afa1a702df75e3b23b286946e7b24f91c018a942be031b39",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "8d9dc74d6876772048103632801ea91e7b310c1bfd91db1e1155c0a7f4010be0",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "8d9dc74d6876772048103632801ea91e7b310c1bfd91db1e1155c0a7f4010be0",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "d31939165e66cfdfba5afa61fe5182b21e71f0ac6bb9b247522cd17276d91f13",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "d31939165e66cfdfba5afa61fe5182b21e71f0ac6bb9b247522cd17276d91f13",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "a528e803c41b2ea18dcfb1a9eee358110a1ba65ec0c1010142ec7a2249974fca",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "a528e803c41b2ea18dcfb1a9eee358110a1ba65ec0c1010142ec7a2249974fca",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "3aab5268b1bf1c641842204f00f5c685f7ad7859ac87e2b39d62329edff2cffa",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "3aab5268b1bf1c641842204f00f5c685f7ad7859ac87e2b39d62329edff2cffa",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "f09992fa02c764566b51b7c6bd85507418cba9bd28e54a92989bc60aede970e9",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "f09992fa02c764566b51b7c6bd85507418cba9bd28e54a92989bc60aede970e9",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "6d1b79b07b2da8344acc30b28b51c23daec5113d7f8193b2071d1319d6970ea2",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "6d1b79b07b2da8344acc30b28b51c23daec5113d7f8193b2071d1319d6970ea2",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "43b3eb13fb86a1f28fd49a306b21159b87ea27dd4fb2d82f0a75bda5966a9504",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "43b3eb13fb86a1f28fd49a306b21159b87ea27dd4fb2d82f0a75bda5966a9504",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "fd098c543153319f5bf8ac96711c5e07895f6eccd7354ed552e58498a1bd56c6",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "fd098c543153319f5bf8ac96711c5e07895f6eccd7354ed552e58498a1bd56c6",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "fb4ad6d6c27838e395a3bd464a43bd3c701ede953517bcbc4dff13a42f869b6a",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "fb4ad6d6c27838e395a3bd464a43bd3c701ede953517bcbc4dff13a42f869b6a",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "32c691336a9d6c77381dc84660b2b569008907f0e84f3c7e70612e650c0afc68",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "32c691336a9d6c77381dc84660b2b569008907f0e84f3c7e70612e650c0afc68",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "7fd95b5ff0192a8af771a99ffe723ca8927b0caf7ddd038208284d3bc5d12e19",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "7fd95b5ff0192a8af771a99ffe723ca8927b0caf7ddd038208284d3bc5d12e19",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "26c552bb09ebcb7893bd5870d92a7deafebad7b26a485cce105abd5bbf872607",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "26c552bb09ebcb7893bd5870d92a7deafebad7b26a485cce105abd5bbf872607",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "e12e0511ad4e9061d6650bcf00e1a8dd4f37e917469b3c2efa14e1f0a866522c",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "e12e0511ad4e9061d6650bcf00e1a8dd4f37e917469b3c2efa14e1f0a866522c",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "313877d7bd0b1862a59e8ba0795bbf1cf27ec32606bff34db737c1e1ebbbfc6a",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "313877d7bd0b1862a59e8ba0795bbf1cf27ec32606bff34db737c1e1ebbbfc6a",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "b83228e941cb5fcc30be14cd9f75ba05223afdaeb6618b567885fbe20f0359e5",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "b83228e941cb5fcc30be14cd9f75ba05223afdaeb6618b567885fbe20f0359e5",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "0e3cc3214ac515a1b9f856e8fe9ffb0b3add53625cf1107ceb54a787942ac31e",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "0e3cc3214ac515a1b9f856e8fe9ffb0b3add53625cf1107ceb54a787942ac31e",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "38c7e5aef6e73a2ac1d99cef90c1722b45d6a10398ffab5c470a87aebfd4071c",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "38c7e5aef6e73a2ac1d99cef90c1722b45d6a10398ffab5c470a87aebfd4071c",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "647d9c2efb3c5c4d3852d5270bb13a091975a2364347d2a538ec19c5b17c9625",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "647d9c2efb3c5c4d3852d5270bb13a091975a2364347d2a538ec19c5b17c9625",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "6be1a7bb0e5edac9dc79f426d7d1a3a287df699198b6fc3ba8eeca3e9e326303",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "6be1a7bb0e5edac9dc79f426d7d1a3a287df699198b6fc3ba8eeca3e9e326303",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "cbf9405828dc0685b0952a4ad7c79d3f085ffa20ad5fe94df28a3f916d35c9f4",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "cbf9405828dc0685b0952a4ad7c79d3f085ffa20ad5fe94df28a3f916d35c9f4",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "312a90fe5d8cdf41b591e98af54ddcd9583def280ed3e4072d3386fc5de4f60d",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "312a90fe5d8cdf41b591e98af54ddcd9583def280ed3e4072d3386fc5de4f60d",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "1a694e20046b07b954eada44e7a42f87759934f33791fb7cfd5db726489d6e55",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "1a694e20046b07b954eada44e7a42f87759934f33791fb7cfd5db726489d6e55",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "ab4857e4e76e7577ef4ebee11d7605a9c781315c55734581335aaeae0b4295c3",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "ab4857e4e76e7577ef4ebee11d7605a9c781315c55734581335aaeae0b4295c3",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "4ec694d1d0c1204a5fcdf4b5e18f6d1156eccafe013baa69f60403a02f1c9766",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "4ec694d1d0c1204a5fcdf4b5e18f6d1156eccafe013baa69f60403a02f1c9766",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "8bf5b93566f2aa25bf772e23144e9ddc8e7da07802d3499c57445d531eafc023",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "8bf5b93566f2aa25bf772e23144e9ddc8e7da07802d3499c57445d531eafc023",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "5a184ed3996fbdc7d48a7a21374e98fe6540704a088e94e17aca1dff828cbea7",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "5a184ed3996fbdc7d48a7a21374e98fe6540704a088e94e17aca1dff828cbea7",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "67baaee22fc627eaf4d44a0f021cc92cd668987f7b4e37f294c5fccdc5c097f7",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "67baaee22fc627eaf4d44a0f021cc92cd668987f7b4e37f294c5fccdc5c097f7",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "1176f0c98fbac6bec00703c47008f9d06098a239182ffd9dd74da4eeadcdd001",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "1176f0c98fbac6bec00703c47008f9d06098a239182ffd9dd74da4eeadcdd001",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "f7de9911a74701fb5ca4929f2502f90c8f0f3db9462aecff7945a0bddf47f699",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "f7de9911a74701fb5ca4929f2502f90c8f0f3db9462aecff7945a0bddf47f699",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "c7b2bed14e7c6a11e4094159e675d22c8f0a2d38753b7bb34b362509219c73d9",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "c7b2bed14e7c6a11e4094159e675d22c8f0a2d38753b7bb34b362509219c73d9",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "8c936aa5c63283858adb1970dbbbdae5ab1b362db3402edf518b2d4aaaba76d8",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "8c936aa5c63283858adb1970dbbbdae5ab1b362db3402edf518b2d4aaaba76d8",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "f6bde0721a183b9292df8d4382ad1b54e05072a256ae2554e3083502a0e6824d",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "f6bde0721a183b9292df8d4382ad1b54e05072a256ae2554e3083502a0e6824d",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "2a7c01dc9f047af13030b33957ef5acb31b586d094dd6955e1c62224f469c8ba",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "2a7c01dc9f047af13030b33957ef5acb31b586d094dd6955e1c62224f469c8ba",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "68e5550873d307e08085fa1494229b24005fd282441fb460ebd26f41c7cfd921",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "68e5550873d307e08085fa1494229b24005fd282441fb460ebd26f41c7cfd921",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "6c9f6223e3f762a25447d191c34b85510c1ba052e1e6fa5b9916417ba8e75fc2",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "6c9f6223e3f762a25447d191c34b85510c1ba052e1e6fa5b9916417ba8e75fc2",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "b0727657f8cd4043dce31191826f39c74c4f6f88ccfcfc290d01bf7cf6d81ce5",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "b0727657f8cd4043dce31191826f39c74c4f6f88ccfcfc290d01bf7cf6d81ce5",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "28b80e7028509fe751018e001a7c1b22a76fa65daf16bc28b28bda9a1a597231",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "28b80e7028509fe751018e001a7c1b22a76fa65daf16bc28b28bda9a1a597231",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "5eb3e67bdede1eaa9b614ca3a34a6cbe59ca0071ee6e243a2f6ab7698b3a975a",
+      "method": "fun",
+      "score": 0.0,
+      "frozen_threshold": 2.1544346900318954e-17,
+      "frozen_alarm": true
+    },
+    {
+      "label": "rootkit",
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "5eb3e67bdede1eaa9b614ca3a34a6cbe59ca0071ee6e243a2f6ab7698b3a975a",
+      "method": "seq",
+      "score": 0.0,
+      "frozen_threshold": 0.0,
+      "frozen_alarm": false
+    }
+  ]
+}
+

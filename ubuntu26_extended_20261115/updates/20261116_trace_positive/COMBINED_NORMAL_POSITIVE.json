@@ -1,0 +1,43 @@
+{
+  "scope": "40 new normal + 40 new positive batches in the four calibrated scenarios, single new Ubuntu 26 boot per label. ls_basic batches are outside the four-scenario split and excluded.",
+  "normal_boot": "aaa7eeec-a293-4ccd-bac1-29fab91e0bbd",
+  "positive_boot": "37183517-76ec-45d6-820c-ff169c4ebe12",
+  "calibrated_scenarios": [
+    "default",
+    "file_count",
+    "filename_length",
+    "system_load"
+  ],
+  "per_method": {
+    "fun": {
+      "tp": 40,
+      "fn": 0,
+      "fp": 9,
+      "tn": 31,
+      "sensitivity_recall": 1.0,
+      "specificity_tnr": 0.775,
+      "false_positive_rate": 0.225,
+      "precision": 0.8163265306122449,
+      "f1_score": 0.898876404494382,
+      "threshold": 2.1544346900318954e-17
+    },
+    "seq": {
+      "tp": 0,
+      "fn": 40,
+      "fp": 0,
+      "tn": 40,
+      "sensitivity_recall": 0.0,
+      "specificity_tnr": 1.0,
+      "false_positive_rate": 0.0,
+      "precision": null,
+      "f1_score": null,
+      "threshold": 0.0
+    }
+  },
+  "normal_source_sha256": "7752b1e9fd80318e52ef3c4144331c0525bc9e2f50b8a27cefe9344bd7f5b800",
+  "positive_source_sha256": "1f7e238ce85e27ebaeee0b98a2ca1b2d4fda440476af163a80cbf5a1e8bf30d6",
+  "archived_model_split_sha256": "d0e1a6027bb25d2a28503f63153f1cc3f3d42d57610d50537095892251ba9d3e",
+  "archived_thresholds_sha256": "a9f6a1182223f73f2a0cc408453897993e805d9aff7e4b7d6a8fd8abf436af74",
+  "full_j19_experiment_complete": false,
+  "notes": "Single-boot per label. No new threshold fit. The seq method with threshold 0.0 never alarms and so has sensitivity 0 and F1 undefined (precision 0/0). fun method shows the point estimate on this one-boot measurement only."
+}

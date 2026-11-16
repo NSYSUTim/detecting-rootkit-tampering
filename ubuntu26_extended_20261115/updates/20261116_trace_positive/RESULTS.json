@@ -1,0 +1,1016 @@
+{
+  "scope": "50 new positive (rootkit-active) batches with 100 listing runs per batch. Single Ubuntu 26 boot.",
+  "rootkit_module": "kicba_d7_hiding",
+  "positive_batches_captured": 50,
+  "listing_runs": 5000,
+  "boot": "37183517-76ec-45d6-820c-ff169c4ebe12",
+  "positive_batches_in_calibrated_scenarios": 40,
+  "full_j19_experiment_complete": false,
+  "thresholds": {
+    "fun": 2.1544346900318954e-17,
+    "seq": 0.0
+  },
+  "scenario_outcomes": {
+    "filename_length": {
+      "fun": {
+        "correct_rootkit": 10
+      },
+      "seq": {
+        "missed_rootkit": 10
+      }
+    },
+    "default": {
+      "fun": {
+        "correct_rootkit": 10
+      },
+      "seq": {
+        "missed_rootkit": 10
+      }
+    },
+    "file_count": {
+      "fun": {
+        "correct_rootkit": 10
+      },
+      "seq": {
+        "missed_rootkit": 10
+      }
+    },
+    "ls_basic": {
+      "fun": {
+        "outside_calibrated_scenarios": 10
+      },
+      "seq": {
+        "outside_calibrated_scenarios": 10
+      }
+    },
+    "system_load": {
+      "fun": {
+        "correct_rootkit": 10
+      },
+      "seq": {
+        "missed_rootkit": 10
+      }
+    }
+  },
+  "acquisition_counts": {
+    "filename_length": 10,
+    "default": 10,
+    "file_count": 10,
+    "ls_basic": 10,
+    "system_load": 10
+  },
+  "per_method_true_positive_rate": {
+    "fun": {
+      "attempted_in_calibrated_scenarios": 40,
+      "correct_rootkit": 40,
+      "missed_rootkit": 0,
+      "sensitivity": 1.0
+    },
+    "seq": {
+      "attempted_in_calibrated_scenarios": 40,
+      "correct_rootkit": 0,
+      "missed_rootkit": 40,
+      "sensitivity": 0.0
+    }
+  },
+  "median_of_batch_function_interval_medians_ns": {
+    "filename_length": {
+      "touch_atime-enter:touch_atime-return": 335.5,
+      "verify_dirent_name-enter:verify_dirent_name-return": 356.25,
+      "filldir64-enter:filldir64-return": 1217.25,
+      "iterate_dir-enter:iterate_dir-return": 27509.5
+    },
+    "default": {
+      "touch_atime-enter:touch_atime-return": 343.5,
+      "verify_dirent_name-enter:verify_dirent_name-return": 356.0,
+      "filldir64-enter:filldir64-return": 1184.5,
+      "iterate_dir-enter:iterate_dir-return": 22980.0
+    },
+    "file_count": {
+      "touch_atime-enter:touch_atime-return": 365.0,
+      "filldir64-enter:filldir64-return": 923.0,
+      "verify_dirent_name-enter:verify_dirent_name-return": 249.0,
+      "iterate_dir-enter:iterate_dir-return": 183221.75
+    },
+    "ls_basic": {
+      "touch_atime-enter:touch_atime-return": 354.75,
+      "verify_dirent_name-enter:verify_dirent_name-return": 331.75,
+      "filldir64-enter:filldir64-return": 1090.5,
+      "iterate_dir-enter:iterate_dir-return": 37254.0
+    },
+    "system_load": {
+      "touch_atime-enter:touch_atime-return": 452.5,
+      "verify_dirent_name-enter:verify_dirent_name-return": 402.0,
+      "filldir64-enter:filldir64-return": 1384.5,
+      "iterate_dir-enter:iterate_dir-return": 46650.5
+    }
+  },
+  "protocol_sha256": "ba1fda90704900b82aaf7618aeea10c7ff3c87f380d11d41626f5721ddc700e6",
+  "collection_sha256": "cf01c08cb9e32e55129f6aa9d5ebb15e8cc44cdc9e20df01b38282a08d66cc08",
+  "archived_model_split_sha256": "d0e1a6027bb25d2a28503f63153f1cc3f3d42d57610d50537095892251ba9d3e",
+  "archived_thresholds_sha256": "a9f6a1182223f73f2a0cc408453897993e805d9aff7e4b7d6a8fd8abf436af74",
+  "decision_rule": "old per-scenario feature model and old fixed threshold; score < threshold -> correct_rootkit",
+  "notes": "ls_basic has no model in the original four-scenario locked split; those positive batches are outside_calibrated_scenarios and not included in sensitivity. No new threshold refit was performed; this is a point measurement on new positive data under a single new boot.",
+  "predictions": [
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "bdb3534c839a191c7f79a19a91c28527f9e2e7a069ace5ad27abbbe54cc2bdb4",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_02.json.gz",
+      "sha256": "bdb3534c839a191c7f79a19a91c28527f9e2e7a069ace5ad27abbbe54cc2bdb4",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "badd220ce9a994fab75383fcb5d32265e5f6a89c86c4695174168c060cf140a9",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_02.json.gz",
+      "sha256": "badd220ce9a994fab75383fcb5d32265e5f6a89c86c4695174168c060cf140a9",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "04b3f3674849cdccd753034b4430acdd11ea03b93758776b9f0b40c59c9d8114",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_00.json.gz",
+      "sha256": "04b3f3674849cdccd753034b4430acdd11ea03b93758776b9f0b40c59c9d8114",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "fef123960f0a6a64edb8a6f5286d9bc6d4a4fce0dc7ffac0185b0b09b0532108",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_04.json.gz",
+      "sha256": "fef123960f0a6a64edb8a6f5286d9bc6d4a4fce0dc7ffac0185b0b09b0532108",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_01.json.gz",
+      "sha256": "6e7727ccf3e56ce146761fcb847c5b7a6d949d4a935bd7d96bcb8d7f27a1a9b3",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_01.json.gz",
+      "sha256": "6e7727ccf3e56ce146761fcb847c5b7a6d949d4a935bd7d96bcb8d7f27a1a9b3",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "c93e17f2a7a96fa54bd65d0248560298e9736d76a79791062cab3abdc5816676",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_04.json.gz",
+      "sha256": "c93e17f2a7a96fa54bd65d0248560298e9736d76a79791062cab3abdc5816676",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "f6d2de3782230ef4e2a46d90df010edd849ac81dd886c8b184b5573d309c7372",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_03.json.gz",
+      "sha256": "f6d2de3782230ef4e2a46d90df010edd849ac81dd886c8b184b5573d309c7372",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_04.json.gz",
+      "sha256": "2d6768b2c3fec85b44dbc81b15db60287dd83116c54e838842ace4d1aaf0f694",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_04.json.gz",
+      "sha256": "2d6768b2c3fec85b44dbc81b15db60287dd83116c54e838842ace4d1aaf0f694",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "b682f1ef5d78b7356404b0603ba1828151ceb59a2959b87f7d56a9cd4a5487f6",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_06.json.gz",
+      "sha256": "b682f1ef5d78b7356404b0603ba1828151ceb59a2959b87f7d56a9cd4a5487f6",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "8621cf00b5d61a8a39c964e926a7acd75583ddccf995017cad7372267b1a6f9e",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_08.json.gz",
+      "sha256": "8621cf00b5d61a8a39c964e926a7acd75583ddccf995017cad7372267b1a6f9e",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "85d0e9c35d162b70441624163b759b888395244bf4defb99b0363d15a8937283",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_09.json.gz",
+      "sha256": "85d0e9c35d162b70441624163b759b888395244bf4defb99b0363d15a8937283",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_07.json.gz",
+      "sha256": "d2ae861bcda63e4ab706bd4118a9e145ee4d56447b4314cf61b0d74c1da11a54",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_07.json.gz",
+      "sha256": "d2ae861bcda63e4ab706bd4118a9e145ee4d56447b4314cf61b0d74c1da11a54",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "995fc5479754b3aa2e54f39f66c9c1842b61b093eddc93bbf6e68a1bede9c386",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_09.json.gz",
+      "sha256": "995fc5479754b3aa2e54f39f66c9c1842b61b093eddc93bbf6e68a1bede9c386",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "5ffbd571d77a26e9d0b480e527feac0fa19b968ac3053d47e5c0a1b6b9e826fd",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_05.json.gz",
+      "sha256": "5ffbd571d77a26e9d0b480e527feac0fa19b968ac3053d47e5c0a1b6b9e826fd",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "d8827db77d6899b6bb8bb045ba652846b877c3b9bf70cba21f695d095904ab9b",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_06.json.gz",
+      "sha256": "d8827db77d6899b6bb8bb045ba652846b877c3b9bf70cba21f695d095904ab9b",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "3941bfe613951189ad4b7010eeef873e20ba2ba028c6d91ce77df3fb3989b84c",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_05.json.gz",
+      "sha256": "3941bfe613951189ad4b7010eeef873e20ba2ba028c6d91ce77df3fb3989b84c",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "ba8893e7fa3eaa3fef5d37061d832eba10e76fad7ee1d2b0bfaa8bb7cae3198a",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_06.json.gz",
+      "sha256": "ba8893e7fa3eaa3fef5d37061d832eba10e76fad7ee1d2b0bfaa8bb7cae3198a",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "474dfe5619f3b840ee268220df9c9f505df2c99e96b20df6f5d6395809fb8681",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_09.json.gz",
+      "sha256": "474dfe5619f3b840ee268220df9c9f505df2c99e96b20df6f5d6395809fb8681",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "064fbff4c69d228719413a66a47a898e6b42186da41c5ab579275b3f1d402311",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_03.json.gz",
+      "sha256": "064fbff4c69d228719413a66a47a898e6b42186da41c5ab579275b3f1d402311",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "072a33f445ab849bf2e66d982eec7fd2b46e17ff6b6d364b3fc490fecc93404c",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_04.json.gz",
+      "sha256": "072a33f445ab849bf2e66d982eec7fd2b46e17ff6b6d364b3fc490fecc93404c",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_08.json.gz",
+      "sha256": "5503b47ff9c9a301aab3f90837c71955e48aa857574e906197c3120ad4b4bcae",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_08.json.gz",
+      "sha256": "5503b47ff9c9a301aab3f90837c71955e48aa857574e906197c3120ad4b4bcae",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "03b1cd66fc0d2198e32c1c31e017722f08740ea6257680af6bec63f5f91c347a",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_08.json.gz",
+      "sha256": "03b1cd66fc0d2198e32c1c31e017722f08740ea6257680af6bec63f5f91c347a",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "b2b3410ab07ca75e1b06d0258b87d56619ad59dcf6c98a723d4503210e5305be",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_08.json.gz",
+      "sha256": "b2b3410ab07ca75e1b06d0258b87d56619ad59dcf6c98a723d4503210e5305be",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "1d33fe09465cc796fad4a316cc40b31506247d0f11d2fa65fdaef5fd839e911a",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_07.json.gz",
+      "sha256": "1d33fe09465cc796fad4a316cc40b31506247d0f11d2fa65fdaef5fd839e911a",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "72106604343cc224107ecb8c258ce281921207a83f6bb384a0efb1a9cde420f0",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_01.json.gz",
+      "sha256": "72106604343cc224107ecb8c258ce281921207a83f6bb384a0efb1a9cde420f0",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "56b4ba4087b914aebef688c2d5f0f2e221c01cb95c96cdca4459ad2e9bd9e1f7",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_02.json.gz",
+      "sha256": "56b4ba4087b914aebef688c2d5f0f2e221c01cb95c96cdca4459ad2e9bd9e1f7",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "8fc99de72f5391e19bdea81ee38710a4b774851e08c716e5188fb12d33d26bc0",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_06.json.gz",
+      "sha256": "8fc99de72f5391e19bdea81ee38710a4b774851e08c716e5188fb12d33d26bc0",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "4080c9397b2ae5f8e2415ef9f24468685d2f5293a66ee6539457fe013f2ac6a6",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_08.json.gz",
+      "sha256": "4080c9397b2ae5f8e2415ef9f24468685d2f5293a66ee6539457fe013f2ac6a6",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_00.json.gz",
+      "sha256": "12e7c30fed74f0b3bf0035cca02936ab7e067223e49b696339d6df5e6036a353",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_00.json.gz",
+      "sha256": "12e7c30fed74f0b3bf0035cca02936ab7e067223e49b696339d6df5e6036a353",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "fa108f201384dcdc66d1b75f3482d7f273073e4440f531c1f51ba3c5d859b871",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_01.json.gz",
+      "sha256": "fa108f201384dcdc66d1b75f3482d7f273073e4440f531c1f51ba3c5d859b871",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "8e789c74ea736247e9af4adc3d9d0d0675a0993abefb684f956985137d9d7178",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_07.json.gz",
+      "sha256": "8e789c74ea736247e9af4adc3d9d0d0675a0993abefb684f956985137d9d7178",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "6b03f1bd7cb77b42b1ca1d994745d6fa8d9fa87307d7c5f1f340b688a4d96e6b",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_07.json.gz",
+      "sha256": "6b03f1bd7cb77b42b1ca1d994745d6fa8d9fa87307d7c5f1f340b688a4d96e6b",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "355bfa047817e6369806c572ee355c8b5aa0b4e3866a8e25c32eab9f8fd56bff",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_05.json.gz",
+      "sha256": "355bfa047817e6369806c572ee355c8b5aa0b4e3866a8e25c32eab9f8fd56bff",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_05.json.gz",
+      "sha256": "e1c24f9f970a77307def7f9bb0006b6cc7bf106f4b2404775b895fa7e1e7b308",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_05.json.gz",
+      "sha256": "e1c24f9f970a77307def7f9bb0006b6cc7bf106f4b2404775b895fa7e1e7b308",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "879bb1f37e2931a4f5145fd6b445323b5dd1d2320a04af9209e8a30de5f6f606",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_03.json.gz",
+      "sha256": "879bb1f37e2931a4f5145fd6b445323b5dd1d2320a04af9209e8a30de5f6f606",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_09.json.gz",
+      "sha256": "1719ca44a4b131212c81da09ca8588c5f56348034322f528ac4a78dc02623136",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_09.json.gz",
+      "sha256": "1719ca44a4b131212c81da09ca8588c5f56348034322f528ac4a78dc02623136",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_03.json.gz",
+      "sha256": "47b54ad9019156cc7be35760530d274a82243e9673b91f60b46a3a8572aa4fe6",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_03.json.gz",
+      "sha256": "47b54ad9019156cc7be35760530d274a82243e9673b91f60b46a3a8572aa4fe6",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "a7b05cc194d2f0072a9b5455cf29bca02d56661d0d6454af0d32e8dae5233a3f",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_07.json.gz",
+      "sha256": "a7b05cc194d2f0072a9b5455cf29bca02d56661d0d6454af0d32e8dae5233a3f",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "0ffdfb2340653b760f7681803587a1817336e8ee6ee46a437f84f6f813286d43",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_02.json.gz",
+      "sha256": "0ffdfb2340653b760f7681803587a1817336e8ee6ee46a437f84f6f813286d43",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "dde2351d6d6632761b7e2e8938e82f9a3f00453446ff48b1eec3e1c1982d4aa4",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_04.json.gz",
+      "sha256": "dde2351d6d6632761b7e2e8938e82f9a3f00453446ff48b1eec3e1c1982d4aa4",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "54b8e6b39675b4ffcd9a42f07942b1fd955269151fa5a635438d6bc9a75ae04e",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "default",
+      "file": "default_00.json.gz",
+      "sha256": "54b8e6b39675b4ffcd9a42f07942b1fd955269151fa5a635438d6bc9a75ae04e",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_06.json.gz",
+      "sha256": "f30833f7e572ac47ef9e33df0e5fce56e5910a9a1c71a7e40843ef7053e82d17",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_06.json.gz",
+      "sha256": "f30833f7e572ac47ef9e33df0e5fce56e5910a9a1c71a7e40843ef7053e82d17",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "ebd61cc91b6c479b1c856d2d7ec75eacd2c63204db6fa226ea313190394e2501",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_00.json.gz",
+      "sha256": "ebd61cc91b6c479b1c856d2d7ec75eacd2c63204db6fa226ea313190394e2501",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "d643214ad6d2e684899b15e7c82aa5584c3c9bbfd946ffd2287c17523b4de1bb",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_01.json.gz",
+      "sha256": "d643214ad6d2e684899b15e7c82aa5584c3c9bbfd946ffd2287c17523b4de1bb",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_02.json.gz",
+      "sha256": "2edde02cecaa7b7655aed779f04230fa69512a870940b187f81ac86219aa6750",
+      "method": "fun",
+      "score": null,
+      "threshold": 2.1544346900318954e-17,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "ls_basic",
+      "file": "ls_basic_02.json.gz",
+      "sha256": "2edde02cecaa7b7655aed779f04230fa69512a870940b187f81ac86219aa6750",
+      "method": "seq",
+      "score": null,
+      "threshold": 0.0,
+      "state": "outside_calibrated_scenarios"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "e9eb193fb0f6fb69fd45a1a08b99be53a7c0a468401dc684cf1a7867189bbd17",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_01.json.gz",
+      "sha256": "e9eb193fb0f6fb69fd45a1a08b99be53a7c0a468401dc684cf1a7867189bbd17",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "90b85201050c5b83f3f430d8799a0680b3d89298b0218c58d68962d327ac6e3a",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "system_load",
+      "file": "system_load_05.json.gz",
+      "sha256": "90b85201050c5b83f3f430d8799a0680b3d89298b0218c58d68962d327ac6e3a",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "40397e53a2486fa1b45e865526a976b51077bf5d5afa175883f20753ba363367",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_00.json.gz",
+      "sha256": "40397e53a2486fa1b45e865526a976b51077bf5d5afa175883f20753ba363367",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "a826f17271fd334e720d059907aa4d7d44b187e4570b10fd7967ccb1ebf25bba",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "filename_length",
+      "file": "filename_length_09.json.gz",
+      "sha256": "a826f17271fd334e720d059907aa4d7d44b187e4570b10fd7967ccb1ebf25bba",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "1982cb28b0436e4c934f5375acec06af54f7c221897193bcd430870e6a50ed66",
+      "method": "fun",
+      "score": 0.0,
+      "threshold": 2.1544346900318954e-17,
+      "state": "correct_rootkit"
+    },
+    {
+      "scenario": "file_count",
+      "file": "file_count_03.json.gz",
+      "sha256": "1982cb28b0436e4c934f5375acec06af54f7c221897193bcd430870e6a50ed66",
+      "method": "seq",
+      "score": 0.0,
+      "threshold": 0.0,
+      "state": "missed_rootkit"
+    }
+  ]
+}

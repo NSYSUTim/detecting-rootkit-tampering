@@ -87,7 +87,7 @@ def check_sources(manifest,root):
             assert name.startswith(prefix),name
             name=name[len(prefix):]
         assert '..' not in name.split('/')
-        assert sha(root/'code'/name)==digest,name
+        assert archived_source_matches(root/'code'/name, digest), name
         # The archived hash is authoritative for the historical source.
         normalized[name]=digest
     return normalized

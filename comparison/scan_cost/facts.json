@@ -7,8 +7,7 @@
           7.002222,
           8.114231
         ]
-      },
-      "paired_ours_over_baseline": {}
+      }
     },
     "4096": {
       "median_ms": {
@@ -16,8 +15,7 @@
           11.626746,
           12.365962
         ]
-      },
-      "paired_ours_over_baseline": {}
+      }
     },
     "65536": {
       "median_ms": {
@@ -25,8 +23,7 @@
           88.036823,
           89.059808
         ]
-      },
-      "paired_ours_over_baseline": {}
+      }
     }
   },
   "completeness": {
@@ -55,7 +52,6 @@
       }
     }
   },
-  "paper_result_paragraph": "相對於預設 4 MiB 的計時轉接版，本文在 128 與 4,096 項時的各開機配對比值中位數分別為 6.35–7.59 與 0.44–0.47。相對於 32 MiB 配置，三個目錄大小依序為 6.43–7.22、0.45–0.46、約0.19，比值小於 1 表示本文較短。預設大目錄的十五筆只有部分入口名稱，另有 15 筆因檢查檔未被入口視圖看見而呈現可疑狀態，這是工具本身的品質提示，不當作正常完整觀測。32 MiB 配置的入口與實收名稱集合均符合完整 manifest，且無檢查檔警告。此結果呈現目錄大小、配置與實作的取捨，不推論全面優劣。",
   "clock_scope": "ready observation to completed verdict; compilation/load/attach/final detach and post-timer audit serialization excluded",
   "same_input_manifest": true,
   "same_internal_implementation": false,

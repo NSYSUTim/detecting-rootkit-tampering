@@ -14,7 +14,7 @@
       "boot_id": "0f2d2e95-cc4c-4988-9238-78ff66a20299"
     }
   ],
-  "recomputed_observations_and_controls": 1809,
+  "recomputed_observations_and_controls": 1764,
   "public_sample": [
     {
       "mode": "normal",
@@ -164,5 +164,5 @@
   ],
   "pilots_excluded": true,
   "historical_results_relabelled_as_new_version": false,
-  "archive_sha256": "e2f3fcbbb35157e8887578a14506b4c5213142788aa383f099fd193354acfc95"
+  "archive_sha256": "9a0336f4b53aeccf4bcef9e889a73675971a80fbca1e6e352d5fde4ab9761714"
 }

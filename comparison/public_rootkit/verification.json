@@ -1,6 +1,6 @@
 {
   "verified": true,
-  "recomputed_observations_and_controls": 447,
+  "recomputed_observations_and_controls": 402,
   "boots": [
     {
       "boot_index": 1,
@@ -142,5 +142,5 @@
   "detector_sources_match_current": true,
   "recorded_package_versions_same": true,
   "clean_kernel_taint_before_each_confirmation": true,
-  "archive_sha256": "88852bcfbb08be7f05d185f16e96b0e14defbab3ca94f65af5e438a2df6e4e96"
+  "archive_sha256": "1c84706833614e98ff7681e3a96f517708fce8997e14a8d2a07df0b4314db60d"
 }

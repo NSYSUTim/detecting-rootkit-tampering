@@ -10,7 +10,7 @@
 
 - [最終中文結案報告（Word）](paper/final/Project_Final_Report_ZH_B123245021_Wei-Ting_Chiang.docx)
 - [最終英文結案報告（Word，修正分頁版）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.docx)
-- [最終英文結案報告（PDF，51 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
+- [最終英文結案報告（PDF，48 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
 - [最終英文海報（PowerPoint）](paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx)
 - [最終成品與原檔雜湊](paper/final/README.md)
 - [為什麼每筆更新三個 IBLT 位置：2026-11-13 新增離線比較](docs/IBLT_HASH_COUNT_20261113_zh-TW.md)

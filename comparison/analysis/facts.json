@@ -1,0 +1,162 @@
+{
+  "common": {
+    "ours": {
+      "positive": 105,
+      "detected": 105,
+      "negative": 30,
+      "false_alerts": 0,
+      "identity_only": {
+        "insert": {
+          "trials": 15,
+          "alerts": 15
+        },
+        "inode": {
+          "trials": 15,
+          "alerts": 15
+        },
+        "type": {
+          "trials": 15,
+          "alerts": 15
+        }
+      }
+    }
+  },
+  "cost_ranges": {
+    "128": {
+      "ours_median_ms": [
+        2125.790093,
+        2277.516808
+      ],
+      "paired_ours_over_adapter_median": [
+        3.5192054257094822,
+        3.728923758879164
+      ],
+      "ours_maxrss_median_kib": [
+        126640,
+        126756
+      ],
+      "adapter_maxrss_median_kib": [
+        85252,
+        85412
+      ],
+      "name_audits": [
+        [
+          {
+            "produced": 129,
+            "returned": 129
+          }
+        ],
+        [
+          {
+            "produced": 129,
+            "returned": 129
+          }
+        ],
+        [
+          {
+            "produced": 129,
+            "returned": 129
+          }
+        ]
+      ]
+    },
+    "4096": {
+      "ours_median_ms": [
+        2176.621796,
+        2277.811648
+      ],
+      "paired_ours_over_adapter_median": [
+        3.5029479731504507,
+        3.660045427674033
+      ],
+      "ours_maxrss_median_kib": [
+        126632,
+        126744
+      ],
+      "adapter_maxrss_median_kib": [
+        82880,
+        87052
+      ],
+      "name_audits": [
+        [
+          {
+            "produced": 4097,
+            "returned": 4097
+          }
+        ],
+        [
+          {
+            "produced": 4097,
+            "returned": 4097
+          }
+        ],
+        [
+          {
+            "produced": 4097,
+            "returned": 4097
+          }
+        ]
+      ]
+    },
+    "65536": {
+      "ours_median_ms": [
+        2028.311724,
+        2379.245752
+      ],
+      "paired_ours_over_adapter_median": [
+        2.8037932538482906,
+        3.019588318452179
+      ],
+      "ours_maxrss_median_kib": [
+        126672,
+        126764
+      ],
+      "adapter_maxrss_median_kib": [
+        86884,
+        87320
+      ],
+      "name_audits": [
+        [
+          {
+            "produced": 15343,
+            "returned": 65537
+          }
+        ],
+        [
+          {
+            "produced": 15343,
+            "returned": 65537
+          }
+        ],
+        [
+          {
+            "produced": 15343,
+            "returned": 65537
+          }
+        ]
+      ]
+    }
+  },
+  "entry": {
+    "measured": 72,
+    "actual_differences": 57,
+    "unexercised": 3,
+    "controls": 24,
+    "entry_fault_windows": 10,
+    "return_window_scans": 16,
+    "normal_fault_controls": 22,
+    "extra_counts": {
+      "load_order": 6,
+      "overcapacity": 2,
+      "boundary": 2
+    }
+  },
+  "control_repair": {
+    "counts": {
+      "unprobed": 12,
+      "ours": 4
+    },
+    "verified": true
+  },
+  "public_copy_note": "Selective withdrawal of an external comparison; retained detector measurements are historical, not reruns."
+}

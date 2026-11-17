@@ -1,0 +1,14 @@
+{
+  "archive": "scan_cost_20261102.tar.gz",
+  "sha256": "897f09a8263adf22cb635f874c078a1398079387f38744ce98a3523b64e38194",
+  "bytes": 4287148,
+  "native_archive_sha256": "9f1c39ccefd3964ceb0e1ad606552255a3447d33318a4fca1574c4d25a44ca13",
+  "native_files": 1138,
+  "all_pilots_and_main_observations_retained": true,
+  "main_boots": 3,
+  "main_observations": 135,
+  "warmup_observations": 27,
+  "public_copy_note": "External comparator members withdrawn; unrelated raw measurements retained. See docs/PUBLIC_CLEANUP_20261117.json.",
+  "historical_archive_sha256": "f3914cf3a909b4527810dbeecb4db3a74ef421f125aac458478e6d82f20741fa",
+  "all_attempts_retained": false
+}

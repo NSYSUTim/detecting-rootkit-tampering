@@ -38,3 +38,5 @@ the existing lab; an independent reproduction must explicitly supply equivalent
 detector sources and the locked scanner/adapter binaries. No result depends on
 claiming that the original filldir hook behaves like the earlier true-returning
 controlled module.
+
+The archive is a public copy of the original measurements. One external comparison was withdrawn. [Archive provenance](../../docs/PUBLIC_CLEANUP_20261117.json) records the original and public digests.

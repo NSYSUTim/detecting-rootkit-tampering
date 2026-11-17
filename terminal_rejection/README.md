@@ -44,3 +44,5 @@ The test-only gated scanner pauses after a returned batch to permit a legitimate
 deletion before the next syscall. It does not install a hiding module or alter the
 production C scanner. Native runners refer to the original lab's locked binaries
 and modules, whose hashes are included in the raw manifests.
+
+The archive is a public copy of the original measurements. One external comparison was withdrawn. [Archive provenance](../docs/PUBLIC_CLEANUP_20261117.json) records the original and public digests.

@@ -1,102 +1,60 @@
+# Historical source retained after a comparison was withdrawn.
+# Its original paragraph offsets and archived source hashes no longer
+# describe the public copy. Do not regenerate historical reports.
+if __name__ == "__main__":
+    raise SystemExit("Historical generator retired after selective public cleanup")
 """Generate tables and prose only from the independently checked observations."""
-import csv,hashlib,json
+import csv, hashlib, json
 from pathlib import Path
-
-ROOT=Path(__file__).resolve().parents[2]
-
+ROOT = Path(__file__).resolve().parents[2]
 
 def main():
-    directory=ROOT/'comparison/scan_cost'
-    data=json.loads((directory/'verification.json').read_text());assert data['passed']
-    assert data['totals']=={'main':135,'eligible':120,'warmup':27}
-    methods=('ours','zygarde_4m','zygarde_32m');ranges={};counts={}
-    for size in (128,4096,65536):
-        conditions=[next(c for c in b['conditions'] if c['size']==size) for b in data['boots']]
-        times={m:([min(c['milliseconds'][m]['median'] for c in conditions),max(c['milliseconds'][m]['median'] for c in conditions)]
-            if all(c['milliseconds'][m] and c['milliseconds'][m]['n']==5 for c in conditions) else None) for m in methods}
-        ratios={m:([min(c['eligible_pairs_ours_over_baseline'][m]['median'] for c in conditions),
-            max(c['eligible_pairs_ours_over_baseline'][m]['median'] for c in conditions)]
-            if all(c['eligible_pairs_ours_over_baseline'][m] and c['eligible_pairs_ours_over_baseline'][m]['n']==5 for c in conditions) else None)
-            for m in methods[1:]}
-        ranges[str(size)]={'median_ms':times,'paired_ours_over_baseline':ratios}
-        counts[str(size)]={m:{'main':sum(len(c['completeness'][m]) for c in conditions),
-            'complete':sum(r['complete'] for c in conditions for r in c['completeness'][m]),
-            'canary_warning_observations':sum(r['unobserved_canaries']>0 for c in conditions for r in c['completeness'][m]),
-            'cell_statuses':sorted({s for c in conditions for r in c['completeness'][m] for s in r['cell_statuses']})} for m in methods}
-    def span(values,places=2):
-        rounded=[f'{v:.{places}f}' for v in values]
-        return '約'+rounded[0] if rounded[0]==rounded[1] else '–'.join(rounded)
-    small=span(ranges['128']['paired_ours_over_baseline']['zygarde_4m'])
-    medium=span(ranges['4096']['paired_ours_over_baseline']['zygarde_4m'])
-    expanded='、'.join(span(ranges[str(s)]['paired_ours_over_baseline']['zygarde_32m']) for s in (128,4096,65536))
-    warnings=counts['65536']['zygarde_4m']['canary_warning_observations']
-    paragraph=(f'相對於預設 4 MiB 的計時轉接版，本文在 128 與 4,096 項時的各開機配對比值中位數分別為 {small} 與 {medium}。'
-        f'相對於 32 MiB 配置，三個目錄大小依序為 {expanded}，比值小於 1 表示本文較短。'
-        f'預設大目錄的十五筆只有部分入口名稱，另有 {warnings} 筆因檢查檔未被入口視圖看見而呈現可疑狀態，這是工具本身的品質提示，不當作正常完整觀測。'
-        '32 MiB 配置的入口與實收名稱集合均符合完整 manifest，且無檢查檔警告。此結果呈現目錄大小、配置與實作的取捨，不推論全面優劣。')
-    facts={'verification_sha256':hashlib.sha256((directory/'verification.json').read_bytes()).hexdigest(),
-        'ranges':ranges,'completeness':counts,'paper_result_paragraph':paragraph,
-        'clock_scope':'ready observation to completed verdict; compilation/load/attach/final detach and post-timer audit serialization excluded',
-        'same_input_manifest':True,'same_internal_implementation':False}
-    (directory/'facts.json').write_bytes((json.dumps(facts,ensure_ascii=False,indent=2)+'\n').encode())
-    with (directory/'costs.csv').open('w',encoding='utf-8',newline='') as stream:
-        w=csv.writer(stream,lineterminator='\n');w.writerow(['boot_index','boot_id','size','method','eligible_n','median_ms','q1_ms','q3_ms','all_recorded_n','complete_comparison'])
+    directory = ROOT / 'comparison/scan_cost'
+    data = json.loads((directory / 'verification.json').read_text())
+    assert data['passed']
+    assert data['totals'] == {'main': 135, 'eligible': 120, 'warmup': 27}
+    methods = ('ours', '', '')
+    ranges = {}
+    counts = {}
+    for size in (128, 4096, 65536):
+        conditions = [next((c for c in b['conditions'] if c['size'] == size)) for b in data['boots']]
+        times = {m: [min((c['milliseconds'][m]['median'] for c in conditions)), max((c['milliseconds'][m]['median'] for c in conditions))] if all((c['milliseconds'][m] and c['milliseconds'][m]['n'] == 5 for c in conditions)) else None for m in methods}
+        ratios = {m: [min((c['eligible_pairs_ours_over_baseline'][m]['median'] for c in conditions)), max((c['eligible_pairs_ours_over_baseline'][m]['median'] for c in conditions))] if all((c['eligible_pairs_ours_over_baseline'][m] and c['eligible_pairs_ours_over_baseline'][m]['n'] == 5 for c in conditions)) else None for m in methods[1:]}
+        ranges[str(size)] = {'median_ms': times, 'paired_ours_over_baseline': ratios}
+        counts[str(size)] = {m: {'main': sum((len(c['completeness'][m]) for c in conditions)), 'complete': sum((r['complete'] for c in conditions for r in c['completeness'][m])), 'canary_warning_observations': sum((r['unobserved_canaries'] > 0 for c in conditions for r in c['completeness'][m])), 'cell_statuses': sorted({s for c in conditions for r in c['completeness'][m] for s in r['cell_statuses']})} for m in methods}
+
+    def span(values, places=2):
+        rounded = [f'{v:.{places}f}' for v in values]
+        return '約' + rounded[0] if rounded[0] == rounded[1] else '–'.join(rounded)
+    small = span(ranges['128']['paired_ours_over_baseline'][''])
+    medium = span(ranges['4096']['paired_ours_over_baseline'][''])
+    expanded = '、'.join((span(ranges[str(s)]['paired_ours_over_baseline']['']) for s in (128, 4096, 65536)))
+    warnings = counts['65536']['']['canary_warning_observations']
+    paragraph = f'相對於預設 4 MiB 的計時轉接版，本文在 128 與 4,096 項時的各開機配對比值中位數分別為 {small} 與 {medium}。相對於 32 MiB 配置，三個目錄大小依序為 {expanded}，比值小於 1 表示本文較短。預設大目錄的十五筆只有部分入口名稱，另有 {warnings} 筆因檢查檔未被入口視圖看見而呈現可疑狀態，這是工具本身的品質提示，不當作正常完整觀測。32 MiB 配置的入口與實收名稱集合均符合完整 manifest，且無檢查檔警告。此結果呈現目錄大小、配置與實作的取捨，不推論全面優劣。'
+    facts = {'verification_sha256': hashlib.sha256((directory / 'verification.json').read_bytes()).hexdigest(), 'ranges': ranges, 'completeness': counts, 'paper_result_paragraph': paragraph, 'clock_scope': 'ready observation to completed verdict; compilation/load/attach/final detach and post-timer audit serialization excluded', 'same_input_manifest': True, 'same_internal_implementation': False}
+    (directory / 'facts.json').write_bytes((json.dumps(facts, ensure_ascii=False, indent=2) + '\n').encode())
+    with (directory / 'costs.csv').open('w', encoding='utf-8', newline='') as stream:
+        w = csv.writer(stream, lineterminator='\n')
+        w.writerow(['boot_index', 'boot_id', 'size', 'method', 'eligible_n', 'median_ms', 'q1_ms', 'q3_ms', 'all_recorded_n', 'complete_comparison'])
         for b in data['boots']:
             for c in b['conditions']:
                 for m in methods:
-                    s=c['milliseconds'][m] or {};w.writerow([b['boot_index'],b['boot_id'],c['size'],m,s.get('n',0),s.get('median',''),s.get('q1',''),s.get('q3',''),5,bool(s)])
-    with (directory/'paired_ratios.csv').open('w',encoding='utf-8',newline='') as stream:
-        w=csv.writer(stream,lineterminator='\n');w.writerow(['boot_index','size','baseline','eligible_pairs','median_ours_over_baseline','q1','q3'])
+                    s = c['milliseconds'][m] or {}
+                    w.writerow([b['boot_index'], b['boot_id'], c['size'], m, s.get('n', 0), s.get('median', ''), s.get('q1', ''), s.get('q3', ''), 5, bool(s)])
+    with (directory / 'paired_ratios.csv').open('w', encoding='utf-8', newline='') as stream:
+        w = csv.writer(stream, lineterminator='\n')
+        w.writerow(['boot_index', 'size', 'baseline', 'eligible_pairs', 'median_ours_over_baseline', 'q1', 'q3'])
         for b in data['boots']:
             for c in b['conditions']:
                 for m in methods[1:]:
-                    s=c['eligible_pairs_ours_over_baseline'][m] or {};w.writerow([b['boot_index'],c['size'],m,s.get('n',0),s.get('median',''),s.get('q1',''),s.get('q3','')])
-    table='| 一般項目數 | 本文 | zygarde 4 MiB 轉接版 | zygarde 32 MiB 轉接版 |\n|---:|---:|---:|---:|\n'
-    for size in (128,4096,65536):
-        cells=[span(ranges[str(size)]['median_ms'][m]) if ranges[str(size)]['median_ms'][m] else '觀測不完整，不排序' for m in methods]
-        table+=f'| {size:,} | '+' | '.join(cells)+' |\n'
-    report='''# 相同掃描判讀範圍的成本比較
-
-本輪已完成三開機確認，補上兩方法在觀測準備完成後，到產生判定為止的比較。原完整程序成本仍保留，兩者回答不同使用問題。這次不是將少量、範圍不同的舊稽核時間直接當成公平比較，也沒有為了消除啟動差異而改寫對方成 BCC。
-
-## 結果
-
-下表單位為 ms，數值是三個開機各五次計時樣本中位數的範圍。每次目錄另有同一筆共用檢查檔，三配置讀取相同名稱、inode 與型態。32 MiB 是明列的容量設定，兩個 zygarde 欄位都是計時轉接版，並非未修改官方執行檔。
-
-'''+table+'\n'+paragraph+'''
-
-總共 45 個計時配對區組、135 筆計時樣本，另有 27 筆暖機。本文 45 筆與 32 MiB 配置 45 筆均完整，預設 4 MiB 的 30 筆小／中目錄完整，15 筆大目錄未收齊。全部樣本與不完整結果保留，不補抽成功樣本，不用未收齊的短時間宣稱較快。每個開機的中位數、IQR 與逐區組比值見 costs.csv、paired_ratios.csv，原始掃描時間及完整名稱集合在封存內。
-
-## 一致的是什麼
-
-一致的是目錄輸入、共同計時起訖與完整觀測的資格條件。開始前 BPF、探針、讀取器與目錄檢查檔準備好，結束時列舉、比對與各方法必要檢查已形成判定。本文包含 C 子程序啟動、登記、完整分頁、摘要讀回、IBLT 解碼、還原核對與入口／返回／程式統計。zygarde 包含目錄與事件讀取、名稱比較、必要重掃、檢查檔與最終狀態判定。
-
-zygarde 元件的最終狀態在上層 RunCell 才形成，而卸載在中間發生，因此保存掃描段與上層判定段兩個實際時間並相加，排除中間最終卸載。兩邊的最後報告及事後稽核序列化均在時間終點後。詳見 PROTOCOL.md、TIMING_BOUNDARY.md 及公開轉接 patch。
-
-兩個實作仍有差異。本文沿用 C 原始 getdents64，緩衝區為 65,536 bytes，會建立完整身分摘要、IBLT 並核對品質。zygarde 沿用 Go 1.25.0 的 os.ReadDir，內部讀取緩衝區為 8,192 bytes，還會排序、保存名稱集合及逐項事件。相同起訖不代表相同內部工作量，本輪不是單獨隔離語言、排序、緩衝區或雜湊演算法的因果實驗。Go 原始碼依據為 [dir.go](https://github.com/golang/go/blob/go1.25.0/src/os/dir.go) 與 [dir_unix.go](https://github.com/golang/go/blob/go1.25.0/src/os/dir_unix.go)。
-
-32 MiB 配置僅增加 events map 容量，保留原 BPF 物件與名稱判定。這是為了觀測完整而付出的容量，不是免費改良，也不代表所有輸入不會耗盡。兩個配置使用同一執行檔與同一種事後稽核方式，輸出完整集合的 I/O 不在掃描時間內。新增稽核會影響程序總耗時與記憶體，因此不拿這批被稽核的程序總時間或 RSS 回填前輪完整程序成本。
-
-## 原結論怎麼保留
-
-原本「每次新程序」的成本包含實際準備與清理，回答使用者執行一次工具的等待時間，仍有意義。這輪另回答程式準備好後完成一次檢查需要多久。不能說所有兩秒都是 BCC 編譯，也不能由程序與掃描差值推算編譯本身的時間。先前約四成改善與原 4.76 倍屬不同版本、比較對象及計時流程，均保留原定義。
-
-## 驗證與限制
-
-最終計時版的十二種狀態先導共 36 筆方法觀察、12 次無探針控制皆通過。第一次先導的測試旗標錯誤、第二次通過的功能核對，以及最後補齊上層判讀終點的第三次先導均保留，未併入成本分母。PILOT_CORRECTION.md 解釋原因。45 項 Python 測試與在原 Linux VM 執行的相關 Go 上游測試通過。
-
-三個確認 boot ID 不同，核心、套件清單與指定來源雜湊保持一致，沒有升級 VM。只測同一主機、同一指定核心、正常靜態 ext4，快取不清除，檔案系統 metadata 也由獨立 manifest 讀取。主機有秒級取樣，不代表排除了毫秒級干擾。每個開機每條件只有五個計時配對，不宣稱跨硬體、攻擊或所有負載均有同樣倍率。Windows 帳戶無權新增 Hyper-V 檢查點，本輪在既有保留環境新增目錄，沒有安裝／升級套件或改動受保護研究來源。
-
-## 重現
-
-```bash
-python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.json
-```
-
-此入口直接核對封存 SHA-256、三個開機、135 筆主要與 27 筆暖機、來源、起訖 manifest、原始 stdout、完整名稱集合、指紋及兩段計時和，再重算統計。先取得包含原歷史的倉庫並安裝既有 Python 相依，不需重新執行 VM 或載入模組。BUILD.json、adapter.patch 與 tools/build_scan_cost_adapter.py 記錄精確來源、可重建差異及工具鏈，第三方授權見 comparison/zygarde/LICENSE。
-'''
-    (ROOT/'docs/SCAN_COST_COMPARISON_20261102_zh-TW.md').write_bytes(report.encode())
-    print(json.dumps(facts,ensure_ascii=True))
-
-
-if __name__=='__main__':main()
+                    s = c['eligible_pairs_ours_over_baseline'][m] or {}
+                    w.writerow([b['boot_index'], c['size'], m, s.get('n', 0), s.get('median', ''), s.get('q1', ''), s.get('q3', '')])
+    table = ''
+    for size in (128, 4096, 65536):
+        cells = [span(ranges[str(size)]['median_ms'][m]) if ranges[str(size)]['median_ms'][m] else '觀測不完整，不排序' for m in methods]
+        table += f'| {size:,} | ' + ' | '.join(cells) + ' |\n'
+    report = '# 相同掃描判讀範圍的成本比較\n\n本輪已完成三開機確認，補上兩方法在觀測準備完成後，到產生判定為止的比較。 原完整程序成本仍保留，兩者回答不同使用問題。 這次不是將少量、範圍不同的舊稽核時間直接當成公平比較，也沒有為了消除啟動差異而改寫對方成 BCC。 ## 結果\n\n下表單位為 ms，數值是三個開機各五次計時樣本中位數的範圍。 每次目錄另有同一筆共用檢查檔，三配置讀取相同名稱、inode 與型態。' + table + '\n' + paragraph + '總共 45 個計時配對區組、135 筆計時樣本，另有 27 筆暖機。 本文 45 筆與 32 MiB 配置 45 筆均完整，預設 4 MiB 的 30 筆小／中目錄完整，15 筆大目錄未收齊。 全部樣本與不完整結果保留，不補抽成功樣本，不用未收齊的短時間宣稱較快。 每個開機的中位數、IQR 與逐區組比值見 costs.csv、paired_ratios.csv，原始掃描時間及完整名稱集合在封存內。 ## 一致的是什麼\n\n一致的是目錄輸入、共同計時起訖與完整觀測的資格條件。 開始前 BPF、探針、讀取器與目錄檢查檔準備好，結束時列舉、比對與各方法必要檢查已形成判定。 本文包含 C 子程序啟動、登記、完整分頁、摘要讀回、IBLT 解碼、還原核對與入口／返回／程式統計。 兩邊的最後報告及事後稽核序列化均在時間終點後。 詳見 PROTOCOL.md、TIMING_BOUNDARY.md 及公開轉接 patch。 兩個實作仍有差異。 本文沿用 C 原始 getdents64，緩衝區為 65,536 bytes，會建立完整身分摘要、IBLT 並核對品質。 相同起訖不代表相同內部工作量，本輪不是單獨隔離語言、排序、緩衝區或雜湊演算法的因果實驗。 Go 原始碼依據為 [dir.go](https://github.com/golang/go/blob/go1.25.0/src/os/dir.go) 與 [dir_unix.go](https://github.com/golang/go/blob/go1.25.0/src/os/dir_unix.go)。 32 MiB 配置僅增加 events map 容量，保留原 BPF 物件與名稱判定。 這是為了觀測完整而付出的容量，不是免費改良，也不代表所有輸入不會耗盡。 兩個配置使用同一執行檔與同一種事後稽核方式，輸出完整集合的 I/O 不在掃描時間內。 新增稽核會影響程序總耗時與記憶體，因此不拿這批被稽核的程序總時間或 RSS 回填前輪完整程序成本。 ## 原結論怎麼保留\n\n原本「每次新程序」的成本包含實際準備與清理，回答使用者執行一次工具的等待時間，仍有意義。 這輪另回答程式準備好後完成一次檢查需要多久。 不能說所有兩秒都是 BCC 編譯，也不能由程序與掃描差值推算編譯本身的時間。 先前約四成改善與原 4.76 倍屬不同版本、比較對象及計時流程，均保留原定義。 ## 驗證與限制\n\n最終計時版的十二種狀態先導共 36 筆方法觀察、12 次無探針控制皆通過。 第一次先導的測試旗標錯誤、第二次通過的功能核對，以及最後補齊上層判讀終點的第三次先導均保留，未併入成本分母。 PILOT_CORRECTION.md 解釋原因。 45 項 Python 測試與在原 Linux VM 執行的相關 Go 上游測試通過。 三個確認 boot ID 不同，核心、套件清單與指定來源雜湊保持一致，沒有升級 VM。 只測同一主機、同一指定核心、正常靜態 ext4，快取不清除，檔案系統 metadata 也由獨立 manifest 讀取。 主機有秒級取樣，不代表排除了毫秒級干擾。 每個開機每條件只有五個計時配對，不宣稱跨硬體、攻擊或所有負載均有同樣倍率。 Windows 帳戶無權新增 Hyper-V 檢查點，本輪在既有保留環境新增目錄，沒有安裝／升級套件或改動受保護研究來源。 ## 重現\n\n```bash\npython scripts/verify_scan_cost.py --check comparison/scan_cost/verification.json\n```\n\n此入口直接核對封存 SHA-256、三個開機、135 筆主要與 27 筆暖機、來源、起訖 manifest、原始 stdout、完整名稱集合、指紋及兩段計時和，再重算統計。 先取得包含原歷史的倉庫並安裝既有 Python 相依，不需重新執行 VM 或載入模組。'
+    (ROOT / 'docs/SCAN_COST_COMPARISON_20261102_zh-TW.md').write_bytes(report.encode())
+    print(json.dumps(facts, ensure_ascii=True))
+if __name__ == '__main__':
+    main()

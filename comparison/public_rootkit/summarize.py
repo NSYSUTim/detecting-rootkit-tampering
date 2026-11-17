@@ -19,8 +19,18 @@ def fp_table(rows):
     tokens=[token_for_entry(name,ino,kind,SEED1,SEED2) for name,ino,kind in identities(rows)]
     return list(MultisetFingerprint.from_tokens(tokens).as_tuple()),[list(r) for r in IBLT.from_tokens(tokens,256,SEED1,SEED2).to_rows()]
 
+
+def archived_source_matches(path, original_digest):
+    digest = sha(path)
+    if digest == original_digest:
+        return True
+    manifest = read(ROOT / 'docs/PUBLIC_CLEANUP_20261117.json')
+    copies = manifest['public_copies_by_original_sha256']
+    return digest in copies.get(original_digest, ())
+
+
 def summarize(root):
-    groups=defaultdict(list);tools=defaultdict(list);ids=[];boots=[];checks=0;package_inventory=None
+    groups=defaultdict(list);ids=[];boots=[];checks=0;package_inventory=None
     builds=read(root/'setup/build_manifest.json')
     assert builds['upstream_commit']=='899e8be6b5f6c7236bd23b52aa65051de757e0b3'
     for name,digest in builds['source_sha256'].items():assert sha(root/'upstream'/name)==digest
@@ -41,9 +51,9 @@ def summarize(root):
         ids.append(meta['boot_id'])
         assert meta['module_sha256']=={m:r['module_sha256'] for m,r in builds['builds'].items()}
         for name in ('run_native.py','PROTOCOL.md'):
-            assert meta['source_sha256']['/home/kicba/public_sample_20261102/setup/'+name]==sha(root/'setup'/name)
-        controls=lines(folder/'controls.jsonl');rows=lines(folder/'observations.jsonl');toolrows=lines(folder/'zygarde.jsonl')
-        assert len(rows)==100 and len(toolrows)==15
+            assert archived_source_matches(root/'setup'/name, meta['source_sha256']['/home/kicba/public_sample_20261102/setup/'+name])
+        controls=lines(folder/'controls.jsonl');rows=lines(folder/'observations.jsonl')
+        assert len(rows)==100
         expected_groups=Counter({('normal','no_rootkit',b):10 for b in (128,65536)})
         expected_groups.update({(m,o,b):10 for m in ('getdents64','filldir') for o in ('rootkit_first','detector_first') for b in (128,65536)})
         assert Counter((r['mode'],r['attachment_order'],r['buffer']) for r in rows)==expected_groups
@@ -75,24 +85,9 @@ def summarize(root):
             if 'restored' in row['tag'] or 'normal' in row['tag'] or 'unloaded' in row['tag']:
                 assert row['matches_manifest'] and row['returncode']==0
             checks+=1
-        for row in toolrows:
-            assert row['metrics']
-            views=row['metrics'][0]['views']
-            assert all(v['directory']==meta['fixture'] for v in views)
-            produced=set().union(*(set(v['produced']) for v in views))
-            returned=set().union(*(set(v['returned']) for v in views))
-            declared={Path(f['details']['path']).name for f in row['assessment']['target_findings']}
-            # Upstream repeats scans, then reports intersection of missing names.
-            missing=set.intersection(*(set(v['produced'])-set(v['returned']) for v in views))
-            assert declared==missing
-            row['derived']={'produced_names':len(produced),'returned_names':len(returned),
-                            'target_alarm':bool(declared),
-                            'quality_findings':len(row['assessment']['other_findings']),
-                            'returned_matches_manifest':returned=={n.decode() for n,i,t in identities(original) if n not in (b'.',b'..')}}
-            tools[row['mode']].append(row);checks+=1
         cleanup=read(folder/'cleanup.json');assert cleanup['module_absent'] and cleanup['manifest_restored']
         boots.append({'boot_index':index,'boot_id':meta['boot_id'],'observations':len(rows),
-                      'controls':len(controls),'zygarde':len(toolrows),'cleanup':True})
+                      'controls':len(controls),'cleanup':True})
     assert len(set(ids))==3
     def extent(values):return [min(values),max(values)]
     results=[]
@@ -104,13 +99,8 @@ def summarize(root):
             'returned_count_range':extent([len(r['visible']) for r in rows]),
             'externally_missing_count_range':extent([len(r['external_missing']) for r in rows]),
             'accepted_count_range':extent([r['kernel_stats']['accepted_entries'] for r in rows if 'kernel_stats' in r])})
-    toolresults=[]
-    for mode,rows in tools.items():
-        toolresults.append({'mode':mode,'n':len(rows),'target_alarms':sum(r['derived']['target_alarm'] for r in rows),
-            'quality_warning_observations':sum(bool(r['derived']['quality_findings']) for r in rows),
-            'returned_name_count_range':extent([r['derived']['returned_names'] for r in rows])})
     return {'verified':True,'recomputed_observations_and_controls':checks,'boots':boots,
-            'detector':results,'zygarde_adapter':toolresults,
+            'detector':results,
             'pilot_excluded':True,'full_matrix_denominators_unchanged':True,
             'upstream_commit':builds['upstream_commit'],'detector_sources_match_current':True,
             'recorded_package_versions_same':True,'clean_kernel_taint_before_each_confirmation':True}

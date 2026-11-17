@@ -1,9 +1,11 @@
 {
   "archive": "completion_20261102.tar.gz",
-  "sha256": "dcaced2c7df815db85f0561caa6c8b55f69e9d9f65bc15e273d9ebcdb2aa31c3",
-  "bytes": 3293496,
+  "sha256": "fccdc801cc1cf5ae265005cf6079238acd5b056afc4cf9a9e9894c7fa3ff2cf6",
+  "bytes": 3033988,
   "native_archive_sha256": "ab01fb7508d1a620b2e6e6a2131752e9d643591aed3ddd6cc3eccdaf413a6339",
-  "all_attempts_retained": true,
+  "all_attempts_retained": false,
   "shared_comparison_boots": 3,
-  "historical_denominators_unchanged": true
+  "historical_denominators_unchanged": true,
+  "historical_archive_sha256": "dcaced2c7df815db85f0561caa6c8b55f69e9d9f65bc15e273d9ebcdb2aa31c3",
+  "public_copy_note": "External comparator members withdrawn; unrelated raw measurements retained. See docs/PUBLIC_CLEANUP_20261117.json."
 }

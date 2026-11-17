@@ -10,12 +10,12 @@
 
 - [最終中文結案報告（Word）](paper/final/Project_Final_Report_ZH_B123245021_Wei-Ting_Chiang.docx)
 - [最終英文結案報告（Word，修正分頁版）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.docx)
-- [最終英文結案報告（PDF，51 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
+- [最終英文結案報告（PDF，48 頁）](paper/final/Project_Final_Report_EN_B123245021_Wei-Ting_Chiang.pdf)
 - [最終英文海報（PowerPoint）](paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx)
 - [最終成品與原檔雜湊](paper/final/README.md)
 - [為什麼每筆更新三個 IBLT 位置：2026-11-13 新增離線比較](docs/IBLT_HASH_COUNT_20261113_zh-TW.md)
 - [原版 CARAXES 三開機實測與未檢出邊界](docs/ORIGINAL_CARAXES_20261102_zh-TW.md)
-- [相同掃描判讀範圍的成本比較](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
+
 - [六項結案工作與三開機共同工具比較](docs/METHOD_CLOSURE_20261102_zh-TW.md)
 - [現行掃描入口](scan_directory.py)與[共同比較重算](comparison/evidence/final_verification.json)
 - [前一輪完成內容與書面審查依據](docs/FINALIZATION_REVIEW_20261101_zh-TW.md)
@@ -82,26 +82,11 @@ IBLT 還原的是識別值、inode 與型態，不含原始名稱。矩陣實驗
 
 ### 外部方法比較
 
-- **zygarde 官方 v0.2.1：** 新增同一 VM 三個開機、相同受控目錄與模組的共同確認。缺失名稱目標兩者皆 105/105 檢出、0/30 對照警報；新增、inode 與型態各十五次另列，本文皆警報，名稱比較元件未警報。新程序完整成本於 128／4096 項時本文約為轉接版 3.50–3.73 倍，不能宣稱全面更快。65536 項另次稽核顯示對方入口名稱集合不完整，不能把該時間當同等完整觀測的速度優勢。[來源、轉接及計時範圍](comparison/zygarde/README.md)、[逐開機成本](comparison/analysis/costs.csv)
 - **Trace of the Times：** 同一虛擬機環境中分開收集的一次四情境比較。原作者依測試標籤選 F1 最大門檻時，函式分組的召回率／誤報率為 93.89%／15.20%，序列分組為 98.00%／27.18%；本方法在另外收集的 1,000 批為 100%／0%。無法確認兩方法位於同一次開機，也不是逐次列舉配對；尚需共同設計的多開機重複驗證。
 - **Decloaker v0.0.9：** 九次開機、720 次掃描中，180 次受測隱藏皆未輸出 `HIDDEN`，540 次對照也未警報。依本研究檢視，`disk ls --compare` 比較原始磁碟列出的完整路徑能否解析；受測隱藏針對父目錄列舉，保留已知完整路徑的存取。此結果反映觀測目標不同，不能寫成工具整體失效；其他功能未測試。
 - **rkchk：** 尚未在其要求的 Rust for Linux 自訂核心重現，不提供未量得的比較數值。
 
 Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套件能查核摘要與驗證紀錄，完整重算需取得固定版本並重新收集資料。外部比較的排除、重跑與事後分析另有紀錄。
-
-### 相同掃描判讀範圍的成本
-
-另以三次開機、45 個計時配對區組比較觀測程式準備好之後，到完成列舉、比對與必要檢查形成判定的時間。兩邊使用相同目錄及同一檢查檔，排除編譯、載入、附掛、最終卸載與事後稽核序列化。下表是各開機五次計時樣本的中位數範圍，單位 ms。
-
-| 一般項目數 | 本文 | zygarde 預設 4 MiB 轉接版 | zygarde 32 MiB 轉接版 |
-|---:|---:|---:|---:|
-| 128 | 7.00–8.11 | 1.06–1.11 | 1.09–1.12 |
-| 4,096 | 11.63–12.37 | 26.11–26.81 | 26.02–26.52 |
-| 65,536 | 88.04–89.06 | 觀測不完整，不排序 | 461.86–469.18 |
-
-135 筆計時樣本及 27 筆暖機全部保留。本文與 32 MiB 配置各 45 筆計時樣本完整，預設 4 MiB 大目錄的十五筆未收齊，且有檢查檔品質提示，不當成正常完整觀測。32 MiB 是明列的容量調整，並非官方預設。兩欄均為計時轉接版，BPF 物件及原名稱判定保留。
-
-小目錄本文較慢，中／大目錄在受測配置下較短。兩者仍有語言、API、排序、內部緩衝區與檢查項目差異，這不是純演算法速度或全面優勢。原完整程序成本回答另一次啟動的實際等待，保留原結論，不能把掃描外的全部時間直接歸因於 BCC 編譯。[定義、逐開機配對與完整性核對](docs/SCAN_COST_COMPARISON_20261102_zh-TW.md)
 
 ## 量測可靠性、適用條件與成本改良
 
@@ -125,7 +110,7 @@ Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套�
 
 ## 適用範圍與限制
 
-- 原已接受項目版本的原版 CARAXES 已另行實測。getdents64 模式每次缺少三筆並警報；filldir 模式回傳 false，正常 70 筆的目錄只交付 2 筆，核心摘要也只接受相同 2 筆，120 次均未警報。同場 zygarde 轉接版對 filldir 的 15 次皆有目標警報及檢查檔提示，不代表完整還原全部外部缺失。[規約、原始資料及重算](comparison/public_rootkit/README.md)
+- 原已接受項目版本的原版 CARAXES 已另行實測。 getdents64 模式每次缺少三筆並警報；filldir 模式回傳 false，正常 70 筆的目錄只交付 2 筆，核心摘要也只接受相同 2 筆，120 次均未警報。 [規約、原始資料及重算](comparison/public_rootkit/README.md)
 
 - 身分分支涵蓋 `filldir64` 接受之後到 `getdents64` 輸出之前的身分差異。項目在觀測點之前被排除，或因提早回傳 0 而根本未走訪，仍不能完整觀測。新增完成分支可警報本次受測的同次拒絕加回傳 0，但不列出未走訪的全部項目。
 - 假設 eBPF、使用者量測程式與控制程式未被攻擊者控制。原矩陣實驗先掛 eBPF，再載入 ftrace 模組；條件確認實驗已測受測 ftrace 組合的反向順序，其他掛接技術仍未驗證。
@@ -141,7 +126,7 @@ Trace of the Times 的逐事件資料及第三方專案本體未收錄；本套�
 
 這是尚未實作的研究提案。須先處理函式庫批次讀取與逐筆交付的配對、未完成列舉及缺失資料，再以正常、受控核心過濾、受控函式庫過濾驗證差異區段、無效率與成本。區段差異仍不直接代表惡意。具體說明與文獻見[報告修正依據](docs/REVIEW_CORRECTIONS_20261102_zh-TW.md)。
 
-IBLT 容量與重複差異、可信量測及未受測環境保留在方法限制中。還原核對、入口漏失拒判及 zygarde 比較已完成。金鑰保護、辨識掃描器、單純換成 /proc、預編譯或掃描整個檔案系統，不另列為本研究的下一步。
+IBLT 容量與重複差異、可信量測及未受測環境保留在方法限制中。 金鑰保護、辨識掃描器、單純換成 /proc、預編譯或掃描整個檔案系統，不另列為本研究的下一步。
 
 ## 程式與證據位置
 
@@ -222,8 +207,7 @@ python scripts/iblt_hash_count_experiment.py run --output reproduced/iblt_hash_c
 現行入口、共同工具比較與另列的控制修復可直接從封存離線核對：
 
 ```bash
-python scripts/verify_completion_20261102.py --check comparison/evidence/final_verification.json
-python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.json
+
 ```
 
 原規約首次混合目錄確認未完成、無效控制與逾時堆疊均保留，修訂後三開機確認分開。控制修復只寫入新來源，沒有覆寫舊 getdents 控制。先前四十五項離線測試已在原 Linux VM 及具正常暫存目錄權限的 Windows 通過；本次發布另在 Windows 執行目前完整六十七項測試，全部通過。先前 Windows 沙箱暫存 ACL 與新增比較的先導／離線路徑修正另留紀錄，未略過失敗測試或降低判準。
@@ -237,5 +221,9 @@ python scripts/verify_scan_cost.py --check comparison/scan_cost/verification.jso
 `scan_directory.py` 預設使用新版，`--accepted-only` 可明確執行原已接受項目分支。`different` 與 `completion_anomaly` 分別表示身分差異與完成異常，`invalid` 是原量測無效，`inconclusive` 表示原身分一致但新增檢查無法判定。後兩者退出碼為 2。
 
 ```bash
-python call_completion/summarize.py --archive call_completion/call_completion_20261103.tar.gz --extract-to reproduced/call_completion --output reproduced/call_completion_verification.json
+
 ```
+
+## 2026-11-17 公開版整理
+
+依作者要求移除一項未發表工具的比較、程式與引用。含該項比較的混合原始封存另存於作者本機，公開版保留本方法的量測摘要與其他獨立比較。歷史驗證紀錄的總數沿用原採集單位，不作為整理後公開檔案數量的保證。

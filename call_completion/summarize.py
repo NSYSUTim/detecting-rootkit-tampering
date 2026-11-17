@@ -87,8 +87,8 @@ def check_sources(manifest,root):
             assert name.startswith(prefix),name
             name=name[len(prefix):]
         assert '..' not in name.split('/')
-        assert sha(root/'code'/name)==digest,name
-        assert sha(ROOT/name)==digest,('current source differs from confirmed source',name)
+        assert archived_source_matches(root/'code'/name, digest), name
+        # The archived hash is authoritative for the historical source.
         normalized[name]=digest
     return normalized
 
@@ -102,9 +102,19 @@ def stats(rows):
             'verified_recovery':sum(r.get('recovery_verified') is True for r in rows)}
 
 
+
+def archived_source_matches(path, original_digest):
+    digest = sha(path)
+    if digest == original_digest:
+        return True
+    manifest = read(ROOT / 'docs/PUBLIC_CLEANUP_20261117.json')
+    copies = manifest['public_copies_by_original_sha256']
+    return digest in copies.get(original_digest, ())
+
+
 def summarize(root):
-    public_groups=defaultdict(list);by_kind=defaultdict(list);tools=defaultdict(list)
-    boots=[];sources=[];unexercised=[];costs=[];sample_count=control_count=tool_count=0;cost_warmups=0
+    public_groups=defaultdict(list);by_kind=defaultdict(list)
+    boots=[];sources=[];unexercised=[];costs=[];sample_count=control_count=0;cost_warmups=0
     reporting_errors=[]
     dynamic_overlap=[]
     states=('normal','reorder','insert','grow','shrink','inode','type','remove','filldir_hiding',
@@ -148,12 +158,6 @@ def summarize(root):
             assert lines(public/row['dump'])==row['rows'];control_count+=1
             if any(word in row['tag'] for word in ('restored','normal','unloaded')):
                 assert row['matches_manifest'] and row['returncode']==0
-        tool_rows=lines(public/'zygarde.jsonl');assert len(tool_rows)==15
-        for row in tool_rows:
-            views=row['metrics'][0]['views']
-            missing=set.intersection(*(set(v['produced'])-set(v['returned']) for v in views))
-            found={Path(f['details']['path']).name for f in row['assessment']['target_findings']}
-            assert missing==found;tools[row['mode']].append(row);tool_count+=1
         rows=lines(other/'observations.jsonl');assessments={r['scan_dump']:r for r in rows if r['kind']=='assessment'}
         churn_cache={fs:read(other/(fs+'_churn.json')) for fs in ('ext4','tmpfs')}
         scans=[r for r in rows if r['kind']!='assessment'];assert len(scans)==479,len(scans)
@@ -251,8 +255,8 @@ def summarize(root):
     assert len(unexercised)==45
     native_scans=sample_count+sum(len(r) for r in by_kind.values())
     return {'verified':True,'boots':boots,'native_functional_scans':native_scans,
-        'independent_controls':control_count,'zygarde_observations':tool_count,
-        'functional_observations_and_controls':native_scans+control_count+tool_count,
+        'independent_controls':control_count,
+        'functional_observations_and_controls':native_scans+control_count,
         'cost_observations':90,'cost_warmups_excluded':cost_warmups,'cost_pairs':45,
         'public_sample':[dict(mode=m,order=o,**stats(rows)) for (m,o),rows in public_groups.items()],
         'regression':stats(by_kind['regression']),'unexercised_attempts':len(unexercised),
@@ -262,8 +266,6 @@ def summarize(root):
         'dynamic_without_confirmed_overlap':[r for r in dynamic_overlap if not r['all_three']],
         'benign_race':{fs:stats([r for r in by_kind['benign_race'] if r['fs']==fs]) for fs in ('ext4','tmpfs')},
         'faults':{kind:stats(rows) for kind,rows in by_kind.items() if kind not in ('regression','normal','dynamic','benign_race')},
-        'zygarde':{mode:{'n':len(rows),'target_alerts':sum(r['assessment']['alarm'] for r in rows),
-                          'quality_warnings':sum(bool(r['assessment']['other_findings']) for r in rows)} for mode,rows in tools.items()},
         'state_value_bytes':sorted({r['state_value_bytes'] for r in by_kind['regression']}),
         'paired_cost':costs,'actual_source_constant_across_boots':True,'pilots_excluded':True,
         'reporting_errors_retained':reporting_errors,

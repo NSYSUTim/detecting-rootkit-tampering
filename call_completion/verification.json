@@ -16,8 +16,7 @@
   ],
   "native_functional_scans": 1737,
   "independent_controls": 102,
-  "zygarde_observations": 45,
-  "functional_observations_and_controls": 1884,
+  "functional_observations_and_controls": 1839,
   "cost_observations": 90,
   "cost_warmups_excluded": 18,
   "cost_pairs": 45,
@@ -283,23 +282,6 @@
       "verified_recovery": 0
     }
   },
-  "zygarde": {
-    "normal": {
-      "n": 15,
-      "target_alerts": 0,
-      "quality_warnings": 0
-    },
-    "getdents64": {
-      "n": 15,
-      "target_alerts": 15,
-      "quality_warnings": 0
-    },
-    "filldir": {
-      "n": 15,
-      "target_alerts": 15,
-      "quality_warnings": 15
-    }
-  },
   "state_value_bytes": [
     10856
   ],
@@ -407,5 +389,5 @@
     }
   ],
   "historical_results_relabelled_as_new_version": false,
-  "archive_sha256": "7363caa1b3d8fff9602052adb114949c9f3da4eb3e3e26a0e15f9792721c385c"
+  "archive_sha256": "aebbed1f35e748593e416bbc56a594d648fdf27d84b1ade5ceb4fe28e3967890"
 }

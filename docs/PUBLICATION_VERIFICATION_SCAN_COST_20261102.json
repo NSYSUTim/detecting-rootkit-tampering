@@ -35,72 +35,27 @@
           "ours": [
             7.002222,
             8.114231
-          ],
-          "zygarde_4m": [
-            1.061244,
-            1.114411
-          ],
-          "zygarde_32m": [
-            1.089778,
-            1.124607
           ]
         },
-        "paired_ours_over_baseline": {
-          "zygarde_4m": [
-            6.352241584363204,
-            7.592007193207995
-          ],
-          "zygarde_32m": [
-            6.426543608675589,
-            7.215170277261301
-          ]
-        }
+        "paired_ours_over_baseline": {}
       },
       "4096": {
         "median_ms": {
           "ours": [
             11.626746,
             12.365962
-          ],
-          "zygarde_4m": [
-            26.108107,
-            26.80511
-          ],
-          "zygarde_32m": [
-            26.017638,
-            26.517769
           ]
         },
-        "paired_ours_over_baseline": {
-          "zygarde_4m": [
-            0.44318495739263924,
-            0.46741197246820154
-          ],
-          "zygarde_32m": [
-            0.4506053280726595,
-            0.4643293432423744
-          ]
-        }
+        "paired_ours_over_baseline": {}
       },
       "65536": {
         "median_ms": {
           "ours": [
             88.036823,
             89.059808
-          ],
-          "zygarde_4m": null,
-          "zygarde_32m": [
-            461.85519,
-            469.18387
           ]
         },
-        "paired_ours_over_baseline": {
-          "zygarde_4m": null,
-          "zygarde_32m": [
-            0.18986924888615306,
-            0.19040488842465902
-          ]
-        }
+        "paired_ours_over_baseline": {}
       }
     },
     "same_input_manifest": true,
@@ -110,9 +65,6 @@
   },
   "quality": {
     "ours_complete_main": 45,
-    "zygarde_32m_complete_main": 45,
-    "zygarde_4m_complete_small_medium_main": 30,
-    "zygarde_4m_large_incomplete_main": 15,
     "large_default_canary_warning_observations": 15,
     "only_eligible_go_samples_status_zero": true
   },
@@ -152,5 +104,6 @@
     "pure_algorithm_speed_claim": false,
     "full_program_cost_comparison_preserved": true,
     "bcc_compile_alone_cost_isolated": false
-  }
+  },
+  "public_copy_note": "Selective withdrawal of an external comparison; retained detector measurements are historical, not reruns."
 }

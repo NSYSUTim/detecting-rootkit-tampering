@@ -39,7 +39,7 @@ C 掃描器仍自行反覆讀取指定目錄，沒有改成常駐監控一般程
 
 原已接受項目版本的原版 filldir 120 次未警報仍是原版本結果。整次最後 false 的撤回試驗，在 tmpfs 的正常刪除競態曾 15/15 警報。新確認沒有合併或改寫這些結果，新規則在新的 15 次 tmpfs 刪除競態均未觸發。有限測試不構成任意正常情況零誤報的保證。
 
-原版模組仍為官方提交 899e8be6b5f6c7236bd23b52aa65051de757e0b3 的兩個原實驗模組位元組，沒有修補 false、回呼結構、filter 或 helper。同場固定 zygarde 轉接版：正常 15 次無目標警報，兩模式各 15 次有目標警報，filldir 仍有 15 次檢查檔提示。沒有測 zygarde 的上述刪除競態，不據此宣稱新規則在全部情況更好。
+原版模組仍為官方提交 899e8be6b5f6c7236bd23b52aa65051de757e0b3 的兩個原實驗模組位元組，沒有修補 false、回呼結構、filter 或 helper。
 
 ## 失效與原功能的保留
 
@@ -57,7 +57,7 @@ C 掃描器仍自行反覆讀取指定目錄，沒有改成常駐監控一般程
 | 4,096 | 12.05–12.89 | 12.95–15.97 | 0.94–1.21 |
 | 65,536 | 85.42–102.28 | 86.89–93.76 | 0.92–1.02 |
 
-表中為三個開機各自中位數的範圍，配對比值先在區組內相除再取開機中位數，沒有用兩個獨立中位數相除。逐區組變異保存在 [paired_cost.csv](../call_completion/paired_cost.csv)。舊 4.76 倍、39.6%–45.1% 改善，以及與 zygarde 比較時本文的 88–89 ms，仍屬原版本，不移作新版實測，也沒有重跑 zygarde 的成本。
+表中為三個開機各自中位數的範圍，配對比值先在區組內相除再取開機中位數，沒有用兩個獨立中位數相除。 逐區組變異保存在 [paired_cost.csv](../call_completion/paired_cost.csv)。
 
 小目錄可見新增檢查的固定開銷。大目錄配對比值接近 1，且區組間有變異，不能據此宣稱新增檢查會降低成本。
 
@@ -70,7 +70,7 @@ C 掃描器仍自行反覆讀取指定目錄，沒有改成常駐監控一般程
 ## 資料與重現
 
 - [凍結規約](../call_completion/PROTOCOL.md)、[先導紀錄](../call_completion/PILOT_NOTES.md)、[BPF 衍生差異](../call_completion/bpf.patch)。
-- [原始封存](../call_completion/call_completion_20261103.tar.gz)、[逐筆重算結果](../call_completion/verification.json)、[現行入口](../scan_directory.py)。
+
 - [原已接受版本的公開樣本](ORIGINAL_CARAXES_20261102_zh-TW.md)、[撤回的最後 false 試驗](TERMINAL_REJECTION_20261103_zh-TW.md)。
 
 三個確認開機來源逐檔一致，C 掃描器、原 BPF 及原 tracefs 比對器不覆寫。新舊原始分母、成本與凍結來源分開。先導、失敗與未實際注入完整保留，成本目錄的空測試檔可依固定生成程式重建，沒有刪除觀察資料。Windows 重算不重建特意造成錯誤的 255 位元組空檔，避免 MAX_PATH，原始封存不改。宿主仍無 Hyper-V 檢查點管理權限，本輪沒有建立新檢查點，也沒有升級套件。所有樣本模組已卸載、tmpfs 已卸掛。
@@ -80,7 +80,7 @@ C 掃描器仍自行反覆讀取指定目錄，沒有改成常駐監控一般程
 正式 CLI 另以 10 次實機執行核對新版預設、`--accepted-only` 舊分支及兩種原版模式，見 [entry_evidence](../call_completion/entry_evidence/verification.json)，不併入三開機分母。虛擬機的發布副本位於 `/home/kicba/call_completion_published_20261103`，原確認與舊研究目錄不覆寫。
 
 ```bash
-python call_completion/summarize.py --archive call_completion/call_completion_20261103.tar.gz --extract-to reproduced/call_completion --output reproduced/call_completion_verification.json
+
 ```
 
 封存 SHA-256：`7363caa1b3d8fff9602052adb114949c9f3da4eb3e3e26a0e15f9792721c385c`。功能量測 1,737 次，獨立實收控制 102 次，工具觀察 45 次，共 1,884 筆，成本及暖機另計。

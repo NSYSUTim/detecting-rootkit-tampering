@@ -1,6 +1,6 @@
 --- comparison/public_rootkit/run_native.py
 +++ call_completion/run_public_sample.py
-@@ -11,9 +11,9 @@
+@@ -11,8 +11,8 @@
  import sys
  import time
  
@@ -10,7 +10,6 @@
 -from finalization.tracefs_measurement import new_measurement,CompleteMeasurement
 +from call_completion.measurement import new_call_measurement as new_measurement,CallMeasurement as CompleteMeasurement
  from finalization.controlled_cases import exact_capture,loaded
- from finalization.compare_zygarde import execute,zygarde_target
  from phase2.run_campaign import manifest
 @@ -54,7 +54,7 @@
      modules={m:a.root/'build'/m/'caraxes.ko' for m in ('getdents64','filldir')}

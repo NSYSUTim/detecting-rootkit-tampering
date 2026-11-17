@@ -19,26 +19,6 @@
           "alerts": 15
         }
       }
-    },
-    "zygarde": {
-      "positive": 105,
-      "detected": 105,
-      "negative": 30,
-      "false_alerts": 0,
-      "identity_only": {
-        "insert": {
-          "trials": 15,
-          "alerts": 0
-        },
-        "inode": {
-          "trials": 15,
-          "alerts": 0
-        },
-        "type": {
-          "trials": 15,
-          "alerts": 0
-        }
-      }
     }
   },
   "cost_ranges": {
@@ -46,10 +26,6 @@
       "ours_median_ms": [
         2125.790093,
         2277.516808
-      ],
-      "zygarde_adapter_median_ms": [
-        569.047738,
-        619.336574
       ],
       "paired_ours_over_adapter_median": [
         3.5192054257094822,
@@ -89,10 +65,6 @@
         2176.621796,
         2277.811648
       ],
-      "zygarde_adapter_median_ms": [
-        568.513205,
-        621.406779
-      ],
       "paired_ours_over_adapter_median": [
         3.5029479731504507,
         3.660045427674033
@@ -130,10 +102,6 @@
       "ours_median_ms": [
         2028.311724,
         2379.245752
-      ],
-      "zygarde_adapter_median_ms": [
-        722.886026,
-        820.90691
       ],
       "paired_ours_over_adapter_median": [
         2.8037932538482906,
@@ -186,9 +154,9 @@
   "control_repair": {
     "counts": {
       "unprobed": 12,
-      "ours": 4,
-      "zygarde": 4
+      "ours": 4
     },
     "verified": true
-  }
+  },
+  "public_copy_note": "Selective withdrawal of an external comparison; retained detector measurements are historical, not reruns."
 }

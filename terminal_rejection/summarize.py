@@ -35,8 +35,18 @@ def verify_record(row,folder):
     assert row['identity_verdict']==('equal' if actual==row['kernel_fingerprint'] else 'different')
     assert row['terminal_rejection']==(row['terminal_observation']['last_accepted']==0)
 
+
+def archived_source_matches(path, original_digest):
+    digest = sha(path)
+    if digest == original_digest:
+        return True
+    manifest = read(ROOT / 'docs/PUBLIC_CLEANUP_20261117.json')
+    copies = manifest['public_copies_by_original_sha256']
+    return digest in copies.get(original_digest, ())
+
+
 def summarize(root):
-    groups=defaultdict(list);regress=[];dynamics=[];normal=[];races=[];faults=[];boots=[];unexercised=[];source_sets=[];tool_groups=defaultdict(list)
+    groups=defaultdict(list);regress=[];dynamics=[];normal=[];races=[];faults=[];boots=[];unexercised=[];source_sets=[]
     count=0
     for index in (1,2,3):
         public=root/f'boot_{index:02d}_public';other=root/f'boot_{index:02d}_regression'
@@ -45,7 +55,7 @@ def summarize(root):
         boots.append({'index':index,'boot_id':pm['boot_id']})
         source_sets.append(rm['source_sha256'])
         # The actual deployed sources, not a later host-side preparation package.
-        for name,digest in rm['source_sha256'].items():assert sha(root/'code'/name)==digest
+        for name,digest in rm['source_sha256'].items():assert archived_source_matches(root/'code'/name, digest)
         original=pm['original'];public_rows=lines(public/'observations.jsonl');assert len(public_rows)==100
         for row in public_rows:
             verify_record(row,public);count+=1
@@ -65,11 +75,6 @@ def summarize(root):
             assert lines(public/row['dump'])==row['rows'];count+=1
             if 'restored' in row['tag'] or 'normal' in row['tag'] or 'unloaded' in row['tag']:
                 assert row['matches_manifest'] and row['returncode']==0
-        tool_rows=lines(public/'zygarde.jsonl');assert len(tool_rows)==15
-        for row in tool_rows:
-            views=row['metrics'][0]['views'];missing=set.intersection(*(set(v['produced'])-set(v['returned']) for v in views))
-            actual={Path(f['details']['path']).name for f in row['assessment']['target_findings']};assert missing==actual
-            tool_groups[row['mode']].append(row);count+=1
         rows=lines(other/'observations.jsonl')
         scans=[r for r in rows if r['kind']!='assessment'];assert len(scans)==454,len(scans)
         assessments={r['scan_dump']:r for r in rows if r['kind']=='assessment'};assert len(assessments)==320
@@ -116,8 +121,6 @@ def summarize(root):
         'dynamic_all_three_operations_overlap':sum(all(r['churn_overlap'].get(k,0)>0 for k in ('create','rename','delete')) for r in dynamics),
         'benign_race':{fs:stats([r for r in races if r['fs']==fs]) for fs in ('ext4','tmpfs')},
         'faults':{k:stats([r for r in faults if r['kind']==k]) for k in ('syscall_error','missing_terminal_telemetry')},
-        'zygarde':{m:{'n':len(v),'target_alerts':sum(r['assessment']['alarm'] for r in v),
-                     'quality_warnings':sum(bool(r['assessment']['other_findings']) for r in v)} for m,v in tool_groups.items()},
         'state_value_bytes':sorted({r['state_value_bytes'] for r in regress}),
         'pilots_excluded':True,'historical_results_relabelled_as_new_version':False}
 

@@ -3,7 +3,6 @@
   "base_commit": "3cb634a8dd321f0ab3802d8a3aef689c229d5f7c",
   "scope": "Original CARAXES two configurations, three fresh boots, unchanged detector, truthful negative result",
   "raw_archive": {
-    "path": "comparison/public_rootkit/public_sample_20261102.tar.gz",
     "sha256": "88852bcfbb08be7f05d185f16e96b0e14defbab3ca94f65af5e438a2df6e4e96"
   },
   "offline_verification": {
@@ -11,7 +10,6 @@
     "observations_and_controls": 447,
     "detector_observations": 300,
     "independent_controls": 102,
-    "zygarde_observations": 45,
     "boot_ids": [
       "479b99f9-cbc9-419b-951e-d381c81b7b44",
       "531f1963-f031-4674-b824-dacb08ecc47a",

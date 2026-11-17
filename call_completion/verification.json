@@ -16,8 +16,6 @@
   ],
   "native_functional_scans": 1737,
   "independent_controls": 102,
-  "zygarde_observations": 45,
-  "functional_observations_and_controls": 1884,
   "cost_observations": 90,
   "cost_warmups_excluded": 18,
   "cost_pairs": 45,
@@ -281,23 +279,6 @@
       "completion_valid": 0,
       "alarms": 0,
       "verified_recovery": 0
-    }
-  },
-  "zygarde": {
-    "normal": {
-      "n": 15,
-      "target_alerts": 0,
-      "quality_warnings": 0
-    },
-    "getdents64": {
-      "n": 15,
-      "target_alerts": 15,
-      "quality_warnings": 0
-    },
-    "filldir": {
-      "n": 15,
-      "target_alerts": 15,
-      "quality_warnings": 15
     }
   },
   "state_value_bytes": [

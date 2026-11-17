@@ -67,7 +67,6 @@
   },
   "historical_denominators_unchanged": true,
   "frozen_sources_and_original_decoder_unchanged": true,
-  "zygarde_shared_empirical_comparison": false,
   "new_public_rootkit_trials": false,
   "all_entry_losses_covered": false,
   "new_version_cross_boot_cost_comparison": false

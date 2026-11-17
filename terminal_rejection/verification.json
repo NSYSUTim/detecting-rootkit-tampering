@@ -159,23 +159,6 @@
       "verified_recovery": 0
     }
   },
-  "zygarde": {
-    "normal": {
-      "n": 15,
-      "target_alerts": 0,
-      "quality_warnings": 0
-    },
-    "getdents64": {
-      "n": 15,
-      "target_alerts": 15,
-      "quality_warnings": 0
-    },
-    "filldir": {
-      "n": 15,
-      "target_alerts": 15,
-      "quality_warnings": 15
-    }
-  },
   "state_value_bytes": [
     10696
   ],

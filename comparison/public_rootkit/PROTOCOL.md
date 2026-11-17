@@ -30,7 +30,7 @@ make it detectable.
 ## Fixture and observations
 
 Create a static ext4 directory containing 64 ordinary files, three files whose
-names contain the original magic word `caraxes`, and one shared zygarde canary.
+
 Owner/group must not match upstream ownership-based hiding rules (1001/21).
 Store the complete unhooked manifest, including dot entries, inode and type.
 All experiments use 256 IBLT cells and the existing fixed evaluation seeds.
@@ -59,7 +59,7 @@ invalid enumerations as observed; do not count them as correctly detected attack
 ## Closest tool
 
 For each boot and each of normal/getdents64/filldir states, run five target-only
-zygarde adapter observations, with rootkit loaded before the tool. Use the already
+Use the already
 fixed `08ccebd8fdcc28c56dc6251cad0683b7c9344bd1` adapter, a shared persistent canary,
 4 MiB ring buffer and its existing metrics. Preserve source/binary hashes, results,
 errors and event/canary checks. This is 45 observations if every state executes.

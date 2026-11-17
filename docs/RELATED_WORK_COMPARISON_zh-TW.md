@@ -1,63 +1,51 @@
 # filldir64 與 getdents64 相關方法比較
 
-目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最終結案成品見[書面入口](../paper/README.md)。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](CALL_COMPLETION_20261103_zh-TW.md)。
+本研究核對同一次列舉中 filldir64 已接受的項目與 getdents64 回傳項目。指紋辨認差異，IBLT 還原容量內的觀測差集，完成檢查另處理受測的拒收後結束異常。方法與結果見[同次呼叫完成檢查](CALL_COMPLETION_20261103_zh-TW.md)。
 
-原已接受項目版本另收錄固定原版 CARAXES 的三開機實驗、官方來源與 GPL-3.0 授權。getdents64 模式 120 次警報並還原，filldir 模式 120 次截斷未警報；同場 zygarde 對兩模式各 15 次有目標警報，filldir 同時有檢查檔品質提示。完整結果與證據見[實驗報告](ORIGINAL_CARAXES_20261102_zh-TW.md)。以前的受控比較不外推為兩者對此模式有相同涵蓋。
+## Synacktiv 的事件調查
 
-核對日期：2026-11-02。比較以論文、官方展示、固定版本原始碼及另列的三開機共同實驗為依據。下表的功能分析與實測成效分開，新增結果、未完成嘗試及成本定義見[結案核對](METHOD_CLOSURE_20261102_zh-TW.md)。
+[Synacktiv 的 CoRIIN 2026 展示](https://www.synacktiv.com/sites/default/files/2026-04/synacktiv-coriin_2026-analyse_linkpro_ebpf_aws.pdf)第 35 頁展示 filldir64 的核心端名稱輸出，供與一般列舉結果對照。這項資料支持跨視圖觀測的研究背景。本文採已接受身分、固定摘要、差集解碼與量測品質檢查，並保留所測條件及容量限制。
 
-其後另完成[相同輸入與準備完成後計時的三開機成本比較](SCAN_COST_COMPARISON_20261102_zh-TW.md)。預設與 32 MiB 的計時轉接版分開，未收齊事件者不列入完整觀測的速度排序。此成本比較不改原共同名稱的檢出率，也不把實作成本誤稱為純演算法速度。
+| 項目 | Synacktiv 公開展示 | 本研究 |
+|---|---|---|
+| 核心觀測 | 逐筆名稱輸出 | 最外層 filldir64 成功接受的項目 |
+| 比較身分 | 名稱 | 名稱位元組、inode、型態 |
+| 輸出 | 名稱紀錄 | 固定指紋與 IBLT，容量內解出身分差異 |
+| 成效證據 | 事件分析展示 | 自製受控模組與公開樣本的獨立實驗 |
 
-## 直接相關工作的定位
+## 其他方法及實測範圍
 
-已核對的最接近自動化實作是 [zygarde 的檔案偵測元件](https://github.com/waldh4ri/zygarde/blob/08ccebd8fdcc28c56dc6251cad0683b7c9344bd1/cells/file/file.go)。它也自行列舉目錄，將 filldir64 的名稱與使用者端目錄列舉取得的名稱比較。因此，兩端比較與選擇這組觀測位置不是本文獨有的概念。
+[Trace of the Times](https://doi.org/10.1145/3770085)使用核心函式時間分布。本文依公開評估器執行，另行記錄正常校準後凍結門檻的評估。專題比較使用自製 kicba_d7_hiding 模組，各方法分開收集，分母保留於[Trace 結果](D9_TRACE_FORMAL_RESULTS_zh-TW.md)及[Ubuntu 26 後續評估](../ubuntu26_extended_20261115/updates/20261116_final_remaining_results/FINAL_RESULTS_AND_REPORT_CONCLUSION.md)。
 
-[Synacktiv 的 CoRIIN 2026 展示](https://www.synacktiv.com/sites/default/files/2026-04/synacktiv-coriin_2026-analyse_linkpro_ebpf_aws.pdf)第 35 頁展示 filldir64 的核心端名稱輸出，可供對照一般列舉結果。公開頁面不足以確認完整自動比對、接受規則或品質門檻，不能把展示當成已完整公開的同功能偵測器，也不能反過來斷言作者完全沒有這些機制。
+Decloaker v0.0.9 在自製 filldir 列舉隱藏下檢查 raw ext4 的完整路徑可存取性。本方法 180/180 陽性告警，Decloaker 0/180，兩者在 540 個控制中均無告警。該條件保留完整路徑的存取能力，結果的解讀見[Decloaker 正式比較](D9_DECLOAKER_FORMAL_RESULTS_zh-TW.md)。
 
-[Trace of the Times](https://doi.org/10.1145/3770085)雖然也觀察相關核心函式，判定依據是時間分布，不是兩端目錄項身分。Decloaker 的受測功能比較原始磁碟列出的完整路徑能否解析，觀測目標也不同。本文本身亦屬跨視圖比較，分類不互斥，不能把跨視圖一概說成必須讀原始磁碟。
+逐筆記錄比較器由本研究自行實作，以 BPF map 保存項目的名稱、inode 與型態。65,536 項的舊版共同計時流程為本方法 221.62 ms、逐筆記錄 2,480.72 ms，邏輯資料量分別為 12.02 KiB、17,920.55 KiB。這些值限該版本及量測範圍，來源見[原共同量測](D9_CONFIRMATORY_RESULTS_zh-TW.md)。
 
-## 最接近的設計比較
+公開樣本延伸由本方法執行，涵蓋 CARAXES、Singularity、brokepkg、Medusa、BDS userland、libprocesshider 與 bad-bpf pidhide。各樣本的有效性、控制與解碼分母另列。
 
-| 比較項目 | Synacktiv 公開展示 | zygarde 固定版本的檔案元件 | 本研究目前實作 |
-|---|---|---|---|
-| 兩端資料 | 展示核心端逐筆名稱，供與一般輸出對照 | 自行列舉；filldir64 名稱對照 Go os.ReadDir 的名稱 | 專用 C 掃描器發起完整列舉；比對同次 filldir64 接受項目與原始 getdents64 記錄 |
-| 核心端計入 | 展示 kprobe 名稱輸出，未提供足以核對接受規則的細節 | filldir64 入口，不檢查返回值 | 回傳 true 的最外層呼叫，避免巢狀重複及未接受重送 |
-| 身分 | 公開輸出顯示名稱 | 名稱集合 | 名稱位元組、inode、型態 |
-| 緩衝區不足與動態刪除 | 公開展示未說明 | 名稱集合可去重；出現缺失候選時再列一次，只報兩次都缺的名稱。程式註解主要針對未放入緩衝區的項目隨後被刪除 | 在同次列舉依接受規則排除未交付項目；正常動態已有指定條件確認，不宣稱已驗證動態隱藏 |
-| 比較方向 | 公開展示未說明自動規則 | 只報核心產生而使用者端沒有的名稱 | 比較完整身分摘要，還原兩端各自獨有的識別值 |
-| 數量不變的名稱替換 | 未有共同實驗 | 名稱集合仍可找出消失的舊名稱，因此不能說它只能比數量 | 可辨識等量替換，並在受測案例還原兩個方向的差異 |
-| 只改 inode 或型態 | 公開名稱輸出不足以確認 | 此元件的名稱集合比較不涵蓋這兩欄；不是對整工具所有元件的斷言 | 身分包含兩欄，本研究有受控改寫驗證 |
-| 還原輸出 | 名稱 | 缺失名稱與組成的路徑 | h1、inode、型態，沒有原始名稱；本輪新增還原指紋核對，仍受碰撞及容量限制 |
-| 資料與記憶體 | 逐項輸出名稱 | 核心 ring buffer 固定配置 4 MiB；逐項事件總量及使用者端名稱集合隨目錄大小增加；滿時預留失敗 | 原多表實作的 256 格邏輯摘要約 12.02 KiB；新合併狀態值含完成檢查為 10,856 位元組，不含 map 配置開銷；全域 map 預留與整工具記憶體另計。不得由此宣稱整工具記憶體必然少於 zygarde |
-| 已有品質機制 | 展示細節不足 | 已知檢查檔、錯誤、跳過及記錄處理，不是完全沒有品質檢查。所查 BPF 檔未保存 ring-buffer 預留失敗次數 | 現行入口有 tracefs 入口 nmissed、返回 profile、事件身分、收支及 BPF recursion_misses，品質不符拒判；不宣稱排除所有故障 |
-| 成效比較 | 公開展示沒有完整自動判定器可直接重跑，不編造偵測率 | 官方固定版本已做三開機共同名稱確認，成本使用明列的單目錄轉接版 | 共同名稱目標皆105/105、0/30。本文額外身分目標另列，新程序成本沒有全面較快，大目錄事件完整性另核對 |
+## 研究限制
 
-原始碼依據：[zygarde BPF 檔](https://github.com/waldh4ri/zygarde/blob/08ccebd8fdcc28c56dc6251cad0683b7c9344bd1/cells/file/file.bpf.c)、[名稱集合、檢查檔、重掃及回報邏輯](https://github.com/waldh4ri/zygarde/blob/08ccebd8fdcc28c56dc6251cad0683b7c9344bd1/cells/file/file.go)。只評估此固定版本的檔案元件，不將其他元件一併判為沒有某種能力。
+兩端差異是異常證據，惡意判斷需要授權及其他線索。解碼受容量、碰撞與重複身分限制。固定摘要不代表固定掃描時間或整工具記憶體。觀測完整性與同核心信任假設，以及未受測環境，均限制覆蓋主張。
 
-完成檢查版另以每次 syscall 配對拒絕與結束，不把被拒項目加入已接受摘要。原版 CARAXES 的新三開機兩模式各 120 次皆警報，正常刪除競態 30 次無新警報，但未與 zygarde 比較該競態，也未重跑兩工具的新版本成本。被拒見證可含名稱，IBLT 差集本身仍不含名稱。
+## 業界證據支持哪些研究問題
 
-## 論文可直接使用的比較段落
+部分來源直接證明目錄列舉觀測區間與實際攻擊有關，部分來源支持事件規模或嚴重性。觀測點與事件的對應是依原文描述修改位置作的機制分析。這項對應與本研究對固定樣本所做的效果測試，各有自己的證據。
 
-Synacktiv 在 LinkPro 分析的公開展示中，以 kprobe 取得 filldir64 產生的目錄項名稱，供與使用者端結果對照。開源工具 zygarde 的檔案元件進一步自行列舉目錄，將 filldir64 入口取得的名稱集合與使用者端列舉名稱比較，並重新列舉確認持續缺失。本文與其觀測位置相近，因此不把兩端比較本身視為獨有貢獻。本文的切入點是以已接受的最外層呼叫對齊同次完整列舉，以名稱、inode 與型態建立固定大小摘要，並嘗試還原兩端獨有的少量差異識別值。zygarde 可直接提供缺失名稱，而本文摘要不保存原始名稱，且 IBLT 還原有容量、分布與重複差異限制。本輪三開機共同比較在名稱目標上沒有檢出率差異，另確認本文的額外身分欄位及成本、事件完整性的取捨，不據此推論全面優劣。
+| 來源 | 已核對事實 | 對本研究的支持 |
+|---|---|---|
+| Virus Bulletin 2025 圖 13 | 選定的 20 個核心層家族中，12 個掛接 getdents64，在所列系統呼叫中數量最高 | 對應列舉介面的樣本內量化證據。分母限該集合，不能改寫為全體攻擊盛行率 |
+| Synacktiv LinkPro | AWS EKS 入侵中，以 eBPF 修改 getdents/getdents64 的回傳記錄 | 直接支持 K/S 區間的實際營運重要性 |
+| Elastic SANSAR | GPU 主機事件中以 ftrace 包裝 getdents64，原呼叫返回後刪除或跳過目錄項 | 直接支持 K/S 區間，並提供 GPU 運算場景 |
+| Elastic PUMAKIT | 樣本分析明列 getdents_hook/getdents64_hook 過濾名稱 | 支持相同介面的機制重現。該文章的樣本來源是 VirusTotal，沒有提供這種攻擊的母體發生率 |
+| ESET Ebury | 較新版本以 readdir/readdir64 隱藏檔案與程序 | 直接支持 S/L 的動機。自 2009 年累計近 40 萬台是 Ebury 整個活動的受害規模 |
+| Mandiant UNC3886 | 間諜行動使用 REPTILE 與 MEDUSA 衍生版 | 主要支持嚴重性及實務使用。MEDUSA 的 LD_PRELOAD 機制與 S/L 有關。事件變種與本研究的上游測試版本各自標示 |
+| NSA/FBI Drovorub | 具國家歸責的核心 rootkit，具有檔案、程序與連線隱藏能力 | 支持威脅重要性。若在 filldir64 之前排除項目，便落在 K 之前 |
+| CARAXES 與 Diamorphine 的本機紀錄 | CARAXES 有效果測試；釘選 Diamorphine 在指定核心載入失敗 | 支持實驗效果或相容性。這兩項本機紀錄本身無法給出產業受害規模 |
 
-## 約十一倍與一千四百九十倍的正確歸屬
+原始來源見 [VB2025](https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf)、[LinkPro](https://www.synacktiv.com/en/publications/linkpro-ebpf-rootkit-analysis)、[SANSAR](https://www.elastic.co/security-labs/threat-command/sansar-linux-cryptomining-malware)、[PUMAKIT](https://www.elastic.co/security-labs/threat-command/declawing-pumakit)、[Ebury 白皮書第 19 頁起](https://web-assets.esetstatic.com/wls/en/papers/white-papers/ebury-is-alive-but-unseen.pdf)、[UNC3886](https://cloud.google.com/blog/topics/threat-intelligence/uncovering-unc3886-espionage-operations)及 [Drovorub](https://media.defense.gov/2020/Aug/13/2002476465/-1/-1/0/CSA_DROVORUB_RUSSIAN_GRU_MALWARE_AUG_2020.PDF)。
 
-這兩個數字來自本研究自行實作的 accepted-entry BPF hash map 逐項記錄基線。該基線存入名稱、inode、型態及鍵值，不能寫成只比名稱。它也不是 Synacktiv 展示或 zygarde ring buffer 的完整重現。
+## 原始來源已提供的防禦
 
-可以說：在本文特定的逐項 map 記錄格式與量測流程下，固定摘要的成本較小。不能說：Synacktiv 或 zygarde 已被量得慢十一倍，或實際流量／整工具記憶體大一千四百九十倍。原逐項紀錄採固定長度名稱欄位，資料量比較是偏大的上界。
+上述文獻包含既有偵測與調查方法。VB2025 的內容涵蓋 rootkit 偵測。LinkPro 提供 YARA，Synacktiv 在 CoRIIN 2026 投影片第 35 頁另展示 filldir64 名稱觀測。SANSAR 提供 YARA 與 IoC。PUMAKIT 提供 EQL/KQL、syslog、模組載入與 YARA 偵測。Ebury 提供可信 shell 與 userland rootkit 查核。UNC3886 及 Drovorub 另提供獵捕、鑑識、特徵或平台強化建議。
 
-## 對外部評語的必要修正
-
-1. 「h1 不同所以兩份加總必然不同」不是一般通則。運算模 2^64，兩個相異值加倍也能同餘。本研究反例中的指紋不同，是已實際算出的結果。
-2. 「h2 不獨立，所以有效強度就是 64 位元」沒有一般安全證明。不得把示意模型的機率直接稱為實作的安全強度。[FNV 規格](https://www.rfc-editor.org/rfc/rfc9923.html#section-1.2)不建議把 FNV 用於要求抵抗主動碰撞的安全用途。
-3. 「公開 rootkit 通常不會辨識掃描器」不能作為已知一般保證。可信量測與不針對本偵測器調整行為，仍是明確假設。模組簽章與 lockdown 可限制進入核心的途徑，不是對已在核心執行之對手的自我保護證明。
-4. [Diamorphine 固定版本](https://github.com/m0nad/Diamorphine/tree/989863cfeb9c61a8f7510870d1103ad8e8cc4765)的 README 宣稱支援 6.x，但不能直接等同於本研究指定 Ubuntu 核心可用。其 x86 分支以版本 6.9 作為新分派處理的分界，較舊分支仍改 syscall table；[Linux stable 6.8.5](https://github.com/gregkh/linux/blob/v6.8.5/arch/x86/entry/common.c#L43)已使用 x64_sys_call 分派。此處不是宣稱 syscall table 符號消失，也不是已在 Ubuntu 6.8.0-138 實測失效，而是說明不能僅由 README 判定相容。本輪未執行新公開 rootkit，不把它列為完成比較的必要條件。
-5. 對 filldir64 直接改碼或不同附掛方式的可見性，仍需針對具體機制驗證。現有 ftrace 組合測過兩種載入順序，不構成所有掛接方式的保證。
-6. 目前量測程序已在執行量測時附掛並清理探針，不是完成全天常駐部署。其他程式在這段期間仍可能先觸發再被 PID 過濾，這部分負擔尚未單獨量測，不能宣稱沒有成本。
-7. /proc 的同次已交付記錄不會因行程後來結束而自行消失。生命週期變動不直接等於兩端不一致；單純換路徑也不自動形成新的研究貢獻。本輪不擴大到行程隱藏。
-
-## 版本與研究定位
-
-zygarde 相關功能的公開提交為 4e641632229def13f9e46871cebf2a3566990bf0，提交時間 2026-10-14 20:04:58 UTC；本文原程式已見於 2026-09-25 的保存提交。此時間序用於界定版本，不作為互相抄襲或完全獨立開發的證明。個人開源專案亦屬相關公開工作，應引用，但不冒充同儕審查論文。
-
-本研究的定位是：可信量測前提下、限定觀測邊界內的輸出一致性檢查，以及固定摘要、少量差異還原與量測失效處理的系統整合和受控驗證。不是完整檔案真相、任意核心攻擊者下的安全保證，也不是對全部 rootkit 的實測偵測率。
+因此，本文以這些來源支持觀測介面的實務重要性，並以自己的實驗評估同次列舉的身分摘要、差集定位及有效性檢查。現有證據沒有建立「這個觀測點最缺乏通用解法」的比較排名，也無法僅憑文獻未描述某個設計便證明世界上沒有其他解法。

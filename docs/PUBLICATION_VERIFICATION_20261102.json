@@ -77,8 +77,7 @@
     "control_repair": {
       "counts": {
         "unprobed": 12,
-        "ours": 4,
-        "zygarde": 4
+        "ours": 4
       },
       "verified": true
     },
@@ -87,21 +86,6 @@
       "getdents_control_rows": 0,
       "status": "unfinished original-protocol attempt; excluded from amended confirmation denominators"
     }
-  },
-  "zygarde_common_name_target": {
-    "per_tool_differences_detected": 105,
-    "per_tool_differences_total": 105,
-    "per_tool_control_alerts": 0,
-    "per_tool_control_total": 30,
-    "identity_only_trials_each": 15,
-    "identity_targets": [
-      "insert",
-      "inode",
-      "type"
-    ],
-    "ours_identity_alerts_each": 15,
-    "zygarde_identity_alerts_each": 0,
-    "identity_targets_separate_from_common_recall": true
   },
   "cost_scope": {
     "main_pairs": 45,

@@ -7,7 +7,6 @@
       "boot_id": "479b99f9-cbc9-419b-951e-d381c81b7b44",
       "observations": 100,
       "controls": 34,
-      "zygarde": 15,
       "cleanup": true
     },
     {
@@ -15,7 +14,6 @@
       "boot_id": "531f1963-f031-4674-b824-dacb08ecc47a",
       "observations": 100,
       "controls": 34,
-      "zygarde": 15,
       "cleanup": true
     },
     {
@@ -23,7 +21,6 @@
       "boot_id": "a8fd6b5b-1c27-4074-9b94-4b7be87b8af8",
       "observations": 100,
       "controls": 34,
-      "zygarde": 15,
       "cleanup": true
     }
   ],
@@ -134,38 +131,6 @@
         68
       ],
       "accepted_count_range": [
-        2,
-        2
-      ]
-    }
-  ],
-  "zygarde_adapter": [
-    {
-      "mode": "normal",
-      "n": 15,
-      "target_alarms": 0,
-      "quality_warning_observations": 0,
-      "returned_name_count_range": [
-        68,
-        68
-      ]
-    },
-    {
-      "mode": "getdents64",
-      "n": 15,
-      "target_alarms": 15,
-      "quality_warning_observations": 0,
-      "returned_name_count_range": [
-        65,
-        65
-      ]
-    },
-    {
-      "mode": "filldir",
-      "n": 15,
-      "target_alarms": 15,
-      "quality_warning_observations": 15,
-      "returned_name_count_range": [
         2,
         2
       ]

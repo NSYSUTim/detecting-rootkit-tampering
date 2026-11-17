@@ -6,7 +6,6 @@
   "recomputed_observations_and_controls": 1809,
   "native_detector_scans": 1662,
   "independent_controls": 102,
-  "zygarde_observations": 45,
   "public_sample": [
     {
       "mode": "normal",

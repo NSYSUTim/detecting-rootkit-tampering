@@ -877,10 +877,6 @@
         480,
         480
       ],
-      "all_configured_targets_recovered": [
-        408,
-        480
-      ],
       "whole_project_plan_complete": false,
       "raw_files_uploaded": false
     },
@@ -921,10 +917,6 @@
       160,
       160
     ],
-    "all_configured_targets_recovered": [
-      136,
-      160
-    ],
     "source_compatibility": "compiler macro PROC_ROOT_INO=PROCFS_ROOT_INO; source unchanged",
     "raw_evidence_uploaded": false,
     "overall_plan_fully_completed": false
@@ -945,10 +937,6 @@
     ],
     "observed_boundary_exact": [
       480,
-      480
-    ],
-    "all_configured_targets_recovered": [
-      408,
       480
     ],
     "whole_project_plan_complete": false,

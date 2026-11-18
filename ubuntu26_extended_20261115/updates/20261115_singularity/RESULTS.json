@@ -70,8 +70,7 @@
       "fixture_entries_unobserved_upstream": 5472,
       "ordinary_entries_unobserved_upstream": 1260,
       "configured_target_events": 12024,
-      "recovered_target_events": 7812,
-      "all_configured_targets_recovered": 408
+      "recovered_target_events": 7812
     }
   },
   "cells": [
@@ -101,8 +100,7 @@
       "fixture_entries_unobserved_upstream": 1260,
       "ordinary_entries_unobserved_upstream": 270,
       "configured_target_events": 1503,
-      "recovered_target_events": 513,
-      "all_configured_targets_recovered": 42
+      "recovered_target_events": 513
     },
     {
       "order": "detector_first",
@@ -156,8 +154,7 @@
       "fixture_entries_unobserved_upstream": 0,
       "ordinary_entries_unobserved_upstream": 0,
       "configured_target_events": 1503,
-      "recovered_target_events": 1503,
-      "all_configured_targets_recovered": 60
+      "recovered_target_events": 1503
     },
     {
       "order": "detector_first",
@@ -211,8 +208,7 @@
       "fixture_entries_unobserved_upstream": 1476,
       "ordinary_entries_unobserved_upstream": 360,
       "configured_target_events": 1503,
-      "recovered_target_events": 387,
-      "all_configured_targets_recovered": 42
+      "recovered_target_events": 387
     },
     {
       "order": "detector_first",
@@ -266,8 +262,7 @@
       "fixture_entries_unobserved_upstream": 0,
       "ordinary_entries_unobserved_upstream": 0,
       "configured_target_events": 1503,
-      "recovered_target_events": 1503,
-      "all_configured_targets_recovered": 60
+      "recovered_target_events": 1503
     },
     {
       "order": "detector_first",
@@ -321,8 +316,7 @@
       "fixture_entries_unobserved_upstream": 1260,
       "ordinary_entries_unobserved_upstream": 270,
       "configured_target_events": 1503,
-      "recovered_target_events": 513,
-      "all_configured_targets_recovered": 42
+      "recovered_target_events": 513
     },
     {
       "order": "sample_first",
@@ -376,8 +370,7 @@
       "fixture_entries_unobserved_upstream": 0,
       "ordinary_entries_unobserved_upstream": 0,
       "configured_target_events": 1503,
-      "recovered_target_events": 1503,
-      "all_configured_targets_recovered": 60
+      "recovered_target_events": 1503
     },
     {
       "order": "sample_first",
@@ -431,8 +424,7 @@
       "fixture_entries_unobserved_upstream": 1476,
       "ordinary_entries_unobserved_upstream": 360,
       "configured_target_events": 1503,
-      "recovered_target_events": 387,
-      "all_configured_targets_recovered": 42
+      "recovered_target_events": 387
     },
     {
       "order": "sample_first",
@@ -486,8 +478,7 @@
       "fixture_entries_unobserved_upstream": 0,
       "ordinary_entries_unobserved_upstream": 0,
       "configured_target_events": 1503,
-      "recovered_target_events": 1503,
-      "all_configured_targets_recovered": 60
+      "recovered_target_events": 1503
     },
     {
       "order": "sample_first",

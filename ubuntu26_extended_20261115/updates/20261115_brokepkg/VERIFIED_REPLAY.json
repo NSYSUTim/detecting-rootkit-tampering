@@ -24,8 +24,7 @@
       "actual_missing_entry_events": 4344,
       "unobserved_fixture_entries": 1524,
       "configured_target_events": 4008,
-      "recovered_target_events": 2820,
-      "all_configured_targets_recovered": 136
+      "recovered_target_events": 2820
     }
   },
   "cohorts": 1,

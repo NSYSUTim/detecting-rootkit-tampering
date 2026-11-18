@@ -7,8 +7,8 @@
     {
       "source_filename": "Poster_EN_B123245021_Wei-Ting_Chiang.pptx",
       "repository_path": "paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx",
-      "sha256": "0073ffe686d6ab81fc77a35de391d1a78cd9e80937b42dd36c24411a5aff73e2",
-      "bytes": 2611360,
+      "sha256": "e6575305db766a705ba027913d6805c20cdb2f4cb0a1745834d05db1b29897e4",
+      "bytes": 3797581,
       "slides": 1,
       "author_provided_sha256": "5aa65dc44cd54723f01114d61d5ed725c68daf4488916dd523ee9c4b23d74beb"
     },
@@ -36,5 +36,7 @@
     }
   ],
   "public_edit_date": "2026-11-17",
-  "public_edit_reason": "Author-requested removal of an unpublished comparison tool and related references"
+  "public_edit_reason": "Author-requested removal of an unpublished comparison tool and related references",
+  "poster_results_update_date": "2026-11-18",
+  "poster_results_update_reason": "Clarify alert and observed-difference decoding rates and retire a misleading summary metric"
 }

@@ -177,7 +177,7 @@
       ],
       "acceptance": "保留 CARAXES、Singularity、brokepkg 的觀測。TripleCross 與 bad-bpf 各填版本、機制、執行證據狀態。KoviD 保留現有建置結果。",
       "status_as_of_prior_record": "partial",
-      "completed_evidence_as_of_prior_record": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
+      "completed_evidence_as_of_prior_record": "CARAXES 與既有相容性失敗紀錄保留；BDS userland／libprocesshider 觀測可重播。 新做四個原版建置及八個完整原始輸入／版本設定關卡，Singularity、brokepkg 編譯成功。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，觀測到的 K–S 差異均完整解碼。其他家族／任務仍依 remaining 欄位。",
       "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
     },
     {
@@ -207,9 +207,9 @@
       "outputs": [
         "verified_kernel_matrix.json"
       ],
-      "acceptance": "按樣本及實際運行條件列告警、已觀測差異解碼、全部目標還原。另列 brokepkg 只做一開機，額外優先候選沒有新測結果。",
+      "acceptance": "按樣本及實際運行條件列告警和已觀測差異的完整解碼，並說明列舉提前結束的限制。另列 brokepkg 只做一開機，額外優先候選沒有新測結果。",
       "status_as_of_prior_record": "partial",
-      "completed_evidence_as_of_prior_record": "保留既有 CARAXES 矩陣及一個新同 VM 取證 cohort。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。",
+      "completed_evidence_as_of_prior_record": "保留既有 CARAXES 矩陣及一個新同 VM 取證 cohort。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，觀測到的 K–S 差異均完整解碼。其他家族／任務仍依 remaining 欄位。",
       "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
     },
     {
@@ -603,7 +603,7 @@
       ],
       "acceptance": "結果可獨立計算，原始/修正版/補充組不覆蓋",
       "status_as_of_prior_record": "partial",
-      "completed_evidence_as_of_prior_record": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，全設定目標找回 408/480。其他家族／任務仍依 remaining 欄位。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。 已比對整合成本 16,800 個原始檔案的 SHA-256，並獨立重播每個開機與條件的第一筆正式量測，共 120 筆。",
+      "completed_evidence_as_of_prior_record": "已獨立核對多批 raw bytes、IBLT、內容雜湊、凍結門檻與保護檔案，附分批清冊。 新增檔名反查原始 ncheck bytes、名稱雜湊匹配、完整身分差分及擷取內容的主機重播已通過。 Singularity 原版已完成兩種探針啟用順序各三次乾淨開機、1,920 次目錄掃描及原始 bytes/IBLT 重播，480 次隱藏皆告警、1,440 次正常對照無告警，觀測到的 K–S 差異均完整解碼。其他家族／任務仍依 remaining 欄位。 Medusa 原三開機協定已補齊：360 次嘗試、342 次有效，162 次有效隱藏皆告警並完整還原、180 次正常無告警；18 次 ext4 EOF/ENOENT 應用錯誤保留為無效。/proc canary PIDFD 與 starttime 及原始 bytes/IBLT 已重播核對。其他原定範圍仍依 remaining 欄位。 已比對整合成本 16,800 個原始檔案的 SHA-256，並獨立重播每個開機與條件的第一筆正式量測，共 120 筆。",
       "previous_status_reference": "ubuntu26_extended_20261115_run12/github_update/PLAN_STATUS.json"
     },
     {

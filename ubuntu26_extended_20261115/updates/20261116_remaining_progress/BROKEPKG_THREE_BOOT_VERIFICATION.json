@@ -44,8 +44,7 @@
           "actual_missing_entry_events": 4344,
           "unobserved_fixture_entry_events": 1524,
           "configured_target_events": 4008,
-          "recovered_target_events": 2820,
-          "all_configured_targets_recovered": 136
+          "recovered_target_events": 2820
         }
       },
       "module_absent_at_end": true
@@ -87,8 +86,7 @@
           "actual_missing_entry_events": 4344,
           "unobserved_fixture_entry_events": 1524,
           "configured_target_events": 4008,
-          "recovered_target_events": 2820,
-          "all_configured_targets_recovered": 136
+          "recovered_target_events": 2820
         }
       },
       "module_absent_at_end": true
@@ -130,8 +128,7 @@
           "actual_missing_entry_events": 4344,
           "unobserved_fixture_entry_events": 1524,
           "configured_target_events": 4008,
-          "recovered_target_events": 2820,
-          "all_configured_targets_recovered": 136
+          "recovered_target_events": 2820
         }
       },
       "module_absent_at_end": true
@@ -168,8 +165,7 @@
       "actual_missing_entry_events": 13032,
       "unobserved_fixture_entry_events": 4572,
       "configured_target_events": 12024,
-      "recovered_target_events": 8460,
-      "all_configured_targets_recovered": 408
+      "recovered_target_events": 8460
     }
   },
   "interpretation": [

@@ -50,8 +50,7 @@
       "actual_missing_entry_events": 4344,
       "unobserved_fixture_entries": 1524,
       "configured_target_events": 4008,
-      "recovered_target_events": 2820,
-      "all_configured_targets_recovered": 136
+      "recovered_target_events": 2820
     }
   },
   "count_semantics": {
@@ -63,13 +62,11 @@
     {
       "buffer_bytes": 256,
       "scans": 80,
-      "all_configured_targets_recovered": 56,
       "unobserved_fixture_entry_events": 1524
     },
     {
       "buffer_bytes": 65536,
       "scans": 80,
-      "all_configured_targets_recovered": 80,
       "unobserved_fixture_entry_events": 0
     }
   ],
@@ -83,7 +80,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 14,
       "configured_target_events": 501,
       "recovered_target_events": 279,
       "unobserved_fixture_entry_events": 270
@@ -97,7 +93,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -111,7 +106,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -125,7 +119,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 20,
       "configured_target_events": 501,
       "recovered_target_events": 501,
       "unobserved_fixture_entry_events": 0
@@ -139,7 +132,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -153,7 +145,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -167,7 +158,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 14,
       "configured_target_events": 501,
       "recovered_target_events": 129,
       "unobserved_fixture_entry_events": 492
@@ -181,7 +171,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -195,7 +184,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -209,7 +197,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 20,
       "configured_target_events": 501,
       "recovered_target_events": 501,
       "unobserved_fixture_entry_events": 0
@@ -223,7 +210,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -237,7 +223,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -251,7 +236,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 14,
       "configured_target_events": 501,
       "recovered_target_events": 279,
       "unobserved_fixture_entry_events": 270
@@ -265,7 +249,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -279,7 +262,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -293,7 +275,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 20,
       "configured_target_events": 501,
       "recovered_target_events": 501,
       "unobserved_fixture_entry_events": 0
@@ -307,7 +288,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -321,7 +301,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -335,7 +314,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 14,
       "configured_target_events": 501,
       "recovered_target_events": 129,
       "unobserved_fixture_entry_events": 492
@@ -349,7 +327,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -363,7 +340,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -377,7 +353,6 @@
       "valid": 20,
       "alarms": 20,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 20,
       "configured_target_events": 501,
       "recovered_target_events": 501,
       "unobserved_fixture_entry_events": 0
@@ -391,7 +366,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -405,7 +379,6 @@
       "valid": 20,
       "alarms": 0,
       "observed_boundary_exact": 20,
-      "all_configured_targets_recovered": 0,
       "configured_target_events": 0,
       "recovered_target_events": 0,
       "unobserved_fixture_entry_events": 0
@@ -413,7 +386,7 @@
   ],
   "interpretation": [
     "160 active scans alerted; all 320 control scans had no difference alarm.",
-    "All observed K-S differences decoded exactly, but only 136/160 active scans recovered every configured target.",
+    "All observed K-S differences decoded exactly. Early enumeration termination can leave later entries unobserved.",
     "The other 24 scans used the 256-byte buffer and ended before the upstream observer saw all fixture entries. This is not an IBLT peeling collision.",
     "Across active scans, 4344 fixture entry events were absent downstream: 2820 recovered plus 1524 not observed upstream.",
     "Only one boot is complete. The remaining family/boot matrices and the original overall plan are not complete."

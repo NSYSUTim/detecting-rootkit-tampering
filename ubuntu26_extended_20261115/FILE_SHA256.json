@@ -4,16 +4,16 @@
     "sha256": "5cccdc9da62c9d50691583bd11aeab51e59b59fdcc4a8e00d0a6ddc8b848e55b"
   },
   "PLAN_STATUS.json": {
-    "bytes": 18700,
-    "sha256": "a045b41da06eb3cb859df142505d6733fe69136438e884894e5f76c3f685bce1"
+    "bytes": 18733,
+    "sha256": "cadb88f520225baf447d9d315774f62cedde9f0394b7ab81ea2d22d0babdd03d"
   },
   "RESULTS.json": {
-    "bytes": 28312,
-    "sha256": "45ea971fab3d26d2e1af8e580e403dc40aa80f6df22b2431bfb7c75ee4512f78"
+    "bytes": 28094,
+    "sha256": "f4ab1b098ba866cd121a21fea6904330732974cd50ae0e84bcf957aff85a367c"
   },
   "STATUS.txt": {
-    "bytes": 5420,
-    "sha256": "f176c184b026d4e788a10e43525e3513358d92ec269480d89dcd6dafa07aa36b"
+    "bytes": 5450,
+    "sha256": "70059c215e64b833899392ea8c8ac7fec141cd8511dadf9118a30099e523c36b"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -64,16 +64,16 @@
     "sha256": "c97fdb5a26c1f72ea652a70cd599fb5e922e29659e88edeab1034cfd96495b4a"
   },
   "updates/20261115_brokepkg/README.txt": {
-    "bytes": 2275,
-    "sha256": "1f41a0b293c4f4474cc20c4f8efa1725688f1eb1cfc8b8ec783959b9700a3ff9"
+    "bytes": 1942,
+    "sha256": "2ef784a2c1103617ff9b2a900a3ae6eb973b5fe80e215a6f1b6e1232c60e6799"
   },
   "updates/20261115_brokepkg/RESULTS.json": {
-    "bytes": 12580,
-    "sha256": "59b3b40663906591761ecbfbf6e6e34d68bb699fabf1f8b887f4d2e8378a9fe8"
+    "bytes": 11354,
+    "sha256": "f62ca43c3139439110ed39214590ab8897762ae16167ebd4bd6523086ae78999"
   },
   "updates/20261115_brokepkg/VERIFIED_REPLAY.json": {
-    "bytes": 76624,
-    "sha256": "35e81c047172d0d1473abb7f4baef4d9e458c6bd4cc3680a59cf451f1a6eca96"
+    "bytes": 76576,
+    "sha256": "eedd13ccf9f1cdfb8400f647900992aa929e2f7bf36d418792eb39f26c55e82c"
   },
   "updates/20261115_inode_names/PLAN_STATUS.json": {
     "bytes": 11411,
@@ -124,12 +124,12 @@
     "sha256": "d9c37f66e4c9aff4664ce96fc2df7d3b1f5be0e34553b29d3d75667428cdc1fa"
   },
   "updates/20261115_singularity/README.txt": {
-    "bytes": 2958,
-    "sha256": "81d104083ca13041930f75cbefa1380400a1bf95741f443eb90dd4dc3d92018c"
+    "bytes": 2383,
+    "sha256": "a95d9ed4481365d13516d8ed71cc8223e887f11c70d959a9ab0bbd798febf82d"
   },
   "updates/20261115_singularity/RESULTS.json": {
-    "bytes": 19982,
-    "sha256": "79e64f6d77e8cfd3d503f682d00ca239af169d2544937ffcf5a8ed08fe772acb"
+    "bytes": 19567,
+    "sha256": "e6779bd43d5294fa8117e35c60c49a9c63f5e99a3375d8eaac896373610404f5"
   },
   "updates/20261115_singularity/cases/1_detector_first.csv": {
     "bytes": 44167,
@@ -168,8 +168,8 @@
     "sha256": "8b16035049045dde30436813f0099c77c86b07198d842e7ea78a3d237aff6341"
   },
   "updates/20261116_revised_plan/EXECUTION_PLAN.json": {
-    "bytes": 30399,
-    "sha256": "a602ee3ecb8c50df105711ba4f176a8280d6b8084d50887fb2769e2a7b434ec2"
+    "bytes": 30459,
+    "sha256": "62c01d4e98ae1a329a96f15210be73b80692668de8bbc42133080b0b5c056551"
   },
   "updates/20261116_revised_plan/VERIFICATION.json": {
     "bytes": 1542,
@@ -224,8 +224,8 @@
     "sha256": "989cc0694f12da8e3b94c8fbc3162b325d11e144a1d7c13b21ad3ee59b36f0cd"
   },
   "updates/integrated_cost_and_remaining_work/REMAINING_TASKS.json": {
-    "bytes": 16115,
-    "sha256": "c06f37a3efca0d8a00e7225eeee6822e2b49a13dd6a9500f49e670fe9832c8dd"
+    "bytes": 16148,
+    "sha256": "5cb804f90da25272b7c20f7a151cf27e5ecd5776d9846166b8da5e4edc1f59f3"
   },
   "updates/integrated_cost_and_remaining_work/SAME_INPUT_COMPARISON.json": {
     "bytes": 1763,
@@ -236,8 +236,8 @@
     "sha256": "3ddfa427c2955a61dc7e53d60534e1382206c2d296f8a1d435daa2d481938cfa"
   },
   "updates/integrated_cost_and_remaining_work/可引用結果.txt": {
-    "bytes": 3742,
-    "sha256": "c346adccae6340e90342014a7d931a2e141e6f2966fb0ebf9cdd33021bd4ec66"
+    "bytes": 3745,
+    "sha256": "251d952968758cddcb94bb3f3b1ce8898ccb9fe207949e7d32057e6062d84dbe"
   },
   "計數說明.txt": {
     "bytes": 1377,

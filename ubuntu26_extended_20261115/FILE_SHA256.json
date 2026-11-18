@@ -12,8 +12,8 @@
     "sha256": "f4ab1b098ba866cd121a21fea6904330732974cd50ae0e84bcf957aff85a367c"
   },
   "STATUS.txt": {
-    "bytes": 5355,
-    "sha256": "2a2260fcca784c3cc5f8a29485ee20382ae513390eee716293108ae7b25de020"
+    "bytes": 5415,
+    "sha256": "bed452e661abd7fe873ee89273d8823f15cdf3983e8234e3b094f26e9ac1a070"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -124,8 +124,8 @@
     "sha256": "d9c37f66e4c9aff4664ce96fc2df7d3b1f5be0e34553b29d3d75667428cdc1fa"
   },
   "updates/20261115_singularity/README.txt": {
-    "bytes": 2209,
-    "sha256": "a352c78af3b620cddc871faaf9cdae53d05dc3cd2ab24deb6faddad7365ecdb8"
+    "bytes": 2276,
+    "sha256": "888641319c781ab6e89a2ed770eacba72e24d45f7e81264b350722af4666b14a"
   },
   "updates/20261115_singularity/RESULTS.json": {
     "bytes": 19567,
@@ -236,8 +236,8 @@
     "sha256": "3ddfa427c2955a61dc7e53d60534e1382206c2d296f8a1d435daa2d481938cfa"
   },
   "updates/integrated_cost_and_remaining_work/可引用結果.txt": {
-    "bytes": 3679,
-    "sha256": "c8f0cff0cdaf638c413a74790b651180b9a6257514abb3bc79629ed82225f5aa"
+    "bytes": 3746,
+    "sha256": "847a179d2524c256aeb332dd22b3fc16c2698ea41aab5917c5b2fbaf546844f2"
   },
   "計數說明.txt": {
     "bytes": 1377,

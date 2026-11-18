@@ -76,7 +76,7 @@ IBLT 還原的是識別值、inode 與型態，不含原始名稱。矩陣實驗
 
 ### 公開樣本的目錄隱藏實測
 
-在 Ubuntu 26.04.1 的 Singularity 與 brokepkg 目錄實驗中，兩個樣本各有 **480/480 次有效陽性掃描告警**，且各有 **480/480 次完整解碼當次觀測到的 K↔S 目錄項差異**。解碼輸出包含差異項目的名稱識別值、inode 與類型。[結果與驗證紀錄](ubuntu26_extended_20261115/updates/20261116_final_remaining_results/FINAL_RESULTS_AND_REPORT_CONCLUSION.md)
+在 Ubuntu 26.04.1 的 Singularity 與 brokepkg 目錄實驗中，兩個樣本各有 **480/480 次有效陽性掃描告警**。以 K 端指紋與事先保存的完整目錄基準相符為條件，兩個樣本各有 408 次符合，**各 408/408 次完整還原全部預設隱藏目錄項**。還原結果包含名稱識別值、inode 與類型。[結果與驗證紀錄](ubuntu26_extended_20261115/updates/20261116_final_remaining_results/FINAL_RESULTS_AND_REPORT_CONCLUSION.md)
 
 ### 執行成本
 

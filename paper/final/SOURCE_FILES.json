@@ -7,8 +7,8 @@
     {
       "source_filename": "Poster_EN_B123245021_Wei-Ting_Chiang.pptx",
       "repository_path": "paper/final/Poster_EN_B123245021_Wei-Ting_Chiang.pptx",
-      "sha256": "e6575305db766a705ba027913d6805c20cdb2f4cb0a1745834d05db1b29897e4",
-      "bytes": 3797581,
+      "sha256": "8d681b789493dc29a0c6fc02cec329084cbec39aba5a3d06d68f7b98b277a515",
+      "bytes": 3797736,
       "slides": 1,
       "author_provided_sha256": "5aa65dc44cd54723f01114d61d5ed725c68daf4488916dd523ee9c4b23d74beb"
     },
@@ -37,6 +37,6 @@
   ],
   "public_edit_date": "2026-11-17",
   "public_edit_reason": "Author-requested removal of an unpublished comparison tool and related references",
-  "poster_results_update_date": "2026-11-18",
-  "poster_results_update_reason": "Clarify alert and observed-difference decoding rates and retire a misleading summary metric"
+  "poster_results_update_date": "2026-11-19",
+  "poster_results_update_reason": "Report complete target recovery on scans matching the full K-side reference and state the denominator"
 }

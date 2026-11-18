@@ -12,8 +12,8 @@
     "sha256": "f4ab1b098ba866cd121a21fea6904330732974cd50ae0e84bcf957aff85a367c"
   },
   "STATUS.txt": {
-    "bytes": 5450,
-    "sha256": "70059c215e64b833899392ea8c8ac7fec141cd8511dadf9118a30099e523c36b"
+    "bytes": 5355,
+    "sha256": "2a2260fcca784c3cc5f8a29485ee20382ae513390eee716293108ae7b25de020"
   },
   "metrics/application_component_cost.json": {
     "bytes": 86847,
@@ -64,8 +64,8 @@
     "sha256": "c97fdb5a26c1f72ea652a70cd599fb5e922e29659e88edeab1034cfd96495b4a"
   },
   "updates/20261115_brokepkg/README.txt": {
-    "bytes": 1942,
-    "sha256": "2ef784a2c1103617ff9b2a900a3ae6eb973b5fe80e215a6f1b6e1232c60e6799"
+    "bytes": 1644,
+    "sha256": "c6093e011112de1439e69b2755fb442c0c9f56ecb32c7fae4592cf1c2a5648ff"
   },
   "updates/20261115_brokepkg/RESULTS.json": {
     "bytes": 11354,
@@ -124,8 +124,8 @@
     "sha256": "d9c37f66e4c9aff4664ce96fc2df7d3b1f5be0e34553b29d3d75667428cdc1fa"
   },
   "updates/20261115_singularity/README.txt": {
-    "bytes": 2383,
-    "sha256": "a95d9ed4481365d13516d8ed71cc8223e887f11c70d959a9ab0bbd798febf82d"
+    "bytes": 2209,
+    "sha256": "a352c78af3b620cddc871faaf9cdae53d05dc3cd2ab24deb6faddad7365ecdb8"
   },
   "updates/20261115_singularity/RESULTS.json": {
     "bytes": 19567,
@@ -160,8 +160,8 @@
     "sha256": "e6d5f7c22751e6fce7658ee73a09aeafb141ba3ec2fa0bfa0293ce2cd5dcee8d"
   },
   "updates/20261116_forensic_timing/取檔分項成本與目前缺口.txt": {
-    "bytes": 1873,
-    "sha256": "642871c57bf0df04393032fb7a14f164fc78297ff04ad6ac12bba4357bd7c7c8"
+    "bytes": 1892,
+    "sha256": "c4af426894b3b4a72db65dcdb5629a7fa9fafbced89d7c60fcb4a6a9178b88ec"
   },
   "updates/20261116_revised_plan/CANDIDATE_DECISIONS.json": {
     "bytes": 115917,
@@ -176,12 +176,12 @@
     "sha256": "4d8db73112659d2006cffd55647cf7a390558e11b0d998a796d9ac9b7771715b"
   },
   "updates/20261116_revised_plan/來源普查與納入決定.txt": {
-    "bytes": 26429,
-    "sha256": "fb70ad6da740d633dab946fc36f3fc90572501a8d8065b0701e9ecacb037ff7c"
+    "bytes": 26457,
+    "sha256": "6bd15737fc0a1727043c299b5d9aac36a8b672f09bcde311986d73c4f4e83a84"
   },
   "updates/20261116_revised_plan/候選逐項評估.txt": {
-    "bytes": 26295,
-    "sha256": "9517ef4a1ee87da28c89fcbde3628fb4c61334e6d76cc41706f57d922f3eb1f4"
+    "bytes": 26323,
+    "sha256": "7ac378058f288b8a21f56b75847a6815e46031c889121ee55f42d1b2a84de325"
   },
   "updates/20261116_revised_plan/工作區引用.txt": {
     "bytes": 301,
@@ -236,8 +236,8 @@
     "sha256": "3ddfa427c2955a61dc7e53d60534e1382206c2d296f8a1d435daa2d481938cfa"
   },
   "updates/integrated_cost_and_remaining_work/可引用結果.txt": {
-    "bytes": 3745,
-    "sha256": "251d952968758cddcb94bb3f3b1ce8898ccb9fe207949e7d32057e6062d84dbe"
+    "bytes": 3679,
+    "sha256": "c8f0cff0cdaf638c413a74790b651180b9a6257514abb3bc79629ed82225f5aa"
   },
   "計數說明.txt": {
     "bytes": 1377,

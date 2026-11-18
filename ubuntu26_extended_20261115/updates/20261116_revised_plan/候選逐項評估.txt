@@ -4,7 +4,7 @@ Ubuntu 26 候選逐項評估
 
 納入現有實測（5 筆）
 
-• R3tr074/brokepkg。一開機已實測。160 次隱藏皆告警，136 次找回全部設定目標。VB2025 及 DFRWS 均有佐證。
+• R3tr074/brokepkg。一開機已實測。第一個開機 160/160 次有效陽性告警並完整解碼當次觀測到的差異。VB2025 及 DFRWS 均有佐證。
   https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
   https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
   https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg

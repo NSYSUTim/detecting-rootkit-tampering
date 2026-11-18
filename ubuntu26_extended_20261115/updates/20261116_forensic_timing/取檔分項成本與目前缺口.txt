@@ -14,7 +14,7 @@ inode 反查檔名               100 次呼叫     4.424 ms     6.571 ms
 
 相關工作目前的範圍
 
-• brokepkg 尚缺目錄測試的兩次開機。既有一個開機有 160 次隱藏告警，其中 136 次找回全部設定目標。其餘開機需要再啟用具隱藏功能的樣本。
+• brokepkg 的三開機目錄實測另有正式彙整。480/480 次有效陽性告警並完整解碼當次觀測差異。詳見 ../20261116_final_remaining_results/FINAL_RESULTS_AND_REPORT_CONCLUSION.md。
 • /proc 程序清單已有 Medusa 和 libprocesshider 的三開機結果。Singularity 的目錄矩陣已完成，核心樣本的 /proc 隱藏覆蓋仍缺。正常 PID namespace／hidepid 控制已有結果，實際 PID 重用的身分驗收待做。
 • 啟用期間取檔已有 CARAXES 證據和上表計時。其他樣本的啟用中取檔，以及一般部署版本的成本仍缺。
 • 原計畫中的工程工作仍包括通用應用端收集、seekdir／fork／多執行緒邊界、最終版本九開機回歸與其餘工具比較。

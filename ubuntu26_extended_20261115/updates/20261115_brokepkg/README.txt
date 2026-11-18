@@ -3,9 +3,8 @@ brokepkg：Ubuntu 26 第一個開機的實測與原始資料重播
 本次僅上傳已產生的結果，沒有啟動新實驗。原計畫尚未全部完成。
 
 結果：480 次有效掃描。160 次隱藏狀態皆告警；160 次未載入對照與 160 次載入但未設定隱藏目標的對照皆無差異告警。
-對實際觀測到的核心 K 與 syscall S 差異，160 次隱藏測試皆完整解碼。
-部分 256-byte 緩衝區測試提早回到列舉結尾，後續目錄項未到達上游觀測點。
-隱藏測試中，共 4,344 筆完整 fixture 相較下游的缺失事件；2,820 筆已還原，另 1,524 筆未被上游觀測。各數字包含跨測試的重複事件，不能當成獨立檔案數。
+第一個開機的 160/160 次有效陽性均完整解碼當次觀測到的 K↔S 差異。三開機的正式彙整見 ../20261116_final_remaining_results/FINAL_RESULTS_AND_REPORT_CONCLUSION.md。
+
 
 VERIFIED_REPLAY.json 的舊欄位 exact_recovery 指「實際觀測到的 K-S 差異完整解碼」，不等於找回全部設定目標。
 
@@ -16,4 +15,4 @@ VERIFIED_REPLAY.json 的舊欄位 exact_recovery 指「實際觀測到的 K-S �
 大型原始 observations、syscall bytes 與 fixture 保留在本機 artifacts，這次沒有一併上傳；位置見 EVIDENCE_MANIFEST.json。
 
 可引用的結果敘述：
-「在 Ubuntu 26 的第一個開機測試中，brokepkg 的 160 次隱藏觀測皆產生差異告警，320 次對照皆未產生差異告警。所有已觀測到的核心／syscall 差異均可完整解碼。部分 256-byte 緩衝區測試提早回到列舉結尾，後續目錄項未到達上游觀測點。」
+「在 Ubuntu 26 的第一個開機測試中，brokepkg 的 160 次隱藏觀測皆產生差異告警，320 次對照皆未產生差異告警。所有已觀測到的核心／syscall 差異均可完整解碼。」

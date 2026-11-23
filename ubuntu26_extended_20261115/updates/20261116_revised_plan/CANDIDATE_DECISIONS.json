@@ -174,12 +174,12 @@
     }
   },
   "results": {
-    "caraxes": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
-    "brokepkg": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg",
-    "singularity": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity",
-    "medusa": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa",
-    "bds_and_libprocesshider": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
-    "comparison": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/integrated_cost_and_remaining_work"
+    "caraxes": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+    "brokepkg": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg",
+    "singularity": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity",
+    "medusa": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa",
+    "bds_and_libprocesshider": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+    "comparison": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/integrated_cost_and_remaining_work"
   },
   "repositories": [
     {
@@ -195,7 +195,7 @@
         "VB",
         "DFRWS"
       ],
-      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg",
+      "known_project_result": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg",
       "pin_from_original_census": "250f132f0d856cb46449de7a6d0dadd878309fb3",
       "stars_in_original_snapshot": 140,
       "original_evidence": {
@@ -934,7 +934,7 @@
       "evidence_ids": [
         "ELASTIC"
       ],
-      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity",
+      "known_project_result": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity",
       "pin_from_original_census": "074f3852240bf9c37bc9173cb34efa8e9f668798",
       "stars_in_original_snapshot": 1844,
       "original_evidence": {
@@ -977,7 +977,7 @@
         "TRACE",
         "VB"
       ],
-      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+      "known_project_result": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
       "pin_from_original_census": null,
       "stars_in_original_snapshot": 57,
       "original_evidence": {
@@ -1160,7 +1160,7 @@
       "evidence_ids": [
         "MANDIANT"
       ],
-      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa",
+      "known_project_result": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa",
       "pin_from_original_census": "fdade060f4bc53a356fe62c14e9c830fcc0b968e",
       "stars_in_original_snapshot": 342,
       "original_evidence": {
@@ -1818,7 +1818,7 @@
       "runtime_state_in_project": "measured_control",
       "reason": "保留既有 /proc 陽性校準。此研究控制獨立標示，與在野事件分母分開。",
       "evidence_ids": [],
-      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+      "known_project_result": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
       "pin_from_original_census": "25e0587d6bf2137f8792dc83242b6b0e5a72b415",
       "stars_in_original_snapshot": 1138,
       "original_evidence": {
@@ -2749,7 +2749,7 @@
       "runtime_state_in_project": "measured",
       "reason": "保留低星數且已有可重播的應用端檔案列舉結果。BDS 的核心專案另列。",
       "evidence_ids": [],
-      "known_project_result": "https://github.com/NSYSUTim/kicba-thesis-artifact/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
+      "known_project_result": "https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names",
       "pin_from_original_census": "1a6f1303bc67373a2c0fafd5cb901bdd19ee10e0",
       "stars_in_original_snapshot": 21,
       "original_evidence": {

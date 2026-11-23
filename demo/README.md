@@ -1,8 +1,8 @@
-# Directory Entry Check Demo
+# Detecting Rootkit Tampering Demo
 
 ## Replay
 
-Run from the [Directory Entry Check](../README.md) repository root with Python 3.10+. Press Enter between scenes.
+Run from the [Detecting Rootkit Tampering](../README.md) repository root with Python 3.10+. Press Enter between scenes.
 
 ```sh
 python -B demo/replay.py --en --interactive

@@ -7,24 +7,24 @@ Ubuntu 26 候選逐項評估
 • R3tr074/brokepkg。一開機已實測。第一個開機 160/160 次有效陽性告警並完整解碼當次觀測到的差異。VB2025 及 DFRWS 均有佐證。
   https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
   https://dfrws.org/wp-content/uploads/2025/05/Detecting-hidden-kernel-modules-in-memory-snapshots.pdf
-  https://github.com/NSYSUTim/directory-entry-check/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg
+  https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_brokepkg
 • MatheuZSecurity/Singularity。保留六開機的目錄矩陣。/proc 與啟用中取檔為未測。Elastic 有獨立遙測。
   https://www.elastic.co/security-labs/threat-command/linux-rootkits-2-caught-in-the-act
-  https://github.com/NSYSUTim/directory-entry-check/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity
+  https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_singularity
 • ait-aecid/caraxes。保留核心列舉回呼與 syscall 測試，以及已驗證的 inode 查名與取檔。原論文亦使用此研究樣本。
   https://arxiv.org/abs/2503.02402
   https://www.virusbulletin.com/uploads/pdf/conference/vb2025/papers/Unmasking-the-unseen-a-deep-dive-into-modern-Linux-rootkits-and-their-detection.pdf
-  https://github.com/NSYSUTim/directory-entry-check/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
+  https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
 • ldpreload/Medusa。保留三開機 ext4、tmpfs、/proc 受控結果。Mandiant 的事件涉及修改版，報告須標示版本差異。
   https://cloud.google.com/blog/topics/threat-intelligence/uncovering-unc3886-espionage-operations
-  https://github.com/NSYSUTim/directory-entry-check/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa
+  https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_medusa
 • bluedragonsecurity/bds_userland。保留低星數且已有可重播的應用端檔案列舉結果。BDS 的核心專案另列。
-  https://github.com/NSYSUTim/directory-entry-check/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
+  https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
 
 保留既有研究控制（1 筆）
 
 • gianlucaborello/libprocesshider。保留既有 /proc 陽性校準。此研究控制獨立標示，與在野事件分母分開。
-  https://github.com/NSYSUTim/directory-entry-check/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
+  https://github.com/NSYSUTim/detecting-rootkit-tampering/tree/573fe0aff8244d091737a1fbb7af6e1a1365432b/ubuntu26_extended_20261115/updates/20261115_inode_names
 
 優先候選，待核對可驗證資料（2 筆）
 

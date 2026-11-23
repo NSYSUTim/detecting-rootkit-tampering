@@ -1,6 +1,6 @@
-# Directory Entry Check
+# Detecting Rootkit Tampering
 
-Directory Entry Check 偵測 Linux 目錄列舉中的隱藏與竄改。它用 eBPF 觀察核心，並比對核心、系統呼叫和應用程式函式庫列出的目錄項。即使替換前後的總筆數相同，也能還原有差異的項目。
+使用 eBPF 偵測 Linux 目錄列舉中被隱藏或竄改的項目。程式比對核心、系統呼叫和應用程式函式庫列出的結果，即使替換前後的總筆數相同，也能還原有差異的項目。
 
 ## 跑一次 Demo
 

@@ -1,6 +1,6 @@
-# Directory Entry Check
+# Detecting Rootkit Tampering
 
-Directory Entry Check detects hiding and tampering in Linux directory listings. It uses eBPF to observe the kernel and compares directory entries across the kernel, system-call, and library layers. It can recover differing entries, including replacements that leave the entry count unchanged.
+Uses eBPF to detect hidden or altered entries in Linux directory listings. The detector compares kernel, system-call, and library views and can recover differing entries, including replacements that leave the entry count unchanged.
 
 ## Try the demo
 

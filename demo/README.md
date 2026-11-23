@@ -1,8 +1,8 @@
-# Directory Hiding Demo
+# Directory Entry Check Demo
 
 ## Replay
 
-Run from the repository root with Python 3.10+. Press Enter between scenes.
+Run from the [Directory Entry Check](../README.md) repository root with Python 3.10+. Press Enter between scenes.
 
 ```sh
 python -B demo/replay.py --en --interactive

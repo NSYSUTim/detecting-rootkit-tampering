@@ -1,6 +1,6 @@
-# Detecting Linux Directory-Entry Hiding and Tampering
+# Directory Entry Check
 
-This research artifact detects changes to Linux directory listings by comparing what the kernel, system call, and application library report. It also identifies which observed entries differ, including replacements that leave the entry count unchanged.
+Directory Entry Check detects hiding and tampering in Linux directory listings. It uses eBPF to observe the kernel and compares directory entries across the kernel, system-call, and library layers. It can recover differing entries, including replacements that leave the entry count unchanged.
 
 ## Try the demo
 

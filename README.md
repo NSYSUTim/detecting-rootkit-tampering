@@ -1,5 +1,7 @@
 # 跨層目錄項一致性檢查
 
+Medusa 的 S↔L 偵測入口已整理為 [scan_library.py](scan_library.py)，比對同一次完整列舉的 `getdents64` 回傳與受控程式的 `readdir64` 輸出，沿用指紋、IBLT 與還原核對。[操作、來源與適用範圍](docs/MEDUSA_SL_SCANNER_zh-TW.md)。K↔S 的 eBPF 掃描入口為 [scan_directory.py](scan_directory.py)。
+
 目前入口保留已接受項目的指紋與 IBLT，另加入同次 getdents64 呼叫拒絕項目卻回傳 0 的完成檢查，最新結案書面為 2026-11-09 作者提供的中英文報告。新三開機的原版 CARAXES 兩模式各 120 次警報，正常刪除競態 30 次無新警報。整次最後 false 的舊規則已撤回，相關實驗紀錄保留。 [新結果、成本與限制](docs/CALL_COMPLETION_20261103_zh-TW.md)。
 
 本儲存庫對應論文〈跨層目錄項一致性檢查：以 eBPF 指紋與 IBLT 偵測 filldir64 與 getdents64 間的身分差異〉，保存原始碼、受控實驗模組、資料與重現工具。

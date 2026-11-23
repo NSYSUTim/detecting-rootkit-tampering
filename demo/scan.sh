@@ -3,8 +3,13 @@ set -euo pipefail
 umask 077
 export LC_ALL=C
 
+language=()
+if [[ "${1:-}" == --en ]]; then
+    language=(--en)
+    shift
+fi
 if [[ $# -ne 2 ]]; then
-    printf '%s\n' 'Usage: bash demo/scan.sh DIRECTORY DECLOAKER' >&2
+    printf '%s\n' 'Usage: bash demo/scan.sh [--en] DIRECTORY DECLOAKER' >&2
     exit 2
 fi
 
@@ -24,25 +29,29 @@ device="$(findmnt -n -e -o SOURCE -T "$directory")"
 run="$(mktemp -d -- "$temp_root/kicba-demo.XXXXXX")"
 status=0
 
-printf '%s\n' '【當場】目錄列舉'
+label() {
+    if [[ ${#language[@]} -gt 0 ]]; then printf '%s' "$2"; else printf '%s' "$1"; fi
+}
+
+printf '%s\n' "$(label '【當場】目錄列舉' '[Live] Directory listing')"
 ls -1ai --quoting-style=escape -- "$directory" | tee "$run/listing.txt"
-printf '\n%s\n' '【當場】K↔S'
+printf '\n%s\n' "$(label '【當場】K↔S' '[Live] Kernel vs. syscall (K–S)')"
 gcc -O2 -Wall -Wextra "$root/phase1/enum_probe.c" -o "$run/enum_probe"
 sudo python3 -B "$root/scan_directory.py" "$directory" --probe "$run/enum_probe" \
     > "$run/k-s.json" 2> "$run/k-s.stderr" || status=2
-python3 -B "$root/demo/replay.py" ks "$run" || status=2
+python3 -B "$root/demo/replay.py" ks "$run" "${language[@]}" || status=2
 
-printf '\n%s\n' '【當場】S↔L'
+printf '\n%s\n' "$(label '【當場】S↔L' '[Live] Syscall vs. library (S–L)')"
 python3 -B "$root/scan_library.py" "$directory" --output "$run/s-l" --text || status=2
 
-printf '\n%s\n' '【當場】Decloaker'
+printf '\n%s\n' "$(label '【當場】Decloaker' '[Live] Decloaker')"
 disk_exit=0
 sudo "$decloaker" --format=plain --log-level=info disk ls --dev="$device" --compare "$directory" \
     > "$run/decloaker.txt" 2> "$run/decloaker.stderr" || disk_exit=$?
 printf '%s\n' "$disk_exit" > "$run/decloaker.exit"
-python3 -B "$root/demo/replay.py" disk "$run" || status=2
+python3 -B "$root/demo/replay.py" disk "$run" "${language[@]}" || status=2
 
-printf '\n%s\n' '【預跑】Trace of the Times'
-python3 -B "$root/demo/replay.py" timing || status=2
-printf '\n資料：%s\n' "$run"
+printf '\n%s\n' "$(label '【預跑】Trace of the Times' '[Precomputed] Trace of the Times')"
+python3 -B "$root/demo/replay.py" timing "${language[@]}" || status=2
+printf '\n%s: %s\n' "$(label '資料' 'Logs')" "$run"
 exit "$status"

@@ -1,30 +1,28 @@
-# 四幕 Demo
+# Directory Hiding Demo
 
-在儲存庫根目錄執行，按 Enter 換幕。只需 Python 3.10+。
+## Replay
 
-```text
-python -B demo/replay.py --interactive
+Run from the repository root with Python 3.10+. Press Enter between scenes.
+
+```sh
+python -B demo/replay.py --en --interactive
 ```
 
-1. **正常**。我先看同一個目錄，K、S 各 70 筆，內容一致。
-2. **CARAXES**。S 剩 67 筆，我重算 IBLT 並核對少掉的三筆。另一組磁碟對照中，Decloaker 對 180 次隱藏掃描都沒告警。
-3. **時間法**。預跑的正常負載有 1/10 批誤報。本法在正式比較的另收批次是 0/150 批誤報、100/100 批告警。
-4. **Medusa**。看保存的個案，S 端有一個目標沒出現在 L 端，還原通過核對。這組只收 S↔L 資料。
+1. **Normal listing.** Kernel and syscall views (K and S) agree on 70 entries.
+2. **CARAXES.** S drops to 67 entries. IBLT recovers three verified entries. In a separate comparison, Decloaker flagged 0 of 180 hiding scans.
+3. **Timing under load.** Trace of the Times flagged 1 of 10 normal batches in function mode. In separately collected load tests, K–S flagged 0 of 150 normal batches and all 100 hiding batches.
+4. **Medusa.** In the archived syscall/library (S–L) case, the library view omits one target. Recovery was verified.
 
-### 當場掃描
+K–S recovery is recomputed from archived observations. Timing and Medusa use recorded results.
 
-在有 BCC、GCC、`strace` 和 `sudo` 的 Linux 研究環境執行。目錄須位於 ext4 根檔案系統，並提供可信的 Decloaker v0.0.9 執行檔路徑。
+## Live scan
 
-```bash
-bash demo/scan.sh "$DIR" "$DECLOAKER"
+On native Linux, use a test directory on the ext4 root filesystem, BCC, GCC, `strace`, `sudo`, and a trusted Decloaker v0.0.9 executable.
+
+```sh
+bash demo/scan.sh --en "$DIR" "$DECLOAKER"
 ```
 
-K↔S、S↔L 和 Decloaker 重新掃同一目錄，Times 讀預跑結果。畫面最後列出原始輸出位置。
+K–S, S–L and Decloaker scan the directory again. Times displays precomputed results. The last line gives the log directory. On WSL, K–S requires a scanner that handles its PID namespace.
 
-原生 Linux 是現場版的基準環境。WSL 的 K↔S 需要支援其 PID namespace 的掃描器。
-
-### 維護
-
-- `replay.py` 放四幕與資料來源；K↔S 重算，Times 和 Medusa 讀封存結果。
-- `scan.sh` 呼叫既有掃描器，並共用 `replay.py` 的 Times 輸出。
-- 更新資料時一併核對分母與來源，再跑一次四幕。正式對照見 [Times](../docs/D9_TRACE_FORMAL_RESULTS_zh-TW.md) 與 [Decloaker](../docs/D9_DECLOAKER_FORMAL_RESULTS_zh-TW.md)。
+Omit `--en` for Chinese output. When updating results, check the counts and rerun all four scenes. Sources: [Timing comparison](../docs/D9_TRACE_FORMAL_RESULTS_zh-TW.md), [disk comparison](../docs/D9_DECLOAKER_FORMAL_RESULTS_zh-TW.md), [Medusa results](../ubuntu26_extended_20261115/updates/20261115_medusa/RESULTS.json).

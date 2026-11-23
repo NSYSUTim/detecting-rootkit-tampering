@@ -31,3 +31,7 @@ Controlled experiments ran on Ubuntu 22.04.5 LTS and Ubuntu 26.04.1 LTS.
 ## Review scope
 
 Recovery is limited to identities present in an observed view and depends on IBLT decoding. Incomplete observations are reported separately. The rates above describe the tested conditions. See the [artifact scope](ARTIFACT_SCOPE.md) for the evidence and experiment inventory.
+
+## License
+
+The original user-space code is MIT-licensed. The original Linux eBPF probes are GPL-2.0-only. See the [licensing scope](LICENSING.md) for the covered files and third-party notices.

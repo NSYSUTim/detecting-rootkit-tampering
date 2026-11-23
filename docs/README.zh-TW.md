@@ -31,3 +31,7 @@ python -B demo/replay.py --en --interactive
 ## 審查範圍
 
 還原限於至少在一端有觀測到的項目身分，並取決於 IBLT 能否解碼。不完整的量測另行統計。以上比率只描述受測條件。實驗與證據清單見[研究成品收錄範圍](../ARTIFACT_SCOPE.md)。
+
+## 授權
+
+原創使用者空間程式採 MIT，原創 Linux eBPF 探針採 GPL-2.0-only。適用檔案及第三方授權見[授權範圍](../LICENSING.md)。

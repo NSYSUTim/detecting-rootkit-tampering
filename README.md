@@ -2,6 +2,11 @@
 
 Uses eBPF to detect hidden or altered entries in Linux directory listings. The detector compares kernel, system-call, and library views and can recover differing entries, including replacements that leave the entry count unchanged.
 
+## Poster and slides
+
+- [Capstone poster (PPTX)](paper/presentations/Poster_Capstone_Project_EN.pptx?raw=true)
+- [English presentation slides (PPTX, demo not included)](paper/presentations/Slides_Demo_Not_Yet_Added_EN.pptx?raw=true)
+
 ## Try the demo
 
 From the repository root, run the four-scene English replay with Python 3.10 or newer. Press Enter between scenes.
